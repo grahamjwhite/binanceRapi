@@ -18,8 +18,6 @@
 #' Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20045} \cr
 #'
@@ -51,8 +49,6 @@
 #' Fetch account API trading status with details.  Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20036} \cr
 #'
@@ -84,8 +80,6 @@
 #' - This request will disable fastwithdraw switch under your account. - You need to enable \&quot;trade\&quot; option for the api key which requests this endpoint.  Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #'
 #'
@@ -116,8 +110,6 @@
 #' - This request will enable fastwithdraw switch under your account. You need to enable \&quot;trade\&quot; option for the api key which requests this endpoint. - When Fast Withdraw Switch is on, transferring funds to a Binance account will be done instantly. There is no on-chain transaction, no transaction ID and no withdrawal fee.  Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #'
 #'
@@ -149,8 +141,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } type Enum < [SPOT, MARGIN, FUTURES] >
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } start.time integer
 #' \item \emph{ @param } end.time integer
 #' \item \emph{ @param } limit integer
@@ -185,8 +175,6 @@
 #' Fetch account status detail.  Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20035} \cr
 #'
@@ -218,8 +206,6 @@
 #' Fetch details of assets supported on Binance.  - Please get network and other deposit or withdraw details from &#x60;GET /sapi/v1/capital/config/getall&#x60;.  Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20040} \cr
@@ -253,8 +239,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } limit character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } start.time integer
 #' \item \emph{ @param } end.time integer
@@ -289,8 +273,6 @@
 #' Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } start.time integer
 #' \item \emph{ @param } end.time integer
 #' \item \emph{ @param } recv.window integer
@@ -325,8 +307,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } asset character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20038} \cr
 #'
@@ -358,8 +338,6 @@
 #' - Currently supports querying the following business assets：Binance Pay, Binance Card, Binance Gift Card, Stock Token  Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } need.btc.valuation Enum < [true, false] >
 #' \item \emph{ @param } recv.window integer
@@ -393,8 +371,6 @@
 #' Fetch trade fee  Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } symbol character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } list( \link{inline_response_200_41} ) \cr
@@ -428,8 +404,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } type Enum < [MAIN_C2C, MAIN_UMFUTURE, MAIN_CMFUTURE, MAIN_MARGIN, MAIN_MINING, C2C_MAIN, C2C_UMFUTURE, C2C_MINING, C2C_MARGIN, UMFUTURE_MAIN, UMFUTURE_C2C, UMFUTURE_MARGIN, CMFUTURE_MAIN, CMFUTURE_MARGIN, MARGIN_MAIN, MARGIN_UMFUTURE, MARGIN_CMFUTURE, MARGIN_MINING, MARGIN_C2C, MINING_MAIN, MINING_UMFUTURE, MINING_C2C, MINING_MARGIN, MAIN_PAY, PAY_MAIN, ISOLATEDMARGIN_MARGIN, MARGIN_ISOLATEDMARGIN, ISOLATEDMARGIN_ISOLATEDMARGIN] >
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } start.time integer
 #' \item \emph{ @param } end.time integer
 #' \item \emph{ @param } current integer
@@ -470,8 +444,6 @@
 #' \item \emph{ @param } type Enum < [MAIN_C2C, MAIN_UMFUTURE, MAIN_CMFUTURE, MAIN_MARGIN, MAIN_MINING, C2C_MAIN, C2C_UMFUTURE, C2C_MINING, C2C_MARGIN, UMFUTURE_MAIN, UMFUTURE_C2C, UMFUTURE_MARGIN, CMFUTURE_MAIN, CMFUTURE_MARGIN, MARGIN_MAIN, MARGIN_UMFUTURE, MARGIN_CMFUTURE, MARGIN_MINING, MARGIN_C2C, MINING_MAIN, MINING_UMFUTURE, MINING_C2C, MINING_MARGIN, MAIN_PAY, PAY_MAIN, ISOLATEDMARGIN_MARGIN, MARGIN_ISOLATEDMARGIN, ISOLATEDMARGIN_ISOLATEDMARGIN] >
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } amount numeric
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } from.symbol character
 #' \item \emph{ @param } to.symbol character
 #' \item \emph{ @param } recv.window integer
@@ -505,8 +477,6 @@
 #' Get information of coins (available for deposit and withdraw) for user.  Weight(IP): 10
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } list( \link{inline_response_200_30} ) \cr
 #'
@@ -539,8 +509,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } coin character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } network character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20034} \cr
@@ -574,8 +542,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } coin character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } status Enum < [0, 6, 1] >
 #' \item \emph{ @param } start.time integer
 #' \item \emph{ @param } end.time integer
@@ -615,8 +581,6 @@
 #' \item \emph{ @param } coin character
 #' \item \emph{ @param } address character
 #' \item \emph{ @param } amount numeric
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } withdraw.order.id character
 #' \item \emph{ @param } network character
 #' \item \emph{ @param } address.tag character
@@ -655,8 +619,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } coin character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } withdraw.order.id character
 #' \item \emph{ @param } status Enum < [0, 1, 2, 3, 4, 5, 6] >
 #' \item \emph{ @param } start.time integer
@@ -714,73 +676,51 @@
 #' ####################  SapiV1AccountApiRestrictionsGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Get API Key Permission (USER_DATA)
 #' api.instance <- WalletApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1AccountApiRestrictionsGet(var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1AccountApiRestrictionsGet(recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1AccountApiTradingStatusGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Account API Trading Status (USER_DATA)
 #' api.instance <- WalletApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1AccountApiTradingStatusGet(var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1AccountApiTradingStatusGet(recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1AccountDisableFastWithdrawSwitchPost  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Disable Fast Withdraw Switch (USER_DATA)
 #' api.instance <- WalletApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1AccountDisableFastWithdrawSwitchPost(var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1AccountDisableFastWithdrawSwitchPost(recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1AccountEnableFastWithdrawSwitchPost  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Enable Fast Withdraw Switch (USER_DATA)
 #' api.instance <- WalletApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1AccountEnableFastWithdrawSwitchPost(var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1AccountEnableFastWithdrawSwitchPost(recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1AccountSnapshotGet  ####################
 #'
 #' library(binanceRapi)
 #' var.type <- 'type_example' # character | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.start.time <- 56 # integer | UTC timestamp in ms
 #' var.end.time <- 56 # integer | UTC timestamp in ms
 #' var.limit <- 5 # integer | 
@@ -789,51 +729,36 @@
 #' #Daily Account Snapshot (USER_DATA)
 #' api.instance <- WalletApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1AccountSnapshotGet(var.type, var.timestamp, var.signature, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1AccountSnapshotGet(var.type, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1AccountStatusGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Account Status (USER_DATA)
 #' api.instance <- WalletApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1AccountStatusGet(var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1AccountStatusGet(recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1AssetAssetDetailGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.asset <- 'BNB' # character | 
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Asset Detail (USER_DATA)
 #' api.instance <- WalletApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1AssetAssetDetailGet(var.timestamp, var.signature, asset=var.asset, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1AssetAssetDetailGet(asset=var.asset, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1AssetAssetDividendGet  ####################
 #'
 #' library(binanceRapi)
 #' var.limit <- '20' # character | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.asset <- 'BNB' # character | 
 #' var.start.time <- 56 # integer | UTC timestamp in ms
 #' var.end.time <- 56 # integer | UTC timestamp in ms
@@ -842,17 +767,12 @@
 #' #Asset Dividend Record (USER_DATA)
 #' api.instance <- WalletApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1AssetAssetDividendGet(var.limit, var.timestamp, var.signature, asset=var.asset, start.time=var.start.time, end.time=var.end.time, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1AssetAssetDividendGet(var.limit, asset=var.asset, start.time=var.start.time, end.time=var.end.time, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1AssetDribbletGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.start.time <- 56 # integer | UTC timestamp in ms
 #' var.end.time <- 56 # integer | UTC timestamp in ms
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -860,34 +780,24 @@
 #' #DustLog(USER_DATA)
 #' api.instance <- WalletApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1AssetDribbletGet(var.timestamp, var.signature, start.time=var.start.time, end.time=var.end.time, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1AssetDribbletGet(start.time=var.start.time, end.time=var.end.time, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1AssetDustPost  ####################
 #'
 #' library(binanceRapi)
 #' var.asset <- 'asset=BTC&asset=USDT' # character | The asset being converted. For example, asset=BTC&asset=USDT
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Dust Transfer (USER_DATA)
 #' api.instance <- WalletApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1AssetDustPost(var.asset, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1AssetDustPost(var.asset, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1AssetGetFundingAssetPost  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.asset <- 'BNB' # character | 
 #' var.need.btc.valuation <- 'need.btc.valuation_example' # character | 
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -895,35 +805,25 @@
 #' #Funding Wallet (USER_DATA)
 #' api.instance <- WalletApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1AssetGetFundingAssetPost(var.timestamp, var.signature, asset=var.asset, need.btc.valuation=var.need.btc.valuation, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1AssetGetFundingAssetPost(asset=var.asset, need.btc.valuation=var.need.btc.valuation, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1AssetTradeFeeGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Trade Fee (USER_DATA)
 #' api.instance <- WalletApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1AssetTradeFeeGet(var.timestamp, var.signature, symbol=var.symbol, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1AssetTradeFeeGet(symbol=var.symbol, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1AssetTransferGet  ####################
 #'
 #' library(binanceRapi)
 #' var.type <- 'MAIN_C2C' # character | Universal transfer type
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.start.time <- 56 # integer | UTC timestamp in ms
 #' var.end.time <- 56 # integer | UTC timestamp in ms
 #' var.current <- 1 # integer | Current querying page. Start from 1. Default:1
@@ -935,10 +835,7 @@
 #' #Query User Universal Transfer History (USER_DATA)
 #' api.instance <- WalletApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1AssetTransferGet(var.type, var.timestamp, var.signature, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, from.symbol=var.from.symbol, to.symbol=var.to.symbol, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1AssetTransferGet(var.type, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, from.symbol=var.from.symbol, to.symbol=var.to.symbol, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1AssetTransferPost  ####################
@@ -947,8 +844,6 @@
 #' var.type <- 'MAIN_C2C' # character | Universal transfer type
 #' var.asset <- 'BTC' # character | 
 #' var.amount <- 1.01 # numeric | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.from.symbol <- 'BNBUSDT' # character | Must be sent when type are ISOLATEDMARGIN_MARGIN and ISOLATEDMARGIN_ISOLATEDMARGIN
 #' var.to.symbol <- 'BNBUSDT' # character | Must be sent when type are MARGIN_ISOLATEDMARGIN and ISOLATEDMARGIN_ISOLATEDMARGIN
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -956,52 +851,37 @@
 #' #User Universal Transfer (USER_DATA)
 #' api.instance <- WalletApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1AssetTransferPost(var.type, var.asset, var.amount, var.timestamp, var.signature, from.symbol=var.from.symbol, to.symbol=var.to.symbol, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1AssetTransferPost(var.type, var.asset, var.amount, from.symbol=var.from.symbol, to.symbol=var.to.symbol, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1CapitalConfigGetallGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #All Coins' Information (USER_DATA)
 #' api.instance <- WalletApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1CapitalConfigGetallGet(var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1CapitalConfigGetallGet(recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1CapitalDepositAddressGet  ####################
 #'
 #' library(binanceRapi)
 #' var.coin <- 'BNB' # character | Coin name
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.network <- 'ETH' # character | 
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Deposit Address (supporting network) (USER_DATA)
 #' api.instance <- WalletApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1CapitalDepositAddressGet(var.coin, var.timestamp, var.signature, network=var.network, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1CapitalDepositAddressGet(var.coin, network=var.network, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1CapitalDepositHisrecGet  ####################
 #'
 #' library(binanceRapi)
 #' var.coin <- 'BNB' # character | Coin name
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.status <- 56 # integer | 0 -> pending\\ 6 -> credited but cannot withdraw\\ 1 -> success
 #' var.start.time <- 56 # integer | UTC timestamp in ms
 #' var.end.time <- 56 # integer | UTC timestamp in ms
@@ -1012,10 +892,7 @@
 #' #Deposit History（supporting network） (USER_DATA)
 #' api.instance <- WalletApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1CapitalDepositHisrecGet(var.coin, var.timestamp, var.signature, status=var.status, start.time=var.start.time, end.time=var.end.time, offset=var.offset, limit=var.limit, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1CapitalDepositHisrecGet(var.coin, status=var.status, start.time=var.start.time, end.time=var.end.time, offset=var.offset, limit=var.limit, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1CapitalWithdrawApplyPost  ####################
@@ -1024,8 +901,6 @@
 #' var.coin <- 'BNB' # character | Coin name
 #' var.address <- 'address_example' # character | 
 #' var.amount <- 1.01 # numeric | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.withdraw.order.id <- 'withdraw.order.id_example' # character | Client id for withdraw
 #' var.network <- 'network_example' # character | Get the value from `GET /sapi/v1/capital/config/getall`
 #' var.address.tag <- 'address.tag_example' # character | Secondary address identifier for coins like XRP,XMR etc.
@@ -1037,18 +912,13 @@
 #' #Withdraw (USER_DATA)
 #' api.instance <- WalletApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1CapitalWithdrawApplyPost(var.coin, var.address, var.amount, var.timestamp, var.signature, withdraw.order.id=var.withdraw.order.id, network=var.network, address.tag=var.address.tag, transaction.fee.flag=var.transaction.fee.flag, name=var.name, wallet.type=var.wallet.type, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1CapitalWithdrawApplyPost(var.coin, var.address, var.amount, withdraw.order.id=var.withdraw.order.id, network=var.network, address.tag=var.address.tag, transaction.fee.flag=var.transaction.fee.flag, name=var.name, wallet.type=var.wallet.type, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1CapitalWithdrawHistoryGet  ####################
 #'
 #' library(binanceRapi)
 #' var.coin <- 'BNB' # character | Coin name
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.withdraw.order.id <- 'withdraw.order.id_example' # character | 
 #' var.status <- 56 # integer | 0:Email Sent 1:Cancelled 2:Awaiting Approval 3:Rejected 4:Processing 5:Failure 6:Completed
 #' var.start.time <- 56 # integer | UTC timestamp in ms
@@ -1060,10 +930,7 @@
 #' #Withdraw History (supporting network) (USER_DATA)
 #' api.instance <- WalletApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1CapitalWithdrawHistoryGet(var.coin, var.timestamp, var.signature, withdraw.order.id=var.withdraw.order.id, status=var.status, start.time=var.start.time, end.time=var.end.time, offset=var.offset, limit=var.limit, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1CapitalWithdrawHistoryGet(var.coin, withdraw.order.id=var.withdraw.order.id, status=var.status, start.time=var.start.time, end.time=var.end.time, offset=var.offset, limit=var.limit, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1SystemStatusGet  ####################
@@ -1092,8 +959,8 @@ WalletApi <- R6::R6Class(
         self$apiClient <- ApiClient$new()
       }
     },
-    SapiV1AccountApiRestrictionsGet = function(timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1AccountApiRestrictionsGetWithHttpInfo(timestamp, signature, recv.window, ...)
+    SapiV1AccountApiRestrictionsGet = function(recv.window=NULL, ...){
+      apiResponse <- self$SapiV1AccountApiRestrictionsGetWithHttpInfo(recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1106,24 +973,16 @@ WalletApi <- R6::R6Class(
       }
     },
 
-    SapiV1AccountApiRestrictionsGetWithHttpInfo = function(timestamp, signature, recv.window=NULL, ...){
+    SapiV1AccountApiRestrictionsGetWithHttpInfo = function(recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/account/apiRestrictions"
@@ -1155,8 +1014,8 @@ WalletApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1AccountApiTradingStatusGet = function(timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1AccountApiTradingStatusGetWithHttpInfo(timestamp, signature, recv.window, ...)
+    SapiV1AccountApiTradingStatusGet = function(recv.window=NULL, ...){
+      apiResponse <- self$SapiV1AccountApiTradingStatusGetWithHttpInfo(recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1169,24 +1028,16 @@ WalletApi <- R6::R6Class(
       }
     },
 
-    SapiV1AccountApiTradingStatusGetWithHttpInfo = function(timestamp, signature, recv.window=NULL, ...){
+    SapiV1AccountApiTradingStatusGetWithHttpInfo = function(recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/account/apiTradingStatus"
@@ -1218,8 +1069,8 @@ WalletApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1AccountDisableFastWithdrawSwitchPost = function(timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1AccountDisableFastWithdrawSwitchPostWithHttpInfo(timestamp, signature, recv.window, ...)
+    SapiV1AccountDisableFastWithdrawSwitchPost = function(recv.window=NULL, ...){
+      apiResponse <- self$SapiV1AccountDisableFastWithdrawSwitchPostWithHttpInfo(recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1232,24 +1083,16 @@ WalletApi <- R6::R6Class(
       }
     },
 
-    SapiV1AccountDisableFastWithdrawSwitchPostWithHttpInfo = function(timestamp, signature, recv.window=NULL, ...){
+    SapiV1AccountDisableFastWithdrawSwitchPostWithHttpInfo = function(recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/account/disableFastWithdrawSwitch"
@@ -1281,8 +1124,8 @@ WalletApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1AccountEnableFastWithdrawSwitchPost = function(timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1AccountEnableFastWithdrawSwitchPostWithHttpInfo(timestamp, signature, recv.window, ...)
+    SapiV1AccountEnableFastWithdrawSwitchPost = function(recv.window=NULL, ...){
+      apiResponse <- self$SapiV1AccountEnableFastWithdrawSwitchPostWithHttpInfo(recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1295,24 +1138,16 @@ WalletApi <- R6::R6Class(
       }
     },
 
-    SapiV1AccountEnableFastWithdrawSwitchPostWithHttpInfo = function(timestamp, signature, recv.window=NULL, ...){
+    SapiV1AccountEnableFastWithdrawSwitchPostWithHttpInfo = function(recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/account/enableFastWithdrawSwitch"
@@ -1344,8 +1179,8 @@ WalletApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1AccountSnapshotGet = function(type, timestamp, signature, start.time=NULL, end.time=NULL, limit=5, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1AccountSnapshotGetWithHttpInfo(type, timestamp, signature, start.time, end.time, limit, recv.window, ...)
+    SapiV1AccountSnapshotGet = function(type,  start.time=NULL, end.time=NULL, limit=5, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1AccountSnapshotGetWithHttpInfo(type,  start.time, end.time, limit, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1358,21 +1193,13 @@ WalletApi <- R6::R6Class(
       }
     },
 
-    SapiV1AccountSnapshotGetWithHttpInfo = function(type, timestamp, signature, start.time=NULL, end.time=NULL, limit=5, recv.window=NULL, ...){
+    SapiV1AccountSnapshotGetWithHttpInfo = function(type,  start.time=NULL, end.time=NULL, limit=5, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`type`)) {
         stop("Missing required parameter `type`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['type'] <- type
@@ -1385,9 +1212,9 @@ WalletApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/accountSnapshot"
@@ -1419,8 +1246,8 @@ WalletApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1AccountStatusGet = function(timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1AccountStatusGetWithHttpInfo(timestamp, signature, recv.window, ...)
+    SapiV1AccountStatusGet = function( recv.window=NULL, ...){
+      apiResponse <- self$SapiV1AccountStatusGetWithHttpInfo( recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1433,24 +1260,16 @@ WalletApi <- R6::R6Class(
       }
     },
 
-    SapiV1AccountStatusGetWithHttpInfo = function(timestamp, signature, recv.window=NULL, ...){
+    SapiV1AccountStatusGetWithHttpInfo = function( recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/account/status"
@@ -1482,8 +1301,8 @@ WalletApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1AssetAssetDetailGet = function(timestamp, signature, asset=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1AssetAssetDetailGetWithHttpInfo(timestamp, signature, asset, recv.window, ...)
+    SapiV1AssetAssetDetailGet = function( asset=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1AssetAssetDetailGetWithHttpInfo( asset, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1496,26 +1315,18 @@ WalletApi <- R6::R6Class(
       }
     },
 
-    SapiV1AssetAssetDetailGetWithHttpInfo = function(timestamp, signature, asset=NULL, recv.window=NULL, ...){
+    SapiV1AssetAssetDetailGetWithHttpInfo = function( asset=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['asset'] <- asset
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/asset/assetDetail"
@@ -1547,8 +1358,8 @@ WalletApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1AssetAssetDividendGet = function(limit, timestamp, signature, asset=NULL, start.time=NULL, end.time=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1AssetAssetDividendGetWithHttpInfo(limit, timestamp, signature, asset, start.time, end.time, recv.window, ...)
+    SapiV1AssetAssetDividendGet = function(limit,  asset=NULL, start.time=NULL, end.time=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1AssetAssetDividendGetWithHttpInfo(limit,  asset, start.time, end.time, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1561,21 +1372,13 @@ WalletApi <- R6::R6Class(
       }
     },
 
-    SapiV1AssetAssetDividendGetWithHttpInfo = function(limit, timestamp, signature, asset=NULL, start.time=NULL, end.time=NULL, recv.window=NULL, ...){
+    SapiV1AssetAssetDividendGetWithHttpInfo = function(limit,  asset=NULL, start.time=NULL, end.time=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`limit`)) {
         stop("Missing required parameter `limit`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['asset'] <- asset
@@ -1588,9 +1391,9 @@ WalletApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/asset/assetDividend"
@@ -1622,8 +1425,8 @@ WalletApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1AssetDribbletGet = function(timestamp, signature, start.time=NULL, end.time=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1AssetDribbletGetWithHttpInfo(timestamp, signature, start.time, end.time, recv.window, ...)
+    SapiV1AssetDribbletGet = function( start.time=NULL, end.time=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1AssetDribbletGetWithHttpInfo( start.time, end.time, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1636,18 +1439,10 @@ WalletApi <- R6::R6Class(
       }
     },
 
-    SapiV1AssetDribbletGetWithHttpInfo = function(timestamp, signature, start.time=NULL, end.time=NULL, recv.window=NULL, ...){
+    SapiV1AssetDribbletGetWithHttpInfo = function( start.time=NULL, end.time=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['startTime'] <- start.time
 
@@ -1655,9 +1450,9 @@ WalletApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/asset/dribblet"
@@ -1689,8 +1484,8 @@ WalletApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1AssetDustPost = function(asset, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1AssetDustPostWithHttpInfo(asset, timestamp, signature, recv.window, ...)
+    SapiV1AssetDustPost = function(asset,  recv.window=NULL, ...){
+      apiResponse <- self$SapiV1AssetDustPostWithHttpInfo(asset,  recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1703,7 +1498,7 @@ WalletApi <- R6::R6Class(
       }
     },
 
-    SapiV1AssetDustPostWithHttpInfo = function(asset, timestamp, signature, recv.window=NULL, ...){
+    SapiV1AssetDustPostWithHttpInfo = function(asset,  recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -1712,21 +1507,13 @@ WalletApi <- R6::R6Class(
         stop("Missing required parameter `asset`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['asset'] <- asset
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/asset/dust"
@@ -1758,8 +1545,8 @@ WalletApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1AssetGetFundingAssetPost = function(timestamp, signature, asset=NULL, need.btc.valuation=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1AssetGetFundingAssetPostWithHttpInfo(timestamp, signature, asset, need.btc.valuation, recv.window, ...)
+    SapiV1AssetGetFundingAssetPost = function( asset=NULL, need.btc.valuation=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1AssetGetFundingAssetPostWithHttpInfo( asset, need.btc.valuation, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1772,18 +1559,10 @@ WalletApi <- R6::R6Class(
       }
     },
 
-    SapiV1AssetGetFundingAssetPostWithHttpInfo = function(timestamp, signature, asset=NULL, need.btc.valuation=NULL, recv.window=NULL, ...){
+    SapiV1AssetGetFundingAssetPostWithHttpInfo = function( asset=NULL, need.btc.valuation=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['asset'] <- asset
 
@@ -1791,9 +1570,9 @@ WalletApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/asset/get-funding-asset"
@@ -1825,8 +1604,8 @@ WalletApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1AssetTradeFeeGet = function(timestamp, signature, symbol=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1AssetTradeFeeGetWithHttpInfo(timestamp, signature, symbol, recv.window, ...)
+    SapiV1AssetTradeFeeGet = function( symbol=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1AssetTradeFeeGetWithHttpInfo( symbol, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1839,26 +1618,18 @@ WalletApi <- R6::R6Class(
       }
     },
 
-    SapiV1AssetTradeFeeGetWithHttpInfo = function(timestamp, signature, symbol=NULL, recv.window=NULL, ...){
+    SapiV1AssetTradeFeeGetWithHttpInfo = function( symbol=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['symbol'] <- symbol
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/asset/tradeFee"
@@ -1890,8 +1661,8 @@ WalletApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1AssetTransferGet = function(type, timestamp, signature, start.time=NULL, end.time=NULL, current=NULL, size=NULL, from.symbol=NULL, to.symbol=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1AssetTransferGetWithHttpInfo(type, timestamp, signature, start.time, end.time, current, size, from.symbol, to.symbol, recv.window, ...)
+    SapiV1AssetTransferGet = function(type,  start.time=NULL, end.time=NULL, current=NULL, size=NULL, from.symbol=NULL, to.symbol=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1AssetTransferGetWithHttpInfo(type,  start.time, end.time, current, size, from.symbol, to.symbol, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1904,21 +1675,13 @@ WalletApi <- R6::R6Class(
       }
     },
 
-    SapiV1AssetTransferGetWithHttpInfo = function(type, timestamp, signature, start.time=NULL, end.time=NULL, current=NULL, size=NULL, from.symbol=NULL, to.symbol=NULL, recv.window=NULL, ...){
+    SapiV1AssetTransferGetWithHttpInfo = function(type,  start.time=NULL, end.time=NULL, current=NULL, size=NULL, from.symbol=NULL, to.symbol=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`type`)) {
         stop("Missing required parameter `type`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['type'] <- type
@@ -1937,9 +1700,9 @@ WalletApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/asset/transfer"
@@ -1971,8 +1734,8 @@ WalletApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1AssetTransferPost = function(type, asset, amount, timestamp, signature, from.symbol=NULL, to.symbol=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1AssetTransferPostWithHttpInfo(type, asset, amount, timestamp, signature, from.symbol, to.symbol, recv.window, ...)
+    SapiV1AssetTransferPost = function(type, asset, amount,  from.symbol=NULL, to.symbol=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1AssetTransferPostWithHttpInfo(type, asset, amount,  from.symbol, to.symbol, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1985,7 +1748,7 @@ WalletApi <- R6::R6Class(
       }
     },
 
-    SapiV1AssetTransferPostWithHttpInfo = function(type, asset, amount, timestamp, signature, from.symbol=NULL, to.symbol=NULL, recv.window=NULL, ...){
+    SapiV1AssetTransferPostWithHttpInfo = function(type, asset, amount,  from.symbol=NULL, to.symbol=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -2002,14 +1765,6 @@ WalletApi <- R6::R6Class(
         stop("Missing required parameter `amount`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['type'] <- type
 
       queryParams['asset'] <- asset
@@ -2022,9 +1777,9 @@ WalletApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/asset/transfer"
@@ -2056,8 +1811,8 @@ WalletApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1CapitalConfigGetallGet = function(timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1CapitalConfigGetallGetWithHttpInfo(timestamp, signature, recv.window, ...)
+    SapiV1CapitalConfigGetallGet = function( recv.window=NULL, ...){
+      apiResponse <- self$SapiV1CapitalConfigGetallGetWithHttpInfo( recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2070,24 +1825,16 @@ WalletApi <- R6::R6Class(
       }
     },
 
-    SapiV1CapitalConfigGetallGetWithHttpInfo = function(timestamp, signature, recv.window=NULL, ...){
+    SapiV1CapitalConfigGetallGetWithHttpInfo = function( recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/capital/config/getall"
@@ -2119,8 +1866,8 @@ WalletApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1CapitalDepositAddressGet = function(coin, timestamp, signature, network=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1CapitalDepositAddressGetWithHttpInfo(coin, timestamp, signature, network, recv.window, ...)
+    SapiV1CapitalDepositAddressGet = function(coin,  network=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1CapitalDepositAddressGetWithHttpInfo(coin,  network, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2133,7 +1880,7 @@ WalletApi <- R6::R6Class(
       }
     },
 
-    SapiV1CapitalDepositAddressGetWithHttpInfo = function(coin, timestamp, signature, network=NULL, recv.window=NULL, ...){
+    SapiV1CapitalDepositAddressGetWithHttpInfo = function(coin,  network=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -2142,23 +1889,15 @@ WalletApi <- R6::R6Class(
         stop("Missing required parameter `coin`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['coin'] <- coin
 
       queryParams['network'] <- network
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/capital/deposit/address"
@@ -2190,8 +1929,8 @@ WalletApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1CapitalDepositHisrecGet = function(coin, timestamp, signature, status=NULL, start.time=NULL, end.time=NULL, offset=NULL, limit=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1CapitalDepositHisrecGetWithHttpInfo(coin, timestamp, signature, status, start.time, end.time, offset, limit, recv.window, ...)
+    SapiV1CapitalDepositHisrecGet = function(coin,  status=NULL, start.time=NULL, end.time=NULL, offset=NULL, limit=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1CapitalDepositHisrecGetWithHttpInfo(coin,  status, start.time, end.time, offset, limit, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2204,21 +1943,13 @@ WalletApi <- R6::R6Class(
       }
     },
 
-    SapiV1CapitalDepositHisrecGetWithHttpInfo = function(coin, timestamp, signature, status=NULL, start.time=NULL, end.time=NULL, offset=NULL, limit=NULL, recv.window=NULL, ...){
+    SapiV1CapitalDepositHisrecGetWithHttpInfo = function(coin,  status=NULL, start.time=NULL, end.time=NULL, offset=NULL, limit=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`coin`)) {
         stop("Missing required parameter `coin`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['coin'] <- coin
@@ -2235,9 +1966,9 @@ WalletApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/capital/deposit/hisrec"
@@ -2269,8 +2000,8 @@ WalletApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1CapitalWithdrawApplyPost = function(coin, address, amount, timestamp, signature, withdraw.order.id=NULL, network=NULL, address.tag=NULL, transaction.fee.flag=FALSE, name=NULL, wallet.type=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1CapitalWithdrawApplyPostWithHttpInfo(coin, address, amount, timestamp, signature, withdraw.order.id, network, address.tag, transaction.fee.flag, name, wallet.type, recv.window, ...)
+    SapiV1CapitalWithdrawApplyPost = function(coin, address, amount,  withdraw.order.id=NULL, network=NULL, address.tag=NULL, transaction.fee.flag=FALSE, name=NULL, wallet.type=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1CapitalWithdrawApplyPostWithHttpInfo(coin, address, amount,  withdraw.order.id, network, address.tag, transaction.fee.flag, name, wallet.type, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2283,7 +2014,7 @@ WalletApi <- R6::R6Class(
       }
     },
 
-    SapiV1CapitalWithdrawApplyPostWithHttpInfo = function(coin, address, amount, timestamp, signature, withdraw.order.id=NULL, network=NULL, address.tag=NULL, transaction.fee.flag=FALSE, name=NULL, wallet.type=NULL, recv.window=NULL, ...){
+    SapiV1CapitalWithdrawApplyPostWithHttpInfo = function(coin, address, amount,  withdraw.order.id=NULL, network=NULL, address.tag=NULL, transaction.fee.flag=FALSE, name=NULL, wallet.type=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -2298,14 +2029,6 @@ WalletApi <- R6::R6Class(
 
       if (missing(`amount`)) {
         stop("Missing required parameter `amount`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['coin'] <- coin
@@ -2328,9 +2051,9 @@ WalletApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/capital/withdraw/apply"
@@ -2362,8 +2085,8 @@ WalletApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1CapitalWithdrawHistoryGet = function(coin, timestamp, signature, withdraw.order.id=NULL, status=NULL, start.time=NULL, end.time=NULL, offset=NULL, limit=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1CapitalWithdrawHistoryGetWithHttpInfo(coin, timestamp, signature, withdraw.order.id, status, start.time, end.time, offset, limit, recv.window, ...)
+    SapiV1CapitalWithdrawHistoryGet = function(coin,  withdraw.order.id=NULL, status=NULL, start.time=NULL, end.time=NULL, offset=NULL, limit=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1CapitalWithdrawHistoryGetWithHttpInfo(coin,  withdraw.order.id, status, start.time, end.time, offset, limit, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2376,21 +2099,13 @@ WalletApi <- R6::R6Class(
       }
     },
 
-    SapiV1CapitalWithdrawHistoryGetWithHttpInfo = function(coin, timestamp, signature, withdraw.order.id=NULL, status=NULL, start.time=NULL, end.time=NULL, offset=NULL, limit=NULL, recv.window=NULL, ...){
+    SapiV1CapitalWithdrawHistoryGetWithHttpInfo = function(coin,  withdraw.order.id=NULL, status=NULL, start.time=NULL, end.time=NULL, offset=NULL, limit=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`coin`)) {
         stop("Missing required parameter `coin`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['coin'] <- coin
@@ -2409,9 +2124,9 @@ WalletApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/capital/withdraw/history"

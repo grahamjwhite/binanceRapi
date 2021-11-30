@@ -18,8 +18,6 @@
 #' - If startTimestamp and endTimestamp are not sent, the recent 30-day data will be returned. - The max interval between startTimestamp and endTimestamp is 30 days.  Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } trade.type Enum < [BUY, SELL] >
 #' \item \emph{ @param } start.timestamp integer
 #' \item \emph{ @param } end.timestamp integer
@@ -60,8 +58,6 @@
 #' ####################  SapiV1C2cOrderMatchListUserOrderHistoryGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.trade.type <- 'trade.type_example' # character | 
 #' var.start.timestamp <- 56 # integer | UTC timestamp in ms
 #' var.end.timestamp <- 56 # integer | UTC timestamp in ms
@@ -72,10 +68,7 @@
 #' #Get C2C Trade History (USER_DATA)
 #' api.instance <- C2CApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1C2cOrderMatchListUserOrderHistoryGet(var.timestamp, var.signature, trade.type=var.trade.type, start.timestamp=var.start.timestamp, end.timestamp=var.end.timestamp, page=var.page, rows=var.rows, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1C2cOrderMatchListUserOrderHistoryGet(trade.type=var.trade.type, start.timestamp=var.start.timestamp, end.timestamp=var.end.timestamp, page=var.page, rows=var.rows, recv.window=var.recv.window)
 #'
 #'
 #' }
@@ -94,8 +87,8 @@ C2CApi <- R6::R6Class(
         self$apiClient <- ApiClient$new()
       }
     },
-    SapiV1C2cOrderMatchListUserOrderHistoryGet = function(timestamp, signature, trade.type=NULL, start.timestamp=NULL, end.timestamp=NULL, page=NULL, rows=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1C2cOrderMatchListUserOrderHistoryGetWithHttpInfo(timestamp, signature, trade.type, start.timestamp, end.timestamp, page, rows, recv.window, ...)
+    SapiV1C2cOrderMatchListUserOrderHistoryGet = function(trade.type=NULL, start.timestamp=NULL, end.timestamp=NULL, page=NULL, rows=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1C2cOrderMatchListUserOrderHistoryGetWithHttpInfo(trade.type, start.timestamp, end.timestamp, page, rows, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -108,18 +101,12 @@ C2CApi <- R6::R6Class(
       }
     },
 
-    SapiV1C2cOrderMatchListUserOrderHistoryGetWithHttpInfo = function(timestamp, signature, trade.type=NULL, start.timestamp=NULL, end.timestamp=NULL, page=NULL, rows=NULL, recv.window=NULL, ...){
+    SapiV1C2cOrderMatchListUserOrderHistoryGetWithHttpInfo = function(trade.type=NULL, start.timestamp=NULL, 
+                                                                      end.timestamp=NULL, page=NULL, rows=NULL, 
+                                                                      recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['tradeType'] <- trade.type
 
@@ -133,15 +120,15 @@ C2CApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/c2c/orderMatch/listUserOrderHistory"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),

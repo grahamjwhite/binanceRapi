@@ -22,8 +22,6 @@
 #' \item \emph{ @param } type Enum < [SINGLE, COMBINATION] >
 #' \item \emph{ @param } quote.asset character
 #' \item \emph{ @param } quote.qty numeric
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{OneOfbswapAddLiquidityPreviewCombinationbswapAddLiquidityPreviewSingle} \cr
 #'
@@ -58,8 +56,6 @@
 #' \item \emph{ @param } pool.id integer
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } quantity numeric
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse200105} \cr
 #'
@@ -91,8 +87,6 @@
 #' Get liquidity information and user share of a pool.  Weight(IP):\\ &#x60;1&#x60;  for one pool;\\ &#x60;10&#x60; when the poolId parameter is omitted;
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } pool.id integer
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } list( \link{inline_response_200_104} ) \cr
@@ -125,8 +119,6 @@
 #' Get liquidity operation (add/remove) records.  Weight(UID): 3000
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } operation.id integer
 #' \item \emph{ @param } pool.id integer
 #' \item \emph{ @param } operation Enum < [ADD, REMOVE] >
@@ -167,8 +159,6 @@
 #' \item \emph{ @param } pool.id integer
 #' \item \emph{ @param } type Enum < [SINGLE, COMBINATION] >
 #' \item \emph{ @param } share.amount numeric
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse200105} \cr
@@ -201,8 +191,6 @@
 #' Weight(IP): 150
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } pool.id integer
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } list( \link{inline_response_200_110} ) \cr
@@ -261,8 +249,6 @@
 #' \item \emph{ @param } quote.asset character
 #' \item \emph{ @param } base.asset character
 #' \item \emph{ @param } quote.qty numeric
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse200107} \cr
 #'
@@ -298,8 +284,6 @@
 #' \item \emph{ @param } type Enum < [SINGLE, COMBINATION] >
 #' \item \emph{ @param } quote.asset character
 #' \item \emph{ @param } share.amount numeric
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{OneOfbswapRmvLiquidityPreviewCombinationbswapRmvLiquidityPreviewSingle} \cr
 #'
@@ -331,8 +315,6 @@
 #' Get swap history.  Weight(UID): 3000
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } swap.id integer
 #' \item \emph{ @param } start.time integer
 #' \item \emph{ @param } end.time integer
@@ -374,8 +356,6 @@
 #' \item \emph{ @param } quote.asset character
 #' \item \emph{ @param } base.asset character
 #' \item \emph{ @param } quote.qty numeric
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse200109} \cr
 #'
@@ -415,17 +395,12 @@
 #' var.type <- 'SINGLE' # character | \"SINGLE\" for adding a single token;\"COMBINATION\" for adding dual tokens
 #' var.quote.asset <- 'USDT' # character | 
 #' var.quote.qty <- 3.4 # numeric | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Add Liquidity Preview (USER_DATA)
 #' api.instance <- BSwapApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1BswapAddLiquidityPreviewGet(var.pool.id, var.type, var.quote.asset, var.quote.qty, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1BswapAddLiquidityPreviewGet(var.pool.id, var.type, var.quote.asset, var.quote.qty, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1BswapLiquidityAddPost  ####################
@@ -434,41 +409,29 @@
 #' var.pool.id <- 56 # integer | 
 #' var.asset <- 'BTC' # character | 
 #' var.quantity <- 3.4 # numeric | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Add Liquidity (TRADE)
 #' api.instance <- BSwapApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1BswapLiquidityAddPost(var.pool.id, var.asset, var.quantity, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1BswapLiquidityAddPost(var.pool.id, var.asset, var.quantity, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1BswapLiquidityGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.pool.id <- 56 # integer | 
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Liquidity information of a pool (USER_DATA)
 #' api.instance <- BSwapApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1BswapLiquidityGet(var.timestamp, var.signature, pool.id=var.pool.id, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1BswapLiquidityGet(pool.id=var.pool.id, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1BswapLiquidityOpsGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.operation.id <- 56 # integer | 
 #' var.pool.id <- 56 # integer | 
 #' var.operation <- 'operation_example' # character | 
@@ -480,10 +443,7 @@
 #' #Liquidity Operation Record (USER_DATA)
 #' api.instance <- BSwapApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1BswapLiquidityOpsGet(var.timestamp, var.signature, operation.id=var.operation.id, pool.id=var.pool.id, operation=var.operation, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1BswapLiquidityOpsGet(operation.id=var.operation.id, pool.id=var.pool.id, operation=var.operation, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1BswapLiquidityRemovePost  ####################
@@ -492,35 +452,25 @@
 #' var.pool.id <- 56 # integer | 
 #' var.type <- 'SINGLE' # character | Can be `SINGLE` for single asset removal, `COMBINATION` for combination of all coins removal
 #' var.share.amount <- 3.4 # numeric | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.asset <- 'BNB' # character | Mandatory for single asset removal
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Remove Liquidity (TRADE)
 #' api.instance <- BSwapApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1BswapLiquidityRemovePost(var.pool.id, var.type, var.share.amount, var.timestamp, var.signature, asset=var.asset, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1BswapLiquidityRemovePost(var.pool.id, var.type, var.share.amount, asset=var.asset, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1BswapPoolConfigureGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.pool.id <- 2 # integer | 
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Pool Configure (USER_DATA)
 #' api.instance <- BSwapApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1BswapPoolConfigureGet(var.timestamp, var.signature, pool.id=var.pool.id, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1BswapPoolConfigureGet(pool.id=var.pool.id, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1BswapPoolsGet  ####################
@@ -529,9 +479,6 @@
 #'
 #' #List All Swap Pools (MARKET_DATA)
 #' api.instance <- BSwapApi$new()
-#'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
 #'
 #' result <- api.instance$SapiV1BswapPoolsGet()
 #'
@@ -542,17 +489,12 @@
 #' var.quote.asset <- 'USDT' # character | 
 #' var.base.asset <- 'BUSD' # character | 
 #' var.quote.qty <- 3.4 # numeric | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Request Quote (USER_DATA)
 #' api.instance <- BSwapApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1BswapQuoteGet(var.quote.asset, var.base.asset, var.quote.qty, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1BswapQuoteGet(var.quote.asset, var.base.asset, var.quote.qty, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1BswapRemoveLiquidityPreviewGet  ####################
@@ -562,24 +504,17 @@
 #' var.type <- 'SINGLE' # character | Type is \"SINGLE\", remove and obtain a single token;Type is \"COMBINATION\", remove and obtain dual token.
 #' var.quote.asset <- 'USDT' # character | 
 #' var.share.amount <- 3.4 # numeric | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Remove Liquidity Preview (USER_DATA)
 #' api.instance <- BSwapApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1BswapRemoveLiquidityPreviewGet(var.pool.id, var.type, var.quote.asset, var.share.amount, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1BswapRemoveLiquidityPreviewGet(var.pool.id, var.type, var.quote.asset, var.share.amount, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1BswapSwapGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.swap.id <- 56 # integer | 
 #' var.start.time <- 56 # integer | UTC timestamp in ms
 #' var.end.time <- 56 # integer | UTC timestamp in ms
@@ -592,10 +527,7 @@
 #' #Swap History (USER_DATA)
 #' api.instance <- BSwapApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1BswapSwapGet(var.timestamp, var.signature, swap.id=var.swap.id, start.time=var.start.time, end.time=var.end.time, status=var.status, quote.asset=var.quote.asset, base.asset=var.base.asset, limit=var.limit, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1BswapSwapGet(swap.id=var.swap.id, start.time=var.start.time, end.time=var.end.time, status=var.status, quote.asset=var.quote.asset, base.asset=var.base.asset, limit=var.limit, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1BswapSwapPost  ####################
@@ -604,17 +536,12 @@
 #' var.quote.asset <- 'USDT' # character | 
 #' var.base.asset <- 'BUSD' # character | 
 #' var.quote.qty <- 3.4 # numeric | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Swap (TRADE)
 #' api.instance <- BSwapApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1BswapSwapPost(var.quote.asset, var.base.asset, var.quote.qty, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1BswapSwapPost(var.quote.asset, var.base.asset, var.quote.qty, recv.window=var.recv.window)
 #'
 #'
 #' }
@@ -633,8 +560,9 @@ BSwapApi <- R6::R6Class(
         self$apiClient <- ApiClient$new()
       }
     },
-    SapiV1BswapAddLiquidityPreviewGet = function(pool.id, type, quote.asset, quote.qty, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1BswapAddLiquidityPreviewGetWithHttpInfo(pool.id, type, quote.asset, quote.qty, timestamp, signature, recv.window, ...)
+    SapiV1BswapAddLiquidityPreviewGet = function(pool.id, type, quote.asset, quote.qty, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1BswapAddLiquidityPreviewGetWithHttpInfo(pool.id, type, quote.asset, quote.qty, 
+                                                                        recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -647,7 +575,7 @@ BSwapApi <- R6::R6Class(
       }
     },
 
-    SapiV1BswapAddLiquidityPreviewGetWithHttpInfo = function(pool.id, type, quote.asset, quote.qty, timestamp, signature, recv.window=NULL, ...){
+    SapiV1BswapAddLiquidityPreviewGetWithHttpInfo = function(pool.id, type, quote.asset, quote.qty, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -668,14 +596,6 @@ BSwapApi <- R6::R6Class(
         stop("Missing required parameter `quote.qty`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['poolId'] <- pool.id
 
       queryParams['type'] <- type
@@ -686,15 +606,15 @@ BSwapApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/bswap/addLiquidityPreview"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -720,8 +640,8 @@ BSwapApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1BswapLiquidityAddPost = function(pool.id, asset, quantity, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1BswapLiquidityAddPostWithHttpInfo(pool.id, asset, quantity, timestamp, signature, recv.window, ...)
+    SapiV1BswapLiquidityAddPost = function(pool.id, asset, quantity, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1BswapLiquidityAddPostWithHttpInfo(pool.id, asset, quantity, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -734,7 +654,7 @@ BSwapApi <- R6::R6Class(
       }
     },
 
-    SapiV1BswapLiquidityAddPostWithHttpInfo = function(pool.id, asset, quantity, timestamp, signature, recv.window=NULL, ...){
+    SapiV1BswapLiquidityAddPostWithHttpInfo = function(pool.id, asset, quantity, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -751,14 +671,6 @@ BSwapApi <- R6::R6Class(
         stop("Missing required parameter `quantity`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['poolId'] <- pool.id
 
       queryParams['asset'] <- asset
@@ -767,15 +679,15 @@ BSwapApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/bswap/liquidityAdd"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -801,8 +713,8 @@ BSwapApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1BswapLiquidityGet = function(timestamp, signature, pool.id=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1BswapLiquidityGetWithHttpInfo(timestamp, signature, pool.id, recv.window, ...)
+    SapiV1BswapLiquidityGet = function(pool.id=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1BswapLiquidityGetWithHttpInfo(pool.id, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -815,32 +727,24 @@ BSwapApi <- R6::R6Class(
       }
     },
 
-    SapiV1BswapLiquidityGetWithHttpInfo = function(timestamp, signature, pool.id=NULL, recv.window=NULL, ...){
+    SapiV1BswapLiquidityGetWithHttpInfo = function(pool.id=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['poolId'] <- pool.id
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/bswap/liquidity"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -866,8 +770,8 @@ BSwapApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1BswapLiquidityOpsGet = function(timestamp, signature, operation.id=NULL, pool.id=NULL, operation=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1BswapLiquidityOpsGetWithHttpInfo(timestamp, signature, operation.id, pool.id, operation, start.time, end.time, limit, recv.window, ...)
+    SapiV1BswapLiquidityOpsGet = function(operation.id=NULL, pool.id=NULL, operation=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1BswapLiquidityOpsGetWithHttpInfo(operation.id, pool.id, operation, start.time, end.time, limit, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -880,18 +784,10 @@ BSwapApi <- R6::R6Class(
       }
     },
 
-    SapiV1BswapLiquidityOpsGetWithHttpInfo = function(timestamp, signature, operation.id=NULL, pool.id=NULL, operation=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
+    SapiV1BswapLiquidityOpsGetWithHttpInfo = function(operation.id=NULL, pool.id=NULL, operation=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['operationId'] <- operation.id
 
@@ -907,15 +803,15 @@ BSwapApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/bswap/liquidityOps"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -941,8 +837,8 @@ BSwapApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1BswapLiquidityRemovePost = function(pool.id, type, share.amount, timestamp, signature, asset=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1BswapLiquidityRemovePostWithHttpInfo(pool.id, type, share.amount, timestamp, signature, asset, recv.window, ...)
+    SapiV1BswapLiquidityRemovePost = function(pool.id, type, share.amount, asset=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1BswapLiquidityRemovePostWithHttpInfo(pool.id, type, share.amount, asset, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -955,7 +851,7 @@ BSwapApi <- R6::R6Class(
       }
     },
 
-    SapiV1BswapLiquidityRemovePostWithHttpInfo = function(pool.id, type, share.amount, timestamp, signature, asset=NULL, recv.window=NULL, ...){
+    SapiV1BswapLiquidityRemovePostWithHttpInfo = function(pool.id, type, share.amount, asset=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -972,14 +868,6 @@ BSwapApi <- R6::R6Class(
         stop("Missing required parameter `share.amount`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['poolId'] <- pool.id
 
       queryParams['type'] <- type
@@ -990,15 +878,15 @@ BSwapApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/bswap/liquidityRemove"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1024,8 +912,8 @@ BSwapApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1BswapPoolConfigureGet = function(timestamp, signature, pool.id=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1BswapPoolConfigureGetWithHttpInfo(timestamp, signature, pool.id, recv.window, ...)
+    SapiV1BswapPoolConfigureGet = function(pool.id=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1BswapPoolConfigureGetWithHttpInfo(pool.id, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1038,32 +926,24 @@ BSwapApi <- R6::R6Class(
       }
     },
 
-    SapiV1BswapPoolConfigureGetWithHttpInfo = function(timestamp, signature, pool.id=NULL, recv.window=NULL, ...){
+    SapiV1BswapPoolConfigureGetWithHttpInfo = function(pool.id=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['poolId'] <- pool.id
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/bswap/poolConfigure"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1111,8 +991,8 @@ BSwapApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/bswap/pools"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1138,8 +1018,8 @@ BSwapApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1BswapQuoteGet = function(quote.asset, base.asset, quote.qty, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1BswapQuoteGetWithHttpInfo(quote.asset, base.asset, quote.qty, timestamp, signature, recv.window, ...)
+    SapiV1BswapQuoteGet = function(quote.asset, base.asset, quote.qty, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1BswapQuoteGetWithHttpInfo(quote.asset, base.asset, quote.qty, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1152,7 +1032,7 @@ BSwapApi <- R6::R6Class(
       }
     },
 
-    SapiV1BswapQuoteGetWithHttpInfo = function(quote.asset, base.asset, quote.qty, timestamp, signature, recv.window=NULL, ...){
+    SapiV1BswapQuoteGetWithHttpInfo = function(quote.asset, base.asset, quote.qty, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -1169,14 +1049,6 @@ BSwapApi <- R6::R6Class(
         stop("Missing required parameter `quote.qty`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['quoteAsset'] <- quote.asset
 
       queryParams['baseAsset'] <- base.asset
@@ -1185,15 +1057,15 @@ BSwapApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/bswap/quote"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1219,8 +1091,9 @@ BSwapApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1BswapRemoveLiquidityPreviewGet = function(pool.id, type, quote.asset, share.amount, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1BswapRemoveLiquidityPreviewGetWithHttpInfo(pool.id, type, quote.asset, share.amount, timestamp, signature, recv.window, ...)
+    SapiV1BswapRemoveLiquidityPreviewGet = function(pool.id, type, quote.asset, share.amount, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1BswapRemoveLiquidityPreviewGetWithHttpInfo(pool.id, type, quote.asset, 
+                                                                           share.amount, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1233,7 +1106,8 @@ BSwapApi <- R6::R6Class(
       }
     },
 
-    SapiV1BswapRemoveLiquidityPreviewGetWithHttpInfo = function(pool.id, type, quote.asset, share.amount, timestamp, signature, recv.window=NULL, ...){
+    SapiV1BswapRemoveLiquidityPreviewGetWithHttpInfo = function(pool.id, type, quote.asset, share.amount, 
+                                                                recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -1254,14 +1128,6 @@ BSwapApi <- R6::R6Class(
         stop("Missing required parameter `share.amount`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['poolId'] <- pool.id
 
       queryParams['type'] <- type
@@ -1272,15 +1138,15 @@ BSwapApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/bswap/removeLiquidityPreview"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1306,8 +1172,8 @@ BSwapApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1BswapSwapGet = function(timestamp, signature, swap.id=NULL, start.time=NULL, end.time=NULL, status=NULL, quote.asset=NULL, base.asset=NULL, limit=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1BswapSwapGetWithHttpInfo(timestamp, signature, swap.id, start.time, end.time, status, quote.asset, base.asset, limit, recv.window, ...)
+    SapiV1BswapSwapGet = function(swap.id=NULL, start.time=NULL, end.time=NULL, status=NULL, quote.asset=NULL, base.asset=NULL, limit=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1BswapSwapGetWithHttpInfo(swap.id, start.time, end.time, status, quote.asset, base.asset, limit, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1320,18 +1186,10 @@ BSwapApi <- R6::R6Class(
       }
     },
 
-    SapiV1BswapSwapGetWithHttpInfo = function(timestamp, signature, swap.id=NULL, start.time=NULL, end.time=NULL, status=NULL, quote.asset=NULL, base.asset=NULL, limit=NULL, recv.window=NULL, ...){
+    SapiV1BswapSwapGetWithHttpInfo = function(swap.id=NULL, start.time=NULL, end.time=NULL, status=NULL, quote.asset=NULL, base.asset=NULL, limit=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['swapId'] <- swap.id
 
@@ -1349,15 +1207,15 @@ BSwapApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/bswap/swap"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1383,8 +1241,8 @@ BSwapApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1BswapSwapPost = function(quote.asset, base.asset, quote.qty, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1BswapSwapPostWithHttpInfo(quote.asset, base.asset, quote.qty, timestamp, signature, recv.window, ...)
+    SapiV1BswapSwapPost = function(quote.asset, base.asset, quote.qty, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1BswapSwapPostWithHttpInfo(quote.asset, base.asset, quote.qty, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1397,7 +1255,7 @@ BSwapApi <- R6::R6Class(
       }
     },
 
-    SapiV1BswapSwapPostWithHttpInfo = function(quote.asset, base.asset, quote.qty, timestamp, signature, recv.window=NULL, ...){
+    SapiV1BswapSwapPostWithHttpInfo = function(quote.asset, base.asset, quote.qty, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -1414,14 +1272,6 @@ BSwapApi <- R6::R6Class(
         stop("Missing required parameter `quote.qty`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['quoteAsset'] <- quote.asset
 
       queryParams['baseAsset'] <- base.asset
@@ -1430,15 +1280,15 @@ BSwapApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/bswap/swap"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),

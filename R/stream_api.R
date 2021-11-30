@@ -89,9 +89,6 @@
 #' #Close a ListenKey (USER_STREAM)
 #' api.instance <- StreamApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
 #' result <- api.instance$ApiV3UserDataStreamDelete(listen.key=var.listen.key)
 #'
 #'
@@ -101,9 +98,6 @@
 #'
 #' #Create a ListenKey (USER_STREAM)
 #' api.instance <- StreamApi$new()
-#'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
 #'
 #' result <- api.instance$ApiV3UserDataStreamPost()
 #'
@@ -115,9 +109,6 @@
 #'
 #' #Ping/Keep-alive a ListenKey (USER_STREAM)
 #' api.instance <- StreamApi$new()
-#'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
 #'
 #' result <- api.instance$ApiV3UserDataStreamPut(listen.key=var.listen.key)
 #'
@@ -162,8 +153,8 @@ StreamApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/api/v3/userDataStream"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -211,8 +202,8 @@ StreamApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/api/v3/userDataStream"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -262,8 +253,8 @@ StreamApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/api/v3/userDataStream"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),

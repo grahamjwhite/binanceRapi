@@ -20,8 +20,6 @@
 #' \itemize{
 #' \item \emph{ @param } token.name character
 #' \item \emph{ @param } amount numeric
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse200100} \cr
 #'
@@ -53,8 +51,6 @@
 #' - Only the data of the latest 90 days is available  Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } token.name character
 #' \item \emph{ @param } id integer
 #' \item \emph{ @param } start.time integer
@@ -93,8 +89,6 @@
 #' \itemize{
 #' \item \emph{ @param } token.name character
 #' \item \emph{ @param } cost numeric
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20098} \cr
 #'
@@ -126,8 +120,6 @@
 #' - Only the data of the latest 90 days is available  Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } token.name character
 #' \item \emph{ @param } id integer
 #' \item \emph{ @param } start.time integer
@@ -188,8 +180,6 @@
 #' Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } token.name character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } list( \link{inline_response_200_102} ) \cr
@@ -228,24 +218,17 @@
 #' library(binanceRapi)
 #' var.token.name <- 'token.name_example' # character | BTCDOWN, BTCUP
 #' var.amount <- 1.01 # numeric | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Redeem BLVT (USER_DATA)
 #' api.instance <- BLVTApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1BlvtRedeemPost(var.token.name, var.amount, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1BlvtRedeemPost(var.token.name, var.amount, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1BlvtRedeemRecordGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.token.name <- 'token.name_example' # character | BTCDOWN, BTCUP
 #' var.id <- 56 # integer | 
 #' var.start.time <- 56 # integer | UTC timestamp in ms
@@ -256,10 +239,7 @@
 #' #Redemption Record (USER_DATA)
 #' api.instance <- BLVTApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1BlvtRedeemRecordGet(var.timestamp, var.signature, token.name=var.token.name, id=var.id, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1BlvtRedeemRecordGet(token.name=var.token.name, id=var.id, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1BlvtSubscribePost  ####################
@@ -267,24 +247,17 @@
 #' library(binanceRapi)
 #' var.token.name <- 'token.name_example' # character | BTCDOWN, BTCUP
 #' var.cost <- 3.4 # numeric | Spot balance
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Subscribe BLVT (USER_DATA)
 #' api.instance <- BLVTApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1BlvtSubscribePost(var.token.name, var.cost, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1BlvtSubscribePost(var.token.name, var.cost, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1BlvtSubscribeRecordGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.token.name <- 'token.name_example' # character | BTCDOWN, BTCUP
 #' var.id <- 56 # integer | 
 #' var.start.time <- 56 # integer | UTC timestamp in ms
@@ -295,10 +268,7 @@
 #' #Query Subscription Record (USER_DATA)
 #' api.instance <- BLVTApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1BlvtSubscribeRecordGet(var.timestamp, var.signature, token.name=var.token.name, id=var.id, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1BlvtSubscribeRecordGet(token.name=var.token.name, id=var.id, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1BlvtTokenInfoGet  ####################
@@ -309,27 +279,19 @@
 #' #BLVT Info (MARKET_DATA)
 #' api.instance <- BLVTApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
 #' result <- api.instance$SapiV1BlvtTokenInfoGet(token.name=var.token.name)
 #'
 #'
 #' ####################  SapiV1BlvtUserLimitGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.token.name <- 'token.name_example' # character | BTCDOWN, BTCUP
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #BLVT User Limit Info (USER_DATA)
 #' api.instance <- BLVTApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1BlvtUserLimitGet(var.timestamp, var.signature, token.name=var.token.name, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1BlvtUserLimitGet(token.name=var.token.name, recv.window=var.recv.window)
 #'
 #'
 #' }
@@ -348,8 +310,8 @@ BLVTApi <- R6::R6Class(
         self$apiClient <- ApiClient$new()
       }
     },
-    SapiV1BlvtRedeemPost = function(token.name, amount, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1BlvtRedeemPostWithHttpInfo(token.name, amount, timestamp, signature, recv.window, ...)
+    SapiV1BlvtRedeemPost = function(token.name, amount, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1BlvtRedeemPostWithHttpInfo(token.name, amount, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -362,7 +324,7 @@ BLVTApi <- R6::R6Class(
       }
     },
 
-    SapiV1BlvtRedeemPostWithHttpInfo = function(token.name, amount, timestamp, signature, recv.window=NULL, ...){
+    SapiV1BlvtRedeemPostWithHttpInfo = function(token.name, amount, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -375,29 +337,21 @@ BLVTApi <- R6::R6Class(
         stop("Missing required parameter `amount`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['tokenName'] <- token.name
 
       queryParams['amount'] <- amount
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/blvt/redeem"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -423,8 +377,8 @@ BLVTApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1BlvtRedeemRecordGet = function(timestamp, signature, token.name=NULL, id=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1BlvtRedeemRecordGetWithHttpInfo(timestamp, signature, token.name, id, start.time, end.time, limit, recv.window, ...)
+    SapiV1BlvtRedeemRecordGet = function(token.name=NULL, id=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1BlvtRedeemRecordGetWithHttpInfo(token.name, id, start.time, end.time, limit, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -437,18 +391,10 @@ BLVTApi <- R6::R6Class(
       }
     },
 
-    SapiV1BlvtRedeemRecordGetWithHttpInfo = function(timestamp, signature, token.name=NULL, id=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
+    SapiV1BlvtRedeemRecordGetWithHttpInfo = function(token.name=NULL, id=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['tokenName'] <- token.name
 
@@ -462,15 +408,15 @@ BLVTApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/blvt/redeem/record"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -496,8 +442,8 @@ BLVTApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1BlvtSubscribePost = function(token.name, cost, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1BlvtSubscribePostWithHttpInfo(token.name, cost, timestamp, signature, recv.window, ...)
+    SapiV1BlvtSubscribePost = function(token.name, cost, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1BlvtSubscribePostWithHttpInfo(token.name, cost, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -510,7 +456,7 @@ BLVTApi <- R6::R6Class(
       }
     },
 
-    SapiV1BlvtSubscribePostWithHttpInfo = function(token.name, cost, timestamp, signature, recv.window=NULL, ...){
+    SapiV1BlvtSubscribePostWithHttpInfo = function(token.name, cost, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -523,29 +469,21 @@ BLVTApi <- R6::R6Class(
         stop("Missing required parameter `cost`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['tokenName'] <- token.name
 
       queryParams['cost'] <- cost
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/blvt/subscribe"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -571,8 +509,8 @@ BLVTApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1BlvtSubscribeRecordGet = function(timestamp, signature, token.name=NULL, id=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1BlvtSubscribeRecordGetWithHttpInfo(timestamp, signature, token.name, id, start.time, end.time, limit, recv.window, ...)
+    SapiV1BlvtSubscribeRecordGet = function(token.name=NULL, id=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1BlvtSubscribeRecordGetWithHttpInfo(token.name, id, start.time, end.time, limit, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -585,18 +523,10 @@ BLVTApi <- R6::R6Class(
       }
     },
 
-    SapiV1BlvtSubscribeRecordGetWithHttpInfo = function(timestamp, signature, token.name=NULL, id=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
+    SapiV1BlvtSubscribeRecordGetWithHttpInfo = function(token.name=NULL, id=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['tokenName'] <- token.name
 
@@ -610,15 +540,15 @@ BLVTApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/blvt/subscribe/record"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -668,8 +598,8 @@ BLVTApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/blvt/tokenInfo"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -695,8 +625,8 @@ BLVTApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1BlvtUserLimitGet = function(timestamp, signature, token.name=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1BlvtUserLimitGetWithHttpInfo(timestamp, signature, token.name, recv.window, ...)
+    SapiV1BlvtUserLimitGet = function(token.name=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1BlvtUserLimitGetWithHttpInfo(token.name, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -709,32 +639,24 @@ BLVTApi <- R6::R6Class(
       }
     },
 
-    SapiV1BlvtUserLimitGetWithHttpInfo = function(timestamp, signature, token.name=NULL, recv.window=NULL, ...){
+    SapiV1BlvtUserLimitGetWithHttpInfo = function(token.name=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['tokenName'] <- token.name
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/blvt/userLimit"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),

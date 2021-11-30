@@ -19,8 +19,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } transaction.type Enum < [0, 1] >
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } begin.time integer
 #' \item \emph{ @param } end.time integer
 #' \item \emph{ @param } page integer
@@ -57,8 +55,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } transaction.type Enum < [0, 1] >
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } begin.time integer
 #' \item \emph{ @param } end.time integer
 #' \item \emph{ @param } page integer
@@ -99,8 +95,6 @@
 #'
 #' library(binanceRapi)
 #' var.transaction.type <- '0' # character | 0-deposit, 1-withdraw
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.begin.time <- 1626144956000 # integer | 
 #' var.end.time <- 56 # integer | UTC timestamp in ms
 #' var.page <- 1 # integer | Default 1
@@ -110,9 +104,6 @@
 #' #Fiat Deposit/Withdraw History (USER_DATA)
 #' api.instance <- FiatApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
 #' result <- api.instance$SapiV1FiatOrdersGet(var.transaction.type, var.timestamp, var.signature, begin.time=var.begin.time, end.time=var.end.time, page=var.page, rows=var.rows, recv.window=var.recv.window)
 #'
 #'
@@ -120,8 +111,6 @@
 #'
 #' library(binanceRapi)
 #' var.transaction.type <- '0' # character | 0-deposit, 1-withdraw
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.begin.time <- 1626144956000 # integer | 
 #' var.end.time <- 56 # integer | UTC timestamp in ms
 #' var.page <- 1 # integer | Default 1
@@ -130,9 +119,6 @@
 #'
 #' #Fiat Payments History (USER_DATA)
 #' api.instance <- FiatApi$new()
-#'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
 #'
 #' result <- api.instance$SapiV1FiatPaymentsGet(var.transaction.type, var.timestamp, var.signature, begin.time=var.begin.time, end.time=var.end.time, page=var.page, rows=var.rows, recv.window=var.recv.window)
 #'
@@ -153,8 +139,8 @@ FiatApi <- R6::R6Class(
         self$apiClient <- ApiClient$new()
       }
     },
-    SapiV1FiatOrdersGet = function(transaction.type, timestamp, signature, begin.time=NULL, end.time=NULL, page=NULL, rows=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1FiatOrdersGetWithHttpInfo(transaction.type, timestamp, signature, begin.time, end.time, page, rows, recv.window, ...)
+    SapiV1FiatOrdersGet = function(transaction.type, begin.time=NULL, end.time=NULL, page=NULL, rows=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1FiatOrdersGetWithHttpInfo(transaction.type, begin.time, end.time, page, rows, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -167,21 +153,13 @@ FiatApi <- R6::R6Class(
       }
     },
 
-    SapiV1FiatOrdersGetWithHttpInfo = function(transaction.type, timestamp, signature, begin.time=NULL, end.time=NULL, page=NULL, rows=NULL, recv.window=NULL, ...){
+    SapiV1FiatOrdersGetWithHttpInfo = function(transaction.type, begin.time=NULL, end.time=NULL, page=NULL, rows=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`transaction.type`)) {
         stop("Missing required parameter `transaction.type`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['transactionType'] <- transaction.type
@@ -196,15 +174,15 @@ FiatApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/fiat/orders"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -230,8 +208,8 @@ FiatApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1FiatPaymentsGet = function(transaction.type, timestamp, signature, begin.time=NULL, end.time=NULL, page=NULL, rows=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1FiatPaymentsGetWithHttpInfo(transaction.type, timestamp, signature, begin.time, end.time, page, rows, recv.window, ...)
+    SapiV1FiatPaymentsGet = function(transaction.type, begin.time=NULL, end.time=NULL, page=NULL, rows=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1FiatPaymentsGetWithHttpInfo(transaction.type, begin.time, end.time, page, rows, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -244,21 +222,13 @@ FiatApi <- R6::R6Class(
       }
     },
 
-    SapiV1FiatPaymentsGetWithHttpInfo = function(transaction.type, timestamp, signature, begin.time=NULL, end.time=NULL, page=NULL, rows=NULL, recv.window=NULL, ...){
+    SapiV1FiatPaymentsGetWithHttpInfo = function(transaction.type, begin.time=NULL, end.time=NULL, page=NULL, rows=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`transaction.type`)) {
         stop("Missing required parameter `transaction.type`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['transactionType'] <- transaction.type
@@ -273,15 +243,15 @@ FiatApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/fiat/payments"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),

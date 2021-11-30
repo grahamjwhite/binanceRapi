@@ -20,8 +20,6 @@
 #' \itemize{
 #' \item \emph{ @param } email character
 #' \item \emph{ @param } coin character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } network character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20053} \cr
@@ -55,8 +53,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } email character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } coin character
 #' \item \emph{ @param } status integer
 #' \item \emph{ @param } start.time integer
@@ -95,8 +91,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } email character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } list( \link{inline_response_200_69} ) \cr
 #'
@@ -131,8 +125,6 @@
 #' \item \emph{ @param } to.email character
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } amount numeric
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20068} \cr
 #'
@@ -167,8 +159,6 @@
 #' \item \emph{ @param } from.email character
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } amount numeric
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } transfer.date integer
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20068} \cr
@@ -203,8 +193,6 @@
 #' \itemize{
 #' \item \emph{ @param } email character
 #' \item \emph{ @param } enable.blvt character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20067} \cr
 #'
@@ -237,8 +225,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } email character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20060} \cr
 #'
@@ -270,8 +256,6 @@
 #' Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20061} \cr
 #'
@@ -304,8 +288,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } email character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20059} \cr
 #'
@@ -339,8 +321,6 @@
 #' \itemize{
 #' \item \emph{ @param } email character
 #' \item \emph{ @param } futures.type integer
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } start.time integer
 #' \item \emph{ @param } end.time integer
 #' \item \emph{ @param } page integer
@@ -381,8 +361,6 @@
 #' \item \emph{ @param } futures.type integer
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } amount numeric
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20050} \cr
 #'
@@ -415,8 +393,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } email character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } list( \link{inline_response_200_62} ) \cr
 #'
@@ -452,8 +428,6 @@
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } amount numeric
 #' \item \emph{ @param } type Enum < [1, 2, 3, 4] >
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20063} \cr
 #'
@@ -485,8 +459,6 @@
 #' Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } email character
 #' \item \emph{ @param } is.freeze Enum < [true, false] >
 #' \item \emph{ @param } page integer
@@ -523,8 +495,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } email character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20057} \cr
 #'
@@ -556,8 +526,6 @@
 #' Weight(IP): 10
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20058} \cr
 #'
@@ -590,8 +558,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } email character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20056} \cr
 #'
@@ -627,8 +593,6 @@
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } amount numeric
 #' \item \emph{ @param } type Enum < [1, 2] >
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20063} \cr
 #'
@@ -661,8 +625,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } email character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } page integer
 #' \item \emph{ @param } size integer
 #' \item \emph{ @param } recv.window integer
@@ -696,8 +658,6 @@
 #' - If no &#x60;email&#x60; sent, all sub-accounts&#39; information will be returned.  Weight(IP): 10
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } email character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } list( \link{inline_response_200_55} ) \cr
@@ -730,8 +690,6 @@
 #' - fromEmail and toEmail cannot be sent at the same time. - Return fromEmail equal master account email by default.  Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } from.email character
 #' \item \emph{ @param } to.email character
 #' \item \emph{ @param } start.time integer
@@ -771,8 +729,6 @@
 #' \itemize{
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } amount numeric
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20063} \cr
 #'
@@ -807,8 +763,6 @@
 #' \item \emph{ @param } to.email character
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } amount numeric
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20063} \cr
 #'
@@ -840,8 +794,6 @@
 #' - If &#x60;type&#x60; is not sent, the records of type 2: transfer out will be returned by default. - If &#x60;startTime&#x60; and &#x60;endTime&#x60; are not sent, the recent 30-day data will be returned.  Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } type Enum < [1, 2] >
 #' \item \emph{ @param } start.time integer
@@ -878,8 +830,6 @@
 #' - fromEmail and toEmail cannot be sent at the same time. - Return fromEmail equal master account email by default. - Only get the latest history of past 30 days.  Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } from.email character
 #' \item \emph{ @param } to.email character
 #' \item \emph{ @param } start.time integer
@@ -921,8 +871,6 @@
 #' \item \emph{ @param } to.account.type Enum < [SPOT, USDT_FUTURE, COIN_FUTURE] >
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } amount numeric
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } from.email character
 #' \item \emph{ @param } to.email character
 #' \item \emph{ @param } recv.window integer
@@ -957,8 +905,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } sub.account.string character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20046} \cr
 #'
@@ -992,8 +938,6 @@
 #' \itemize{
 #' \item \emph{ @param } email character
 #' \item \emph{ @param } futures.type Enum < [1, 2] >
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{OneOfsubAccountUSDTFuturesDetailssubAccountCOINFuturesDetails} \cr
 #'
@@ -1026,8 +970,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } futures.type Enum < [1, 2] >
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } page integer
 #' \item \emph{ @param } limit character
 #' \item \emph{ @param } recv.window integer
@@ -1063,8 +1005,6 @@
 #' \itemize{
 #' \item \emph{ @param } email character
 #' \item \emph{ @param } futures.type Enum < [1, 2] >
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{OneOfsubAccountUSDTFuturesPositionRisksubAccountCOINFuturesPositionRisk} \cr
 #'
@@ -1097,8 +1037,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } email character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20051} \cr
 #'
@@ -1136,26 +1074,19 @@
 #' library(binanceRapi)
 #' var.email <- 'email_example' # character | Sub-account email
 #' var.coin <- 'BNB' # character | Coin name
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.network <- 'network_example' # character | 
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Sub-account Spot Assets Summary (For Master Account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1CapitalDepositSubAddressGet(var.email, var.coin, var.timestamp, var.signature, network=var.network, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1CapitalDepositSubAddressGet(var.email, var.coin, network=var.network, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1CapitalDepositSubHisrecGet  ####################
 #'
 #' library(binanceRapi)
 #' var.email <- 'email_example' # character | Sub-account email
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.coin <- 'BNB' # character | Coin name
 #' var.status <- 56 # integer | 0(0:pending,6: credited but cannot withdraw, 1:success)
 #' var.start.time <- 56 # integer | UTC timestamp in ms
@@ -1167,27 +1098,19 @@
 #' #Sub-account Deposit History (For Master Account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1CapitalDepositSubHisrecGet(var.email, var.timestamp, var.signature, coin=var.coin, status=var.status, start.time=var.start.time, end.time=var.end.time, limit=var.limit, offset=var.offset, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1CapitalDepositSubHisrecGet(var.email, coin=var.coin, status=var.status, start.time=var.start.time, end.time=var.end.time, limit=var.limit, offset=var.offset, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1ManagedSubaccountAssetGet  ####################
 #'
 #' library(binanceRapi)
 #' var.email <- 'email_example' # character | Sub-account email
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Managed sub-account asset details（For Investor Master Account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1ManagedSubaccountAssetGet(var.email, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1ManagedSubaccountAssetGet(var.email, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1ManagedSubaccountDepositPost  ####################
@@ -1196,17 +1119,12 @@
 #' var.to.email <- 'to.email_example' # character | Recipient email
 #' var.asset <- 'BTC' # character | 
 #' var.amount <- 1.01 # numeric | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Deposit assets into the managed sub-account（For Investor Master Account）
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1ManagedSubaccountDepositPost(var.to.email, var.asset, var.amount, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1ManagedSubaccountDepositPost(var.to.email, var.asset, var.amount, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1ManagedSubaccountWithdrawPost  ####################
@@ -1215,18 +1133,13 @@
 #' var.from.email <- 'from.email_example' # character | Sender email
 #' var.asset <- 'BTC' # character | 
 #' var.amount <- 1.01 # numeric | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.transfer.date <- 56 # integer | Withdrawals is automatically occur on the transfer date(UTC0). If a date is not selected, the withdrawal occurs right now
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Withdrawl assets from the managed sub-account（For Investor Master Account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1ManagedSubaccountWithdrawPost(var.from.email, var.asset, var.amount, var.timestamp, var.signature, transfer.date=var.transfer.date, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1ManagedSubaccountWithdrawPost(var.from.email, var.asset, var.amount, transfer.date=var.transfer.date, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1SubAccountBlvtEnablePost  ####################
@@ -1234,67 +1147,47 @@
 #' library(binanceRapi)
 #' var.email <- 'email_example' # character | Sub-account email
 #' var.enable.blvt <- 'enable.blvt_example' # character | Only true for now
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Enable Leverage Token for Sub-account (For Master Account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1SubAccountBlvtEnablePost(var.email, var.enable.blvt, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1SubAccountBlvtEnablePost(var.email, var.enable.blvt, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1SubAccountFuturesAccountGet  ####################
 #'
 #' library(binanceRapi)
 #' var.email <- 'email_example' # character | Sub-account email
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Detail on Sub-account's Futures Account (For Master Account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1SubAccountFuturesAccountGet(var.email, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1SubAccountFuturesAccountGet(var.email, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1SubAccountFuturesAccountSummaryGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Summary of Sub-account's Futures Account (For Master Account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1SubAccountFuturesAccountSummaryGet(var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1SubAccountFuturesAccountSummaryGet(recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1SubAccountFuturesEnablePost  ####################
 #'
 #' library(binanceRapi)
 #' var.email <- 'email_example' # character | Sub-account email
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Enable Futures for Sub-account (For Master Account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1SubAccountFuturesEnablePost(var.email, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1SubAccountFuturesEnablePost(var.email, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1SubAccountFuturesInternalTransferGet  ####################
@@ -1302,8 +1195,6 @@
 #' library(binanceRapi)
 #' var.email <- 'email_example' # character | Sub-account email
 #' var.futures.type <- 2 # integer | 1:USDT-margined Futures, 2: Coin-margined Futures
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.start.time <- 56 # integer | UTC timestamp in ms
 #' var.end.time <- 56 # integer | UTC timestamp in ms
 #' var.page <- 1 # integer | Default 1
@@ -1313,10 +1204,7 @@
 #' #Sub-account Futures Asset Transfer History (For Master Account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1SubAccountFuturesInternalTransferGet(var.email, var.futures.type, var.timestamp, var.signature, start.time=var.start.time, end.time=var.end.time, page=var.page, limit=var.limit, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1SubAccountFuturesInternalTransferGet(var.email, var.futures.type, start.time=var.start.time, end.time=var.end.time, page=var.page, limit=var.limit, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1SubAccountFuturesInternalTransferPost  ####################
@@ -1327,34 +1215,24 @@
 #' var.futures.type <- 2 # integer | 1:USDT-margined Futures,2: Coin-margined Futures
 #' var.asset <- 'BTC' # character | 
 #' var.amount <- 1.01 # numeric | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Sub-account Futures Asset Transfer (For Master Account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1SubAccountFuturesInternalTransferPost(var.from.email, var.to.email, var.futures.type, var.asset, var.amount, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1SubAccountFuturesInternalTransferPost(var.from.email, var.to.email, var.futures.type, var.asset, var.amount, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1SubAccountFuturesPositionRiskGet  ####################
 #'
 #' library(binanceRapi)
 #' var.email <- 'email_example' # character | Sub-account email
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Futures Position-Risk of Sub-account (For Master Account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1SubAccountFuturesPositionRiskGet(var.email, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1SubAccountFuturesPositionRiskGet(var.email, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1SubAccountFuturesTransferPost  ####################
@@ -1364,24 +1242,17 @@
 #' var.asset <- 'BTC' # character | 
 #' var.amount <- 1.01 # numeric | 
 #' var.type <- 56 # integer | 1: transfer from subaccount's spot account to its USDT-margined futures account  2: transfer from subaccount's USDT-margined futures account to its spot account  3: transfer from subaccount's spot account to its COIN-margined futures account  4:transfer from subaccount's COIN-margined futures account to its spot account
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Transfer for Sub-account (For Master Account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1SubAccountFuturesTransferPost(var.email, var.asset, var.amount, var.type, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1SubAccountFuturesTransferPost(var.email, var.asset, var.amount, var.type, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1SubAccountListGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.email <- 'email_example' # character | Sub-account email
 #' var.is.freeze <- 'is.freeze_example' # character | 
 #' var.page <- 1 # integer | Default 1
@@ -1391,60 +1262,42 @@
 #' #Query Sub-account List (For Master Account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1SubAccountListGet(var.timestamp, var.signature, email=var.email, is.freeze=var.is.freeze, page=var.page, limit=var.limit, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1SubAccountListGet(email=var.email, is.freeze=var.is.freeze, page=var.page, limit=var.limit, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1SubAccountMarginAccountGet  ####################
 #'
 #' library(binanceRapi)
 #' var.email <- 'email_example' # character | Sub-account email
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Detail on Sub-account's Margin Account (For Master Account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1SubAccountMarginAccountGet(var.email, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1SubAccountMarginAccountGet(var.email, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1SubAccountMarginAccountSummaryGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Summary of Sub-account's Margin Account (For Master Account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1SubAccountMarginAccountSummaryGet(var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1SubAccountMarginAccountSummaryGet(recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1SubAccountMarginEnablePost  ####################
 #'
 #' library(binanceRapi)
 #' var.email <- 'email_example' # character | Sub-account email
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Enable Margin for Sub-account (For Master Account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1SubAccountMarginEnablePost(var.email, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1SubAccountMarginEnablePost(var.email, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1SubAccountMarginTransferPost  ####################
@@ -1454,25 +1307,18 @@
 #' var.asset <- 'BTC' # character | 
 #' var.amount <- 1.01 # numeric | 
 #' var.type <- 56 # integer | 1: transfer from subaccount's spot account to margin account  2: transfer from subaccount's margin account to its spot account
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Margin Transfer for Sub-account (For Master Account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1SubAccountMarginTransferPost(var.email, var.asset, var.amount, var.type, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1SubAccountMarginTransferPost(var.email, var.asset, var.amount, var.type, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1SubAccountSpotSummaryGet  ####################
 #'
 #' library(binanceRapi)
 #' var.email <- 'email_example' # character | Sub-account email
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.page <- 1 # integer | Default 1
 #' var.size <- 56 # integer | Default:10 Max:20
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -1480,34 +1326,24 @@
 #' #Sub-account Spot Assets Summary (For Master Account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1SubAccountSpotSummaryGet(var.email, var.timestamp, var.signature, page=var.page, size=var.size, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1SubAccountSpotSummaryGet(var.email, page=var.page, size=var.size, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1SubAccountStatusGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.email <- 'email_example' # character | Sub-account email
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Sub-account's Status on Margin/Futures (For Master Account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1SubAccountStatusGet(var.timestamp, var.signature, email=var.email, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1SubAccountStatusGet(email=var.email, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1SubAccountSubTransferHistoryGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.from.email <- 'from.email_example' # character | Sub-account email
 #' var.to.email <- 'to.email_example' # character | Sub-account email
 #' var.start.time <- 56 # integer | UTC timestamp in ms
@@ -1519,10 +1355,7 @@
 #' #Sub-account Spot Asset Transfer History (For Master Account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1SubAccountSubTransferHistoryGet(var.timestamp, var.signature, from.email=var.from.email, to.email=var.to.email, start.time=var.start.time, end.time=var.end.time, page=var.page, limit=var.limit, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1SubAccountSubTransferHistoryGet(from.email=var.from.email, to.email=var.to.email, start.time=var.start.time, end.time=var.end.time, page=var.page, limit=var.limit, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1SubAccountTransferSubToMasterPost  ####################
@@ -1530,17 +1363,12 @@
 #' library(binanceRapi)
 #' var.asset <- 'BTC' # character | 
 #' var.amount <- 1.01 # numeric | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Transfer to Master (For Sub-account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1SubAccountTransferSubToMasterPost(var.asset, var.amount, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1SubAccountTransferSubToMasterPost(var.asset, var.amount, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1SubAccountTransferSubToSubPost  ####################
@@ -1549,24 +1377,17 @@
 #' var.to.email <- 'to.email_example' # character | Recipient email
 #' var.asset <- 'BTC' # character | 
 #' var.amount <- 1.01 # numeric | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Transfer to Sub-account of Same Master (For Sub-account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1SubAccountTransferSubToSubPost(var.to.email, var.asset, var.amount, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1SubAccountTransferSubToSubPost(var.to.email, var.asset, var.amount, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1SubAccountTransferSubUserHistoryGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.asset <- 'BNB' # character | 
 #' var.type <- 56 # integer | 1: transfer in  2:  transfer out
 #' var.start.time <- 56 # integer | UTC timestamp in ms
@@ -1577,17 +1398,12 @@
 #' #Sub-account Transfer History (For Sub-account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1SubAccountTransferSubUserHistoryGet(var.timestamp, var.signature, asset=var.asset, type=var.type, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1SubAccountTransferSubUserHistoryGet(asset=var.asset, type=var.type, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1SubAccountUniversalTransferGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.from.email <- 'from.email_example' # character | Sub-account email
 #' var.to.email <- 'to.email_example' # character | Sub-account email
 #' var.start.time <- 56 # integer | UTC timestamp in ms
@@ -1599,10 +1415,7 @@
 #' #Universal Transfer History (For Master Account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1SubAccountUniversalTransferGet(var.timestamp, var.signature, from.email=var.from.email, to.email=var.to.email, start.time=var.start.time, end.time=var.end.time, page=var.page, limit=var.limit, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1SubAccountUniversalTransferGet(from.email=var.from.email, to.email=var.to.email, start.time=var.start.time, end.time=var.end.time, page=var.page, limit=var.limit, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1SubAccountUniversalTransferPost  ####################
@@ -1612,8 +1425,6 @@
 #' var.to.account.type <- 'to.account.type_example' # character | 
 #' var.asset <- 'BTC' # character | 
 #' var.amount <- 1.01 # numeric | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.from.email <- 'from.email_example' # character | Sub-account email
 #' var.to.email <- 'to.email_example' # character | Sub-account email
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -1621,27 +1432,19 @@
 #' #Universal Transfer (For Master Account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1SubAccountUniversalTransferPost(var.from.account.type, var.to.account.type, var.asset, var.amount, var.timestamp, var.signature, from.email=var.from.email, to.email=var.to.email, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1SubAccountUniversalTransferPost(var.from.account.type, var.to.account.type, var.asset, var.amount, from.email=var.from.email, to.email=var.to.email, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1SubAccountVirtualSubAccountPost  ####################
 #'
 #' library(binanceRapi)
 #' var.sub.account.string <- 'sub.account.string_example' # character | Please input a string. We will create a virtual email using that string for you to register
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Create a Virtual Sub-account(For Master Account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1SubAccountVirtualSubAccountPost(var.sub.account.string, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1SubAccountVirtualSubAccountPost(var.sub.account.string, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV2SubAccountFuturesAccountGet  ####################
@@ -1649,25 +1452,18 @@
 #' library(binanceRapi)
 #' var.email <- 'email_example' # character | Sub-account email
 #' var.futures.type <- 56 # integer | 1:USDT Margined Futures  2:COIN Margined Futures
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Detail on Sub-account's Futures Account V2 (For Master Account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV2SubAccountFuturesAccountGet(var.email, var.futures.type, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV2SubAccountFuturesAccountGet(var.email, var.futures.type, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV2SubAccountFuturesAccountSummaryGet  ####################
 #'
 #' library(binanceRapi)
 #' var.futures.type <- 56 # integer | 1:USDT Margined Futures  2:COIN Margined Futures
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.page <- 1 # integer | Default 1
 #' var.limit <- 'limit_example' # character | Default 10, Max 20
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -1675,10 +1471,7 @@
 #' #Summary of Sub-account's Futures Account V2 (For Master Account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV2SubAccountFuturesAccountSummaryGet(var.futures.type, var.timestamp, var.signature, page=var.page, limit=var.limit, recv.window=var.recv.window)
+#' result <- api.instance$SapiV2SubAccountFuturesAccountSummaryGet(var.futures.type, page=var.page, limit=var.limit, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV2SubAccountFuturesPositionRiskGet  ####################
@@ -1686,34 +1479,24 @@
 #' library(binanceRapi)
 #' var.email <- 'email_example' # character | Sub-account email
 #' var.futures.type <- 56 # integer | 1:USDT Margined Futures  2:COIN Margined Futures
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Futures Position-Risk of Sub-account V2 (For Master Account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV2SubAccountFuturesPositionRiskGet(var.email, var.futures.type, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV2SubAccountFuturesPositionRiskGet(var.email, var.futures.type, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV3SubAccountAssetsGet  ####################
 #'
 #' library(binanceRapi)
 #' var.email <- 'email_example' # character | Sub-account email
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Sub-account Assets (For Master Account)
 #' api.instance <- SubAccountApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV3SubAccountAssetsGet(var.email, recv.window=var.recv.window)
 #'
 #'
 #' }
@@ -1732,8 +1515,8 @@ SubAccountApi <- R6::R6Class(
         self$apiClient <- ApiClient$new()
       }
     },
-    SapiV1CapitalDepositSubAddressGet = function(email, coin, timestamp, signature, network=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1CapitalDepositSubAddressGetWithHttpInfo(email, coin, timestamp, signature, network, recv.window, ...)
+    SapiV1CapitalDepositSubAddressGet = function(email, coin, network=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1CapitalDepositSubAddressGetWithHttpInfo(email, coin, network, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1746,7 +1529,7 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV1CapitalDepositSubAddressGetWithHttpInfo = function(email, coin, timestamp, signature, network=NULL, recv.window=NULL, ...){
+    SapiV1CapitalDepositSubAddressGetWithHttpInfo = function(email, coin, network=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -1759,14 +1542,6 @@ SubAccountApi <- R6::R6Class(
         stop("Missing required parameter `coin`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['email'] <- email
 
       queryParams['coin'] <- coin
@@ -1775,15 +1550,15 @@ SubAccountApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/capital/deposit/subAddress"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1809,8 +1584,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1CapitalDepositSubHisrecGet = function(email, timestamp, signature, coin=NULL, status=NULL, start.time=NULL, end.time=NULL, limit=NULL, offset=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1CapitalDepositSubHisrecGetWithHttpInfo(email, timestamp, signature, coin, status, start.time, end.time, limit, offset, recv.window, ...)
+    SapiV1CapitalDepositSubHisrecGet = function(email, coin=NULL, status=NULL, start.time=NULL, end.time=NULL, limit=NULL, offset=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1CapitalDepositSubHisrecGetWithHttpInfo(email, coin, status, start.time, end.time, limit, offset, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1823,21 +1598,13 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV1CapitalDepositSubHisrecGetWithHttpInfo = function(email, timestamp, signature, coin=NULL, status=NULL, start.time=NULL, end.time=NULL, limit=NULL, offset=NULL, recv.window=NULL, ...){
+    SapiV1CapitalDepositSubHisrecGetWithHttpInfo = function(email, coin=NULL, status=NULL, start.time=NULL, end.time=NULL, limit=NULL, offset=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`email`)) {
         stop("Missing required parameter `email`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['email'] <- email
@@ -1856,15 +1623,15 @@ SubAccountApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/capital/deposit/subHisrec"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1890,8 +1657,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1ManagedSubaccountAssetGet = function(email, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1ManagedSubaccountAssetGetWithHttpInfo(email, timestamp, signature, recv.window, ...)
+    SapiV1ManagedSubaccountAssetGet = function(email, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1ManagedSubaccountAssetGetWithHttpInfo(email, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1904,7 +1671,7 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV1ManagedSubaccountAssetGetWithHttpInfo = function(email, timestamp, signature, recv.window=NULL, ...){
+    SapiV1ManagedSubaccountAssetGetWithHttpInfo = function(email, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -1913,27 +1680,19 @@ SubAccountApi <- R6::R6Class(
         stop("Missing required parameter `email`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['email'] <- email
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/managed-subaccount/asset"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1959,8 +1718,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1ManagedSubaccountDepositPost = function(to.email, asset, amount, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1ManagedSubaccountDepositPostWithHttpInfo(to.email, asset, amount, timestamp, signature, recv.window, ...)
+    SapiV1ManagedSubaccountDepositPost = function(to.email, asset, amount, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1ManagedSubaccountDepositPostWithHttpInfo(to.email, asset, amount, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1973,7 +1732,7 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV1ManagedSubaccountDepositPostWithHttpInfo = function(to.email, asset, amount, timestamp, signature, recv.window=NULL, ...){
+    SapiV1ManagedSubaccountDepositPostWithHttpInfo = function(to.email, asset, amount, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -1990,14 +1749,6 @@ SubAccountApi <- R6::R6Class(
         stop("Missing required parameter `amount`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['toEmail'] <- to.email
 
       queryParams['asset'] <- asset
@@ -2006,15 +1757,15 @@ SubAccountApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/managed-subaccount/deposit"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -2040,8 +1791,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1ManagedSubaccountWithdrawPost = function(from.email, asset, amount, timestamp, signature, transfer.date=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1ManagedSubaccountWithdrawPostWithHttpInfo(from.email, asset, amount, timestamp, signature, transfer.date, recv.window, ...)
+    SapiV1ManagedSubaccountWithdrawPost = function(from.email, asset, amount, transfer.date=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1ManagedSubaccountWithdrawPostWithHttpInfo(from.email, asset, amount, transfer.date, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2054,7 +1805,7 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV1ManagedSubaccountWithdrawPostWithHttpInfo = function(from.email, asset, amount, timestamp, signature, transfer.date=NULL, recv.window=NULL, ...){
+    SapiV1ManagedSubaccountWithdrawPostWithHttpInfo = function(from.email, asset, amount, transfer.date=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -2071,14 +1822,6 @@ SubAccountApi <- R6::R6Class(
         stop("Missing required parameter `amount`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['fromEmail'] <- from.email
 
       queryParams['asset'] <- asset
@@ -2089,15 +1832,15 @@ SubAccountApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/managed-subaccount/withdraw"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -2123,8 +1866,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1SubAccountBlvtEnablePost = function(email, enable.blvt, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1SubAccountBlvtEnablePostWithHttpInfo(email, enable.blvt, timestamp, signature, recv.window, ...)
+    SapiV1SubAccountBlvtEnablePost = function(email, enable.blvt, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1SubAccountBlvtEnablePostWithHttpInfo(email, enable.blvt, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2137,7 +1880,7 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV1SubAccountBlvtEnablePostWithHttpInfo = function(email, enable.blvt, timestamp, signature, recv.window=NULL, ...){
+    SapiV1SubAccountBlvtEnablePostWithHttpInfo = function(email, enable.blvt, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -2150,29 +1893,21 @@ SubAccountApi <- R6::R6Class(
         stop("Missing required parameter `enable.blvt`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['email'] <- email
 
       queryParams['enableBlvt'] <- enable.blvt
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/sub-account/blvt/enable"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -2198,8 +1933,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1SubAccountFuturesAccountGet = function(email, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1SubAccountFuturesAccountGetWithHttpInfo(email, timestamp, signature, recv.window, ...)
+    SapiV1SubAccountFuturesAccountGet = function(email, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1SubAccountFuturesAccountGetWithHttpInfo(email, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2212,7 +1947,7 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV1SubAccountFuturesAccountGetWithHttpInfo = function(email, timestamp, signature, recv.window=NULL, ...){
+    SapiV1SubAccountFuturesAccountGetWithHttpInfo = function(email, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -2221,27 +1956,19 @@ SubAccountApi <- R6::R6Class(
         stop("Missing required parameter `email`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['email'] <- email
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/sub-account/futures/account"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -2267,8 +1994,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1SubAccountFuturesAccountSummaryGet = function(timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1SubAccountFuturesAccountSummaryGetWithHttpInfo(timestamp, signature, recv.window, ...)
+    SapiV1SubAccountFuturesAccountSummaryGet = function(recv.window=NULL, ...){
+      apiResponse <- self$SapiV1SubAccountFuturesAccountSummaryGetWithHttpInfo(recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2281,30 +2008,22 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV1SubAccountFuturesAccountSummaryGetWithHttpInfo = function(timestamp, signature, recv.window=NULL, ...){
+    SapiV1SubAccountFuturesAccountSummaryGetWithHttpInfo = function(recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/sub-account/futures/accountSummary"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -2330,8 +2049,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1SubAccountFuturesEnablePost = function(email, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1SubAccountFuturesEnablePostWithHttpInfo(email, timestamp, signature, recv.window, ...)
+    SapiV1SubAccountFuturesEnablePost = function(email, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1SubAccountFuturesEnablePostWithHttpInfo(email, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2344,7 +2063,7 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV1SubAccountFuturesEnablePostWithHttpInfo = function(email, timestamp, signature, recv.window=NULL, ...){
+    SapiV1SubAccountFuturesEnablePostWithHttpInfo = function(email, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -2353,27 +2072,19 @@ SubAccountApi <- R6::R6Class(
         stop("Missing required parameter `email`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['email'] <- email
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/sub-account/futures/enable"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -2399,8 +2110,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1SubAccountFuturesInternalTransferGet = function(email, futures.type, timestamp, signature, start.time=NULL, end.time=NULL, page=NULL, limit=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1SubAccountFuturesInternalTransferGetWithHttpInfo(email, futures.type, timestamp, signature, start.time, end.time, page, limit, recv.window, ...)
+    SapiV1SubAccountFuturesInternalTransferGet = function(email, futures.type, start.time=NULL, end.time=NULL, page=NULL, limit=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1SubAccountFuturesInternalTransferGetWithHttpInfo(email, futures.type, start.time, end.time, page, limit, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2413,7 +2124,7 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV1SubAccountFuturesInternalTransferGetWithHttpInfo = function(email, futures.type, timestamp, signature, start.time=NULL, end.time=NULL, page=NULL, limit=NULL, recv.window=NULL, ...){
+    SapiV1SubAccountFuturesInternalTransferGetWithHttpInfo = function(email, futures.type, start.time=NULL, end.time=NULL, page=NULL, limit=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -2424,14 +2135,6 @@ SubAccountApi <- R6::R6Class(
 
       if (missing(`futures.type`)) {
         stop("Missing required parameter `futures.type`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['email'] <- email
@@ -2448,15 +2151,15 @@ SubAccountApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/sub-account/futures/internalTransfer"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -2482,8 +2185,11 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1SubAccountFuturesInternalTransferPost = function(from.email, to.email, futures.type, asset, amount, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1SubAccountFuturesInternalTransferPostWithHttpInfo(from.email, to.email, futures.type, asset, amount, timestamp, signature, recv.window, ...)
+    SapiV1SubAccountFuturesInternalTransferPost = function(from.email, to.email, futures.type, asset, 
+                                                           amount, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1SubAccountFuturesInternalTransferPostWithHttpInfo(from.email, to.email, 
+                                                                                  futures.type, asset, amount, 
+                                                                                  recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2496,7 +2202,8 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV1SubAccountFuturesInternalTransferPostWithHttpInfo = function(from.email, to.email, futures.type, asset, amount, timestamp, signature, recv.window=NULL, ...){
+    SapiV1SubAccountFuturesInternalTransferPostWithHttpInfo = function(from.email, to.email, futures.type, 
+                                                                       asset, amount, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -2521,14 +2228,6 @@ SubAccountApi <- R6::R6Class(
         stop("Missing required parameter `amount`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['fromEmail'] <- from.email
 
       queryParams['toEmail'] <- to.email
@@ -2541,15 +2240,15 @@ SubAccountApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/sub-account/futures/internalTransfer"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -2575,8 +2274,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1SubAccountFuturesPositionRiskGet = function(email, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1SubAccountFuturesPositionRiskGetWithHttpInfo(email, timestamp, signature, recv.window, ...)
+    SapiV1SubAccountFuturesPositionRiskGet = function(email, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1SubAccountFuturesPositionRiskGetWithHttpInfo(email, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2589,7 +2288,7 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV1SubAccountFuturesPositionRiskGetWithHttpInfo = function(email, timestamp, signature, recv.window=NULL, ...){
+    SapiV1SubAccountFuturesPositionRiskGetWithHttpInfo = function(email, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -2598,27 +2297,19 @@ SubAccountApi <- R6::R6Class(
         stop("Missing required parameter `email`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['email'] <- email
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/sub-account/futures/positionRisk"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -2644,8 +2335,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1SubAccountFuturesTransferPost = function(email, asset, amount, type, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1SubAccountFuturesTransferPostWithHttpInfo(email, asset, amount, type, timestamp, signature, recv.window, ...)
+    SapiV1SubAccountFuturesTransferPost = function(email, asset, amount, type, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1SubAccountFuturesTransferPostWithHttpInfo(email, asset, amount, type, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2658,7 +2349,7 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV1SubAccountFuturesTransferPostWithHttpInfo = function(email, asset, amount, type, timestamp, signature, recv.window=NULL, ...){
+    SapiV1SubAccountFuturesTransferPostWithHttpInfo = function(email, asset, amount, type, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -2679,14 +2370,6 @@ SubAccountApi <- R6::R6Class(
         stop("Missing required parameter `type`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['email'] <- email
 
       queryParams['asset'] <- asset
@@ -2697,15 +2380,15 @@ SubAccountApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/sub-account/futures/transfer"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -2731,8 +2414,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1SubAccountListGet = function(timestamp, signature, email=NULL, is.freeze=NULL, page=NULL, limit=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1SubAccountListGetWithHttpInfo(timestamp, signature, email, is.freeze, page, limit, recv.window, ...)
+    SapiV1SubAccountListGet = function(email=NULL, is.freeze=NULL, page=NULL, limit=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1SubAccountListGetWithHttpInfo(email, is.freeze, page, limit, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2745,18 +2428,10 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV1SubAccountListGetWithHttpInfo = function(timestamp, signature, email=NULL, is.freeze=NULL, page=NULL, limit=NULL, recv.window=NULL, ...){
+    SapiV1SubAccountListGetWithHttpInfo = function(email=NULL, is.freeze=NULL, page=NULL, limit=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['email'] <- email
 
@@ -2768,15 +2443,15 @@ SubAccountApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/sub-account/list"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -2802,8 +2477,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1SubAccountMarginAccountGet = function(email, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1SubAccountMarginAccountGetWithHttpInfo(email, timestamp, signature, recv.window, ...)
+    SapiV1SubAccountMarginAccountGet = function(email, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1SubAccountMarginAccountGetWithHttpInfo(email, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2816,7 +2491,7 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV1SubAccountMarginAccountGetWithHttpInfo = function(email, timestamp, signature, recv.window=NULL, ...){
+    SapiV1SubAccountMarginAccountGetWithHttpInfo = function(email, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -2825,27 +2500,19 @@ SubAccountApi <- R6::R6Class(
         stop("Missing required parameter `email`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['email'] <- email
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/sub-account/margin/account"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -2871,8 +2538,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1SubAccountMarginAccountSummaryGet = function(timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1SubAccountMarginAccountSummaryGetWithHttpInfo(timestamp, signature, recv.window, ...)
+    SapiV1SubAccountMarginAccountSummaryGet = function(recv.window=NULL, ...){
+      apiResponse <- self$SapiV1SubAccountMarginAccountSummaryGetWithHttpInfo(recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2885,30 +2552,22 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV1SubAccountMarginAccountSummaryGetWithHttpInfo = function(timestamp, signature, recv.window=NULL, ...){
+    SapiV1SubAccountMarginAccountSummaryGetWithHttpInfo = function(recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/sub-account/margin/accountSummary"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -2934,8 +2593,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1SubAccountMarginEnablePost = function(email, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1SubAccountMarginEnablePostWithHttpInfo(email, timestamp, signature, recv.window, ...)
+    SapiV1SubAccountMarginEnablePost = function(email, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1SubAccountMarginEnablePostWithHttpInfo(email, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2948,7 +2607,7 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV1SubAccountMarginEnablePostWithHttpInfo = function(email, timestamp, signature, recv.window=NULL, ...){
+    SapiV1SubAccountMarginEnablePostWithHttpInfo = function(email, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -2957,27 +2616,19 @@ SubAccountApi <- R6::R6Class(
         stop("Missing required parameter `email`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['email'] <- email
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/sub-account/margin/enable"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3003,8 +2654,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1SubAccountMarginTransferPost = function(email, asset, amount, type, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1SubAccountMarginTransferPostWithHttpInfo(email, asset, amount, type, timestamp, signature, recv.window, ...)
+    SapiV1SubAccountMarginTransferPost = function(email, asset, amount, type, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1SubAccountMarginTransferPostWithHttpInfo(email, asset, amount, type, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -3017,7 +2668,7 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV1SubAccountMarginTransferPostWithHttpInfo = function(email, asset, amount, type, timestamp, signature, recv.window=NULL, ...){
+    SapiV1SubAccountMarginTransferPostWithHttpInfo = function(email, asset, amount, type, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -3038,14 +2689,6 @@ SubAccountApi <- R6::R6Class(
         stop("Missing required parameter `type`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['email'] <- email
 
       queryParams['asset'] <- asset
@@ -3056,15 +2699,15 @@ SubAccountApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/sub-account/margin/transfer"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3090,8 +2733,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1SubAccountSpotSummaryGet = function(email, timestamp, signature, page=NULL, size=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1SubAccountSpotSummaryGetWithHttpInfo(email, timestamp, signature, page, size, recv.window, ...)
+    SapiV1SubAccountSpotSummaryGet = function(email, page=NULL, size=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1SubAccountSpotSummaryGetWithHttpInfo(email, page, size, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -3104,21 +2747,13 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV1SubAccountSpotSummaryGetWithHttpInfo = function(email, timestamp, signature, page=NULL, size=NULL, recv.window=NULL, ...){
+    SapiV1SubAccountSpotSummaryGetWithHttpInfo = function(email, page=NULL, size=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`email`)) {
         stop("Missing required parameter `email`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['email'] <- email
@@ -3129,15 +2764,15 @@ SubAccountApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/sub-account/spotSummary"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3163,8 +2798,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1SubAccountStatusGet = function(timestamp, signature, email=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1SubAccountStatusGetWithHttpInfo(timestamp, signature, email, recv.window, ...)
+    SapiV1SubAccountStatusGet = function(email=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1SubAccountStatusGetWithHttpInfo(email, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -3177,32 +2812,24 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV1SubAccountStatusGetWithHttpInfo = function(timestamp, signature, email=NULL, recv.window=NULL, ...){
+    SapiV1SubAccountStatusGetWithHttpInfo = function(email=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['email'] <- email
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/sub-account/status"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3228,8 +2855,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1SubAccountSubTransferHistoryGet = function(timestamp, signature, from.email=NULL, to.email=NULL, start.time=NULL, end.time=NULL, page=NULL, limit=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1SubAccountSubTransferHistoryGetWithHttpInfo(timestamp, signature, from.email, to.email, start.time, end.time, page, limit, recv.window, ...)
+    SapiV1SubAccountSubTransferHistoryGet = function(from.email=NULL, to.email=NULL, start.time=NULL, end.time=NULL, page=NULL, limit=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1SubAccountSubTransferHistoryGetWithHttpInfo(from.email, to.email, start.time, end.time, page, limit, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -3242,18 +2869,10 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV1SubAccountSubTransferHistoryGetWithHttpInfo = function(timestamp, signature, from.email=NULL, to.email=NULL, start.time=NULL, end.time=NULL, page=NULL, limit=NULL, recv.window=NULL, ...){
+    SapiV1SubAccountSubTransferHistoryGetWithHttpInfo = function(from.email=NULL, to.email=NULL, start.time=NULL, end.time=NULL, page=NULL, limit=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['fromEmail'] <- from.email
 
@@ -3269,15 +2888,15 @@ SubAccountApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/sub-account/sub/transfer/history"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3303,8 +2922,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1SubAccountTransferSubToMasterPost = function(asset, amount, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1SubAccountTransferSubToMasterPostWithHttpInfo(asset, amount, timestamp, signature, recv.window, ...)
+    SapiV1SubAccountTransferSubToMasterPost = function(asset, amount, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1SubAccountTransferSubToMasterPostWithHttpInfo(asset, amount, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -3317,7 +2936,7 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV1SubAccountTransferSubToMasterPostWithHttpInfo = function(asset, amount, timestamp, signature, recv.window=NULL, ...){
+    SapiV1SubAccountTransferSubToMasterPostWithHttpInfo = function(asset, amount, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -3330,29 +2949,21 @@ SubAccountApi <- R6::R6Class(
         stop("Missing required parameter `amount`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['asset'] <- asset
 
       queryParams['amount'] <- amount
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/sub-account/transfer/subToMaster"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3378,8 +2989,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1SubAccountTransferSubToSubPost = function(to.email, asset, amount, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1SubAccountTransferSubToSubPostWithHttpInfo(to.email, asset, amount, timestamp, signature, recv.window, ...)
+    SapiV1SubAccountTransferSubToSubPost = function(to.email, asset, amount, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1SubAccountTransferSubToSubPostWithHttpInfo(to.email, asset, amount, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -3392,7 +3003,7 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV1SubAccountTransferSubToSubPostWithHttpInfo = function(to.email, asset, amount, timestamp, signature, recv.window=NULL, ...){
+    SapiV1SubAccountTransferSubToSubPostWithHttpInfo = function(to.email, asset, amount, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -3409,14 +3020,6 @@ SubAccountApi <- R6::R6Class(
         stop("Missing required parameter `amount`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['toEmail'] <- to.email
 
       queryParams['asset'] <- asset
@@ -3425,15 +3028,15 @@ SubAccountApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/sub-account/transfer/subToSub"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3459,8 +3062,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1SubAccountTransferSubUserHistoryGet = function(timestamp, signature, asset=NULL, type=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1SubAccountTransferSubUserHistoryGetWithHttpInfo(timestamp, signature, asset, type, start.time, end.time, limit, recv.window, ...)
+    SapiV1SubAccountTransferSubUserHistoryGet = function(asset=NULL, type=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1SubAccountTransferSubUserHistoryGetWithHttpInfo(asset, type, start.time, end.time, limit, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -3473,18 +3076,11 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV1SubAccountTransferSubUserHistoryGetWithHttpInfo = function(timestamp, signature, asset=NULL, type=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
+    SapiV1SubAccountTransferSubUserHistoryGetWithHttpInfo = function(asset=NULL, type=NULL, start.time=NULL, 
+                                                                     end.time=NULL, limit=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['asset'] <- asset
 
@@ -3498,15 +3094,15 @@ SubAccountApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/sub-account/transfer/subUserHistory"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3532,8 +3128,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1SubAccountUniversalTransferGet = function(timestamp, signature, from.email=NULL, to.email=NULL, start.time=NULL, end.time=NULL, page=NULL, limit=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1SubAccountUniversalTransferGetWithHttpInfo(timestamp, signature, from.email, to.email, start.time, end.time, page, limit, recv.window, ...)
+    SapiV1SubAccountUniversalTransferGet = function(from.email=NULL, to.email=NULL, start.time=NULL, end.time=NULL, page=NULL, limit=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1SubAccountUniversalTransferGetWithHttpInfo(from.email, to.email, start.time, end.time, page, limit, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -3546,18 +3142,10 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV1SubAccountUniversalTransferGetWithHttpInfo = function(timestamp, signature, from.email=NULL, to.email=NULL, start.time=NULL, end.time=NULL, page=NULL, limit=NULL, recv.window=NULL, ...){
+    SapiV1SubAccountUniversalTransferGetWithHttpInfo = function(from.email=NULL, to.email=NULL, start.time=NULL, end.time=NULL, page=NULL, limit=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['fromEmail'] <- from.email
 
@@ -3573,15 +3161,15 @@ SubAccountApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/sub-account/universalTransfer"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3607,8 +3195,10 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1SubAccountUniversalTransferPost = function(from.account.type, to.account.type, asset, amount, timestamp, signature, from.email=NULL, to.email=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1SubAccountUniversalTransferPostWithHttpInfo(from.account.type, to.account.type, asset, amount, timestamp, signature, from.email, to.email, recv.window, ...)
+    SapiV1SubAccountUniversalTransferPost = function(from.account.type, to.account.type, asset, amount, 
+                                                     from.email=NULL, to.email=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1SubAccountUniversalTransferPostWithHttpInfo(from.account.type, to.account.type, 
+                                                                            asset, amount, from.email, to.email, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -3621,7 +3211,8 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV1SubAccountUniversalTransferPostWithHttpInfo = function(from.account.type, to.account.type, asset, amount, timestamp, signature, from.email=NULL, to.email=NULL, recv.window=NULL, ...){
+    SapiV1SubAccountUniversalTransferPostWithHttpInfo = function(from.account.type, to.account.type, asset, 
+                                                                 amount, from.email=NULL, to.email=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -3642,14 +3233,6 @@ SubAccountApi <- R6::R6Class(
         stop("Missing required parameter `amount`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['fromEmail'] <- from.email
 
       queryParams['toEmail'] <- to.email
@@ -3664,15 +3247,15 @@ SubAccountApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/sub-account/universalTransfer"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3698,8 +3281,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1SubAccountVirtualSubAccountPost = function(sub.account.string, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1SubAccountVirtualSubAccountPostWithHttpInfo(sub.account.string, timestamp, signature, recv.window, ...)
+    SapiV1SubAccountVirtualSubAccountPost = function(sub.account.string, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1SubAccountVirtualSubAccountPostWithHttpInfo(sub.account.string, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -3712,7 +3295,7 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV1SubAccountVirtualSubAccountPostWithHttpInfo = function(sub.account.string, timestamp, signature, recv.window=NULL, ...){
+    SapiV1SubAccountVirtualSubAccountPostWithHttpInfo = function(sub.account.string, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -3721,27 +3304,19 @@ SubAccountApi <- R6::R6Class(
         stop("Missing required parameter `sub.account.string`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['subAccountString'] <- sub.account.string
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/sub-account/virtualSubAccount"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3767,8 +3342,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV2SubAccountFuturesAccountGet = function(email, futures.type, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV2SubAccountFuturesAccountGetWithHttpInfo(email, futures.type, timestamp, signature, recv.window, ...)
+    SapiV2SubAccountFuturesAccountGet = function(email, futures.type, recv.window=NULL, ...){
+      apiResponse <- self$SapiV2SubAccountFuturesAccountGetWithHttpInfo(email, futures.type,  recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -3781,7 +3356,7 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV2SubAccountFuturesAccountGetWithHttpInfo = function(email, futures.type, timestamp, signature, recv.window=NULL, ...){
+    SapiV2SubAccountFuturesAccountGetWithHttpInfo = function(email, futures.type, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -3794,29 +3369,21 @@ SubAccountApi <- R6::R6Class(
         stop("Missing required parameter `futures.type`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['email'] <- email
 
       queryParams['futuresType'] <- futures.type
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v2/sub-account/futures/account"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3842,8 +3409,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV2SubAccountFuturesAccountSummaryGet = function(futures.type, timestamp, signature, page=NULL, limit=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV2SubAccountFuturesAccountSummaryGetWithHttpInfo(futures.type, timestamp, signature, page, limit, recv.window, ...)
+    SapiV2SubAccountFuturesAccountSummaryGet = function(futures.type, page=NULL, limit=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV2SubAccountFuturesAccountSummaryGetWithHttpInfo(futures.type, page, limit, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -3856,21 +3423,13 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV2SubAccountFuturesAccountSummaryGetWithHttpInfo = function(futures.type, timestamp, signature, page=NULL, limit=NULL, recv.window=NULL, ...){
+    SapiV2SubAccountFuturesAccountSummaryGetWithHttpInfo = function(futures.type, page=NULL, limit=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`futures.type`)) {
         stop("Missing required parameter `futures.type`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['futuresType'] <- futures.type
@@ -3881,15 +3440,15 @@ SubAccountApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v2/sub-account/futures/accountSummary"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3915,8 +3474,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV2SubAccountFuturesPositionRiskGet = function(email, futures.type, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV2SubAccountFuturesPositionRiskGetWithHttpInfo(email, futures.type, timestamp, signature, recv.window, ...)
+    SapiV2SubAccountFuturesPositionRiskGet = function(email, futures.type, recv.window=NULL, ...){
+      apiResponse <- self$SapiV2SubAccountFuturesPositionRiskGetWithHttpInfo(email, futures.type, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -3929,7 +3488,7 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV2SubAccountFuturesPositionRiskGetWithHttpInfo = function(email, futures.type, timestamp, signature, recv.window=NULL, ...){
+    SapiV2SubAccountFuturesPositionRiskGetWithHttpInfo = function(email, futures.type, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -3942,29 +3501,21 @@ SubAccountApi <- R6::R6Class(
         stop("Missing required parameter `futures.type`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['email'] <- email
 
       queryParams['futuresType'] <- futures.type
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v2/sub-account/futures/positionRisk"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3990,8 +3541,8 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV3SubAccountAssetsGet = function(email, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV3SubAccountAssetsGetWithHttpInfo(email, timestamp, signature, recv.window, ...)
+    SapiV3SubAccountAssetsGet = function(email, recv.window=NULL, ...){
+      apiResponse <- self$SapiV3SubAccountAssetsGetWithHttpInfo(email, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -4004,7 +3555,7 @@ SubAccountApi <- R6::R6Class(
       }
     },
 
-    SapiV3SubAccountAssetsGetWithHttpInfo = function(email, timestamp, signature, recv.window=NULL, ...){
+    SapiV3SubAccountAssetsGetWithHttpInfo = function(email, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -4013,27 +3564,19 @@ SubAccountApi <- R6::R6Class(
         stop("Missing required parameter `email`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['email'] <- email
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v3/sub-account/assets"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),

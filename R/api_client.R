@@ -219,5 +219,14 @@ ApiClient  <- R6::R6Class(
       }
       returnObj
     }
+  ),
+  active = list(
+    Timestamp = function(value){
+      if(missing(value)){
+        as.character(round(as.numeric(Sys.time()) * 1e3))
+      } else {
+        stop("Timestamp is read-only")
+      }
+    }
   )
 )

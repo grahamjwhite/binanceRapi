@@ -20,14 +20,13 @@ Credentials <- R6::R6Class(
     },
     
     sign = function(params){
-      params$timestamp <- timestamp()
-      params$signature <- digest::hmac(
-        key = self$key,
+      signature <- digest::hmac(
+        key = private$secret,
         object = paste(
           mapply(paste, names(params), params, sep = '=', USE.NAMES = FALSE),
           collapse = '&'),
         algo = 'sha256')
-      return(params)
+      return(signature)
     },
     
     setSecret = function(secret){

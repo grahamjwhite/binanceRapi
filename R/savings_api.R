@@ -20,8 +20,6 @@
 #' \itemize{
 #' \item \emph{ @param } project.id character
 #' \item \emph{ @param } lot character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20080} \cr
 #'
@@ -54,8 +52,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } status Enum < [ALL, SUBSCRIBABLE, UNSUBSCRIBABLE] >
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } featured Enum < [ALL, TRUE] >
 #' \item \emph{ @param } current integer
 #' \item \emph{ @param } size integer
@@ -92,8 +88,6 @@
 #' \itemize{
 #' \item \emph{ @param } product.id character
 #' \item \emph{ @param } amount numeric
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20076} \cr
 #'
@@ -128,8 +122,6 @@
 #' \item \emph{ @param } product.id character
 #' \item \emph{ @param } amount numeric
 #' \item \emph{ @param } type Enum < [FAST, NORMAL] >
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #'
 #'
@@ -161,8 +153,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } asset character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } list( \link{inline_response_200_78} ) \cr
 #'
@@ -195,8 +185,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } product.id character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20075} \cr
 #'
@@ -230,8 +218,6 @@
 #' \itemize{
 #' \item \emph{ @param } product.id character
 #' \item \emph{ @param } type Enum < [FAST, NORMAL] >
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20077} \cr
 #'
@@ -265,8 +251,6 @@
 #' \itemize{
 #' \item \emph{ @param } project.id character
 #' \item \emph{ @param } lot character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } position.id character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20084} \cr
@@ -303,8 +287,6 @@
 #' \item \emph{ @param } status Enum < [ALL, SUBSCRIBABLE, UNSUBSCRIBABLE] >
 #' \item \emph{ @param } is.sort.asc character
 #' \item \emph{ @param } sort.by Enum < [START_TIME, LOT_SIZ, LOT_SIZE, INTEREST_RATE, DURATION] >
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } current integer
 #' \item \emph{ @param } size integer
@@ -342,8 +324,6 @@
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } project.id character
 #' \item \emph{ @param } status Enum < [ALL, SUBSCRIBABLE, UNSUBSCRIBABLE] >
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } list( \link{inline_response_200_81} ) \cr
 #'
@@ -375,8 +355,6 @@
 #' Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20082} \cr
 #'
@@ -409,8 +387,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } lending.type Enum < [DAILY, ACTIVITY, CUSTOMIZED_FIXED] >
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } start.time integer
 #' \item \emph{ @param } end.time integer
@@ -448,8 +424,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } lending.type Enum < [DAILY, ACTIVITY, CUSTOMIZED_FIXED] >
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } start.time integer
 #' \item \emph{ @param } end.time integer
@@ -487,8 +461,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } lending.type Enum < [DAILY, ACTIVITY, CUSTOMIZED_FIXED] >
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } start.time integer
 #' \item \emph{ @param } end.time integer
@@ -531,25 +503,18 @@
 #' library(binanceRapi)
 #' var.project.id <- 'project.id_example' # character | 
 #' var.lot <- 'lot_example' # character | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Purchase Fixed/Activity Project (USER_DATA)
 #' api.instance <- SavingsApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1LendingCustomizedFixedPurchasePost(var.project.id, var.lot, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1LendingCustomizedFixedPurchasePost(var.project.id, var.lot, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1LendingDailyProductListGet  ####################
 #'
 #' library(binanceRapi)
 #' var.status <- 'status_example' # character | \"ALL\", \"SUBSCRIBABLE\", \"UNSUBSCRIBABLE\"; Default: 'ALL'
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.featured <- 'featured_example' # character | \"ALL\", \"TRUE\"; Default: \"ALL\"
 #' var.current <- 1 # integer | Current querying page. Start from 1. Default:1
 #' var.size <- 100 # integer | Default:10 Max:100
@@ -558,10 +523,7 @@
 #' #Get Flexible Product List (USER_DATA)
 #' api.instance <- SavingsApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1LendingDailyProductListGet(var.status, var.timestamp, var.signature, featured=var.featured, current=var.current, size=var.size, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1LendingDailyProductListGet(var.status, featured=var.featured, current=var.current, size=var.size, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1LendingDailyPurchasePost  ####################
@@ -569,17 +531,12 @@
 #' library(binanceRapi)
 #' var.product.id <- 'product.id_example' # character | 
 #' var.amount <- 1.01 # numeric | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Purchase Flexible Product (USER_DATA)
 #' api.instance <- SavingsApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1LendingDailyPurchasePost(var.product.id, var.amount, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1LendingDailyPurchasePost(var.product.id, var.amount, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1LendingDailyRedeemPost  ####################
@@ -588,51 +545,36 @@
 #' var.product.id <- 'product.id_example' # character | 
 #' var.amount <- 1.01 # numeric | 
 #' var.type <- 'type_example' # character | \"FAST\", \"NORMAL\"
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Redeem Flexible Product (USER_DATA)
 #' api.instance <- SavingsApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1LendingDailyRedeemPost(var.product.id, var.amount, var.type, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1LendingDailyRedeemPost(var.product.id, var.amount, var.type, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1LendingDailyTokenPositionGet  ####################
 #'
 #' library(binanceRapi)
 #' var.asset <- 'BTC' # character | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Get Flexible Product Position (USER_DATA)
 #' api.instance <- SavingsApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1LendingDailyTokenPositionGet(var.asset, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1LendingDailyTokenPositionGet(var.asset, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1LendingDailyUserLeftQuotaGet  ####################
 #'
 #' library(binanceRapi)
 #' var.product.id <- 'product.id_example' # character | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Get Left Daily Purchase Quota of Flexible Product (USER_DATA)
 #' api.instance <- SavingsApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1LendingDailyUserLeftQuotaGet(var.product.id, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1LendingDailyUserLeftQuotaGet(var.product.id, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1LendingDailyUserRedemptionQuotaGet  ####################
@@ -640,17 +582,12 @@
 #' library(binanceRapi)
 #' var.product.id <- 'product.id_example' # character | 
 #' var.type <- 'type_example' # character | \"FAST\", \"NORMAL\"
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Get Left Daily Redemption Quota of Flexible Product (USER_DATA)
 #' api.instance <- SavingsApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1LendingDailyUserRedemptionQuotaGet(var.product.id, var.type, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1LendingDailyUserRedemptionQuotaGet(var.product.id, var.type, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1LendingPositionChangedPost  ####################
@@ -658,18 +595,13 @@
 #' library(binanceRapi)
 #' var.project.id <- 'project.id_example' # character | 
 #' var.lot <- 'lot_example' # character | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.position.id <- 'position.id_example' # character | 
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Change Fixed/Activity Position to Daily Position (USER_DATA)
 #' api.instance <- SavingsApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1LendingPositionChangedPost(var.project.id, var.lot, var.timestamp, var.signature, position.id=var.position.id, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1LendingPositionChangedPost(var.project.id, var.lot, position.id=var.position.id, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1LendingProjectListGet  ####################
@@ -679,8 +611,6 @@
 #' var.status <- 'status_example' # character | \"ALL\", \"SUBSCRIBABLE\", \"UNSUBSCRIBABLE\"; Default: 'ALL'
 #' var.is.sort.asc <- 'is.sort.asc_example' # character | default \"true\"
 #' var.sort.by <- 'sort.by_example' # character | \"START_TIME\", \"LOT_SIZE\", \"INTEREST_RATE\", \"DURATION\"; default \"START_TIME
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.asset <- 'BNB' # character | 
 #' var.current <- 1 # integer | Current querying page. Start from 1. Default:1
 #' var.size <- 100 # integer | Default:10 Max:100
@@ -689,10 +619,7 @@
 #' #Get Fixed/Activity Project List(USER_DATA)
 #' api.instance <- SavingsApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1LendingProjectListGet(var.type, var.status, var.is.sort.asc, var.sort.by, var.timestamp, var.signature, asset=var.asset, current=var.current, size=var.size, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1LendingProjectListGet(var.type, var.status, var.is.sort.asc, var.sort.by, asset=var.asset, current=var.current, size=var.size, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1LendingProjectPositionListGet  ####################
@@ -701,41 +628,29 @@
 #' var.asset <- 'BTC' # character | 
 #' var.project.id <- 'project.id_example' # character | 
 #' var.status <- 'status_example' # character | \"ALL\", \"SUBSCRIBABLE\", \"UNSUBSCRIBABLE\"; Default: 'ALL'
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Get Fixed/Activity Project Position (USER_DATA)
 #' api.instance <- SavingsApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1LendingProjectPositionListGet(var.asset, var.project.id, var.status, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1LendingProjectPositionListGet(var.asset, var.project.id, var.status, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1LendingUnionAccountGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Lending Account (USER_DATA)
 #' api.instance <- SavingsApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1LendingUnionAccountGet(var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1LendingUnionAccountGet(recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1LendingUnionInterestHistoryGet  ####################
 #'
 #' library(binanceRapi)
 #' var.lending.type <- 'lending.type_example' # character | \"DAILY\" for flexible, \"ACTIVITY\" for activity, \"CUSTOMIZED_FIXED\" for fixed
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.asset <- 'BNB' # character | 
 #' var.start.time <- 56 # integer | UTC timestamp in ms
 #' var.end.time <- 56 # integer | UTC timestamp in ms
@@ -746,18 +661,13 @@
 #' #Get Interest History (USER_DATA)
 #' api.instance <- SavingsApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1LendingUnionInterestHistoryGet(var.lending.type, var.timestamp, var.signature, asset=var.asset, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1LendingUnionInterestHistoryGet(var.lending.type, asset=var.asset, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1LendingUnionPurchaseRecordGet  ####################
 #'
 #' library(binanceRapi)
 #' var.lending.type <- 'lending.type_example' # character | \"DAILY\" for flexible, \"ACTIVITY\" for activity, \"CUSTOMIZED_FIXED\" for fixed
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.asset <- 'BNB' # character | 
 #' var.start.time <- 56 # integer | UTC timestamp in ms
 #' var.end.time <- 56 # integer | UTC timestamp in ms
@@ -768,18 +678,13 @@
 #' #Get Purchase Record (USER_DATA)
 #' api.instance <- SavingsApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1LendingUnionPurchaseRecordGet(var.lending.type, var.timestamp, var.signature, asset=var.asset, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1LendingUnionPurchaseRecordGet(var.lending.type, asset=var.asset, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1LendingUnionRedemptionRecordGet  ####################
 #'
 #' library(binanceRapi)
 #' var.lending.type <- 'lending.type_example' # character | \"DAILY\" for flexible, \"ACTIVITY\" for activity, \"CUSTOMIZED_FIXED\" for fixed
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.asset <- 'BNB' # character | 
 #' var.start.time <- 56 # integer | UTC timestamp in ms
 #' var.end.time <- 56 # integer | UTC timestamp in ms
@@ -790,10 +695,7 @@
 #' #Get Redemption Record (USER_DATA)
 #' api.instance <- SavingsApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, var.timestamp, var.signature, asset=var.asset, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, asset=var.asset, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, recv.window=var.recv.window)
 #'
 #'
 #' }
@@ -812,8 +714,8 @@ SavingsApi <- R6::R6Class(
         self$apiClient <- ApiClient$new()
       }
     },
-    SapiV1LendingCustomizedFixedPurchasePost = function(project.id, lot, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1LendingCustomizedFixedPurchasePostWithHttpInfo(project.id, lot, timestamp, signature, recv.window, ...)
+    SapiV1LendingCustomizedFixedPurchasePost = function(project.id, lot, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1LendingCustomizedFixedPurchasePostWithHttpInfo(project.id, lot, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -826,7 +728,7 @@ SavingsApi <- R6::R6Class(
       }
     },
 
-    SapiV1LendingCustomizedFixedPurchasePostWithHttpInfo = function(project.id, lot, timestamp, signature, recv.window=NULL, ...){
+    SapiV1LendingCustomizedFixedPurchasePostWithHttpInfo = function(project.id, lot, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -839,29 +741,21 @@ SavingsApi <- R6::R6Class(
         stop("Missing required parameter `lot`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['projectId'] <- project.id
 
       queryParams['lot'] <- lot
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/lending/customizedFixed/purchase"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -887,8 +781,8 @@ SavingsApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1LendingDailyProductListGet = function(status, timestamp, signature, featured=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1LendingDailyProductListGetWithHttpInfo(status, timestamp, signature, featured, current, size, recv.window, ...)
+    SapiV1LendingDailyProductListGet = function(status, featured=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1LendingDailyProductListGetWithHttpInfo(status, featured, current, size, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -901,21 +795,13 @@ SavingsApi <- R6::R6Class(
       }
     },
 
-    SapiV1LendingDailyProductListGetWithHttpInfo = function(status, timestamp, signature, featured=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
+    SapiV1LendingDailyProductListGetWithHttpInfo = function(status, featured=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`status`)) {
         stop("Missing required parameter `status`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['status'] <- status
@@ -928,15 +814,15 @@ SavingsApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/lending/daily/product/list"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -962,8 +848,8 @@ SavingsApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1LendingDailyPurchasePost = function(product.id, amount, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1LendingDailyPurchasePostWithHttpInfo(product.id, amount, timestamp, signature, recv.window, ...)
+    SapiV1LendingDailyPurchasePost = function(product.id, amount, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1LendingDailyPurchasePostWithHttpInfo(product.id, amount, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -976,7 +862,7 @@ SavingsApi <- R6::R6Class(
       }
     },
 
-    SapiV1LendingDailyPurchasePostWithHttpInfo = function(product.id, amount, timestamp, signature, recv.window=NULL, ...){
+    SapiV1LendingDailyPurchasePostWithHttpInfo = function(product.id, amount, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -989,29 +875,21 @@ SavingsApi <- R6::R6Class(
         stop("Missing required parameter `amount`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['productId'] <- product.id
 
       queryParams['amount'] <- amount
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/lending/daily/purchase"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1037,8 +915,8 @@ SavingsApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1LendingDailyRedeemPost = function(product.id, amount, type, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1LendingDailyRedeemPostWithHttpInfo(product.id, amount, type, timestamp, signature, recv.window, ...)
+    SapiV1LendingDailyRedeemPost = function(product.id, amount, type, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1LendingDailyRedeemPostWithHttpInfo(product.id, amount, type, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1051,7 +929,7 @@ SavingsApi <- R6::R6Class(
       }
     },
 
-    SapiV1LendingDailyRedeemPostWithHttpInfo = function(product.id, amount, type, timestamp, signature, recv.window=NULL, ...){
+    SapiV1LendingDailyRedeemPostWithHttpInfo = function(product.id, amount, type, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -1068,14 +946,6 @@ SavingsApi <- R6::R6Class(
         stop("Missing required parameter `type`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['productId'] <- product.id
 
       queryParams['amount'] <- amount
@@ -1084,15 +954,15 @@ SavingsApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/lending/daily/redeem"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1118,8 +988,8 @@ SavingsApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1LendingDailyTokenPositionGet = function(asset, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1LendingDailyTokenPositionGetWithHttpInfo(asset, timestamp, signature, recv.window, ...)
+    SapiV1LendingDailyTokenPositionGet = function(asset, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1LendingDailyTokenPositionGetWithHttpInfo(asset, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1132,7 +1002,7 @@ SavingsApi <- R6::R6Class(
       }
     },
 
-    SapiV1LendingDailyTokenPositionGetWithHttpInfo = function(asset, timestamp, signature, recv.window=NULL, ...){
+    SapiV1LendingDailyTokenPositionGetWithHttpInfo = function(asset, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -1141,27 +1011,19 @@ SavingsApi <- R6::R6Class(
         stop("Missing required parameter `asset`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['asset'] <- asset
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/lending/daily/token/position"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1187,8 +1049,8 @@ SavingsApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1LendingDailyUserLeftQuotaGet = function(product.id, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1LendingDailyUserLeftQuotaGetWithHttpInfo(product.id, timestamp, signature, recv.window, ...)
+    SapiV1LendingDailyUserLeftQuotaGet = function(product.id, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1LendingDailyUserLeftQuotaGetWithHttpInfo(product.id, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1201,7 +1063,7 @@ SavingsApi <- R6::R6Class(
       }
     },
 
-    SapiV1LendingDailyUserLeftQuotaGetWithHttpInfo = function(product.id, timestamp, signature, recv.window=NULL, ...){
+    SapiV1LendingDailyUserLeftQuotaGetWithHttpInfo = function(product.id, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -1210,27 +1072,19 @@ SavingsApi <- R6::R6Class(
         stop("Missing required parameter `product.id`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['productId'] <- product.id
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/lending/daily/userLeftQuota"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1256,8 +1110,8 @@ SavingsApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1LendingDailyUserRedemptionQuotaGet = function(product.id, type, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1LendingDailyUserRedemptionQuotaGetWithHttpInfo(product.id, type, timestamp, signature, recv.window, ...)
+    SapiV1LendingDailyUserRedemptionQuotaGet = function(product.id, type, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1LendingDailyUserRedemptionQuotaGetWithHttpInfo(product.id, type, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1270,7 +1124,7 @@ SavingsApi <- R6::R6Class(
       }
     },
 
-    SapiV1LendingDailyUserRedemptionQuotaGetWithHttpInfo = function(product.id, type, timestamp, signature, recv.window=NULL, ...){
+    SapiV1LendingDailyUserRedemptionQuotaGetWithHttpInfo = function(product.id, type, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -1283,29 +1137,21 @@ SavingsApi <- R6::R6Class(
         stop("Missing required parameter `type`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['productId'] <- product.id
 
       queryParams['type'] <- type
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/lending/daily/userRedemptionQuota"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1331,8 +1177,8 @@ SavingsApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1LendingPositionChangedPost = function(project.id, lot, timestamp, signature, position.id=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1LendingPositionChangedPostWithHttpInfo(project.id, lot, timestamp, signature, position.id, recv.window, ...)
+    SapiV1LendingPositionChangedPost = function(project.id, lot, position.id=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1LendingPositionChangedPostWithHttpInfo(project.id, lot, position.id, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1345,7 +1191,7 @@ SavingsApi <- R6::R6Class(
       }
     },
 
-    SapiV1LendingPositionChangedPostWithHttpInfo = function(project.id, lot, timestamp, signature, position.id=NULL, recv.window=NULL, ...){
+    SapiV1LendingPositionChangedPostWithHttpInfo = function(project.id, lot, position.id=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -1358,14 +1204,6 @@ SavingsApi <- R6::R6Class(
         stop("Missing required parameter `lot`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['projectId'] <- project.id
 
       queryParams['lot'] <- lot
@@ -1374,15 +1212,15 @@ SavingsApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/lending/positionChanged"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1408,8 +1246,8 @@ SavingsApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1LendingProjectListGet = function(type, status, is.sort.asc, sort.by, timestamp, signature, asset=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1LendingProjectListGetWithHttpInfo(type, status, is.sort.asc, sort.by, timestamp, signature, asset, current, size, recv.window, ...)
+    SapiV1LendingProjectListGet = function(type, status, is.sort.asc, sort.by, asset=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1LendingProjectListGetWithHttpInfo(type, status, is.sort.asc, sort.by, asset, current, size, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1422,7 +1260,7 @@ SavingsApi <- R6::R6Class(
       }
     },
 
-    SapiV1LendingProjectListGetWithHttpInfo = function(type, status, is.sort.asc, sort.by, timestamp, signature, asset=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
+    SapiV1LendingProjectListGetWithHttpInfo = function(type, status, is.sort.asc, sort.by, asset=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -1443,14 +1281,6 @@ SavingsApi <- R6::R6Class(
         stop("Missing required parameter `sort.by`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['asset'] <- asset
 
       queryParams['type'] <- type
@@ -1467,15 +1297,15 @@ SavingsApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/lending/project/list"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1501,8 +1331,8 @@ SavingsApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1LendingProjectPositionListGet = function(asset, project.id, status, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1LendingProjectPositionListGetWithHttpInfo(asset, project.id, status, timestamp, signature, recv.window, ...)
+    SapiV1LendingProjectPositionListGet = function(asset, project.id, status, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1LendingProjectPositionListGetWithHttpInfo(asset, project.id, status, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1515,7 +1345,7 @@ SavingsApi <- R6::R6Class(
       }
     },
 
-    SapiV1LendingProjectPositionListGetWithHttpInfo = function(asset, project.id, status, timestamp, signature, recv.window=NULL, ...){
+    SapiV1LendingProjectPositionListGetWithHttpInfo = function(asset, project.id, status, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -1532,14 +1362,6 @@ SavingsApi <- R6::R6Class(
         stop("Missing required parameter `status`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['asset'] <- asset
 
       queryParams['projectId'] <- project.id
@@ -1548,15 +1370,15 @@ SavingsApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/lending/project/position/list"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1582,8 +1404,8 @@ SavingsApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1LendingUnionAccountGet = function(timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1LendingUnionAccountGetWithHttpInfo(timestamp, signature, recv.window, ...)
+    SapiV1LendingUnionAccountGet = function(recv.window=NULL, ...){
+      apiResponse <- self$SapiV1LendingUnionAccountGetWithHttpInfo(recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1596,30 +1418,22 @@ SavingsApi <- R6::R6Class(
       }
     },
 
-    SapiV1LendingUnionAccountGetWithHttpInfo = function(timestamp, signature, recv.window=NULL, ...){
+    SapiV1LendingUnionAccountGetWithHttpInfo = function(recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/lending/union/account"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1645,8 +1459,8 @@ SavingsApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1LendingUnionInterestHistoryGet = function(lending.type, timestamp, signature, asset=NULL, start.time=NULL, end.time=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1LendingUnionInterestHistoryGetWithHttpInfo(lending.type, timestamp, signature, asset, start.time, end.time, current, size, recv.window, ...)
+    SapiV1LendingUnionInterestHistoryGet = function(lending.type, asset=NULL, start.time=NULL, end.time=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1LendingUnionInterestHistoryGetWithHttpInfo(lending.type, asset, start.time, end.time, current, size, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1659,21 +1473,13 @@ SavingsApi <- R6::R6Class(
       }
     },
 
-    SapiV1LendingUnionInterestHistoryGetWithHttpInfo = function(lending.type, timestamp, signature, asset=NULL, start.time=NULL, end.time=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
+    SapiV1LendingUnionInterestHistoryGetWithHttpInfo = function(lending.type, asset=NULL, start.time=NULL, end.time=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`lending.type`)) {
         stop("Missing required parameter `lending.type`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['lendingType'] <- lending.type
@@ -1690,15 +1496,15 @@ SavingsApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/lending/union/interestHistory"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1724,8 +1530,8 @@ SavingsApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1LendingUnionPurchaseRecordGet = function(lending.type, timestamp, signature, asset=NULL, start.time=NULL, end.time=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1LendingUnionPurchaseRecordGetWithHttpInfo(lending.type, timestamp, signature, asset, start.time, end.time, current, size, recv.window, ...)
+    SapiV1LendingUnionPurchaseRecordGet = function(lending.type, asset=NULL, start.time=NULL, end.time=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1LendingUnionPurchaseRecordGetWithHttpInfo(lending.type, asset, start.time, end.time, current, size, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1738,21 +1544,13 @@ SavingsApi <- R6::R6Class(
       }
     },
 
-    SapiV1LendingUnionPurchaseRecordGetWithHttpInfo = function(lending.type, timestamp, signature, asset=NULL, start.time=NULL, end.time=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
+    SapiV1LendingUnionPurchaseRecordGetWithHttpInfo = function(lending.type, asset=NULL, start.time=NULL, end.time=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`lending.type`)) {
         stop("Missing required parameter `lending.type`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['lendingType'] <- lending.type
@@ -1769,15 +1567,15 @@ SavingsApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/lending/union/purchaseRecord"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1803,8 +1601,8 @@ SavingsApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1LendingUnionRedemptionRecordGet = function(lending.type, timestamp, signature, asset=NULL, start.time=NULL, end.time=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1LendingUnionRedemptionRecordGetWithHttpInfo(lending.type, timestamp, signature, asset, start.time, end.time, current, size, recv.window, ...)
+    SapiV1LendingUnionRedemptionRecordGet = function(lending.type, asset=NULL, start.time=NULL, end.time=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1LendingUnionRedemptionRecordGetWithHttpInfo(lending.type, asset, start.time, end.time, current, size, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1817,21 +1615,13 @@ SavingsApi <- R6::R6Class(
       }
     },
 
-    SapiV1LendingUnionRedemptionRecordGetWithHttpInfo = function(lending.type, timestamp, signature, asset=NULL, start.time=NULL, end.time=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
+    SapiV1LendingUnionRedemptionRecordGetWithHttpInfo = function(lending.type, asset=NULL, start.time=NULL, end.time=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`lending.type`)) {
         stop("Missing required parameter `lending.type`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['lendingType'] <- lending.type
@@ -1848,15 +1638,15 @@ SavingsApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/lending/union/redemptionRecord"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),

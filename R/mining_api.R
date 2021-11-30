@@ -20,8 +20,6 @@
 #' \itemize{
 #' \item \emph{ @param } config.id character
 #' \item \emph{ @param } user.name character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20094} \cr
 #'
@@ -53,8 +51,6 @@
 #' Weight(IP): 5
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } page.index integer
 #' \item \emph{ @param } page.size character
 #' \item \emph{ @param } recv.window integer
@@ -92,8 +88,6 @@
 #' \item \emph{ @param } algo character
 #' \item \emph{ @param } to.pool.user character
 #' \item \emph{ @param } hash.rate character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } start.date character
 #' \item \emph{ @param } end.date character
 #' \item \emph{ @param } recv.window integer
@@ -129,8 +123,6 @@
 #' \itemize{
 #' \item \emph{ @param } config.id character
 #' \item \emph{ @param } user.name character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } page.index integer
 #' \item \emph{ @param } page.size character
 #' \item \emph{ @param } recv.window integer
@@ -166,8 +158,6 @@
 #' \itemize{
 #' \item \emph{ @param } algo character
 #' \item \emph{ @param } user.name character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } coin character
 #' \item \emph{ @param } start.date character
 #' \item \emph{ @param } end.date character
@@ -206,8 +196,6 @@
 #' \itemize{
 #' \item \emph{ @param } algo character
 #' \item \emph{ @param } user.name character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } coin character
 #' \item \emph{ @param } start.date character
 #' \item \emph{ @param } end.date character
@@ -244,8 +232,6 @@
 #' Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20085} \cr
 #'
@@ -270,8 +256,6 @@
 #' Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20086} \cr
 #'
@@ -298,8 +282,6 @@
 #' \itemize{
 #' \item \emph{ @param } algo character
 #' \item \emph{ @param } user.name character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20096} \cr
 #'
@@ -333,8 +315,6 @@
 #' \itemize{
 #' \item \emph{ @param } algo character
 #' \item \emph{ @param } user.name character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20095} \cr
 #'
@@ -369,8 +349,6 @@
 #' \item \emph{ @param } algo character
 #' \item \emph{ @param } user.name character
 #' \item \emph{ @param } worker.name character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20087} \cr
 #'
@@ -404,8 +382,6 @@
 #' \itemize{
 #' \item \emph{ @param } algo character
 #' \item \emph{ @param } user.name character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } page.index integer
 #' \item \emph{ @param } sort integer
 #' \item \emph{ @param } sort.column integer
@@ -447,24 +423,17 @@
 #' library(binanceRapi)
 #' var.config.id <- 'config.id_example' # character | Mining ID
 #' var.user.name <- 'user.name_example' # character | Mining Account
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Cancel Hashrate Resale configuration (USER_DATA)
 #' api.instance <- MiningApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MiningHashTransferConfigCancelPost(var.config.id, var.user.name, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MiningHashTransferConfigCancelPost(var.config.id, var.user.name, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MiningHashTransferConfigDetailsListGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.page.index <- 56 # integer | Page number, default is first page, start form 1
 #' var.page.size <- 'page.size_example' # character | Number of pages, minimum 10, maximum 200
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -472,10 +441,7 @@
 #' #Hashrate Resale List (USER_DATA)
 #' api.instance <- MiningApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MiningHashTransferConfigDetailsListGet(var.timestamp, var.signature, page.index=var.page.index, page.size=var.page.size, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MiningHashTransferConfigDetailsListGet(page.index=var.page.index, page.size=var.page.size, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MiningHashTransferConfigPost  ####################
@@ -485,8 +451,6 @@
 #' var.algo <- 'algo_example' # character | Algorithm(sha256)
 #' var.to.pool.user <- 'to.pool.user_example' # character | Mining Account
 #' var.hash.rate <- 'hash.rate_example' # character | Resale hashrate h/s must be transferred (BTC is greater than 500000000000 ETH is greater than 500000)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.start.date <- 'start.date_example' # character | Search date, millisecond timestamp, while empty query all
 #' var.end.date <- 'end.date_example' # character | Search date, millisecond timestamp, while empty query all
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -494,10 +458,7 @@
 #' #Hashrate Resale Request (USER_DATA)
 #' api.instance <- MiningApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MiningHashTransferConfigPost(var.user.name, var.algo, var.to.pool.user, var.hash.rate, var.timestamp, var.signature, start.date=var.start.date, end.date=var.end.date, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MiningHashTransferConfigPost(var.user.name, var.algo, var.to.pool.user, var.hash.rate, start.date=var.start.date, end.date=var.end.date, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MiningHashTransferProfitDetailsGet  ####################
@@ -505,8 +466,6 @@
 #' library(binanceRapi)
 #' var.config.id <- 'config.id_example' # character | Mining ID
 #' var.user.name <- 'user.name_example' # character | Mining Account
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.page.index <- 56 # integer | Page number, default is first page, start form 1
 #' var.page.size <- 'page.size_example' # character | Number of pages, minimum 10, maximum 200
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -514,10 +473,7 @@
 #' #Hashrate Resale Details (USER_DATA)
 #' api.instance <- MiningApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MiningHashTransferProfitDetailsGet(var.config.id, var.user.name, var.timestamp, var.signature, page.index=var.page.index, page.size=var.page.size, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MiningHashTransferProfitDetailsGet(var.config.id, var.user.name, page.index=var.page.index, page.size=var.page.size, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MiningPaymentListGet  ####################
@@ -525,8 +481,6 @@
 #' library(binanceRapi)
 #' var.algo <- 'algo_example' # character | Algorithm(sha256)
 #' var.user.name <- 'user.name_example' # character | Mining Account
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.coin <- 'BNB' # character | Coin name
 #' var.start.date <- 'start.date_example' # character | Search date, millisecond timestamp, while empty query all
 #' var.end.date <- 'end.date_example' # character | Search date, millisecond timestamp, while empty query all
@@ -537,10 +491,7 @@
 #' #Earnings List (USER_DATA)
 #' api.instance <- MiningApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MiningPaymentListGet(var.algo, var.user.name, var.timestamp, var.signature, coin=var.coin, start.date=var.start.date, end.date=var.end.date, page.index=var.page.index, page.size=var.page.size, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MiningPaymentListGet(var.algo, var.user.name, coin=var.coin, start.date=var.start.date, end.date=var.end.date, page.index=var.page.index, page.size=var.page.size, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MiningPaymentOtherGet  ####################
@@ -548,8 +499,6 @@
 #' library(binanceRapi)
 #' var.algo <- 'algo_example' # character | Algorithm(sha256)
 #' var.user.name <- 'user.name_example' # character | Mining Account
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.coin <- 'BNB' # character | Coin name
 #' var.start.date <- 'start.date_example' # character | Search date, millisecond timestamp, while empty query all
 #' var.end.date <- 'end.date_example' # character | Search date, millisecond timestamp, while empty query all
@@ -560,42 +509,29 @@
 #' #Extra Bonus List (USER_DATA)
 #' api.instance <- MiningApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MiningPaymentOtherGet(var.algo, var.user.name, var.timestamp, var.signature, coin=var.coin, start.date=var.start.date, end.date=var.end.date, page.index=var.page.index, page.size=var.page.size, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MiningPaymentOtherGet(var.algo, var.user.name, coin=var.coin, start.date=var.start.date, end.date=var.end.date, page.index=var.page.index, page.size=var.page.size, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MiningPubAlgoListGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Acquiring Algorithm (MARKET_DATA)
 #' api.instance <- MiningApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MiningPubAlgoListGet(var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MiningPubAlgoListGet(recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MiningPubCoinListGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Acquiring CoinName (MARKET_DATA)
 #' api.instance <- MiningApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MiningPubCoinListGet(var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MiningPubCoinListGet(recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MiningStatisticsUserListGet  ####################
@@ -603,17 +539,12 @@
 #' library(binanceRapi)
 #' var.algo <- 'algo_example' # character | Algorithm(sha256)
 #' var.user.name <- 'user.name_example' # character | Mining Account
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Account List (USER_DATA)
 #' api.instance <- MiningApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MiningStatisticsUserListGet(var.algo, var.user.name, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MiningStatisticsUserListGet(var.algo, var.user.name, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MiningStatisticsUserStatusGet  ####################
@@ -621,17 +552,12 @@
 #' library(binanceRapi)
 #' var.algo <- 'algo_example' # character | Algorithm(sha256)
 #' var.user.name <- 'user.name_example' # character | Mining Account
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Statistic List (USER_DATA)
 #' api.instance <- MiningApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MiningStatisticsUserStatusGet(var.algo, var.user.name, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MiningStatisticsUserStatusGet(var.algo, var.user.name, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MiningWorkerDetailGet  ####################
@@ -640,17 +566,12 @@
 #' var.algo <- 'algo_example' # character | Algorithm(sha256)
 #' var.user.name <- 'user.name_example' # character | Mining Account
 #' var.worker.name <- 'worker.name_example' # character | Miner’s name
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Request for Detail Miner List (USER_DATA)
 #' api.instance <- MiningApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MiningWorkerDetailGet(var.algo, var.user.name, var.worker.name, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MiningWorkerDetailGet(var.algo, var.user.name, var.worker.name, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MiningWorkerListGet  ####################
@@ -658,8 +579,6 @@
 #' library(binanceRapi)
 #' var.algo <- 'algo_example' # character | Algorithm(sha256)
 #' var.user.name <- 'user.name_example' # character | Mining Account
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.page.index <- 56 # integer | Page number, default is first page, start form 1
 #' var.sort <- 56 # integer | sort sequence（default=0）0 positive sequence, 1 negative sequence
 #' var.sort.column <- 56 # integer | Sort by( default 1): 1: miner name, 2: real-time computing power, 3: daily average computing power, 4: real-time rejection rate, 5: last submission time
@@ -669,10 +588,7 @@
 #' #Request for Miner List (USER_DATA)
 #' api.instance <- MiningApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MiningWorkerListGet(var.algo, var.user.name, var.timestamp, var.signature, page.index=var.page.index, sort=var.sort, sort.column=var.sort.column, worker.status=var.worker.status, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MiningWorkerListGet(var.algo, var.user.name, page.index=var.page.index, sort=var.sort, sort.column=var.sort.column, worker.status=var.worker.status, recv.window=var.recv.window)
 #'
 #'
 #' }
@@ -691,8 +607,8 @@ MiningApi <- R6::R6Class(
         self$apiClient <- ApiClient$new()
       }
     },
-    SapiV1MiningHashTransferConfigCancelPost = function(config.id, user.name, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MiningHashTransferConfigCancelPostWithHttpInfo(config.id, user.name, timestamp, signature, recv.window, ...)
+    SapiV1MiningHashTransferConfigCancelPost = function(config.id, user.name, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MiningHashTransferConfigCancelPostWithHttpInfo(config.id, user.name, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -705,7 +621,7 @@ MiningApi <- R6::R6Class(
       }
     },
 
-    SapiV1MiningHashTransferConfigCancelPostWithHttpInfo = function(config.id, user.name, timestamp, signature, recv.window=NULL, ...){
+    SapiV1MiningHashTransferConfigCancelPostWithHttpInfo = function(config.id, user.name, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -718,29 +634,21 @@ MiningApi <- R6::R6Class(
         stop("Missing required parameter `user.name`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['configId'] <- config.id
 
       queryParams['userName'] <- user.name
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/mining/hash-transfer/config/cancel"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -766,8 +674,8 @@ MiningApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MiningHashTransferConfigDetailsListGet = function(timestamp, signature, page.index=NULL, page.size=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MiningHashTransferConfigDetailsListGetWithHttpInfo(timestamp, signature, page.index, page.size, recv.window, ...)
+    SapiV1MiningHashTransferConfigDetailsListGet = function(page.index=NULL, page.size=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MiningHashTransferConfigDetailsListGetWithHttpInfo(page.index, page.size, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -780,18 +688,10 @@ MiningApi <- R6::R6Class(
       }
     },
 
-    SapiV1MiningHashTransferConfigDetailsListGetWithHttpInfo = function(timestamp, signature, page.index=NULL, page.size=NULL, recv.window=NULL, ...){
+    SapiV1MiningHashTransferConfigDetailsListGetWithHttpInfo = function(page.index=NULL, page.size=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['pageIndex'] <- page.index
 
@@ -799,15 +699,15 @@ MiningApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/mining/hash-transfer/config/details/list"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -847,7 +747,8 @@ MiningApi <- R6::R6Class(
       }
     },
 
-    SapiV1MiningHashTransferConfigPostWithHttpInfo = function(user.name, algo, to.pool.user, hash.rate, timestamp, signature, start.date=NULL, end.date=NULL, recv.window=NULL, ...){
+    SapiV1MiningHashTransferConfigPostWithHttpInfo = function(user.name, algo, to.pool.user, hash.rate,
+                                                              start.date=NULL, end.date=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -868,14 +769,6 @@ MiningApi <- R6::R6Class(
         stop("Missing required parameter `hash.rate`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['userName'] <- user.name
 
       queryParams['algo'] <- algo
@@ -890,15 +783,15 @@ MiningApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/mining/hash-transfer/config"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -924,8 +817,9 @@ MiningApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MiningHashTransferProfitDetailsGet = function(config.id, user.name, timestamp, signature, page.index=NULL, page.size=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MiningHashTransferProfitDetailsGetWithHttpInfo(config.id, user.name, timestamp, signature, page.index, page.size, recv.window, ...)
+    SapiV1MiningHashTransferProfitDetailsGet = function(config.id, user.name, page.index=NULL, page.size=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MiningHashTransferProfitDetailsGetWithHttpInfo(config.id, user.name, 
+                                                                               page.index, page.size, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -938,7 +832,7 @@ MiningApi <- R6::R6Class(
       }
     },
 
-    SapiV1MiningHashTransferProfitDetailsGetWithHttpInfo = function(config.id, user.name, timestamp, signature, page.index=NULL, page.size=NULL, recv.window=NULL, ...){
+    SapiV1MiningHashTransferProfitDetailsGetWithHttpInfo = function(config.id, user.name, page.index=NULL, page.size=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -951,14 +845,6 @@ MiningApi <- R6::R6Class(
         stop("Missing required parameter `user.name`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['configId'] <- config.id
 
       queryParams['userName'] <- user.name
@@ -969,15 +855,15 @@ MiningApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/mining/hash-transfer/profit/details"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1003,8 +889,8 @@ MiningApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MiningPaymentListGet = function(algo, user.name, timestamp, signature, coin=NULL, start.date=NULL, end.date=NULL, page.index=NULL, page.size=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MiningPaymentListGetWithHttpInfo(algo, user.name, timestamp, signature, coin, start.date, end.date, page.index, page.size, recv.window, ...)
+    SapiV1MiningPaymentListGet = function(algo, user.name, coin=NULL, start.date=NULL, end.date=NULL, page.index=NULL, page.size=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MiningPaymentListGetWithHttpInfo(algo, user.name, coin, start.date, end.date, page.index, page.size, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1017,7 +903,7 @@ MiningApi <- R6::R6Class(
       }
     },
 
-    SapiV1MiningPaymentListGetWithHttpInfo = function(algo, user.name, timestamp, signature, coin=NULL, start.date=NULL, end.date=NULL, page.index=NULL, page.size=NULL, recv.window=NULL, ...){
+    SapiV1MiningPaymentListGetWithHttpInfo = function(algo, user.name, coin=NULL, start.date=NULL, end.date=NULL, page.index=NULL, page.size=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -1028,14 +914,6 @@ MiningApi <- R6::R6Class(
 
       if (missing(`user.name`)) {
         stop("Missing required parameter `user.name`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['algo'] <- algo
@@ -1054,15 +932,15 @@ MiningApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/mining/payment/list"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1088,8 +966,8 @@ MiningApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MiningPaymentOtherGet = function(algo, user.name, timestamp, signature, coin=NULL, start.date=NULL, end.date=NULL, page.index=NULL, page.size=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MiningPaymentOtherGetWithHttpInfo(algo, user.name, timestamp, signature, coin, start.date, end.date, page.index, page.size, recv.window, ...)
+    SapiV1MiningPaymentOtherGet = function(algo, user.name, coin=NULL, start.date=NULL, end.date=NULL, page.index=NULL, page.size=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MiningPaymentOtherGetWithHttpInfo(algo, user.name, coin, start.date, end.date, page.index, page.size, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1102,7 +980,7 @@ MiningApi <- R6::R6Class(
       }
     },
 
-    SapiV1MiningPaymentOtherGetWithHttpInfo = function(algo, user.name, timestamp, signature, coin=NULL, start.date=NULL, end.date=NULL, page.index=NULL, page.size=NULL, recv.window=NULL, ...){
+    SapiV1MiningPaymentOtherGetWithHttpInfo = function(algo, user.name, coin=NULL, start.date=NULL, end.date=NULL, page.index=NULL, page.size=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -1113,14 +991,6 @@ MiningApi <- R6::R6Class(
 
       if (missing(`user.name`)) {
         stop("Missing required parameter `user.name`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['algo'] <- algo
@@ -1139,15 +1009,15 @@ MiningApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/mining/payment/other"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1173,8 +1043,8 @@ MiningApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MiningPubAlgoListGet = function(timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MiningPubAlgoListGetWithHttpInfo(timestamp, signature, recv.window, ...)
+    SapiV1MiningPubAlgoListGet = function(recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MiningPubAlgoListGetWithHttpInfo(recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1187,30 +1057,22 @@ MiningApi <- R6::R6Class(
       }
     },
 
-    SapiV1MiningPubAlgoListGetWithHttpInfo = function(timestamp, signature, recv.window=NULL, ...){
+    SapiV1MiningPubAlgoListGetWithHttpInfo = function(recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/mining/pub/algoList"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1236,8 +1098,8 @@ MiningApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MiningPubCoinListGet = function(timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MiningPubCoinListGetWithHttpInfo(timestamp, signature, recv.window, ...)
+    SapiV1MiningPubCoinListGet = function(recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MiningPubCoinListGetWithHttpInfo(recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1250,30 +1112,22 @@ MiningApi <- R6::R6Class(
       }
     },
 
-    SapiV1MiningPubCoinListGetWithHttpInfo = function(timestamp, signature, recv.window=NULL, ...){
+    SapiV1MiningPubCoinListGetWithHttpInfo = function(recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/mining/pub/coinList"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1299,8 +1153,8 @@ MiningApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MiningStatisticsUserListGet = function(algo, user.name, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MiningStatisticsUserListGetWithHttpInfo(algo, user.name, timestamp, signature, recv.window, ...)
+    SapiV1MiningStatisticsUserListGet = function(algo, user.name, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MiningStatisticsUserListGetWithHttpInfo(algo, user.name, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1313,7 +1167,7 @@ MiningApi <- R6::R6Class(
       }
     },
 
-    SapiV1MiningStatisticsUserListGetWithHttpInfo = function(algo, user.name, timestamp, signature, recv.window=NULL, ...){
+    SapiV1MiningStatisticsUserListGetWithHttpInfo = function(algo, user.name, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -1326,29 +1180,21 @@ MiningApi <- R6::R6Class(
         stop("Missing required parameter `user.name`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['algo'] <- algo
 
       queryParams['userName'] <- user.name
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/mining/statistics/user/list"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1374,8 +1220,8 @@ MiningApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MiningStatisticsUserStatusGet = function(algo, user.name, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MiningStatisticsUserStatusGetWithHttpInfo(algo, user.name, timestamp, signature, recv.window, ...)
+    SapiV1MiningStatisticsUserStatusGet = function(algo, user.name, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MiningStatisticsUserStatusGetWithHttpInfo(algo, user.name, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1388,7 +1234,7 @@ MiningApi <- R6::R6Class(
       }
     },
 
-    SapiV1MiningStatisticsUserStatusGetWithHttpInfo = function(algo, user.name, timestamp, signature, recv.window=NULL, ...){
+    SapiV1MiningStatisticsUserStatusGetWithHttpInfo = function(algo, user.name, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -1401,29 +1247,21 @@ MiningApi <- R6::R6Class(
         stop("Missing required parameter `user.name`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['algo'] <- algo
 
       queryParams['userName'] <- user.name
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/mining/statistics/user/status"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1449,8 +1287,8 @@ MiningApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MiningWorkerDetailGet = function(algo, user.name, worker.name, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MiningWorkerDetailGetWithHttpInfo(algo, user.name, worker.name, timestamp, signature, recv.window, ...)
+    SapiV1MiningWorkerDetailGet = function(algo, user.name, worker.name, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MiningWorkerDetailGetWithHttpInfo(algo, user.name, worker.name, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1463,7 +1301,7 @@ MiningApi <- R6::R6Class(
       }
     },
 
-    SapiV1MiningWorkerDetailGetWithHttpInfo = function(algo, user.name, worker.name, timestamp, signature, recv.window=NULL, ...){
+    SapiV1MiningWorkerDetailGetWithHttpInfo = function(algo, user.name, worker.name, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -1480,14 +1318,6 @@ MiningApi <- R6::R6Class(
         stop("Missing required parameter `worker.name`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['algo'] <- algo
 
       queryParams['userName'] <- user.name
@@ -1496,15 +1326,15 @@ MiningApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/mining/worker/detail"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1530,8 +1360,8 @@ MiningApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MiningWorkerListGet = function(algo, user.name, timestamp, signature, page.index=NULL, sort=NULL, sort.column=NULL, worker.status=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MiningWorkerListGetWithHttpInfo(algo, user.name, timestamp, signature, page.index, sort, sort.column, worker.status, recv.window, ...)
+    SapiV1MiningWorkerListGet = function(algo, user.name, page.index=NULL, sort=NULL, sort.column=NULL, worker.status=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MiningWorkerListGetWithHttpInfo(algo, user.name, page.index, sort, sort.column, worker.status, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1544,7 +1374,7 @@ MiningApi <- R6::R6Class(
       }
     },
 
-    SapiV1MiningWorkerListGetWithHttpInfo = function(algo, user.name, timestamp, signature, page.index=NULL, sort=NULL, sort.column=NULL, worker.status=NULL, recv.window=NULL, ...){
+    SapiV1MiningWorkerListGetWithHttpInfo = function(algo, user.name, page.index=NULL, sort=NULL, sort.column=NULL, worker.status=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -1555,14 +1385,6 @@ MiningApi <- R6::R6Class(
 
       if (missing(`user.name`)) {
         stop("Missing required parameter `user.name`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['algo'] <- algo
@@ -1579,15 +1401,15 @@ MiningApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/mining/worker/list"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),

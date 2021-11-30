@@ -18,8 +18,6 @@
 #' Get current account information.  Weight(IP): 10
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{Account} \cr
 #'
@@ -51,8 +49,6 @@
 #' Retrieves all OCO based on provided optional parameters  Weight(IP): 10
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } from.id integer
 #' \item \emph{ @param } start.time integer
 #' \item \emph{ @param } end.time integer
@@ -89,8 +85,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } symbol character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } order.id integer
 #' \item \emph{ @param } start.time integer
 #' \item \emph{ @param } end.time integer
@@ -127,8 +121,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } symbol character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } order.id integer
 #' \item \emph{ @param } start.time integer
 #' \item \emph{ @param } end.time integer
@@ -165,8 +157,6 @@
 #' Weight(IP): 3
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } list( \link{inline_response_200_7} ) \cr
 #'
@@ -199,8 +189,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } symbol character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } list( \link{anyOf&lt;order,ocoOrder&gt;} ) \cr
 #'
@@ -232,8 +220,6 @@
 #' Get all open orders on a symbol. Careful when accessing this with no symbol.  Weight(IP):\\ &#x60;3&#x60; for a single symbol;\\ &#x60;40&#x60; when the symbol parameter is omitted;
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } symbol character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } list( \link{orderDetails} ) \cr
@@ -267,8 +253,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } symbol character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } order.id integer
 #' \item \emph{ @param } orig.client.order.id character
 #' \item \emph{ @param } new.client.order.id character
@@ -304,8 +288,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } symbol character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } order.id integer
 #' \item \emph{ @param } orig.client.order.id character
 #' \item \emph{ @param } recv.window integer
@@ -340,8 +322,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } symbol character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } order.list.id integer
 #' \item \emph{ @param } list.client.order.id character
 #' \item \emph{ @param } new.client.order.id character
@@ -376,8 +356,6 @@
 #' Retrieves a specific OCO based on provided optional parameters  Weight(IP): 2
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } order.list.id integer
 #' \item \emph{ @param } orig.client.order.id character
 #' \item \emph{ @param } recv.window integer
@@ -416,8 +394,6 @@
 #' \item \emph{ @param } quantity numeric
 #' \item \emph{ @param } price numeric
 #' \item \emph{ @param } stop.price numeric
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } list.client.order.id character
 #' \item \emph{ @param } limit.client.order.id character
 #' \item \emph{ @param } limit.iceberg.qty numeric
@@ -461,8 +437,6 @@
 #' \item \emph{ @param } symbol character
 #' \item \emph{ @param } side Enum < [SELL, BUY] >
 #' \item \emph{ @param } type Enum < [LIMIT, MARKET, STOP_LOSS, STOP_LOSS_LIMIT, TAKE_PROFIT, TAKE_PROFIT_LIMIT, LIMIT_MAKER] >
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } time.in.force Enum < [GTC, IOC, FOK] >
 #' \item \emph{ @param } quantity numeric
 #' \item \emph{ @param } quote.order.qty numeric
@@ -505,8 +479,6 @@
 #' \item \emph{ @param } symbol character
 #' \item \emph{ @param } side Enum < [SELL, BUY] >
 #' \item \emph{ @param } type Enum < [LIMIT, MARKET, STOP_LOSS, STOP_LOSS_LIMIT, TAKE_PROFIT, TAKE_PROFIT_LIMIT, LIMIT_MAKER] >
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } time.in.force Enum < [GTC, IOC, FOK] >
 #' \item \emph{ @param } quantity numeric
 #' \item \emph{ @param } quote.order.qty numeric
@@ -545,8 +517,6 @@
 #' Displays the user&#39;s current order count usage for all intervals.  Weight(IP): 20
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } list( \link{inline_response_200_8} ) \cr
 #'
@@ -582,24 +552,17 @@
 #' ####################  ApiV3AccountGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Account Information (USER_DATA)
 #' api.instance <- TradeApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$ApiV3AccountGet(var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$ApiV3AccountGet(recv.window=var.recv.window)
 #'
 #'
 #' ####################  ApiV3AllOrderListGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.from.id <- 56 # integer | Trade id to fetch from. Default gets most recent trades.
 #' var.start.time <- 56 # integer | UTC timestamp in ms
 #' var.end.time <- 56 # integer | UTC timestamp in ms
@@ -609,18 +572,13 @@
 #' #Query all OCO (USER_DATA)
 #' api.instance <- TradeApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$ApiV3AllOrderListGet(var.timestamp, var.signature, from.id=var.from.id, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
+#' result <- api.instance$ApiV3AllOrderListGet(from.id=var.from.id, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
 #'
 #'
 #' ####################  ApiV3AllOrdersGet  ####################
 #'
 #' library(binanceRapi)
 #' var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.order.id <- 56 # integer | Order id
 #' var.start.time <- 56 # integer | UTC timestamp in ms
 #' var.end.time <- 56 # integer | UTC timestamp in ms
@@ -630,18 +588,13 @@
 #' #All Orders (USER_DATA)
 #' api.instance <- TradeApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$ApiV3AllOrdersGet(var.symbol, var.timestamp, var.signature, order.id=var.order.id, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
+#' result <- api.instance$ApiV3AllOrdersGet(var.symbol, order.id=var.order.id, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
 #'
 #'
 #' ####################  ApiV3MyTradesGet  ####################
 #'
 #' library(binanceRapi)
 #' var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.order.id <- 56 # integer | This can only be used in combination with symbol.
 #' var.start.time <- 56 # integer | UTC timestamp in ms
 #' var.end.time <- 56 # integer | UTC timestamp in ms
@@ -652,68 +605,48 @@
 #' #Account Trade List (USER_DATA)
 #' api.instance <- TradeApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$ApiV3MyTradesGet(var.symbol, var.timestamp, var.signature, order.id=var.order.id, start.time=var.start.time, end.time=var.end.time, from.id=var.from.id, limit=var.limit, recv.window=var.recv.window)
+#' result <- api.instance$ApiV3MyTradesGet(var.symbol, order.id=var.order.id, start.time=var.start.time, end.time=var.end.time, from.id=var.from.id, limit=var.limit, recv.window=var.recv.window)
 #'
 #'
 #' ####################  ApiV3OpenOrderListGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Query Open OCO (USER_DATA)
 #' api.instance <- TradeApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$ApiV3OpenOrderListGet(var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$ApiV3OpenOrderListGet(recv.window=var.recv.window)
 #'
 #'
 #' ####################  ApiV3OpenOrdersDelete  ####################
 #'
 #' library(binanceRapi)
 #' var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Cancel all Open Orders on a Symbol (TRADE)
 #' api.instance <- TradeApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$ApiV3OpenOrdersDelete(var.symbol, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$ApiV3OpenOrdersDelete(var.symbol, recv.window=var.recv.window)
 #'
 #'
 #' ####################  ApiV3OpenOrdersGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Current Open Orders (USER_DATA)
 #' api.instance <- TradeApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$ApiV3OpenOrdersGet(var.timestamp, var.signature, symbol=var.symbol, recv.window=var.recv.window)
+#' result <- api.instance$ApiV3OpenOrdersGet(symbol=var.symbol, recv.window=var.recv.window)
 #'
 #'
 #' ####################  ApiV3OrderDelete  ####################
 #'
 #' library(binanceRapi)
 #' var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.order.id <- 56 # integer | Order id
 #' var.orig.client.order.id <- 'orig.client.order.id_example' # character | Order id from client
 #' var.new.client.order.id <- 'new.client.order.id_example' # character | Used to uniquely identify this cancel. Automatically generated by default
@@ -722,18 +655,13 @@
 #' #Cancel Order (TRADE)
 #' api.instance <- TradeApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$ApiV3OrderDelete(var.symbol, var.timestamp, var.signature, order.id=var.order.id, orig.client.order.id=var.orig.client.order.id, new.client.order.id=var.new.client.order.id, recv.window=var.recv.window)
+#' result <- api.instance$ApiV3OrderDelete(var.symbol, order.id=var.order.id, orig.client.order.id=var.orig.client.order.id, new.client.order.id=var.new.client.order.id, recv.window=var.recv.window)
 #'
 #'
 #' ####################  ApiV3OrderGet  ####################
 #'
 #' library(binanceRapi)
 #' var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.order.id <- 56 # integer | Order id
 #' var.orig.client.order.id <- 'orig.client.order.id_example' # character | Order id from client
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -741,18 +669,13 @@
 #' #Query Order (USER_DATA)
 #' api.instance <- TradeApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$ApiV3OrderGet(var.symbol, var.timestamp, var.signature, order.id=var.order.id, orig.client.order.id=var.orig.client.order.id, recv.window=var.recv.window)
+#' result <- api.instance$ApiV3OrderGet(var.symbol, order.id=var.order.id, orig.client.order.id=var.orig.client.order.id, recv.window=var.recv.window)
 #'
 #'
 #' ####################  ApiV3OrderListDelete  ####################
 #'
 #' library(binanceRapi)
 #' var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.order.list.id <- 56 # integer | Order list id
 #' var.list.client.order.id <- 'list.client.order.id_example' # character | A unique Id for the entire orderList
 #' var.new.client.order.id <- 'new.client.order.id_example' # character | Used to uniquely identify this cancel. Automatically generated by default
@@ -761,17 +684,12 @@
 #' #Cancel OCO (TRADE)
 #' api.instance <- TradeApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$ApiV3OrderListDelete(var.symbol, var.timestamp, var.signature, order.list.id=var.order.list.id, list.client.order.id=var.list.client.order.id, new.client.order.id=var.new.client.order.id, recv.window=var.recv.window)
+#' result <- api.instance$ApiV3OrderListDelete(var.symbol, order.list.id=var.order.list.id, list.client.order.id=var.list.client.order.id, new.client.order.id=var.new.client.order.id, recv.window=var.recv.window)
 #'
 #'
 #' ####################  ApiV3OrderListGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.order.list.id <- 56 # integer | Order list id
 #' var.orig.client.order.id <- 'orig.client.order.id_example' # character | Order id from client
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -779,10 +697,7 @@
 #' #Query OCO (USER_DATA)
 #' api.instance <- TradeApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$ApiV3OrderListGet(var.timestamp, var.signature, order.list.id=var.order.list.id, orig.client.order.id=var.orig.client.order.id, recv.window=var.recv.window)
+#' result <- api.instance$ApiV3OrderListGet(order.list.id=var.order.list.id, orig.client.order.id=var.orig.client.order.id, recv.window=var.recv.window)
 #'
 #'
 #' ####################  ApiV3OrderOcoPost  ####################
@@ -793,8 +708,6 @@
 #' var.quantity <- 3.4 # numeric | 
 #' var.price <- 3.4 # numeric | Order price
 #' var.stop.price <- 3.4 # numeric | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.list.client.order.id <- 'list.client.order.id_example' # character | A unique Id for the entire orderList
 #' var.limit.client.order.id <- 'limit.client.order.id_example' # character | A unique Id for the limit order
 #' var.limit.iceberg.qty <- 3.4 # numeric | 
@@ -809,10 +722,7 @@
 #' #New OCO (TRADE)
 #' api.instance <- TradeApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$ApiV3OrderOcoPost(var.symbol, var.side, var.quantity, var.price, var.stop.price, var.timestamp, var.signature, list.client.order.id=var.list.client.order.id, limit.client.order.id=var.limit.client.order.id, limit.iceberg.qty=var.limit.iceberg.qty, stop.client.order.id=var.stop.client.order.id, stop.limit.price=var.stop.limit.price, stop.iceberg.qty=var.stop.iceberg.qty, stop.limit.time.in.force=var.stop.limit.time.in.force, new.order.resp.type=var.new.order.resp.type, side.effect.type=var.side.effect.type, recv.window=var.recv.window)
+#' result <- api.instance$ApiV3OrderOcoPost(var.symbol, var.side, var.quantity, var.price, var.stop.price, list.client.order.id=var.list.client.order.id, limit.client.order.id=var.limit.client.order.id, limit.iceberg.qty=var.limit.iceberg.qty, stop.client.order.id=var.stop.client.order.id, stop.limit.price=var.stop.limit.price, stop.iceberg.qty=var.stop.iceberg.qty, stop.limit.time.in.force=var.stop.limit.time.in.force, new.order.resp.type=var.new.order.resp.type, side.effect.type=var.side.effect.type, recv.window=var.recv.window)
 #'
 #'
 #' ####################  ApiV3OrderPost  ####################
@@ -821,8 +731,6 @@
 #' var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
 #' var.side <- 'SELL' # character | SELL or BUY
 #' var.type <- 'type_example' # character | Order type
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.time.in.force <- 'time.in.force_example' # character | Order time in force
 #' var.quantity <- 3.4 # numeric | Order quantity
 #' var.quote.order.qty <- 3.4 # numeric | Quote quantity
@@ -836,10 +744,7 @@
 #' #New Order (TRADE)
 #' api.instance <- TradeApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$ApiV3OrderPost(var.symbol, var.side, var.type, var.timestamp, var.signature, time.in.force=var.time.in.force, quantity=var.quantity, quote.order.qty=var.quote.order.qty, price=var.price, new.client.order.id=var.new.client.order.id, stop.price=var.stop.price, iceberg.qty=var.iceberg.qty, new.order.resp.type=var.new.order.resp.type, recv.window=var.recv.window)
+#' result <- api.instance$ApiV3OrderPost(var.symbol, var.side, var.type, time.in.force=var.time.in.force, quantity=var.quantity, quote.order.qty=var.quote.order.qty, price=var.price, new.client.order.id=var.new.client.order.id, stop.price=var.stop.price, iceberg.qty=var.iceberg.qty, new.order.resp.type=var.new.order.resp.type, recv.window=var.recv.window)
 #'
 #'
 #' ####################  ApiV3OrderTestPost  ####################
@@ -848,8 +753,6 @@
 #' var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
 #' var.side <- 'SELL' # character | SELL or BUY
 #' var.type <- 'type_example' # character | Order type
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.time.in.force <- 'time.in.force_example' # character | Order time in force
 #' var.quantity <- 3.4 # numeric | Order quantity
 #' var.quote.order.qty <- 3.4 # numeric | Quote quantity
@@ -863,26 +766,18 @@
 #' #Test New Order (TRADE)
 #' api.instance <- TradeApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$ApiV3OrderTestPost(var.symbol, var.side, var.type, var.timestamp, var.signature, time.in.force=var.time.in.force, quantity=var.quantity, quote.order.qty=var.quote.order.qty, price=var.price, new.client.order.id=var.new.client.order.id, stop.price=var.stop.price, iceberg.qty=var.iceberg.qty, new.order.resp.type=var.new.order.resp.type, recv.window=var.recv.window)
+#' result <- api.instance$ApiV3OrderTestPost(var.symbol, var.side, var.type, time.in.force=var.time.in.force, quantity=var.quantity, quote.order.qty=var.quote.order.qty, price=var.price, new.client.order.id=var.new.client.order.id, stop.price=var.stop.price, iceberg.qty=var.iceberg.qty, new.order.resp.type=var.new.order.resp.type, recv.window=var.recv.window)
 #'
 #'
 #' ####################  ApiV3RateLimitOrderGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Query Current Order Count Usage (TRADE)
 #' api.instance <- TradeApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$ApiV3RateLimitOrderGet(var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$ApiV3RateLimitOrderGet(recv.window=var.recv.window)
 #'
 #'
 #' }
@@ -901,8 +796,8 @@ TradeApi <- R6::R6Class(
         self$apiClient <- ApiClient$new()
       }
     },
-    ApiV3AccountGet = function(timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$ApiV3AccountGetWithHttpInfo(timestamp, signature, recv.window, ...)
+    ApiV3AccountGet = function(recv.window=NULL, ...){
+      apiResponse <- self$ApiV3AccountGetWithHttpInfo(recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -915,30 +810,22 @@ TradeApi <- R6::R6Class(
       }
     },
 
-    ApiV3AccountGetWithHttpInfo = function(timestamp, signature, recv.window=NULL, ...){
+    ApiV3AccountGetWithHttpInfo = function(recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
+      queryParams['timestamp'] <- self$apiClient$Timestamp
 
-      queryParams['signature'] <- signature
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/api/v3/account"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -964,8 +851,8 @@ TradeApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    ApiV3AllOrderListGet = function(timestamp, signature, from.id=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
-      apiResponse <- self$ApiV3AllOrderListGetWithHttpInfo(timestamp, signature, from.id, start.time, end.time, limit, recv.window, ...)
+    ApiV3AllOrderListGet = function(from.id=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
+      apiResponse <- self$ApiV3AllOrderListGetWithHttpInfo(from.id, start.time, end.time, limit, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -978,18 +865,10 @@ TradeApi <- R6::R6Class(
       }
     },
 
-    ApiV3AllOrderListGetWithHttpInfo = function(timestamp, signature, from.id=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
+    ApiV3AllOrderListGetWithHttpInfo = function(from.id=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['fromId'] <- from.id
 
@@ -1001,15 +880,15 @@ TradeApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/api/v3/allOrderList"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1035,8 +914,8 @@ TradeApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    ApiV3AllOrdersGet = function(symbol, timestamp, signature, order.id=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
-      apiResponse <- self$ApiV3AllOrdersGetWithHttpInfo(symbol, timestamp, signature, order.id, start.time, end.time, limit, recv.window, ...)
+    ApiV3AllOrdersGet = function(symbol, order.id=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
+      apiResponse <- self$ApiV3AllOrdersGetWithHttpInfo(symbol, order.id, start.time, end.time, limit, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1049,21 +928,13 @@ TradeApi <- R6::R6Class(
       }
     },
 
-    ApiV3AllOrdersGetWithHttpInfo = function(symbol, timestamp, signature, order.id=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
+    ApiV3AllOrdersGetWithHttpInfo = function(symbol, order.id=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`symbol`)) {
         stop("Missing required parameter `symbol`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['symbol'] <- symbol
@@ -1078,15 +949,15 @@ TradeApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
+      queryParams['timestamp'] <- self$apiClient$Timestamp
 
-      queryParams['signature'] <- signature
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/api/v3/allOrders"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1112,8 +983,8 @@ TradeApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    ApiV3MyTradesGet = function(symbol, timestamp, signature, order.id=NULL, start.time=NULL, end.time=NULL, from.id=NULL, limit=NULL, recv.window=NULL, ...){
-      apiResponse <- self$ApiV3MyTradesGetWithHttpInfo(symbol, timestamp, signature, order.id, start.time, end.time, from.id, limit, recv.window, ...)
+    ApiV3MyTradesGet = function(symbol, order.id=NULL, start.time=NULL, end.time=NULL, from.id=NULL, limit=NULL, recv.window=NULL, ...){
+      apiResponse <- self$ApiV3MyTradesGetWithHttpInfo(symbol, order.id, start.time, end.time, from.id, limit, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1126,21 +997,13 @@ TradeApi <- R6::R6Class(
       }
     },
 
-    ApiV3MyTradesGetWithHttpInfo = function(symbol, timestamp, signature, order.id=NULL, start.time=NULL, end.time=NULL, from.id=NULL, limit=NULL, recv.window=NULL, ...){
+    ApiV3MyTradesGetWithHttpInfo = function(symbol, order.id=NULL, start.time=NULL, end.time=NULL, from.id=NULL, limit=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`symbol`)) {
         stop("Missing required parameter `symbol`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['symbol'] <- symbol
@@ -1157,15 +1020,15 @@ TradeApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/api/v3/myTrades"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1191,8 +1054,8 @@ TradeApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    ApiV3OpenOrderListGet = function(timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$ApiV3OpenOrderListGetWithHttpInfo(timestamp, signature, recv.window, ...)
+    ApiV3OpenOrderListGet = function(recv.window=NULL, ...){
+      apiResponse <- self$ApiV3OpenOrderListGetWithHttpInfo(recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1205,30 +1068,22 @@ TradeApi <- R6::R6Class(
       }
     },
 
-    ApiV3OpenOrderListGetWithHttpInfo = function(timestamp, signature, recv.window=NULL, ...){
+    ApiV3OpenOrderListGetWithHttpInfo = function(recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/api/v3/openOrderList"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1254,8 +1109,8 @@ TradeApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    ApiV3OpenOrdersDelete = function(symbol, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$ApiV3OpenOrdersDeleteWithHttpInfo(symbol, timestamp, signature, recv.window, ...)
+    ApiV3OpenOrdersDelete = function(symbol, recv.window=NULL, ...){
+      apiResponse <- self$ApiV3OpenOrdersDeleteWithHttpInfo(symbol, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1268,7 +1123,7 @@ TradeApi <- R6::R6Class(
       }
     },
 
-    ApiV3OpenOrdersDeleteWithHttpInfo = function(symbol, timestamp, signature, recv.window=NULL, ...){
+    ApiV3OpenOrdersDeleteWithHttpInfo = function(symbol, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -1277,27 +1132,19 @@ TradeApi <- R6::R6Class(
         stop("Missing required parameter `symbol`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['symbol'] <- symbol
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/api/v3/openOrders"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1323,8 +1170,8 @@ TradeApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    ApiV3OpenOrdersGet = function(timestamp, signature, symbol=NULL, recv.window=NULL, ...){
-      apiResponse <- self$ApiV3OpenOrdersGetWithHttpInfo(timestamp, signature, symbol, recv.window, ...)
+    ApiV3OpenOrdersGet = function(symbol=NULL, recv.window=NULL, ...){
+      apiResponse <- self$ApiV3OpenOrdersGetWithHttpInfo(symbol, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1337,32 +1184,24 @@ TradeApi <- R6::R6Class(
       }
     },
 
-    ApiV3OpenOrdersGetWithHttpInfo = function(timestamp, signature, symbol=NULL, recv.window=NULL, ...){
+    ApiV3OpenOrdersGetWithHttpInfo = function(symbol=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['symbol'] <- symbol
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/api/v3/openOrders"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1388,8 +1227,8 @@ TradeApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    ApiV3OrderDelete = function(symbol, timestamp, signature, order.id=NULL, orig.client.order.id=NULL, new.client.order.id=NULL, recv.window=NULL, ...){
-      apiResponse <- self$ApiV3OrderDeleteWithHttpInfo(symbol, timestamp, signature, order.id, orig.client.order.id, new.client.order.id, recv.window, ...)
+    ApiV3OrderDelete = function(symbol, order.id=NULL, orig.client.order.id=NULL, new.client.order.id=NULL, recv.window=NULL, ...){
+      apiResponse <- self$ApiV3OrderDeleteWithHttpInfo(symbol, order.id, orig.client.order.id, new.client.order.id, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1402,21 +1241,13 @@ TradeApi <- R6::R6Class(
       }
     },
 
-    ApiV3OrderDeleteWithHttpInfo = function(symbol, timestamp, signature, order.id=NULL, orig.client.order.id=NULL, new.client.order.id=NULL, recv.window=NULL, ...){
+    ApiV3OrderDeleteWithHttpInfo = function(symbol, order.id=NULL, orig.client.order.id=NULL, new.client.order.id=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`symbol`)) {
         stop("Missing required parameter `symbol`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['symbol'] <- symbol
@@ -1429,15 +1260,15 @@ TradeApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/api/v3/order"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1463,8 +1294,8 @@ TradeApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    ApiV3OrderGet = function(symbol, timestamp, signature, order.id=NULL, orig.client.order.id=NULL, recv.window=NULL, ...){
-      apiResponse <- self$ApiV3OrderGetWithHttpInfo(symbol, timestamp, signature, order.id, orig.client.order.id, recv.window, ...)
+    ApiV3OrderGet = function(symbol, order.id=NULL, orig.client.order.id=NULL, recv.window=NULL, ...){
+      apiResponse <- self$ApiV3OrderGetWithHttpInfo(symbol, order.id, orig.client.order.id, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1477,21 +1308,13 @@ TradeApi <- R6::R6Class(
       }
     },
 
-    ApiV3OrderGetWithHttpInfo = function(symbol, timestamp, signature, order.id=NULL, orig.client.order.id=NULL, recv.window=NULL, ...){
+    ApiV3OrderGetWithHttpInfo = function(symbol, order.id=NULL, orig.client.order.id=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`symbol`)) {
         stop("Missing required parameter `symbol`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['symbol'] <- symbol
@@ -1502,15 +1325,15 @@ TradeApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/api/v3/order"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1536,8 +1359,8 @@ TradeApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    ApiV3OrderListDelete = function(symbol, timestamp, signature, order.list.id=NULL, list.client.order.id=NULL, new.client.order.id=NULL, recv.window=NULL, ...){
-      apiResponse <- self$ApiV3OrderListDeleteWithHttpInfo(symbol, timestamp, signature, order.list.id, list.client.order.id, new.client.order.id, recv.window, ...)
+    ApiV3OrderListDelete = function(symbol, order.list.id=NULL, list.client.order.id=NULL, new.client.order.id=NULL, recv.window=NULL, ...){
+      apiResponse <- self$ApiV3OrderListDeleteWithHttpInfo(symbol, order.list.id, list.client.order.id, new.client.order.id, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1550,21 +1373,13 @@ TradeApi <- R6::R6Class(
       }
     },
 
-    ApiV3OrderListDeleteWithHttpInfo = function(symbol, timestamp, signature, order.list.id=NULL, list.client.order.id=NULL, new.client.order.id=NULL, recv.window=NULL, ...){
+    ApiV3OrderListDeleteWithHttpInfo = function(symbol, order.list.id=NULL, list.client.order.id=NULL, new.client.order.id=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`symbol`)) {
         stop("Missing required parameter `symbol`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['symbol'] <- symbol
@@ -1577,15 +1392,15 @@ TradeApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/api/v3/orderList"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1611,8 +1426,8 @@ TradeApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    ApiV3OrderListGet = function(timestamp, signature, order.list.id=NULL, orig.client.order.id=NULL, recv.window=NULL, ...){
-      apiResponse <- self$ApiV3OrderListGetWithHttpInfo(timestamp, signature, order.list.id, orig.client.order.id, recv.window, ...)
+    ApiV3OrderListGet = function(order.list.id=NULL, orig.client.order.id=NULL, recv.window=NULL, ...){
+      apiResponse <- self$ApiV3OrderListGetWithHttpInfo(order.list.id, orig.client.order.id, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1625,18 +1440,10 @@ TradeApi <- R6::R6Class(
       }
     },
 
-    ApiV3OrderListGetWithHttpInfo = function(timestamp, signature, order.list.id=NULL, orig.client.order.id=NULL, recv.window=NULL, ...){
+    ApiV3OrderListGetWithHttpInfo = function(order.list.id=NULL, orig.client.order.id=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['orderListId'] <- order.list.id
 
@@ -1644,15 +1451,15 @@ TradeApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/api/v3/orderList"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1678,8 +1485,8 @@ TradeApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    ApiV3OrderOcoPost = function(symbol, side, quantity, price, stop.price, timestamp, signature, list.client.order.id=NULL, limit.client.order.id=NULL, limit.iceberg.qty=NULL, stop.client.order.id=NULL, stop.limit.price=NULL, stop.iceberg.qty=NULL, stop.limit.time.in.force=NULL, new.order.resp.type=NULL, side.effect.type=NULL, recv.window=NULL, ...){
-      apiResponse <- self$ApiV3OrderOcoPostWithHttpInfo(symbol, side, quantity, price, stop.price, timestamp, signature, list.client.order.id, limit.client.order.id, limit.iceberg.qty, stop.client.order.id, stop.limit.price, stop.iceberg.qty, stop.limit.time.in.force, new.order.resp.type, side.effect.type, recv.window, ...)
+    ApiV3OrderOcoPost = function(symbol, side, quantity, price, stop.price, list.client.order.id=NULL, limit.client.order.id=NULL, limit.iceberg.qty=NULL, stop.client.order.id=NULL, stop.limit.price=NULL, stop.iceberg.qty=NULL, stop.limit.time.in.force=NULL, new.order.resp.type=NULL, side.effect.type=NULL, recv.window=NULL, ...){
+      apiResponse <- self$ApiV3OrderOcoPostWithHttpInfo(symbol, side, quantity, price, stop.price, list.client.order.id, limit.client.order.id, limit.iceberg.qty, stop.client.order.id, stop.limit.price, stop.iceberg.qty, stop.limit.time.in.force, new.order.resp.type, side.effect.type, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1692,7 +1499,7 @@ TradeApi <- R6::R6Class(
       }
     },
 
-    ApiV3OrderOcoPostWithHttpInfo = function(symbol, side, quantity, price, stop.price, timestamp, signature, list.client.order.id=NULL, limit.client.order.id=NULL, limit.iceberg.qty=NULL, stop.client.order.id=NULL, stop.limit.price=NULL, stop.iceberg.qty=NULL, stop.limit.time.in.force=NULL, new.order.resp.type=NULL, side.effect.type=NULL, recv.window=NULL, ...){
+    ApiV3OrderOcoPostWithHttpInfo = function(symbol, side, quantity, price, stop.price, list.client.order.id=NULL, limit.client.order.id=NULL, limit.iceberg.qty=NULL, stop.client.order.id=NULL, stop.limit.price=NULL, stop.iceberg.qty=NULL, stop.limit.time.in.force=NULL, new.order.resp.type=NULL, side.effect.type=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -1715,14 +1522,6 @@ TradeApi <- R6::R6Class(
 
       if (missing(`stop.price`)) {
         stop("Missing required parameter `stop.price`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['symbol'] <- symbol
@@ -1755,15 +1554,15 @@ TradeApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/api/v3/order/oco"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1789,8 +1588,8 @@ TradeApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    ApiV3OrderPost = function(symbol, side, type, timestamp, signature, time.in.force=NULL, quantity=NULL, quote.order.qty=NULL, price=NULL, new.client.order.id=NULL, stop.price=NULL, iceberg.qty=NULL, new.order.resp.type=NULL, recv.window=NULL, ...){
-      apiResponse <- self$ApiV3OrderPostWithHttpInfo(symbol, side, type, timestamp, signature, time.in.force, quantity, quote.order.qty, price, new.client.order.id, stop.price, iceberg.qty, new.order.resp.type, recv.window, ...)
+    ApiV3OrderPost = function(symbol, side, type, time.in.force=NULL, quantity=NULL, quote.order.qty=NULL, price=NULL, new.client.order.id=NULL, stop.price=NULL, iceberg.qty=NULL, new.order.resp.type=NULL, recv.window=NULL, ...){
+      apiResponse <- self$ApiV3OrderPostWithHttpInfo(symbol, side, type, time.in.force, quantity, quote.order.qty, price, new.client.order.id, stop.price, iceberg.qty, new.order.resp.type, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1803,7 +1602,7 @@ TradeApi <- R6::R6Class(
       }
     },
 
-    ApiV3OrderPostWithHttpInfo = function(symbol, side, type, timestamp, signature, time.in.force=NULL, quantity=NULL, quote.order.qty=NULL, price=NULL, new.client.order.id=NULL, stop.price=NULL, iceberg.qty=NULL, new.order.resp.type=NULL, recv.window=NULL, ...){
+    ApiV3OrderPostWithHttpInfo = function(symbol, side, type, time.in.force=NULL, quantity=NULL, quote.order.qty=NULL, price=NULL, new.client.order.id=NULL, stop.price=NULL, iceberg.qty=NULL, new.order.resp.type=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -1818,14 +1617,6 @@ TradeApi <- R6::R6Class(
 
       if (missing(`type`)) {
         stop("Missing required parameter `type`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['symbol'] <- symbol
@@ -1852,15 +1643,15 @@ TradeApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/api/v3/order"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1886,8 +1677,8 @@ TradeApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    ApiV3OrderTestPost = function(symbol, side, type, timestamp, signature, time.in.force=NULL, quantity=NULL, quote.order.qty=NULL, price=NULL, new.client.order.id=NULL, stop.price=NULL, iceberg.qty=NULL, new.order.resp.type=NULL, recv.window=NULL, ...){
-      apiResponse <- self$ApiV3OrderTestPostWithHttpInfo(symbol, side, type, timestamp, signature, time.in.force, quantity, quote.order.qty, price, new.client.order.id, stop.price, iceberg.qty, new.order.resp.type, recv.window, ...)
+    ApiV3OrderTestPost = function(symbol, side, type, time.in.force=NULL, quantity=NULL, quote.order.qty=NULL, price=NULL, new.client.order.id=NULL, stop.price=NULL, iceberg.qty=NULL, new.order.resp.type=NULL, recv.window=NULL, ...){
+      apiResponse <- self$ApiV3OrderTestPostWithHttpInfo(symbol, side, type, time.in.force, quantity, quote.order.qty, price, new.client.order.id, stop.price, iceberg.qty, new.order.resp.type, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1900,7 +1691,7 @@ TradeApi <- R6::R6Class(
       }
     },
 
-    ApiV3OrderTestPostWithHttpInfo = function(symbol, side, type, timestamp, signature, time.in.force=NULL, quantity=NULL, quote.order.qty=NULL, price=NULL, new.client.order.id=NULL, stop.price=NULL, iceberg.qty=NULL, new.order.resp.type=NULL, recv.window=NULL, ...){
+    ApiV3OrderTestPostWithHttpInfo = function(symbol, side, type, time.in.force=NULL, quantity=NULL, quote.order.qty=NULL, price=NULL, new.client.order.id=NULL, stop.price=NULL, iceberg.qty=NULL, new.order.resp.type=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -1915,14 +1706,6 @@ TradeApi <- R6::R6Class(
 
       if (missing(`type`)) {
         stop("Missing required parameter `type`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['symbol'] <- symbol
@@ -1949,15 +1732,15 @@ TradeApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/api/v3/order/test"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1983,8 +1766,8 @@ TradeApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    ApiV3RateLimitOrderGet = function(timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$ApiV3RateLimitOrderGetWithHttpInfo(timestamp, signature, recv.window, ...)
+    ApiV3RateLimitOrderGet = function(recv.window=NULL, ...){
+      apiResponse <- self$ApiV3RateLimitOrderGetWithHttpInfo(recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -1997,30 +1780,22 @@ TradeApi <- R6::R6Class(
       }
     },
 
-    ApiV3RateLimitOrderGetWithHttpInfo = function(timestamp, signature, recv.window=NULL, ...){
+    ApiV3RateLimitOrderGetWithHttpInfo = function(recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/api/v3/rateLimit/order"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),

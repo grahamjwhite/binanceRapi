@@ -370,9 +370,6 @@
 #' #Old Trade Lookup
 #' api.instance <- MarketApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
 #' result <- api.instance$ApiV3HistoricalTradesGet(var.symbol, limit=var.limit, from.id=var.from.id)
 #'
 #'
@@ -716,8 +713,8 @@ MarketApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/api/v3/historicalTrades"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),

@@ -18,8 +18,6 @@
 #' Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{BnbBurnStatus} \cr
 #'
@@ -51,8 +49,6 @@
 #' - \&quot;spotBNBBurn\&quot; and \&quot;interestBNBBurn\&quot; should be sent at least one.  Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } spot.bnb.burn Enum < [true, false] >
 #' \item \emph{ @param } interest.bnb.burn Enum < [true, false] >
 #' \item \emph{ @param } recv.window integer
@@ -86,8 +82,6 @@
 #' Weight(IP): 10
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20019} \cr
 #'
@@ -142,8 +136,6 @@
 #' Retrieves all OCO for a specific margin account based on provided optional parameters  Weight(IP): 200
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 #' \item \emph{ @param } symbol character
 #' \item \emph{ @param } from.id character
@@ -182,8 +174,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } symbol character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 #' \item \emph{ @param } order.id integer
 #' \item \emph{ @param } start.time integer
@@ -267,8 +257,6 @@
 #' - Response in descending order  Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } start.time integer
 #' \item \emph{ @param } end.time integer
 #' \item \emph{ @param } isolated.symbol character
@@ -305,8 +293,6 @@
 #' - Response in descending order - If &#x60;isolatedSymbol&#x60; is not sent, crossed margin data will be returned - Set &#x60;archived&#x60; to &#x60;true&#x60; to query data from 6 months ago - &#x60;type&#x60; in response has 4 enums:   - &#x60;PERIODIC&#x60; interest charged per hour   - &#x60;ON_BORROW&#x60; first interest charged on borrow   - &#x60;PERIODIC_CONVERTED&#x60; interest charged per hour converted into BNB   - &#x60;ON_BORROW_CONVERTED&#x60; first interest charged on borrow converted into BNB  Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } isolated.symbol character
 #' \item \emph{ @param } start.time integer
@@ -346,8 +332,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } asset character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } vip.level integer
 #' \item \emph{ @param } start.time integer
 #' \item \emph{ @param } end.time integer
@@ -384,8 +368,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } symbol character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20025} \cr
 #'
@@ -417,8 +399,6 @@
 #' - If \&quot;symbols\&quot; is not sent, all isolated assets will be returned. - If \&quot;symbols\&quot; is sent, only the isolated assets of the sent symbols will be returned.  Weight(IP): 10
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } symbols character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{IsolatedMarginAccountInfo} \cr
@@ -451,8 +431,6 @@
 #' Query enabled isolated margin account limit.  Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20026} \cr
 #'
@@ -485,8 +463,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } symbol character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20025} \cr
 #'
@@ -518,8 +494,6 @@
 #' Weight(IP): 10
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } list( \link{inline_response_200_27} ) \cr
 #'
@@ -552,8 +526,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } symbol character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20027} \cr
 #'
@@ -586,8 +558,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } symbol character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } trans.from Enum < [SPOT, ISOLATED_MARGIN] >
 #' \item \emph{ @param } trans.to Enum < [SPOT, ISOLATED_MARGIN] >
@@ -629,8 +599,6 @@
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } symbol character
 #' \item \emph{ @param } amount numeric
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } trans.from Enum < [SPOT, ISOLATED_MARGIN] >
 #' \item \emph{ @param } trans.to Enum < [SPOT, ISOLATED_MARGIN] >
 #' \item \emph{ @param } recv.window integer
@@ -664,8 +632,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } asset character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } isolated.symbol character
 #' \item \emph{ @param } tx.id integer
 #' \item \emph{ @param } start.time integer
@@ -706,8 +672,6 @@
 #' \itemize{
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } amount numeric
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 #' \item \emph{ @param } symbol character
 #' \item \emph{ @param } recv.window integer
@@ -742,8 +706,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } asset character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } isolated.symbol character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20023} \cr
@@ -777,8 +739,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } asset character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } isolated.symbol character
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{InlineResponse20024} \cr
@@ -812,8 +772,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } symbol character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 #' \item \emph{ @param } start.time integer
 #' \item \emph{ @param } end.time integer
@@ -850,8 +808,6 @@
 #' Weight(IP): 10
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 #' \item \emph{ @param } symbol character
 #' \item \emph{ @param } recv.window integer
@@ -886,8 +842,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } symbol character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } list( \link{anyOf&lt;canceledMarginOrderDetail,marginOcoOrder&gt;} ) \cr
@@ -920,8 +874,6 @@
 #' - If the &#x60;symbol&#x60; is not sent, orders for all symbols will be returned in an array. - When all symbols are returned, the number of requests counted against the rate limiter is equal to the number of symbols currently trading on the exchange - If isIsolated &#x3D;\&quot;TRUE\&quot;, symbol must be sent.  Weight(IP): 10
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } symbol character
 #' \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 #' \item \emph{ @param } recv.window integer
@@ -956,8 +908,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } symbol character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 #' \item \emph{ @param } order.id integer
 #' \item \emph{ @param } orig.client.order.id character
@@ -994,8 +944,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } symbol character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 #' \item \emph{ @param } order.id integer
 #' \item \emph{ @param } orig.client.order.id character
@@ -1031,8 +979,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } symbol character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 #' \item \emph{ @param } order.list.id integer
 #' \item \emph{ @param } list.client.order.id character
@@ -1068,8 +1014,6 @@
 #' Retrieves a specific OCO based on provided optional parameters  - Either &#x60;orderListId&#x60; or &#x60;origClientOrderId&#x60; must be provided  Weight(IP): 10
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 #' \item \emph{ @param } symbol character
 #' \item \emph{ @param } order.list.id integer
@@ -1110,8 +1054,6 @@
 #' \item \emph{ @param } quantity numeric
 #' \item \emph{ @param } price numeric
 #' \item \emph{ @param } stop.price numeric
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 #' \item \emph{ @param } list.client.order.id character
 #' \item \emph{ @param } limit.client.order.id character
@@ -1157,8 +1099,6 @@
 #' \item \emph{ @param } side Enum < [SELL, BUY] >
 #' \item \emph{ @param } type Enum < [LIMIT, MARKET, STOP_LOSS, STOP_LOSS_LIMIT, TAKE_PROFIT, TAKE_PROFIT_LIMIT, LIMIT_MAKER] >
 #' \item \emph{ @param } quantity numeric
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 #' \item \emph{ @param } quote.order.qty numeric
 #' \item \emph{ @param } price numeric
@@ -1248,8 +1188,6 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } asset character
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } isolated.symbol character
 #' \item \emph{ @param } tx.id integer
 #' \item \emph{ @param } start.time integer
@@ -1290,8 +1228,6 @@
 #' \itemize{
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } amount numeric
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 #' \item \emph{ @param } symbol character
 #' \item \emph{ @param } recv.window integer
@@ -1325,8 +1261,6 @@
 #' - Response in descending order - Returns data for last 7 days by default - Set &#x60;archived&#x60; to &#x60;true&#x60; to query data from 6 months ago  Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } type Enum < [ROLL_IN, ROLL_OUT] >
 #' \item \emph{ @param } start.time integer
@@ -1367,8 +1301,6 @@
 #' \itemize{
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } amount numeric
-#' \item \emph{ @param } timestamp integer
-#' \item \emph{ @param } signature character
 #' \item \emph{ @param } type Enum < [1, 2] >
 #' \item \emph{ @param } recv.window integer
 #' \item \emph{ @returnType } \link{Transaction} \cr
@@ -1405,24 +1337,17 @@
 #' ####################  SapiV1BnbBurnGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Get All Isolated Margin Symbol(USER_DATA)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1BnbBurnGet(var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1BnbBurnGet(recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1BnbBurnPost  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.spot.bnb.burn <- 'true' # character | Determines whether to use BNB to pay for trading fees on SPOT
 #' var.interest.bnb.burn <- 'false' # character | Determines whether to use BNB to pay for margin loan's interest
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -1430,26 +1355,18 @@
 #' #Toggle BNB Burn On Spot Trade And Margin Interest (USER_DATA)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1BnbBurnPost(var.timestamp, var.signature, spot.bnb.burn=var.spot.bnb.burn, interest.bnb.burn=var.interest.bnb.burn, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1BnbBurnPost(spot.bnb.burn=var.spot.bnb.burn, interest.bnb.burn=var.interest.bnb.burn, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginAccountGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Query Cross Margin Account Details (USER_DATA)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginAccountGet(var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginAccountGet(recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginAllAssetsGet  ####################
@@ -1459,17 +1376,12 @@
 #' #Get All Margin Assets (MARKET_DATA)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
 #' result <- api.instance$SapiV1MarginAllAssetsGet()
 #'
 #'
 #' ####################  SapiV1MarginAllOrderListGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 #' var.symbol <- 'symbol_example' # character | Mandatory for isolated margin, not supported for cross margin
 #' var.from.id <- 'from.id_example' # character | If supplied, neither `startTime` or `endTime` can be provided
@@ -1481,18 +1393,13 @@
 #' #Query Margin Account's all OCO (USER_DATA)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginAllOrderListGet(var.timestamp, var.signature, is.isolated=var.is.isolated, symbol=var.symbol, from.id=var.from.id, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginAllOrderListGet(is.isolated=var.is.isolated, symbol=var.symbol, from.id=var.from.id, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginAllOrdersGet  ####################
 #'
 #' library(binanceRapi)
 #' var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 #' var.order.id <- 56 # integer | Order id
 #' var.start.time <- 56 # integer | UTC timestamp in ms
@@ -1503,10 +1410,7 @@
 #' #Query Margin Account's All Orders (USER_DATA)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginAllOrdersGet(var.symbol, var.timestamp, var.signature, is.isolated=var.is.isolated, order.id=var.order.id, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginAllOrdersGet(var.symbol, is.isolated=var.is.isolated, order.id=var.order.id, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginAllPairsGet  ####################
@@ -1515,9 +1419,6 @@
 #'
 #' #Get All Cross Margin Pairs (MARKET_DATA)
 #' api.instance <- MarginApi$new()
-#'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
 #'
 #' result <- api.instance$SapiV1MarginAllPairsGet()
 #'
@@ -1530,17 +1431,12 @@
 #' #Query Margin Asset (MARKET_DATA)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
 #' result <- api.instance$SapiV1MarginAssetGet(var.asset)
 #'
 #'
 #' ####################  SapiV1MarginForceLiquidationRecGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.start.time <- 56 # integer | UTC timestamp in ms
 #' var.end.time <- 56 # integer | UTC timestamp in ms
 #' var.isolated.symbol <- 'isolated.symbol_example' # character | Isolated symbol
@@ -1551,17 +1447,12 @@
 #' #Get Force Liquidation Record (USER_DATA)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginForceLiquidationRecGet(var.timestamp, var.signature, start.time=var.start.time, end.time=var.end.time, isolated.symbol=var.isolated.symbol, current=var.current, size=var.size, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginForceLiquidationRecGet(start.time=var.start.time, end.time=var.end.time, isolated.symbol=var.isolated.symbol, current=var.current, size=var.size, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginInterestHistoryGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.asset <- 'BNB' # character | 
 #' var.isolated.symbol <- 'isolated.symbol_example' # character | Isolated symbol
 #' var.start.time <- 56 # integer | UTC timestamp in ms
@@ -1574,18 +1465,13 @@
 #' #Get Interest History (USER_DATA)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginInterestHistoryGet(var.timestamp, var.signature, asset=var.asset, isolated.symbol=var.isolated.symbol, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, archived=var.archived, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginInterestHistoryGet(asset=var.asset, isolated.symbol=var.isolated.symbol, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, archived=var.archived, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginInterestRateHistoryGet  ####################
 #'
 #' library(binanceRapi)
 #' var.asset <- 'BTC' # character | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.vip.level <- 1 # integer | Defaults to user's vip level
 #' var.start.time <- 56 # integer | UTC timestamp in ms
 #' var.end.time <- 56 # integer | UTC timestamp in ms
@@ -1595,118 +1481,83 @@
 #' #Margin Interest Rate History (USER_DATA)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginInterestRateHistoryGet(var.asset, var.timestamp, var.signature, vip.level=var.vip.level, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginInterestRateHistoryGet(var.asset, vip.level=var.vip.level, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginIsolatedAccountDelete  ####################
 #'
 #' library(binanceRapi)
 #' var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Disable Isolated Margin Account (TRADE)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginIsolatedAccountDelete(var.symbol, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginIsolatedAccountDelete(var.symbol, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginIsolatedAccountGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.symbols <- 'BTCUSDT,BNBUSDT,ADAUSDT' # character | Max 5 symbols can be sent; separated by ','
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Query Isolated Margin Account Info (USER_DATA)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginIsolatedAccountGet(var.timestamp, var.signature, symbols=var.symbols, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginIsolatedAccountGet(symbols=var.symbols, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginIsolatedAccountLimitGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Query Enabled Isolated Margin Account Limit (USER_DATA)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginIsolatedAccountLimitGet(var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginIsolatedAccountLimitGet(recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginIsolatedAccountPost  ####################
 #'
 #' library(binanceRapi)
 #' var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Enable Isolated Margin Account (TRADE)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginIsolatedAccountPost(var.symbol, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginIsolatedAccountPost(var.symbol, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginIsolatedAllPairsGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Get All Isolated Margin Symbol(USER_DATA)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginIsolatedAllPairsGet(var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginIsolatedAllPairsGet(recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginIsolatedPairGet  ####################
 #'
 #' library(binanceRapi)
 #' var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Query Isolated Margin Symbol (USER_DATA)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginIsolatedPairGet(var.symbol, var.timestamp, var.signature, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginIsolatedPairGet(var.symbol, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginIsolatedTransferGet  ####################
 #'
 #' library(binanceRapi)
 #' var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.asset <- 'BNB' # character | 
 #' var.trans.from <- 'SPOT' # character | 
 #' var.trans.to <- 'ISOLATED_MARGIN' # character | 
@@ -1719,10 +1570,7 @@
 #' #Get Isolated Margin Transfer History (USER_DATA)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginIsolatedTransferGet(var.symbol, var.timestamp, var.signature, asset=var.asset, trans.from=var.trans.from, trans.to=var.trans.to, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginIsolatedTransferGet(var.symbol, asset=var.asset, trans.from=var.trans.from, trans.to=var.trans.to, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginIsolatedTransferPost  ####################
@@ -1731,8 +1579,6 @@
 #' var.asset <- 'BTC' # character | 
 #' var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
 #' var.amount <- 1.01 # numeric | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.trans.from <- 'SPOT' # character | 
 #' var.trans.to <- 'ISOLATED_MARGIN' # character | 
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -1740,18 +1586,13 @@
 #' #Isolated Margin Account Transfer (MARGIN)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginIsolatedTransferPost(var.asset, var.symbol, var.amount, var.timestamp, var.signature, trans.from=var.trans.from, trans.to=var.trans.to, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginIsolatedTransferPost(var.asset, var.symbol, var.amount, trans.from=var.trans.from, trans.to=var.trans.to, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginLoanGet  ####################
 #'
 #' library(binanceRapi)
 #' var.asset <- 'BTC' # character | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.isolated.symbol <- 'isolated.symbol_example' # character | Isolated symbol
 #' var.tx.id <- 123456789 # integer | the tranId in  `POST /sapi/v1/margin/loan`
 #' var.start.time <- 56 # integer | UTC timestamp in ms
@@ -1764,10 +1605,7 @@
 #' #Query Loan Record (USER_DATA)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginLoanGet(var.asset, var.timestamp, var.signature, isolated.symbol=var.isolated.symbol, tx.id=var.tx.id, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, archived=var.archived, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginLoanGet(var.asset, isolated.symbol=var.isolated.symbol, tx.id=var.tx.id, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, archived=var.archived, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginLoanPost  ####################
@@ -1775,8 +1613,6 @@
 #' library(binanceRapi)
 #' var.asset <- 'BTC' # character | 
 #' var.amount <- 1.01 # numeric | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 #' var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -1784,54 +1620,39 @@
 #' #Margin Account Borrow (MARGIN)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginLoanPost(var.asset, var.amount, var.timestamp, var.signature, is.isolated=var.is.isolated, symbol=var.symbol, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginLoanPost(var.asset, var.amount, is.isolated=var.is.isolated, symbol=var.symbol, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginMaxBorrowableGet  ####################
 #'
 #' library(binanceRapi)
 #' var.asset <- 'BTC' # character | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.isolated.symbol <- 'isolated.symbol_example' # character | Isolated symbol
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Query Max Borrow (USER_DATA)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginMaxBorrowableGet(var.asset, var.timestamp, var.signature, isolated.symbol=var.isolated.symbol, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginMaxBorrowableGet(var.asset, isolated.symbol=var.isolated.symbol, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginMaxTransferableGet  ####################
 #'
 #' library(binanceRapi)
 #' var.asset <- 'BTC' # character | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.isolated.symbol <- 'isolated.symbol_example' # character | Isolated symbol
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Query Max Transfer-Out Amount (USER_DATA)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginMaxTransferableGet(var.asset, var.timestamp, var.signature, isolated.symbol=var.isolated.symbol, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginMaxTransferableGet(var.asset, isolated.symbol=var.isolated.symbol, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginMyTradesGet  ####################
 #'
 #' library(binanceRapi)
 #' var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 #' var.start.time <- 56 # integer | UTC timestamp in ms
 #' var.end.time <- 56 # integer | UTC timestamp in ms
@@ -1842,17 +1663,12 @@
 #' #Query Margin Account's Trade List (USER_DATA)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginMyTradesGet(var.symbol, var.timestamp, var.signature, is.isolated=var.is.isolated, start.time=var.start.time, end.time=var.end.time, from.id=var.from.id, limit=var.limit, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginMyTradesGet(var.symbol, is.isolated=var.is.isolated, start.time=var.start.time, end.time=var.end.time, from.id=var.from.id, limit=var.limit, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginOpenOrderListGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 #' var.symbol <- 'symbol_example' # character | Mandatory for isolated margin, not supported for cross margin
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -1860,35 +1676,25 @@
 #' #Query Margin Account's Open OCO (USER_DATA)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginOpenOrderListGet(var.timestamp, var.signature, is.isolated=var.is.isolated, symbol=var.symbol, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginOpenOrderListGet(is.isolated=var.is.isolated, symbol=var.symbol, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginOpenOrdersDelete  ####################
 #'
 #' library(binanceRapi)
 #' var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Margin Account Cancel all Open Orders on a Symbol (TRADE)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginOpenOrdersDelete(var.symbol, var.timestamp, var.signature, is.isolated=var.is.isolated, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginOpenOrdersDelete(var.symbol, is.isolated=var.is.isolated, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginOpenOrdersGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
 #' var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -1896,18 +1702,13 @@
 #' #Query Margin Account's Open Orders (USER_DATA)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginOpenOrdersGet(var.timestamp, var.signature, symbol=var.symbol, is.isolated=var.is.isolated, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginOpenOrdersGet(symbol=var.symbol, is.isolated=var.is.isolated, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginOrderDelete  ####################
 #'
 #' library(binanceRapi)
 #' var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 #' var.order.id <- 56 # integer | Order id
 #' var.orig.client.order.id <- 'orig.client.order.id_example' # character | Order id from client
@@ -1917,18 +1718,13 @@
 #' #Margin Account Cancel Order (TRADE)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginOrderDelete(var.symbol, var.timestamp, var.signature, is.isolated=var.is.isolated, order.id=var.order.id, orig.client.order.id=var.orig.client.order.id, new.client.order.id=var.new.client.order.id, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginOrderDelete(var.symbol, is.isolated=var.is.isolated, order.id=var.order.id, orig.client.order.id=var.orig.client.order.id, new.client.order.id=var.new.client.order.id, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginOrderGet  ####################
 #'
 #' library(binanceRapi)
 #' var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 #' var.order.id <- 56 # integer | Order id
 #' var.orig.client.order.id <- 'orig.client.order.id_example' # character | Order id from client
@@ -1937,18 +1733,13 @@
 #' #Query Margin Account's Order (USER_DATA)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginOrderGet(var.symbol, var.timestamp, var.signature, is.isolated=var.is.isolated, order.id=var.order.id, orig.client.order.id=var.orig.client.order.id, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginOrderGet(var.symbol, is.isolated=var.is.isolated, order.id=var.order.id, orig.client.order.id=var.orig.client.order.id, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginOrderListDelete  ####################
 #'
 #' library(binanceRapi)
 #' var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 #' var.order.list.id <- 56 # integer | Order list id
 #' var.list.client.order.id <- 'list.client.order.id_example' # character | A unique Id for the entire orderList
@@ -1958,17 +1749,12 @@
 #' #Margin Account Cancel OCO (TRADE)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginOrderListDelete(var.symbol, var.timestamp, var.signature, is.isolated=var.is.isolated, order.list.id=var.order.list.id, list.client.order.id=var.list.client.order.id, new.client.order.id=var.new.client.order.id, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginOrderListDelete(var.symbol, is.isolated=var.is.isolated, order.list.id=var.order.list.id, list.client.order.id=var.list.client.order.id, new.client.order.id=var.new.client.order.id, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginOrderListGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 #' var.symbol <- 'symbol_example' # character | Mandatory for isolated margin, not supported for cross margin
 #' var.order.list.id <- 56 # integer | Order list id
@@ -1978,10 +1764,7 @@
 #' #Query Margin Account's OCO (USER_DATA)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginOrderListGet(var.timestamp, var.signature, is.isolated=var.is.isolated, symbol=var.symbol, order.list.id=var.order.list.id, orig.client.order.id=var.orig.client.order.id, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginOrderListGet(is.isolated=var.is.isolated, symbol=var.symbol, order.list.id=var.order.list.id, orig.client.order.id=var.orig.client.order.id, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginOrderOcoPost  ####################
@@ -1992,8 +1775,6 @@
 #' var.quantity <- 3.4 # numeric | 
 #' var.price <- 3.4 # numeric | Order price
 #' var.stop.price <- 3.4 # numeric | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 #' var.list.client.order.id <- 'list.client.order.id_example' # character | A unique Id for the entire orderList
 #' var.limit.client.order.id <- 'limit.client.order.id_example' # character | A unique Id for the limit order
@@ -2009,10 +1790,7 @@
 #' #Margin Account New OCO (TRADE)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginOrderOcoPost(var.symbol, var.side, var.quantity, var.price, var.stop.price, var.timestamp, var.signature, is.isolated=var.is.isolated, list.client.order.id=var.list.client.order.id, limit.client.order.id=var.limit.client.order.id, limit.iceberg.qty=var.limit.iceberg.qty, stop.client.order.id=var.stop.client.order.id, stop.limit.price=var.stop.limit.price, stop.iceberg.qty=var.stop.iceberg.qty, stop.limit.time.in.force=var.stop.limit.time.in.force, new.order.resp.type=var.new.order.resp.type, side.effect.type=var.side.effect.type, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginOrderOcoPost(var.symbol, var.side, var.quantity, var.price, var.stop.price, is.isolated=var.is.isolated, list.client.order.id=var.list.client.order.id, limit.client.order.id=var.limit.client.order.id, limit.iceberg.qty=var.limit.iceberg.qty, stop.client.order.id=var.stop.client.order.id, stop.limit.price=var.stop.limit.price, stop.iceberg.qty=var.stop.iceberg.qty, stop.limit.time.in.force=var.stop.limit.time.in.force, new.order.resp.type=var.new.order.resp.type, side.effect.type=var.side.effect.type, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginOrderPost  ####################
@@ -2022,8 +1800,6 @@
 #' var.side <- 'SELL' # character | SELL or BUY
 #' var.type <- 'type_example' # character | Order type
 #' var.quantity <- 3.4 # numeric | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 #' var.quote.order.qty <- 3.4 # numeric | Quote quantity
 #' var.price <- 3.4 # numeric | Order price
@@ -2038,10 +1814,7 @@
 #' #Margin Account New Order (TRADE)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginOrderPost(var.symbol, var.side, var.type, var.quantity, var.timestamp, var.signature, is.isolated=var.is.isolated, quote.order.qty=var.quote.order.qty, price=var.price, stop.price=var.stop.price, new.client.order.id=var.new.client.order.id, iceberg.qty=var.iceberg.qty, new.order.resp.type=var.new.order.resp.type, side.effect.type=var.side.effect.type, time.in.force=var.time.in.force, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginOrderPost(var.symbol, var.side, var.type, var.quantity, is.isolated=var.is.isolated, quote.order.qty=var.quote.order.qty, price=var.price, stop.price=var.stop.price, new.client.order.id=var.new.client.order.id, iceberg.qty=var.iceberg.qty, new.order.resp.type=var.new.order.resp.type, side.effect.type=var.side.effect.type, time.in.force=var.time.in.force, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginPairGet  ####################
@@ -2051,9 +1824,6 @@
 #'
 #' #Query Cross Margin Pair (MARKET_DATA)
 #' api.instance <- MarginApi$new()
-#'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
 #'
 #' result <- api.instance$SapiV1MarginPairGet(var.symbol)
 #'
@@ -2066,9 +1836,6 @@
 #' #Query Margin PriceIndex (MARKET_DATA)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
 #' result <- api.instance$SapiV1MarginPriceIndexGet(var.symbol)
 #'
 #'
@@ -2076,8 +1843,6 @@
 #'
 #' library(binanceRapi)
 #' var.asset <- 'BTC' # character | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.isolated.symbol <- 'isolated.symbol_example' # character | Isolated symbol
 #' var.tx.id <- 2970933056 # integer | the tranId in  `POST /sapi/v1/margin/repay`
 #' var.start.time <- 56 # integer | UTC timestamp in ms
@@ -2090,10 +1855,7 @@
 #' #Query Repay Record (USER_DATA)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginRepayGet(var.asset, var.timestamp, var.signature, isolated.symbol=var.isolated.symbol, tx.id=var.tx.id, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, archived=var.archived, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginRepayGet(var.asset, isolated.symbol=var.isolated.symbol, tx.id=var.tx.id, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, archived=var.archived, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginRepayPost  ####################
@@ -2101,8 +1863,6 @@
 #' library(binanceRapi)
 #' var.asset <- 'BTC' # character | 
 #' var.amount <- 1.01 # numeric | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 #' var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -2110,17 +1870,12 @@
 #' #Margin Account Repay (MARGIN)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginRepayPost(var.asset, var.amount, var.timestamp, var.signature, is.isolated=var.is.isolated, symbol=var.symbol, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginRepayPost(var.asset, var.amount, is.isolated=var.is.isolated, symbol=var.symbol, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginTransferGet  ####################
 #'
 #' library(binanceRapi)
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.asset <- 'BNB' # character | 
 #' var.type <- 'type_example' # character | Tranfer Type
 #' var.start.time <- 56 # integer | UTC timestamp in ms
@@ -2133,10 +1888,7 @@
 #' #Get Cross Margin Transfer History (USER_DATA)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginTransferGet(var.timestamp, var.signature, asset=var.asset, type=var.type, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, archived=var.archived, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginTransferGet(asset=var.asset, type=var.type, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, archived=var.archived, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginTransferPost  ####################
@@ -2144,18 +1896,13 @@
 #' library(binanceRapi)
 #' var.asset <- 'BTC' # character | 
 #' var.amount <- 1.01 # numeric | 
-#' var.timestamp <- 56 # integer | UTC timestamp in ms
-#' var.signature <- 'signature_example' # character | Signature
 #' var.type <- 56 # integer | 1 -> transfer from main account to margin account \\ 2 -> transfer from margin account to main account
 #' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #'
 #' #Cross Margin Account Transfer (MARGIN)
 #' api.instance <- MarginApi$new()
 #'
-#' #Configure API key authorization: ApiKeyAuth
-#' api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-#'
-#' result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.timestamp, var.signature, type=var.type, recv.window=var.recv.window)
+#' result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, type=var.type, recv.window=var.recv.window)
 #'
 #'
 #' }
@@ -2174,8 +1921,8 @@ MarginApi <- R6::R6Class(
         self$apiClient <- ApiClient$new()
       }
     },
-    SapiV1BnbBurnGet = function(timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1BnbBurnGetWithHttpInfo(timestamp, signature, recv.window, ...)
+    SapiV1BnbBurnGet = function(recv.window=NULL, ...){
+      apiResponse <- self$SapiV1BnbBurnGetWithHttpInfo(recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2188,30 +1935,22 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1BnbBurnGetWithHttpInfo = function(timestamp, signature, recv.window=NULL, ...){
+    SapiV1BnbBurnGetWithHttpInfo = function(recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/bnbBurn"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -2237,8 +1976,8 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1BnbBurnPost = function(timestamp, signature, spot.bnb.burn=NULL, interest.bnb.burn=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1BnbBurnPostWithHttpInfo(timestamp, signature, spot.bnb.burn, interest.bnb.burn, recv.window, ...)
+    SapiV1BnbBurnPost = function(spot.bnb.burn=NULL, interest.bnb.burn=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1BnbBurnPostWithHttpInfo(spot.bnb.burn, interest.bnb.burn, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2251,18 +1990,10 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1BnbBurnPostWithHttpInfo = function(timestamp, signature, spot.bnb.burn=NULL, interest.bnb.burn=NULL, recv.window=NULL, ...){
+    SapiV1BnbBurnPostWithHttpInfo = function(spot.bnb.burn=NULL, interest.bnb.burn=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['spotBNBBurn'] <- spot.bnb.burn
 
@@ -2270,15 +2001,15 @@ MarginApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/bnbBurn"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -2304,8 +2035,8 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginAccountGet = function(timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginAccountGetWithHttpInfo(timestamp, signature, recv.window, ...)
+    SapiV1MarginAccountGet = function(recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginAccountGetWithHttpInfo(recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2318,30 +2049,22 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginAccountGetWithHttpInfo = function(timestamp, signature, recv.window=NULL, ...){
+    SapiV1MarginAccountGetWithHttpInfo = function(recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/account"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -2389,8 +2112,8 @@ MarginApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/margin/allAssets"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -2416,8 +2139,8 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginAllOrderListGet = function(timestamp, signature, is.isolated=NULL, symbol=NULL, from.id=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginAllOrderListGetWithHttpInfo(timestamp, signature, is.isolated, symbol, from.id, start.time, end.time, limit, recv.window, ...)
+    SapiV1MarginAllOrderListGet = function(is.isolated=NULL, symbol=NULL, from.id=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginAllOrderListGetWithHttpInfo(is.isolated, symbol, from.id, start.time, end.time, limit, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2430,18 +2153,12 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginAllOrderListGetWithHttpInfo = function(timestamp, signature, is.isolated=NULL, symbol=NULL, from.id=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
+    SapiV1MarginAllOrderListGetWithHttpInfo = function(is.isolated=NULL, symbol=NULL, from.id=NULL, 
+                                                       start.time=NULL, end.time=NULL, limit=NULL, 
+                                                       recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['isIsolated'] <- is.isolated
 
@@ -2457,15 +2174,15 @@ MarginApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/allOrderList"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -2491,8 +2208,10 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginAllOrdersGet = function(symbol, timestamp, signature, is.isolated=NULL, order.id=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginAllOrdersGetWithHttpInfo(symbol, timestamp, signature, is.isolated, order.id, start.time, end.time, limit, recv.window, ...)
+    SapiV1MarginAllOrdersGet = function(symbol, is.isolated=NULL, order.id=NULL, start.time=NULL, 
+                                        end.time=NULL, limit=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginAllOrdersGetWithHttpInfo(symbol, is.isolated, order.id, 
+                                                               start.time, end.time, limit, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2505,21 +2224,15 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginAllOrdersGetWithHttpInfo = function(symbol, timestamp, signature, is.isolated=NULL, order.id=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
+    SapiV1MarginAllOrdersGetWithHttpInfo = function(symbol, is.isolated=NULL, order.id=NULL, 
+                                                    start.time=NULL, end.time=NULL, limit=NULL, 
+                                                    recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`symbol`)) {
         stop("Missing required parameter `symbol`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['symbol'] <- symbol
@@ -2536,15 +2249,15 @@ MarginApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/allOrders"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -2592,8 +2305,8 @@ MarginApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/margin/allPairs"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -2647,8 +2360,8 @@ MarginApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/margin/asset"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -2674,8 +2387,8 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginForceLiquidationRecGet = function(timestamp, signature, start.time=NULL, end.time=NULL, isolated.symbol=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginForceLiquidationRecGetWithHttpInfo(timestamp, signature, start.time, end.time, isolated.symbol, current, size, recv.window, ...)
+    SapiV1MarginForceLiquidationRecGet = function(start.time=NULL, end.time=NULL, isolated.symbol=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginForceLiquidationRecGetWithHttpInfo(start.time, end.time, isolated.symbol, current, size, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2688,18 +2401,10 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginForceLiquidationRecGetWithHttpInfo = function(timestamp, signature, start.time=NULL, end.time=NULL, isolated.symbol=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
+    SapiV1MarginForceLiquidationRecGetWithHttpInfo = function(start.time=NULL, end.time=NULL, isolated.symbol=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['startTime'] <- start.time
 
@@ -2713,15 +2418,15 @@ MarginApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/forceLiquidationRec"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -2747,8 +2452,8 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginInterestHistoryGet = function(timestamp, signature, asset=NULL, isolated.symbol=NULL, start.time=NULL, end.time=NULL, current=NULL, size=NULL, archived=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginInterestHistoryGetWithHttpInfo(timestamp, signature, asset, isolated.symbol, start.time, end.time, current, size, archived, recv.window, ...)
+    SapiV1MarginInterestHistoryGet = function(asset=NULL, isolated.symbol=NULL, start.time=NULL, end.time=NULL, current=NULL, size=NULL, archived=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginInterestHistoryGetWithHttpInfo(asset, isolated.symbol, start.time, end.time, current, size, archived, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2761,18 +2466,10 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginInterestHistoryGetWithHttpInfo = function(timestamp, signature, asset=NULL, isolated.symbol=NULL, start.time=NULL, end.time=NULL, current=NULL, size=NULL, archived=NULL, recv.window=NULL, ...){
+    SapiV1MarginInterestHistoryGetWithHttpInfo = function(asset=NULL, isolated.symbol=NULL, start.time=NULL, end.time=NULL, current=NULL, size=NULL, archived=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['asset'] <- asset
 
@@ -2790,15 +2487,15 @@ MarginApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/interestHistory"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -2824,8 +2521,10 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginInterestRateHistoryGet = function(asset, timestamp, signature, vip.level=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginInterestRateHistoryGetWithHttpInfo(asset, timestamp, signature, vip.level, start.time, end.time, limit, recv.window, ...)
+    SapiV1MarginInterestRateHistoryGet = function(asset, vip.level=NULL, start.time=NULL, end.time=NULL, 
+                                                  limit=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginInterestRateHistoryGetWithHttpInfo(asset, vip.level, start.time, 
+                                                                         end.time, limit, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2838,21 +2537,14 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginInterestRateHistoryGetWithHttpInfo = function(asset, timestamp, signature, vip.level=NULL, start.time=NULL, end.time=NULL, limit=NULL, recv.window=NULL, ...){
+    SapiV1MarginInterestRateHistoryGetWithHttpInfo = function(asset, vip.level=NULL, start.time=NULL, 
+                                                              end.time=NULL, limit=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`asset`)) {
         stop("Missing required parameter `asset`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['asset'] <- asset
@@ -2867,15 +2559,15 @@ MarginApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/interestRateHistory"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -2901,8 +2593,8 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginIsolatedAccountDelete = function(symbol, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginIsolatedAccountDeleteWithHttpInfo(symbol, timestamp, signature, recv.window, ...)
+    SapiV1MarginIsolatedAccountDelete = function(symbol, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginIsolatedAccountDeleteWithHttpInfo(symbol, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2915,7 +2607,7 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginIsolatedAccountDeleteWithHttpInfo = function(symbol, timestamp, signature, recv.window=NULL, ...){
+    SapiV1MarginIsolatedAccountDeleteWithHttpInfo = function(symbol, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -2924,27 +2616,19 @@ MarginApi <- R6::R6Class(
         stop("Missing required parameter `symbol`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['symbol'] <- symbol
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/isolated/account"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -2970,8 +2654,8 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginIsolatedAccountGet = function(timestamp, signature, symbols=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginIsolatedAccountGetWithHttpInfo(timestamp, signature, symbols, recv.window, ...)
+    SapiV1MarginIsolatedAccountGet = function(symbols=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginIsolatedAccountGetWithHttpInfo(symbols, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -2984,32 +2668,24 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginIsolatedAccountGetWithHttpInfo = function(timestamp, signature, symbols=NULL, recv.window=NULL, ...){
+    SapiV1MarginIsolatedAccountGetWithHttpInfo = function(symbols=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['symbols'] <- symbols
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/isolated/account"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3035,8 +2711,8 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginIsolatedAccountLimitGet = function(timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginIsolatedAccountLimitGetWithHttpInfo(timestamp, signature, recv.window, ...)
+    SapiV1MarginIsolatedAccountLimitGet = function(recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginIsolatedAccountLimitGetWithHttpInfo(recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -3049,30 +2725,22 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginIsolatedAccountLimitGetWithHttpInfo = function(timestamp, signature, recv.window=NULL, ...){
+    SapiV1MarginIsolatedAccountLimitGetWithHttpInfo = function(recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/isolated/accountLimit"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3098,8 +2766,8 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginIsolatedAccountPost = function(symbol, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginIsolatedAccountPostWithHttpInfo(symbol, timestamp, signature, recv.window, ...)
+    SapiV1MarginIsolatedAccountPost = function(symbol, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginIsolatedAccountPostWithHttpInfo(symbol, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -3112,7 +2780,7 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginIsolatedAccountPostWithHttpInfo = function(symbol, timestamp, signature, recv.window=NULL, ...){
+    SapiV1MarginIsolatedAccountPostWithHttpInfo = function(symbol, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -3121,27 +2789,19 @@ MarginApi <- R6::R6Class(
         stop("Missing required parameter `symbol`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['symbol'] <- symbol
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/isolated/account"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3167,8 +2827,8 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginIsolatedAllPairsGet = function(timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginIsolatedAllPairsGetWithHttpInfo(timestamp, signature, recv.window, ...)
+    SapiV1MarginIsolatedAllPairsGet = function(recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginIsolatedAllPairsGetWithHttpInfo(recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -3181,30 +2841,22 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginIsolatedAllPairsGetWithHttpInfo = function(timestamp, signature, recv.window=NULL, ...){
+    SapiV1MarginIsolatedAllPairsGetWithHttpInfo = function(recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/isolated/allPairs"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3230,8 +2882,8 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginIsolatedPairGet = function(symbol, timestamp, signature, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginIsolatedPairGetWithHttpInfo(symbol, timestamp, signature, recv.window, ...)
+    SapiV1MarginIsolatedPairGet = function(symbol, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginIsolatedPairGetWithHttpInfo(symbol, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -3244,7 +2896,7 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginIsolatedPairGetWithHttpInfo = function(symbol, timestamp, signature, recv.window=NULL, ...){
+    SapiV1MarginIsolatedPairGetWithHttpInfo = function(symbol, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -3253,27 +2905,19 @@ MarginApi <- R6::R6Class(
         stop("Missing required parameter `symbol`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['symbol'] <- symbol
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/isolated/pair"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3299,8 +2943,8 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginIsolatedTransferGet = function(symbol, timestamp, signature, asset=NULL, trans.from=NULL, trans.to=NULL, start.time=NULL, end.time=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginIsolatedTransferGetWithHttpInfo(symbol, timestamp, signature, asset, trans.from, trans.to, start.time, end.time, current, size, recv.window, ...)
+    SapiV1MarginIsolatedTransferGet = function(symbol, asset=NULL, trans.from=NULL, trans.to=NULL, start.time=NULL, end.time=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginIsolatedTransferGetWithHttpInfo(symbol, asset, trans.from, trans.to, start.time, end.time, current, size, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -3313,21 +2957,13 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginIsolatedTransferGetWithHttpInfo = function(symbol, timestamp, signature, asset=NULL, trans.from=NULL, trans.to=NULL, start.time=NULL, end.time=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
+    SapiV1MarginIsolatedTransferGetWithHttpInfo = function(symbol, asset=NULL, trans.from=NULL, trans.to=NULL, start.time=NULL, end.time=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`symbol`)) {
         stop("Missing required parameter `symbol`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['asset'] <- asset
@@ -3348,15 +2984,15 @@ MarginApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/isolated/transfer"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3382,8 +3018,10 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginIsolatedTransferPost = function(asset, symbol, amount, timestamp, signature, trans.from=NULL, trans.to=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginIsolatedTransferPostWithHttpInfo(asset, symbol, amount, timestamp, signature, trans.from, trans.to, recv.window, ...)
+    SapiV1MarginIsolatedTransferPost = function(asset, symbol, amount, trans.from=NULL, trans.to=NULL, 
+                                                recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginIsolatedTransferPostWithHttpInfo(asset, symbol, amount, 
+                                                                       trans.from, trans.to, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -3396,7 +3034,7 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginIsolatedTransferPostWithHttpInfo = function(asset, symbol, amount, timestamp, signature, trans.from=NULL, trans.to=NULL, recv.window=NULL, ...){
+    SapiV1MarginIsolatedTransferPostWithHttpInfo = function(asset, symbol, amount, trans.from=NULL, trans.to=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -3413,14 +3051,6 @@ MarginApi <- R6::R6Class(
         stop("Missing required parameter `amount`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['asset'] <- asset
 
       queryParams['symbol'] <- symbol
@@ -3433,15 +3063,15 @@ MarginApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/isolated/transfer"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3467,8 +3097,11 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginLoanGet = function(asset, timestamp, signature, isolated.symbol=NULL, tx.id=NULL, start.time=NULL, end.time=NULL, current=NULL, size=NULL, archived=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginLoanGetWithHttpInfo(asset, timestamp, signature, isolated.symbol, tx.id, start.time, end.time, current, size, archived, recv.window, ...)
+    SapiV1MarginLoanGet = function(asset, isolated.symbol=NULL, tx.id=NULL, start.time=NULL, 
+                                   end.time=NULL, current=NULL, size=NULL, archived=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginLoanGetWithHttpInfo(asset, isolated.symbol, tx.id, 
+                                                          start.time, end.time, current, size, archived, 
+                                                          recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -3481,21 +3114,15 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginLoanGetWithHttpInfo = function(asset, timestamp, signature, isolated.symbol=NULL, tx.id=NULL, start.time=NULL, end.time=NULL, current=NULL, size=NULL, archived=NULL, recv.window=NULL, ...){
+    SapiV1MarginLoanGetWithHttpInfo = function(asset, isolated.symbol=NULL, tx.id=NULL, 
+                                               start.time=NULL, end.time=NULL, current=NULL, 
+                                               size=NULL, archived=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`asset`)) {
         stop("Missing required parameter `asset`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['asset'] <- asset
@@ -3516,15 +3143,15 @@ MarginApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/loan"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3550,8 +3177,8 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginLoanPost = function(asset, amount, timestamp, signature, is.isolated=NULL, symbol=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginLoanPostWithHttpInfo(asset, amount, timestamp, signature, is.isolated, symbol, recv.window, ...)
+    SapiV1MarginLoanPost = function(asset, amount, is.isolated=NULL, symbol=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginLoanPostWithHttpInfo(asset, amount, is.isolated, symbol, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -3564,7 +3191,7 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginLoanPostWithHttpInfo = function(asset, amount, timestamp, signature, is.isolated=NULL, symbol=NULL, recv.window=NULL, ...){
+    SapiV1MarginLoanPostWithHttpInfo = function(asset, amount, is.isolated=NULL, symbol=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -3577,14 +3204,6 @@ MarginApi <- R6::R6Class(
         stop("Missing required parameter `amount`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['asset'] <- asset
 
       queryParams['isIsolated'] <- is.isolated
@@ -3595,15 +3214,15 @@ MarginApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/loan"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3629,8 +3248,8 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginMaxBorrowableGet = function(asset, timestamp, signature, isolated.symbol=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginMaxBorrowableGetWithHttpInfo(asset, timestamp, signature, isolated.symbol, recv.window, ...)
+    SapiV1MarginMaxBorrowableGet = function(asset, isolated.symbol=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginMaxBorrowableGetWithHttpInfo(asset, isolated.symbol, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -3643,7 +3262,7 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginMaxBorrowableGetWithHttpInfo = function(asset, timestamp, signature, isolated.symbol=NULL, recv.window=NULL, ...){
+    SapiV1MarginMaxBorrowableGetWithHttpInfo = function(asset, isolated.symbol=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -3652,29 +3271,21 @@ MarginApi <- R6::R6Class(
         stop("Missing required parameter `asset`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['asset'] <- asset
 
       queryParams['isolatedSymbol'] <- isolated.symbol
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/maxBorrowable"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3700,8 +3311,8 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginMaxTransferableGet = function(asset, timestamp, signature, isolated.symbol=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginMaxTransferableGetWithHttpInfo(asset, timestamp, signature, isolated.symbol, recv.window, ...)
+    SapiV1MarginMaxTransferableGet = function(asset, isolated.symbol=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginMaxTransferableGetWithHttpInfo(asset, isolated.symbol, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -3714,7 +3325,7 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginMaxTransferableGetWithHttpInfo = function(asset, timestamp, signature, isolated.symbol=NULL, recv.window=NULL, ...){
+    SapiV1MarginMaxTransferableGetWithHttpInfo = function(asset, isolated.symbol=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -3723,29 +3334,21 @@ MarginApi <- R6::R6Class(
         stop("Missing required parameter `asset`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['asset'] <- asset
 
       queryParams['isolatedSymbol'] <- isolated.symbol
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/maxTransferable"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3771,8 +3374,8 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginMyTradesGet = function(symbol, timestamp, signature, is.isolated=NULL, start.time=NULL, end.time=NULL, from.id=NULL, limit=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginMyTradesGetWithHttpInfo(symbol, timestamp, signature, is.isolated, start.time, end.time, from.id, limit, recv.window, ...)
+    SapiV1MarginMyTradesGet = function(symbol, is.isolated=NULL, start.time=NULL, end.time=NULL, from.id=NULL, limit=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginMyTradesGetWithHttpInfo(symbol, is.isolated, start.time, end.time, from.id, limit, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -3785,21 +3388,13 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginMyTradesGetWithHttpInfo = function(symbol, timestamp, signature, is.isolated=NULL, start.time=NULL, end.time=NULL, from.id=NULL, limit=NULL, recv.window=NULL, ...){
+    SapiV1MarginMyTradesGetWithHttpInfo = function(symbol, is.isolated=NULL, start.time=NULL, end.time=NULL, from.id=NULL, limit=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`symbol`)) {
         stop("Missing required parameter `symbol`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['symbol'] <- symbol
@@ -3816,15 +3411,15 @@ MarginApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/myTrades"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3850,8 +3445,8 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginOpenOrderListGet = function(timestamp, signature, is.isolated=NULL, symbol=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginOpenOrderListGetWithHttpInfo(timestamp, signature, is.isolated, symbol, recv.window, ...)
+    SapiV1MarginOpenOrderListGet = function(is.isolated=NULL, symbol=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginOpenOrderListGetWithHttpInfo(is.isolated, symbol, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -3864,18 +3459,10 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginOpenOrderListGetWithHttpInfo = function(timestamp, signature, is.isolated=NULL, symbol=NULL, recv.window=NULL, ...){
+    SapiV1MarginOpenOrderListGetWithHttpInfo = function(is.isolated=NULL, symbol=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['isIsolated'] <- is.isolated
 
@@ -3883,15 +3470,15 @@ MarginApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/openOrderList"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3917,8 +3504,8 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginOpenOrdersDelete = function(symbol, timestamp, signature, is.isolated=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginOpenOrdersDeleteWithHttpInfo(symbol, timestamp, signature, is.isolated, recv.window, ...)
+    SapiV1MarginOpenOrdersDelete = function(symbol, is.isolated=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginOpenOrdersDeleteWithHttpInfo(symbol, is.isolated, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -3931,7 +3518,7 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginOpenOrdersDeleteWithHttpInfo = function(symbol, timestamp, signature, is.isolated=NULL, recv.window=NULL, ...){
+    SapiV1MarginOpenOrdersDeleteWithHttpInfo = function(symbol, is.isolated=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -3940,29 +3527,21 @@ MarginApi <- R6::R6Class(
         stop("Missing required parameter `symbol`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['symbol'] <- symbol
 
       queryParams['isIsolated'] <- is.isolated
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/openOrders"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -3988,8 +3567,8 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginOpenOrdersGet = function(timestamp, signature, symbol=NULL, is.isolated=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginOpenOrdersGetWithHttpInfo(timestamp, signature, symbol, is.isolated, recv.window, ...)
+    SapiV1MarginOpenOrdersGet = function(symbol=NULL, is.isolated=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginOpenOrdersGetWithHttpInfo(symbol, is.isolated, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -4002,18 +3581,10 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginOpenOrdersGetWithHttpInfo = function(timestamp, signature, symbol=NULL, is.isolated=NULL, recv.window=NULL, ...){
+    SapiV1MarginOpenOrdersGetWithHttpInfo = function(symbol=NULL, is.isolated=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['symbol'] <- symbol
 
@@ -4021,15 +3592,15 @@ MarginApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/openOrders"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -4055,8 +3626,8 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginOrderDelete = function(symbol, timestamp, signature, is.isolated=NULL, order.id=NULL, orig.client.order.id=NULL, new.client.order.id=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginOrderDeleteWithHttpInfo(symbol, timestamp, signature, is.isolated, order.id, orig.client.order.id, new.client.order.id, recv.window, ...)
+    SapiV1MarginOrderDelete = function(symbol, is.isolated=NULL, order.id=NULL, orig.client.order.id=NULL, new.client.order.id=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginOrderDeleteWithHttpInfo(symbol, is.isolated, order.id, orig.client.order.id, new.client.order.id, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -4069,21 +3640,13 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginOrderDeleteWithHttpInfo = function(symbol, timestamp, signature, is.isolated=NULL, order.id=NULL, orig.client.order.id=NULL, new.client.order.id=NULL, recv.window=NULL, ...){
+    SapiV1MarginOrderDeleteWithHttpInfo = function(symbol, is.isolated=NULL, order.id=NULL, orig.client.order.id=NULL, new.client.order.id=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`symbol`)) {
         stop("Missing required parameter `symbol`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['symbol'] <- symbol
@@ -4098,15 +3661,15 @@ MarginApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/order"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -4132,8 +3695,8 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginOrderGet = function(symbol, timestamp, signature, is.isolated=NULL, order.id=NULL, orig.client.order.id=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginOrderGetWithHttpInfo(symbol, timestamp, signature, is.isolated, order.id, orig.client.order.id, recv.window, ...)
+    SapiV1MarginOrderGet = function(symbol, is.isolated=NULL, order.id=NULL, orig.client.order.id=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginOrderGetWithHttpInfo(symbol, is.isolated, order.id, orig.client.order.id, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -4146,21 +3709,13 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginOrderGetWithHttpInfo = function(symbol, timestamp, signature, is.isolated=NULL, order.id=NULL, orig.client.order.id=NULL, recv.window=NULL, ...){
+    SapiV1MarginOrderGetWithHttpInfo = function(symbol, is.isolated=NULL, order.id=NULL, orig.client.order.id=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`symbol`)) {
         stop("Missing required parameter `symbol`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['symbol'] <- symbol
@@ -4173,15 +3728,15 @@ MarginApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/order"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -4207,8 +3762,8 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginOrderListDelete = function(symbol, timestamp, signature, is.isolated=NULL, order.list.id=NULL, list.client.order.id=NULL, new.client.order.id=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginOrderListDeleteWithHttpInfo(symbol, timestamp, signature, is.isolated, order.list.id, list.client.order.id, new.client.order.id, recv.window, ...)
+    SapiV1MarginOrderListDelete = function(symbol, is.isolated=NULL, order.list.id=NULL, list.client.order.id=NULL, new.client.order.id=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginOrderListDeleteWithHttpInfo(symbol, is.isolated, order.list.id, list.client.order.id, new.client.order.id, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -4221,21 +3776,13 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginOrderListDeleteWithHttpInfo = function(symbol, timestamp, signature, is.isolated=NULL, order.list.id=NULL, list.client.order.id=NULL, new.client.order.id=NULL, recv.window=NULL, ...){
+    SapiV1MarginOrderListDeleteWithHttpInfo = function(symbol, is.isolated=NULL, order.list.id=NULL, list.client.order.id=NULL, new.client.order.id=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`symbol`)) {
         stop("Missing required parameter `symbol`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['symbol'] <- symbol
@@ -4250,15 +3797,15 @@ MarginApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/orderList"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -4284,8 +3831,8 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginOrderListGet = function(timestamp, signature, is.isolated=NULL, symbol=NULL, order.list.id=NULL, orig.client.order.id=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginOrderListGetWithHttpInfo(timestamp, signature, is.isolated, symbol, order.list.id, orig.client.order.id, recv.window, ...)
+    SapiV1MarginOrderListGet = function(is.isolated=NULL, symbol=NULL, order.list.id=NULL, orig.client.order.id=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginOrderListGetWithHttpInfo(is.isolated, symbol, order.list.id, orig.client.order.id, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -4298,18 +3845,10 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginOrderListGetWithHttpInfo = function(timestamp, signature, is.isolated=NULL, symbol=NULL, order.list.id=NULL, orig.client.order.id=NULL, recv.window=NULL, ...){
+    SapiV1MarginOrderListGetWithHttpInfo = function(is.isolated=NULL, symbol=NULL, order.list.id=NULL, orig.client.order.id=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['isIsolated'] <- is.isolated
 
@@ -4321,15 +3860,15 @@ MarginApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/orderList"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -4355,8 +3894,18 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginOrderOcoPost = function(symbol, side, quantity, price, stop.price, timestamp, signature, is.isolated=NULL, list.client.order.id=NULL, limit.client.order.id=NULL, limit.iceberg.qty=NULL, stop.client.order.id=NULL, stop.limit.price=NULL, stop.iceberg.qty=NULL, stop.limit.time.in.force=NULL, new.order.resp.type=NULL, side.effect.type=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginOrderOcoPostWithHttpInfo(symbol, side, quantity, price, stop.price, timestamp, signature, is.isolated, list.client.order.id, limit.client.order.id, limit.iceberg.qty, stop.client.order.id, stop.limit.price, stop.iceberg.qty, stop.limit.time.in.force, new.order.resp.type, side.effect.type, recv.window, ...)
+    SapiV1MarginOrderOcoPost = function(symbol, side, quantity, price, stop.price, is.isolated=NULL, 
+                                        list.client.order.id=NULL, limit.client.order.id=NULL, 
+                                        limit.iceberg.qty=NULL, stop.client.order.id=NULL, 
+                                        stop.limit.price=NULL, stop.iceberg.qty=NULL, 
+                                        stop.limit.time.in.force=NULL, new.order.resp.type=NULL, 
+                                        side.effect.type=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginOrderOcoPostWithHttpInfo(symbol, side, quantity, price, stop.price, 
+                                                               is.isolated, list.client.order.id, 
+                                                               limit.client.order.id, limit.iceberg.qty, 
+                                                               stop.client.order.id, stop.limit.price, 
+                                                               stop.iceberg.qty, stop.limit.time.in.force, 
+                                                               new.order.resp.type, side.effect.type, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -4369,7 +3918,13 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginOrderOcoPostWithHttpInfo = function(symbol, side, quantity, price, stop.price, timestamp, signature, is.isolated=NULL, list.client.order.id=NULL, limit.client.order.id=NULL, limit.iceberg.qty=NULL, stop.client.order.id=NULL, stop.limit.price=NULL, stop.iceberg.qty=NULL, stop.limit.time.in.force=NULL, new.order.resp.type=NULL, side.effect.type=NULL, recv.window=NULL, ...){
+    SapiV1MarginOrderOcoPostWithHttpInfo = function(symbol, side, quantity, price, stop.price, 
+                                                    is.isolated=NULL, list.client.order.id=NULL, 
+                                                    limit.client.order.id=NULL, limit.iceberg.qty=NULL, 
+                                                    stop.client.order.id=NULL, stop.limit.price=NULL, 
+                                                    stop.iceberg.qty=NULL, stop.limit.time.in.force=NULL, 
+                                                    new.order.resp.type=NULL, side.effect.type=NULL, 
+                                                    recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -4392,14 +3947,6 @@ MarginApi <- R6::R6Class(
 
       if (missing(`stop.price`)) {
         stop("Missing required parameter `stop.price`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['symbol'] <- symbol
@@ -4434,15 +3981,15 @@ MarginApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/order/oco"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -4468,8 +4015,14 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginOrderPost = function(symbol, side, type, quantity, timestamp, signature, is.isolated=NULL, quote.order.qty=NULL, price=NULL, stop.price=NULL, new.client.order.id=NULL, iceberg.qty=NULL, new.order.resp.type=NULL, side.effect.type=NULL, time.in.force=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginOrderPostWithHttpInfo(symbol, side, type, quantity, timestamp, signature, is.isolated, quote.order.qty, price, stop.price, new.client.order.id, iceberg.qty, new.order.resp.type, side.effect.type, time.in.force, recv.window, ...)
+    SapiV1MarginOrderPost = function(symbol, side, type, quantity, is.isolated=NULL, quote.order.qty=NULL, 
+                                     price=NULL, stop.price=NULL, new.client.order.id=NULL, iceberg.qty=NULL, 
+                                     new.order.resp.type=NULL, side.effect.type=NULL, time.in.force=NULL, 
+                                     recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginOrderPostWithHttpInfo(symbol, side, type, quantity, is.isolated, 
+                                                            quote.order.qty, price, stop.price, new.client.order.id, 
+                                                            iceberg.qty, new.order.resp.type, side.effect.type, 
+                                                            time.in.force, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -4482,7 +4035,11 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginOrderPostWithHttpInfo = function(symbol, side, type, quantity, timestamp, signature, is.isolated=NULL, quote.order.qty=NULL, price=NULL, stop.price=NULL, new.client.order.id=NULL, iceberg.qty=NULL, new.order.resp.type=NULL, side.effect.type=NULL, time.in.force=NULL, recv.window=NULL, ...){
+    SapiV1MarginOrderPostWithHttpInfo = function(symbol, side, type, quantity, is.isolated=NULL, 
+                                                 quote.order.qty=NULL, price=NULL, stop.price=NULL, 
+                                                 new.client.order.id=NULL, iceberg.qty=NULL, 
+                                                 new.order.resp.type=NULL, side.effect.type=NULL, 
+                                                 time.in.force=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -4501,14 +4058,6 @@ MarginApi <- R6::R6Class(
 
       if (missing(`quantity`)) {
         stop("Missing required parameter `quantity`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['symbol'] <- symbol
@@ -4539,15 +4088,15 @@ MarginApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/order"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -4601,8 +4150,8 @@ MarginApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/margin/pair"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -4656,8 +4205,8 @@ MarginApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/margin/priceIndex"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -4683,8 +4232,10 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginRepayGet = function(asset, timestamp, signature, isolated.symbol=NULL, tx.id=NULL, start.time=NULL, end.time=NULL, current=NULL, size=NULL, archived=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginRepayGetWithHttpInfo(asset, timestamp, signature, isolated.symbol, tx.id, start.time, end.time, current, size, archived, recv.window, ...)
+    SapiV1MarginRepayGet = function(asset, isolated.symbol=NULL, tx.id=NULL, start.time=NULL, end.time=NULL, 
+                                    current=NULL, size=NULL, archived=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginRepayGetWithHttpInfo(asset, isolated.symbol, tx.id, start.time, 
+                                                           end.time, current, size, archived, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -4697,21 +4248,15 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginRepayGetWithHttpInfo = function(asset, timestamp, signature, isolated.symbol=NULL, tx.id=NULL, start.time=NULL, end.time=NULL, current=NULL, size=NULL, archived=NULL, recv.window=NULL, ...){
+    SapiV1MarginRepayGetWithHttpInfo = function(asset, isolated.symbol=NULL, tx.id=NULL, 
+                                                start.time=NULL, end.time=NULL, current=NULL, size=NULL, 
+                                                archived=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
 
       if (missing(`asset`)) {
         stop("Missing required parameter `asset`.")
-      }
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
       }
 
       queryParams['asset'] <- asset
@@ -4732,15 +4277,15 @@ MarginApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/repay"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -4766,8 +4311,8 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginRepayPost = function(asset, amount, timestamp, signature, is.isolated=NULL, symbol=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginRepayPostWithHttpInfo(asset, amount, timestamp, signature, is.isolated, symbol, recv.window, ...)
+    SapiV1MarginRepayPost = function(asset, amount, is.isolated=NULL, symbol=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginRepayPostWithHttpInfo(asset, amount, is.isolated, symbol, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -4780,7 +4325,7 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginRepayPostWithHttpInfo = function(asset, amount, timestamp, signature, is.isolated=NULL, symbol=NULL, recv.window=NULL, ...){
+    SapiV1MarginRepayPostWithHttpInfo = function(asset, amount, is.isolated=NULL, symbol=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -4793,14 +4338,6 @@ MarginApi <- R6::R6Class(
         stop("Missing required parameter `amount`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['asset'] <- asset
 
       queryParams['isIsolated'] <- is.isolated
@@ -4811,15 +4348,15 @@ MarginApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/repay"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -4845,8 +4382,10 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginTransferGet = function(timestamp, signature, asset=NULL, type=NULL, start.time=NULL, end.time=NULL, current=NULL, size=NULL, archived=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginTransferGetWithHttpInfo(timestamp, signature, asset, type, start.time, end.time, current, size, archived, recv.window, ...)
+    SapiV1MarginTransferGet = function(asset=NULL, type=NULL, start.time=NULL, end.time=NULL, current=NULL, 
+                                       size=NULL, archived=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginTransferGetWithHttpInfo(asset, type, start.time, end.time, 
+                                                              current, size, archived, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -4859,18 +4398,12 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginTransferGetWithHttpInfo = function(timestamp, signature, asset=NULL, type=NULL, start.time=NULL, end.time=NULL, current=NULL, size=NULL, archived=NULL, recv.window=NULL, ...){
+    SapiV1MarginTransferGetWithHttpInfo = function(asset=NULL, type=NULL, start.time=NULL, 
+                                                   end.time=NULL, current=NULL, size=NULL, archived=NULL, 
+                                                   recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
-
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
 
       queryParams['asset'] <- asset
 
@@ -4888,15 +4421,15 @@ MarginApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/transfer"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -4922,8 +4455,8 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    SapiV1MarginTransferPost = function(asset, amount, timestamp, signature, type=NULL, recv.window=NULL, ...){
-      apiResponse <- self$SapiV1MarginTransferPostWithHttpInfo(asset, amount, timestamp, signature, type, recv.window, ...)
+    SapiV1MarginTransferPost = function(asset, amount, type=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginTransferPostWithHttpInfo(asset, amount, type, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         apiResponse$content
@@ -4936,7 +4469,7 @@ MarginApi <- R6::R6Class(
       }
     },
 
-    SapiV1MarginTransferPostWithHttpInfo = function(asset, amount, timestamp, signature, type=NULL, recv.window=NULL, ...){
+    SapiV1MarginTransferPostWithHttpInfo = function(asset, amount, type=NULL, recv.window=NULL, ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()
@@ -4949,14 +4482,6 @@ MarginApi <- R6::R6Class(
         stop("Missing required parameter `amount`.")
       }
 
-      if (missing(`timestamp`)) {
-        stop("Missing required parameter `timestamp`.")
-      }
-
-      if (missing(`signature`)) {
-        stop("Missing required parameter `signature`.")
-      }
-
       queryParams['asset'] <- asset
 
       queryParams['amount'] <- amount
@@ -4965,15 +4490,15 @@ MarginApi <- R6::R6Class(
 
       queryParams['recvWindow'] <- recv.window
 
-      queryParams['timestamp'] <- timestamp
-
-      queryParams['signature'] <- signature
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
 
       body <- NULL
       urlPath <- "/sapi/v1/margin/transfer"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
