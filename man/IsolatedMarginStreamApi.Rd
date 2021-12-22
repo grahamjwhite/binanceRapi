@@ -40,12 +40,12 @@ Close out a user data stream.  Weight: 1
 Start a new user data stream. The stream will close after 60 minutes unless a keepalive is sent. If the account has an active &#x60;listenKey&#x60;, that &#x60;listenKey&#x60; will be returned and its validity will be extended for 60 minutes.  Weight: 1
 
 \itemize{
-\item \emph{ @returnType } \link{InlineResponse20071} \cr
+\item \emph{ @returnType } \link{InlineResponse20078} \cr
 
 
 \item status code : 200 | Isolated margin listen key
 
-\item return type : InlineResponse20071 
+\item return type : InlineResponse20078 
 \item response headers :
 
 \tabular{ll}{

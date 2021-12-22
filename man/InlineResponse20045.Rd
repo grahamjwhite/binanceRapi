@@ -13,27 +13,9 @@ InlineResponse20045 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{ipRestrict}}{character}
+\item{\code{total}}{integer}
 
-\item{\code{createTime}}{integer}
-
-\item{\code{enableWithdrawals}}{character}
-
-\item{\code{enableInternalTransfer}}{character}
-
-\item{\code{permitsUniversalTransfer}}{character}
-
-\item{\code{enableVanillaOptions}}{character}
-
-\item{\code{enableReading}}{character}
-
-\item{\code{enableFutures}}{character}
-
-\item{\code{enableMargin}}{character}
-
-\item{\code{enableSpotAndMarginTrading}}{character}
-
-\item{\code{tradingAuthorityExpirationTime}}{integer}
+\item{\code{rows}}{list( \link{InlineResponse20045Rows} )}
 }
 \if{html}{\out{</div>}}
 }
@@ -53,20 +35,7 @@ InlineResponse20045 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20045$new(
-  ipRestrict,
-  createTime,
-  enableWithdrawals,
-  enableInternalTransfer,
-  permitsUniversalTransfer,
-  enableVanillaOptions,
-  enableReading,
-  enableFutures,
-  enableMargin,
-  enableSpotAndMarginTrading,
-  tradingAuthorityExpirationTime,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20045$new(total, rows, ...)}\if{html}{\out{</div>}}
 }
 
 }

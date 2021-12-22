@@ -13,11 +13,15 @@ InlineResponse20090 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{code}}{integer}
+\item{\code{asset}}{character}
 
-\item{\code{msg}}{character}
+\item{\code{interest}}{character}
 
-\item{\code{data}}{\link{InlineResponse20090Data}}
+\item{\code{lendingType}}{character}
+
+\item{\code{productName}}{character}
+
+\item{\code{time}}{integer}
 }
 \if{html}{\out{</div>}}
 }
@@ -37,7 +41,7 @@ InlineResponse20090 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20090$new(code, msg, data, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20090$new(asset, interest, lendingType, productName, time, ...)}\if{html}{\out{</div>}}
 }
 
 }

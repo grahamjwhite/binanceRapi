@@ -13,19 +13,17 @@ InlineResponse200107 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{quoteAsset}}{character}
+\item{\code{id}}{numeric}
 
-\item{\code{baseAsset}}{character}
+\item{\code{status}}{character}
 
-\item{\code{quoteQty}}{numeric}
+\item{\code{tokenName}}{character}
 
-\item{\code{baseQty}}{numeric}
+\item{\code{redeemAmount}}{character}
 
-\item{\code{price}}{numeric}
+\item{\code{amount}}{character}
 
-\item{\code{slippage}}{numeric}
-
-\item{\code{fee}}{numeric}
+\item{\code{timestamp}}{integer}
 }
 \if{html}{\out{</div>}}
 }
@@ -46,13 +44,12 @@ InlineResponse200107 Class
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InlineResponse200107$new(
-  quoteAsset,
-  baseAsset,
-  quoteQty,
-  baseQty,
-  price,
-  slippage,
-  fee,
+  id,
+  status,
+  tokenName,
+  redeemAmount,
+  amount,
+  timestamp,
   ...
 )}\if{html}{\out{</div>}}
 }

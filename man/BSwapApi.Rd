@@ -21,8 +21,6 @@ Calculate expected share amount for adding liquidity in single or dual token.  W
 \item \emph{ @param } type Enum < [SINGLE, COMBINATION] >
 \item \emph{ @param } quote.asset character
 \item \emph{ @param } quote.qty numeric
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
 \item \emph{ @returnType } \link{OneOfbswapAddLiquidityPreviewCombinationbswapAddLiquidityPreviewSingle} \cr
 
@@ -57,15 +55,13 @@ Add liquidity to a pool.  Weight(UID): 1000 (Additional: 3 times one second)
 \item \emph{ @param } pool.id integer
 \item \emph{ @param } asset character
 \item \emph{ @param } quantity numeric
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse200105} \cr
+\item \emph{ @returnType } \link{InlineResponse200112} \cr
 
 
 \item status code : 200 | Operation Id
 
-\item return type : InlineResponse200105 
+\item return type : InlineResponse200112
 \item response headers :
 
 \tabular{ll}{
@@ -90,16 +86,14 @@ Add liquidity to a pool.  Weight(UID): 1000 (Additional: 3 times one second)
 Get liquidity information and user share of a pool.  Weight(IP):\\ &#x60;1&#x60;  for one pool;\\ &#x60;10&#x60; when the poolId parameter is omitted;
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } pool.id integer
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } list( \link{inline_response_200_104} ) \cr
+\item \emph{ @returnType } list( \link{inline_response_200_111} ) \cr
 
 
 \item status code : 200 | Pool Liquidation information
 
-\item return type : array[InlineResponse200104] 
+\item return type : array[InlineResponse200111] 
 \item response headers :
 
 \tabular{ll}{
@@ -124,8 +118,6 @@ Get liquidity information and user share of a pool.  Weight(IP):\\ &#x60;1&#x60;
 Get liquidity operation (add/remove) records.  Weight(UID): 3000
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } operation.id integer
 \item \emph{ @param } pool.id integer
 \item \emph{ @param } operation Enum < [ADD, REMOVE] >
@@ -133,12 +125,12 @@ Get liquidity operation (add/remove) records.  Weight(UID): 3000
 \item \emph{ @param } end.time integer
 \item \emph{ @param } limit integer
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } list( \link{inline_response_200_106} ) \cr
+\item \emph{ @returnType } list( \link{inline_response_200_113} ) \cr
 
 
 \item status code : 200 | Liquidity Operation Record
 
-\item return type : array[InlineResponse200106] 
+\item return type : array[InlineResponse200113] 
 \item response headers :
 
 \tabular{ll}{
@@ -166,16 +158,14 @@ Remove liquidity from a pool, &#x60;type&#x60; include &#x60;SINGLE&#x60; and &#
 \item \emph{ @param } pool.id integer
 \item \emph{ @param } type Enum < [SINGLE, COMBINATION] >
 \item \emph{ @param } share.amount numeric
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } asset character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse200105} \cr
+\item \emph{ @returnType } \link{InlineResponse200112} \cr
 
 
 \item status code : 200 | Operation Id
 
-\item return type : InlineResponse200105 
+\item return type : InlineResponse200112 
 \item response headers :
 
 \tabular{ll}{
@@ -200,16 +190,14 @@ Remove liquidity from a pool, &#x60;type&#x60; include &#x60;SINGLE&#x60; and &#
 Weight(IP): 150
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } pool.id integer
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } list( \link{inline_response_200_110} ) \cr
+\item \emph{ @returnType } list( \link{inline_response_200_117} ) \cr
 
 
 \item status code : 200 | Pool Information
 
-\item return type : array[InlineResponse200110] 
+\item return type : array[InlineResponse200117] 
 \item response headers :
 
 \tabular{ll}{
@@ -234,12 +222,12 @@ Weight(IP): 150
 Get metadata about all swap pools.  Weight(IP): 1
 
 \itemize{
-\item \emph{ @returnType } list( \link{inline_response_200_103} ) \cr
+\item \emph{ @returnType } list( \link{inline_response_200_110} ) \cr
 
 
 \item status code : 200 | List of Swap Pools
 
-\item return type : array[InlineResponse200103] 
+\item return type : array[InlineResponse200110] 
 \item response headers :
 
 \tabular{ll}{
@@ -260,15 +248,13 @@ Request a quote for swap quote asset (selling asset) for base asset (buying asse
 \item \emph{ @param } quote.asset character
 \item \emph{ @param } base.asset character
 \item \emph{ @param } quote.qty numeric
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse200107} \cr
+\item \emph{ @returnType } \link{InlineResponse200114} \cr
 
 
 \item status code : 200 | Quote Info
 
-\item return type : InlineResponse200107 
+\item return type : InlineResponse200114 
 \item response headers :
 
 \tabular{ll}{
@@ -297,8 +283,6 @@ Calculate the expected asset amount of single token redemption or dual token red
 \item \emph{ @param } type Enum < [SINGLE, COMBINATION] >
 \item \emph{ @param } quote.asset character
 \item \emph{ @param } share.amount numeric
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
 \item \emph{ @returnType } \link{OneOfbswapRmvLiquidityPreviewCombinationbswapRmvLiquidityPreviewSingle} \cr
 
@@ -330,8 +314,6 @@ Calculate the expected asset amount of single token redemption or dual token red
 Get swap history.  Weight(UID): 3000
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } swap.id integer
 \item \emph{ @param } start.time integer
 \item \emph{ @param } end.time integer
@@ -340,12 +322,12 @@ Get swap history.  Weight(UID): 3000
 \item \emph{ @param } base.asset character
 \item \emph{ @param } limit integer
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } list( \link{inline_response_200_108} ) \cr
+\item \emph{ @returnType } list( \link{inline_response_200_115} ) \cr
 
 
 \item status code : 200 | Swap History
 
-\item return type : array[InlineResponse200108] 
+\item return type : array[InlineResponse200115] 
 \item response headers :
 
 \tabular{ll}{
@@ -373,15 +355,13 @@ Swap &#x60;quoteAsset&#x60; for &#x60;baseAsset&#x60;.  Weight(UID): 1000 (Addit
 \item \emph{ @param } quote.asset character
 \item \emph{ @param } base.asset character
 \item \emph{ @param } quote.qty numeric
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse200109} \cr
+\item \emph{ @returnType } \link{InlineResponse200116} \cr
 
 
 \item status code : 200 | Swap Id
 
-\item return type : InlineResponse200109 
+\item return type : InlineResponse200116 
 \item response headers :
 
 \tabular{ll}{
@@ -414,17 +394,12 @@ var.pool.id <- 2 # integer |
 var.type <- 'SINGLE' # character | \"SINGLE\" for adding a single token;\"COMBINATION\" for adding dual tokens
 var.quote.asset <- 'USDT' # character | 
 var.quote.qty <- 3.4 # numeric | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Add Liquidity Preview (USER_DATA)
 api.instance <- BSwapApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1BswapAddLiquidityPreviewGet(var.pool.id, var.type, var.quote.asset, var.quote.qty, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1BswapAddLiquidityPreviewGet(var.pool.id, var.type, var.quote.asset, var.quote.qty, recv.window=var.recv.window)
 
 
 ####################  SapiV1BswapLiquidityAddPost  ####################
@@ -433,41 +408,29 @@ library(binanceRapi)
 var.pool.id <- 56 # integer | 
 var.asset <- 'BTC' # character | 
 var.quantity <- 3.4 # numeric | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Add Liquidity (TRADE)
 api.instance <- BSwapApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1BswapLiquidityAddPost(var.pool.id, var.asset, var.quantity, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1BswapLiquidityAddPost(var.pool.id, var.asset, var.quantity, recv.window=var.recv.window)
 
 
 ####################  SapiV1BswapLiquidityGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.pool.id <- 56 # integer | 
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Liquidity information of a pool (USER_DATA)
 api.instance <- BSwapApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1BswapLiquidityGet(var.timestamp, var.signature, pool.id=var.pool.id, recv.window=var.recv.window)
+result <- api.instance$SapiV1BswapLiquidityGet(pool.id=var.pool.id, recv.window=var.recv.window)
 
 
 ####################  SapiV1BswapLiquidityOpsGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.operation.id <- 56 # integer | 
 var.pool.id <- 56 # integer | 
 var.operation <- 'operation_example' # character | 
@@ -479,10 +442,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Liquidity Operation Record (USER_DATA)
 api.instance <- BSwapApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1BswapLiquidityOpsGet(var.timestamp, var.signature, operation.id=var.operation.id, pool.id=var.pool.id, operation=var.operation, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
+result <- api.instance$SapiV1BswapLiquidityOpsGet(operation.id=var.operation.id, pool.id=var.pool.id, operation=var.operation, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
 
 
 ####################  SapiV1BswapLiquidityRemovePost  ####################
@@ -491,35 +451,25 @@ library(binanceRapi)
 var.pool.id <- 56 # integer | 
 var.type <- 'SINGLE' # character | Can be `SINGLE` for single asset removal, `COMBINATION` for combination of all coins removal
 var.share.amount <- 3.4 # numeric | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.asset <- 'BNB' # character | Mandatory for single asset removal
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Remove Liquidity (TRADE)
 api.instance <- BSwapApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1BswapLiquidityRemovePost(var.pool.id, var.type, var.share.amount, var.timestamp, var.signature, asset=var.asset, recv.window=var.recv.window)
+result <- api.instance$SapiV1BswapLiquidityRemovePost(var.pool.id, var.type, var.share.amount, asset=var.asset, recv.window=var.recv.window)
 
 
 ####################  SapiV1BswapPoolConfigureGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.pool.id <- 2 # integer | 
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Pool Configure (USER_DATA)
 api.instance <- BSwapApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1BswapPoolConfigureGet(var.timestamp, var.signature, pool.id=var.pool.id, recv.window=var.recv.window)
+result <- api.instance$SapiV1BswapPoolConfigureGet(pool.id=var.pool.id, recv.window=var.recv.window)
 
 
 ####################  SapiV1BswapPoolsGet  ####################
@@ -528,9 +478,6 @@ library(binanceRapi)
 
 #List All Swap Pools (MARKET_DATA)
 api.instance <- BSwapApi$new()
-
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
 
 result <- api.instance$SapiV1BswapPoolsGet()
 
@@ -541,17 +488,12 @@ library(binanceRapi)
 var.quote.asset <- 'USDT' # character | 
 var.base.asset <- 'BUSD' # character | 
 var.quote.qty <- 3.4 # numeric | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Request Quote (USER_DATA)
 api.instance <- BSwapApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1BswapQuoteGet(var.quote.asset, var.base.asset, var.quote.qty, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1BswapQuoteGet(var.quote.asset, var.base.asset, var.quote.qty, recv.window=var.recv.window)
 
 
 ####################  SapiV1BswapRemoveLiquidityPreviewGet  ####################
@@ -561,24 +503,17 @@ var.pool.id <- 2 # integer |
 var.type <- 'SINGLE' # character | Type is \"SINGLE\", remove and obtain a single token;Type is \"COMBINATION\", remove and obtain dual token.
 var.quote.asset <- 'USDT' # character | 
 var.share.amount <- 3.4 # numeric | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Remove Liquidity Preview (USER_DATA)
 api.instance <- BSwapApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1BswapRemoveLiquidityPreviewGet(var.pool.id, var.type, var.quote.asset, var.share.amount, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1BswapRemoveLiquidityPreviewGet(var.pool.id, var.type, var.quote.asset, var.share.amount, recv.window=var.recv.window)
 
 
 ####################  SapiV1BswapSwapGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.swap.id <- 56 # integer | 
 var.start.time <- 56 # integer | UTC timestamp in ms
 var.end.time <- 56 # integer | UTC timestamp in ms
@@ -591,10 +526,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Swap History (USER_DATA)
 api.instance <- BSwapApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1BswapSwapGet(var.timestamp, var.signature, swap.id=var.swap.id, start.time=var.start.time, end.time=var.end.time, status=var.status, quote.asset=var.quote.asset, base.asset=var.base.asset, limit=var.limit, recv.window=var.recv.window)
+result <- api.instance$SapiV1BswapSwapGet(swap.id=var.swap.id, start.time=var.start.time, end.time=var.end.time, status=var.status, quote.asset=var.quote.asset, base.asset=var.base.asset, limit=var.limit, recv.window=var.recv.window)
 
 
 ####################  SapiV1BswapSwapPost  ####################
@@ -603,17 +535,12 @@ library(binanceRapi)
 var.quote.asset <- 'USDT' # character | 
 var.base.asset <- 'BUSD' # character | 
 var.quote.qty <- 3.4 # numeric | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Swap (TRADE)
 api.instance <- BSwapApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1BswapSwapPost(var.quote.asset, var.base.asset, var.quote.qty, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1BswapSwapPost(var.quote.asset, var.base.asset, var.quote.qty, recv.window=var.recv.window)
 
 
 }
@@ -673,8 +600,6 @@ result <- api.instance$SapiV1BswapSwapPost(var.quote.asset, var.base.asset, var.
   type,
   quote.asset,
   quote.qty,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -691,8 +616,6 @@ result <- api.instance$SapiV1BswapSwapPost(var.quote.asset, var.base.asset, var.
   type,
   quote.asset,
   quote.qty,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -708,8 +631,6 @@ result <- api.instance$SapiV1BswapSwapPost(var.quote.asset, var.base.asset, var.
   pool.id,
   asset,
   quantity,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -725,8 +646,6 @@ result <- api.instance$SapiV1BswapSwapPost(var.quote.asset, var.base.asset, var.
   pool.id,
   asset,
   quantity,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -738,13 +657,7 @@ result <- api.instance$SapiV1BswapSwapPost(var.quote.asset, var.base.asset, var.
 \if{latex}{\out{\hypertarget{method-SapiV1BswapLiquidityGet}{}}}
 \subsection{Method \code{SapiV1BswapLiquidityGet()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{BSwapApi$SapiV1BswapLiquidityGet(
-  timestamp,
-  signature,
-  pool.id = NULL,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{BSwapApi$SapiV1BswapLiquidityGet(pool.id = NULL, recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -754,8 +667,6 @@ result <- api.instance$SapiV1BswapSwapPost(var.quote.asset, var.base.asset, var.
 \subsection{Method \code{SapiV1BswapLiquidityGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{BSwapApi$SapiV1BswapLiquidityGetWithHttpInfo(
-  timestamp,
-  signature,
   pool.id = NULL,
   recv.window = NULL,
   ...
@@ -769,8 +680,6 @@ result <- api.instance$SapiV1BswapSwapPost(var.quote.asset, var.base.asset, var.
 \subsection{Method \code{SapiV1BswapLiquidityOpsGet()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{BSwapApi$SapiV1BswapLiquidityOpsGet(
-  timestamp,
-  signature,
   operation.id = NULL,
   pool.id = NULL,
   operation = NULL,
@@ -789,8 +698,6 @@ result <- api.instance$SapiV1BswapSwapPost(var.quote.asset, var.base.asset, var.
 \subsection{Method \code{SapiV1BswapLiquidityOpsGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{BSwapApi$SapiV1BswapLiquidityOpsGetWithHttpInfo(
-  timestamp,
-  signature,
   operation.id = NULL,
   pool.id = NULL,
   operation = NULL,
@@ -812,8 +719,6 @@ result <- api.instance$SapiV1BswapSwapPost(var.quote.asset, var.base.asset, var.
   pool.id,
   type,
   share.amount,
-  timestamp,
-  signature,
   asset = NULL,
   recv.window = NULL,
   ...
@@ -830,8 +735,6 @@ result <- api.instance$SapiV1BswapSwapPost(var.quote.asset, var.base.asset, var.
   pool.id,
   type,
   share.amount,
-  timestamp,
-  signature,
   asset = NULL,
   recv.window = NULL,
   ...
@@ -844,13 +747,7 @@ result <- api.instance$SapiV1BswapSwapPost(var.quote.asset, var.base.asset, var.
 \if{latex}{\out{\hypertarget{method-SapiV1BswapPoolConfigureGet}{}}}
 \subsection{Method \code{SapiV1BswapPoolConfigureGet()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{BSwapApi$SapiV1BswapPoolConfigureGet(
-  timestamp,
-  signature,
-  pool.id = NULL,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{BSwapApi$SapiV1BswapPoolConfigureGet(pool.id = NULL, recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -860,8 +757,6 @@ result <- api.instance$SapiV1BswapSwapPost(var.quote.asset, var.base.asset, var.
 \subsection{Method \code{SapiV1BswapPoolConfigureGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{BSwapApi$SapiV1BswapPoolConfigureGetWithHttpInfo(
-  timestamp,
-  signature,
   pool.id = NULL,
   recv.window = NULL,
   ...
@@ -896,8 +791,6 @@ result <- api.instance$SapiV1BswapSwapPost(var.quote.asset, var.base.asset, var.
   quote.asset,
   base.asset,
   quote.qty,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -913,8 +806,6 @@ result <- api.instance$SapiV1BswapSwapPost(var.quote.asset, var.base.asset, var.
   quote.asset,
   base.asset,
   quote.qty,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -931,8 +822,6 @@ result <- api.instance$SapiV1BswapSwapPost(var.quote.asset, var.base.asset, var.
   type,
   quote.asset,
   share.amount,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -949,8 +838,6 @@ result <- api.instance$SapiV1BswapSwapPost(var.quote.asset, var.base.asset, var.
   type,
   quote.asset,
   share.amount,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -963,8 +850,6 @@ result <- api.instance$SapiV1BswapSwapPost(var.quote.asset, var.base.asset, var.
 \subsection{Method \code{SapiV1BswapSwapGet()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{BSwapApi$SapiV1BswapSwapGet(
-  timestamp,
-  signature,
   swap.id = NULL,
   start.time = NULL,
   end.time = NULL,
@@ -984,8 +869,6 @@ result <- api.instance$SapiV1BswapSwapPost(var.quote.asset, var.base.asset, var.
 \subsection{Method \code{SapiV1BswapSwapGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{BSwapApi$SapiV1BswapSwapGetWithHttpInfo(
-  timestamp,
-  signature,
   swap.id = NULL,
   start.time = NULL,
   end.time = NULL,
@@ -1008,8 +891,6 @@ result <- api.instance$SapiV1BswapSwapPost(var.quote.asset, var.base.asset, var.
   quote.asset,
   base.asset,
   quote.qty,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -1025,8 +906,6 @@ result <- api.instance$SapiV1BswapSwapPost(var.quote.asset, var.base.asset, var.
   quote.asset,
   base.asset,
   quote.qty,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}

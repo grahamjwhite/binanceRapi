@@ -13,29 +13,33 @@ InlineResponse20033 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{address}}{character}
-
-\item{\code{amount}}{character}
-
-\item{\code{applyTime}}{character}
-
 \item{\code{coin}}{character}
 
-\item{\code{id}}{character}
+\item{\code{depositAllEnable}}{character}
 
-\item{\code{withdrawOrderId}}{character}
+\item{\code{free}}{character}
 
-\item{\code{network}}{character}
+\item{\code{freeze}}{character}
 
-\item{\code{transferType}}{integer}
+\item{\code{ipoable}}{character}
 
-\item{\code{status}}{integer}
+\item{\code{ipoing}}{character}
 
-\item{\code{transactionFee}}{character}
+\item{\code{isLegalMoney}}{character}
 
-\item{\code{confirmNo}}{integer}
+\item{\code{locked}}{character}
 
-\item{\code{txId}}{character}
+\item{\code{name}}{character}
+
+\item{\code{networkList}}{list( \link{SapiV1CapitalConfigGetallNetworkList} )}
+
+\item{\code{storage}}{character}
+
+\item{\code{trading}}{character}
+
+\item{\code{withdrawAllEnable}}{character}
+
+\item{\code{withdrawing}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -56,18 +60,20 @@ InlineResponse20033 Class
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InlineResponse20033$new(
-  address,
-  amount,
-  applyTime,
   coin,
-  id,
-  withdrawOrderId,
-  network,
-  transferType,
-  status,
-  transactionFee,
-  confirmNo,
-  txId,
+  depositAllEnable,
+  free,
+  freeze,
+  ipoable,
+  ipoing,
+  isLegalMoney,
+  locked,
+  name,
+  networkList,
+  storage,
+  trading,
+  withdrawAllEnable,
+  withdrawing,
   ...
 )}\if{html}{\out{</div>}}
 }

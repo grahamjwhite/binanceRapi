@@ -13,7 +13,19 @@ InlineResponse20031 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{id}}{character}
+\item{\code{symbol}}{character [optional]}
+
+\item{\code{tier}}{integer [optional]}
+
+\item{\code{effectiveMultiple}}{character [optional]}
+
+\item{\code{initialRiskRatio}}{character [optional]}
+
+\item{\code{liquidationRiskRatio}}{character [optional]}
+
+\item{\code{baseAssetMaxBorrowable}}{character [optional]}
+
+\item{\code{quoteAssetMaxBorrowable}}{character [optional]}
 }
 \if{html}{\out{</div>}}
 }
@@ -33,7 +45,16 @@ InlineResponse20031 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20031$new(id, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20031$new(
+  symbol = NULL,
+  tier = NULL,
+  effectiveMultiple = NULL,
+  initialRiskRatio = NULL,
+  liquidationRiskRatio = NULL,
+  baseAssetMaxBorrowable = NULL,
+  quoteAssetMaxBorrowable = NULL,
+  ...
+)}\if{html}{\out{</div>}}
 }
 
 }

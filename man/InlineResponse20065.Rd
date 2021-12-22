@@ -13,23 +13,21 @@ InlineResponse20065 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{tranId}}{integer}
+\item{\code{entryPrice}}{character}
 
-\item{\code{fromEmail}}{character}
+\item{\code{leverage}}{character}
 
-\item{\code{toEmail}}{character}
+\item{\code{maxNotional}}{character}
 
-\item{\code{asset}}{character}
+\item{\code{liquidationPrice}}{character}
 
-\item{\code{amount}}{character}
+\item{\code{markPrice}}{character}
 
-\item{\code{fromAccountType}}{character}
+\item{\code{positionAmount}}{character}
 
-\item{\code{toAccountType}}{character}
+\item{\code{symbol}}{character}
 
-\item{\code{status}}{character}
-
-\item{\code{createTimeStamp}}{integer}
+\item{\code{unrealizedProfit}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -50,15 +48,14 @@ InlineResponse20065 Class
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InlineResponse20065$new(
-  tranId,
-  fromEmail,
-  toEmail,
-  asset,
-  amount,
-  fromAccountType,
-  toAccountType,
-  status,
-  createTimeStamp,
+  entryPrice,
+  leverage,
+  maxNotional,
+  liquidationPrice,
+  markPrice,
+  positionAmount,
+  symbol,
+  unrealizedProfit,
   ...
 )}\if{html}{\out{</div>}}
 }

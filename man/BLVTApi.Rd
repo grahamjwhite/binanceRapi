@@ -19,15 +19,13 @@ Weight(IP): 1
 \itemize{
 \item \emph{ @param } token.name character
 \item \emph{ @param } amount numeric
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse200100} \cr
+\item \emph{ @returnType } \link{InlineResponse200107} \cr
 
 
 \item status code : 200 | Redemption record
 
-\item return type : InlineResponse200100 
+\item return type : InlineResponse200107 
 \item response headers :
 
 \tabular{ll}{
@@ -52,20 +50,18 @@ Weight(IP): 1
 - Only the data of the latest 90 days is available  Weight(IP): 1
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } token.name character
 \item \emph{ @param } id integer
 \item \emph{ @param } start.time integer
 \item \emph{ @param } end.time integer
 \item \emph{ @param } limit integer
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } list( \link{inline_response_200_101} ) \cr
+\item \emph{ @returnType } list( \link{inline_response_200_108} ) \cr
 
 
 \item status code : 200 | List of redemption record
 
-\item return type : array[InlineResponse200101] 
+\item return type : array[InlineResponse200108] 
 \item response headers :
 
 \tabular{ll}{
@@ -92,15 +88,13 @@ Weight(IP): 1
 \itemize{
 \item \emph{ @param } token.name character
 \item \emph{ @param } cost numeric
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20098} \cr
+\item \emph{ @returnType } \link{InlineResponse200105} \cr
 
 
 \item status code : 200 | Subscription Info
 
-\item return type : InlineResponse20098 
+\item return type : InlineResponse200105 
 \item response headers :
 
 \tabular{ll}{
@@ -125,20 +119,18 @@ Weight(IP): 1
 - Only the data of the latest 90 days is available  Weight(IP): 1
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } token.name character
 \item \emph{ @param } id integer
 \item \emph{ @param } start.time integer
 \item \emph{ @param } end.time integer
 \item \emph{ @param } limit integer
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20099} \cr
+\item \emph{ @returnType } \link{InlineResponse200106} \cr
 
 
 \item status code : 200 | List of subscription record
 
-\item return type : InlineResponse20099 
+\item return type : InlineResponse200106 
 \item response headers :
 
 \tabular{ll}{
@@ -164,12 +156,12 @@ Weight(IP): 1
 
 \itemize{
 \item \emph{ @param } token.name character
-\item \emph{ @returnType } list( \link{inline_response_200_97} ) \cr
+\item \emph{ @returnType } list( \link{inline_response_200_104} ) \cr
 
 
 \item status code : 200 | List of token information
 
-\item return type : array[InlineResponse20097] 
+\item return type : array[InlineResponse200104] 
 \item response headers :
 
 \tabular{ll}{
@@ -187,16 +179,14 @@ Weight(IP): 1
 Weight(IP): 1
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } token.name character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } list( \link{inline_response_200_102} ) \cr
+\item \emph{ @returnType } list( \link{inline_response_200_109} ) \cr
 
 
 \item status code : 200 | List of token limits
 
-\item return type : array[InlineResponse200102] 
+\item return type : array[InlineResponse200109] 
 \item response headers :
 
 \tabular{ll}{
@@ -227,24 +217,17 @@ Weight(IP): 1
 library(binanceRapi)
 var.token.name <- 'token.name_example' # character | BTCDOWN, BTCUP
 var.amount <- 1.01 # numeric | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Redeem BLVT (USER_DATA)
 api.instance <- BLVTApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1BlvtRedeemPost(var.token.name, var.amount, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1BlvtRedeemPost(var.token.name, var.amount, recv.window=var.recv.window)
 
 
 ####################  SapiV1BlvtRedeemRecordGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.token.name <- 'token.name_example' # character | BTCDOWN, BTCUP
 var.id <- 56 # integer | 
 var.start.time <- 56 # integer | UTC timestamp in ms
@@ -255,10 +238,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Redemption Record (USER_DATA)
 api.instance <- BLVTApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1BlvtRedeemRecordGet(var.timestamp, var.signature, token.name=var.token.name, id=var.id, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
+result <- api.instance$SapiV1BlvtRedeemRecordGet(token.name=var.token.name, id=var.id, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
 
 
 ####################  SapiV1BlvtSubscribePost  ####################
@@ -266,24 +246,17 @@ result <- api.instance$SapiV1BlvtRedeemRecordGet(var.timestamp, var.signature, t
 library(binanceRapi)
 var.token.name <- 'token.name_example' # character | BTCDOWN, BTCUP
 var.cost <- 3.4 # numeric | Spot balance
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Subscribe BLVT (USER_DATA)
 api.instance <- BLVTApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1BlvtSubscribePost(var.token.name, var.cost, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1BlvtSubscribePost(var.token.name, var.cost, recv.window=var.recv.window)
 
 
 ####################  SapiV1BlvtSubscribeRecordGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.token.name <- 'token.name_example' # character | BTCDOWN, BTCUP
 var.id <- 56 # integer | 
 var.start.time <- 56 # integer | UTC timestamp in ms
@@ -294,10 +267,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Query Subscription Record (USER_DATA)
 api.instance <- BLVTApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1BlvtSubscribeRecordGet(var.timestamp, var.signature, token.name=var.token.name, id=var.id, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
+result <- api.instance$SapiV1BlvtSubscribeRecordGet(token.name=var.token.name, id=var.id, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
 
 
 ####################  SapiV1BlvtTokenInfoGet  ####################
@@ -308,27 +278,19 @@ var.token.name <- 'token.name_example' # character | BTCDOWN, BTCUP
 #BLVT Info (MARKET_DATA)
 api.instance <- BLVTApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
 result <- api.instance$SapiV1BlvtTokenInfoGet(token.name=var.token.name)
 
 
 ####################  SapiV1BlvtUserLimitGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.token.name <- 'token.name_example' # character | BTCDOWN, BTCUP
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #BLVT User Limit Info (USER_DATA)
 api.instance <- BLVTApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1BlvtUserLimitGet(var.timestamp, var.signature, token.name=var.token.name, recv.window=var.recv.window)
+result <- api.instance$SapiV1BlvtUserLimitGet(token.name=var.token.name, recv.window=var.recv.window)
 
 
 }
@@ -373,14 +335,7 @@ result <- api.instance$SapiV1BlvtUserLimitGet(var.timestamp, var.signature, toke
 \if{latex}{\out{\hypertarget{method-SapiV1BlvtRedeemPost}{}}}
 \subsection{Method \code{SapiV1BlvtRedeemPost()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{BLVTApi$SapiV1BlvtRedeemPost(
-  token.name,
-  amount,
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{BLVTApi$SapiV1BlvtRedeemPost(token.name, amount, recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -392,8 +347,6 @@ result <- api.instance$SapiV1BlvtUserLimitGet(var.timestamp, var.signature, toke
 \if{html}{\out{<div class="r">}}\preformatted{BLVTApi$SapiV1BlvtRedeemPostWithHttpInfo(
   token.name,
   amount,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -406,8 +359,6 @@ result <- api.instance$SapiV1BlvtUserLimitGet(var.timestamp, var.signature, toke
 \subsection{Method \code{SapiV1BlvtRedeemRecordGet()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{BLVTApi$SapiV1BlvtRedeemRecordGet(
-  timestamp,
-  signature,
   token.name = NULL,
   id = NULL,
   start.time = NULL,
@@ -425,8 +376,6 @@ result <- api.instance$SapiV1BlvtUserLimitGet(var.timestamp, var.signature, toke
 \subsection{Method \code{SapiV1BlvtRedeemRecordGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{BLVTApi$SapiV1BlvtRedeemRecordGetWithHttpInfo(
-  timestamp,
-  signature,
   token.name = NULL,
   id = NULL,
   start.time = NULL,
@@ -443,14 +392,7 @@ result <- api.instance$SapiV1BlvtUserLimitGet(var.timestamp, var.signature, toke
 \if{latex}{\out{\hypertarget{method-SapiV1BlvtSubscribePost}{}}}
 \subsection{Method \code{SapiV1BlvtSubscribePost()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{BLVTApi$SapiV1BlvtSubscribePost(
-  token.name,
-  cost,
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{BLVTApi$SapiV1BlvtSubscribePost(token.name, cost, recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -462,8 +404,6 @@ result <- api.instance$SapiV1BlvtUserLimitGet(var.timestamp, var.signature, toke
 \if{html}{\out{<div class="r">}}\preformatted{BLVTApi$SapiV1BlvtSubscribePostWithHttpInfo(
   token.name,
   cost,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -476,8 +416,6 @@ result <- api.instance$SapiV1BlvtUserLimitGet(var.timestamp, var.signature, toke
 \subsection{Method \code{SapiV1BlvtSubscribeRecordGet()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{BLVTApi$SapiV1BlvtSubscribeRecordGet(
-  timestamp,
-  signature,
   token.name = NULL,
   id = NULL,
   start.time = NULL,
@@ -495,8 +433,6 @@ result <- api.instance$SapiV1BlvtUserLimitGet(var.timestamp, var.signature, toke
 \subsection{Method \code{SapiV1BlvtSubscribeRecordGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{BLVTApi$SapiV1BlvtSubscribeRecordGetWithHttpInfo(
-  timestamp,
-  signature,
   token.name = NULL,
   id = NULL,
   start.time = NULL,
@@ -531,13 +467,7 @@ result <- api.instance$SapiV1BlvtUserLimitGet(var.timestamp, var.signature, toke
 \if{latex}{\out{\hypertarget{method-SapiV1BlvtUserLimitGet}{}}}
 \subsection{Method \code{SapiV1BlvtUserLimitGet()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{BLVTApi$SapiV1BlvtUserLimitGet(
-  timestamp,
-  signature,
-  token.name = NULL,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{BLVTApi$SapiV1BlvtUserLimitGet(token.name = NULL, recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -547,8 +477,6 @@ result <- api.instance$SapiV1BlvtUserLimitGet(var.timestamp, var.signature, toke
 \subsection{Method \code{SapiV1BlvtUserLimitGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{BLVTApi$SapiV1BlvtUserLimitGetWithHttpInfo(
-  timestamp,
-  signature,
   token.name = NULL,
   recv.window = NULL,
   ...

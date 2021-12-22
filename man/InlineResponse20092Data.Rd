@@ -13,11 +13,13 @@ InlineResponse20092Data Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{profitTransferDetails}}{list( \link{InlineResponse20092DataProfitTransferDetails} )}
+\item{\code{algoName}}{character}
 
-\item{\code{totalNum}}{integer}
+\item{\code{algoId}}{integer}
 
-\item{\code{pageSize}}{integer}
+\item{\code{poolIndex}}{integer}
+
+\item{\code{unit}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -37,7 +39,7 @@ InlineResponse20092Data Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20092Data$new(profitTransferDetails, totalNum, pageSize, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20092Data$new(algoName, algoId, poolIndex, unit, ...)}\if{html}{\out{</div>}}
 }
 
 }

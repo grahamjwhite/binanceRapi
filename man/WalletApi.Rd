@@ -17,15 +17,13 @@ binanceRapi.Wallet
 Weight(IP): 1
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20045} \cr
+\item \emph{ @returnType } \link{InlineResponse20048} \cr
 
 
 \item status code : 200 | API Key permissions
 
-\item return type : InlineResponse20045 
+\item return type : InlineResponse20048 
 \item response headers :
 
 \tabular{ll}{
@@ -50,15 +48,13 @@ Weight(IP): 1
 Fetch account API trading status with details.  Weight(IP): 1
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20036} \cr
+\item \emph{ @returnType } \link{InlineResponse20039} \cr
 
 
 \item status code : 200 | Account API trading status
 
-\item return type : InlineResponse20036 
+\item return type : InlineResponse20039 
 \item response headers :
 
 \tabular{ll}{
@@ -83,8 +79,6 @@ Fetch account API trading status with details.  Weight(IP): 1
 - This request will disable fastwithdraw switch under your account. - You need to enable \&quot;trade\&quot; option for the api key which requests this endpoint.  Weight(IP): 1
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
 
 
@@ -115,8 +109,6 @@ Fetch account API trading status with details.  Weight(IP): 1
 - This request will enable fastwithdraw switch under your account. You need to enable \&quot;trade\&quot; option for the api key which requests this endpoint. - When Fast Withdraw Switch is on, transferring funds to a Binance account will be done instantly. There is no on-chain transaction, no transaction ID and no withdrawal fee.  Weight(IP): 1
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
 
 
@@ -144,12 +136,10 @@ Fetch account API trading status with details.  Weight(IP): 1
 }
 
 \strong{ SapiV1AccountSnapshotGet } \emph{ Daily Account Snapshot (USER_DATA) }
-Weight(IP): 2400
+- The query time period must be less than 30 days - Support query within the last 6 months only - If startTime and endTime not sent, return records of the last 7 days by default  Weight(IP): 2400
 
 \itemize{
 \item \emph{ @param } type Enum < [SPOT, MARGIN, FUTURES] >
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } start.time integer
 \item \emph{ @param } end.time integer
 \item \emph{ @param } limit integer
@@ -184,15 +174,13 @@ Weight(IP): 2400
 Fetch account status detail.  Weight(IP): 1
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20035} \cr
+\item \emph{ @returnType } \link{InlineResponse20038} \cr
 
 
 \item status code : 200 | OK
 
-\item return type : InlineResponse20035 
+\item return type : InlineResponse20038 
 \item response headers :
 
 \tabular{ll}{
@@ -217,16 +205,14 @@ Fetch account status detail.  Weight(IP): 1
 Fetch details of assets supported on Binance.  - Please get network and other deposit or withdraw details from &#x60;GET /sapi/v1/capital/config/getall&#x60;.  Weight(IP): 1
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } asset character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20040} \cr
+\item \emph{ @returnType } \link{InlineResponse20043} \cr
 
 
 \item status code : 200 | Asset detail
 
-\item return type : InlineResponse20040 
+\item return type : InlineResponse20043 
 \item response headers :
 
 \tabular{ll}{
@@ -252,18 +238,16 @@ Query asset Dividend Record  Weight(IP): 10
 
 \itemize{
 \item \emph{ @param } limit character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } asset character
 \item \emph{ @param } start.time integer
 \item \emph{ @param } end.time integer
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20039} \cr
+\item \emph{ @returnType } \link{InlineResponse20042} \cr
 
 
-\item status code : 200 | Records of asset devidend
+\item status code : 200 | Records of asset dividend
 
-\item return type : InlineResponse20039 
+\item return type : InlineResponse20042 
 \item response headers :
 
 \tabular{ll}{
@@ -288,17 +272,15 @@ Query asset Dividend Record  Weight(IP): 10
 Weight(IP): 1
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } start.time integer
 \item \emph{ @param } end.time integer
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20037} \cr
+\item \emph{ @returnType } \link{InlineResponse20040} \cr
 
 
 \item status code : 200 | Dust log records
 
-\item return type : InlineResponse20037 
+\item return type : InlineResponse20040 
 \item response headers :
 
 \tabular{ll}{
@@ -324,15 +306,13 @@ Convert dust assets to BNB.  Weight(UID): 10
 
 \itemize{
 \item \emph{ @param } asset character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20038} \cr
+\item \emph{ @returnType } \link{InlineResponse20041} \cr
 
 
 \item status code : 200 | Dust log records
 
-\item return type : InlineResponse20038 
+\item return type : InlineResponse20041 
 \item response headers :
 
 \tabular{ll}{
@@ -357,17 +337,15 @@ Convert dust assets to BNB.  Weight(UID): 10
 - Currently supports querying the following business assets：Binance Pay, Binance Card, Binance Gift Card, Stock Token  Weight(IP): 1
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } asset character
 \item \emph{ @param } need.btc.valuation Enum < [true, false] >
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } list( \link{inline_response_200_44} ) \cr
+\item \emph{ @returnType } list( \link{inline_response_200_47} ) \cr
 
 
 \item status code : 200 | Funding asset detail
 
-\item return type : array[InlineResponse20044] 
+\item return type : array[InlineResponse20047] 
 \item response headers :
 
 \tabular{ll}{
@@ -392,16 +370,14 @@ Convert dust assets to BNB.  Weight(UID): 10
 Fetch trade fee  Weight(IP): 1
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } symbol character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } list( \link{inline_response_200_41} ) \cr
+\item \emph{ @returnType } list( \link{inline_response_200_44} ) \cr
 
 
 \item status code : 200 | Trade fee info per symbol
 
-\item return type : array[InlineResponse20041] 
+\item return type : array[InlineResponse20044] 
 \item response headers :
 
 \tabular{ll}{
@@ -427,8 +403,6 @@ Fetch trade fee  Weight(IP): 1
 
 \itemize{
 \item \emph{ @param } type Enum < [MAIN_C2C, MAIN_UMFUTURE, MAIN_CMFUTURE, MAIN_MARGIN, MAIN_MINING, C2C_MAIN, C2C_UMFUTURE, C2C_MINING, C2C_MARGIN, UMFUTURE_MAIN, UMFUTURE_C2C, UMFUTURE_MARGIN, CMFUTURE_MAIN, CMFUTURE_MARGIN, MARGIN_MAIN, MARGIN_UMFUTURE, MARGIN_CMFUTURE, MARGIN_MINING, MARGIN_C2C, MINING_MAIN, MINING_UMFUTURE, MINING_C2C, MINING_MARGIN, MAIN_PAY, PAY_MAIN, ISOLATEDMARGIN_MARGIN, MARGIN_ISOLATEDMARGIN, ISOLATEDMARGIN_ISOLATEDMARGIN] >
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } start.time integer
 \item \emph{ @param } end.time integer
 \item \emph{ @param } current integer
@@ -436,12 +410,12 @@ Fetch trade fee  Weight(IP): 1
 \item \emph{ @param } from.symbol character
 \item \emph{ @param } to.symbol character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20042} \cr
+\item \emph{ @returnType } \link{InlineResponse20045} \cr
 
 
 \item status code : 200 | Universal transfer history
 
-\item return type : InlineResponse20042 
+\item return type : InlineResponse20045 
 \item response headers :
 
 \tabular{ll}{
@@ -469,17 +443,15 @@ You need to enable &#x60;Permits Universal Transfer&#x60; option for the api key
 \item \emph{ @param } type Enum < [MAIN_C2C, MAIN_UMFUTURE, MAIN_CMFUTURE, MAIN_MARGIN, MAIN_MINING, C2C_MAIN, C2C_UMFUTURE, C2C_MINING, C2C_MARGIN, UMFUTURE_MAIN, UMFUTURE_C2C, UMFUTURE_MARGIN, CMFUTURE_MAIN, CMFUTURE_MARGIN, MARGIN_MAIN, MARGIN_UMFUTURE, MARGIN_CMFUTURE, MARGIN_MINING, MARGIN_C2C, MINING_MAIN, MINING_UMFUTURE, MINING_C2C, MINING_MARGIN, MAIN_PAY, PAY_MAIN, ISOLATEDMARGIN_MARGIN, MARGIN_ISOLATEDMARGIN, ISOLATEDMARGIN_ISOLATEDMARGIN] >
 \item \emph{ @param } asset character
 \item \emph{ @param } amount numeric
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } from.symbol character
 \item \emph{ @param } to.symbol character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20043} \cr
+\item \emph{ @returnType } \link{InlineResponse20046} \cr
 
 
 \item status code : 200 | Transfer id
 
-\item return type : InlineResponse20043 
+\item return type : InlineResponse20046 
 \item response headers :
 
 \tabular{ll}{
@@ -504,15 +476,13 @@ You need to enable &#x60;Permits Universal Transfer&#x60; option for the api key
 Get information of coins (available for deposit and withdraw) for user.  Weight(IP): 10
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } list( \link{inline_response_200_30} ) \cr
+\item \emph{ @returnType } list( \link{inline_response_200_33} ) \cr
 
 
 \item status code : 200 | All coins details information
 
-\item return type : array[InlineResponse20030] 
+\item return type : array[InlineResponse20033] 
 \item response headers :
 
 \tabular{ll}{
@@ -538,16 +508,14 @@ Fetch deposit address with network.  - If network is not send, return with defau
 
 \itemize{
 \item \emph{ @param } coin character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } network character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20034} \cr
+\item \emph{ @returnType } \link{InlineResponse20037} \cr
 
 
 \item status code : 200 | Deposit address info
 
-\item return type : InlineResponse20034 
+\item return type : InlineResponse20037 
 \item response headers :
 
 \tabular{ll}{
@@ -573,20 +541,18 @@ Fetch deposit history.  - Please notice the default &#x60;startTime&#x60; and &#
 
 \itemize{
 \item \emph{ @param } coin character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } status Enum < [0, 6, 1] >
 \item \emph{ @param } start.time integer
 \item \emph{ @param } end.time integer
 \item \emph{ @param } offset integer
 \item \emph{ @param } limit integer
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } list( \link{inline_response_200_32} ) \cr
+\item \emph{ @returnType } list( \link{inline_response_200_35} ) \cr
 
 
 \item status code : 200 | List of deposits
 
-\item return type : array[InlineResponse20032] 
+\item return type : array[InlineResponse20035] 
 \item response headers :
 
 \tabular{ll}{
@@ -614,8 +580,6 @@ Submit a withdraw request.  - If &#x60;network&#x60; not send, return with defau
 \item \emph{ @param } coin character
 \item \emph{ @param } address character
 \item \emph{ @param } amount numeric
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } withdraw.order.id character
 \item \emph{ @param } network character
 \item \emph{ @param } address.tag character
@@ -623,12 +587,12 @@ Submit a withdraw request.  - If &#x60;network&#x60; not send, return with defau
 \item \emph{ @param } name character
 \item \emph{ @param } wallet.type integer
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20031} \cr
+\item \emph{ @returnType } \link{InlineResponse20034} \cr
 
 
 \item status code : 200 | Transafer Id
 
-\item return type : InlineResponse20031 
+\item return type : InlineResponse20034 
 \item response headers :
 
 \tabular{ll}{
@@ -654,8 +618,6 @@ Fetch withdraw history.  - &#x60;network&#x60; may not be in the response for ol
 
 \itemize{
 \item \emph{ @param } coin character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } withdraw.order.id character
 \item \emph{ @param } status Enum < [0, 1, 2, 3, 4, 5, 6] >
 \item \emph{ @param } start.time integer
@@ -663,12 +625,12 @@ Fetch withdraw history.  - &#x60;network&#x60; may not be in the response for ol
 \item \emph{ @param } offset integer
 \item \emph{ @param } limit integer
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } list( \link{inline_response_200_33} ) \cr
+\item \emph{ @returnType } list( \link{inline_response_200_36} ) \cr
 
 
 \item status code : 200 | List of withdraw history
 
-\item return type : array[InlineResponse20033] 
+\item return type : array[InlineResponse20036] 
 \item response headers :
 
 \tabular{ll}{
@@ -693,12 +655,12 @@ Fetch withdraw history.  - &#x60;network&#x60; may not be in the response for ol
 Fetch system status.  Weight(IP): 1
 
 \itemize{
-\item \emph{ @returnType } \link{InlineResponse20029} \cr
+\item \emph{ @returnType } \link{InlineResponse20032} \cr
 
 
 \item status code : 200 | OK
 
-\item return type : InlineResponse20029 
+\item return type : InlineResponse20032 
 \item response headers :
 
 \tabular{ll}{
@@ -713,73 +675,51 @@ Fetch system status.  Weight(IP): 1
 ####################  SapiV1AccountApiRestrictionsGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Get API Key Permission (USER_DATA)
 api.instance <- WalletApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1AccountApiRestrictionsGet(var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1AccountApiRestrictionsGet(recv.window=var.recv.window)
 
 
 ####################  SapiV1AccountApiTradingStatusGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Account API Trading Status (USER_DATA)
 api.instance <- WalletApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1AccountApiTradingStatusGet(var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1AccountApiTradingStatusGet(recv.window=var.recv.window)
 
 
 ####################  SapiV1AccountDisableFastWithdrawSwitchPost  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Disable Fast Withdraw Switch (USER_DATA)
 api.instance <- WalletApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1AccountDisableFastWithdrawSwitchPost(var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1AccountDisableFastWithdrawSwitchPost(recv.window=var.recv.window)
 
 
 ####################  SapiV1AccountEnableFastWithdrawSwitchPost  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Enable Fast Withdraw Switch (USER_DATA)
 api.instance <- WalletApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1AccountEnableFastWithdrawSwitchPost(var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1AccountEnableFastWithdrawSwitchPost(recv.window=var.recv.window)
 
 
 ####################  SapiV1AccountSnapshotGet  ####################
 
 library(binanceRapi)
 var.type <- 'type_example' # character | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.start.time <- 56 # integer | UTC timestamp in ms
 var.end.time <- 56 # integer | UTC timestamp in ms
 var.limit <- 5 # integer | 
@@ -788,51 +728,36 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Daily Account Snapshot (USER_DATA)
 api.instance <- WalletApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1AccountSnapshotGet(var.type, var.timestamp, var.signature, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
+result <- api.instance$SapiV1AccountSnapshotGet(var.type, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
 
 
 ####################  SapiV1AccountStatusGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Account Status (USER_DATA)
 api.instance <- WalletApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1AccountStatusGet(var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1AccountStatusGet(recv.window=var.recv.window)
 
 
 ####################  SapiV1AssetAssetDetailGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.asset <- 'BNB' # character | 
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Asset Detail (USER_DATA)
 api.instance <- WalletApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1AssetAssetDetailGet(var.timestamp, var.signature, asset=var.asset, recv.window=var.recv.window)
+result <- api.instance$SapiV1AssetAssetDetailGet(asset=var.asset, recv.window=var.recv.window)
 
 
 ####################  SapiV1AssetAssetDividendGet  ####################
 
 library(binanceRapi)
 var.limit <- '20' # character | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.asset <- 'BNB' # character | 
 var.start.time <- 56 # integer | UTC timestamp in ms
 var.end.time <- 56 # integer | UTC timestamp in ms
@@ -841,17 +766,12 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Asset Dividend Record (USER_DATA)
 api.instance <- WalletApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1AssetAssetDividendGet(var.limit, var.timestamp, var.signature, asset=var.asset, start.time=var.start.time, end.time=var.end.time, recv.window=var.recv.window)
+result <- api.instance$SapiV1AssetAssetDividendGet(var.limit, asset=var.asset, start.time=var.start.time, end.time=var.end.time, recv.window=var.recv.window)
 
 
 ####################  SapiV1AssetDribbletGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.start.time <- 56 # integer | UTC timestamp in ms
 var.end.time <- 56 # integer | UTC timestamp in ms
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -859,34 +779,24 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #DustLog(USER_DATA)
 api.instance <- WalletApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1AssetDribbletGet(var.timestamp, var.signature, start.time=var.start.time, end.time=var.end.time, recv.window=var.recv.window)
+result <- api.instance$SapiV1AssetDribbletGet(start.time=var.start.time, end.time=var.end.time, recv.window=var.recv.window)
 
 
 ####################  SapiV1AssetDustPost  ####################
 
 library(binanceRapi)
 var.asset <- 'asset=BTC&asset=USDT' # character | The asset being converted. For example, asset=BTC&asset=USDT
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Dust Transfer (USER_DATA)
 api.instance <- WalletApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1AssetDustPost(var.asset, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1AssetDustPost(var.asset, recv.window=var.recv.window)
 
 
 ####################  SapiV1AssetGetFundingAssetPost  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.asset <- 'BNB' # character | 
 var.need.btc.valuation <- 'need.btc.valuation_example' # character | 
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -894,35 +804,25 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Funding Wallet (USER_DATA)
 api.instance <- WalletApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1AssetGetFundingAssetPost(var.timestamp, var.signature, asset=var.asset, need.btc.valuation=var.need.btc.valuation, recv.window=var.recv.window)
+result <- api.instance$SapiV1AssetGetFundingAssetPost(asset=var.asset, need.btc.valuation=var.need.btc.valuation, recv.window=var.recv.window)
 
 
 ####################  SapiV1AssetTradeFeeGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Trade Fee (USER_DATA)
 api.instance <- WalletApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1AssetTradeFeeGet(var.timestamp, var.signature, symbol=var.symbol, recv.window=var.recv.window)
+result <- api.instance$SapiV1AssetTradeFeeGet(symbol=var.symbol, recv.window=var.recv.window)
 
 
 ####################  SapiV1AssetTransferGet  ####################
 
 library(binanceRapi)
 var.type <- 'MAIN_C2C' # character | Universal transfer type
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.start.time <- 56 # integer | UTC timestamp in ms
 var.end.time <- 56 # integer | UTC timestamp in ms
 var.current <- 1 # integer | Current querying page. Start from 1. Default:1
@@ -934,10 +834,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Query User Universal Transfer History (USER_DATA)
 api.instance <- WalletApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1AssetTransferGet(var.type, var.timestamp, var.signature, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, from.symbol=var.from.symbol, to.symbol=var.to.symbol, recv.window=var.recv.window)
+result <- api.instance$SapiV1AssetTransferGet(var.type, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, from.symbol=var.from.symbol, to.symbol=var.to.symbol, recv.window=var.recv.window)
 
 
 ####################  SapiV1AssetTransferPost  ####################
@@ -946,8 +843,6 @@ library(binanceRapi)
 var.type <- 'MAIN_C2C' # character | Universal transfer type
 var.asset <- 'BTC' # character | 
 var.amount <- 1.01 # numeric | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.from.symbol <- 'BNBUSDT' # character | Must be sent when type are ISOLATEDMARGIN_MARGIN and ISOLATEDMARGIN_ISOLATEDMARGIN
 var.to.symbol <- 'BNBUSDT' # character | Must be sent when type are MARGIN_ISOLATEDMARGIN and ISOLATEDMARGIN_ISOLATEDMARGIN
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -955,52 +850,37 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #User Universal Transfer (USER_DATA)
 api.instance <- WalletApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1AssetTransferPost(var.type, var.asset, var.amount, var.timestamp, var.signature, from.symbol=var.from.symbol, to.symbol=var.to.symbol, recv.window=var.recv.window)
+result <- api.instance$SapiV1AssetTransferPost(var.type, var.asset, var.amount, from.symbol=var.from.symbol, to.symbol=var.to.symbol, recv.window=var.recv.window)
 
 
 ####################  SapiV1CapitalConfigGetallGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #All Coins' Information (USER_DATA)
 api.instance <- WalletApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1CapitalConfigGetallGet(var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1CapitalConfigGetallGet(recv.window=var.recv.window)
 
 
 ####################  SapiV1CapitalDepositAddressGet  ####################
 
 library(binanceRapi)
 var.coin <- 'BNB' # character | Coin name
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.network <- 'ETH' # character | 
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Deposit Address (supporting network) (USER_DATA)
 api.instance <- WalletApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1CapitalDepositAddressGet(var.coin, var.timestamp, var.signature, network=var.network, recv.window=var.recv.window)
+result <- api.instance$SapiV1CapitalDepositAddressGet(var.coin, network=var.network, recv.window=var.recv.window)
 
 
 ####################  SapiV1CapitalDepositHisrecGet  ####################
 
 library(binanceRapi)
 var.coin <- 'BNB' # character | Coin name
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.status <- 56 # integer | 0 -> pending\\ 6 -> credited but cannot withdraw\\ 1 -> success
 var.start.time <- 56 # integer | UTC timestamp in ms
 var.end.time <- 56 # integer | UTC timestamp in ms
@@ -1011,10 +891,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Deposit History（supporting network） (USER_DATA)
 api.instance <- WalletApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1CapitalDepositHisrecGet(var.coin, var.timestamp, var.signature, status=var.status, start.time=var.start.time, end.time=var.end.time, offset=var.offset, limit=var.limit, recv.window=var.recv.window)
+result <- api.instance$SapiV1CapitalDepositHisrecGet(var.coin, status=var.status, start.time=var.start.time, end.time=var.end.time, offset=var.offset, limit=var.limit, recv.window=var.recv.window)
 
 
 ####################  SapiV1CapitalWithdrawApplyPost  ####################
@@ -1023,8 +900,6 @@ library(binanceRapi)
 var.coin <- 'BNB' # character | Coin name
 var.address <- 'address_example' # character | 
 var.amount <- 1.01 # numeric | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.withdraw.order.id <- 'withdraw.order.id_example' # character | Client id for withdraw
 var.network <- 'network_example' # character | Get the value from `GET /sapi/v1/capital/config/getall`
 var.address.tag <- 'address.tag_example' # character | Secondary address identifier for coins like XRP,XMR etc.
@@ -1036,18 +911,13 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Withdraw (USER_DATA)
 api.instance <- WalletApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1CapitalWithdrawApplyPost(var.coin, var.address, var.amount, var.timestamp, var.signature, withdraw.order.id=var.withdraw.order.id, network=var.network, address.tag=var.address.tag, transaction.fee.flag=var.transaction.fee.flag, name=var.name, wallet.type=var.wallet.type, recv.window=var.recv.window)
+result <- api.instance$SapiV1CapitalWithdrawApplyPost(var.coin, var.address, var.amount, withdraw.order.id=var.withdraw.order.id, network=var.network, address.tag=var.address.tag, transaction.fee.flag=var.transaction.fee.flag, name=var.name, wallet.type=var.wallet.type, recv.window=var.recv.window)
 
 
 ####################  SapiV1CapitalWithdrawHistoryGet  ####################
 
 library(binanceRapi)
 var.coin <- 'BNB' # character | Coin name
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.withdraw.order.id <- 'withdraw.order.id_example' # character | 
 var.status <- 56 # integer | 0:Email Sent 1:Cancelled 2:Awaiting Approval 3:Rejected 4:Processing 5:Failure 6:Completed
 var.start.time <- 56 # integer | UTC timestamp in ms
@@ -1059,10 +929,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Withdraw History (supporting network) (USER_DATA)
 api.instance <- WalletApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1CapitalWithdrawHistoryGet(var.coin, var.timestamp, var.signature, withdraw.order.id=var.withdraw.order.id, status=var.status, start.time=var.start.time, end.time=var.end.time, offset=var.offset, limit=var.limit, recv.window=var.recv.window)
+result <- api.instance$SapiV1CapitalWithdrawHistoryGet(var.coin, withdraw.order.id=var.withdraw.order.id, status=var.status, start.time=var.start.time, end.time=var.end.time, offset=var.offset, limit=var.limit, recv.window=var.recv.window)
 
 
 ####################  SapiV1SystemStatusGet  ####################
@@ -1145,12 +1012,7 @@ result <- api.instance$SapiV1SystemStatusGet()
 \if{latex}{\out{\hypertarget{method-SapiV1AccountApiRestrictionsGet}{}}}
 \subsection{Method \code{SapiV1AccountApiRestrictionsGet()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AccountApiRestrictionsGet(
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AccountApiRestrictionsGet(recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -1159,12 +1021,7 @@ result <- api.instance$SapiV1SystemStatusGet()
 \if{latex}{\out{\hypertarget{method-SapiV1AccountApiRestrictionsGetWithHttpInfo}{}}}
 \subsection{Method \code{SapiV1AccountApiRestrictionsGetWithHttpInfo()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AccountApiRestrictionsGetWithHttpInfo(
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AccountApiRestrictionsGetWithHttpInfo(recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -1173,12 +1030,7 @@ result <- api.instance$SapiV1SystemStatusGet()
 \if{latex}{\out{\hypertarget{method-SapiV1AccountApiTradingStatusGet}{}}}
 \subsection{Method \code{SapiV1AccountApiTradingStatusGet()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AccountApiTradingStatusGet(
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AccountApiTradingStatusGet(recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -1187,12 +1039,7 @@ result <- api.instance$SapiV1SystemStatusGet()
 \if{latex}{\out{\hypertarget{method-SapiV1AccountApiTradingStatusGetWithHttpInfo}{}}}
 \subsection{Method \code{SapiV1AccountApiTradingStatusGetWithHttpInfo()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AccountApiTradingStatusGetWithHttpInfo(
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AccountApiTradingStatusGetWithHttpInfo(recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -1201,12 +1048,7 @@ result <- api.instance$SapiV1SystemStatusGet()
 \if{latex}{\out{\hypertarget{method-SapiV1AccountDisableFastWithdrawSwitchPost}{}}}
 \subsection{Method \code{SapiV1AccountDisableFastWithdrawSwitchPost()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AccountDisableFastWithdrawSwitchPost(
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AccountDisableFastWithdrawSwitchPost(recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -1216,8 +1058,6 @@ result <- api.instance$SapiV1SystemStatusGet()
 \subsection{Method \code{SapiV1AccountDisableFastWithdrawSwitchPostWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AccountDisableFastWithdrawSwitchPostWithHttpInfo(
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -1229,12 +1069,7 @@ result <- api.instance$SapiV1SystemStatusGet()
 \if{latex}{\out{\hypertarget{method-SapiV1AccountEnableFastWithdrawSwitchPost}{}}}
 \subsection{Method \code{SapiV1AccountEnableFastWithdrawSwitchPost()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AccountEnableFastWithdrawSwitchPost(
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AccountEnableFastWithdrawSwitchPost(recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -1244,8 +1079,6 @@ result <- api.instance$SapiV1SystemStatusGet()
 \subsection{Method \code{SapiV1AccountEnableFastWithdrawSwitchPostWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AccountEnableFastWithdrawSwitchPostWithHttpInfo(
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -1259,8 +1092,6 @@ result <- api.instance$SapiV1SystemStatusGet()
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AccountSnapshotGet(
   type,
-  timestamp,
-  signature,
   start.time = NULL,
   end.time = NULL,
   limit = 5,
@@ -1277,8 +1108,6 @@ result <- api.instance$SapiV1SystemStatusGet()
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AccountSnapshotGetWithHttpInfo(
   type,
-  timestamp,
-  signature,
   start.time = NULL,
   end.time = NULL,
   limit = 5,
@@ -1293,7 +1122,7 @@ result <- api.instance$SapiV1SystemStatusGet()
 \if{latex}{\out{\hypertarget{method-SapiV1AccountStatusGet}{}}}
 \subsection{Method \code{SapiV1AccountStatusGet()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AccountStatusGet(timestamp, signature, recv.window = NULL, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AccountStatusGet(recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -1302,12 +1131,7 @@ result <- api.instance$SapiV1SystemStatusGet()
 \if{latex}{\out{\hypertarget{method-SapiV1AccountStatusGetWithHttpInfo}{}}}
 \subsection{Method \code{SapiV1AccountStatusGetWithHttpInfo()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AccountStatusGetWithHttpInfo(
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AccountStatusGetWithHttpInfo(recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -1316,13 +1140,7 @@ result <- api.instance$SapiV1SystemStatusGet()
 \if{latex}{\out{\hypertarget{method-SapiV1AssetAssetDetailGet}{}}}
 \subsection{Method \code{SapiV1AssetAssetDetailGet()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AssetAssetDetailGet(
-  timestamp,
-  signature,
-  asset = NULL,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AssetAssetDetailGet(asset = NULL, recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -1332,8 +1150,6 @@ result <- api.instance$SapiV1SystemStatusGet()
 \subsection{Method \code{SapiV1AssetAssetDetailGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AssetAssetDetailGetWithHttpInfo(
-  timestamp,
-  signature,
   asset = NULL,
   recv.window = NULL,
   ...
@@ -1348,8 +1164,6 @@ result <- api.instance$SapiV1SystemStatusGet()
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AssetAssetDividendGet(
   limit,
-  timestamp,
-  signature,
   asset = NULL,
   start.time = NULL,
   end.time = NULL,
@@ -1366,8 +1180,6 @@ result <- api.instance$SapiV1SystemStatusGet()
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AssetAssetDividendGetWithHttpInfo(
   limit,
-  timestamp,
-  signature,
   asset = NULL,
   start.time = NULL,
   end.time = NULL,
@@ -1383,8 +1195,6 @@ result <- api.instance$SapiV1SystemStatusGet()
 \subsection{Method \code{SapiV1AssetDribbletGet()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AssetDribbletGet(
-  timestamp,
-  signature,
   start.time = NULL,
   end.time = NULL,
   recv.window = NULL,
@@ -1399,8 +1209,6 @@ result <- api.instance$SapiV1SystemStatusGet()
 \subsection{Method \code{SapiV1AssetDribbletGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AssetDribbletGetWithHttpInfo(
-  timestamp,
-  signature,
   start.time = NULL,
   end.time = NULL,
   recv.window = NULL,
@@ -1414,13 +1222,7 @@ result <- api.instance$SapiV1SystemStatusGet()
 \if{latex}{\out{\hypertarget{method-SapiV1AssetDustPost}{}}}
 \subsection{Method \code{SapiV1AssetDustPost()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AssetDustPost(
-  asset,
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AssetDustPost(asset, recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -1429,13 +1231,7 @@ result <- api.instance$SapiV1SystemStatusGet()
 \if{latex}{\out{\hypertarget{method-SapiV1AssetDustPostWithHttpInfo}{}}}
 \subsection{Method \code{SapiV1AssetDustPostWithHttpInfo()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AssetDustPostWithHttpInfo(
-  asset,
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AssetDustPostWithHttpInfo(asset, recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -1445,8 +1241,6 @@ result <- api.instance$SapiV1SystemStatusGet()
 \subsection{Method \code{SapiV1AssetGetFundingAssetPost()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AssetGetFundingAssetPost(
-  timestamp,
-  signature,
   asset = NULL,
   need.btc.valuation = NULL,
   recv.window = NULL,
@@ -1461,8 +1255,6 @@ result <- api.instance$SapiV1SystemStatusGet()
 \subsection{Method \code{SapiV1AssetGetFundingAssetPostWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AssetGetFundingAssetPostWithHttpInfo(
-  timestamp,
-  signature,
   asset = NULL,
   need.btc.valuation = NULL,
   recv.window = NULL,
@@ -1476,13 +1268,7 @@ result <- api.instance$SapiV1SystemStatusGet()
 \if{latex}{\out{\hypertarget{method-SapiV1AssetTradeFeeGet}{}}}
 \subsection{Method \code{SapiV1AssetTradeFeeGet()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AssetTradeFeeGet(
-  timestamp,
-  signature,
-  symbol = NULL,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AssetTradeFeeGet(symbol = NULL, recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -1492,8 +1278,6 @@ result <- api.instance$SapiV1SystemStatusGet()
 \subsection{Method \code{SapiV1AssetTradeFeeGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AssetTradeFeeGetWithHttpInfo(
-  timestamp,
-  signature,
   symbol = NULL,
   recv.window = NULL,
   ...
@@ -1508,8 +1292,6 @@ result <- api.instance$SapiV1SystemStatusGet()
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AssetTransferGet(
   type,
-  timestamp,
-  signature,
   start.time = NULL,
   end.time = NULL,
   current = NULL,
@@ -1529,8 +1311,6 @@ result <- api.instance$SapiV1SystemStatusGet()
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1AssetTransferGetWithHttpInfo(
   type,
-  timestamp,
-  signature,
   start.time = NULL,
   end.time = NULL,
   current = NULL,
@@ -1552,8 +1332,6 @@ result <- api.instance$SapiV1SystemStatusGet()
   type,
   asset,
   amount,
-  timestamp,
-  signature,
   from.symbol = NULL,
   to.symbol = NULL,
   recv.window = NULL,
@@ -1571,8 +1349,6 @@ result <- api.instance$SapiV1SystemStatusGet()
   type,
   asset,
   amount,
-  timestamp,
-  signature,
   from.symbol = NULL,
   to.symbol = NULL,
   recv.window = NULL,
@@ -1586,12 +1362,7 @@ result <- api.instance$SapiV1SystemStatusGet()
 \if{latex}{\out{\hypertarget{method-SapiV1CapitalConfigGetallGet}{}}}
 \subsection{Method \code{SapiV1CapitalConfigGetallGet()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1CapitalConfigGetallGet(
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1CapitalConfigGetallGet(recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -1600,12 +1371,7 @@ result <- api.instance$SapiV1SystemStatusGet()
 \if{latex}{\out{\hypertarget{method-SapiV1CapitalConfigGetallGetWithHttpInfo}{}}}
 \subsection{Method \code{SapiV1CapitalConfigGetallGetWithHttpInfo()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1CapitalConfigGetallGetWithHttpInfo(
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1CapitalConfigGetallGetWithHttpInfo(recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -1616,8 +1382,6 @@ result <- api.instance$SapiV1SystemStatusGet()
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1CapitalDepositAddressGet(
   coin,
-  timestamp,
-  signature,
   network = NULL,
   recv.window = NULL,
   ...
@@ -1632,8 +1396,6 @@ result <- api.instance$SapiV1SystemStatusGet()
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1CapitalDepositAddressGetWithHttpInfo(
   coin,
-  timestamp,
-  signature,
   network = NULL,
   recv.window = NULL,
   ...
@@ -1648,8 +1410,6 @@ result <- api.instance$SapiV1SystemStatusGet()
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1CapitalDepositHisrecGet(
   coin,
-  timestamp,
-  signature,
   status = NULL,
   start.time = NULL,
   end.time = NULL,
@@ -1668,8 +1428,6 @@ result <- api.instance$SapiV1SystemStatusGet()
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1CapitalDepositHisrecGetWithHttpInfo(
   coin,
-  timestamp,
-  signature,
   status = NULL,
   start.time = NULL,
   end.time = NULL,
@@ -1690,8 +1448,6 @@ result <- api.instance$SapiV1SystemStatusGet()
   coin,
   address,
   amount,
-  timestamp,
-  signature,
   withdraw.order.id = NULL,
   network = NULL,
   address.tag = NULL,
@@ -1713,8 +1469,6 @@ result <- api.instance$SapiV1SystemStatusGet()
   coin,
   address,
   amount,
-  timestamp,
-  signature,
   withdraw.order.id = NULL,
   network = NULL,
   address.tag = NULL,
@@ -1734,8 +1488,6 @@ result <- api.instance$SapiV1SystemStatusGet()
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1CapitalWithdrawHistoryGet(
   coin,
-  timestamp,
-  signature,
   withdraw.order.id = NULL,
   status = NULL,
   start.time = NULL,
@@ -1755,8 +1507,6 @@ result <- api.instance$SapiV1SystemStatusGet()
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{WalletApi$SapiV1CapitalWithdrawHistoryGetWithHttpInfo(
   coin,
-  timestamp,
-  signature,
   withdraw.order.id = NULL,
   status = NULL,
   start.time = NULL,

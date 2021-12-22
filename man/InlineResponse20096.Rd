@@ -17,7 +17,7 @@ InlineResponse20096 Class
 
 \item{\code{msg}}{character}
 
-\item{\code{data}}{list( \link{InlineResponse20096Data} )}
+\item{\code{data}}{\link{InlineResponse20096Data}}
 }
 \if{html}{\out{</div>}}
 }

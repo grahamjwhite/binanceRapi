@@ -13,9 +13,21 @@ InlineResponse20029 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{status}}{integer}
+\item{\code{vipLevel}}{integer}
 
-\item{\code{msg}}{character}
+\item{\code{coin}}{character}
+
+\item{\code{transferIn}}{character}
+
+\item{\code{borrowable}}{character}
+
+\item{\code{dailyInterest}}{character}
+
+\item{\code{yearlyInterest}}{character}
+
+\item{\code{borrowLimit}}{character}
+
+\item{\code{marginablePairs}}{list( character )}
 }
 \if{html}{\out{</div>}}
 }
@@ -35,7 +47,17 @@ InlineResponse20029 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20029$new(status, msg, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20029$new(
+  vipLevel,
+  coin,
+  transferIn,
+  borrowable,
+  dailyInterest,
+  yearlyInterest,
+  borrowLimit,
+  marginablePairs,
+  ...
+)}\if{html}{\out{</div>}}
 }
 
 }

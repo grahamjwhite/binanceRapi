@@ -13,19 +13,19 @@ InlineResponse200106 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{operationId}}{integer}
+\item{\code{id}}{numeric}
 
-\item{\code{poolId}}{integer}
+\item{\code{tokenName}}{character}
 
-\item{\code{poolName}}{character}
+\item{\code{amount}}{character}
 
-\item{\code{operation}}{character}
+\item{\code{nav}}{character}
 
-\item{\code{status}}{integer}
+\item{\code{fee}}{character}
 
-\item{\code{updateTime}}{integer}
+\item{\code{totalCharge}}{character}
 
-\item{\code{shareAmount}}{character}
+\item{\code{timestamp}}{integer}
 }
 \if{html}{\out{</div>}}
 }
@@ -46,13 +46,13 @@ InlineResponse200106 Class
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InlineResponse200106$new(
-  operationId,
-  poolId,
-  poolName,
-  operation,
-  status,
-  updateTime,
-  shareAmount,
+  id,
+  tokenName,
+  amount,
+  nav,
+  fee,
+  totalCharge,
+  timestamp,
   ...
 )}\if{html}{\out{</div>}}
 }

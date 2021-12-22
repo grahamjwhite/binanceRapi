@@ -14,6 +14,22 @@ InlineResponse20068 Class
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
 \item{\code{tranId}}{integer}
+
+\item{\code{fromEmail}}{character}
+
+\item{\code{toEmail}}{character}
+
+\item{\code{asset}}{character}
+
+\item{\code{amount}}{character}
+
+\item{\code{fromAccountType}}{character}
+
+\item{\code{toAccountType}}{character}
+
+\item{\code{status}}{character}
+
+\item{\code{createTimeStamp}}{integer}
 }
 \if{html}{\out{</div>}}
 }
@@ -33,7 +49,18 @@ InlineResponse20068 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20068$new(tranId, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20068$new(
+  tranId,
+  fromEmail,
+  toEmail,
+  asset,
+  amount,
+  fromAccountType,
+  toAccountType,
+  status,
+  createTimeStamp,
+  ...
+)}\if{html}{\out{</div>}}
 }
 
 }

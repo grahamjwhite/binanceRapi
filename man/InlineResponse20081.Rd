@@ -15,37 +15,27 @@ InlineResponse20081 Class
 \describe{
 \item{\code{asset}}{character}
 
-\item{\code{canTransfer}}{character}
+\item{\code{avgAnnualInterestRate}}{character}
 
-\item{\code{createTimestamp}}{integer}
+\item{\code{canPurchase}}{character}
 
-\item{\code{duration}}{integer}
+\item{\code{canRedeem}}{character}
 
-\item{\code{endTime}}{integer}
+\item{\code{dailyInterestPerThousand}}{character}
 
-\item{\code{interest}}{character}
+\item{\code{featured}}{character}
 
-\item{\code{interestRate}}{character}
+\item{\code{minPurchaseAmount}}{character}
 
-\item{\code{lot}}{integer}
+\item{\code{productId}}{character}
 
-\item{\code{positionId}}{integer}
-
-\item{\code{principal}}{character}
-
-\item{\code{projectId}}{character}
-
-\item{\code{projectName}}{character}
-
-\item{\code{purchaseTime}}{integer}
-
-\item{\code{redeemDate}}{character}
-
-\item{\code{startTime}}{integer}
+\item{\code{purchasedAmount}}{character}
 
 \item{\code{status}}{character}
 
-\item{\code{type}}{character}
+\item{\code{upLimit}}{character}
+
+\item{\code{upLimitPerUser}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -67,22 +57,17 @@ InlineResponse20081 Class
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InlineResponse20081$new(
   asset,
-  canTransfer,
-  createTimestamp,
-  duration,
-  endTime,
-  interest,
-  interestRate,
-  lot,
-  positionId,
-  principal,
-  projectId,
-  projectName,
-  purchaseTime,
-  redeemDate,
-  startTime,
+  avgAnnualInterestRate,
+  canPurchase,
+  canRedeem,
+  dailyInterestPerThousand,
+  featured,
+  minPurchaseAmount,
+  productId,
+  purchasedAmount,
   status,
-  type,
+  upLimit,
+  upLimitPerUser,
   ...
 )}\if{html}{\out{</div>}}
 }

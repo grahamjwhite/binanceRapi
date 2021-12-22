@@ -19,8 +19,6 @@ Weight(IP): 5
 \itemize{
 \item \emph{ @param } config.id character
 \item \emph{ @param } user.name character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
 \item \emph{ @returnType } \link{InlineResponse20094} \cr
 
@@ -52,8 +50,6 @@ Weight(IP): 5
 Weight(IP): 5
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } page.index integer
 \item \emph{ @param } page.size character
 \item \emph{ @param } recv.window integer
@@ -91,8 +87,6 @@ Weight(IP): 5
 \item \emph{ @param } algo character
 \item \emph{ @param } to.pool.user character
 \item \emph{ @param } hash.rate character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } start.date character
 \item \emph{ @param } end.date character
 \item \emph{ @param } recv.window integer
@@ -128,8 +122,6 @@ Weight(IP): 5
 \itemize{
 \item \emph{ @param } config.id character
 \item \emph{ @param } user.name character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } page.index integer
 \item \emph{ @param } page.size character
 \item \emph{ @param } recv.window integer
@@ -165,8 +157,6 @@ Weight(IP): 5
 \itemize{
 \item \emph{ @param } algo character
 \item \emph{ @param } user.name character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } coin character
 \item \emph{ @param } start.date character
 \item \emph{ @param } end.date character
@@ -205,8 +195,6 @@ Weight(IP): 5
 \itemize{
 \item \emph{ @param } algo character
 \item \emph{ @param } user.name character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } coin character
 \item \emph{ @param } start.date character
 \item \emph{ @param } end.date character
@@ -243,8 +231,6 @@ Weight(IP): 5
 Weight(IP): 1
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
 \item \emph{ @returnType } \link{InlineResponse20085} \cr
 
@@ -269,8 +255,6 @@ Weight(IP): 1
 Weight(IP): 1
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
 \item \emph{ @returnType } \link{InlineResponse20086} \cr
 
@@ -297,8 +281,6 @@ Weight(IP): 5
 \itemize{
 \item \emph{ @param } algo character
 \item \emph{ @param } user.name character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
 \item \emph{ @returnType } \link{InlineResponse20096} \cr
 
@@ -332,8 +314,6 @@ Weight(IP): 5
 \itemize{
 \item \emph{ @param } algo character
 \item \emph{ @param } user.name character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
 \item \emph{ @returnType } \link{InlineResponse20095} \cr
 
@@ -368,8 +348,6 @@ Weight(IP): 5
 \item \emph{ @param } algo character
 \item \emph{ @param } user.name character
 \item \emph{ @param } worker.name character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
 \item \emph{ @returnType } \link{InlineResponse20087} \cr
 
@@ -403,8 +381,6 @@ Weight(IP): 5
 \itemize{
 \item \emph{ @param } algo character
 \item \emph{ @param } user.name character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } page.index integer
 \item \emph{ @param } sort integer
 \item \emph{ @param } sort.column integer
@@ -446,24 +422,17 @@ Weight(IP): 5
 library(binanceRapi)
 var.config.id <- 'config.id_example' # character | Mining ID
 var.user.name <- 'user.name_example' # character | Mining Account
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Cancel Hashrate Resale configuration (USER_DATA)
 api.instance <- MiningApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MiningHashTransferConfigCancelPost(var.config.id, var.user.name, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1MiningHashTransferConfigCancelPost(var.config.id, var.user.name, recv.window=var.recv.window)
 
 
 ####################  SapiV1MiningHashTransferConfigDetailsListGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.page.index <- 56 # integer | Page number, default is first page, start form 1
 var.page.size <- 'page.size_example' # character | Number of pages, minimum 10, maximum 200
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -471,10 +440,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Hashrate Resale List (USER_DATA)
 api.instance <- MiningApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MiningHashTransferConfigDetailsListGet(var.timestamp, var.signature, page.index=var.page.index, page.size=var.page.size, recv.window=var.recv.window)
+result <- api.instance$SapiV1MiningHashTransferConfigDetailsListGet(page.index=var.page.index, page.size=var.page.size, recv.window=var.recv.window)
 
 
 ####################  SapiV1MiningHashTransferConfigPost  ####################
@@ -484,8 +450,6 @@ var.user.name <- 'user.name_example' # character | Mining Account
 var.algo <- 'algo_example' # character | Algorithm(sha256)
 var.to.pool.user <- 'to.pool.user_example' # character | Mining Account
 var.hash.rate <- 'hash.rate_example' # character | Resale hashrate h/s must be transferred (BTC is greater than 500000000000 ETH is greater than 500000)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.start.date <- 'start.date_example' # character | Search date, millisecond timestamp, while empty query all
 var.end.date <- 'end.date_example' # character | Search date, millisecond timestamp, while empty query all
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -493,10 +457,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Hashrate Resale Request (USER_DATA)
 api.instance <- MiningApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MiningHashTransferConfigPost(var.user.name, var.algo, var.to.pool.user, var.hash.rate, var.timestamp, var.signature, start.date=var.start.date, end.date=var.end.date, recv.window=var.recv.window)
+result <- api.instance$SapiV1MiningHashTransferConfigPost(var.user.name, var.algo, var.to.pool.user, var.hash.rate, start.date=var.start.date, end.date=var.end.date, recv.window=var.recv.window)
 
 
 ####################  SapiV1MiningHashTransferProfitDetailsGet  ####################
@@ -504,8 +465,6 @@ result <- api.instance$SapiV1MiningHashTransferConfigPost(var.user.name, var.alg
 library(binanceRapi)
 var.config.id <- 'config.id_example' # character | Mining ID
 var.user.name <- 'user.name_example' # character | Mining Account
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.page.index <- 56 # integer | Page number, default is first page, start form 1
 var.page.size <- 'page.size_example' # character | Number of pages, minimum 10, maximum 200
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -513,10 +472,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Hashrate Resale Details (USER_DATA)
 api.instance <- MiningApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MiningHashTransferProfitDetailsGet(var.config.id, var.user.name, var.timestamp, var.signature, page.index=var.page.index, page.size=var.page.size, recv.window=var.recv.window)
+result <- api.instance$SapiV1MiningHashTransferProfitDetailsGet(var.config.id, var.user.name, page.index=var.page.index, page.size=var.page.size, recv.window=var.recv.window)
 
 
 ####################  SapiV1MiningPaymentListGet  ####################
@@ -524,8 +480,6 @@ result <- api.instance$SapiV1MiningHashTransferProfitDetailsGet(var.config.id, v
 library(binanceRapi)
 var.algo <- 'algo_example' # character | Algorithm(sha256)
 var.user.name <- 'user.name_example' # character | Mining Account
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.coin <- 'BNB' # character | Coin name
 var.start.date <- 'start.date_example' # character | Search date, millisecond timestamp, while empty query all
 var.end.date <- 'end.date_example' # character | Search date, millisecond timestamp, while empty query all
@@ -536,10 +490,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Earnings List (USER_DATA)
 api.instance <- MiningApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MiningPaymentListGet(var.algo, var.user.name, var.timestamp, var.signature, coin=var.coin, start.date=var.start.date, end.date=var.end.date, page.index=var.page.index, page.size=var.page.size, recv.window=var.recv.window)
+result <- api.instance$SapiV1MiningPaymentListGet(var.algo, var.user.name, coin=var.coin, start.date=var.start.date, end.date=var.end.date, page.index=var.page.index, page.size=var.page.size, recv.window=var.recv.window)
 
 
 ####################  SapiV1MiningPaymentOtherGet  ####################
@@ -547,8 +498,6 @@ result <- api.instance$SapiV1MiningPaymentListGet(var.algo, var.user.name, var.t
 library(binanceRapi)
 var.algo <- 'algo_example' # character | Algorithm(sha256)
 var.user.name <- 'user.name_example' # character | Mining Account
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.coin <- 'BNB' # character | Coin name
 var.start.date <- 'start.date_example' # character | Search date, millisecond timestamp, while empty query all
 var.end.date <- 'end.date_example' # character | Search date, millisecond timestamp, while empty query all
@@ -559,42 +508,29 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Extra Bonus List (USER_DATA)
 api.instance <- MiningApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MiningPaymentOtherGet(var.algo, var.user.name, var.timestamp, var.signature, coin=var.coin, start.date=var.start.date, end.date=var.end.date, page.index=var.page.index, page.size=var.page.size, recv.window=var.recv.window)
+result <- api.instance$SapiV1MiningPaymentOtherGet(var.algo, var.user.name, coin=var.coin, start.date=var.start.date, end.date=var.end.date, page.index=var.page.index, page.size=var.page.size, recv.window=var.recv.window)
 
 
 ####################  SapiV1MiningPubAlgoListGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Acquiring Algorithm (MARKET_DATA)
 api.instance <- MiningApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MiningPubAlgoListGet(var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1MiningPubAlgoListGet(recv.window=var.recv.window)
 
 
 ####################  SapiV1MiningPubCoinListGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Acquiring CoinName (MARKET_DATA)
 api.instance <- MiningApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MiningPubCoinListGet(var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1MiningPubCoinListGet(recv.window=var.recv.window)
 
 
 ####################  SapiV1MiningStatisticsUserListGet  ####################
@@ -602,17 +538,12 @@ result <- api.instance$SapiV1MiningPubCoinListGet(var.timestamp, var.signature, 
 library(binanceRapi)
 var.algo <- 'algo_example' # character | Algorithm(sha256)
 var.user.name <- 'user.name_example' # character | Mining Account
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Account List (USER_DATA)
 api.instance <- MiningApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MiningStatisticsUserListGet(var.algo, var.user.name, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1MiningStatisticsUserListGet(var.algo, var.user.name, recv.window=var.recv.window)
 
 
 ####################  SapiV1MiningStatisticsUserStatusGet  ####################
@@ -620,17 +551,12 @@ result <- api.instance$SapiV1MiningStatisticsUserListGet(var.algo, var.user.name
 library(binanceRapi)
 var.algo <- 'algo_example' # character | Algorithm(sha256)
 var.user.name <- 'user.name_example' # character | Mining Account
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Statistic List (USER_DATA)
 api.instance <- MiningApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MiningStatisticsUserStatusGet(var.algo, var.user.name, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1MiningStatisticsUserStatusGet(var.algo, var.user.name, recv.window=var.recv.window)
 
 
 ####################  SapiV1MiningWorkerDetailGet  ####################
@@ -639,17 +565,12 @@ library(binanceRapi)
 var.algo <- 'algo_example' # character | Algorithm(sha256)
 var.user.name <- 'user.name_example' # character | Mining Account
 var.worker.name <- 'worker.name_example' # character | Miner’s name
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Request for Detail Miner List (USER_DATA)
 api.instance <- MiningApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MiningWorkerDetailGet(var.algo, var.user.name, var.worker.name, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1MiningWorkerDetailGet(var.algo, var.user.name, var.worker.name, recv.window=var.recv.window)
 
 
 ####################  SapiV1MiningWorkerListGet  ####################
@@ -657,8 +578,6 @@ result <- api.instance$SapiV1MiningWorkerDetailGet(var.algo, var.user.name, var.
 library(binanceRapi)
 var.algo <- 'algo_example' # character | Algorithm(sha256)
 var.user.name <- 'user.name_example' # character | Mining Account
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.page.index <- 56 # integer | Page number, default is first page, start form 1
 var.sort <- 56 # integer | sort sequence（default=0）0 positive sequence, 1 negative sequence
 var.sort.column <- 56 # integer | Sort by( default 1): 1: miner name, 2: real-time computing power, 3: daily average computing power, 4: real-time rejection rate, 5: last submission time
@@ -668,10 +587,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Request for Miner List (USER_DATA)
 api.instance <- MiningApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MiningWorkerListGet(var.algo, var.user.name, var.timestamp, var.signature, page.index=var.page.index, sort=var.sort, sort.column=var.sort.column, worker.status=var.worker.status, recv.window=var.recv.window)
+result <- api.instance$SapiV1MiningWorkerListGet(var.algo, var.user.name, page.index=var.page.index, sort=var.sort, sort.column=var.sort.column, worker.status=var.worker.status, recv.window=var.recv.window)
 
 
 }
@@ -731,8 +647,6 @@ result <- api.instance$SapiV1MiningWorkerListGet(var.algo, var.user.name, var.ti
 \if{html}{\out{<div class="r">}}\preformatted{MiningApi$SapiV1MiningHashTransferConfigCancelPost(
   config.id,
   user.name,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -747,8 +661,6 @@ result <- api.instance$SapiV1MiningWorkerListGet(var.algo, var.user.name, var.ti
 \if{html}{\out{<div class="r">}}\preformatted{MiningApi$SapiV1MiningHashTransferConfigCancelPostWithHttpInfo(
   config.id,
   user.name,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -761,8 +673,6 @@ result <- api.instance$SapiV1MiningWorkerListGet(var.algo, var.user.name, var.ti
 \subsection{Method \code{SapiV1MiningHashTransferConfigDetailsListGet()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MiningApi$SapiV1MiningHashTransferConfigDetailsListGet(
-  timestamp,
-  signature,
   page.index = NULL,
   page.size = NULL,
   recv.window = NULL,
@@ -777,8 +687,6 @@ result <- api.instance$SapiV1MiningWorkerListGet(var.algo, var.user.name, var.ti
 \subsection{Method \code{SapiV1MiningHashTransferConfigDetailsListGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MiningApi$SapiV1MiningHashTransferConfigDetailsListGetWithHttpInfo(
-  timestamp,
-  signature,
   page.index = NULL,
   page.size = NULL,
   recv.window = NULL,
@@ -817,8 +725,6 @@ result <- api.instance$SapiV1MiningWorkerListGet(var.algo, var.user.name, var.ti
   algo,
   to.pool.user,
   hash.rate,
-  timestamp,
-  signature,
   start.date = NULL,
   end.date = NULL,
   recv.window = NULL,
@@ -835,8 +741,6 @@ result <- api.instance$SapiV1MiningWorkerListGet(var.algo, var.user.name, var.ti
 \if{html}{\out{<div class="r">}}\preformatted{MiningApi$SapiV1MiningHashTransferProfitDetailsGet(
   config.id,
   user.name,
-  timestamp,
-  signature,
   page.index = NULL,
   page.size = NULL,
   recv.window = NULL,
@@ -853,8 +757,6 @@ result <- api.instance$SapiV1MiningWorkerListGet(var.algo, var.user.name, var.ti
 \if{html}{\out{<div class="r">}}\preformatted{MiningApi$SapiV1MiningHashTransferProfitDetailsGetWithHttpInfo(
   config.id,
   user.name,
-  timestamp,
-  signature,
   page.index = NULL,
   page.size = NULL,
   recv.window = NULL,
@@ -871,8 +773,6 @@ result <- api.instance$SapiV1MiningWorkerListGet(var.algo, var.user.name, var.ti
 \if{html}{\out{<div class="r">}}\preformatted{MiningApi$SapiV1MiningPaymentListGet(
   algo,
   user.name,
-  timestamp,
-  signature,
   coin = NULL,
   start.date = NULL,
   end.date = NULL,
@@ -892,8 +792,6 @@ result <- api.instance$SapiV1MiningWorkerListGet(var.algo, var.user.name, var.ti
 \if{html}{\out{<div class="r">}}\preformatted{MiningApi$SapiV1MiningPaymentListGetWithHttpInfo(
   algo,
   user.name,
-  timestamp,
-  signature,
   coin = NULL,
   start.date = NULL,
   end.date = NULL,
@@ -913,8 +811,6 @@ result <- api.instance$SapiV1MiningWorkerListGet(var.algo, var.user.name, var.ti
 \if{html}{\out{<div class="r">}}\preformatted{MiningApi$SapiV1MiningPaymentOtherGet(
   algo,
   user.name,
-  timestamp,
-  signature,
   coin = NULL,
   start.date = NULL,
   end.date = NULL,
@@ -934,8 +830,6 @@ result <- api.instance$SapiV1MiningWorkerListGet(var.algo, var.user.name, var.ti
 \if{html}{\out{<div class="r">}}\preformatted{MiningApi$SapiV1MiningPaymentOtherGetWithHttpInfo(
   algo,
   user.name,
-  timestamp,
-  signature,
   coin = NULL,
   start.date = NULL,
   end.date = NULL,
@@ -952,12 +846,7 @@ result <- api.instance$SapiV1MiningWorkerListGet(var.algo, var.user.name, var.ti
 \if{latex}{\out{\hypertarget{method-SapiV1MiningPubAlgoListGet}{}}}
 \subsection{Method \code{SapiV1MiningPubAlgoListGet()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{MiningApi$SapiV1MiningPubAlgoListGet(
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{MiningApi$SapiV1MiningPubAlgoListGet(recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -966,12 +855,7 @@ result <- api.instance$SapiV1MiningWorkerListGet(var.algo, var.user.name, var.ti
 \if{latex}{\out{\hypertarget{method-SapiV1MiningPubAlgoListGetWithHttpInfo}{}}}
 \subsection{Method \code{SapiV1MiningPubAlgoListGetWithHttpInfo()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{MiningApi$SapiV1MiningPubAlgoListGetWithHttpInfo(
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{MiningApi$SapiV1MiningPubAlgoListGetWithHttpInfo(recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -980,12 +864,7 @@ result <- api.instance$SapiV1MiningWorkerListGet(var.algo, var.user.name, var.ti
 \if{latex}{\out{\hypertarget{method-SapiV1MiningPubCoinListGet}{}}}
 \subsection{Method \code{SapiV1MiningPubCoinListGet()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{MiningApi$SapiV1MiningPubCoinListGet(
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{MiningApi$SapiV1MiningPubCoinListGet(recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -994,12 +873,7 @@ result <- api.instance$SapiV1MiningWorkerListGet(var.algo, var.user.name, var.ti
 \if{latex}{\out{\hypertarget{method-SapiV1MiningPubCoinListGetWithHttpInfo}{}}}
 \subsection{Method \code{SapiV1MiningPubCoinListGetWithHttpInfo()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{MiningApi$SapiV1MiningPubCoinListGetWithHttpInfo(
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{MiningApi$SapiV1MiningPubCoinListGetWithHttpInfo(recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -1011,8 +885,6 @@ result <- api.instance$SapiV1MiningWorkerListGet(var.algo, var.user.name, var.ti
 \if{html}{\out{<div class="r">}}\preformatted{MiningApi$SapiV1MiningStatisticsUserListGet(
   algo,
   user.name,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -1027,8 +899,6 @@ result <- api.instance$SapiV1MiningWorkerListGet(var.algo, var.user.name, var.ti
 \if{html}{\out{<div class="r">}}\preformatted{MiningApi$SapiV1MiningStatisticsUserListGetWithHttpInfo(
   algo,
   user.name,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -1043,8 +913,6 @@ result <- api.instance$SapiV1MiningWorkerListGet(var.algo, var.user.name, var.ti
 \if{html}{\out{<div class="r">}}\preformatted{MiningApi$SapiV1MiningStatisticsUserStatusGet(
   algo,
   user.name,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -1059,8 +927,6 @@ result <- api.instance$SapiV1MiningWorkerListGet(var.algo, var.user.name, var.ti
 \if{html}{\out{<div class="r">}}\preformatted{MiningApi$SapiV1MiningStatisticsUserStatusGetWithHttpInfo(
   algo,
   user.name,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -1076,8 +942,6 @@ result <- api.instance$SapiV1MiningWorkerListGet(var.algo, var.user.name, var.ti
   algo,
   user.name,
   worker.name,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -1093,8 +957,6 @@ result <- api.instance$SapiV1MiningWorkerListGet(var.algo, var.user.name, var.ti
   algo,
   user.name,
   worker.name,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -1109,8 +971,6 @@ result <- api.instance$SapiV1MiningWorkerListGet(var.algo, var.user.name, var.ti
 \if{html}{\out{<div class="r">}}\preformatted{MiningApi$SapiV1MiningWorkerListGet(
   algo,
   user.name,
-  timestamp,
-  signature,
   page.index = NULL,
   sort = NULL,
   sort.column = NULL,
@@ -1129,8 +989,6 @@ result <- api.instance$SapiV1MiningWorkerListGet(var.algo, var.user.name, var.ti
 \if{html}{\out{<div class="r">}}\preformatted{MiningApi$SapiV1MiningWorkerListGetWithHttpInfo(
   algo,
   user.name,
-  timestamp,
-  signature,
   page.index = NULL,
   sort = NULL,
   sort.column = NULL,

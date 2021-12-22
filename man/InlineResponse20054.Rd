@@ -13,25 +13,7 @@ InlineResponse20054 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{amount}}{character}
-
-\item{\code{coin}}{character}
-
-\item{\code{network}}{character}
-
-\item{\code{status}}{integer}
-
-\item{\code{address}}{character}
-
-\item{\code{addressTag}}{character}
-
-\item{\code{txId}}{character}
-
-\item{\code{insertTime}}{integer}
-
-\item{\code{transferType}}{integer}
-
-\item{\code{confirmTimes}}{character}
+\item{\code{balances}}{list( \link{InlineResponse20054Balances} )}
 }
 \if{html}{\out{</div>}}
 }
@@ -51,19 +33,7 @@ InlineResponse20054 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20054$new(
-  amount,
-  coin,
-  network,
-  status,
-  address,
-  addressTag,
-  txId,
-  insertTime,
-  transferType,
-  confirmTimes,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20054$new(balances, ...)}\if{html}{\out{</div>}}
 }
 
 }

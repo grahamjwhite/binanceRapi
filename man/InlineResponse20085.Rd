@@ -13,11 +13,33 @@ InlineResponse20085 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{code}}{integer}
+\item{\code{annualInterestRate}}{character}
 
-\item{\code{msg}}{character}
+\item{\code{asset}}{character}
 
-\item{\code{data}}{list( \link{InlineResponse20085Data} )}
+\item{\code{avgAnnualInterestRate}}{character}
+
+\item{\code{canRedeem}}{character}
+
+\item{\code{dailyInterestRate}}{character}
+
+\item{\code{freeAmount}}{character}
+
+\item{\code{freezeAmount}}{character}
+
+\item{\code{lockedAmount}}{character}
+
+\item{\code{productId}}{character}
+
+\item{\code{productName}}{character}
+
+\item{\code{redeemingAmount}}{character}
+
+\item{\code{todayPurchasedAmount}}{character}
+
+\item{\code{totalAmount}}{character}
+
+\item{\code{totalInterest}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -37,7 +59,23 @@ InlineResponse20085 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20085$new(code, msg, data, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20085$new(
+  annualInterestRate,
+  asset,
+  avgAnnualInterestRate,
+  canRedeem,
+  dailyInterestRate,
+  freeAmount,
+  freezeAmount,
+  lockedAmount,
+  productId,
+  productName,
+  redeemingAmount,
+  todayPurchasedAmount,
+  totalAmount,
+  totalInterest,
+  ...
+)}\if{html}{\out{</div>}}
 }
 
 }

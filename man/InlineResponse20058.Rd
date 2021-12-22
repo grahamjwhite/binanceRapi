@@ -13,13 +13,19 @@ InlineResponse20058 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{totalAssetOfBtc}}{character}
+\item{\code{email}}{character}
 
-\item{\code{totalLiabilityOfBtc}}{character}
+\item{\code{isSubUserEnabled}}{character}
 
-\item{\code{totalNetAssetOfBtc}}{character}
+\item{\code{isUserActive}}{character}
 
-\item{\code{subAccountList}}{list( \link{InlineResponse20058SubAccountList} )}
+\item{\code{insertTime}}{integer}
+
+\item{\code{isMarginEnabled}}{character}
+
+\item{\code{isFutureEnabled}}{character}
+
+\item{\code{mobile}}{integer}
 }
 \if{html}{\out{</div>}}
 }
@@ -40,10 +46,13 @@ InlineResponse20058 Class
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InlineResponse20058$new(
-  totalAssetOfBtc,
-  totalLiabilityOfBtc,
-  totalNetAssetOfBtc,
-  subAccountList,
+  email,
+  isSubUserEnabled,
+  isUserActive,
+  insertTime,
+  isMarginEnabled,
+  isFutureEnabled,
+  mobile,
   ...
 )}\if{html}{\out{</div>}}
 }

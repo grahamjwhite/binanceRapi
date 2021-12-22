@@ -13,15 +13,15 @@ InlineResponse200111 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{code}}{character}
+\item{\code{poolId}}{integer}
 
-\item{\code{message}}{character}
+\item{\code{poolNmae}}{character}
 
-\item{\code{data}}{list( \link{InlineResponse200111Data} )}
+\item{\code{updateTime}}{integer}
 
-\item{\code{total}}{integer}
+\item{\code{liquidity}}{\link{SapiV1BswapLiquidityLiquidity}}
 
-\item{\code{success}}{character}
+\item{\code{share}}{\link{SapiV1BswapLiquidityShare}}
 }
 \if{html}{\out{</div>}}
 }
@@ -41,7 +41,7 @@ InlineResponse200111 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse200111$new(code, message, data, total, success, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse200111$new(poolId, poolNmae, updateTime, liquidity, share, ...)}\if{html}{\out{</div>}}
 }
 
 }

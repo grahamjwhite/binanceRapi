@@ -13,35 +13,11 @@ InlineResponse20097 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{tokenName}}{character}
+\item{\code{code}}{integer}
 
-\item{\code{description}}{character}
+\item{\code{msg}}{character}
 
-\item{\code{underlying}}{character}
-
-\item{\code{tokenIssued}}{character}
-
-\item{\code{basket}}{character}
-
-\item{\code{currentBaskets}}{list( \link{SapiV1BlvtTokenInfoCurrentBaskets} )}
-
-\item{\code{nav}}{character}
-
-\item{\code{realLeverage}}{character}
-
-\item{\code{fundingRate}}{character}
-
-\item{\code{dailyManagementFee}}{character}
-
-\item{\code{purchaseFeePct}}{character}
-
-\item{\code{dailyPurchaseLimit}}{character}
-
-\item{\code{redeemFeePct}}{character}
-
-\item{\code{dailyRedeemLimit}}{character}
-
-\item{\code{timestamp}}{integer}
+\item{\code{data}}{\link{InlineResponse20097Data}}
 }
 \if{html}{\out{</div>}}
 }
@@ -61,24 +37,7 @@ InlineResponse20097 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20097$new(
-  tokenName,
-  description,
-  underlying,
-  tokenIssued,
-  basket,
-  currentBaskets,
-  nav,
-  realLeverage,
-  fundingRate,
-  dailyManagementFee,
-  purchaseFeePct,
-  dailyPurchaseLimit,
-  redeemFeePct,
-  dailyRedeemLimit,
-  timestamp,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20097$new(code, msg, data, ...)}\if{html}{\out{</div>}}
 }
 
 }

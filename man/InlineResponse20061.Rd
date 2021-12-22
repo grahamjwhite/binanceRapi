@@ -13,21 +13,11 @@ InlineResponse20061 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{totalInitialMargin}}{character}
+\item{\code{totalAssetOfBtc}}{character}
 
-\item{\code{totalMaintenanceMargin}}{character}
+\item{\code{totalLiabilityOfBtc}}{character}
 
-\item{\code{totalMarginBalance}}{character}
-
-\item{\code{totalOpenOrderInitialMargin}}{character}
-
-\item{\code{totalPositionInitialMargin}}{character}
-
-\item{\code{totalUnrealizedProfit}}{character}
-
-\item{\code{totalWalletBalance}}{character}
-
-\item{\code{asset}}{character}
+\item{\code{totalNetAssetOfBtc}}{character}
 
 \item{\code{subAccountList}}{list( \link{InlineResponse20061SubAccountList} )}
 }
@@ -50,14 +40,9 @@ InlineResponse20061 Class
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InlineResponse20061$new(
-  totalInitialMargin,
-  totalMaintenanceMargin,
-  totalMarginBalance,
-  totalOpenOrderInitialMargin,
-  totalPositionInitialMargin,
-  totalUnrealizedProfit,
-  totalWalletBalance,
-  asset,
+  totalAssetOfBtc,
+  totalLiabilityOfBtc,
+  totalNetAssetOfBtc,
   subAccountList,
   ...
 )}\if{html}{\out{</div>}}

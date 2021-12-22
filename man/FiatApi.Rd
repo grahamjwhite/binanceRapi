@@ -10,86 +10,8 @@ An \code{R6Class} generator object
 \description{
 binanceRapi.Fiat
 }
-\section{Methods}{
-
-\describe{
-\strong{ SapiV1FiatOrdersGet } \emph{ Fiat Deposit/Withdraw History (USER_DATA) }
-- If beginTime and endTime are not sent, the recent 30-day data will be returned.  Weight(IP): 1
-
-\itemize{
-\item \emph{ @param } transaction.type Enum < [0, 1] >
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
-\item \emph{ @param } begin.time integer
-\item \emph{ @param } end.time integer
-\item \emph{ @param } page integer
-\item \emph{ @param } rows integer
-\item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20072} \cr
-
-
-\item status code : 200 | History of deposit/withdraw orders
-
-\item return type : InlineResponse20072 
-\item response headers :
-
-\tabular{ll}{
-}
-\item status code : 400 | Bad Request
-
-\item return type : Error 
-\item response headers :
-
-\tabular{ll}{
-}
-\item status code : 401 | Unauthorized Request
-
-\item return type : Error 
-\item response headers :
-
-\tabular{ll}{
-}
-}
-
-\strong{ SapiV1FiatPaymentsGet } \emph{ Fiat Payments History (USER_DATA) }
-- If beginTime and endTime are not sent, the recent 30-day data will be returned.  Weight(IP): 1
-
-\itemize{
-\item \emph{ @param } transaction.type Enum < [0, 1] >
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
-\item \emph{ @param } begin.time integer
-\item \emph{ @param } end.time integer
-\item \emph{ @param } page integer
-\item \emph{ @param } rows integer
-\item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20073} \cr
-
-
-\item status code : 200 | History of fiat payments
-
-\item return type : InlineResponse20073 
-\item response headers :
-
-\tabular{ll}{
-}
-\item status code : 400 | Bad Request
-
-\item return type : Error 
-\item response headers :
-
-\tabular{ll}{
-}
-\item status code : 401 | Unauthorized Request
-
-\item return type : Error 
-\item response headers :
-
-\tabular{ll}{
-}
-}
-
-}
+\section{}{
+NA
 }
 
 \examples{
@@ -98,8 +20,6 @@ binanceRapi.Fiat
 
 library(binanceRapi)
 var.transaction.type <- '0' # character | 0-deposit, 1-withdraw
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.begin.time <- 1626144956000 # integer | 
 var.end.time <- 56 # integer | UTC timestamp in ms
 var.page <- 1 # integer | Default 1
@@ -109,9 +29,6 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Fiat Deposit/Withdraw History (USER_DATA)
 api.instance <- FiatApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
 result <- api.instance$SapiV1FiatOrdersGet(var.transaction.type, var.timestamp, var.signature, begin.time=var.begin.time, end.time=var.end.time, page=var.page, rows=var.rows, recv.window=var.recv.window)
 
 
@@ -119,8 +36,6 @@ result <- api.instance$SapiV1FiatOrdersGet(var.transaction.type, var.timestamp, 
 
 library(binanceRapi)
 var.transaction.type <- '0' # character | 0-deposit, 1-withdraw
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.begin.time <- 1626144956000 # integer | 
 var.end.time <- 56 # integer | UTC timestamp in ms
 var.page <- 1 # integer | Default 1
@@ -129,9 +44,6 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Fiat Payments History (USER_DATA)
 api.instance <- FiatApi$new()
-
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
 
 result <- api.instance$SapiV1FiatPaymentsGet(var.transaction.type, var.timestamp, var.signature, begin.time=var.begin.time, end.time=var.end.time, page=var.page, rows=var.rows, recv.window=var.recv.window)
 
@@ -172,8 +84,6 @@ result <- api.instance$SapiV1FiatPaymentsGet(var.transaction.type, var.timestamp
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{FiatApi$SapiV1FiatOrdersGet(
   transaction.type,
-  timestamp,
-  signature,
   begin.time = NULL,
   end.time = NULL,
   page = NULL,
@@ -191,8 +101,6 @@ result <- api.instance$SapiV1FiatPaymentsGet(var.transaction.type, var.timestamp
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{FiatApi$SapiV1FiatOrdersGetWithHttpInfo(
   transaction.type,
-  timestamp,
-  signature,
   begin.time = NULL,
   end.time = NULL,
   page = NULL,
@@ -210,8 +118,6 @@ result <- api.instance$SapiV1FiatPaymentsGet(var.transaction.type, var.timestamp
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{FiatApi$SapiV1FiatPaymentsGet(
   transaction.type,
-  timestamp,
-  signature,
   begin.time = NULL,
   end.time = NULL,
   page = NULL,
@@ -229,8 +135,6 @@ result <- api.instance$SapiV1FiatPaymentsGet(var.transaction.type, var.timestamp
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{FiatApi$SapiV1FiatPaymentsGetWithHttpInfo(
   transaction.type,
-  timestamp,
-  signature,
   begin.time = NULL,
   end.time = NULL,
   page = NULL,

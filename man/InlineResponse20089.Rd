@@ -13,11 +13,19 @@ InlineResponse20089 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{code}}{integer}
+\item{\code{positionAmountVos}}{list( \link{InlineResponse20089PositionAmountVos} )}
 
-\item{\code{msg}}{character}
+\item{\code{totalAmountInBTC}}{character}
 
-\item{\code{data}}{\link{InlineResponse20089Data}}
+\item{\code{totalAmountInUSDT}}{character}
+
+\item{\code{totalFixedAmountInBTC}}{character}
+
+\item{\code{totalFixedAmountInUSDT}}{character}
+
+\item{\code{totalFlexibleInBTC}}{character}
+
+\item{\code{totalFlexibleInUSDT}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -37,7 +45,16 @@ InlineResponse20089 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20089$new(code, msg, data, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20089$new(
+  positionAmountVos,
+  totalAmountInBTC,
+  totalAmountInUSDT,
+  totalFixedAmountInBTC,
+  totalFixedAmountInUSDT,
+  totalFlexibleInBTC,
+  totalFlexibleInUSDT,
+  ...
+)}\if{html}{\out{</div>}}
 }
 
 }

@@ -13,15 +13,35 @@ InlineResponse200104 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{poolId}}{integer}
+\item{\code{tokenName}}{character}
 
-\item{\code{poolNmae}}{character}
+\item{\code{description}}{character}
 
-\item{\code{updateTime}}{integer}
+\item{\code{underlying}}{character}
 
-\item{\code{liquidity}}{\link{SapiV1BswapLiquidityLiquidity}}
+\item{\code{tokenIssued}}{character}
 
-\item{\code{share}}{\link{SapiV1BswapLiquidityShare}}
+\item{\code{basket}}{character}
+
+\item{\code{currentBaskets}}{list( \link{SapiV1BlvtTokenInfoCurrentBaskets} )}
+
+\item{\code{nav}}{character}
+
+\item{\code{realLeverage}}{character}
+
+\item{\code{fundingRate}}{character}
+
+\item{\code{dailyManagementFee}}{character}
+
+\item{\code{purchaseFeePct}}{character}
+
+\item{\code{dailyPurchaseLimit}}{character}
+
+\item{\code{redeemFeePct}}{character}
+
+\item{\code{dailyRedeemLimit}}{character}
+
+\item{\code{timestamp}}{integer}
 }
 \if{html}{\out{</div>}}
 }
@@ -41,7 +61,24 @@ InlineResponse200104 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse200104$new(poolId, poolNmae, updateTime, liquidity, share, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse200104$new(
+  tokenName,
+  description,
+  underlying,
+  tokenIssued,
+  basket,
+  currentBaskets,
+  nav,
+  realLeverage,
+  fundingRate,
+  dailyManagementFee,
+  purchaseFeePct,
+  dailyPurchaseLimit,
+  redeemFeePct,
+  dailyRedeemLimit,
+  timestamp,
+  ...
+)}\if{html}{\out{</div>}}
 }
 
 }

@@ -13,25 +13,23 @@ InlineResponse20064 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{counterParty}}{character}
+\item{\code{totalInitialMargin}}{character}
 
-\item{\code{email}}{character}
+\item{\code{totalMaintenanceMargin}}{character}
 
-\item{\code{type}}{integer}
+\item{\code{totalMarginBalance}}{character}
+
+\item{\code{totalOpenOrderInitialMargin}}{character}
+
+\item{\code{totalPositionInitialMargin}}{character}
+
+\item{\code{totalUnrealizedProfit}}{character}
+
+\item{\code{totalWalletBalance}}{character}
 
 \item{\code{asset}}{character}
 
-\item{\code{qty}}{character}
-
-\item{\code{fromAccountType}}{character}
-
-\item{\code{toAccountType}}{character}
-
-\item{\code{status}}{character}
-
-\item{\code{tranId}}{integer}
-
-\item{\code{time}}{integer}
+\item{\code{subAccountList}}{list( \link{InlineResponse20064SubAccountList} )}
 }
 \if{html}{\out{</div>}}
 }
@@ -52,16 +50,15 @@ InlineResponse20064 Class
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InlineResponse20064$new(
-  counterParty,
-  email,
-  type,
+  totalInitialMargin,
+  totalMaintenanceMargin,
+  totalMarginBalance,
+  totalOpenOrderInitialMargin,
+  totalPositionInitialMargin,
+  totalUnrealizedProfit,
+  totalWalletBalance,
   asset,
-  qty,
-  fromAccountType,
-  toAccountType,
-  status,
-  tranId,
-  time,
+  subAccountList,
   ...
 )}\if{html}{\out{</div>}}
 }

@@ -13,9 +13,7 @@ InlineResponse20050 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{success}}{character}
-
-\item{\code{txnId}}{character}
+\item{\code{subAccounts}}{list( \link{InlineResponse20050SubAccounts} )}
 }
 \if{html}{\out{</div>}}
 }
@@ -35,7 +33,7 @@ InlineResponse20050 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20050$new(success, txnId, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20050$new(subAccounts, ...)}\if{html}{\out{</div>}}
 }
 
 }

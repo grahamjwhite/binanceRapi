@@ -13,15 +13,17 @@ InlineResponse20072 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{code}}{character}
+\item{\code{coin}}{character}
 
-\item{\code{message}}{character}
+\item{\code{name}}{character}
 
-\item{\code{data}}{list( \link{InlineResponse20072Data} )}
+\item{\code{totalBalance}}{character}
 
-\item{\code{total}}{integer}
+\item{\code{availableBalance}}{character}
 
-\item{\code{success}}{character}
+\item{\code{inOrder}}{character}
+
+\item{\code{btcValue}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -41,7 +43,15 @@ InlineResponse20072 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20072$new(code, message, data, total, success, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20072$new(
+  coin,
+  name,
+  totalBalance,
+  availableBalance,
+  inOrder,
+  btcValue,
+  ...
+)}\if{html}{\out{</div>}}
 }
 
 }

@@ -13,33 +13,13 @@ InlineResponse20030 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{coin}}{character}
+\item{\code{vipLevel}}{integer [optional]}
 
-\item{\code{depositAllEnable}}{character}
+\item{\code{symbol}}{character [optional]}
 
-\item{\code{free}}{character}
+\item{\code{leverage}}{character [optional]}
 
-\item{\code{freeze}}{character}
-
-\item{\code{ipoable}}{character}
-
-\item{\code{ipoing}}{character}
-
-\item{\code{isLegalMoney}}{character}
-
-\item{\code{locked}}{character}
-
-\item{\code{name}}{character}
-
-\item{\code{networkList}}{list( \link{SapiV1CapitalConfigGetallNetworkList} )}
-
-\item{\code{storage}}{character}
-
-\item{\code{trading}}{character}
-
-\item{\code{withdrawAllEnable}}{character}
-
-\item{\code{withdrawing}}{character}
+\item{\code{data}}{list( \link{SapiV1MarginIsolatedMarginDataData} ) [optional]}
 }
 \if{html}{\out{</div>}}
 }
@@ -60,20 +40,10 @@ InlineResponse20030 Class
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InlineResponse20030$new(
-  coin,
-  depositAllEnable,
-  free,
-  freeze,
-  ipoable,
-  ipoing,
-  isLegalMoney,
-  locked,
-  name,
-  networkList,
-  storage,
-  trading,
-  withdrawAllEnable,
-  withdrawing,
+  vipLevel = NULL,
+  symbol = NULL,
+  leverage = NULL,
+  data = NULL,
   ...
 )}\if{html}{\out{</div>}}
 }

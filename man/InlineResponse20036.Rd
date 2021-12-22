@@ -13,7 +13,31 @@ InlineResponse20036 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{data}}{\link{InlineResponse20036Data}}
+\item{\code{address}}{character}
+
+\item{\code{amount}}{character}
+
+\item{\code{applyTime}}{character}
+
+\item{\code{coin}}{character}
+
+\item{\code{id}}{character}
+
+\item{\code{withdrawOrderId}}{character}
+
+\item{\code{network}}{character}
+
+\item{\code{transferType}}{integer}
+
+\item{\code{status}}{integer}
+
+\item{\code{transactionFee}}{character}
+
+\item{\code{confirmNo}}{integer}
+
+\item{\code{info}}{character}
+
+\item{\code{txId}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -33,7 +57,22 @@ InlineResponse20036 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20036$new(data, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20036$new(
+  address,
+  amount,
+  applyTime,
+  coin,
+  id,
+  withdrawOrderId,
+  network,
+  transferType,
+  status,
+  transactionFee,
+  confirmNo,
+  info,
+  txId,
+  ...
+)}\if{html}{\out{</div>}}
 }
 
 }

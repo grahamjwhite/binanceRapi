@@ -13,9 +13,13 @@ InlineResponse20056 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{email}}{character}
+\item{\code{address}}{character}
 
-\item{\code{isMarginEnabled}}{character}
+\item{\code{coin}}{character}
+
+\item{\code{tag}}{character}
+
+\item{\code{url}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -35,7 +39,7 @@ InlineResponse20056 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20056$new(email, isMarginEnabled, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20056$new(address, coin, tag, url, ...)}\if{html}{\out{</div>}}
 }
 
 }

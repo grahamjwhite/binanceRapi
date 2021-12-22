@@ -13,11 +13,7 @@ InlineResponse20038 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{totalServiceCharge}}{character}
-
-\item{\code{totalTransfered}}{character}
-
-\item{\code{transferResult}}{list( \link{InlineResponse20038TransferResult} )}
+\item{\code{data}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -37,12 +33,7 @@ InlineResponse20038 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20038$new(
-  totalServiceCharge,
-  totalTransfered,
-  transferResult,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20038$new(data, ...)}\if{html}{\out{</div>}}
 }
 
 }

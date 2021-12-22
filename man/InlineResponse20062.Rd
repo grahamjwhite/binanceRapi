@@ -13,21 +13,9 @@ InlineResponse20062 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{entryPrice}}{character}
+\item{\code{email}}{character}
 
-\item{\code{leverage}}{character}
-
-\item{\code{maxNotional}}{character}
-
-\item{\code{liquidationPrice}}{character}
-
-\item{\code{markPrice}}{character}
-
-\item{\code{positionAmount}}{character}
-
-\item{\code{symbol}}{character}
-
-\item{\code{unrealizedProfit}}{character}
+\item{\code{isFuturesEnabled}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -47,17 +35,7 @@ InlineResponse20062 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20062$new(
-  entryPrice,
-  leverage,
-  maxNotional,
-  liquidationPrice,
-  markPrice,
-  positionAmount,
-  symbol,
-  unrealizedProfit,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20062$new(email, isFuturesEnabled, ...)}\if{html}{\out{</div>}}
 }
 
 }

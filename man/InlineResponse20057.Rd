@@ -13,19 +13,25 @@ InlineResponse20057 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{email}}{character}
+\item{\code{amount}}{character}
 
-\item{\code{marginLevel}}{character}
+\item{\code{coin}}{character}
 
-\item{\code{totalAssetOfBtc}}{character}
+\item{\code{network}}{character}
 
-\item{\code{totalLiabilityOfBtc}}{character}
+\item{\code{status}}{integer}
 
-\item{\code{totalNetAssetOfBtc}}{character}
+\item{\code{address}}{character}
 
-\item{\code{marginTradeCoeffVo}}{\link{InlineResponse20057MarginTradeCoeffVo}}
+\item{\code{addressTag}}{character}
 
-\item{\code{marginUserAssetVoList}}{list( \link{InlineResponse20019UserAssets} )}
+\item{\code{txId}}{character}
+
+\item{\code{insertTime}}{integer}
+
+\item{\code{transferType}}{integer}
+
+\item{\code{confirmTimes}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -46,13 +52,16 @@ InlineResponse20057 Class
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InlineResponse20057$new(
-  email,
-  marginLevel,
-  totalAssetOfBtc,
-  totalLiabilityOfBtc,
-  totalNetAssetOfBtc,
-  marginTradeCoeffVo,
-  marginUserAssetVoList,
+  amount,
+  coin,
+  network,
+  status,
+  address,
+  addressTag,
+  txId,
+  insertTime,
+  transferType,
+  confirmTimes,
   ...
 )}\if{html}{\out{</div>}}
 }

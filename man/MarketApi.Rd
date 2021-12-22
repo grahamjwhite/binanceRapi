@@ -369,9 +369,6 @@ var.from.id <- 56 # integer | Trade id to fetch from. Default gets most recent t
 #Old Trade Lookup
 api.instance <- MarketApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
 result <- api.instance$ApiV3HistoricalTradesGet(var.symbol, limit=var.limit, from.id=var.from.id)
 
 

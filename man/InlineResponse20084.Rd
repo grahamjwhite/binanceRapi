@@ -13,11 +13,13 @@ InlineResponse20084 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{dailyPurchaseId}}{integer}
+\item{\code{asset}}{character}
 
-\item{\code{success}}{character}
+\item{\code{dailyQuota}}{character}
 
-\item{\code{time}}{integer}
+\item{\code{leftQuota}}{character}
+
+\item{\code{minRedemptionAmount}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -37,7 +39,7 @@ InlineResponse20084 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20084$new(dailyPurchaseId, success, time, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20084$new(asset, dailyQuota, leftQuota, minRedemptionAmount, ...)}\if{html}{\out{</div>}}
 }
 
 }

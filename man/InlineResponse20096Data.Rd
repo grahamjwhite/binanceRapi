@@ -13,11 +13,11 @@ InlineResponse20096Data Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{type}}{character}
+\item{\code{accountProfits}}{list( \link{InlineResponse20096DataAccountProfits} )}
 
-\item{\code{userName}}{character}
+\item{\code{totalNum}}{integer}
 
-\item{\code{list}}{list( \link{InlineResponse20096List} )}
+\item{\code{pageSize}}{integer}
 }
 \if{html}{\out{</div>}}
 }
@@ -37,7 +37,7 @@ InlineResponse20096Data Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20096Data$new(type, userName, list, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20096Data$new(accountProfits, totalNum, pageSize, ...)}\if{html}{\out{</div>}}
 }
 
 }

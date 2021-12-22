@@ -15,13 +15,9 @@ InlineResponse200110 Class
 \describe{
 \item{\code{poolId}}{integer}
 
-\item{\code{poolNmae}}{character}
+\item{\code{poolName}}{character}
 
-\item{\code{updateTime}}{integer}
-
-\item{\code{liquidity}}{\link{SapiV1BswapPoolConfigureLiquidity}}
-
-\item{\code{assetConfigure}}{\link{SapiV1BswapPoolConfigureAssetConfigure}}
+\item{\code{assets}}{list( character )}
 }
 \if{html}{\out{</div>}}
 }
@@ -41,14 +37,7 @@ InlineResponse200110 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse200110$new(
-  poolId,
-  poolNmae,
-  updateTime,
-  liquidity,
-  assetConfigure,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse200110$new(poolId, poolName, assets, ...)}\if{html}{\out{</div>}}
 }
 
 }

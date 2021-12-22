@@ -19,15 +19,13 @@ Weight(IP): 1
 \itemize{
 \item \emph{ @param } project.id character
 \item \emph{ @param } lot character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20080} \cr
+\item \emph{ @returnType } \link{InlineResponse20087} \cr
 
 
 \item status code : 200 | Generated Purchase Id
 
-\item return type : InlineResponse20080 
+\item return type : InlineResponse20087 
 \item response headers :
 
 \tabular{ll}{
@@ -53,18 +51,16 @@ Weight(IP): 1
 
 \itemize{
 \item \emph{ @param } status Enum < [ALL, SUBSCRIBABLE, UNSUBSCRIBABLE] >
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } featured Enum < [ALL, TRUE] >
 \item \emph{ @param } current integer
 \item \emph{ @param } size integer
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } list( \link{inline_response_200_74} ) \cr
+\item \emph{ @returnType } list( \link{inline_response_200_81} ) \cr
 
 
 \item status code : 200 | List of flexible products
 
-\item return type : array[InlineResponse20074] 
+\item return type : array[InlineResponse20081] 
 \item response headers :
 
 \tabular{ll}{
@@ -91,15 +87,13 @@ Weight(IP): 1
 \itemize{
 \item \emph{ @param } product.id character
 \item \emph{ @param } amount numeric
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20076} \cr
+\item \emph{ @returnType } \link{InlineResponse20083} \cr
 
 
 \item status code : 200 | Generated Purchase Id
 
-\item return type : InlineResponse20076 
+\item return type : InlineResponse20083 
 \item response headers :
 
 \tabular{ll}{
@@ -127,8 +121,6 @@ Weight(IP): 1
 \item \emph{ @param } product.id character
 \item \emph{ @param } amount numeric
 \item \emph{ @param } type Enum < [FAST, NORMAL] >
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
 
 
@@ -160,15 +152,13 @@ Weight(IP): 1
 
 \itemize{
 \item \emph{ @param } asset character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } list( \link{inline_response_200_78} ) \cr
+\item \emph{ @returnType } list( \link{inline_response_200_85} ) \cr
 
 
 \item status code : 200 | List of flexible product positions
 
-\item return type : array[InlineResponse20078] 
+\item return type : array[InlineResponse20085] 
 \item response headers :
 
 \tabular{ll}{
@@ -194,15 +184,13 @@ Weight(IP): 1
 
 \itemize{
 \item \emph{ @param } product.id character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20075} \cr
+\item \emph{ @returnType } \link{InlineResponse20082} \cr
 
 
 \item status code : 200 | Daily purchase quote of flexible product left
 
-\item return type : InlineResponse20075 
+\item return type : InlineResponse20082 
 \item response headers :
 
 \tabular{ll}{
@@ -229,15 +217,13 @@ Weight(IP): 1
 \itemize{
 \item \emph{ @param } product.id character
 \item \emph{ @param } type Enum < [FAST, NORMAL] >
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20077} \cr
+\item \emph{ @returnType } \link{InlineResponse20084} \cr
 
 
 \item status code : 200 | Daily redemption quota of flexible product left
 
-\item return type : InlineResponse20077 
+\item return type : InlineResponse20084 
 \item response headers :
 
 \tabular{ll}{
@@ -264,16 +250,14 @@ Weight(IP): 1
 \itemize{
 \item \emph{ @param } project.id character
 \item \emph{ @param } lot character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } position.id character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20084} \cr
+\item \emph{ @returnType } \link{InlineResponse20091} \cr
 
 
 \item status code : 200 | Purchase information
 
-\item return type : InlineResponse20084 
+\item return type : InlineResponse20091 
 \item response headers :
 
 \tabular{ll}{
@@ -302,18 +286,16 @@ Weight(IP): 1
 \item \emph{ @param } status Enum < [ALL, SUBSCRIBABLE, UNSUBSCRIBABLE] >
 \item \emph{ @param } is.sort.asc character
 \item \emph{ @param } sort.by Enum < [START_TIME, LOT_SIZ, LOT_SIZE, INTEREST_RATE, DURATION] >
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } asset character
 \item \emph{ @param } current integer
 \item \emph{ @param } size integer
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } list( \link{inline_response_200_79} ) \cr
+\item \emph{ @returnType } list( \link{inline_response_200_86} ) \cr
 
 
 \item status code : 200 | List of fixed projects
 
-\item return type : array[InlineResponse20079] 
+\item return type : array[InlineResponse20086] 
 \item response headers :
 
 \tabular{ll}{
@@ -341,15 +323,13 @@ Weight(IP): 1
 \item \emph{ @param } asset character
 \item \emph{ @param } project.id character
 \item \emph{ @param } status Enum < [ALL, SUBSCRIBABLE, UNSUBSCRIBABLE] >
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } list( \link{inline_response_200_81} ) \cr
+\item \emph{ @returnType } list( \link{inline_response_200_88} ) \cr
 
 
 \item status code : 200 | List of fixed project positions
 
-\item return type : array[InlineResponse20081] 
+\item return type : array[InlineResponse20088] 
 \item response headers :
 
 \tabular{ll}{
@@ -374,15 +354,13 @@ Weight(IP): 1
 Weight(IP): 1
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20082} \cr
+\item \emph{ @returnType } \link{InlineResponse20089} \cr
 
 
 \item status code : 200 | Lending account
 
-\item return type : InlineResponse20082 
+\item return type : InlineResponse20089 
 \item response headers :
 
 \tabular{ll}{
@@ -408,20 +386,18 @@ Weight(IP): 1
 
 \itemize{
 \item \emph{ @param } lending.type Enum < [DAILY, ACTIVITY, CUSTOMIZED_FIXED] >
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } asset character
 \item \emph{ @param } start.time integer
 \item \emph{ @param } end.time integer
 \item \emph{ @param } current integer
 \item \emph{ @param } size integer
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } list( \link{inline_response_200_83} ) \cr
+\item \emph{ @returnType } list( \link{inline_response_200_90} ) \cr
 
 
 \item status code : 200 | History of interest
 
-\item return type : array[InlineResponse20083] 
+\item return type : array[InlineResponse20090] 
 \item response headers :
 
 \tabular{ll}{
@@ -447,8 +423,6 @@ Weight(IP): 1
 
 \itemize{
 \item \emph{ @param } lending.type Enum < [DAILY, ACTIVITY, CUSTOMIZED_FIXED] >
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } asset character
 \item \emph{ @param } start.time integer
 \item \emph{ @param } end.time integer
@@ -486,8 +460,6 @@ Weight(IP): 1
 
 \itemize{
 \item \emph{ @param } lending.type Enum < [DAILY, ACTIVITY, CUSTOMIZED_FIXED] >
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } asset character
 \item \emph{ @param } start.time integer
 \item \emph{ @param } end.time integer
@@ -530,25 +502,18 @@ Weight(IP): 1
 library(binanceRapi)
 var.project.id <- 'project.id_example' # character | 
 var.lot <- 'lot_example' # character | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Purchase Fixed/Activity Project (USER_DATA)
 api.instance <- SavingsApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1LendingCustomizedFixedPurchasePost(var.project.id, var.lot, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1LendingCustomizedFixedPurchasePost(var.project.id, var.lot, recv.window=var.recv.window)
 
 
 ####################  SapiV1LendingDailyProductListGet  ####################
 
 library(binanceRapi)
 var.status <- 'status_example' # character | \"ALL\", \"SUBSCRIBABLE\", \"UNSUBSCRIBABLE\"; Default: 'ALL'
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.featured <- 'featured_example' # character | \"ALL\", \"TRUE\"; Default: \"ALL\"
 var.current <- 1 # integer | Current querying page. Start from 1. Default:1
 var.size <- 100 # integer | Default:10 Max:100
@@ -557,10 +522,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Get Flexible Product List (USER_DATA)
 api.instance <- SavingsApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1LendingDailyProductListGet(var.status, var.timestamp, var.signature, featured=var.featured, current=var.current, size=var.size, recv.window=var.recv.window)
+result <- api.instance$SapiV1LendingDailyProductListGet(var.status, featured=var.featured, current=var.current, size=var.size, recv.window=var.recv.window)
 
 
 ####################  SapiV1LendingDailyPurchasePost  ####################
@@ -568,17 +530,12 @@ result <- api.instance$SapiV1LendingDailyProductListGet(var.status, var.timestam
 library(binanceRapi)
 var.product.id <- 'product.id_example' # character | 
 var.amount <- 1.01 # numeric | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Purchase Flexible Product (USER_DATA)
 api.instance <- SavingsApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1LendingDailyPurchasePost(var.product.id, var.amount, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1LendingDailyPurchasePost(var.product.id, var.amount, recv.window=var.recv.window)
 
 
 ####################  SapiV1LendingDailyRedeemPost  ####################
@@ -587,51 +544,36 @@ library(binanceRapi)
 var.product.id <- 'product.id_example' # character | 
 var.amount <- 1.01 # numeric | 
 var.type <- 'type_example' # character | \"FAST\", \"NORMAL\"
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Redeem Flexible Product (USER_DATA)
 api.instance <- SavingsApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1LendingDailyRedeemPost(var.product.id, var.amount, var.type, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1LendingDailyRedeemPost(var.product.id, var.amount, var.type, recv.window=var.recv.window)
 
 
 ####################  SapiV1LendingDailyTokenPositionGet  ####################
 
 library(binanceRapi)
 var.asset <- 'BTC' # character | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Get Flexible Product Position (USER_DATA)
 api.instance <- SavingsApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1LendingDailyTokenPositionGet(var.asset, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1LendingDailyTokenPositionGet(var.asset, recv.window=var.recv.window)
 
 
 ####################  SapiV1LendingDailyUserLeftQuotaGet  ####################
 
 library(binanceRapi)
 var.product.id <- 'product.id_example' # character | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Get Left Daily Purchase Quota of Flexible Product (USER_DATA)
 api.instance <- SavingsApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1LendingDailyUserLeftQuotaGet(var.product.id, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1LendingDailyUserLeftQuotaGet(var.product.id, recv.window=var.recv.window)
 
 
 ####################  SapiV1LendingDailyUserRedemptionQuotaGet  ####################
@@ -639,17 +581,12 @@ result <- api.instance$SapiV1LendingDailyUserLeftQuotaGet(var.product.id, var.ti
 library(binanceRapi)
 var.product.id <- 'product.id_example' # character | 
 var.type <- 'type_example' # character | \"FAST\", \"NORMAL\"
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Get Left Daily Redemption Quota of Flexible Product (USER_DATA)
 api.instance <- SavingsApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1LendingDailyUserRedemptionQuotaGet(var.product.id, var.type, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1LendingDailyUserRedemptionQuotaGet(var.product.id, var.type, recv.window=var.recv.window)
 
 
 ####################  SapiV1LendingPositionChangedPost  ####################
@@ -657,18 +594,13 @@ result <- api.instance$SapiV1LendingDailyUserRedemptionQuotaGet(var.product.id, 
 library(binanceRapi)
 var.project.id <- 'project.id_example' # character | 
 var.lot <- 'lot_example' # character | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.position.id <- 'position.id_example' # character | 
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Change Fixed/Activity Position to Daily Position (USER_DATA)
 api.instance <- SavingsApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1LendingPositionChangedPost(var.project.id, var.lot, var.timestamp, var.signature, position.id=var.position.id, recv.window=var.recv.window)
+result <- api.instance$SapiV1LendingPositionChangedPost(var.project.id, var.lot, position.id=var.position.id, recv.window=var.recv.window)
 
 
 ####################  SapiV1LendingProjectListGet  ####################
@@ -678,8 +610,6 @@ var.type <- 'type_example' # character | \"ACTIVITY\", \"CUSTOMIZED_FIXED\"
 var.status <- 'status_example' # character | \"ALL\", \"SUBSCRIBABLE\", \"UNSUBSCRIBABLE\"; Default: 'ALL'
 var.is.sort.asc <- 'is.sort.asc_example' # character | default \"true\"
 var.sort.by <- 'sort.by_example' # character | \"START_TIME\", \"LOT_SIZE\", \"INTEREST_RATE\", \"DURATION\"; default \"START_TIME
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.asset <- 'BNB' # character | 
 var.current <- 1 # integer | Current querying page. Start from 1. Default:1
 var.size <- 100 # integer | Default:10 Max:100
@@ -688,10 +618,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Get Fixed/Activity Project List(USER_DATA)
 api.instance <- SavingsApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1LendingProjectListGet(var.type, var.status, var.is.sort.asc, var.sort.by, var.timestamp, var.signature, asset=var.asset, current=var.current, size=var.size, recv.window=var.recv.window)
+result <- api.instance$SapiV1LendingProjectListGet(var.type, var.status, var.is.sort.asc, var.sort.by, asset=var.asset, current=var.current, size=var.size, recv.window=var.recv.window)
 
 
 ####################  SapiV1LendingProjectPositionListGet  ####################
@@ -700,41 +627,29 @@ library(binanceRapi)
 var.asset <- 'BTC' # character | 
 var.project.id <- 'project.id_example' # character | 
 var.status <- 'status_example' # character | \"ALL\", \"SUBSCRIBABLE\", \"UNSUBSCRIBABLE\"; Default: 'ALL'
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Get Fixed/Activity Project Position (USER_DATA)
 api.instance <- SavingsApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1LendingProjectPositionListGet(var.asset, var.project.id, var.status, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1LendingProjectPositionListGet(var.asset, var.project.id, var.status, recv.window=var.recv.window)
 
 
 ####################  SapiV1LendingUnionAccountGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Lending Account (USER_DATA)
 api.instance <- SavingsApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1LendingUnionAccountGet(var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1LendingUnionAccountGet(recv.window=var.recv.window)
 
 
 ####################  SapiV1LendingUnionInterestHistoryGet  ####################
 
 library(binanceRapi)
 var.lending.type <- 'lending.type_example' # character | \"DAILY\" for flexible, \"ACTIVITY\" for activity, \"CUSTOMIZED_FIXED\" for fixed
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.asset <- 'BNB' # character | 
 var.start.time <- 56 # integer | UTC timestamp in ms
 var.end.time <- 56 # integer | UTC timestamp in ms
@@ -745,18 +660,13 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Get Interest History (USER_DATA)
 api.instance <- SavingsApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1LendingUnionInterestHistoryGet(var.lending.type, var.timestamp, var.signature, asset=var.asset, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, recv.window=var.recv.window)
+result <- api.instance$SapiV1LendingUnionInterestHistoryGet(var.lending.type, asset=var.asset, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, recv.window=var.recv.window)
 
 
 ####################  SapiV1LendingUnionPurchaseRecordGet  ####################
 
 library(binanceRapi)
 var.lending.type <- 'lending.type_example' # character | \"DAILY\" for flexible, \"ACTIVITY\" for activity, \"CUSTOMIZED_FIXED\" for fixed
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.asset <- 'BNB' # character | 
 var.start.time <- 56 # integer | UTC timestamp in ms
 var.end.time <- 56 # integer | UTC timestamp in ms
@@ -767,18 +677,13 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Get Purchase Record (USER_DATA)
 api.instance <- SavingsApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1LendingUnionPurchaseRecordGet(var.lending.type, var.timestamp, var.signature, asset=var.asset, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, recv.window=var.recv.window)
+result <- api.instance$SapiV1LendingUnionPurchaseRecordGet(var.lending.type, asset=var.asset, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, recv.window=var.recv.window)
 
 
 ####################  SapiV1LendingUnionRedemptionRecordGet  ####################
 
 library(binanceRapi)
 var.lending.type <- 'lending.type_example' # character | \"DAILY\" for flexible, \"ACTIVITY\" for activity, \"CUSTOMIZED_FIXED\" for fixed
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.asset <- 'BNB' # character | 
 var.start.time <- 56 # integer | UTC timestamp in ms
 var.end.time <- 56 # integer | UTC timestamp in ms
@@ -789,10 +694,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Get Redemption Record (USER_DATA)
 api.instance <- SavingsApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, var.timestamp, var.signature, asset=var.asset, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, recv.window=var.recv.window)
+result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, asset=var.asset, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, recv.window=var.recv.window)
 
 
 }
@@ -856,8 +758,6 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
 \if{html}{\out{<div class="r">}}\preformatted{SavingsApi$SapiV1LendingCustomizedFixedPurchasePost(
   project.id,
   lot,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -872,8 +772,6 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
 \if{html}{\out{<div class="r">}}\preformatted{SavingsApi$SapiV1LendingCustomizedFixedPurchasePostWithHttpInfo(
   project.id,
   lot,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -887,8 +785,6 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SavingsApi$SapiV1LendingDailyProductListGet(
   status,
-  timestamp,
-  signature,
   featured = NULL,
   current = NULL,
   size = NULL,
@@ -905,8 +801,6 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SavingsApi$SapiV1LendingDailyProductListGetWithHttpInfo(
   status,
-  timestamp,
-  signature,
   featured = NULL,
   current = NULL,
   size = NULL,
@@ -924,8 +818,6 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
 \if{html}{\out{<div class="r">}}\preformatted{SavingsApi$SapiV1LendingDailyPurchasePost(
   product.id,
   amount,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -940,8 +832,6 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
 \if{html}{\out{<div class="r">}}\preformatted{SavingsApi$SapiV1LendingDailyPurchasePostWithHttpInfo(
   product.id,
   amount,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -957,8 +847,6 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
   product.id,
   amount,
   type,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -974,8 +862,6 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
   product.id,
   amount,
   type,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -987,13 +873,7 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
 \if{latex}{\out{\hypertarget{method-SapiV1LendingDailyTokenPositionGet}{}}}
 \subsection{Method \code{SapiV1LendingDailyTokenPositionGet()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{SavingsApi$SapiV1LendingDailyTokenPositionGet(
-  asset,
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{SavingsApi$SapiV1LendingDailyTokenPositionGet(asset, recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -1004,8 +884,6 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SavingsApi$SapiV1LendingDailyTokenPositionGetWithHttpInfo(
   asset,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -1019,8 +897,6 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SavingsApi$SapiV1LendingDailyUserLeftQuotaGet(
   product.id,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -1034,8 +910,6 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SavingsApi$SapiV1LendingDailyUserLeftQuotaGetWithHttpInfo(
   product.id,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -1050,8 +924,6 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
 \if{html}{\out{<div class="r">}}\preformatted{SavingsApi$SapiV1LendingDailyUserRedemptionQuotaGet(
   product.id,
   type,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -1066,8 +938,6 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
 \if{html}{\out{<div class="r">}}\preformatted{SavingsApi$SapiV1LendingDailyUserRedemptionQuotaGetWithHttpInfo(
   product.id,
   type,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -1082,8 +952,6 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
 \if{html}{\out{<div class="r">}}\preformatted{SavingsApi$SapiV1LendingPositionChangedPost(
   project.id,
   lot,
-  timestamp,
-  signature,
   position.id = NULL,
   recv.window = NULL,
   ...
@@ -1099,8 +967,6 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
 \if{html}{\out{<div class="r">}}\preformatted{SavingsApi$SapiV1LendingPositionChangedPostWithHttpInfo(
   project.id,
   lot,
-  timestamp,
-  signature,
   position.id = NULL,
   recv.window = NULL,
   ...
@@ -1118,8 +984,6 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
   status,
   is.sort.asc,
   sort.by,
-  timestamp,
-  signature,
   asset = NULL,
   current = NULL,
   size = NULL,
@@ -1139,8 +1003,6 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
   status,
   is.sort.asc,
   sort.by,
-  timestamp,
-  signature,
   asset = NULL,
   current = NULL,
   size = NULL,
@@ -1159,8 +1021,6 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
   asset,
   project.id,
   status,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -1176,8 +1036,6 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
   asset,
   project.id,
   status,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -1189,12 +1047,7 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
 \if{latex}{\out{\hypertarget{method-SapiV1LendingUnionAccountGet}{}}}
 \subsection{Method \code{SapiV1LendingUnionAccountGet()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{SavingsApi$SapiV1LendingUnionAccountGet(
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{SavingsApi$SapiV1LendingUnionAccountGet(recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -1203,12 +1056,7 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
 \if{latex}{\out{\hypertarget{method-SapiV1LendingUnionAccountGetWithHttpInfo}{}}}
 \subsection{Method \code{SapiV1LendingUnionAccountGetWithHttpInfo()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{SavingsApi$SapiV1LendingUnionAccountGetWithHttpInfo(
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{SavingsApi$SapiV1LendingUnionAccountGetWithHttpInfo(recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -1219,8 +1067,6 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SavingsApi$SapiV1LendingUnionInterestHistoryGet(
   lending.type,
-  timestamp,
-  signature,
   asset = NULL,
   start.time = NULL,
   end.time = NULL,
@@ -1239,8 +1085,6 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SavingsApi$SapiV1LendingUnionInterestHistoryGetWithHttpInfo(
   lending.type,
-  timestamp,
-  signature,
   asset = NULL,
   start.time = NULL,
   end.time = NULL,
@@ -1259,8 +1103,6 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SavingsApi$SapiV1LendingUnionPurchaseRecordGet(
   lending.type,
-  timestamp,
-  signature,
   asset = NULL,
   start.time = NULL,
   end.time = NULL,
@@ -1279,8 +1121,6 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SavingsApi$SapiV1LendingUnionPurchaseRecordGetWithHttpInfo(
   lending.type,
-  timestamp,
-  signature,
   asset = NULL,
   start.time = NULL,
   end.time = NULL,
@@ -1299,8 +1139,6 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SavingsApi$SapiV1LendingUnionRedemptionRecordGet(
   lending.type,
-  timestamp,
-  signature,
   asset = NULL,
   start.time = NULL,
   end.time = NULL,
@@ -1319,8 +1157,6 @@ result <- api.instance$SapiV1LendingUnionRedemptionRecordGet(var.lending.type, v
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SavingsApi$SapiV1LendingUnionRedemptionRecordGetWithHttpInfo(
   lending.type,
-  timestamp,
-  signature,
   asset = NULL,
   start.time = NULL,
   end.time = NULL,

@@ -40,12 +40,12 @@ Close out a user data stream.  Weight: 1
 Start a new user data stream. The stream will close after 60 minutes unless a keepalive is sent. If the account has an active &#x60;listenKey&#x60;, that &#x60;listenKey&#x60; will be returned and its validity will be extended for 60 minutes.  Weight: 1
 
 \itemize{
-\item \emph{ @returnType } \link{InlineResponse20070} \cr
+\item \emph{ @returnType } \link{InlineResponse20077} \cr
 
 
 \item status code : 200 | Listen key
 
-\item return type : InlineResponse20070 
+\item return type : InlineResponse20077 
 \item response headers :
 
 \tabular{ll}{
@@ -88,9 +88,6 @@ var.listen.key <- 'pqia91ma19a5s61cv6a81va65sdf19v8a65a1a5s61cv6a81va65sdf19v8a6
 #Close a ListenKey (USER_STREAM)
 api.instance <- StreamApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
 result <- api.instance$ApiV3UserDataStreamDelete(listen.key=var.listen.key)
 
 
@@ -100,9 +97,6 @@ library(binanceRapi)
 
 #Create a ListenKey (USER_STREAM)
 api.instance <- StreamApi$new()
-
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
 
 result <- api.instance$ApiV3UserDataStreamPost()
 
@@ -114,9 +108,6 @@ var.listen.key <- 'pqia91ma19a5s61cv6a81va65sdf19v8a65a1a5s61cv6a81va65sdf19v8a6
 
 #Ping/Keep-alive a ListenKey (USER_STREAM)
 api.instance <- StreamApi$new()
-
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
 
 result <- api.instance$ApiV3UserDataStreamPut(listen.key=var.listen.key)
 

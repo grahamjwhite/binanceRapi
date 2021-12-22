@@ -13,17 +13,7 @@ InlineResponse20069 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{coin}}{character}
-
-\item{\code{name}}{character}
-
-\item{\code{totalBalance}}{character}
-
-\item{\code{availableBalance}}{character}
-
-\item{\code{inOrder}}{character}
-
-\item{\code{btcValue}}{character}
+\item{\code{tranId}}{integer}
 }
 \if{html}{\out{</div>}}
 }
@@ -43,15 +33,7 @@ InlineResponse20069 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20069$new(
-  coin,
-  name,
-  totalBalance,
-  availableBalance,
-  inOrder,
-  btcValue,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20069$new(tranId, ...)}\if{html}{\out{</div>}}
 }
 
 }

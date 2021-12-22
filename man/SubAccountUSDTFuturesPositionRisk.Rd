@@ -13,7 +13,7 @@ SubAccountUSDTFuturesPositionRisk Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{futurePositionRiskVos}}{list( \link{InlineResponse20062} )}
+\item{\code{futurePositionRiskVos}}{list( \link{InlineResponse20065} )}
 }
 \if{html}{\out{</div>}}
 }

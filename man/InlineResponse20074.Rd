@@ -13,29 +13,13 @@ InlineResponse20074 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{asset}}{character}
+\item{\code{ipRestrict}}{character}
 
-\item{\code{avgAnnualInterestRate}}{character}
+\item{\code{ipList}}{list( character )}
 
-\item{\code{canPurchase}}{character}
+\item{\code{updateTime}}{integer}
 
-\item{\code{canRedeem}}{character}
-
-\item{\code{dailyInterestPerThousand}}{character}
-
-\item{\code{featured}}{character}
-
-\item{\code{minPurchaseAmount}}{character}
-
-\item{\code{productId}}{character}
-
-\item{\code{purchasedAmount}}{character}
-
-\item{\code{status}}{character}
-
-\item{\code{upLimit}}{character}
-
-\item{\code{upLimitPerUser}}{character}
+\item{\code{apiKey}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -55,21 +39,7 @@ InlineResponse20074 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20074$new(
-  asset,
-  avgAnnualInterestRate,
-  canPurchase,
-  canRedeem,
-  dailyInterestPerThousand,
-  featured,
-  minPurchaseAmount,
-  productId,
-  purchasedAmount,
-  status,
-  upLimit,
-  upLimitPerUser,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20074$new(ipRestrict, ipList, updateTime, apiKey, ...)}\if{html}{\out{</div>}}
 }
 
 }

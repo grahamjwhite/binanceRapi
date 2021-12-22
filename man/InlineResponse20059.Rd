@@ -15,7 +15,7 @@ InlineResponse20059 Class
 \describe{
 \item{\code{email}}{character}
 
-\item{\code{isFuturesEnabled}}{character}
+\item{\code{isMarginEnabled}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -35,7 +35,7 @@ InlineResponse20059 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20059$new(email, isFuturesEnabled, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20059$new(email, isMarginEnabled, ...)}\if{html}{\out{</div>}}
 }
 
 }

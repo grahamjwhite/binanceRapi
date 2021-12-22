@@ -13,9 +13,9 @@ InlineResponse20042 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{total}}{integer}
-
 \item{\code{rows}}{list( \link{InlineResponse20042Rows} )}
+
+\item{\code{total}}{integer}
 }
 \if{html}{\out{</div>}}
 }
@@ -35,7 +35,7 @@ InlineResponse20042 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20042$new(total, rows, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20042$new(rows, total, ...)}\if{html}{\out{</div>}}
 }
 
 }

@@ -13,7 +13,7 @@ InlineResponse20043 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{tranId}}{integer}
+\item{\code{CTR}}{\link{InlineResponse20043CTR}}
 }
 \if{html}{\out{</div>}}
 }
@@ -33,7 +33,7 @@ InlineResponse20043 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20043$new(tranId, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20043$new(CTR, ...)}\if{html}{\out{</div>}}
 }
 
 }

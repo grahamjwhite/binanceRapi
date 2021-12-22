@@ -13,11 +13,7 @@ InlineResponse20049 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{success}}{character}
-
-\item{\code{futuresType}}{integer}
-
-\item{\code{transfers}}{list( \link{InlineResponse20049Transfers} )}
+\item{\code{email}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -37,7 +33,7 @@ InlineResponse20049 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20049$new(success, futuresType, transfers, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20049$new(email, ...)}\if{html}{\out{</div>}}
 }
 
 }

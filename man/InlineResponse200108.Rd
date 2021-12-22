@@ -13,23 +13,19 @@ InlineResponse200108 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{swapId}}{integer}
+\item{\code{id}}{numeric}
 
-\item{\code{swapTime}}{integer}
+\item{\code{tokenName}}{character}
 
-\item{\code{status}}{integer}
+\item{\code{amount}}{character}
 
-\item{\code{quoteAsset}}{character}
+\item{\code{nav}}{character}
 
-\item{\code{baseAsset}}{character}
+\item{\code{fee}}{character}
 
-\item{\code{quoteQty}}{numeric}
+\item{\code{netProceed}}{character}
 
-\item{\code{baseQty}}{numeric}
-
-\item{\code{price}}{numeric}
-
-\item{\code{fee}}{numeric}
+\item{\code{timestamp}}{integer}
 }
 \if{html}{\out{</div>}}
 }
@@ -50,15 +46,13 @@ InlineResponse200108 Class
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InlineResponse200108$new(
-  swapId,
-  swapTime,
-  status,
-  quoteAsset,
-  baseAsset,
-  quoteQty,
-  baseQty,
-  price,
+  id,
+  tokenName,
+  amount,
+  nav,
   fee,
+  netProceed,
+  timestamp,
   ...
 )}\if{html}{\out{</div>}}
 }

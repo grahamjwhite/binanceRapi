@@ -13,27 +13,9 @@ InlineResponse20032 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{amount}}{character}
-
-\item{\code{coin}}{character}
-
-\item{\code{network}}{character}
-
 \item{\code{status}}{integer}
 
-\item{\code{address}}{character}
-
-\item{\code{addressTag}}{character}
-
-\item{\code{txId}}{character}
-
-\item{\code{insertTime}}{integer}
-
-\item{\code{transferType}}{integer}
-
-\item{\code{unlockConfirm}}{character}
-
-\item{\code{confirmTimes}}{character}
+\item{\code{msg}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -53,20 +35,7 @@ InlineResponse20032 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20032$new(
-  amount,
-  coin,
-  network,
-  status,
-  address,
-  addressTag,
-  txId,
-  insertTime,
-  transferType,
-  unlockConfirm,
-  confirmTimes,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20032$new(status, msg, ...)}\if{html}{\out{</div>}}
 }
 
 }

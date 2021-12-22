@@ -13,11 +13,11 @@ InlineResponse20041 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{symbol}}{character}
+\item{\code{totalServiceCharge}}{character}
 
-\item{\code{makerCommission}}{character}
+\item{\code{totalTransfered}}{character}
 
-\item{\code{takerCommission}}{character}
+\item{\code{transferResult}}{list( \link{InlineResponse20041TransferResult} )}
 }
 \if{html}{\out{</div>}}
 }
@@ -37,7 +37,12 @@ InlineResponse20041 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20041$new(symbol, makerCommission, takerCommission, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20041$new(
+  totalServiceCharge,
+  totalTransfered,
+  transferResult,
+  ...
+)}\if{html}{\out{</div>}}
 }
 
 }

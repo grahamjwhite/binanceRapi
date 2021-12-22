@@ -13,19 +13,9 @@ InlineResponse20082 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{positionAmountVos}}{list( \link{InlineResponse20082PositionAmountVos} )}
+\item{\code{asset}}{character}
 
-\item{\code{totalAmountInBTC}}{character}
-
-\item{\code{totalAmountInUSDT}}{character}
-
-\item{\code{totalFixedAmountInBTC}}{character}
-
-\item{\code{totalFixedAmountInUSDT}}{character}
-
-\item{\code{totalFlexibleInBTC}}{character}
-
-\item{\code{totalFlexibleInUSDT}}{character}
+\item{\code{leftQuota}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -45,16 +35,7 @@ InlineResponse20082 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20082$new(
-  positionAmountVos,
-  totalAmountInBTC,
-  totalAmountInUSDT,
-  totalFixedAmountInBTC,
-  totalFixedAmountInUSDT,
-  totalFlexibleInBTC,
-  totalFlexibleInUSDT,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20082$new(asset, leftQuota, ...)}\if{html}{\out{</div>}}
 }
 
 }

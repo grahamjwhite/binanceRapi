@@ -13,11 +13,11 @@ InlineResponse20091 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{code}}{integer}
+\item{\code{dailyPurchaseId}}{integer}
 
-\item{\code{msg}}{character}
+\item{\code{success}}{character}
 
-\item{\code{data}}{\link{InlineResponse20091Data}}
+\item{\code{time}}{integer}
 }
 \if{html}{\out{</div>}}
 }
@@ -37,7 +37,7 @@ InlineResponse20091 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20091$new(code, msg, data, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20091$new(dailyPurchaseId, success, time, ...)}\if{html}{\out{</div>}}
 }
 
 }

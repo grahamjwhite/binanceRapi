@@ -13,17 +13,11 @@ InlineResponse20044 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{asset}}{character}
+\item{\code{symbol}}{character}
 
-\item{\code{free}}{character}
+\item{\code{makerCommission}}{character}
 
-\item{\code{locked}}{character}
-
-\item{\code{freeze}}{character}
-
-\item{\code{withdrawing}}{character}
-
-\item{\code{btcValuation}}{character}
+\item{\code{takerCommission}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -43,15 +37,7 @@ InlineResponse20044 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20044$new(
-  asset,
-  free,
-  locked,
-  freeze,
-  withdrawing,
-  btcValuation,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20044$new(symbol, makerCommission, takerCommission, ...)}\if{html}{\out{</div>}}
 }
 
 }

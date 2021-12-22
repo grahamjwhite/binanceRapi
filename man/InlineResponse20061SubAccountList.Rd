@@ -15,21 +15,11 @@ InlineResponse20061SubAccountList Class
 \describe{
 \item{\code{email}}{character}
 
-\item{\code{totalInitialMargin}}{character}
+\item{\code{totalAssetOfBtc}}{character}
 
-\item{\code{totalMaintenanceMargin}}{character}
+\item{\code{totalLiabilityOfBtc}}{character}
 
-\item{\code{totalMarginBalance}}{character}
-
-\item{\code{totalOpenOrderInitialMargin}}{character}
-
-\item{\code{totalPositionInitialMargin}}{character}
-
-\item{\code{totalUnrealizedProfit}}{character}
-
-\item{\code{totalWalletBalance}}{character}
-
-\item{\code{asset}}{character}
+\item{\code{totalNetAssetOfBtc}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -51,14 +41,9 @@ InlineResponse20061SubAccountList Class
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InlineResponse20061SubAccountList$new(
   email,
-  totalInitialMargin,
-  totalMaintenanceMargin,
-  totalMarginBalance,
-  totalOpenOrderInitialMargin,
-  totalPositionInitialMargin,
-  totalUnrealizedProfit,
-  totalWalletBalance,
-  asset,
+  totalAssetOfBtc,
+  totalLiabilityOfBtc,
+  totalNetAssetOfBtc,
   ...
 )}\if{html}{\out{</div>}}
 }

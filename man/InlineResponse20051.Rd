@@ -13,7 +13,19 @@ InlineResponse20051 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{balances}}{list( \link{InlineResponse20051Balances} )}
+\item{\code{from}}{character}
+
+\item{\code{to}}{character}
+
+\item{\code{asset}}{character}
+
+\item{\code{qty}}{character}
+
+\item{\code{status}}{character}
+
+\item{\code{tranId}}{integer}
+
+\item{\code{time}}{integer}
 }
 \if{html}{\out{</div>}}
 }
@@ -33,7 +45,7 @@ InlineResponse20051 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20051$new(balances, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20051$new(from, to, asset, qty, status, tranId, time, ...)}\if{html}{\out{</div>}}
 }
 
 }

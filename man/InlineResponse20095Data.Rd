@@ -13,23 +13,11 @@ InlineResponse20095Data Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{fifteenMinHashRate}}{character}
+\item{\code{workerDatas}}{list( \link{InlineResponse20095DataWorkerDatas} )}
 
-\item{\code{dayHashRate}}{character}
+\item{\code{totalNum}}{integer}
 
-\item{\code{validNum}}{integer}
-
-\item{\code{invalidNum}}{integer}
-
-\item{\code{profitToday}}{\link{InlineResponse20095DataProfitToday}}
-
-\item{\code{profitYesterday}}{\link{InlineResponse20095DataProfitToday}}
-
-\item{\code{userName}}{character}
-
-\item{\code{unit}}{character}
-
-\item{\code{algo}}{character}
+\item{\code{pageSize}}{integer}
 }
 \if{html}{\out{</div>}}
 }
@@ -49,18 +37,7 @@ InlineResponse20095Data Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20095Data$new(
-  fifteenMinHashRate,
-  dayHashRate,
-  validNum,
-  invalidNum,
-  profitToday,
-  profitYesterday,
-  userName,
-  unit,
-  algo,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20095Data$new(workerDatas, totalNum, pageSize, ...)}\if{html}{\out{</div>}}
 }
 
 }

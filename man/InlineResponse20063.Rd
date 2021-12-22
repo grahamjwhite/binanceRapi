@@ -13,7 +13,37 @@ InlineResponse20063 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{txnId}}{character}
+\item{\code{email}}{character}
+
+\item{\code{asset}}{character}
+
+\item{\code{assets}}{list( \link{InlineResponse20063Assets} )}
+
+\item{\code{canDeposit}}{character}
+
+\item{\code{canTrade}}{character}
+
+\item{\code{canWithdraw}}{character}
+
+\item{\code{feeTier}}{integer}
+
+\item{\code{maxWithdrawAmount}}{character}
+
+\item{\code{totalInitialMargin}}{character}
+
+\item{\code{totalMaintenanceMargin}}{character}
+
+\item{\code{totalMarginBalance}}{character}
+
+\item{\code{totalOpenOrderInitialMargin}}{character}
+
+\item{\code{totalPositionInitialMargin}}{character}
+
+\item{\code{totalUnrealizedProfit}}{character}
+
+\item{\code{totalWalletBalance}}{character}
+
+\item{\code{updateTime}}{integer}
 }
 \if{html}{\out{</div>}}
 }
@@ -33,7 +63,25 @@ InlineResponse20063 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20063$new(txnId, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20063$new(
+  email,
+  asset,
+  assets,
+  canDeposit,
+  canTrade,
+  canWithdraw,
+  feeTier,
+  maxWithdrawAmount,
+  totalInitialMargin,
+  totalMaintenanceMargin,
+  totalMarginBalance,
+  totalOpenOrderInitialMargin,
+  totalPositionInitialMargin,
+  totalUnrealizedProfit,
+  totalWalletBalance,
+  updateTime,
+  ...
+)}\if{html}{\out{</div>}}
 }
 
 }

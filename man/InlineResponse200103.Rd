@@ -13,11 +13,11 @@ InlineResponse200103 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{poolId}}{integer}
+\item{\code{code}}{integer}
 
-\item{\code{poolName}}{character}
+\item{\code{msg}}{character}
 
-\item{\code{assets}}{list( character )}
+\item{\code{data}}{list( \link{InlineResponse200103Data} )}
 }
 \if{html}{\out{</div>}}
 }
@@ -37,7 +37,7 @@ InlineResponse200103 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse200103$new(poolId, poolName, assets, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse200103$new(code, msg, data, ...)}\if{html}{\out{</div>}}
 }
 
 }

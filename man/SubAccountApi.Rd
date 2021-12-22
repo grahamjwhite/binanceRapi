@@ -19,16 +19,14 @@ Fetch sub-account deposit address  Weight(IP): 1
 \itemize{
 \item \emph{ @param } email character
 \item \emph{ @param } coin character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } network character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20053} \cr
+\item \emph{ @returnType } \link{InlineResponse20056} \cr
 
 
 \item status code : 200 | Deposit address info
 
-\item return type : InlineResponse20053 
+\item return type : InlineResponse20056 
 \item response headers :
 
 \tabular{ll}{
@@ -54,8 +52,6 @@ Fetch sub-account deposit history  Weight(IP): 1
 
 \itemize{
 \item \emph{ @param } email character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } coin character
 \item \emph{ @param } status integer
 \item \emph{ @param } start.time integer
@@ -63,12 +59,12 @@ Fetch sub-account deposit history  Weight(IP): 1
 \item \emph{ @param } limit integer
 \item \emph{ @param } offset integer
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } list( \link{inline_response_200_54} ) \cr
+\item \emph{ @returnType } list( \link{inline_response_200_57} ) \cr
 
 
 \item status code : 200 | Sub-account deposit history
 
-\item return type : array[InlineResponse20054] 
+\item return type : array[InlineResponse20057] 
 \item response headers :
 
 \tabular{ll}{
@@ -94,15 +90,13 @@ Weight(IP): 1
 
 \itemize{
 \item \emph{ @param } email character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } list( \link{inline_response_200_69} ) \cr
+\item \emph{ @returnType } list( \link{inline_response_200_72} ) \cr
 
 
 \item status code : 200 | List of asset details
 
-\item return type : array[InlineResponse20069] 
+\item return type : array[InlineResponse20072] 
 \item response headers :
 
 \tabular{ll}{
@@ -130,15 +124,13 @@ Weight(IP): 1
 \item \emph{ @param } to.email character
 \item \emph{ @param } asset character
 \item \emph{ @param } amount numeric
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20068} \cr
+\item \emph{ @returnType } \link{InlineResponse20071} \cr
 
 
 \item status code : 200 | Transfer id
 
-\item return type : InlineResponse20068 
+\item return type : InlineResponse20071 
 \item response headers :
 
 \tabular{ll}{
@@ -166,16 +158,14 @@ Weight(IP): 1
 \item \emph{ @param } from.email character
 \item \emph{ @param } asset character
 \item \emph{ @param } amount numeric
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } transfer.date integer
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20068} \cr
+\item \emph{ @returnType } \link{InlineResponse20071} \cr
 
 
 \item status code : 200 | Transfer id
 
-\item return type : InlineResponse20068 
+\item return type : InlineResponse20071 
 \item response headers :
 
 \tabular{ll}{
@@ -202,15 +192,13 @@ Weight(IP): 1
 \itemize{
 \item \emph{ @param } email character
 \item \emph{ @param } enable.blvt character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20067} \cr
+\item \emph{ @returnType } \link{InlineResponse20070} \cr
 
 
 \item status code : 200 | BLVT status
 
-\item return type : InlineResponse20067 
+\item return type : InlineResponse20070 
 \item response headers :
 
 \tabular{ll}{
@@ -236,15 +224,13 @@ Weight(IP): 10
 
 \itemize{
 \item \emph{ @param } email character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20060} \cr
+\item \emph{ @returnType } \link{InlineResponse20063} \cr
 
 
 \item status code : 200 | Futures account details
 
-\item return type : InlineResponse20060 
+\item return type : InlineResponse20063 
 \item response headers :
 
 \tabular{ll}{
@@ -269,15 +255,13 @@ Weight(IP): 10
 Weight(IP): 1
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20061} \cr
+\item \emph{ @returnType } \link{InlineResponse20064} \cr
 
 
 \item status code : 200 | Futures account summary
 
-\item return type : InlineResponse20061 
+\item return type : InlineResponse20064 
 \item response headers :
 
 \tabular{ll}{
@@ -303,15 +287,13 @@ Weight(IP): 1
 
 \itemize{
 \item \emph{ @param } email character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20059} \cr
+\item \emph{ @returnType } \link{InlineResponse20062} \cr
 
 
 \item status code : 200 | Futures status
 
-\item return type : InlineResponse20059 
+\item return type : InlineResponse20062 
 \item response headers :
 
 \tabular{ll}{
@@ -338,19 +320,17 @@ Weight(IP): 1
 \itemize{
 \item \emph{ @param } email character
 \item \emph{ @param } futures.type integer
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } start.time integer
 \item \emph{ @param } end.time integer
 \item \emph{ @param } page integer
 \item \emph{ @param } limit integer
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20049} \cr
+\item \emph{ @returnType } \link{InlineResponse20052} \cr
 
 
 \item status code : 200 | Sub-account Futures Asset Transfer History
 
-\item return type : InlineResponse20049 
+\item return type : InlineResponse20052 
 \item response headers :
 
 \tabular{ll}{
@@ -380,15 +360,13 @@ Weight(IP): 1
 \item \emph{ @param } futures.type integer
 \item \emph{ @param } asset character
 \item \emph{ @param } amount numeric
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20050} \cr
+\item \emph{ @returnType } \link{InlineResponse20053} \cr
 
 
 \item status code : 200 | Futures Asset Transfer Info
 
-\item return type : InlineResponse20050 
+\item return type : InlineResponse20053 
 \item response headers :
 
 \tabular{ll}{
@@ -414,15 +392,13 @@ Weight(IP): 10
 
 \itemize{
 \item \emph{ @param } email character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } list( \link{inline_response_200_62} ) \cr
+\item \emph{ @returnType } list( \link{inline_response_200_65} ) \cr
 
 
 \item status code : 200 | Futures account summary
 
-\item return type : array[InlineResponse20062] 
+\item return type : array[InlineResponse20065] 
 \item response headers :
 
 \tabular{ll}{
@@ -451,15 +427,13 @@ Weight(IP): 1
 \item \emph{ @param } asset character
 \item \emph{ @param } amount numeric
 \item \emph{ @param } type Enum < [1, 2, 3, 4] >
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20063} \cr
+\item \emph{ @returnType } \link{InlineResponse20066} \cr
 
 
 \item status code : 200 | Transfer id
 
-\item return type : InlineResponse20063 
+\item return type : InlineResponse20066 
 \item response headers :
 
 \tabular{ll}{
@@ -484,19 +458,17 @@ Weight(IP): 1
 Weight(IP): 1
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } email character
 \item \emph{ @param } is.freeze Enum < [true, false] >
 \item \emph{ @param } page integer
 \item \emph{ @param } limit integer
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20047} \cr
+\item \emph{ @returnType } \link{InlineResponse20050} \cr
 
 
 \item status code : 200 | List of sub-accounts
 
-\item return type : InlineResponse20047 
+\item return type : InlineResponse20050 
 \item response headers :
 
 \tabular{ll}{
@@ -522,15 +494,13 @@ Weight(IP): 10
 
 \itemize{
 \item \emph{ @param } email character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20057} \cr
+\item \emph{ @returnType } \link{InlineResponse20060} \cr
 
 
 \item status code : 200 | Margin sub-account details
 
-\item return type : InlineResponse20057 
+\item return type : InlineResponse20060 
 \item response headers :
 
 \tabular{ll}{
@@ -555,15 +525,13 @@ Weight(IP): 10
 Weight(IP): 10
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20058} \cr
+\item \emph{ @returnType } \link{InlineResponse20061} \cr
 
 
 \item status code : 200 | Margin sub-account details
 
-\item return type : InlineResponse20058 
+\item return type : InlineResponse20061 
 \item response headers :
 
 \tabular{ll}{
@@ -589,15 +557,13 @@ Weight(IP): 1
 
 \itemize{
 \item \emph{ @param } email character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20056} \cr
+\item \emph{ @returnType } \link{InlineResponse20059} \cr
 
 
 \item status code : 200 | Margin status
 
-\item return type : InlineResponse20056 
+\item return type : InlineResponse20059 
 \item response headers :
 
 \tabular{ll}{
@@ -626,15 +592,13 @@ Weight(IP): 1
 \item \emph{ @param } asset character
 \item \emph{ @param } amount numeric
 \item \emph{ @param } type Enum < [1, 2] >
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20063} \cr
+\item \emph{ @returnType } \link{InlineResponse20066} \cr
 
 
 \item status code : 200 | Transfer id
 
-\item return type : InlineResponse20063 
+\item return type : InlineResponse20066 
 \item response headers :
 
 \tabular{ll}{
@@ -660,17 +624,15 @@ Get BTC valued asset summary of subaccounts.  Weight(IP): 1
 
 \itemize{
 \item \emph{ @param } email character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } page integer
 \item \emph{ @param } size integer
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20052} \cr
+\item \emph{ @returnType } \link{InlineResponse20055} \cr
 
 
 \item status code : 200 | Summary of Sub-account Spot Assets
 
-\item return type : InlineResponse20052 
+\item return type : InlineResponse20055 
 \item response headers :
 
 \tabular{ll}{
@@ -695,16 +657,149 @@ Get BTC valued asset summary of subaccounts.  Weight(IP): 1
 - If no &#x60;email&#x60; sent, all sub-accounts&#39; information will be returned.  Weight(IP): 10
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } email character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } list( \link{inline_response_200_55} ) \cr
+\item \emph{ @returnType } list( \link{inline_response_200_58} ) \cr
 
 
 \item status code : 200 | Status on Margin/Futures
 
-\item return type : array[InlineResponse20055] 
+\item return type : array[InlineResponse20058] 
+\item response headers :
+
+\tabular{ll}{
+}
+\item status code : 400 | Bad Request
+
+\item return type : Error 
+\item response headers :
+
+\tabular{ll}{
+}
+\item status code : 401 | Unauthorized Request
+
+\item return type : Error 
+\item response headers :
+
+\tabular{ll}{
+}
+}
+
+\strong{ SapiV1SubAccountSubAccountApiIpRestrictionGet } \emph{ Get IP Restriction for a Sub-account API Key (For Master Account) }
+Weight(UID): 3000
+
+\itemize{
+\item \emph{ @param } email character
+\item \emph{ @param } sub.account.api.key character
+\item \emph{ @param } recv.window integer
+\item \emph{ @returnType } \link{InlineResponse20073} \cr
+
+
+\item status code : 200 | IP Restriction information
+
+\item return type : InlineResponse20073 
+\item response headers :
+
+\tabular{ll}{
+}
+\item status code : 400 | Bad Request
+
+\item return type : Error 
+\item response headers :
+
+\tabular{ll}{
+}
+\item status code : 401 | Unauthorized Request
+
+\item return type : Error 
+\item response headers :
+
+\tabular{ll}{
+}
+}
+
+\strong{ SapiV1SubAccountSubAccountApiIpRestrictionIpListDelete } \emph{ Delete IP List for a Sub-account API Key (For Master Account) }
+Weight(UID): 3000
+
+\itemize{
+\item \emph{ @param } email character
+\item \emph{ @param } sub.account.api.key character
+\item \emph{ @param } ip.address \link{AnyType}
+\item \emph{ @param } recv.window integer
+\item \emph{ @returnType } \link{InlineResponse20076} \cr
+
+
+\item status code : 200 | Delete IP information
+
+\item return type : InlineResponse20076 
+\item response headers :
+
+\tabular{ll}{
+}
+\item status code : 400 | Bad Request
+
+\item return type : Error 
+\item response headers :
+
+\tabular{ll}{
+}
+\item status code : 401 | Unauthorized Request
+
+\item return type : Error 
+\item response headers :
+
+\tabular{ll}{
+}
+}
+
+\strong{ SapiV1SubAccountSubAccountApiIpRestrictionIpListPost } \emph{ Add IP List for a Sub-account API Key (For Master Account) }
+Before the usage of this endpoint, please ensure &#x60;POST /sapi/v1/sub-account/subAccountApi/ipRestriction&#x60; was used to enable the IP restriction.  Weight(UID): 3000
+
+\itemize{
+\item \emph{ @param } email character
+\item \emph{ @param } sub.account.api.key character
+\item \emph{ @param } ip.address \link{AnyType}
+\item \emph{ @param } recv.window integer
+\item \emph{ @returnType } \link{InlineResponse20075} \cr
+
+
+\item status code : 200 | Add IP information
+
+\item return type : InlineResponse20075 
+\item response headers :
+
+\tabular{ll}{
+}
+\item status code : 400 | Bad Request
+
+\item return type : Error 
+\item response headers :
+
+\tabular{ll}{
+}
+\item status code : 401 | Unauthorized Request
+
+\item return type : Error 
+\item response headers :
+
+\tabular{ll}{
+}
+}
+
+\strong{ SapiV1SubAccountSubAccountApiIpRestrictionPost } \emph{ Enable or Disable IP Restriction for a Sub-account API Key (For Master Account) }
+Weight(UID): 3000
+
+\itemize{
+\item \emph{ @param } email character
+\item \emph{ @param } sub.account.api.key character
+\item \emph{ @param } ip.restrict \link{AnyType}
+\item \emph{ @param } recv.window integer
+\item \emph{ @returnType } \link{InlineResponse20074} \cr
+
+
+\item status code : 200 | IP Restriction information
+
+\item return type : InlineResponse20074 
 \item response headers :
 
 \tabular{ll}{
@@ -729,8 +824,6 @@ Get BTC valued asset summary of subaccounts.  Weight(IP): 1
 - fromEmail and toEmail cannot be sent at the same time. - Return fromEmail equal master account email by default.  Weight(IP): 1
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } from.email character
 \item \emph{ @param } to.email character
 \item \emph{ @param } start.time integer
@@ -738,12 +831,12 @@ Get BTC valued asset summary of subaccounts.  Weight(IP): 1
 \item \emph{ @param } page integer
 \item \emph{ @param } limit integer
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } list( \link{inline_response_200_48} ) \cr
+\item \emph{ @returnType } list( \link{inline_response_200_51} ) \cr
 
 
 \item status code : 200 | Sub-account Spot Asset Transfer History
 
-\item return type : array[InlineResponse20048] 
+\item return type : array[InlineResponse20051] 
 \item response headers :
 
 \tabular{ll}{
@@ -770,15 +863,13 @@ Weight(IP): 1
 \itemize{
 \item \emph{ @param } asset character
 \item \emph{ @param } amount numeric
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20063} \cr
+\item \emph{ @returnType } \link{InlineResponse20066} \cr
 
 
 \item status code : 200 | Transfer id
 
-\item return type : InlineResponse20063 
+\item return type : InlineResponse20066 
 \item response headers :
 
 \tabular{ll}{
@@ -806,15 +897,13 @@ Weight(IP): 1
 \item \emph{ @param } to.email character
 \item \emph{ @param } asset character
 \item \emph{ @param } amount numeric
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20063} \cr
+\item \emph{ @returnType } \link{InlineResponse20066} \cr
 
 
 \item status code : 200 | Transfer id
 
-\item return type : InlineResponse20063 
+\item return type : InlineResponse20066 
 \item response headers :
 
 \tabular{ll}{
@@ -839,20 +928,18 @@ Weight(IP): 1
 - If &#x60;type&#x60; is not sent, the records of type 2: transfer out will be returned by default. - If &#x60;startTime&#x60; and &#x60;endTime&#x60; are not sent, the recent 30-day data will be returned.  Weight(IP): 1
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } asset character
 \item \emph{ @param } type Enum < [1, 2] >
 \item \emph{ @param } start.time integer
 \item \emph{ @param } end.time integer
 \item \emph{ @param } limit integer
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } list( \link{inline_response_200_64} ) \cr
+\item \emph{ @returnType } list( \link{inline_response_200_67} ) \cr
 
 
 \item status code : 200 | Transfer id
 
-\item return type : array[InlineResponse20064] 
+\item return type : array[InlineResponse20067] 
 \item response headers :
 
 \tabular{ll}{
@@ -877,8 +964,6 @@ Weight(IP): 1
 - fromEmail and toEmail cannot be sent at the same time. - Return fromEmail equal master account email by default. - Only get the latest history of past 30 days.  Weight(IP): 1
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } from.email character
 \item \emph{ @param } to.email character
 \item \emph{ @param } start.time integer
@@ -886,12 +971,12 @@ Weight(IP): 1
 \item \emph{ @param } page integer
 \item \emph{ @param } limit character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } list( \link{inline_response_200_65} ) \cr
+\item \emph{ @returnType } list( \link{inline_response_200_68} ) \cr
 
 
 \item status code : 200 | Transfer History
 
-\item return type : array[InlineResponse20065] 
+\item return type : array[InlineResponse20068] 
 \item response headers :
 
 \tabular{ll}{
@@ -920,17 +1005,15 @@ Weight(IP): 1
 \item \emph{ @param } to.account.type Enum < [SPOT, USDT_FUTURE, COIN_FUTURE] >
 \item \emph{ @param } asset character
 \item \emph{ @param } amount numeric
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } from.email character
 \item \emph{ @param } to.email character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20066} \cr
+\item \emph{ @returnType } \link{InlineResponse20069} \cr
 
 
 \item status code : 200 | Transfer id
 
-\item return type : InlineResponse20066 
+\item return type : InlineResponse20069 
 \item response headers :
 
 \tabular{ll}{
@@ -956,15 +1039,13 @@ Weight(IP): 1
 
 \itemize{
 \item \emph{ @param } sub.account.string character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20046} \cr
+\item \emph{ @returnType } \link{InlineResponse20049} \cr
 
 
 \item status code : 200 | Return the created virtual email
 
-\item return type : InlineResponse20046 
+\item return type : InlineResponse20049 
 \item response headers :
 
 \tabular{ll}{
@@ -991,8 +1072,6 @@ Weight(IP): 1
 \itemize{
 \item \emph{ @param } email character
 \item \emph{ @param } futures.type Enum < [1, 2] >
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
 \item \emph{ @returnType } \link{OneOfsubAccountUSDTFuturesDetailssubAccountCOINFuturesDetails} \cr
 
@@ -1025,8 +1104,6 @@ Weight(IP): 10
 
 \itemize{
 \item \emph{ @param } futures.type Enum < [1, 2] >
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } page integer
 \item \emph{ @param } limit character
 \item \emph{ @param } recv.window integer
@@ -1062,8 +1139,6 @@ Weight(IP): 1
 \itemize{
 \item \emph{ @param } email character
 \item \emph{ @param } futures.type Enum < [1, 2] >
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
 \item \emph{ @returnType } \link{OneOfsubAccountUSDTFuturesPositionRisksubAccountCOINFuturesPositionRisk} \cr
 
@@ -1096,15 +1171,13 @@ Fetch sub-account assets  Weight(IP): 1
 
 \itemize{
 \item \emph{ @param } email character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse20051} \cr
+\item \emph{ @returnType } \link{InlineResponse20054} \cr
 
 
 \item status code : 200 | List of assets balances
 
-\item return type : InlineResponse20051 
+\item return type : InlineResponse20054 
 \item response headers :
 
 \tabular{ll}{
@@ -1135,26 +1208,19 @@ Fetch sub-account assets  Weight(IP): 1
 library(binanceRapi)
 var.email <- 'email_example' # character | Sub-account email
 var.coin <- 'BNB' # character | Coin name
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.network <- 'network_example' # character | 
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Sub-account Spot Assets Summary (For Master Account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1CapitalDepositSubAddressGet(var.email, var.coin, var.timestamp, var.signature, network=var.network, recv.window=var.recv.window)
+result <- api.instance$SapiV1CapitalDepositSubAddressGet(var.email, var.coin, network=var.network, recv.window=var.recv.window)
 
 
 ####################  SapiV1CapitalDepositSubHisrecGet  ####################
 
 library(binanceRapi)
 var.email <- 'email_example' # character | Sub-account email
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.coin <- 'BNB' # character | Coin name
 var.status <- 56 # integer | 0(0:pending,6: credited but cannot withdraw, 1:success)
 var.start.time <- 56 # integer | UTC timestamp in ms
@@ -1166,27 +1232,19 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Sub-account Deposit History (For Master Account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1CapitalDepositSubHisrecGet(var.email, var.timestamp, var.signature, coin=var.coin, status=var.status, start.time=var.start.time, end.time=var.end.time, limit=var.limit, offset=var.offset, recv.window=var.recv.window)
+result <- api.instance$SapiV1CapitalDepositSubHisrecGet(var.email, coin=var.coin, status=var.status, start.time=var.start.time, end.time=var.end.time, limit=var.limit, offset=var.offset, recv.window=var.recv.window)
 
 
 ####################  SapiV1ManagedSubaccountAssetGet  ####################
 
 library(binanceRapi)
 var.email <- 'email_example' # character | Sub-account email
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Managed sub-account asset details（For Investor Master Account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1ManagedSubaccountAssetGet(var.email, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1ManagedSubaccountAssetGet(var.email, recv.window=var.recv.window)
 
 
 ####################  SapiV1ManagedSubaccountDepositPost  ####################
@@ -1195,17 +1253,12 @@ library(binanceRapi)
 var.to.email <- 'to.email_example' # character | Recipient email
 var.asset <- 'BTC' # character | 
 var.amount <- 1.01 # numeric | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Deposit assets into the managed sub-account（For Investor Master Account）
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1ManagedSubaccountDepositPost(var.to.email, var.asset, var.amount, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1ManagedSubaccountDepositPost(var.to.email, var.asset, var.amount, recv.window=var.recv.window)
 
 
 ####################  SapiV1ManagedSubaccountWithdrawPost  ####################
@@ -1214,18 +1267,13 @@ library(binanceRapi)
 var.from.email <- 'from.email_example' # character | Sender email
 var.asset <- 'BTC' # character | 
 var.amount <- 1.01 # numeric | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.transfer.date <- 56 # integer | Withdrawals is automatically occur on the transfer date(UTC0). If a date is not selected, the withdrawal occurs right now
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Withdrawl assets from the managed sub-account（For Investor Master Account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1ManagedSubaccountWithdrawPost(var.from.email, var.asset, var.amount, var.timestamp, var.signature, transfer.date=var.transfer.date, recv.window=var.recv.window)
+result <- api.instance$SapiV1ManagedSubaccountWithdrawPost(var.from.email, var.asset, var.amount, transfer.date=var.transfer.date, recv.window=var.recv.window)
 
 
 ####################  SapiV1SubAccountBlvtEnablePost  ####################
@@ -1233,67 +1281,47 @@ result <- api.instance$SapiV1ManagedSubaccountWithdrawPost(var.from.email, var.a
 library(binanceRapi)
 var.email <- 'email_example' # character | Sub-account email
 var.enable.blvt <- 'enable.blvt_example' # character | Only true for now
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Enable Leverage Token for Sub-account (For Master Account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1SubAccountBlvtEnablePost(var.email, var.enable.blvt, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1SubAccountBlvtEnablePost(var.email, var.enable.blvt, recv.window=var.recv.window)
 
 
 ####################  SapiV1SubAccountFuturesAccountGet  ####################
 
 library(binanceRapi)
 var.email <- 'email_example' # character | Sub-account email
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Detail on Sub-account's Futures Account (For Master Account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1SubAccountFuturesAccountGet(var.email, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1SubAccountFuturesAccountGet(var.email, recv.window=var.recv.window)
 
 
 ####################  SapiV1SubAccountFuturesAccountSummaryGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Summary of Sub-account's Futures Account (For Master Account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1SubAccountFuturesAccountSummaryGet(var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1SubAccountFuturesAccountSummaryGet(recv.window=var.recv.window)
 
 
 ####################  SapiV1SubAccountFuturesEnablePost  ####################
 
 library(binanceRapi)
 var.email <- 'email_example' # character | Sub-account email
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Enable Futures for Sub-account (For Master Account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1SubAccountFuturesEnablePost(var.email, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1SubAccountFuturesEnablePost(var.email, recv.window=var.recv.window)
 
 
 ####################  SapiV1SubAccountFuturesInternalTransferGet  ####################
@@ -1301,8 +1329,6 @@ result <- api.instance$SapiV1SubAccountFuturesEnablePost(var.email, var.timestam
 library(binanceRapi)
 var.email <- 'email_example' # character | Sub-account email
 var.futures.type <- 2 # integer | 1:USDT-margined Futures, 2: Coin-margined Futures
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.start.time <- 56 # integer | UTC timestamp in ms
 var.end.time <- 56 # integer | UTC timestamp in ms
 var.page <- 1 # integer | Default 1
@@ -1312,10 +1338,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Sub-account Futures Asset Transfer History (For Master Account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1SubAccountFuturesInternalTransferGet(var.email, var.futures.type, var.timestamp, var.signature, start.time=var.start.time, end.time=var.end.time, page=var.page, limit=var.limit, recv.window=var.recv.window)
+result <- api.instance$SapiV1SubAccountFuturesInternalTransferGet(var.email, var.futures.type, start.time=var.start.time, end.time=var.end.time, page=var.page, limit=var.limit, recv.window=var.recv.window)
 
 
 ####################  SapiV1SubAccountFuturesInternalTransferPost  ####################
@@ -1326,34 +1349,24 @@ var.to.email <- 'to.email_example' # character | Recipient email
 var.futures.type <- 2 # integer | 1:USDT-margined Futures,2: Coin-margined Futures
 var.asset <- 'BTC' # character | 
 var.amount <- 1.01 # numeric | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Sub-account Futures Asset Transfer (For Master Account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1SubAccountFuturesInternalTransferPost(var.from.email, var.to.email, var.futures.type, var.asset, var.amount, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1SubAccountFuturesInternalTransferPost(var.from.email, var.to.email, var.futures.type, var.asset, var.amount, recv.window=var.recv.window)
 
 
 ####################  SapiV1SubAccountFuturesPositionRiskGet  ####################
 
 library(binanceRapi)
 var.email <- 'email_example' # character | Sub-account email
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Futures Position-Risk of Sub-account (For Master Account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1SubAccountFuturesPositionRiskGet(var.email, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1SubAccountFuturesPositionRiskGet(var.email, recv.window=var.recv.window)
 
 
 ####################  SapiV1SubAccountFuturesTransferPost  ####################
@@ -1363,24 +1376,17 @@ var.email <- 'email_example' # character | Sub-account email
 var.asset <- 'BTC' # character | 
 var.amount <- 1.01 # numeric | 
 var.type <- 56 # integer | 1: transfer from subaccount's spot account to its USDT-margined futures account  2: transfer from subaccount's USDT-margined futures account to its spot account  3: transfer from subaccount's spot account to its COIN-margined futures account  4:transfer from subaccount's COIN-margined futures account to its spot account
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Transfer for Sub-account (For Master Account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1SubAccountFuturesTransferPost(var.email, var.asset, var.amount, var.type, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1SubAccountFuturesTransferPost(var.email, var.asset, var.amount, var.type, recv.window=var.recv.window)
 
 
 ####################  SapiV1SubAccountListGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.email <- 'email_example' # character | Sub-account email
 var.is.freeze <- 'is.freeze_example' # character | 
 var.page <- 1 # integer | Default 1
@@ -1390,60 +1396,42 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Query Sub-account List (For Master Account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1SubAccountListGet(var.timestamp, var.signature, email=var.email, is.freeze=var.is.freeze, page=var.page, limit=var.limit, recv.window=var.recv.window)
+result <- api.instance$SapiV1SubAccountListGet(email=var.email, is.freeze=var.is.freeze, page=var.page, limit=var.limit, recv.window=var.recv.window)
 
 
 ####################  SapiV1SubAccountMarginAccountGet  ####################
 
 library(binanceRapi)
 var.email <- 'email_example' # character | Sub-account email
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Detail on Sub-account's Margin Account (For Master Account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1SubAccountMarginAccountGet(var.email, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1SubAccountMarginAccountGet(var.email, recv.window=var.recv.window)
 
 
 ####################  SapiV1SubAccountMarginAccountSummaryGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Summary of Sub-account's Margin Account (For Master Account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1SubAccountMarginAccountSummaryGet(var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1SubAccountMarginAccountSummaryGet(recv.window=var.recv.window)
 
 
 ####################  SapiV1SubAccountMarginEnablePost  ####################
 
 library(binanceRapi)
 var.email <- 'email_example' # character | Sub-account email
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Enable Margin for Sub-account (For Master Account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1SubAccountMarginEnablePost(var.email, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1SubAccountMarginEnablePost(var.email, recv.window=var.recv.window)
 
 
 ####################  SapiV1SubAccountMarginTransferPost  ####################
@@ -1453,25 +1441,18 @@ var.email <- 'email_example' # character | Sub-account email
 var.asset <- 'BTC' # character | 
 var.amount <- 1.01 # numeric | 
 var.type <- 56 # integer | 1: transfer from subaccount's spot account to margin account  2: transfer from subaccount's margin account to its spot account
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Margin Transfer for Sub-account (For Master Account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1SubAccountMarginTransferPost(var.email, var.asset, var.amount, var.type, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1SubAccountMarginTransferPost(var.email, var.asset, var.amount, var.type, recv.window=var.recv.window)
 
 
 ####################  SapiV1SubAccountSpotSummaryGet  ####################
 
 library(binanceRapi)
 var.email <- 'email_example' # character | Sub-account email
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.page <- 1 # integer | Default 1
 var.size <- 56 # integer | Default:10 Max:20
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -1479,34 +1460,79 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Sub-account Spot Assets Summary (For Master Account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1SubAccountSpotSummaryGet(var.email, var.timestamp, var.signature, page=var.page, size=var.size, recv.window=var.recv.window)
+result <- api.instance$SapiV1SubAccountSpotSummaryGet(var.email, page=var.page, size=var.size, recv.window=var.recv.window)
 
 
 ####################  SapiV1SubAccountStatusGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.email <- 'email_example' # character | Sub-account email
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Sub-account's Status on Margin/Futures (For Master Account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
+result <- api.instance$SapiV1SubAccountStatusGet(email=var.email, recv.window=var.recv.window)
 
-result <- api.instance$SapiV1SubAccountStatusGet(var.timestamp, var.signature, email=var.email, recv.window=var.recv.window)
+
+####################  SapiV1SubAccountSubAccountApiIpRestrictionGet  ####################
+
+library(binanceRapi)
+var.email <- 'email_example' # character | Sub-account email
+var.sub.account.api.key <- 'sub.account.api.key_example' # character | 
+var.recv.window <- 5000 # integer | The value cannot be greater than 60000
+
+#Get IP Restriction for a Sub-account API Key (For Master Account)
+api.instance <- SubAccountApi$new()
+
+result <- api.instance$SapiV1SubAccountSubAccountApiIpRestrictionGet(var.email, var.sub.account.api.key, recv.window=var.recv.window)
+
+
+####################  SapiV1SubAccountSubAccountApiIpRestrictionIpListDelete  ####################
+
+library(binanceRapi)
+var.email <- 'email_example' # character | Sub-account email
+var.sub.account.api.key <- 'sub.account.api.key_example' # character | 
+var.ip.address <- AnyType$new() # AnyType | Can be added in batches, separated by commas
+var.recv.window <- 5000 # integer | The value cannot be greater than 60000
+
+#Delete IP List for a Sub-account API Key (For Master Account)
+api.instance <- SubAccountApi$new()
+
+result <- api.instance$SapiV1SubAccountSubAccountApiIpRestrictionIpListDelete(var.email, var.sub.account.api.key, var.ip.address, recv.window=var.recv.window)
+
+
+####################  SapiV1SubAccountSubAccountApiIpRestrictionIpListPost  ####################
+
+library(binanceRapi)
+var.email <- 'email_example' # character | Sub-account email
+var.sub.account.api.key <- 'sub.account.api.key_example' # character | 
+var.ip.address <- AnyType$new() # AnyType | Can be added in batches, separated by commas
+var.recv.window <- 5000 # integer | The value cannot be greater than 60000
+
+#Add IP List for a Sub-account API Key (For Master Account)
+api.instance <- SubAccountApi$new()
+
+result <- api.instance$SapiV1SubAccountSubAccountApiIpRestrictionIpListPost(var.email, var.sub.account.api.key, var.ip.address, recv.window=var.recv.window)
+
+
+####################  SapiV1SubAccountSubAccountApiIpRestrictionPost  ####################
+
+library(binanceRapi)
+var.email <- 'email_example' # character | Sub-account email
+var.sub.account.api.key <- 'sub.account.api.key_example' # character | 
+var.ip.restrict <- AnyType$new() # AnyType | true or false
+var.recv.window <- 5000 # integer | The value cannot be greater than 60000
+
+#Enable or Disable IP Restriction for a Sub-account API Key (For Master Account)
+api.instance <- SubAccountApi$new()
+
+result <- api.instance$SapiV1SubAccountSubAccountApiIpRestrictionPost(var.email, var.sub.account.api.key, var.ip.restrict, recv.window=var.recv.window)
 
 
 ####################  SapiV1SubAccountSubTransferHistoryGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.from.email <- 'from.email_example' # character | Sub-account email
 var.to.email <- 'to.email_example' # character | Sub-account email
 var.start.time <- 56 # integer | UTC timestamp in ms
@@ -1518,10 +1544,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Sub-account Spot Asset Transfer History (For Master Account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1SubAccountSubTransferHistoryGet(var.timestamp, var.signature, from.email=var.from.email, to.email=var.to.email, start.time=var.start.time, end.time=var.end.time, page=var.page, limit=var.limit, recv.window=var.recv.window)
+result <- api.instance$SapiV1SubAccountSubTransferHistoryGet(from.email=var.from.email, to.email=var.to.email, start.time=var.start.time, end.time=var.end.time, page=var.page, limit=var.limit, recv.window=var.recv.window)
 
 
 ####################  SapiV1SubAccountTransferSubToMasterPost  ####################
@@ -1529,17 +1552,12 @@ result <- api.instance$SapiV1SubAccountSubTransferHistoryGet(var.timestamp, var.
 library(binanceRapi)
 var.asset <- 'BTC' # character | 
 var.amount <- 1.01 # numeric | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Transfer to Master (For Sub-account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1SubAccountTransferSubToMasterPost(var.asset, var.amount, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1SubAccountTransferSubToMasterPost(var.asset, var.amount, recv.window=var.recv.window)
 
 
 ####################  SapiV1SubAccountTransferSubToSubPost  ####################
@@ -1548,24 +1566,17 @@ library(binanceRapi)
 var.to.email <- 'to.email_example' # character | Recipient email
 var.asset <- 'BTC' # character | 
 var.amount <- 1.01 # numeric | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Transfer to Sub-account of Same Master (For Sub-account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1SubAccountTransferSubToSubPost(var.to.email, var.asset, var.amount, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1SubAccountTransferSubToSubPost(var.to.email, var.asset, var.amount, recv.window=var.recv.window)
 
 
 ####################  SapiV1SubAccountTransferSubUserHistoryGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.asset <- 'BNB' # character | 
 var.type <- 56 # integer | 1: transfer in  2:  transfer out
 var.start.time <- 56 # integer | UTC timestamp in ms
@@ -1576,17 +1587,12 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Sub-account Transfer History (For Sub-account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1SubAccountTransferSubUserHistoryGet(var.timestamp, var.signature, asset=var.asset, type=var.type, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
+result <- api.instance$SapiV1SubAccountTransferSubUserHistoryGet(asset=var.asset, type=var.type, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
 
 
 ####################  SapiV1SubAccountUniversalTransferGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.from.email <- 'from.email_example' # character | Sub-account email
 var.to.email <- 'to.email_example' # character | Sub-account email
 var.start.time <- 56 # integer | UTC timestamp in ms
@@ -1598,10 +1604,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Universal Transfer History (For Master Account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1SubAccountUniversalTransferGet(var.timestamp, var.signature, from.email=var.from.email, to.email=var.to.email, start.time=var.start.time, end.time=var.end.time, page=var.page, limit=var.limit, recv.window=var.recv.window)
+result <- api.instance$SapiV1SubAccountUniversalTransferGet(from.email=var.from.email, to.email=var.to.email, start.time=var.start.time, end.time=var.end.time, page=var.page, limit=var.limit, recv.window=var.recv.window)
 
 
 ####################  SapiV1SubAccountUniversalTransferPost  ####################
@@ -1611,8 +1614,6 @@ var.from.account.type <- 'from.account.type_example' # character |
 var.to.account.type <- 'to.account.type_example' # character | 
 var.asset <- 'BTC' # character | 
 var.amount <- 1.01 # numeric | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.from.email <- 'from.email_example' # character | Sub-account email
 var.to.email <- 'to.email_example' # character | Sub-account email
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -1620,27 +1621,19 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Universal Transfer (For Master Account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1SubAccountUniversalTransferPost(var.from.account.type, var.to.account.type, var.asset, var.amount, var.timestamp, var.signature, from.email=var.from.email, to.email=var.to.email, recv.window=var.recv.window)
+result <- api.instance$SapiV1SubAccountUniversalTransferPost(var.from.account.type, var.to.account.type, var.asset, var.amount, from.email=var.from.email, to.email=var.to.email, recv.window=var.recv.window)
 
 
 ####################  SapiV1SubAccountVirtualSubAccountPost  ####################
 
 library(binanceRapi)
 var.sub.account.string <- 'sub.account.string_example' # character | Please input a string. We will create a virtual email using that string for you to register
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Create a Virtual Sub-account(For Master Account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1SubAccountVirtualSubAccountPost(var.sub.account.string, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1SubAccountVirtualSubAccountPost(var.sub.account.string, recv.window=var.recv.window)
 
 
 ####################  SapiV2SubAccountFuturesAccountGet  ####################
@@ -1648,25 +1641,18 @@ result <- api.instance$SapiV1SubAccountVirtualSubAccountPost(var.sub.account.str
 library(binanceRapi)
 var.email <- 'email_example' # character | Sub-account email
 var.futures.type <- 56 # integer | 1:USDT Margined Futures  2:COIN Margined Futures
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Detail on Sub-account's Futures Account V2 (For Master Account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV2SubAccountFuturesAccountGet(var.email, var.futures.type, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV2SubAccountFuturesAccountGet(var.email, var.futures.type, recv.window=var.recv.window)
 
 
 ####################  SapiV2SubAccountFuturesAccountSummaryGet  ####################
 
 library(binanceRapi)
 var.futures.type <- 56 # integer | 1:USDT Margined Futures  2:COIN Margined Futures
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.page <- 1 # integer | Default 1
 var.limit <- 'limit_example' # character | Default 10, Max 20
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -1674,10 +1660,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Summary of Sub-account's Futures Account V2 (For Master Account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV2SubAccountFuturesAccountSummaryGet(var.futures.type, var.timestamp, var.signature, page=var.page, limit=var.limit, recv.window=var.recv.window)
+result <- api.instance$SapiV2SubAccountFuturesAccountSummaryGet(var.futures.type, page=var.page, limit=var.limit, recv.window=var.recv.window)
 
 
 ####################  SapiV2SubAccountFuturesPositionRiskGet  ####################
@@ -1685,34 +1668,24 @@ result <- api.instance$SapiV2SubAccountFuturesAccountSummaryGet(var.futures.type
 library(binanceRapi)
 var.email <- 'email_example' # character | Sub-account email
 var.futures.type <- 56 # integer | 1:USDT Margined Futures  2:COIN Margined Futures
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Futures Position-Risk of Sub-account V2 (For Master Account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV2SubAccountFuturesPositionRiskGet(var.email, var.futures.type, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV2SubAccountFuturesPositionRiskGet(var.email, var.futures.type, recv.window=var.recv.window)
 
 
 ####################  SapiV3SubAccountAssetsGet  ####################
 
 library(binanceRapi)
 var.email <- 'email_example' # character | Sub-account email
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Sub-account Assets (For Master Account)
 api.instance <- SubAccountApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV3SubAccountAssetsGet(var.email, recv.window=var.recv.window)
 
 
 }
@@ -1768,6 +1741,14 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \item \href{#method-SapiV1SubAccountSpotSummaryGetWithHttpInfo}{\code{SubAccountApi$SapiV1SubAccountSpotSummaryGetWithHttpInfo()}}
 \item \href{#method-SapiV1SubAccountStatusGet}{\code{SubAccountApi$SapiV1SubAccountStatusGet()}}
 \item \href{#method-SapiV1SubAccountStatusGetWithHttpInfo}{\code{SubAccountApi$SapiV1SubAccountStatusGetWithHttpInfo()}}
+\item \href{#method-SapiV1SubAccountSubAccountApiIpRestrictionGet}{\code{SubAccountApi$SapiV1SubAccountSubAccountApiIpRestrictionGet()}}
+\item \href{#method-SapiV1SubAccountSubAccountApiIpRestrictionGetWithHttpInfo}{\code{SubAccountApi$SapiV1SubAccountSubAccountApiIpRestrictionGetWithHttpInfo()}}
+\item \href{#method-SapiV1SubAccountSubAccountApiIpRestrictionIpListDelete}{\code{SubAccountApi$SapiV1SubAccountSubAccountApiIpRestrictionIpListDelete()}}
+\item \href{#method-SapiV1SubAccountSubAccountApiIpRestrictionIpListDeleteWithHttpInfo}{\code{SubAccountApi$SapiV1SubAccountSubAccountApiIpRestrictionIpListDeleteWithHttpInfo()}}
+\item \href{#method-SapiV1SubAccountSubAccountApiIpRestrictionIpListPost}{\code{SubAccountApi$SapiV1SubAccountSubAccountApiIpRestrictionIpListPost()}}
+\item \href{#method-SapiV1SubAccountSubAccountApiIpRestrictionIpListPostWithHttpInfo}{\code{SubAccountApi$SapiV1SubAccountSubAccountApiIpRestrictionIpListPostWithHttpInfo()}}
+\item \href{#method-SapiV1SubAccountSubAccountApiIpRestrictionPost}{\code{SubAccountApi$SapiV1SubAccountSubAccountApiIpRestrictionPost()}}
+\item \href{#method-SapiV1SubAccountSubAccountApiIpRestrictionPostWithHttpInfo}{\code{SubAccountApi$SapiV1SubAccountSubAccountApiIpRestrictionPostWithHttpInfo()}}
 \item \href{#method-SapiV1SubAccountSubTransferHistoryGet}{\code{SubAccountApi$SapiV1SubAccountSubTransferHistoryGet()}}
 \item \href{#method-SapiV1SubAccountSubTransferHistoryGetWithHttpInfo}{\code{SubAccountApi$SapiV1SubAccountSubTransferHistoryGetWithHttpInfo()}}
 \item \href{#method-SapiV1SubAccountTransferSubToMasterPost}{\code{SubAccountApi$SapiV1SubAccountTransferSubToMasterPost()}}
@@ -1810,8 +1791,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1CapitalDepositSubAddressGet(
   email,
   coin,
-  timestamp,
-  signature,
   network = NULL,
   recv.window = NULL,
   ...
@@ -1827,8 +1806,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1CapitalDepositSubAddressGetWithHttpInfo(
   email,
   coin,
-  timestamp,
-  signature,
   network = NULL,
   recv.window = NULL,
   ...
@@ -1843,8 +1820,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1CapitalDepositSubHisrecGet(
   email,
-  timestamp,
-  signature,
   coin = NULL,
   status = NULL,
   start.time = NULL,
@@ -1864,8 +1839,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1CapitalDepositSubHisrecGetWithHttpInfo(
   email,
-  timestamp,
-  signature,
   coin = NULL,
   status = NULL,
   start.time = NULL,
@@ -1883,13 +1856,7 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \if{latex}{\out{\hypertarget{method-SapiV1ManagedSubaccountAssetGet}{}}}
 \subsection{Method \code{SapiV1ManagedSubaccountAssetGet()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1ManagedSubaccountAssetGet(
-  email,
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1ManagedSubaccountAssetGet(email, recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -1900,8 +1867,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1ManagedSubaccountAssetGetWithHttpInfo(
   email,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -1917,8 +1882,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
   to.email,
   asset,
   amount,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -1934,8 +1897,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
   to.email,
   asset,
   amount,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -1951,8 +1912,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
   from.email,
   asset,
   amount,
-  timestamp,
-  signature,
   transfer.date = NULL,
   recv.window = NULL,
   ...
@@ -1969,8 +1928,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
   from.email,
   asset,
   amount,
-  timestamp,
-  signature,
   transfer.date = NULL,
   recv.window = NULL,
   ...
@@ -1986,8 +1943,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountBlvtEnablePost(
   email,
   enable.blvt,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2002,8 +1957,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountBlvtEnablePostWithHttpInfo(
   email,
   enable.blvt,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2015,13 +1968,7 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \if{latex}{\out{\hypertarget{method-SapiV1SubAccountFuturesAccountGet}{}}}
 \subsection{Method \code{SapiV1SubAccountFuturesAccountGet()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountFuturesAccountGet(
-  email,
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountFuturesAccountGet(email, recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -2032,8 +1979,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountFuturesAccountGetWithHttpInfo(
   email,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2045,12 +1990,7 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \if{latex}{\out{\hypertarget{method-SapiV1SubAccountFuturesAccountSummaryGet}{}}}
 \subsection{Method \code{SapiV1SubAccountFuturesAccountSummaryGet()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountFuturesAccountSummaryGet(
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountFuturesAccountSummaryGet(recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -2060,8 +2000,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \subsection{Method \code{SapiV1SubAccountFuturesAccountSummaryGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountFuturesAccountSummaryGetWithHttpInfo(
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2073,13 +2011,7 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \if{latex}{\out{\hypertarget{method-SapiV1SubAccountFuturesEnablePost}{}}}
 \subsection{Method \code{SapiV1SubAccountFuturesEnablePost()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountFuturesEnablePost(
-  email,
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountFuturesEnablePost(email, recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -2090,8 +2022,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountFuturesEnablePostWithHttpInfo(
   email,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2106,8 +2036,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountFuturesInternalTransferGet(
   email,
   futures.type,
-  timestamp,
-  signature,
   start.time = NULL,
   end.time = NULL,
   page = NULL,
@@ -2126,8 +2054,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountFuturesInternalTransferGetWithHttpInfo(
   email,
   futures.type,
-  timestamp,
-  signature,
   start.time = NULL,
   end.time = NULL,
   page = NULL,
@@ -2149,8 +2075,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
   futures.type,
   asset,
   amount,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2168,8 +2092,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
   futures.type,
   asset,
   amount,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2183,8 +2105,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountFuturesPositionRiskGet(
   email,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2198,8 +2118,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountFuturesPositionRiskGetWithHttpInfo(
   email,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2216,8 +2134,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
   asset,
   amount,
   type,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2234,8 +2150,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
   asset,
   amount,
   type,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2248,8 +2162,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \subsection{Method \code{SapiV1SubAccountListGet()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountListGet(
-  timestamp,
-  signature,
   email = NULL,
   is.freeze = NULL,
   page = NULL,
@@ -2266,8 +2178,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \subsection{Method \code{SapiV1SubAccountListGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountListGetWithHttpInfo(
-  timestamp,
-  signature,
   email = NULL,
   is.freeze = NULL,
   page = NULL,
@@ -2283,13 +2193,7 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \if{latex}{\out{\hypertarget{method-SapiV1SubAccountMarginAccountGet}{}}}
 \subsection{Method \code{SapiV1SubAccountMarginAccountGet()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountMarginAccountGet(
-  email,
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountMarginAccountGet(email, recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -2300,8 +2204,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountMarginAccountGetWithHttpInfo(
   email,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2313,12 +2215,7 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \if{latex}{\out{\hypertarget{method-SapiV1SubAccountMarginAccountSummaryGet}{}}}
 \subsection{Method \code{SapiV1SubAccountMarginAccountSummaryGet()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountMarginAccountSummaryGet(
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountMarginAccountSummaryGet(recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -2328,8 +2225,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \subsection{Method \code{SapiV1SubAccountMarginAccountSummaryGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountMarginAccountSummaryGetWithHttpInfo(
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2341,13 +2236,7 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \if{latex}{\out{\hypertarget{method-SapiV1SubAccountMarginEnablePost}{}}}
 \subsection{Method \code{SapiV1SubAccountMarginEnablePost()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountMarginEnablePost(
-  email,
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountMarginEnablePost(email, recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -2358,8 +2247,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountMarginEnablePostWithHttpInfo(
   email,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2376,8 +2263,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
   asset,
   amount,
   type,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2394,8 +2279,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
   asset,
   amount,
   type,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2409,8 +2292,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountSpotSummaryGet(
   email,
-  timestamp,
-  signature,
   page = NULL,
   size = NULL,
   recv.window = NULL,
@@ -2426,8 +2307,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountSpotSummaryGetWithHttpInfo(
   email,
-  timestamp,
-  signature,
   page = NULL,
   size = NULL,
   recv.window = NULL,
@@ -2441,13 +2320,7 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \if{latex}{\out{\hypertarget{method-SapiV1SubAccountStatusGet}{}}}
 \subsection{Method \code{SapiV1SubAccountStatusGet()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountStatusGet(
-  timestamp,
-  signature,
-  email = NULL,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountStatusGet(email = NULL, recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -2457,9 +2330,125 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \subsection{Method \code{SapiV1SubAccountStatusGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountStatusGetWithHttpInfo(
-  timestamp,
-  signature,
   email = NULL,
+  recv.window = NULL,
+  ...
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-SapiV1SubAccountSubAccountApiIpRestrictionGet"></a>}}
+\if{latex}{\out{\hypertarget{method-SapiV1SubAccountSubAccountApiIpRestrictionGet}{}}}
+\subsection{Method \code{SapiV1SubAccountSubAccountApiIpRestrictionGet()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountSubAccountApiIpRestrictionGet(
+  email,
+  sub.account.api.key,
+  recv.window = NULL,
+  ...
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-SapiV1SubAccountSubAccountApiIpRestrictionGetWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-SapiV1SubAccountSubAccountApiIpRestrictionGetWithHttpInfo}{}}}
+\subsection{Method \code{SapiV1SubAccountSubAccountApiIpRestrictionGetWithHttpInfo()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountSubAccountApiIpRestrictionGetWithHttpInfo(
+  email,
+  sub.account.api.key,
+  recv.window = NULL,
+  ...
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-SapiV1SubAccountSubAccountApiIpRestrictionIpListDelete"></a>}}
+\if{latex}{\out{\hypertarget{method-SapiV1SubAccountSubAccountApiIpRestrictionIpListDelete}{}}}
+\subsection{Method \code{SapiV1SubAccountSubAccountApiIpRestrictionIpListDelete()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountSubAccountApiIpRestrictionIpListDelete(
+  email,
+  sub.account.api.key,
+  ip.address,
+  recv.window = NULL,
+  ...
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-SapiV1SubAccountSubAccountApiIpRestrictionIpListDeleteWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-SapiV1SubAccountSubAccountApiIpRestrictionIpListDeleteWithHttpInfo}{}}}
+\subsection{Method \code{SapiV1SubAccountSubAccountApiIpRestrictionIpListDeleteWithHttpInfo()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountSubAccountApiIpRestrictionIpListDeleteWithHttpInfo(
+  email,
+  sub.account.api.key,
+  ip.address,
+  recv.window = NULL,
+  ...
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-SapiV1SubAccountSubAccountApiIpRestrictionIpListPost"></a>}}
+\if{latex}{\out{\hypertarget{method-SapiV1SubAccountSubAccountApiIpRestrictionIpListPost}{}}}
+\subsection{Method \code{SapiV1SubAccountSubAccountApiIpRestrictionIpListPost()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountSubAccountApiIpRestrictionIpListPost(
+  email,
+  sub.account.api.key,
+  ip.address,
+  recv.window = NULL,
+  ...
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-SapiV1SubAccountSubAccountApiIpRestrictionIpListPostWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-SapiV1SubAccountSubAccountApiIpRestrictionIpListPostWithHttpInfo}{}}}
+\subsection{Method \code{SapiV1SubAccountSubAccountApiIpRestrictionIpListPostWithHttpInfo()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountSubAccountApiIpRestrictionIpListPostWithHttpInfo(
+  email,
+  sub.account.api.key,
+  ip.address,
+  recv.window = NULL,
+  ...
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-SapiV1SubAccountSubAccountApiIpRestrictionPost"></a>}}
+\if{latex}{\out{\hypertarget{method-SapiV1SubAccountSubAccountApiIpRestrictionPost}{}}}
+\subsection{Method \code{SapiV1SubAccountSubAccountApiIpRestrictionPost()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountSubAccountApiIpRestrictionPost(
+  email,
+  sub.account.api.key,
+  ip.restrict,
+  recv.window = NULL,
+  ...
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-SapiV1SubAccountSubAccountApiIpRestrictionPostWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-SapiV1SubAccountSubAccountApiIpRestrictionPostWithHttpInfo}{}}}
+\subsection{Method \code{SapiV1SubAccountSubAccountApiIpRestrictionPostWithHttpInfo()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountSubAccountApiIpRestrictionPostWithHttpInfo(
+  email,
+  sub.account.api.key,
+  ip.restrict,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2472,8 +2461,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \subsection{Method \code{SapiV1SubAccountSubTransferHistoryGet()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountSubTransferHistoryGet(
-  timestamp,
-  signature,
   from.email = NULL,
   to.email = NULL,
   start.time = NULL,
@@ -2492,8 +2479,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \subsection{Method \code{SapiV1SubAccountSubTransferHistoryGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountSubTransferHistoryGetWithHttpInfo(
-  timestamp,
-  signature,
   from.email = NULL,
   to.email = NULL,
   start.time = NULL,
@@ -2514,8 +2499,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountTransferSubToMasterPost(
   asset,
   amount,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2530,8 +2513,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountTransferSubToMasterPostWithHttpInfo(
   asset,
   amount,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2547,8 +2528,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
   to.email,
   asset,
   amount,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2564,8 +2543,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
   to.email,
   asset,
   amount,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2578,8 +2555,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \subsection{Method \code{SapiV1SubAccountTransferSubUserHistoryGet()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountTransferSubUserHistoryGet(
-  timestamp,
-  signature,
   asset = NULL,
   type = NULL,
   start.time = NULL,
@@ -2597,8 +2572,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \subsection{Method \code{SapiV1SubAccountTransferSubUserHistoryGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountTransferSubUserHistoryGetWithHttpInfo(
-  timestamp,
-  signature,
   asset = NULL,
   type = NULL,
   start.time = NULL,
@@ -2616,8 +2589,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \subsection{Method \code{SapiV1SubAccountUniversalTransferGet()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountUniversalTransferGet(
-  timestamp,
-  signature,
   from.email = NULL,
   to.email = NULL,
   start.time = NULL,
@@ -2636,8 +2607,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \subsection{Method \code{SapiV1SubAccountUniversalTransferGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountUniversalTransferGetWithHttpInfo(
-  timestamp,
-  signature,
   from.email = NULL,
   to.email = NULL,
   start.time = NULL,
@@ -2660,8 +2629,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
   to.account.type,
   asset,
   amount,
-  timestamp,
-  signature,
   from.email = NULL,
   to.email = NULL,
   recv.window = NULL,
@@ -2680,8 +2647,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
   to.account.type,
   asset,
   amount,
-  timestamp,
-  signature,
   from.email = NULL,
   to.email = NULL,
   recv.window = NULL,
@@ -2697,8 +2662,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountVirtualSubAccountPost(
   sub.account.string,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2712,8 +2675,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV1SubAccountVirtualSubAccountPostWithHttpInfo(
   sub.account.string,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2728,8 +2689,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV2SubAccountFuturesAccountGet(
   email,
   futures.type,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2744,8 +2703,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV2SubAccountFuturesAccountGetWithHttpInfo(
   email,
   futures.type,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2759,8 +2716,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV2SubAccountFuturesAccountSummaryGet(
   futures.type,
-  timestamp,
-  signature,
   page = NULL,
   limit = NULL,
   recv.window = NULL,
@@ -2776,8 +2731,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV2SubAccountFuturesAccountSummaryGetWithHttpInfo(
   futures.type,
-  timestamp,
-  signature,
   page = NULL,
   limit = NULL,
   recv.window = NULL,
@@ -2794,8 +2747,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV2SubAccountFuturesPositionRiskGet(
   email,
   futures.type,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2810,8 +2761,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV2SubAccountFuturesPositionRiskGetWithHttpInfo(
   email,
   futures.type,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2823,13 +2772,7 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \if{latex}{\out{\hypertarget{method-SapiV3SubAccountAssetsGet}{}}}
 \subsection{Method \code{SapiV3SubAccountAssetsGet()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV3SubAccountAssetsGet(
-  email,
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV3SubAccountAssetsGet(email, recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -2840,8 +2783,6 @@ result <- api.instance$SapiV3SubAccountAssetsGet(var.email, var.timestamp, var.s
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SubAccountApi$SapiV3SubAccountAssetsGetWithHttpInfo(
   email,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}

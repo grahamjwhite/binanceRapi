@@ -13,15 +13,13 @@ InlineResponse20073 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{code}}{character}
+\item{\code{ipRestrict}}{character}
 
-\item{\code{message}}{character}
+\item{\code{ipList}}{list( character )}
 
-\item{\code{data}}{list( \link{InlineResponse20073Data} )}
+\item{\code{updateTime}}{integer}
 
-\item{\code{total}}{integer}
-
-\item{\code{success}}{character}
+\item{\code{apiKey}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -41,7 +39,7 @@ InlineResponse20073 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20073$new(code, message, data, total, success, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20073$new(ipRestrict, ipList, updateTime, apiKey, ...)}\if{html}{\out{</div>}}
 }
 
 }

@@ -13,9 +13,11 @@ InlineResponse20075 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{asset}}{character}
+\item{\code{ip}}{character}
 
-\item{\code{leftQuota}}{character}
+\item{\code{updateTime}}{integer}
+
+\item{\code{apiKey}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -35,7 +37,7 @@ InlineResponse20075 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20075$new(asset, leftQuota, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20075$new(ip, updateTime, apiKey, ...)}\if{html}{\out{</div>}}
 }
 
 }

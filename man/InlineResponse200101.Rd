@@ -13,19 +13,11 @@ InlineResponse200101 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{id}}{numeric}
+\item{\code{code}}{integer}
 
-\item{\code{tokenName}}{character}
+\item{\code{msg}}{character}
 
-\item{\code{amount}}{character}
-
-\item{\code{nav}}{character}
-
-\item{\code{fee}}{character}
-
-\item{\code{netProceed}}{character}
-
-\item{\code{timestamp}}{integer}
+\item{\code{data}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -45,16 +37,7 @@ InlineResponse200101 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse200101$new(
-  id,
-  tokenName,
-  amount,
-  nav,
-  fee,
-  netProceed,
-  timestamp,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse200101$new(code, msg, data, ...)}\if{html}{\out{</div>}}
 }
 
 }

@@ -13,7 +13,7 @@ InlineResponse20071 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{listenKey}}{character}
+\item{\code{tranId}}{integer}
 }
 \if{html}{\out{</div>}}
 }
@@ -33,7 +33,7 @@ InlineResponse20071 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20071$new(listenKey, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20071$new(tranId, ...)}\if{html}{\out{</div>}}
 }
 
 }

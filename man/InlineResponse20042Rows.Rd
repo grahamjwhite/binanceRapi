@@ -13,17 +13,17 @@ InlineResponse20042Rows Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{asset}}{character}
+\item{\code{id}}{integer}
 
 \item{\code{amount}}{character}
 
-\item{\code{type}}{character}
+\item{\code{asset}}{character}
 
-\item{\code{status}}{character}
+\item{\code{divTime}}{integer}
+
+\item{\code{enInfo}}{character}
 
 \item{\code{tranId}}{integer}
-
-\item{\code{timestamp}}{integer}
 }
 \if{html}{\out{</div>}}
 }
@@ -43,15 +43,7 @@ InlineResponse20042Rows Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20042Rows$new(
-  asset,
-  amount,
-  type,
-  status,
-  tranId,
-  timestamp,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20042Rows$new(id, amount, asset, divTime, enInfo, tranId, ...)}\if{html}{\out{</div>}}
 }
 
 }

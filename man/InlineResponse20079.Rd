@@ -13,37 +13,15 @@ InlineResponse20079 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{asset}}{character}
+\item{\code{code}}{character}
 
-\item{\code{displayPriority}}{integer}
+\item{\code{message}}{character}
 
-\item{\code{duration}}{integer}
+\item{\code{data}}{list( \link{InlineResponse20079Data} )}
 
-\item{\code{interestPerLot}}{character}
+\item{\code{total}}{integer}
 
-\item{\code{interestRate}}{character}
-
-\item{\code{lotSize}}{character}
-
-\item{\code{lotsLowLimit}}{integer}
-
-\item{\code{lotsPurchased}}{integer}
-
-\item{\code{lotsUpLimit}}{integer}
-
-\item{\code{maxLotsPerUser}}{integer}
-
-\item{\code{needKyc}}{character}
-
-\item{\code{projectId}}{character}
-
-\item{\code{projectName}}{character}
-
-\item{\code{status}}{character}
-
-\item{\code{type}}{character}
-
-\item{\code{withAreaLimitation}}{character}
+\item{\code{success}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -63,25 +41,7 @@ InlineResponse20079 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20079$new(
-  asset,
-  displayPriority,
-  duration,
-  interestPerLot,
-  interestRate,
-  lotSize,
-  lotsLowLimit,
-  lotsPurchased,
-  lotsUpLimit,
-  maxLotsPerUser,
-  needKyc,
-  projectId,
-  projectName,
-  status,
-  type,
-  withAreaLimitation,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20079$new(code, message, data, total, success, ...)}\if{html}{\out{</div>}}
 }
 
 }

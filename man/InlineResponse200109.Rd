@@ -13,7 +13,11 @@ InlineResponse200109 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{swapId}}{integer}
+\item{\code{tokenName}}{character}
+
+\item{\code{userDailyTotalPurchaseLimit}}{character}
+
+\item{\code{userDailyTotalRedeemLimit}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -33,7 +37,12 @@ InlineResponse200109 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse200109$new(swapId, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse200109$new(
+  tokenName,
+  userDailyTotalPurchaseLimit,
+  userDailyTotalRedeemLimit,
+  ...
+)}\if{html}{\out{</div>}}
 }
 
 }

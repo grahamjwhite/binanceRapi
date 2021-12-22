@@ -13,7 +13,17 @@ InlineResponse20047 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{subAccounts}}{list( \link{InlineResponse20047SubAccounts} )}
+\item{\code{asset}}{character}
+
+\item{\code{free}}{character}
+
+\item{\code{locked}}{character}
+
+\item{\code{freeze}}{character}
+
+\item{\code{withdrawing}}{character}
+
+\item{\code{btcValuation}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -33,7 +43,15 @@ InlineResponse20047 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20047$new(subAccounts, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20047$new(
+  asset,
+  free,
+  locked,
+  freeze,
+  withdrawing,
+  btcValuation,
+  ...
+)}\if{html}{\out{</div>}}
 }
 
 }

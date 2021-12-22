@@ -13,7 +13,9 @@ InlineResponse20040 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{CTR}}{\link{InlineResponse20040CTR}}
+\item{\code{total}}{integer}
+
+\item{\code{userAssetDribblets}}{list( \link{InlineResponse20040UserAssetDribblets} )}
 }
 \if{html}{\out{</div>}}
 }
@@ -33,7 +35,7 @@ InlineResponse20040 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20040$new(CTR, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20040$new(total, userAssetDribblets, ...)}\if{html}{\out{</div>}}
 }
 
 }

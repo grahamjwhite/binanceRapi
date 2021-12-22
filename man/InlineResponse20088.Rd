@@ -13,11 +13,39 @@ InlineResponse20088 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{code}}{integer}
+\item{\code{asset}}{character}
 
-\item{\code{msg}}{character}
+\item{\code{canTransfer}}{character}
 
-\item{\code{data}}{\link{InlineResponse20088Data}}
+\item{\code{createTimestamp}}{integer}
+
+\item{\code{duration}}{integer}
+
+\item{\code{endTime}}{integer}
+
+\item{\code{interest}}{character}
+
+\item{\code{interestRate}}{character}
+
+\item{\code{lot}}{integer}
+
+\item{\code{positionId}}{integer}
+
+\item{\code{principal}}{character}
+
+\item{\code{projectId}}{character}
+
+\item{\code{projectName}}{character}
+
+\item{\code{purchaseTime}}{integer}
+
+\item{\code{redeemDate}}{character}
+
+\item{\code{startTime}}{integer}
+
+\item{\code{status}}{character}
+
+\item{\code{type}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -37,7 +65,26 @@ InlineResponse20088 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20088$new(code, msg, data, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20088$new(
+  asset,
+  canTransfer,
+  createTimestamp,
+  duration,
+  endTime,
+  interest,
+  interestRate,
+  lot,
+  positionId,
+  principal,
+  projectId,
+  projectName,
+  purchaseTime,
+  redeemDate,
+  startTime,
+  status,
+  type,
+  ...
+)}\if{html}{\out{</div>}}
 }
 
 }

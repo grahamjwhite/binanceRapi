@@ -13,13 +13,7 @@ InlineResponse20034 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{address}}{character}
-
-\item{\code{coin}}{character}
-
-\item{\code{tag}}{character}
-
-\item{\code{url}}{character}
+\item{\code{id}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -39,7 +33,7 @@ InlineResponse20034 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20034$new(address, coin, tag, url, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20034$new(id, ...)}\if{html}{\out{</div>}}
 }
 
 }

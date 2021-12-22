@@ -17,20 +17,18 @@ binanceRapi.C2C
 - If startTimestamp and endTimestamp are not sent, the recent 30-day data will be returned. - The max interval between startTimestamp and endTimestamp is 30 days.  Weight(IP): 1
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } trade.type Enum < [BUY, SELL] >
 \item \emph{ @param } start.timestamp integer
 \item \emph{ @param } end.timestamp integer
 \item \emph{ @param } page integer
 \item \emph{ @param } rows integer
 \item \emph{ @param } recv.window integer
-\item \emph{ @returnType } \link{InlineResponse200111} \cr
+\item \emph{ @returnType } \link{InlineResponse200118} \cr
 
 
 \item status code : 200 | Trades history
 
-\item return type : InlineResponse200111 
+\item return type : InlineResponse200118 
 \item response headers :
 
 \tabular{ll}{
@@ -59,8 +57,6 @@ binanceRapi.C2C
 ####################  SapiV1C2cOrderMatchListUserOrderHistoryGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.trade.type <- 'trade.type_example' # character | 
 var.start.timestamp <- 56 # integer | UTC timestamp in ms
 var.end.timestamp <- 56 # integer | UTC timestamp in ms
@@ -71,10 +67,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Get C2C Trade History (USER_DATA)
 api.instance <- C2CApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1C2cOrderMatchListUserOrderHistoryGet(var.timestamp, var.signature, trade.type=var.trade.type, start.timestamp=var.start.timestamp, end.timestamp=var.end.timestamp, page=var.page, rows=var.rows, recv.window=var.recv.window)
+result <- api.instance$SapiV1C2cOrderMatchListUserOrderHistoryGet(trade.type=var.trade.type, start.timestamp=var.start.timestamp, end.timestamp=var.end.timestamp, page=var.page, rows=var.rows, recv.window=var.recv.window)
 
 
 }
@@ -110,8 +103,6 @@ result <- api.instance$SapiV1C2cOrderMatchListUserOrderHistoryGet(var.timestamp,
 \subsection{Method \code{SapiV1C2cOrderMatchListUserOrderHistoryGet()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{C2CApi$SapiV1C2cOrderMatchListUserOrderHistoryGet(
-  timestamp,
-  signature,
   trade.type = NULL,
   start.timestamp = NULL,
   end.timestamp = NULL,
@@ -129,8 +120,6 @@ result <- api.instance$SapiV1C2cOrderMatchListUserOrderHistoryGet(var.timestamp,
 \subsection{Method \code{SapiV1C2cOrderMatchListUserOrderHistoryGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{C2CApi$SapiV1C2cOrderMatchListUserOrderHistoryGetWithHttpInfo(
-  timestamp,
-  signature,
   trade.type = NULL,
   start.timestamp = NULL,
   end.timestamp = NULL,

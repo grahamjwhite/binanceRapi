@@ -13,7 +13,15 @@ InlineResponse20080 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{purchaseId}}{character}
+\item{\code{code}}{character}
+
+\item{\code{message}}{character}
+
+\item{\code{data}}{list( \link{InlineResponse20080Data} )}
+
+\item{\code{total}}{integer}
+
+\item{\code{success}}{character}
 }
 \if{html}{\out{</div>}}
 }
@@ -33,7 +41,7 @@ InlineResponse20080 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20080$new(purchaseId, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20080$new(code, message, data, total, success, ...)}\if{html}{\out{</div>}}
 }
 
 }

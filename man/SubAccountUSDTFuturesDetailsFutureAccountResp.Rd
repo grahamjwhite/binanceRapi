@@ -16,7 +16,7 @@ SubAccountUSDTFuturesDetailsFutureAccountResp Class
 \describe{
 \item{\code{email}}{character}
 
-\item{\code{assets}}{list( \link{InlineResponse20060Assets} )}
+\item{\code{assets}}{list( \link{InlineResponse20063Assets} )}
 
 \item{\code{canDeposit}}{character}
 

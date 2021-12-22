@@ -13,15 +13,7 @@ InlineResponse20083 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{asset}}{character}
-
-\item{\code{interest}}{character}
-
-\item{\code{lendingType}}{character}
-
-\item{\code{productName}}{character}
-
-\item{\code{time}}{integer}
+\item{\code{purchaseId}}{integer}
 }
 \if{html}{\out{</div>}}
 }
@@ -41,7 +33,7 @@ InlineResponse20083 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20083$new(asset, interest, lendingType, productName, time, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20083$new(purchaseId, ...)}\if{html}{\out{</div>}}
 }
 
 }

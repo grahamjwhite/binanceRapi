@@ -15,35 +15,17 @@ InlineResponse20060 Class
 \describe{
 \item{\code{email}}{character}
 
-\item{\code{asset}}{character}
+\item{\code{marginLevel}}{character}
 
-\item{\code{assets}}{list( \link{InlineResponse20060Assets} )}
+\item{\code{totalAssetOfBtc}}{character}
 
-\item{\code{canDeposit}}{character}
+\item{\code{totalLiabilityOfBtc}}{character}
 
-\item{\code{canTrade}}{character}
+\item{\code{totalNetAssetOfBtc}}{character}
 
-\item{\code{canWithdraw}}{character}
+\item{\code{marginTradeCoeffVo}}{\link{InlineResponse20060MarginTradeCoeffVo}}
 
-\item{\code{feeTier}}{integer}
-
-\item{\code{maxWithdrawAmount}}{character}
-
-\item{\code{totalInitialMargin}}{character}
-
-\item{\code{totalMaintenanceMargin}}{character}
-
-\item{\code{totalMarginBalance}}{character}
-
-\item{\code{totalOpenOrderInitialMargin}}{character}
-
-\item{\code{totalPositionInitialMargin}}{character}
-
-\item{\code{totalUnrealizedProfit}}{character}
-
-\item{\code{totalWalletBalance}}{character}
-
-\item{\code{updateTime}}{integer}
+\item{\code{marginUserAssetVoList}}{list( \link{InlineResponse20019UserAssets} )}
 }
 \if{html}{\out{</div>}}
 }
@@ -65,21 +47,12 @@ InlineResponse20060 Class
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InlineResponse20060$new(
   email,
-  asset,
-  assets,
-  canDeposit,
-  canTrade,
-  canWithdraw,
-  feeTier,
-  maxWithdrawAmount,
-  totalInitialMargin,
-  totalMaintenanceMargin,
-  totalMarginBalance,
-  totalOpenOrderInitialMargin,
-  totalPositionInitialMargin,
-  totalUnrealizedProfit,
-  totalWalletBalance,
-  updateTime,
+  marginLevel,
+  totalAssetOfBtc,
+  totalLiabilityOfBtc,
+  totalNetAssetOfBtc,
+  marginTradeCoeffVo,
+  marginUserAssetVoList,
   ...
 )}\if{html}{\out{</div>}}
 }

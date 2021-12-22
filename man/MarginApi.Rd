@@ -17,8 +17,6 @@ binanceRapi.Margin
 Weight(IP): 1
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
 \item \emph{ @returnType } \link{BnbBurnStatus} \cr
 
@@ -50,8 +48,6 @@ Weight(IP): 1
 - \&quot;spotBNBBurn\&quot; and \&quot;interestBNBBurn\&quot; should be sent at least one.  Weight(IP): 1
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } spot.bnb.burn Enum < [true, false] >
 \item \emph{ @param } interest.bnb.burn Enum < [true, false] >
 \item \emph{ @param } recv.window integer
@@ -85,8 +81,6 @@ Weight(IP): 1
 Weight(IP): 10
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
 \item \emph{ @returnType } \link{InlineResponse20019} \cr
 
@@ -141,8 +135,6 @@ Weight(IP): 1
 Retrieves all OCO for a specific margin account based on provided optional parameters  Weight(IP): 200
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 \item \emph{ @param } symbol character
 \item \emph{ @param } from.id character
@@ -181,8 +173,6 @@ Retrieves all OCO for a specific margin account based on provided optional param
 
 \itemize{
 \item \emph{ @param } symbol character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 \item \emph{ @param } order.id integer
 \item \emph{ @param } start.time integer
@@ -262,12 +252,43 @@ Weight(IP): 10
 }
 }
 
+\strong{ SapiV1MarginCrossMarginDataGet } \emph{ Query Cross Margin Fee Data (USER_DATA) }
+Get cross margin fee data collection with any vip level or user&#39;s current specific data as https://www.binance.com/en/margin-fee  Weight(IP): 1 when coin is specified; 5 when the coin parameter is omitted
+
+\itemize{
+\item \emph{ @param } vip.level integer
+\item \emph{ @param } coin character
+\item \emph{ @param } recv.window integer
+\item \emph{ @returnType } list( \link{inline_response_200_29} ) \cr
+
+
+\item status code : 200 | Cross Margin Fee Data
+
+\item return type : array[InlineResponse20029] 
+\item response headers :
+
+\tabular{ll}{
+}
+\item status code : 400 | Bad Request
+
+\item return type : Error 
+\item response headers :
+
+\tabular{ll}{
+}
+\item status code : 401 | Unauthorized Request
+
+\item return type : Error 
+\item response headers :
+
+\tabular{ll}{
+}
+}
+
 \strong{ SapiV1MarginForceLiquidationRecGet } \emph{ Get Force Liquidation Record (USER_DATA) }
 - Response in descending order  Weight(IP): 1
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } start.time integer
 \item \emph{ @param } end.time integer
 \item \emph{ @param } isolated.symbol character
@@ -304,8 +325,6 @@ Weight(IP): 10
 - Response in descending order - If &#x60;isolatedSymbol&#x60; is not sent, crossed margin data will be returned - Set &#x60;archived&#x60; to &#x60;true&#x60; to query data from 6 months ago - &#x60;type&#x60; in response has 4 enums:   - &#x60;PERIODIC&#x60; interest charged per hour   - &#x60;ON_BORROW&#x60; first interest charged on borrow   - &#x60;PERIODIC_CONVERTED&#x60; interest charged per hour converted into BNB   - &#x60;ON_BORROW_CONVERTED&#x60; first interest charged on borrow converted into BNB  Weight(IP): 1
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } asset character
 \item \emph{ @param } isolated.symbol character
 \item \emph{ @param } start.time integer
@@ -345,8 +364,6 @@ Weight(IP): 1
 
 \itemize{
 \item \emph{ @param } asset character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } vip.level integer
 \item \emph{ @param } start.time integer
 \item \emph{ @param } end.time integer
@@ -383,8 +400,6 @@ Disable isolated margin account for a specific symbol. Each trading pair can onl
 
 \itemize{
 \item \emph{ @param } symbol character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
 \item \emph{ @returnType } \link{InlineResponse20025} \cr
 
@@ -416,8 +431,6 @@ Disable isolated margin account for a specific symbol. Each trading pair can onl
 - If \&quot;symbols\&quot; is not sent, all isolated assets will be returned. - If \&quot;symbols\&quot; is sent, only the isolated assets of the sent symbols will be returned.  Weight(IP): 10
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } symbols character
 \item \emph{ @param } recv.window integer
 \item \emph{ @returnType } \link{IsolatedMarginAccountInfo} \cr
@@ -450,8 +463,6 @@ Disable isolated margin account for a specific symbol. Each trading pair can onl
 Query enabled isolated margin account limit.  Weight(IP): 1
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
 \item \emph{ @returnType } \link{InlineResponse20026} \cr
 
@@ -484,8 +495,6 @@ Enable isolated margin account for a specific symbol.  Weight(UID): 300
 
 \itemize{
 \item \emph{ @param } symbol character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
 \item \emph{ @returnType } \link{InlineResponse20025} \cr
 
@@ -517,8 +526,6 @@ Enable isolated margin account for a specific symbol.  Weight(UID): 300
 Weight(IP): 10
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
 \item \emph{ @returnType } list( \link{inline_response_200_27} ) \cr
 
@@ -546,13 +553,77 @@ Weight(IP): 10
 }
 }
 
+\strong{ SapiV1MarginIsolatedMarginDataGet } \emph{ Query Isolated Margin Fee Data (USER_DATA) }
+Get isolated margin fee data collection with any vip level or user&#39;s current specific data as https://www.binance.com/en/margin-fee  Weight(IP): 1 when a single is specified; 10 when the symbol parameter is omitted
+
+\itemize{
+\item \emph{ @param } vip.level integer
+\item \emph{ @param } symbol character
+\item \emph{ @param } recv.window integer
+\item \emph{ @returnType } list( \link{inline_response_200_30} ) \cr
+
+
+\item status code : 200 | Isolated Margin Fee Data
+
+\item return type : array[InlineResponse20030] 
+\item response headers :
+
+\tabular{ll}{
+}
+\item status code : 400 | Bad Request
+
+\item return type : Error 
+\item response headers :
+
+\tabular{ll}{
+}
+\item status code : 401 | Unauthorized Request
+
+\item return type : Error 
+\item response headers :
+
+\tabular{ll}{
+}
+}
+
+\strong{ SapiV1MarginIsolatedMarginTierGet } \emph{ Query Isolated Margin Tier Data (USER_DATA) }
+Get isolated margin tier data collection with any tier as https://www.binance.com/en/margin-data  Weight(IP): 1
+
+\itemize{
+\item \emph{ @param } symbol character
+\item \emph{ @param } tier character
+\item \emph{ @param } recv.window integer
+\item \emph{ @returnType } list( \link{inline_response_200_31} ) \cr
+
+
+\item status code : 200 | Isolated Margin Tier Data
+
+\item return type : array[InlineResponse20031] 
+\item response headers :
+
+\tabular{ll}{
+}
+\item status code : 400 | Bad Request
+
+\item return type : Error 
+\item response headers :
+
+\tabular{ll}{
+}
+\item status code : 401 | Unauthorized Request
+
+\item return type : Error 
+\item response headers :
+
+\tabular{ll}{
+}
+}
+
 \strong{ SapiV1MarginIsolatedPairGet } \emph{ Query Isolated Margin Symbol (USER_DATA) }
 Weight(IP): 10
 
 \itemize{
 \item \emph{ @param } symbol character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } recv.window integer
 \item \emph{ @returnType } \link{InlineResponse20027} \cr
 
@@ -585,8 +656,6 @@ Weight(IP): 1
 
 \itemize{
 \item \emph{ @param } symbol character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } asset character
 \item \emph{ @param } trans.from Enum < [SPOT, ISOLATED_MARGIN] >
 \item \emph{ @param } trans.to Enum < [SPOT, ISOLATED_MARGIN] >
@@ -628,8 +697,6 @@ Weight(UID): 600
 \item \emph{ @param } asset character
 \item \emph{ @param } symbol character
 \item \emph{ @param } amount numeric
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } trans.from Enum < [SPOT, ISOLATED_MARGIN] >
 \item \emph{ @param } trans.to Enum < [SPOT, ISOLATED_MARGIN] >
 \item \emph{ @param } recv.window integer
@@ -663,8 +730,6 @@ Weight(UID): 600
 
 \itemize{
 \item \emph{ @param } asset character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } isolated.symbol character
 \item \emph{ @param } tx.id integer
 \item \emph{ @param } start.time integer
@@ -705,8 +770,6 @@ Apply for a loan.  - If \&quot;isIsolated\&quot; &#x3D; \&quot;TRUE\&quot;, \&qu
 \itemize{
 \item \emph{ @param } asset character
 \item \emph{ @param } amount numeric
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 \item \emph{ @param } symbol character
 \item \emph{ @param } recv.window integer
@@ -741,8 +804,6 @@ Apply for a loan.  - If \&quot;isIsolated\&quot; &#x3D; \&quot;TRUE\&quot;, \&qu
 
 \itemize{
 \item \emph{ @param } asset character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } isolated.symbol character
 \item \emph{ @param } recv.window integer
 \item \emph{ @returnType } \link{InlineResponse20023} \cr
@@ -776,8 +837,6 @@ Apply for a loan.  - If \&quot;isIsolated\&quot; &#x3D; \&quot;TRUE\&quot;, \&qu
 
 \itemize{
 \item \emph{ @param } asset character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } isolated.symbol character
 \item \emph{ @param } recv.window integer
 \item \emph{ @returnType } \link{InlineResponse20024} \cr
@@ -811,8 +870,6 @@ Apply for a loan.  - If \&quot;isIsolated\&quot; &#x3D; \&quot;TRUE\&quot;, \&qu
 
 \itemize{
 \item \emph{ @param } symbol character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 \item \emph{ @param } start.time integer
 \item \emph{ @param } end.time integer
@@ -849,8 +906,6 @@ Apply for a loan.  - If \&quot;isIsolated\&quot; &#x3D; \&quot;TRUE\&quot;, \&qu
 Weight(IP): 10
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 \item \emph{ @param } symbol character
 \item \emph{ @param } recv.window integer
@@ -885,8 +940,6 @@ Weight(IP): 10
 
 \itemize{
 \item \emph{ @param } symbol character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 \item \emph{ @param } recv.window integer
 \item \emph{ @returnType } list( \link{anyOf&lt;canceledMarginOrderDetail,marginOcoOrder&gt;} ) \cr
@@ -919,8 +972,6 @@ Weight(IP): 10
 - If the &#x60;symbol&#x60; is not sent, orders for all symbols will be returned in an array. - When all symbols are returned, the number of requests counted against the rate limiter is equal to the number of symbols currently trading on the exchange - If isIsolated &#x3D;\&quot;TRUE\&quot;, symbol must be sent.  Weight(IP): 10
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } symbol character
 \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 \item \emph{ @param } recv.window integer
@@ -955,8 +1006,6 @@ Cancel an active order for margin account.  Either &#x60;orderId&#x60; or &#x60;
 
 \itemize{
 \item \emph{ @param } symbol character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 \item \emph{ @param } order.id integer
 \item \emph{ @param } orig.client.order.id character
@@ -993,8 +1042,6 @@ Cancel an active order for margin account.  Either &#x60;orderId&#x60; or &#x60;
 
 \itemize{
 \item \emph{ @param } symbol character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 \item \emph{ @param } order.id integer
 \item \emph{ @param } orig.client.order.id character
@@ -1030,8 +1077,6 @@ Cancel an entire Order List for a margin account  - Canceling an individual leg 
 
 \itemize{
 \item \emph{ @param } symbol character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 \item \emph{ @param } order.list.id integer
 \item \emph{ @param } list.client.order.id character
@@ -1067,8 +1112,6 @@ Cancel an entire Order List for a margin account  - Canceling an individual leg 
 Retrieves a specific OCO based on provided optional parameters  - Either &#x60;orderListId&#x60; or &#x60;origClientOrderId&#x60; must be provided  Weight(IP): 10
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 \item \emph{ @param } symbol character
 \item \emph{ @param } order.list.id integer
@@ -1109,8 +1152,6 @@ Send in a new OCO for a margin account  - Price Restrictions:   - SELL: Limit Pr
 \item \emph{ @param } quantity numeric
 \item \emph{ @param } price numeric
 \item \emph{ @param } stop.price numeric
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 \item \emph{ @param } list.client.order.id character
 \item \emph{ @param } limit.client.order.id character
@@ -1156,8 +1197,6 @@ Post a new order for margin account.  Weight(UID): 6
 \item \emph{ @param } side Enum < [SELL, BUY] >
 \item \emph{ @param } type Enum < [LIMIT, MARKET, STOP_LOSS, STOP_LOSS_LIMIT, TAKE_PROFIT, TAKE_PROFIT_LIMIT, LIMIT_MAKER] >
 \item \emph{ @param } quantity numeric
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 \item \emph{ @param } quote.order.qty numeric
 \item \emph{ @param } price numeric
@@ -1247,8 +1286,6 @@ Weight(IP): 10
 
 \itemize{
 \item \emph{ @param } asset character
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } isolated.symbol character
 \item \emph{ @param } tx.id integer
 \item \emph{ @param } start.time integer
@@ -1289,8 +1326,6 @@ Repay loan for margin account.  - If \&quot;isIsolated\&quot; &#x3D; \&quot;TRUE
 \itemize{
 \item \emph{ @param } asset character
 \item \emph{ @param } amount numeric
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } is.isolated Enum < [TRUE, FALSE] >
 \item \emph{ @param } symbol character
 \item \emph{ @param } recv.window integer
@@ -1324,8 +1359,6 @@ Repay loan for margin account.  - If \&quot;isIsolated\&quot; &#x3D; \&quot;TRUE
 - Response in descending order - Returns data for last 7 days by default - Set &#x60;archived&#x60; to &#x60;true&#x60; to query data from 6 months ago  Weight(IP): 1
 
 \itemize{
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } asset character
 \item \emph{ @param } type Enum < [ROLL_IN, ROLL_OUT] >
 \item \emph{ @param } start.time integer
@@ -1366,8 +1399,6 @@ Execute transfer between spot account and cross margin account.  Weight(IP): 600
 \itemize{
 \item \emph{ @param } asset character
 \item \emph{ @param } amount numeric
-\item \emph{ @param } timestamp integer
-\item \emph{ @param } signature character
 \item \emph{ @param } type Enum < [1, 2] >
 \item \emph{ @param } recv.window integer
 \item \emph{ @returnType } \link{Transaction} \cr
@@ -1404,24 +1435,17 @@ Execute transfer between spot account and cross margin account.  Weight(IP): 600
 ####################  SapiV1BnbBurnGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Get All Isolated Margin Symbol(USER_DATA)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1BnbBurnGet(var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1BnbBurnGet(recv.window=var.recv.window)
 
 
 ####################  SapiV1BnbBurnPost  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.spot.bnb.burn <- 'true' # character | Determines whether to use BNB to pay for trading fees on SPOT
 var.interest.bnb.burn <- 'false' # character | Determines whether to use BNB to pay for margin loan's interest
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -1429,26 +1453,18 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Toggle BNB Burn On Spot Trade And Margin Interest (USER_DATA)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1BnbBurnPost(var.timestamp, var.signature, spot.bnb.burn=var.spot.bnb.burn, interest.bnb.burn=var.interest.bnb.burn, recv.window=var.recv.window)
+result <- api.instance$SapiV1BnbBurnPost(spot.bnb.burn=var.spot.bnb.burn, interest.bnb.burn=var.interest.bnb.burn, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginAccountGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Query Cross Margin Account Details (USER_DATA)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginAccountGet(var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginAccountGet(recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginAllAssetsGet  ####################
@@ -1458,17 +1474,12 @@ library(binanceRapi)
 #Get All Margin Assets (MARKET_DATA)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
 result <- api.instance$SapiV1MarginAllAssetsGet()
 
 
 ####################  SapiV1MarginAllOrderListGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 var.symbol <- 'symbol_example' # character | Mandatory for isolated margin, not supported for cross margin
 var.from.id <- 'from.id_example' # character | If supplied, neither `startTime` or `endTime` can be provided
@@ -1480,18 +1491,13 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Query Margin Account's all OCO (USER_DATA)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginAllOrderListGet(var.timestamp, var.signature, is.isolated=var.is.isolated, symbol=var.symbol, from.id=var.from.id, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginAllOrderListGet(is.isolated=var.is.isolated, symbol=var.symbol, from.id=var.from.id, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginAllOrdersGet  ####################
 
 library(binanceRapi)
 var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 var.order.id <- 56 # integer | Order id
 var.start.time <- 56 # integer | UTC timestamp in ms
@@ -1502,10 +1508,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Query Margin Account's All Orders (USER_DATA)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginAllOrdersGet(var.symbol, var.timestamp, var.signature, is.isolated=var.is.isolated, order.id=var.order.id, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginAllOrdersGet(var.symbol, is.isolated=var.is.isolated, order.id=var.order.id, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginAllPairsGet  ####################
@@ -1514,9 +1517,6 @@ library(binanceRapi)
 
 #Get All Cross Margin Pairs (MARKET_DATA)
 api.instance <- MarginApi$new()
-
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
 
 result <- api.instance$SapiV1MarginAllPairsGet()
 
@@ -1529,17 +1529,25 @@ var.asset <- 'BTC' # character |
 #Query Margin Asset (MARKET_DATA)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
 result <- api.instance$SapiV1MarginAssetGet(var.asset)
+
+
+####################  SapiV1MarginCrossMarginDataGet  ####################
+
+library(binanceRapi)
+var.vip.level <- 1 # integer | Defaults to user's vip level
+var.coin <- 'BNB' # character | Coin name
+var.recv.window <- 5000 # integer | The value cannot be greater than 60000
+
+#Query Cross Margin Fee Data (USER_DATA)
+api.instance <- MarginApi$new()
+
+result <- api.instance$SapiV1MarginCrossMarginDataGet(vip.level=var.vip.level, coin=var.coin, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginForceLiquidationRecGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.start.time <- 56 # integer | UTC timestamp in ms
 var.end.time <- 56 # integer | UTC timestamp in ms
 var.isolated.symbol <- 'isolated.symbol_example' # character | Isolated symbol
@@ -1550,17 +1558,12 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Get Force Liquidation Record (USER_DATA)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginForceLiquidationRecGet(var.timestamp, var.signature, start.time=var.start.time, end.time=var.end.time, isolated.symbol=var.isolated.symbol, current=var.current, size=var.size, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginForceLiquidationRecGet(start.time=var.start.time, end.time=var.end.time, isolated.symbol=var.isolated.symbol, current=var.current, size=var.size, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginInterestHistoryGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.asset <- 'BNB' # character | 
 var.isolated.symbol <- 'isolated.symbol_example' # character | Isolated symbol
 var.start.time <- 56 # integer | UTC timestamp in ms
@@ -1573,18 +1576,13 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Get Interest History (USER_DATA)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginInterestHistoryGet(var.timestamp, var.signature, asset=var.asset, isolated.symbol=var.isolated.symbol, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, archived=var.archived, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginInterestHistoryGet(asset=var.asset, isolated.symbol=var.isolated.symbol, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, archived=var.archived, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginInterestRateHistoryGet  ####################
 
 library(binanceRapi)
 var.asset <- 'BTC' # character | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.vip.level <- 1 # integer | Defaults to user's vip level
 var.start.time <- 56 # integer | UTC timestamp in ms
 var.end.time <- 56 # integer | UTC timestamp in ms
@@ -1594,118 +1592,109 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Margin Interest Rate History (USER_DATA)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginInterestRateHistoryGet(var.asset, var.timestamp, var.signature, vip.level=var.vip.level, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginInterestRateHistoryGet(var.asset, vip.level=var.vip.level, start.time=var.start.time, end.time=var.end.time, limit=var.limit, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginIsolatedAccountDelete  ####################
 
 library(binanceRapi)
 var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Disable Isolated Margin Account (TRADE)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginIsolatedAccountDelete(var.symbol, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginIsolatedAccountDelete(var.symbol, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginIsolatedAccountGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.symbols <- 'BTCUSDT,BNBUSDT,ADAUSDT' # character | Max 5 symbols can be sent; separated by ','
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Query Isolated Margin Account Info (USER_DATA)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginIsolatedAccountGet(var.timestamp, var.signature, symbols=var.symbols, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginIsolatedAccountGet(symbols=var.symbols, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginIsolatedAccountLimitGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Query Enabled Isolated Margin Account Limit (USER_DATA)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginIsolatedAccountLimitGet(var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginIsolatedAccountLimitGet(recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginIsolatedAccountPost  ####################
 
 library(binanceRapi)
 var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Enable Isolated Margin Account (TRADE)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginIsolatedAccountPost(var.symbol, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginIsolatedAccountPost(var.symbol, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginIsolatedAllPairsGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Get All Isolated Margin Symbol(USER_DATA)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
+result <- api.instance$SapiV1MarginIsolatedAllPairsGet(recv.window=var.recv.window)
 
-result <- api.instance$SapiV1MarginIsolatedAllPairsGet(var.timestamp, var.signature, recv.window=var.recv.window)
+
+####################  SapiV1MarginIsolatedMarginDataGet  ####################
+
+library(binanceRapi)
+var.vip.level <- 1 # integer | Defaults to user's vip level
+var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
+var.recv.window <- 5000 # integer | The value cannot be greater than 60000
+
+#Query Isolated Margin Fee Data (USER_DATA)
+api.instance <- MarginApi$new()
+
+result <- api.instance$SapiV1MarginIsolatedMarginDataGet(vip.level=var.vip.level, symbol=var.symbol, recv.window=var.recv.window)
+
+
+####################  SapiV1MarginIsolatedMarginTierGet  ####################
+
+library(binanceRapi)
+var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
+var.tier <- '1' # character | All margin tier data will be returned if tier is omitted
+var.recv.window <- 5000 # integer | The value cannot be greater than 60000
+
+#Query Isolated Margin Tier Data (USER_DATA)
+api.instance <- MarginApi$new()
+
+result <- api.instance$SapiV1MarginIsolatedMarginTierGet(var.symbol, tier=var.tier, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginIsolatedPairGet  ####################
 
 library(binanceRapi)
 var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Query Isolated Margin Symbol (USER_DATA)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginIsolatedPairGet(var.symbol, var.timestamp, var.signature, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginIsolatedPairGet(var.symbol, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginIsolatedTransferGet  ####################
 
 library(binanceRapi)
 var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.asset <- 'BNB' # character | 
 var.trans.from <- 'SPOT' # character | 
 var.trans.to <- 'ISOLATED_MARGIN' # character | 
@@ -1718,10 +1707,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Get Isolated Margin Transfer History (USER_DATA)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginIsolatedTransferGet(var.symbol, var.timestamp, var.signature, asset=var.asset, trans.from=var.trans.from, trans.to=var.trans.to, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginIsolatedTransferGet(var.symbol, asset=var.asset, trans.from=var.trans.from, trans.to=var.trans.to, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginIsolatedTransferPost  ####################
@@ -1730,8 +1716,6 @@ library(binanceRapi)
 var.asset <- 'BTC' # character | 
 var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
 var.amount <- 1.01 # numeric | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.trans.from <- 'SPOT' # character | 
 var.trans.to <- 'ISOLATED_MARGIN' # character | 
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -1739,18 +1723,13 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Isolated Margin Account Transfer (MARGIN)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginIsolatedTransferPost(var.asset, var.symbol, var.amount, var.timestamp, var.signature, trans.from=var.trans.from, trans.to=var.trans.to, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginIsolatedTransferPost(var.asset, var.symbol, var.amount, trans.from=var.trans.from, trans.to=var.trans.to, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginLoanGet  ####################
 
 library(binanceRapi)
 var.asset <- 'BTC' # character | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.isolated.symbol <- 'isolated.symbol_example' # character | Isolated symbol
 var.tx.id <- 123456789 # integer | the tranId in  `POST /sapi/v1/margin/loan`
 var.start.time <- 56 # integer | UTC timestamp in ms
@@ -1763,10 +1742,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Query Loan Record (USER_DATA)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginLoanGet(var.asset, var.timestamp, var.signature, isolated.symbol=var.isolated.symbol, tx.id=var.tx.id, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, archived=var.archived, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginLoanGet(var.asset, isolated.symbol=var.isolated.symbol, tx.id=var.tx.id, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, archived=var.archived, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginLoanPost  ####################
@@ -1774,8 +1750,6 @@ result <- api.instance$SapiV1MarginLoanGet(var.asset, var.timestamp, var.signatu
 library(binanceRapi)
 var.asset <- 'BTC' # character | 
 var.amount <- 1.01 # numeric | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -1783,54 +1757,39 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Margin Account Borrow (MARGIN)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginLoanPost(var.asset, var.amount, var.timestamp, var.signature, is.isolated=var.is.isolated, symbol=var.symbol, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginLoanPost(var.asset, var.amount, is.isolated=var.is.isolated, symbol=var.symbol, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginMaxBorrowableGet  ####################
 
 library(binanceRapi)
 var.asset <- 'BTC' # character | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.isolated.symbol <- 'isolated.symbol_example' # character | Isolated symbol
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Query Max Borrow (USER_DATA)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginMaxBorrowableGet(var.asset, var.timestamp, var.signature, isolated.symbol=var.isolated.symbol, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginMaxBorrowableGet(var.asset, isolated.symbol=var.isolated.symbol, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginMaxTransferableGet  ####################
 
 library(binanceRapi)
 var.asset <- 'BTC' # character | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.isolated.symbol <- 'isolated.symbol_example' # character | Isolated symbol
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Query Max Transfer-Out Amount (USER_DATA)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginMaxTransferableGet(var.asset, var.timestamp, var.signature, isolated.symbol=var.isolated.symbol, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginMaxTransferableGet(var.asset, isolated.symbol=var.isolated.symbol, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginMyTradesGet  ####################
 
 library(binanceRapi)
 var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 var.start.time <- 56 # integer | UTC timestamp in ms
 var.end.time <- 56 # integer | UTC timestamp in ms
@@ -1841,17 +1800,12 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Query Margin Account's Trade List (USER_DATA)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginMyTradesGet(var.symbol, var.timestamp, var.signature, is.isolated=var.is.isolated, start.time=var.start.time, end.time=var.end.time, from.id=var.from.id, limit=var.limit, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginMyTradesGet(var.symbol, is.isolated=var.is.isolated, start.time=var.start.time, end.time=var.end.time, from.id=var.from.id, limit=var.limit, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginOpenOrderListGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 var.symbol <- 'symbol_example' # character | Mandatory for isolated margin, not supported for cross margin
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -1859,35 +1813,25 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Query Margin Account's Open OCO (USER_DATA)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginOpenOrderListGet(var.timestamp, var.signature, is.isolated=var.is.isolated, symbol=var.symbol, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginOpenOrderListGet(is.isolated=var.is.isolated, symbol=var.symbol, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginOpenOrdersDelete  ####################
 
 library(binanceRapi)
 var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Margin Account Cancel all Open Orders on a Symbol (TRADE)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginOpenOrdersDelete(var.symbol, var.timestamp, var.signature, is.isolated=var.is.isolated, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginOpenOrdersDelete(var.symbol, is.isolated=var.is.isolated, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginOpenOrdersGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
 var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -1895,18 +1839,13 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Query Margin Account's Open Orders (USER_DATA)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginOpenOrdersGet(var.timestamp, var.signature, symbol=var.symbol, is.isolated=var.is.isolated, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginOpenOrdersGet(symbol=var.symbol, is.isolated=var.is.isolated, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginOrderDelete  ####################
 
 library(binanceRapi)
 var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 var.order.id <- 56 # integer | Order id
 var.orig.client.order.id <- 'orig.client.order.id_example' # character | Order id from client
@@ -1916,18 +1855,13 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Margin Account Cancel Order (TRADE)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginOrderDelete(var.symbol, var.timestamp, var.signature, is.isolated=var.is.isolated, order.id=var.order.id, orig.client.order.id=var.orig.client.order.id, new.client.order.id=var.new.client.order.id, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginOrderDelete(var.symbol, is.isolated=var.is.isolated, order.id=var.order.id, orig.client.order.id=var.orig.client.order.id, new.client.order.id=var.new.client.order.id, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginOrderGet  ####################
 
 library(binanceRapi)
 var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 var.order.id <- 56 # integer | Order id
 var.orig.client.order.id <- 'orig.client.order.id_example' # character | Order id from client
@@ -1936,18 +1870,13 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Query Margin Account's Order (USER_DATA)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginOrderGet(var.symbol, var.timestamp, var.signature, is.isolated=var.is.isolated, order.id=var.order.id, orig.client.order.id=var.orig.client.order.id, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginOrderGet(var.symbol, is.isolated=var.is.isolated, order.id=var.order.id, orig.client.order.id=var.orig.client.order.id, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginOrderListDelete  ####################
 
 library(binanceRapi)
 var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 var.order.list.id <- 56 # integer | Order list id
 var.list.client.order.id <- 'list.client.order.id_example' # character | A unique Id for the entire orderList
@@ -1957,17 +1886,12 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Margin Account Cancel OCO (TRADE)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginOrderListDelete(var.symbol, var.timestamp, var.signature, is.isolated=var.is.isolated, order.list.id=var.order.list.id, list.client.order.id=var.list.client.order.id, new.client.order.id=var.new.client.order.id, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginOrderListDelete(var.symbol, is.isolated=var.is.isolated, order.list.id=var.order.list.id, list.client.order.id=var.list.client.order.id, new.client.order.id=var.new.client.order.id, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginOrderListGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 var.symbol <- 'symbol_example' # character | Mandatory for isolated margin, not supported for cross margin
 var.order.list.id <- 56 # integer | Order list id
@@ -1977,10 +1901,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Query Margin Account's OCO (USER_DATA)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginOrderListGet(var.timestamp, var.signature, is.isolated=var.is.isolated, symbol=var.symbol, order.list.id=var.order.list.id, orig.client.order.id=var.orig.client.order.id, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginOrderListGet(is.isolated=var.is.isolated, symbol=var.symbol, order.list.id=var.order.list.id, orig.client.order.id=var.orig.client.order.id, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginOrderOcoPost  ####################
@@ -1991,8 +1912,6 @@ var.side <- 'SELL' # character | SELL or BUY
 var.quantity <- 3.4 # numeric | 
 var.price <- 3.4 # numeric | Order price
 var.stop.price <- 3.4 # numeric | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 var.list.client.order.id <- 'list.client.order.id_example' # character | A unique Id for the entire orderList
 var.limit.client.order.id <- 'limit.client.order.id_example' # character | A unique Id for the limit order
@@ -2008,10 +1927,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Margin Account New OCO (TRADE)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginOrderOcoPost(var.symbol, var.side, var.quantity, var.price, var.stop.price, var.timestamp, var.signature, is.isolated=var.is.isolated, list.client.order.id=var.list.client.order.id, limit.client.order.id=var.limit.client.order.id, limit.iceberg.qty=var.limit.iceberg.qty, stop.client.order.id=var.stop.client.order.id, stop.limit.price=var.stop.limit.price, stop.iceberg.qty=var.stop.iceberg.qty, stop.limit.time.in.force=var.stop.limit.time.in.force, new.order.resp.type=var.new.order.resp.type, side.effect.type=var.side.effect.type, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginOrderOcoPost(var.symbol, var.side, var.quantity, var.price, var.stop.price, is.isolated=var.is.isolated, list.client.order.id=var.list.client.order.id, limit.client.order.id=var.limit.client.order.id, limit.iceberg.qty=var.limit.iceberg.qty, stop.client.order.id=var.stop.client.order.id, stop.limit.price=var.stop.limit.price, stop.iceberg.qty=var.stop.iceberg.qty, stop.limit.time.in.force=var.stop.limit.time.in.force, new.order.resp.type=var.new.order.resp.type, side.effect.type=var.side.effect.type, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginOrderPost  ####################
@@ -2021,8 +1937,6 @@ var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
 var.side <- 'SELL' # character | SELL or BUY
 var.type <- 'type_example' # character | Order type
 var.quantity <- 3.4 # numeric | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 var.quote.order.qty <- 3.4 # numeric | Quote quantity
 var.price <- 3.4 # numeric | Order price
@@ -2037,10 +1951,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Margin Account New Order (TRADE)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginOrderPost(var.symbol, var.side, var.type, var.quantity, var.timestamp, var.signature, is.isolated=var.is.isolated, quote.order.qty=var.quote.order.qty, price=var.price, stop.price=var.stop.price, new.client.order.id=var.new.client.order.id, iceberg.qty=var.iceberg.qty, new.order.resp.type=var.new.order.resp.type, side.effect.type=var.side.effect.type, time.in.force=var.time.in.force, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginOrderPost(var.symbol, var.side, var.type, var.quantity, is.isolated=var.is.isolated, quote.order.qty=var.quote.order.qty, price=var.price, stop.price=var.stop.price, new.client.order.id=var.new.client.order.id, iceberg.qty=var.iceberg.qty, new.order.resp.type=var.new.order.resp.type, side.effect.type=var.side.effect.type, time.in.force=var.time.in.force, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginPairGet  ####################
@@ -2050,9 +1961,6 @@ var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
 
 #Query Cross Margin Pair (MARKET_DATA)
 api.instance <- MarginApi$new()
-
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
 
 result <- api.instance$SapiV1MarginPairGet(var.symbol)
 
@@ -2065,9 +1973,6 @@ var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
 #Query Margin PriceIndex (MARKET_DATA)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
 result <- api.instance$SapiV1MarginPriceIndexGet(var.symbol)
 
 
@@ -2075,8 +1980,6 @@ result <- api.instance$SapiV1MarginPriceIndexGet(var.symbol)
 
 library(binanceRapi)
 var.asset <- 'BTC' # character | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.isolated.symbol <- 'isolated.symbol_example' # character | Isolated symbol
 var.tx.id <- 2970933056 # integer | the tranId in  `POST /sapi/v1/margin/repay`
 var.start.time <- 56 # integer | UTC timestamp in ms
@@ -2089,10 +1992,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Query Repay Record (USER_DATA)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginRepayGet(var.asset, var.timestamp, var.signature, isolated.symbol=var.isolated.symbol, tx.id=var.tx.id, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, archived=var.archived, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginRepayGet(var.asset, isolated.symbol=var.isolated.symbol, tx.id=var.tx.id, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, archived=var.archived, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginRepayPost  ####################
@@ -2100,8 +2000,6 @@ result <- api.instance$SapiV1MarginRepayGet(var.asset, var.timestamp, var.signat
 library(binanceRapi)
 var.asset <- 'BTC' # character | 
 var.amount <- 1.01 # numeric | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.is.isolated <- 'is.isolated_example' # character | For isolated margin or not, 'TRUE', 'FALSE', default 'FALSE'
 var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
@@ -2109,17 +2007,12 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Margin Account Repay (MARGIN)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginRepayPost(var.asset, var.amount, var.timestamp, var.signature, is.isolated=var.is.isolated, symbol=var.symbol, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginRepayPost(var.asset, var.amount, is.isolated=var.is.isolated, symbol=var.symbol, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginTransferGet  ####################
 
 library(binanceRapi)
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.asset <- 'BNB' # character | 
 var.type <- 'type_example' # character | Tranfer Type
 var.start.time <- 56 # integer | UTC timestamp in ms
@@ -2132,10 +2025,7 @@ var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 #Get Cross Margin Transfer History (USER_DATA)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginTransferGet(var.timestamp, var.signature, asset=var.asset, type=var.type, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, archived=var.archived, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginTransferGet(asset=var.asset, type=var.type, start.time=var.start.time, end.time=var.end.time, current=var.current, size=var.size, archived=var.archived, recv.window=var.recv.window)
 
 
 ####################  SapiV1MarginTransferPost  ####################
@@ -2143,18 +2033,13 @@ result <- api.instance$SapiV1MarginTransferGet(var.timestamp, var.signature, ass
 library(binanceRapi)
 var.asset <- 'BTC' # character | 
 var.amount <- 1.01 # numeric | 
-var.timestamp <- 56 # integer | UTC timestamp in ms
-var.signature <- 'signature_example' # character | Signature
 var.type <- 56 # integer | 1 -> transfer from main account to margin account \\ 2 -> transfer from margin account to main account
 var.recv.window <- 5000 # integer | The value cannot be greater than 60000
 
 #Cross Margin Account Transfer (MARGIN)
 api.instance <- MarginApi$new()
 
-#Configure API key authorization: ApiKeyAuth
-api.instance$apiClient$apiKeys['X-MBX-APIKEY'] <- 'TODO_YOUR_API_KEY';
-
-result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.timestamp, var.signature, type=var.type, recv.window=var.recv.window)
+result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, type=var.type, recv.window=var.recv.window)
 
 
 }
@@ -2186,6 +2071,8 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \item \href{#method-SapiV1MarginAllPairsGetWithHttpInfo}{\code{MarginApi$SapiV1MarginAllPairsGetWithHttpInfo()}}
 \item \href{#method-SapiV1MarginAssetGet}{\code{MarginApi$SapiV1MarginAssetGet()}}
 \item \href{#method-SapiV1MarginAssetGetWithHttpInfo}{\code{MarginApi$SapiV1MarginAssetGetWithHttpInfo()}}
+\item \href{#method-SapiV1MarginCrossMarginDataGet}{\code{MarginApi$SapiV1MarginCrossMarginDataGet()}}
+\item \href{#method-SapiV1MarginCrossMarginDataGetWithHttpInfo}{\code{MarginApi$SapiV1MarginCrossMarginDataGetWithHttpInfo()}}
 \item \href{#method-SapiV1MarginForceLiquidationRecGet}{\code{MarginApi$SapiV1MarginForceLiquidationRecGet()}}
 \item \href{#method-SapiV1MarginForceLiquidationRecGetWithHttpInfo}{\code{MarginApi$SapiV1MarginForceLiquidationRecGetWithHttpInfo()}}
 \item \href{#method-SapiV1MarginInterestHistoryGet}{\code{MarginApi$SapiV1MarginInterestHistoryGet()}}
@@ -2202,6 +2089,10 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \item \href{#method-SapiV1MarginIsolatedAccountPostWithHttpInfo}{\code{MarginApi$SapiV1MarginIsolatedAccountPostWithHttpInfo()}}
 \item \href{#method-SapiV1MarginIsolatedAllPairsGet}{\code{MarginApi$SapiV1MarginIsolatedAllPairsGet()}}
 \item \href{#method-SapiV1MarginIsolatedAllPairsGetWithHttpInfo}{\code{MarginApi$SapiV1MarginIsolatedAllPairsGetWithHttpInfo()}}
+\item \href{#method-SapiV1MarginIsolatedMarginDataGet}{\code{MarginApi$SapiV1MarginIsolatedMarginDataGet()}}
+\item \href{#method-SapiV1MarginIsolatedMarginDataGetWithHttpInfo}{\code{MarginApi$SapiV1MarginIsolatedMarginDataGetWithHttpInfo()}}
+\item \href{#method-SapiV1MarginIsolatedMarginTierGet}{\code{MarginApi$SapiV1MarginIsolatedMarginTierGet()}}
+\item \href{#method-SapiV1MarginIsolatedMarginTierGetWithHttpInfo}{\code{MarginApi$SapiV1MarginIsolatedMarginTierGetWithHttpInfo()}}
 \item \href{#method-SapiV1MarginIsolatedPairGet}{\code{MarginApi$SapiV1MarginIsolatedPairGet()}}
 \item \href{#method-SapiV1MarginIsolatedPairGetWithHttpInfo}{\code{MarginApi$SapiV1MarginIsolatedPairGetWithHttpInfo()}}
 \item \href{#method-SapiV1MarginIsolatedTransferGet}{\code{MarginApi$SapiV1MarginIsolatedTransferGet()}}
@@ -2265,7 +2156,7 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \if{latex}{\out{\hypertarget{method-SapiV1BnbBurnGet}{}}}
 \subsection{Method \code{SapiV1BnbBurnGet()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1BnbBurnGet(timestamp, signature, recv.window = NULL, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1BnbBurnGet(recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -2274,12 +2165,7 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \if{latex}{\out{\hypertarget{method-SapiV1BnbBurnGetWithHttpInfo}{}}}
 \subsection{Method \code{SapiV1BnbBurnGetWithHttpInfo()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1BnbBurnGetWithHttpInfo(
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1BnbBurnGetWithHttpInfo(recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -2289,8 +2175,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Method \code{SapiV1BnbBurnPost()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1BnbBurnPost(
-  timestamp,
-  signature,
   spot.bnb.burn = NULL,
   interest.bnb.burn = NULL,
   recv.window = NULL,
@@ -2305,8 +2189,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Method \code{SapiV1BnbBurnPostWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1BnbBurnPostWithHttpInfo(
-  timestamp,
-  signature,
   spot.bnb.burn = NULL,
   interest.bnb.burn = NULL,
   recv.window = NULL,
@@ -2320,7 +2202,7 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \if{latex}{\out{\hypertarget{method-SapiV1MarginAccountGet}{}}}
 \subsection{Method \code{SapiV1MarginAccountGet()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginAccountGet(timestamp, signature, recv.window = NULL, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginAccountGet(recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -2329,12 +2211,7 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \if{latex}{\out{\hypertarget{method-SapiV1MarginAccountGetWithHttpInfo}{}}}
 \subsection{Method \code{SapiV1MarginAccountGetWithHttpInfo()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginAccountGetWithHttpInfo(
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginAccountGetWithHttpInfo(recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -2362,8 +2239,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Method \code{SapiV1MarginAllOrderListGet()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginAllOrderListGet(
-  timestamp,
-  signature,
   is.isolated = NULL,
   symbol = NULL,
   from.id = NULL,
@@ -2382,8 +2257,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Method \code{SapiV1MarginAllOrderListGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginAllOrderListGetWithHttpInfo(
-  timestamp,
-  signature,
   is.isolated = NULL,
   symbol = NULL,
   from.id = NULL,
@@ -2403,8 +2276,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginAllOrdersGet(
   symbol,
-  timestamp,
-  signature,
   is.isolated = NULL,
   order.id = NULL,
   start.time = NULL,
@@ -2423,8 +2294,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginAllOrdersGetWithHttpInfo(
   symbol,
-  timestamp,
-  signature,
   is.isolated = NULL,
   order.id = NULL,
   start.time = NULL,
@@ -2473,13 +2342,39 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 
 }
 \if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-SapiV1MarginCrossMarginDataGet"></a>}}
+\if{latex}{\out{\hypertarget{method-SapiV1MarginCrossMarginDataGet}{}}}
+\subsection{Method \code{SapiV1MarginCrossMarginDataGet()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginCrossMarginDataGet(
+  vip.level = NULL,
+  coin = NULL,
+  recv.window = NULL,
+  ...
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-SapiV1MarginCrossMarginDataGetWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-SapiV1MarginCrossMarginDataGetWithHttpInfo}{}}}
+\subsection{Method \code{SapiV1MarginCrossMarginDataGetWithHttpInfo()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginCrossMarginDataGetWithHttpInfo(
+  vip.level = NULL,
+  coin = NULL,
+  recv.window = NULL,
+  ...
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-SapiV1MarginForceLiquidationRecGet"></a>}}
 \if{latex}{\out{\hypertarget{method-SapiV1MarginForceLiquidationRecGet}{}}}
 \subsection{Method \code{SapiV1MarginForceLiquidationRecGet()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginForceLiquidationRecGet(
-  timestamp,
-  signature,
   start.time = NULL,
   end.time = NULL,
   isolated.symbol = NULL,
@@ -2497,8 +2392,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Method \code{SapiV1MarginForceLiquidationRecGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginForceLiquidationRecGetWithHttpInfo(
-  timestamp,
-  signature,
   start.time = NULL,
   end.time = NULL,
   isolated.symbol = NULL,
@@ -2516,8 +2409,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Method \code{SapiV1MarginInterestHistoryGet()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginInterestHistoryGet(
-  timestamp,
-  signature,
   asset = NULL,
   isolated.symbol = NULL,
   start.time = NULL,
@@ -2537,8 +2428,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Method \code{SapiV1MarginInterestHistoryGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginInterestHistoryGetWithHttpInfo(
-  timestamp,
-  signature,
   asset = NULL,
   isolated.symbol = NULL,
   start.time = NULL,
@@ -2559,8 +2448,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginInterestRateHistoryGet(
   asset,
-  timestamp,
-  signature,
   vip.level = NULL,
   start.time = NULL,
   end.time = NULL,
@@ -2578,8 +2465,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginInterestRateHistoryGetWithHttpInfo(
   asset,
-  timestamp,
-  signature,
   vip.level = NULL,
   start.time = NULL,
   end.time = NULL,
@@ -2595,13 +2480,7 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \if{latex}{\out{\hypertarget{method-SapiV1MarginIsolatedAccountDelete}{}}}
 \subsection{Method \code{SapiV1MarginIsolatedAccountDelete()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginIsolatedAccountDelete(
-  symbol,
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginIsolatedAccountDelete(symbol, recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -2612,8 +2491,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginIsolatedAccountDeleteWithHttpInfo(
   symbol,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2626,8 +2503,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Method \code{SapiV1MarginIsolatedAccountGet()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginIsolatedAccountGet(
-  timestamp,
-  signature,
   symbols = NULL,
   recv.window = NULL,
   ...
@@ -2641,8 +2516,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Method \code{SapiV1MarginIsolatedAccountGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginIsolatedAccountGetWithHttpInfo(
-  timestamp,
-  signature,
   symbols = NULL,
   recv.window = NULL,
   ...
@@ -2655,12 +2528,7 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \if{latex}{\out{\hypertarget{method-SapiV1MarginIsolatedAccountLimitGet}{}}}
 \subsection{Method \code{SapiV1MarginIsolatedAccountLimitGet()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginIsolatedAccountLimitGet(
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginIsolatedAccountLimitGet(recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -2670,8 +2538,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Method \code{SapiV1MarginIsolatedAccountLimitGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginIsolatedAccountLimitGetWithHttpInfo(
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2683,13 +2549,7 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \if{latex}{\out{\hypertarget{method-SapiV1MarginIsolatedAccountPost}{}}}
 \subsection{Method \code{SapiV1MarginIsolatedAccountPost()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginIsolatedAccountPost(
-  symbol,
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginIsolatedAccountPost(symbol, recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -2700,8 +2560,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginIsolatedAccountPostWithHttpInfo(
   symbol,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2713,12 +2571,7 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \if{latex}{\out{\hypertarget{method-SapiV1MarginIsolatedAllPairsGet}{}}}
 \subsection{Method \code{SapiV1MarginIsolatedAllPairsGet()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginIsolatedAllPairsGet(
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginIsolatedAllPairsGet(recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -2727,9 +2580,60 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \if{latex}{\out{\hypertarget{method-SapiV1MarginIsolatedAllPairsGetWithHttpInfo}{}}}
 \subsection{Method \code{SapiV1MarginIsolatedAllPairsGetWithHttpInfo()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginIsolatedAllPairsGetWithHttpInfo(
-  timestamp,
-  signature,
+\if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginIsolatedAllPairsGetWithHttpInfo(recv.window = NULL, ...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-SapiV1MarginIsolatedMarginDataGet"></a>}}
+\if{latex}{\out{\hypertarget{method-SapiV1MarginIsolatedMarginDataGet}{}}}
+\subsection{Method \code{SapiV1MarginIsolatedMarginDataGet()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginIsolatedMarginDataGet(
+  vip.level = NULL,
+  symbol = NULL,
+  recv.window = NULL,
+  ...
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-SapiV1MarginIsolatedMarginDataGetWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-SapiV1MarginIsolatedMarginDataGetWithHttpInfo}{}}}
+\subsection{Method \code{SapiV1MarginIsolatedMarginDataGetWithHttpInfo()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginIsolatedMarginDataGetWithHttpInfo(
+  vip.level = NULL,
+  symbol = NULL,
+  recv.window = NULL,
+  ...
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-SapiV1MarginIsolatedMarginTierGet"></a>}}
+\if{latex}{\out{\hypertarget{method-SapiV1MarginIsolatedMarginTierGet}{}}}
+\subsection{Method \code{SapiV1MarginIsolatedMarginTierGet()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginIsolatedMarginTierGet(
+  symbol,
+  tier = NULL,
+  recv.window = NULL,
+  ...
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-SapiV1MarginIsolatedMarginTierGetWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-SapiV1MarginIsolatedMarginTierGetWithHttpInfo}{}}}
+\subsection{Method \code{SapiV1MarginIsolatedMarginTierGetWithHttpInfo()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginIsolatedMarginTierGetWithHttpInfo(
+  symbol,
+  tier = NULL,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2741,13 +2645,7 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \if{latex}{\out{\hypertarget{method-SapiV1MarginIsolatedPairGet}{}}}
 \subsection{Method \code{SapiV1MarginIsolatedPairGet()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginIsolatedPairGet(
-  symbol,
-  timestamp,
-  signature,
-  recv.window = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginIsolatedPairGet(symbol, recv.window = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }
@@ -2758,8 +2656,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginIsolatedPairGetWithHttpInfo(
   symbol,
-  timestamp,
-  signature,
   recv.window = NULL,
   ...
 )}\if{html}{\out{</div>}}
@@ -2773,8 +2669,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginIsolatedTransferGet(
   symbol,
-  timestamp,
-  signature,
   asset = NULL,
   trans.from = NULL,
   trans.to = NULL,
@@ -2795,8 +2689,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginIsolatedTransferGetWithHttpInfo(
   symbol,
-  timestamp,
-  signature,
   asset = NULL,
   trans.from = NULL,
   trans.to = NULL,
@@ -2819,8 +2711,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
   asset,
   symbol,
   amount,
-  timestamp,
-  signature,
   trans.from = NULL,
   trans.to = NULL,
   recv.window = NULL,
@@ -2838,8 +2728,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
   asset,
   symbol,
   amount,
-  timestamp,
-  signature,
   trans.from = NULL,
   trans.to = NULL,
   recv.window = NULL,
@@ -2855,8 +2743,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginLoanGet(
   asset,
-  timestamp,
-  signature,
   isolated.symbol = NULL,
   tx.id = NULL,
   start.time = NULL,
@@ -2877,8 +2763,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginLoanGetWithHttpInfo(
   asset,
-  timestamp,
-  signature,
   isolated.symbol = NULL,
   tx.id = NULL,
   start.time = NULL,
@@ -2900,8 +2784,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginLoanPost(
   asset,
   amount,
-  timestamp,
-  signature,
   is.isolated = NULL,
   symbol = NULL,
   recv.window = NULL,
@@ -2918,8 +2800,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginLoanPostWithHttpInfo(
   asset,
   amount,
-  timestamp,
-  signature,
   is.isolated = NULL,
   symbol = NULL,
   recv.window = NULL,
@@ -2935,8 +2815,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginMaxBorrowableGet(
   asset,
-  timestamp,
-  signature,
   isolated.symbol = NULL,
   recv.window = NULL,
   ...
@@ -2951,8 +2829,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginMaxBorrowableGetWithHttpInfo(
   asset,
-  timestamp,
-  signature,
   isolated.symbol = NULL,
   recv.window = NULL,
   ...
@@ -2967,8 +2843,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginMaxTransferableGet(
   asset,
-  timestamp,
-  signature,
   isolated.symbol = NULL,
   recv.window = NULL,
   ...
@@ -2983,8 +2857,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginMaxTransferableGetWithHttpInfo(
   asset,
-  timestamp,
-  signature,
   isolated.symbol = NULL,
   recv.window = NULL,
   ...
@@ -2999,8 +2871,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginMyTradesGet(
   symbol,
-  timestamp,
-  signature,
   is.isolated = NULL,
   start.time = NULL,
   end.time = NULL,
@@ -3019,8 +2889,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginMyTradesGetWithHttpInfo(
   symbol,
-  timestamp,
-  signature,
   is.isolated = NULL,
   start.time = NULL,
   end.time = NULL,
@@ -3038,8 +2906,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Method \code{SapiV1MarginOpenOrderListGet()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginOpenOrderListGet(
-  timestamp,
-  signature,
   is.isolated = NULL,
   symbol = NULL,
   recv.window = NULL,
@@ -3054,8 +2920,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Method \code{SapiV1MarginOpenOrderListGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginOpenOrderListGetWithHttpInfo(
-  timestamp,
-  signature,
   is.isolated = NULL,
   symbol = NULL,
   recv.window = NULL,
@@ -3071,8 +2935,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginOpenOrdersDelete(
   symbol,
-  timestamp,
-  signature,
   is.isolated = NULL,
   recv.window = NULL,
   ...
@@ -3087,8 +2949,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginOpenOrdersDeleteWithHttpInfo(
   symbol,
-  timestamp,
-  signature,
   is.isolated = NULL,
   recv.window = NULL,
   ...
@@ -3102,8 +2962,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Method \code{SapiV1MarginOpenOrdersGet()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginOpenOrdersGet(
-  timestamp,
-  signature,
   symbol = NULL,
   is.isolated = NULL,
   recv.window = NULL,
@@ -3118,8 +2976,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Method \code{SapiV1MarginOpenOrdersGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginOpenOrdersGetWithHttpInfo(
-  timestamp,
-  signature,
   symbol = NULL,
   is.isolated = NULL,
   recv.window = NULL,
@@ -3135,8 +2991,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginOrderDelete(
   symbol,
-  timestamp,
-  signature,
   is.isolated = NULL,
   order.id = NULL,
   orig.client.order.id = NULL,
@@ -3154,8 +3008,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginOrderDeleteWithHttpInfo(
   symbol,
-  timestamp,
-  signature,
   is.isolated = NULL,
   order.id = NULL,
   orig.client.order.id = NULL,
@@ -3173,8 +3025,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginOrderGet(
   symbol,
-  timestamp,
-  signature,
   is.isolated = NULL,
   order.id = NULL,
   orig.client.order.id = NULL,
@@ -3191,8 +3041,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginOrderGetWithHttpInfo(
   symbol,
-  timestamp,
-  signature,
   is.isolated = NULL,
   order.id = NULL,
   orig.client.order.id = NULL,
@@ -3209,8 +3057,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginOrderListDelete(
   symbol,
-  timestamp,
-  signature,
   is.isolated = NULL,
   order.list.id = NULL,
   list.client.order.id = NULL,
@@ -3228,8 +3074,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginOrderListDeleteWithHttpInfo(
   symbol,
-  timestamp,
-  signature,
   is.isolated = NULL,
   order.list.id = NULL,
   list.client.order.id = NULL,
@@ -3246,8 +3090,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Method \code{SapiV1MarginOrderListGet()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginOrderListGet(
-  timestamp,
-  signature,
   is.isolated = NULL,
   symbol = NULL,
   order.list.id = NULL,
@@ -3264,8 +3106,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Method \code{SapiV1MarginOrderListGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginOrderListGetWithHttpInfo(
-  timestamp,
-  signature,
   is.isolated = NULL,
   symbol = NULL,
   order.list.id = NULL,
@@ -3287,8 +3127,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
   quantity,
   price,
   stop.price,
-  timestamp,
-  signature,
   is.isolated = NULL,
   list.client.order.id = NULL,
   limit.client.order.id = NULL,
@@ -3316,8 +3154,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
   quantity,
   price,
   stop.price,
-  timestamp,
-  signature,
   is.isolated = NULL,
   list.client.order.id = NULL,
   limit.client.order.id = NULL,
@@ -3344,8 +3180,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
   side,
   type,
   quantity,
-  timestamp,
-  signature,
   is.isolated = NULL,
   quote.order.qty = NULL,
   price = NULL,
@@ -3371,8 +3205,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
   side,
   type,
   quantity,
-  timestamp,
-  signature,
   is.isolated = NULL,
   quote.order.qty = NULL,
   price = NULL,
@@ -3431,8 +3263,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginRepayGet(
   asset,
-  timestamp,
-  signature,
   isolated.symbol = NULL,
   tx.id = NULL,
   start.time = NULL,
@@ -3453,8 +3283,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginRepayGetWithHttpInfo(
   asset,
-  timestamp,
-  signature,
   isolated.symbol = NULL,
   tx.id = NULL,
   start.time = NULL,
@@ -3476,8 +3304,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginRepayPost(
   asset,
   amount,
-  timestamp,
-  signature,
   is.isolated = NULL,
   symbol = NULL,
   recv.window = NULL,
@@ -3494,8 +3320,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginRepayPostWithHttpInfo(
   asset,
   amount,
-  timestamp,
-  signature,
   is.isolated = NULL,
   symbol = NULL,
   recv.window = NULL,
@@ -3510,8 +3334,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Method \code{SapiV1MarginTransferGet()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginTransferGet(
-  timestamp,
-  signature,
   asset = NULL,
   type = NULL,
   start.time = NULL,
@@ -3531,8 +3353,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \subsection{Method \code{SapiV1MarginTransferGetWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginTransferGetWithHttpInfo(
-  timestamp,
-  signature,
   asset = NULL,
   type = NULL,
   start.time = NULL,
@@ -3554,8 +3374,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginTransferPost(
   asset,
   amount,
-  timestamp,
-  signature,
   type = NULL,
   recv.window = NULL,
   ...
@@ -3571,8 +3389,6 @@ result <- api.instance$SapiV1MarginTransferPost(var.asset, var.amount, var.times
 \if{html}{\out{<div class="r">}}\preformatted{MarginApi$SapiV1MarginTransferPostWithHttpInfo(
   asset,
   amount,
-  timestamp,
-  signature,
   type = NULL,
   recv.window = NULL,
   ...

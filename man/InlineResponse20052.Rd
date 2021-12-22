@@ -13,11 +13,11 @@ InlineResponse20052 Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{totalCount}}{integer}
+\item{\code{success}}{character}
 
-\item{\code{masterAccountTotalAsset}}{character}
+\item{\code{futuresType}}{integer}
 
-\item{\code{spotSubUserAssetBtcVoList}}{list( \link{InlineResponse20052SpotSubUserAssetBtcVoList} )}
+\item{\code{transfers}}{list( \link{InlineResponse20052Transfers} )}
 }
 \if{html}{\out{</div>}}
 }
@@ -37,12 +37,7 @@ InlineResponse20052 Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20052$new(
-  totalCount,
-  masterAccountTotalAsset,
-  spotSubUserAssetBtcVoList,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InlineResponse20052$new(success, futuresType, transfers, ...)}\if{html}{\out{</div>}}
 }
 
 }
