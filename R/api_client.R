@@ -39,7 +39,7 @@ ApiClient  <- R6::R6Class(
   'ApiClient',
   public = list(
     # base path of all requests
-    basePath = "https://api.binance.com",
+    basePath = NULL,
     # user agent in the HTTP request
     userAgent = "OpenAPI-Generator/0.0.1/r",
     # default headers in the HTTP request
@@ -61,9 +61,13 @@ ApiClient  <- R6::R6Class(
     # Credentials for accessing the API
     credentials = NULL,
     # constructor
-    initialize = function(basePath=NULL, userAgent=NULL, defaultHeaders=NULL, username=NULL, password=NULL, apiKeys=NULL, accessToken=NULL, timeout=NULL,  retryStatusCodes=NULL, maxRetryAttempts=NULL){
+    initialize = function(basePath=NULL, userAgent=NULL, defaultHeaders=NULL, username=NULL, 
+                          password=NULL, apiKeys=NULL, accessToken=NULL, timeout=NULL,  
+                          retryStatusCodes=NULL, maxRetryAttempts=NULL, credentials=NULL, test = TRUE){
       if (!is.null(basePath)) {
         self$basePath <- basePath
+      } else {
+        self$basePath <- ifelse(test, "https://testnet.binance.vision", "https://api.binance.com")
       }
 
       if (!is.null(defaultHeaders)) {
@@ -104,7 +108,12 @@ ApiClient  <- R6::R6Class(
         self$maxRetryAttempts <- maxRetryAttempts
       }
       
-      self$credentials <- Credentials$new()
+      if(!is.null(credentials)){
+        self$credentials <- credentials
+      } else {
+        self$credentials <- Credentials$new()
+      }
+      
     },
 
     CallApi = function(url, method, queryParams, headerParams, body, ...){
