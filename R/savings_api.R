@@ -21,12 +21,12 @@
 #' \item \emph{ @param } project.id character
 #' \item \emph{ @param } lot character
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20080} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20087} \cr
 #'
 #'
 #' \item status code : 200 | Generated Purchase Id
 #'
-#' \item return type : InlineResponse20080 
+#' \item return type : InlineResponse20087 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -56,12 +56,12 @@
 #' \item \emph{ @param } current integer
 #' \item \emph{ @param } size integer
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } list( \link{inline_response_200_74} ) \cr
+#' \item \emph{ @returnType } list( \link{inline_response_200_81} ) \cr
 #'
 #'
 #' \item status code : 200 | List of flexible products
 #'
-#' \item return type : array[InlineResponse20074] 
+#' \item return type : array[InlineResponse20081] 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -89,12 +89,12 @@
 #' \item \emph{ @param } product.id character
 #' \item \emph{ @param } amount numeric
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20076} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20083} \cr
 #'
 #'
 #' \item status code : 200 | Generated Purchase Id
 #'
-#' \item return type : InlineResponse20076 
+#' \item return type : InlineResponse20083 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -154,12 +154,12 @@
 #' \itemize{
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } list( \link{inline_response_200_78} ) \cr
+#' \item \emph{ @returnType } list( \link{inline_response_200_85} ) \cr
 #'
 #'
 #' \item status code : 200 | List of flexible product positions
 #'
-#' \item return type : array[InlineResponse20078] 
+#' \item return type : array[InlineResponse20085] 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -186,12 +186,12 @@
 #' \itemize{
 #' \item \emph{ @param } product.id character
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20075} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20082} \cr
 #'
 #'
 #' \item status code : 200 | Daily purchase quote of flexible product left
 #'
-#' \item return type : InlineResponse20075 
+#' \item return type : InlineResponse20082 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -219,12 +219,12 @@
 #' \item \emph{ @param } product.id character
 #' \item \emph{ @param } type Enum < [FAST, NORMAL] >
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20077} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20084} \cr
 #'
 #'
 #' \item status code : 200 | Daily redemption quota of flexible product left
 #'
-#' \item return type : InlineResponse20077 
+#' \item return type : InlineResponse20084 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -253,12 +253,12 @@
 #' \item \emph{ @param } lot character
 #' \item \emph{ @param } position.id character
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20084} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20091} \cr
 #'
 #'
 #' \item status code : 200 | Purchase information
 #'
-#' \item return type : InlineResponse20084 
+#' \item return type : InlineResponse20091 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -291,12 +291,12 @@
 #' \item \emph{ @param } current integer
 #' \item \emph{ @param } size integer
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } list( \link{inline_response_200_79} ) \cr
+#' \item \emph{ @returnType } list( \link{inline_response_200_86} ) \cr
 #'
 #'
 #' \item status code : 200 | List of fixed projects
 #'
-#' \item return type : array[InlineResponse20079] 
+#' \item return type : array[InlineResponse20086] 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -325,12 +325,12 @@
 #' \item \emph{ @param } project.id character
 #' \item \emph{ @param } status Enum < [ALL, SUBSCRIBABLE, UNSUBSCRIBABLE] >
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } list( \link{inline_response_200_81} ) \cr
+#' \item \emph{ @returnType } list( \link{inline_response_200_88} ) \cr
 #'
 #'
 #' \item status code : 200 | List of fixed project positions
 #'
-#' \item return type : array[InlineResponse20081] 
+#' \item return type : array[InlineResponse20088] 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -356,12 +356,12 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20082} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20089} \cr
 #'
 #'
 #' \item status code : 200 | Lending account
 #'
-#' \item return type : InlineResponse20082 
+#' \item return type : InlineResponse20089 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -393,12 +393,12 @@
 #' \item \emph{ @param } current integer
 #' \item \emph{ @param } size integer
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } list( \link{inline_response_200_83} ) \cr
+#' \item \emph{ @returnType } list( \link{inline_response_200_90} ) \cr
 #'
 #'
 #' \item status code : 200 | History of interest
 #'
-#' \item return type : array[InlineResponse20083] 
+#' \item return type : array[InlineResponse20090] 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -767,7 +767,7 @@ SavingsApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20080", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20087", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -834,7 +834,7 @@ SavingsApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "array[InlineResponse20074]", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "array[InlineResponse20081]", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -901,7 +901,7 @@ SavingsApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20076", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20083", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1035,7 +1035,7 @@ SavingsApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "array[InlineResponse20078]", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "array[InlineResponse20085]", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1096,7 +1096,7 @@ SavingsApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20075", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20082", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1163,7 +1163,7 @@ SavingsApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20077", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20084", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1232,7 +1232,7 @@ SavingsApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20084", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20091", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1317,7 +1317,7 @@ SavingsApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "array[InlineResponse20079]", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "array[InlineResponse20086]", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1390,7 +1390,7 @@ SavingsApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "array[InlineResponse20081]", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "array[InlineResponse20088]", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1445,7 +1445,7 @@ SavingsApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20082", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20089", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1516,7 +1516,7 @@ SavingsApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "array[InlineResponse20083]", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "array[InlineResponse20090]", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }

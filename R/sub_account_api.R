@@ -22,12 +22,12 @@
 #' \item \emph{ @param } coin character
 #' \item \emph{ @param } network character
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20053} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20056} \cr
 #'
 #'
 #' \item status code : 200 | Deposit address info
 #'
-#' \item return type : InlineResponse20053 
+#' \item return type : InlineResponse20056 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -60,12 +60,12 @@
 #' \item \emph{ @param } limit integer
 #' \item \emph{ @param } offset integer
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } list( \link{inline_response_200_54} ) \cr
+#' \item \emph{ @returnType } list( \link{inline_response_200_57} ) \cr
 #'
 #'
 #' \item status code : 200 | Sub-account deposit history
 #'
-#' \item return type : array[InlineResponse20054] 
+#' \item return type : array[InlineResponse20057] 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -92,12 +92,12 @@
 #' \itemize{
 #' \item \emph{ @param } email character
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } list( \link{inline_response_200_69} ) \cr
+#' \item \emph{ @returnType } list( \link{inline_response_200_72} ) \cr
 #'
 #'
 #' \item status code : 200 | List of asset details
 #'
-#' \item return type : array[InlineResponse20069] 
+#' \item return type : array[InlineResponse20072] 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -126,12 +126,12 @@
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } amount numeric
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20068} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20071} \cr
 #'
 #'
 #' \item status code : 200 | Transfer id
 #'
-#' \item return type : InlineResponse20068 
+#' \item return type : InlineResponse20071 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -161,12 +161,12 @@
 #' \item \emph{ @param } amount numeric
 #' \item \emph{ @param } transfer.date integer
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20068} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20071} \cr
 #'
 #'
 #' \item status code : 200 | Transfer id
 #'
-#' \item return type : InlineResponse20068 
+#' \item return type : InlineResponse20071 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -194,12 +194,12 @@
 #' \item \emph{ @param } email character
 #' \item \emph{ @param } enable.blvt character
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20067} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20070} \cr
 #'
 #'
 #' \item status code : 200 | BLVT status
 #'
-#' \item return type : InlineResponse20067 
+#' \item return type : InlineResponse20070 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -226,12 +226,12 @@
 #' \itemize{
 #' \item \emph{ @param } email character
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20060} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20063} \cr
 #'
 #'
 #' \item status code : 200 | Futures account details
 #'
-#' \item return type : InlineResponse20060 
+#' \item return type : InlineResponse20063 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -257,12 +257,12 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20061} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20064} \cr
 #'
 #'
 #' \item status code : 200 | Futures account summary
 #'
-#' \item return type : InlineResponse20061 
+#' \item return type : InlineResponse20064 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -289,12 +289,12 @@
 #' \itemize{
 #' \item \emph{ @param } email character
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20059} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20062} \cr
 #'
 #'
 #' \item status code : 200 | Futures status
 #'
-#' \item return type : InlineResponse20059 
+#' \item return type : InlineResponse20062 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -326,12 +326,12 @@
 #' \item \emph{ @param } page integer
 #' \item \emph{ @param } limit integer
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20049} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20052} \cr
 #'
 #'
 #' \item status code : 200 | Sub-account Futures Asset Transfer History
 #'
-#' \item return type : InlineResponse20049 
+#' \item return type : InlineResponse20052 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -362,12 +362,12 @@
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } amount numeric
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20050} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20053} \cr
 #'
 #'
 #' \item status code : 200 | Futures Asset Transfer Info
 #'
-#' \item return type : InlineResponse20050 
+#' \item return type : InlineResponse20053 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -394,12 +394,12 @@
 #' \itemize{
 #' \item \emph{ @param } email character
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } list( \link{inline_response_200_62} ) \cr
+#' \item \emph{ @returnType } list( \link{inline_response_200_65} ) \cr
 #'
 #'
 #' \item status code : 200 | Futures account summary
 #'
-#' \item return type : array[InlineResponse20062] 
+#' \item return type : array[InlineResponse20065] 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -429,12 +429,12 @@
 #' \item \emph{ @param } amount numeric
 #' \item \emph{ @param } type Enum < [1, 2, 3, 4] >
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20063} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20066} \cr
 #'
 #'
 #' \item status code : 200 | Transfer id
 #'
-#' \item return type : InlineResponse20063 
+#' \item return type : InlineResponse20066 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -464,12 +464,12 @@
 #' \item \emph{ @param } page integer
 #' \item \emph{ @param } limit integer
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20047} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20050} \cr
 #'
 #'
 #' \item status code : 200 | List of sub-accounts
 #'
-#' \item return type : InlineResponse20047 
+#' \item return type : InlineResponse20050 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -496,12 +496,12 @@
 #' \itemize{
 #' \item \emph{ @param } email character
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20057} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20060} \cr
 #'
 #'
 #' \item status code : 200 | Margin sub-account details
 #'
-#' \item return type : InlineResponse20057 
+#' \item return type : InlineResponse20060 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -527,12 +527,12 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20058} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20061} \cr
 #'
 #'
 #' \item status code : 200 | Margin sub-account details
 #'
-#' \item return type : InlineResponse20058 
+#' \item return type : InlineResponse20061 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -559,12 +559,12 @@
 #' \itemize{
 #' \item \emph{ @param } email character
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20056} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20059} \cr
 #'
 #'
 #' \item status code : 200 | Margin status
 #'
-#' \item return type : InlineResponse20056 
+#' \item return type : InlineResponse20059 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -594,12 +594,12 @@
 #' \item \emph{ @param } amount numeric
 #' \item \emph{ @param } type Enum < [1, 2] >
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20063} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20066} \cr
 #'
 #'
 #' \item status code : 200 | Transfer id
 #'
-#' \item return type : InlineResponse20063 
+#' \item return type : InlineResponse20066 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -628,12 +628,12 @@
 #' \item \emph{ @param } page integer
 #' \item \emph{ @param } size integer
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20052} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20055} \cr
 #'
 #'
 #' \item status code : 200 | Summary of Sub-account Spot Assets
 #'
-#' \item return type : InlineResponse20052 
+#' \item return type : InlineResponse20055 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -660,12 +660,12 @@
 #' \itemize{
 #' \item \emph{ @param } email character
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } list( \link{inline_response_200_55} ) \cr
+#' \item \emph{ @returnType } list( \link{inline_response_200_58} ) \cr
 #'
 #'
 #' \item status code : 200 | Status on Margin/Futures
 #'
-#' \item return type : array[InlineResponse20055] 
+#' \item return type : array[InlineResponse20058] 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -686,6 +686,141 @@
 #' }
 #' }
 #'
+#' \strong{ SapiV1SubAccountSubAccountApiIpRestrictionGet } \emph{ Get IP Restriction for a Sub-account API Key (For Master Account) }
+#' Weight(UID): 3000
+#'
+#' \itemize{
+#' \item \emph{ @param } email character
+#' \item \emph{ @param } sub.account.api.key character
+#' \item \emph{ @param } recv.window integer
+#' \item \emph{ @returnType } \link{InlineResponse20073} \cr
+#'
+#'
+#' \item status code : 200 | IP Restriction information
+#'
+#' \item return type : InlineResponse20073 
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' \item status code : 400 | Bad Request
+#'
+#' \item return type : Error 
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' \item status code : 401 | Unauthorized Request
+#'
+#' \item return type : Error 
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ SapiV1SubAccountSubAccountApiIpRestrictionIpListDelete } \emph{ Delete IP List for a Sub-account API Key (For Master Account) }
+#' Weight(UID): 3000
+#'
+#' \itemize{
+#' \item \emph{ @param } email character
+#' \item \emph{ @param } sub.account.api.key character
+#' \item \emph{ @param } ip.address \link{AnyType}
+#' \item \emph{ @param } recv.window integer
+#' \item \emph{ @returnType } \link{InlineResponse20076} \cr
+#'
+#'
+#' \item status code : 200 | Delete IP information
+#'
+#' \item return type : InlineResponse20076 
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' \item status code : 400 | Bad Request
+#'
+#' \item return type : Error 
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' \item status code : 401 | Unauthorized Request
+#'
+#' \item return type : Error 
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ SapiV1SubAccountSubAccountApiIpRestrictionIpListPost } \emph{ Add IP List for a Sub-account API Key (For Master Account) }
+#' Before the usage of this endpoint, please ensure &#x60;POST /sapi/v1/sub-account/subAccountApi/ipRestriction&#x60; was used to enable the IP restriction.  Weight(UID): 3000
+#'
+#' \itemize{
+#' \item \emph{ @param } email character
+#' \item \emph{ @param } sub.account.api.key character
+#' \item \emph{ @param } ip.address \link{AnyType}
+#' \item \emph{ @param } recv.window integer
+#' \item \emph{ @returnType } \link{InlineResponse20075} \cr
+#'
+#'
+#' \item status code : 200 | Add IP information
+#'
+#' \item return type : InlineResponse20075 
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' \item status code : 400 | Bad Request
+#'
+#' \item return type : Error 
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' \item status code : 401 | Unauthorized Request
+#'
+#' \item return type : Error 
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ SapiV1SubAccountSubAccountApiIpRestrictionPost } \emph{ Enable or Disable IP Restriction for a Sub-account API Key (For Master Account) }
+#' Weight(UID): 3000
+#'
+#' \itemize{
+#' \item \emph{ @param } email character
+#' \item \emph{ @param } sub.account.api.key character
+#' \item \emph{ @param } ip.restrict \link{AnyType}
+#' \item \emph{ @param } recv.window integer
+#' \item \emph{ @returnType } \link{InlineResponse20074} \cr
+#'
+#'
+#' \item status code : 200 | IP Restriction information
+#'
+#' \item return type : InlineResponse20074 
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' \item status code : 400 | Bad Request
+#'
+#' \item return type : Error 
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' \item status code : 401 | Unauthorized Request
+#'
+#' \item return type : Error 
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#' 
 #' \strong{ SapiV1SubAccountSubTransferHistoryGet } \emph{ Sub-account Spot Asset Transfer History (For Master Account) }
 #' - fromEmail and toEmail cannot be sent at the same time. - Return fromEmail equal master account email by default.  Weight(IP): 1
 #'
@@ -697,12 +832,12 @@
 #' \item \emph{ @param } page integer
 #' \item \emph{ @param } limit integer
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } list( \link{inline_response_200_48} ) \cr
+#' \item \emph{ @returnType } list( \link{inline_response_200_51} ) \cr
 #'
 #'
 #' \item status code : 200 | Sub-account Spot Asset Transfer History
 #'
-#' \item return type : array[InlineResponse20048] 
+#' \item return type : array[InlineResponse20051] 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -730,12 +865,12 @@
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } amount numeric
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20063} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20066} \cr
 #'
 #'
 #' \item status code : 200 | Transfer id
 #'
-#' \item return type : InlineResponse20063 
+#' \item return type : InlineResponse20066 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -764,12 +899,12 @@
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } amount numeric
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20063} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20066} \cr
 #'
 #'
 #' \item status code : 200 | Transfer id
 #'
-#' \item return type : InlineResponse20063 
+#' \item return type : InlineResponse20066 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -800,12 +935,12 @@
 #' \item \emph{ @param } end.time integer
 #' \item \emph{ @param } limit integer
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } list( \link{inline_response_200_64} ) \cr
+#' \item \emph{ @returnType } list( \link{inline_response_200_67} ) \cr
 #'
 #'
 #' \item status code : 200 | Transfer id
 #'
-#' \item return type : array[InlineResponse20064] 
+#' \item return type : array[InlineResponse20067] 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -837,12 +972,12 @@
 #' \item \emph{ @param } page integer
 #' \item \emph{ @param } limit character
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } list( \link{inline_response_200_65} ) \cr
+#' \item \emph{ @returnType } list( \link{inline_response_200_68} ) \cr
 #'
 #'
 #' \item status code : 200 | Transfer History
 #'
-#' \item return type : array[InlineResponse20065] 
+#' \item return type : array[InlineResponse20068] 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -874,12 +1009,12 @@
 #' \item \emph{ @param } from.email character
 #' \item \emph{ @param } to.email character
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20066} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20069} \cr
 #'
 #'
 #' \item status code : 200 | Transfer id
 #'
-#' \item return type : InlineResponse20066 
+#' \item return type : InlineResponse20069 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -906,12 +1041,12 @@
 #' \itemize{
 #' \item \emph{ @param } sub.account.string character
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20046} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20049} \cr
 #'
 #'
 #' \item status code : 200 | Return the created virtual email
 #'
-#' \item return type : InlineResponse20046 
+#' \item return type : InlineResponse20049 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -1038,12 +1173,12 @@
 #' \itemize{
 #' \item \emph{ @param } email character
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20051} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20054} \cr
 #'
 #'
 #' \item status code : 200 | List of assets balances
 #'
-#' \item return type : InlineResponse20051 
+#' \item return type : InlineResponse20054 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -1341,6 +1476,61 @@
 #' result <- api.instance$SapiV1SubAccountStatusGet(email=var.email, recv.window=var.recv.window)
 #'
 #'
+#' ####################  SapiV1SubAccountSubAccountApiIpRestrictionGet  ####################
+#'
+#' library(binanceRapi)
+#' var.email <- 'email_example' # character | Sub-account email
+#' var.sub.account.api.key <- 'sub.account.api.key_example' # character | 
+#' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
+#'
+#' #Get IP Restriction for a Sub-account API Key (For Master Account)
+#' api.instance <- SubAccountApi$new()
+#'
+#' result <- api.instance$SapiV1SubAccountSubAccountApiIpRestrictionGet(var.email, var.sub.account.api.key, recv.window=var.recv.window)
+#'
+#'
+#' ####################  SapiV1SubAccountSubAccountApiIpRestrictionIpListDelete  ####################
+#'
+#' library(binanceRapi)
+#' var.email <- 'email_example' # character | Sub-account email
+#' var.sub.account.api.key <- 'sub.account.api.key_example' # character | 
+#' var.ip.address <- AnyType$new() # AnyType | Can be added in batches, separated by commas
+#' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
+#'
+#' #Delete IP List for a Sub-account API Key (For Master Account)
+#' api.instance <- SubAccountApi$new()
+#'
+#' result <- api.instance$SapiV1SubAccountSubAccountApiIpRestrictionIpListDelete(var.email, var.sub.account.api.key, var.ip.address, recv.window=var.recv.window)
+#'
+#'
+#' ####################  SapiV1SubAccountSubAccountApiIpRestrictionIpListPost  ####################
+#'
+#' library(binanceRapi)
+#' var.email <- 'email_example' # character | Sub-account email
+#' var.sub.account.api.key <- 'sub.account.api.key_example' # character | 
+#' var.ip.address <- AnyType$new() # AnyType | Can be added in batches, separated by commas
+#' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
+#'
+#' #Add IP List for a Sub-account API Key (For Master Account)
+#' api.instance <- SubAccountApi$new()
+#'
+#' result <- api.instance$SapiV1SubAccountSubAccountApiIpRestrictionIpListPost(var.email, var.sub.account.api.key, var.ip.address, recv.window=var.recv.window)
+#'
+#'
+#' ####################  SapiV1SubAccountSubAccountApiIpRestrictionPost  ####################
+#'
+#' library(binanceRapi)
+#' var.email <- 'email_example' # character | Sub-account email
+#' var.sub.account.api.key <- 'sub.account.api.key_example' # character | 
+#' var.ip.restrict <- AnyType$new() # AnyType | true or false
+#' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
+#'
+#' #Enable or Disable IP Restriction for a Sub-account API Key (For Master Account)
+#' api.instance <- SubAccountApi$new()
+#'
+#' result <- api.instance$SapiV1SubAccountSubAccountApiIpRestrictionPost(var.email, var.sub.account.api.key, var.ip.restrict, recv.window=var.recv.window)
+#'
+#'
 #' ####################  SapiV1SubAccountSubTransferHistoryGet  ####################
 #'
 #' library(binanceRapi)
@@ -1570,7 +1760,7 @@ SubAccountApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20053", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20056", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1643,7 +1833,7 @@ SubAccountApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "array[InlineResponse20054]", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "array[InlineResponse20057]", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1704,7 +1894,7 @@ SubAccountApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "array[InlineResponse20069]", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "array[InlineResponse20072]", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1777,7 +1967,7 @@ SubAccountApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20068", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20071", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1852,7 +2042,7 @@ SubAccountApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20068", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20071", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1919,7 +2109,7 @@ SubAccountApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20067", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20070", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1980,7 +2170,7 @@ SubAccountApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20060", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20063", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -2035,7 +2225,7 @@ SubAccountApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20061", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20064", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -2096,7 +2286,7 @@ SubAccountApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20059", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20062", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -2171,7 +2361,7 @@ SubAccountApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20049", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20052", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -2260,7 +2450,7 @@ SubAccountApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20050", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20053", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -2321,7 +2511,7 @@ SubAccountApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "array[InlineResponse20062]", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "array[InlineResponse20065]", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -2400,7 +2590,7 @@ SubAccountApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20063", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20066", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -2463,7 +2653,7 @@ SubAccountApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20047", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20050", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -2524,7 +2714,7 @@ SubAccountApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20057", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20060", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -2579,7 +2769,7 @@ SubAccountApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20058", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20061", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -2640,7 +2830,7 @@ SubAccountApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20056", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20059", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -2719,7 +2909,7 @@ SubAccountApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20063", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20066", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -2784,7 +2974,7 @@ SubAccountApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20052", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20055", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -2855,6 +3045,308 @@ SubAccountApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
+    SapiV1SubAccountSubAccountApiIpRestrictionGet = function(email, sub.account.api.key, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1SubAccountSubAccountApiIpRestrictionGetWithHttpInfo(email, sub.account.api.key, 
+                                                                                    recv.window, ...)
+      resp <- apiResponse$response
+      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
+        apiResponse$content
+      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
+        apiResponse
+      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
+        apiResponse
+      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
+        apiResponse
+      }
+    },
+    
+    SapiV1SubAccountSubAccountApiIpRestrictionGetWithHttpInfo = function(email, sub.account.api.key, 
+                                                                         recv.window=NULL, ...){
+      args <- list(...)
+      queryParams <- list()
+      headerParams <- c()
+      
+      if (missing(`email`)) {
+        stop("Missing required parameter `email`.")
+      }
+      
+      if (missing(`sub.account.api.key`)) {
+        stop("Missing required parameter `sub.account.api.key`.")
+      }
+      
+      queryParams['email'] <- email
+      
+      queryParams['subAccountApiKey'] <- sub.account.api.key
+      
+      queryParams['recvWindow'] <- recv.window
+      
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
+      
+      body <- NULL
+      urlPath <- "/sapi/v1/sub-account/subAccountApi/ipRestriction"
+      # API key authentication
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
+      }
+      
+      resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
+                                     method = "GET",
+                                     queryParams = queryParams,
+                                     headerParams = headerParams,
+                                     body = body,
+                                     ...)
+      
+      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
+        deserializedRespObj <- tryCatch(
+          self$apiClient$deserialize(resp, "InlineResponse20073", loadNamespace("binanceRapi")),
+          error = function(e){
+            stop("Failed to deserialize response")
+          }
+        )
+        ApiResponse$new(deserializedRespObj, resp)
+      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
+        ApiResponse$new(paste("Server returned " , httr::status_code(resp) , " response status code."), resp)
+      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
+        ApiResponse$new("API client error", resp)
+      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
+        ApiResponse$new("API server error", resp)
+      }
+    },
+    SapiV1SubAccountSubAccountApiIpRestrictionIpListDelete = function(email, sub.account.api.key, ip.address, 
+                                                                      recv.window=NULL, ...){
+      apiResponse <- self$SapiV1SubAccountSubAccountApiIpRestrictionIpListDeleteWithHttpInfo(email, sub.account.api.key, 
+                                                                                             ip.address, recv.window, ...)
+      resp <- apiResponse$response
+      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
+        apiResponse$content
+      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
+        apiResponse
+      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
+        apiResponse
+      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
+        apiResponse
+      }
+    },
+    
+    SapiV1SubAccountSubAccountApiIpRestrictionIpListDeleteWithHttpInfo = function(email, sub.account.api.key, ip.address, 
+                                                                                  recv.window=NULL, ...){
+      args <- list(...)
+      queryParams <- list()
+      headerParams <- c()
+      
+      if (missing(`email`)) {
+        stop("Missing required parameter `email`.")
+      }
+      
+      if (missing(`sub.account.api.key`)) {
+        stop("Missing required parameter `sub.account.api.key`.")
+      }
+      
+      if (missing(`ip.address`)) {
+        stop("Missing required parameter `ip.address`.")
+      }
+      
+      queryParams['email'] <- email
+      
+      queryParams['subAccountApiKey'] <- sub.account.api.key
+      
+      queryParams['ipAddress'] <- ip.address
+      
+      queryParams['recvWindow'] <- recv.window
+      
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
+      
+      body <- NULL
+      urlPath <- "/sapi/v1/sub-account/subAccountApi/ipRestriction/ipList"
+      # API key authentication
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
+      }
+      
+      resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
+                                     method = "DELETE",
+                                     queryParams = queryParams,
+                                     headerParams = headerParams,
+                                     body = body,
+                                     ...)
+      
+      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
+        deserializedRespObj <- tryCatch(
+          self$apiClient$deserialize(resp, "InlineResponse20076", loadNamespace("binanceRapi")),
+          error = function(e){
+            stop("Failed to deserialize response")
+          }
+        )
+        ApiResponse$new(deserializedRespObj, resp)
+      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
+        ApiResponse$new(paste("Server returned " , httr::status_code(resp) , " response status code."), resp)
+      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
+        ApiResponse$new("API client error", resp)
+      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
+        ApiResponse$new("API server error", resp)
+      }
+    },
+    
+    SapiV1SubAccountSubAccountApiIpRestrictionIpListPost = function(email, sub.account.api.key, ip.address, 
+                                                                    recv.window=NULL, ...){
+      apiResponse <- self$SapiV1SubAccountSubAccountApiIpRestrictionIpListPostWithHttpInfo(email, 
+                                                                                           sub.account.api.key, 
+                                                                                           ip.address, 
+                                                                                           recv.window, ...)
+      resp <- apiResponse$response
+      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
+        apiResponse$content
+      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
+        apiResponse
+      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
+        apiResponse
+      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
+        apiResponse
+      }
+    },
+    
+    SapiV1SubAccountSubAccountApiIpRestrictionIpListPostWithHttpInfo = function(email, sub.account.api.key, ip.address, 
+                                                                                recv.window=NULL, ...){
+      args <- list(...)
+      queryParams <- list()
+      headerParams <- c()
+      
+      if (missing(`email`)) {
+        stop("Missing required parameter `email`.")
+      }
+      
+      if (missing(`sub.account.api.key`)) {
+        stop("Missing required parameter `sub.account.api.key`.")
+      }
+      
+      if (missing(`ip.address`)) {
+        stop("Missing required parameter `ip.address`.")
+      }
+      
+      queryParams['email'] <- email
+      
+      queryParams['subAccountApiKey'] <- sub.account.api.key
+      
+      queryParams['ipAddress'] <- ip.address
+      
+      queryParams['recvWindow'] <- recv.window
+      
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
+      
+      body <- NULL
+      urlPath <- "/sapi/v1/sub-account/subAccountApi/ipRestriction/ipList"
+      # API key authentication
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
+      }
+      
+      resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
+                                     method = "POST",
+                                     queryParams = queryParams,
+                                     headerParams = headerParams,
+                                     body = body,
+                                     ...)
+      
+      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
+        deserializedRespObj <- tryCatch(
+          self$apiClient$deserialize(resp, "InlineResponse20075", loadNamespace("binanceRapi")),
+          error = function(e){
+            stop("Failed to deserialize response")
+          }
+        )
+        ApiResponse$new(deserializedRespObj, resp)
+      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
+        ApiResponse$new(paste("Server returned " , httr::status_code(resp) , " response status code."), resp)
+      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
+        ApiResponse$new("API client error", resp)
+      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
+        ApiResponse$new("API server error", resp)
+      }
+    },
+    
+    SapiV1SubAccountSubAccountApiIpRestrictionPost = function(email, sub.account.api.key, ip.restrict,
+                                                              recv.window=NULL, ...){
+      apiResponse <- self$SapiV1SubAccountSubAccountApiIpRestrictionPostWithHttpInfo(email, sub.account.api.key, 
+                                                                                     ip.restrict, recv.window, ...)
+      resp <- apiResponse$response
+      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
+        apiResponse$content
+      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
+        apiResponse
+      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
+        apiResponse
+      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
+        apiResponse
+      }
+    },
+    
+    SapiV1SubAccountSubAccountApiIpRestrictionPostWithHttpInfo = function(email, sub.account.api.key, ip.restrict, 
+                                                                          recv.window=NULL, ...){
+      args <- list(...)
+      queryParams <- list()
+      headerParams <- c()
+      
+      if (missing(`email`)) {
+        stop("Missing required parameter `email`.")
+      }
+      
+      if (missing(`sub.account.api.key`)) {
+        stop("Missing required parameter `sub.account.api.key`.")
+      }
+      
+      if (missing(`ip.restrict`)) {
+        stop("Missing required parameter `ip.restrict`.")
+      }
+      
+      queryParams['email'] <- email
+      
+      queryParams['subAccountApiKey'] <- sub.account.api.key
+      
+      queryParams['ipRestrict'] <- ip.restrict
+      
+      queryParams['recvWindow'] <- recv.window
+      
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
+      
+      body <- NULL
+      urlPath <- "/sapi/v1/sub-account/subAccountApi/ipRestriction"
+      # API key authentication
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
+      }
+      
+      resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
+                                     method = "POST",
+                                     queryParams = queryParams,
+                                     headerParams = headerParams,
+                                     body = body,
+                                     ...)
+      
+      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
+        deserializedRespObj <- tryCatch(
+          self$apiClient$deserialize(resp, "InlineResponse20074", loadNamespace("binanceRapi")),
+          error = function(e){
+            stop("Failed to deserialize response")
+          }
+        )
+        ApiResponse$new(deserializedRespObj, resp)
+      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
+        ApiResponse$new(paste("Server returned " , httr::status_code(resp) , " response status code."), resp)
+      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
+        ApiResponse$new("API client error", resp)
+      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
+        ApiResponse$new("API server error", resp)
+      }
+    },
+    
     SapiV1SubAccountSubTransferHistoryGet = function(from.email=NULL, to.email=NULL, start.time=NULL, end.time=NULL, page=NULL, limit=NULL, recv.window=NULL, ...){
       apiResponse <- self$SapiV1SubAccountSubTransferHistoryGetWithHttpInfo(from.email, to.email, start.time, end.time, page, limit, recv.window, ...)
       resp <- apiResponse$response
@@ -2908,7 +3400,7 @@ SubAccountApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "array[InlineResponse20048]", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "array[InlineResponse20051]", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -2975,7 +3467,7 @@ SubAccountApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20063", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20066", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -3048,7 +3540,7 @@ SubAccountApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20063", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20066", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -3114,7 +3606,7 @@ SubAccountApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "array[InlineResponse20064]", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "array[InlineResponse20067]", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -3181,7 +3673,7 @@ SubAccountApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "array[InlineResponse20065]", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "array[InlineResponse20068]", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -3267,7 +3759,7 @@ SubAccountApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20066", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20069", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -3328,7 +3820,7 @@ SubAccountApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20046", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20049", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -3588,7 +4080,7 @@ SubAccountApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20051", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20054", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }

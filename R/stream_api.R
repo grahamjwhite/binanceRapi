@@ -41,12 +41,12 @@
 #' Start a new user data stream. The stream will close after 60 minutes unless a keepalive is sent. If the account has an active &#x60;listenKey&#x60;, that &#x60;listenKey&#x60; will be returned and its validity will be extended for 60 minutes.  Weight: 1
 #'
 #' \itemize{
-#' \item \emph{ @returnType } \link{InlineResponse20070} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20077} \cr
 #'
 #'
 #' \item status code : 200 | Listen key
 #'
-#' \item return type : InlineResponse20070 
+#' \item return type : InlineResponse20077 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -215,7 +215,7 @@ StreamApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20070", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20077", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }

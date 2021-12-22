@@ -24,12 +24,12 @@
 #' \item \emph{ @param } page integer
 #' \item \emph{ @param } rows integer
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20072} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20079} \cr
 #'
 #'
 #' \item status code : 200 | History of deposit/withdraw orders
 #'
-#' \item return type : InlineResponse20072 
+#' \item return type : InlineResponse20079 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -60,12 +60,12 @@
 #' \item \emph{ @param } page integer
 #' \item \emph{ @param } rows integer
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20073} \cr
+#' \item \emph{ @returnType } \link{InlineResponse200780 \cr
 #'
 #'
 #' \item status code : 200 | History of fiat payments
 #'
-#' \item return type : InlineResponse20073 
+#' \item return type : InlineResponse20080 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -194,7 +194,7 @@ FiatApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20072", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20079", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -263,7 +263,7 @@ FiatApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20073", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20080", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }

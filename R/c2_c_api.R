@@ -24,12 +24,12 @@
 #' \item \emph{ @param } page integer
 #' \item \emph{ @param } rows integer
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse200111} \cr
+#' \item \emph{ @returnType } \link{InlineResponse200118} \cr
 #'
 #'
 #' \item status code : 200 | Trades history
 #'
-#' \item return type : InlineResponse200111 
+#' \item return type : InlineResponse200118 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -140,7 +140,7 @@ C2CApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse200111", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse200118", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }

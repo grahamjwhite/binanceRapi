@@ -13,7 +13,7 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field futurePositionRiskVos  list( \link{InlineResponse20062} ) 
+#' @field futurePositionRiskVos  list( \link{InlineResponse20065} ) 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -44,7 +44,7 @@ SubAccountUSDTFuturesPositionRisk <- R6::R6Class(
     fromJSON = function(SubAccountUSDTFuturesPositionRiskJson) {
       SubAccountUSDTFuturesPositionRiskObject <- jsonlite::fromJSON(SubAccountUSDTFuturesPositionRiskJson)
       if (!is.null(SubAccountUSDTFuturesPositionRiskObject$`futurePositionRiskVos`)) {
-        self$`futurePositionRiskVos` <- ApiClient$new()$deserializeObj(SubAccountUSDTFuturesPositionRiskObject$`futurePositionRiskVos`, "array[InlineResponse20062]", loadNamespace("binanceRapi"))
+        self$`futurePositionRiskVos` <- ApiClient$new()$deserializeObj(SubAccountUSDTFuturesPositionRiskObject$`futurePositionRiskVos`, "array[InlineResponse20065]", loadNamespace("binanceRapi"))
       }
       self
     },
@@ -63,7 +63,7 @@ SubAccountUSDTFuturesPositionRisk <- R6::R6Class(
     },
     fromJSONString = function(SubAccountUSDTFuturesPositionRiskJson) {
       SubAccountUSDTFuturesPositionRiskObject <- jsonlite::fromJSON(SubAccountUSDTFuturesPositionRiskJson)
-      self$`futurePositionRiskVos` <- ApiClient$new()$deserializeObj(SubAccountUSDTFuturesPositionRiskObject$`futurePositionRiskVos`, "array[InlineResponse20062]", loadNamespace("binanceRapi"))
+      self$`futurePositionRiskVos` <- ApiClient$new()$deserializeObj(SubAccountUSDTFuturesPositionRiskObject$`futurePositionRiskVos`, "array[InlineResponse20065]", loadNamespace("binanceRapi"))
       self
     }
   )

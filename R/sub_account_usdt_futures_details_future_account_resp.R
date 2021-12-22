@@ -15,7 +15,7 @@
 #'
 #' @field email  character 
 #'
-#' @field assets  list( \link{InlineResponse20060Assets} ) 
+#' @field assets  list( \link{InlineResponse20063Assets} ) 
 #'
 #' @field canDeposit  character 
 #'
@@ -201,7 +201,7 @@ SubAccountUSDTFuturesDetailsFutureAccountResp <- R6::R6Class(
         self$`email` <- SubAccountUSDTFuturesDetailsFutureAccountRespObject$`email`
       }
       if (!is.null(SubAccountUSDTFuturesDetailsFutureAccountRespObject$`assets`)) {
-        self$`assets` <- ApiClient$new()$deserializeObj(SubAccountUSDTFuturesDetailsFutureAccountRespObject$`assets`, "array[InlineResponse20060Assets]", loadNamespace("binanceRapi"))
+        self$`assets` <- ApiClient$new()$deserializeObj(SubAccountUSDTFuturesDetailsFutureAccountRespObject$`assets`, "array[InlineResponse20063Assets]", loadNamespace("binanceRapi"))
       }
       if (!is.null(SubAccountUSDTFuturesDetailsFutureAccountRespObject$`canDeposit`)) {
         self$`canDeposit` <- SubAccountUSDTFuturesDetailsFutureAccountRespObject$`canDeposit`
@@ -358,7 +358,7 @@ SubAccountUSDTFuturesDetailsFutureAccountResp <- R6::R6Class(
     fromJSONString = function(SubAccountUSDTFuturesDetailsFutureAccountRespJson) {
       SubAccountUSDTFuturesDetailsFutureAccountRespObject <- jsonlite::fromJSON(SubAccountUSDTFuturesDetailsFutureAccountRespJson)
       self$`email` <- SubAccountUSDTFuturesDetailsFutureAccountRespObject$`email`
-      self$`assets` <- ApiClient$new()$deserializeObj(SubAccountUSDTFuturesDetailsFutureAccountRespObject$`assets`, "array[InlineResponse20060Assets]", loadNamespace("binanceRapi"))
+      self$`assets` <- ApiClient$new()$deserializeObj(SubAccountUSDTFuturesDetailsFutureAccountRespObject$`assets`, "array[InlineResponse20063Assets]", loadNamespace("binanceRapi"))
       self$`canDeposit` <- SubAccountUSDTFuturesDetailsFutureAccountRespObject$`canDeposit`
       self$`canTrade` <- SubAccountUSDTFuturesDetailsFutureAccountRespObject$`canTrade`
       self$`canWithdraw` <- SubAccountUSDTFuturesDetailsFutureAccountRespObject$`canWithdraw`

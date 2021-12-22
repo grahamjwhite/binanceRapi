@@ -253,6 +253,39 @@
 #' }
 #' }
 #'
+#' \strong{ SapiV1MarginCrossMarginDataGet } \emph{ Query Cross Margin Fee Data (USER_DATA) }
+#' Get cross margin fee data collection with any vip level or user&#39;s current specific data as https://www.binance.com/en/margin-fee  Weight(IP): 1 when coin is specified; 5 when the coin parameter is omitted
+#'
+#' \itemize{
+#' \item \emph{ @param } vip.level integer
+#' \item \emph{ @param } coin character
+#' \item \emph{ @param } recv.window integer
+#' \item \emph{ @returnType } list( \link{inline_response_200_29} ) \cr
+#'
+#'
+#' \item status code : 200 | Cross Margin Fee Data
+#'
+#' \item return type : array[InlineResponse20029] 
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' \item status code : 400 | Bad Request
+#'
+#' \item return type : Error 
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' \item status code : 401 | Unauthorized Request
+#'
+#' \item return type : Error 
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
 #' \strong{ SapiV1MarginForceLiquidationRecGet } \emph{ Get Force Liquidation Record (USER_DATA) }
 #' - Response in descending order  Weight(IP): 1
 #'
@@ -501,6 +534,72 @@
 #' \item status code : 200 | All Isolated Margin Symbols
 #'
 #' \item return type : array[InlineResponse20027] 
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' \item status code : 400 | Bad Request
+#'
+#' \item return type : Error 
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' \item status code : 401 | Unauthorized Request
+#'
+#' \item return type : Error 
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ SapiV1MarginIsolatedMarginDataGet } \emph{ Query Isolated Margin Fee Data (USER_DATA) }
+#' Get isolated margin fee data collection with any vip level or user&#39;s current specific data as https://www.binance.com/en/margin-fee  Weight(IP): 1 when a single is specified; 10 when the symbol parameter is omitted
+#'
+#' \itemize{
+#' \item \emph{ @param } vip.level integer
+#' \item \emph{ @param } symbol character
+#' \item \emph{ @param } recv.window integer
+#' \item \emph{ @returnType } list( \link{inline_response_200_30} ) \cr
+#'
+#'
+#' \item status code : 200 | Isolated Margin Fee Data
+#'
+#' \item return type : array[InlineResponse20030] 
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' \item status code : 400 | Bad Request
+#'
+#' \item return type : Error 
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' \item status code : 401 | Unauthorized Request
+#'
+#' \item return type : Error 
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ SapiV1MarginIsolatedMarginTierGet } \emph{ Query Isolated Margin Tier Data (USER_DATA) }
+#' Get isolated margin tier data collection with any tier as https://www.binance.com/en/margin-data  Weight(IP): 1
+#'
+#' \itemize{
+#' \item \emph{ @param } symbol character
+#' \item \emph{ @param } tier character
+#' \item \emph{ @param } recv.window integer
+#' \item \emph{ @returnType } list( \link{inline_response_200_31} ) \cr
+#'
+#'
+#' \item status code : 200 | Isolated Margin Tier Data
+#'
+#' \item return type : array[InlineResponse20031] 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -1434,6 +1533,19 @@
 #' result <- api.instance$SapiV1MarginAssetGet(var.asset)
 #'
 #'
+#' ####################  SapiV1MarginCrossMarginDataGet  ####################
+#'
+#' library(binanceRapi)
+#' var.vip.level <- 1 # integer | Defaults to user's vip level
+#' var.coin <- 'BNB' # character | Coin name
+#' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
+#'
+#' #Query Cross Margin Fee Data (USER_DATA)
+#' api.instance <- MarginApi$new()
+#'
+#' result <- api.instance$SapiV1MarginCrossMarginDataGet(vip.level=var.vip.level, coin=var.coin, recv.window=var.recv.window)
+#'
+#'
 #' ####################  SapiV1MarginForceLiquidationRecGet  ####################
 #'
 #' library(binanceRapi)
@@ -1540,6 +1652,32 @@
 #' api.instance <- MarginApi$new()
 #'
 #' result <- api.instance$SapiV1MarginIsolatedAllPairsGet(recv.window=var.recv.window)
+#'
+#'
+#' ####################  SapiV1MarginIsolatedMarginDataGet  ####################
+#'
+#' library(binanceRapi)
+#' var.vip.level <- 1 # integer | Defaults to user's vip level
+#' var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
+#' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
+#'
+#' #Query Isolated Margin Fee Data (USER_DATA)
+#' api.instance <- MarginApi$new()
+#'
+#' result <- api.instance$SapiV1MarginIsolatedMarginDataGet(vip.level=var.vip.level, symbol=var.symbol, recv.window=var.recv.window)
+#'
+#'
+#' ####################  SapiV1MarginIsolatedMarginTierGet  ####################
+#'
+#' library(binanceRapi)
+#' var.symbol <- 'BNBUSDT' # character | Trading symbol, e.g. BNBUSDT
+#' var.tier <- '1' # character | All margin tier data will be returned if tier is omitted
+#' var.recv.window <- 5000 # integer | The value cannot be greater than 60000
+#'
+#' #Query Isolated Margin Tier Data (USER_DATA)
+#' api.instance <- MarginApi$new()
+#' 
+#' result <- api.instance$SapiV1MarginIsolatedMarginTierGet(var.symbol, tier=var.tier, recv.window=var.recv.window)
 #'
 #'
 #' ####################  SapiV1MarginIsolatedPairGet  ####################
@@ -2387,6 +2525,67 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
+    
+    SapiV1MarginCrossMarginDataGet = function(vip.level=NULL, coin=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginCrossMarginDataGetWithHttpInfo(vip.level, coin, recv.window, ...)
+      resp <- apiResponse$response
+      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
+        apiResponse$content
+      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
+        apiResponse
+      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
+        apiResponse
+      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
+        apiResponse
+      }
+    },
+    
+    SapiV1MarginCrossMarginDataGetWithHttpInfo = function(vip.level=NULL, coin=NULL, recv.window=NULL, ...){
+      args <- list(...)
+      queryParams <- list()
+      headerParams <- c()
+      
+      queryParams['vipLevel'] <- vip.level
+      
+      queryParams['coin'] <- coin
+      
+      queryParams['recvWindow'] <- recv.window
+      
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
+      
+      body <- NULL
+      urlPath <- "/sapi/v1/margin/crossMarginData"
+      # API key authentication
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
+      }
+      
+      resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
+                                     method = "GET",
+                                     queryParams = queryParams,
+                                     headerParams = headerParams,
+                                     body = body,
+                                     ...)
+      
+      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
+        deserializedRespObj <- tryCatch(
+          self$apiClient$deserialize(resp, "array[InlineResponse20029]", loadNamespace("binanceRapi")),
+          error = function(e){
+            stop("Failed to deserialize response")
+          }
+        )
+        ApiResponse$new(deserializedRespObj, resp)
+      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
+        ApiResponse$new(paste("Server returned " , httr::status_code(resp) , " response status code."), resp)
+      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
+        ApiResponse$new("API client error", resp)
+      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
+        ApiResponse$new("API server error", resp)
+      }
+    },
+    
     SapiV1MarginForceLiquidationRecGet = function(start.time=NULL, end.time=NULL, isolated.symbol=NULL, current=NULL, size=NULL, recv.window=NULL, ...){
       apiResponse <- self$SapiV1MarginForceLiquidationRecGetWithHttpInfo(start.time, end.time, isolated.symbol, current, size, recv.window, ...)
       resp <- apiResponse$response
@@ -2882,6 +3081,129 @@ MarginApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
+    SapiV1MarginIsolatedMarginDataGet = function(vip.level=NULL, symbol=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginIsolatedMarginDataGetWithHttpInfo(vip.level, symbol, recv.window, ...)
+      resp <- apiResponse$response
+      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
+        apiResponse$content
+      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
+        apiResponse
+      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
+        apiResponse
+      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
+        apiResponse
+      }
+    },
+    
+    SapiV1MarginIsolatedMarginDataGetWithHttpInfo = function(vip.level=NULL, symbol=NULL, recv.window=NULL, ...){
+      args <- list(...)
+      queryParams <- list()
+      headerParams <- c()
+      
+      queryParams['vipLevel'] <- vip.level
+      
+      queryParams['symbol'] <- symbol
+      
+      queryParams['recvWindow'] <- recv.window
+      
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
+      
+      body <- NULL
+      urlPath <- "/sapi/v1/margin/isolatedMarginData"
+      # API key authentication
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
+      }
+      
+      resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
+                                     method = "GET",
+                                     queryParams = queryParams,
+                                     headerParams = headerParams,
+                                     body = body,
+                                     ...)
+      
+      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
+        deserializedRespObj <- tryCatch(
+          self$apiClient$deserialize(resp, "array[InlineResponse20030]", loadNamespace("binanceRapi")),
+          error = function(e){
+            stop("Failed to deserialize response")
+          }
+        )
+        ApiResponse$new(deserializedRespObj, resp)
+      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
+        ApiResponse$new(paste("Server returned " , httr::status_code(resp) , " response status code."), resp)
+      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
+        ApiResponse$new("API client error", resp)
+      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
+        ApiResponse$new("API server error", resp)
+      }
+    },
+    SapiV1MarginIsolatedMarginTierGet = function(symbol, tier=NULL, recv.window=NULL, ...){
+      apiResponse <- self$SapiV1MarginIsolatedMarginTierGetWithHttpInfo(symbol, tier, recv.window, ...)
+      resp <- apiResponse$response
+      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
+        apiResponse$content
+      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
+        apiResponse
+      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
+        apiResponse
+      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
+        apiResponse
+      }
+    },
+    
+    SapiV1MarginIsolatedMarginTierGetWithHttpInfo = function(symbol, tier=NULL, recv.window=NULL, ...){
+      args <- list(...)
+      queryParams <- list()
+      headerParams <- c()
+      
+      if (missing(`symbol`)) {
+        stop("Missing required parameter `symbol`.")
+      }
+      
+      queryParams['symbol'] <- symbol
+      
+      queryParams['tier'] <- tier
+      
+      queryParams['recvWindow'] <- recv.window
+      
+      queryParams['timestamp'] <- self$apiClient$Timestamp
+      
+      queryParams['signature'] <- self$apiClient$credentials$sign(queryParams)
+      
+      body <- NULL
+      urlPath <- "/sapi/v1/margin/isolatedMarginTier"
+      # API key authentication
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
+      }
+      
+      resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
+                                     method = "GET",
+                                     queryParams = queryParams,
+                                     headerParams = headerParams,
+                                     body = body,
+                                     ...)
+      
+      if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
+        deserializedRespObj <- tryCatch(
+          self$apiClient$deserialize(resp, "array[InlineResponse20031]", loadNamespace("binanceRapi")),
+          error = function(e){
+            stop("Failed to deserialize response")
+          }
+        )
+        ApiResponse$new(deserializedRespObj, resp)
+      } else if (httr::status_code(resp) >= 300 && httr::status_code(resp) <= 399) {
+        ApiResponse$new(paste("Server returned " , httr::status_code(resp) , " response status code."), resp)
+      } else if (httr::status_code(resp) >= 400 && httr::status_code(resp) <= 499) {
+        ApiResponse$new("API client error", resp)
+      } else if (httr::status_code(resp) >= 500 && httr::status_code(resp) <= 599) {
+        ApiResponse$new("API server error", resp)
+      }
+    },
+    
     SapiV1MarginIsolatedPairGet = function(symbol, recv.window=NULL, ...){
       apiResponse <- self$SapiV1MarginIsolatedPairGetWithHttpInfo(symbol, recv.window, ...)
       resp <- apiResponse$response

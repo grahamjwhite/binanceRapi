@@ -41,12 +41,12 @@
 #' Start a new user data stream. The stream will close after 60 minutes unless a keepalive is sent. If the account has an active &#x60;listenKey&#x60;, that &#x60;listenKey&#x60; will be returned and its validity will be extended for 60 minutes.  Weight: 1
 #'
 #' \itemize{
-#' \item \emph{ @returnType } \link{InlineResponse20071} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20078} \cr
 #'
 #'
 #' \item status code : 200 | Isolated margin listen key
 #'
-#' \item return type : InlineResponse20071 
+#' \item return type : InlineResponse20078 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -162,8 +162,8 @@ IsolatedMarginStreamApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/userDataStream/isolated"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -211,8 +211,8 @@ IsolatedMarginStreamApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/userDataStream/isolated"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -224,7 +224,7 @@ IsolatedMarginStreamApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20071", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20078", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -262,8 +262,8 @@ IsolatedMarginStreamApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/userDataStream/isolated"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),

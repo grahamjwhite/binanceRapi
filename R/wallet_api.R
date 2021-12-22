@@ -19,12 +19,12 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20045} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20048} \cr
 #'
 #'
 #' \item status code : 200 | API Key permissions
 #'
-#' \item return type : InlineResponse20045 
+#' \item return type : InlineResponse20048 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -50,12 +50,12 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20036} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20039} \cr
 #'
 #'
 #' \item status code : 200 | Account API trading status
 #'
-#' \item return type : InlineResponse20036 
+#' \item return type : InlineResponse20039 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -137,7 +137,7 @@
 #' }
 #'
 #' \strong{ SapiV1AccountSnapshotGet } \emph{ Daily Account Snapshot (USER_DATA) }
-#' Weight(IP): 2400
+#' - The query time period must be less than 30 days - Support query within the last 6 months only - If startTime and endTime not sent, return records of the last 7 days by default  Weight(IP): 2400
 #'
 #' \itemize{
 #' \item \emph{ @param } type Enum < [SPOT, MARGIN, FUTURES] >
@@ -176,12 +176,12 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20035} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20038} \cr
 #'
 #'
 #' \item status code : 200 | OK
 #'
-#' \item return type : InlineResponse20035 
+#' \item return type : InlineResponse20038 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -208,12 +208,12 @@
 #' \itemize{
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20040} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20043} \cr
 #'
 #'
 #' \item status code : 200 | Asset detail
 #'
-#' \item return type : InlineResponse20040 
+#' \item return type : InlineResponse20043 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -243,12 +243,12 @@
 #' \item \emph{ @param } start.time integer
 #' \item \emph{ @param } end.time integer
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20039} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20042} \cr
 #'
 #'
-#' \item status code : 200 | Records of asset devidend
+#' \item status code : 200 | Records of asset dividend
 #'
-#' \item return type : InlineResponse20039 
+#' \item return type : InlineResponse20042 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -276,12 +276,12 @@
 #' \item \emph{ @param } start.time integer
 #' \item \emph{ @param } end.time integer
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20037} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20040} \cr
 #'
 #'
 #' \item status code : 200 | Dust log records
 #'
-#' \item return type : InlineResponse20037 
+#' \item return type : InlineResponse20040 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -308,12 +308,12 @@
 #' \itemize{
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20038} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20041} \cr
 #'
 #'
 #' \item status code : 200 | Dust log records
 #'
-#' \item return type : InlineResponse20038 
+#' \item return type : InlineResponse20041 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -341,12 +341,12 @@
 #' \item \emph{ @param } asset character
 #' \item \emph{ @param } need.btc.valuation Enum < [true, false] >
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } list( \link{inline_response_200_44} ) \cr
+#' \item \emph{ @returnType } list( \link{inline_response_200_47} ) \cr
 #'
 #'
 #' \item status code : 200 | Funding asset detail
 #'
-#' \item return type : array[InlineResponse20044] 
+#' \item return type : array[InlineResponse20047] 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -373,12 +373,12 @@
 #' \itemize{
 #' \item \emph{ @param } symbol character
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } list( \link{inline_response_200_41} ) \cr
+#' \item \emph{ @returnType } list( \link{inline_response_200_44} ) \cr
 #'
 #'
 #' \item status code : 200 | Trade fee info per symbol
 #'
-#' \item return type : array[InlineResponse20041] 
+#' \item return type : array[InlineResponse20044] 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -411,12 +411,12 @@
 #' \item \emph{ @param } from.symbol character
 #' \item \emph{ @param } to.symbol character
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20042} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20045} \cr
 #'
 #'
 #' \item status code : 200 | Universal transfer history
 #'
-#' \item return type : InlineResponse20042 
+#' \item return type : InlineResponse20045 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -447,12 +447,12 @@
 #' \item \emph{ @param } from.symbol character
 #' \item \emph{ @param } to.symbol character
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20043} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20046} \cr
 #'
 #'
 #' \item status code : 200 | Transfer id
 #'
-#' \item return type : InlineResponse20043 
+#' \item return type : InlineResponse20046 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -478,12 +478,12 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } list( \link{inline_response_200_30} ) \cr
+#' \item \emph{ @returnType } list( \link{inline_response_200_33} ) \cr
 #'
 #'
 #' \item status code : 200 | All coins details information
 #'
-#' \item return type : array[InlineResponse20030] 
+#' \item return type : array[InlineResponse20033] 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -511,12 +511,12 @@
 #' \item \emph{ @param } coin character
 #' \item \emph{ @param } network character
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20034} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20037} \cr
 #'
 #'
 #' \item status code : 200 | Deposit address info
 #'
-#' \item return type : InlineResponse20034 
+#' \item return type : InlineResponse20037 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -548,12 +548,12 @@
 #' \item \emph{ @param } offset integer
 #' \item \emph{ @param } limit integer
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } list( \link{inline_response_200_32} ) \cr
+#' \item \emph{ @returnType } list( \link{inline_response_200_35} ) \cr
 #'
 #'
 #' \item status code : 200 | List of deposits
 #'
-#' \item return type : array[InlineResponse20032] 
+#' \item return type : array[InlineResponse20035] 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -588,12 +588,12 @@
 #' \item \emph{ @param } name character
 #' \item \emph{ @param } wallet.type integer
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } \link{InlineResponse20031} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20034} \cr
 #'
 #'
 #' \item status code : 200 | Transafer Id
 #'
-#' \item return type : InlineResponse20031 
+#' \item return type : InlineResponse20034 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -626,12 +626,12 @@
 #' \item \emph{ @param } offset integer
 #' \item \emph{ @param } limit integer
 #' \item \emph{ @param } recv.window integer
-#' \item \emph{ @returnType } list( \link{inline_response_200_33} ) \cr
+#' \item \emph{ @returnType } list( \link{inline_response_200_36} ) \cr
 #'
 #'
 #' \item status code : 200 | List of withdraw history
 #'
-#' \item return type : array[InlineResponse20033] 
+#' \item return type : array[InlineResponse20036] 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -656,12 +656,12 @@
 #' Fetch system status.  Weight(IP): 1
 #'
 #' \itemize{
-#' \item \emph{ @returnType } \link{InlineResponse20029} \cr
+#' \item \emph{ @returnType } \link{InlineResponse20032} \cr
 #'
 #'
 #' \item status code : 200 | OK
 #'
-#' \item return type : InlineResponse20029 
+#' \item return type : InlineResponse20032 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -987,8 +987,8 @@ WalletApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/account/apiRestrictions"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1000,7 +1000,7 @@ WalletApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20045", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20048", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1042,8 +1042,8 @@ WalletApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/account/apiTradingStatus"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1055,7 +1055,7 @@ WalletApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20036", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20039", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1097,8 +1097,8 @@ WalletApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/account/disableFastWithdrawSwitch"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1152,8 +1152,8 @@ WalletApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/account/enableFastWithdrawSwitch"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1219,8 +1219,8 @@ WalletApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/accountSnapshot"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1274,8 +1274,8 @@ WalletApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/account/status"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1287,7 +1287,7 @@ WalletApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20035", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20038", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1331,8 +1331,8 @@ WalletApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/asset/assetDetail"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1344,7 +1344,7 @@ WalletApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20040", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20043", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1398,8 +1398,8 @@ WalletApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/asset/assetDividend"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1411,7 +1411,7 @@ WalletApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20039", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20042", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1457,8 +1457,8 @@ WalletApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/asset/dribblet"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1470,7 +1470,7 @@ WalletApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20037", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20040", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1518,8 +1518,8 @@ WalletApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/asset/dust"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1531,7 +1531,7 @@ WalletApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20038", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20041", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1577,8 +1577,8 @@ WalletApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/asset/get-funding-asset"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1590,7 +1590,7 @@ WalletApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "array[InlineResponse20044]", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "array[InlineResponse20047]", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1634,8 +1634,8 @@ WalletApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/asset/tradeFee"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1647,7 +1647,7 @@ WalletApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "array[InlineResponse20041]", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "array[InlineResponse20044]", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1707,8 +1707,8 @@ WalletApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/asset/transfer"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1720,7 +1720,7 @@ WalletApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20042", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20045", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1784,8 +1784,8 @@ WalletApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/asset/transfer"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1797,7 +1797,7 @@ WalletApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20043", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20046", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1839,8 +1839,8 @@ WalletApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/capital/config/getall"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1852,7 +1852,7 @@ WalletApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "array[InlineResponse20030]", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "array[InlineResponse20033]", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1902,8 +1902,8 @@ WalletApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/capital/deposit/address"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1915,7 +1915,7 @@ WalletApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20034", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20037", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1973,8 +1973,8 @@ WalletApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/capital/deposit/hisrec"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -1986,7 +1986,7 @@ WalletApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "array[InlineResponse20032]", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "array[InlineResponse20035]", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -2058,8 +2058,8 @@ WalletApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/capital/withdraw/apply"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -2071,7 +2071,7 @@ WalletApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20031", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20034", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -2131,8 +2131,8 @@ WalletApi <- R6::R6Class(
       body <- NULL
       urlPath <- "/sapi/v1/capital/withdraw/history"
       # API key authentication
-      if ("X-MBX-APIKEY" %in% names(self$apiClient$apiKeys) && nchar(self$apiClient$apiKeys["X-MBX-APIKEY"]) > 0) {
-        headerParams['X-MBX-APIKEY'] <- paste(unlist(self$apiClient$apiKeys["X-MBX-APIKEY"]), collapse='')
+      if (nchar(self$apiClient$credentials$key) > 0) {
+        headerParams['X-MBX-APIKEY'] <- self$apiClient$credentials$key
       }
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
@@ -2144,7 +2144,7 @@ WalletApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "array[InlineResponse20033]", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "array[InlineResponse20036]", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -2189,7 +2189,7 @@ WalletApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InlineResponse20029", loadNamespace("binanceRapi")),
+          self$apiClient$deserialize(resp, "InlineResponse20032", loadNamespace("binanceRapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }
