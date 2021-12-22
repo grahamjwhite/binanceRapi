@@ -13,19 +13,11 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field id  numeric 
+#' @field code  integer 
 #'
-#' @field tokenName  character 
+#' @field msg  character 
 #'
-#' @field amount  character 
-#'
-#' @field nav  character 
-#'
-#' @field fee  character 
-#'
-#' @field netProceed  character 
-#'
-#' @field timestamp  integer 
+#' @field data  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -33,154 +25,78 @@
 InlineResponse200101 <- R6::R6Class(
   'InlineResponse200101',
   public = list(
-    `id` = NULL,
-    `tokenName` = NULL,
-    `amount` = NULL,
-    `nav` = NULL,
-    `fee` = NULL,
-    `netProceed` = NULL,
-    `timestamp` = NULL,
+    `code` = NULL,
+    `msg` = NULL,
+    `data` = NULL,
     initialize = function(
-        `id`, `tokenName`, `amount`, `nav`, `fee`, `netProceed`, `timestamp`, ...
+        `code`, `msg`, `data`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`id`)) {
-        stopifnot(is.numeric(`id`), length(`id`) == 1)
-        self$`id` <- `id`
+      if (!missing(`code`)) {
+        stopifnot(is.numeric(`code`), length(`code`) == 1)
+        self$`code` <- `code`
       }
-      if (!missing(`tokenName`)) {
-        stopifnot(is.character(`tokenName`), length(`tokenName`) == 1)
-        self$`tokenName` <- `tokenName`
+      if (!missing(`msg`)) {
+        stopifnot(is.character(`msg`), length(`msg`) == 1)
+        self$`msg` <- `msg`
       }
-      if (!missing(`amount`)) {
-        stopifnot(is.character(`amount`), length(`amount`) == 1)
-        self$`amount` <- `amount`
-      }
-      if (!missing(`nav`)) {
-        stopifnot(is.character(`nav`), length(`nav`) == 1)
-        self$`nav` <- `nav`
-      }
-      if (!missing(`fee`)) {
-        stopifnot(is.character(`fee`), length(`fee`) == 1)
-        self$`fee` <- `fee`
-      }
-      if (!missing(`netProceed`)) {
-        stopifnot(is.character(`netProceed`), length(`netProceed`) == 1)
-        self$`netProceed` <- `netProceed`
-      }
-      if (!missing(`timestamp`)) {
-        stopifnot(is.numeric(`timestamp`), length(`timestamp`) == 1)
-        self$`timestamp` <- `timestamp`
+      if (!missing(`data`)) {
+        stopifnot(is.logical(`data`), length(`data`) == 1)
+        self$`data` <- `data`
       }
     },
     toJSON = function() {
       InlineResponse200101Object <- list()
-      if (!is.null(self$`id`)) {
-        InlineResponse200101Object[['id']] <-
-          self$`id`
+      if (!is.null(self$`code`)) {
+        InlineResponse200101Object[['code']] <-
+          self$`code`
       }
-      if (!is.null(self$`tokenName`)) {
-        InlineResponse200101Object[['tokenName']] <-
-          self$`tokenName`
+      if (!is.null(self$`msg`)) {
+        InlineResponse200101Object[['msg']] <-
+          self$`msg`
       }
-      if (!is.null(self$`amount`)) {
-        InlineResponse200101Object[['amount']] <-
-          self$`amount`
-      }
-      if (!is.null(self$`nav`)) {
-        InlineResponse200101Object[['nav']] <-
-          self$`nav`
-      }
-      if (!is.null(self$`fee`)) {
-        InlineResponse200101Object[['fee']] <-
-          self$`fee`
-      }
-      if (!is.null(self$`netProceed`)) {
-        InlineResponse200101Object[['netProceed']] <-
-          self$`netProceed`
-      }
-      if (!is.null(self$`timestamp`)) {
-        InlineResponse200101Object[['timestamp']] <-
-          self$`timestamp`
+      if (!is.null(self$`data`)) {
+        InlineResponse200101Object[['data']] <-
+          self$`data`
       }
 
       InlineResponse200101Object
     },
     fromJSON = function(InlineResponse200101Json) {
       InlineResponse200101Object <- jsonlite::fromJSON(InlineResponse200101Json)
-      if (!is.null(InlineResponse200101Object$`id`)) {
-        self$`id` <- InlineResponse200101Object$`id`
+      if (!is.null(InlineResponse200101Object$`code`)) {
+        self$`code` <- InlineResponse200101Object$`code`
       }
-      if (!is.null(InlineResponse200101Object$`tokenName`)) {
-        self$`tokenName` <- InlineResponse200101Object$`tokenName`
+      if (!is.null(InlineResponse200101Object$`msg`)) {
+        self$`msg` <- InlineResponse200101Object$`msg`
       }
-      if (!is.null(InlineResponse200101Object$`amount`)) {
-        self$`amount` <- InlineResponse200101Object$`amount`
-      }
-      if (!is.null(InlineResponse200101Object$`nav`)) {
-        self$`nav` <- InlineResponse200101Object$`nav`
-      }
-      if (!is.null(InlineResponse200101Object$`fee`)) {
-        self$`fee` <- InlineResponse200101Object$`fee`
-      }
-      if (!is.null(InlineResponse200101Object$`netProceed`)) {
-        self$`netProceed` <- InlineResponse200101Object$`netProceed`
-      }
-      if (!is.null(InlineResponse200101Object$`timestamp`)) {
-        self$`timestamp` <- InlineResponse200101Object$`timestamp`
+      if (!is.null(InlineResponse200101Object$`data`)) {
+        self$`data` <- InlineResponse200101Object$`data`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`id`)) {
+        if (!is.null(self$`code`)) {
         sprintf(
-        '"id":
+        '"code":
           %d
                 ',
-        self$`id`
+        self$`code`
         )},
-        if (!is.null(self$`tokenName`)) {
+        if (!is.null(self$`msg`)) {
         sprintf(
-        '"tokenName":
+        '"msg":
           "%s"
                 ',
-        self$`tokenName`
+        self$`msg`
         )},
-        if (!is.null(self$`amount`)) {
+        if (!is.null(self$`data`)) {
         sprintf(
-        '"amount":
-          "%s"
+        '"data":
+          %s
                 ',
-        self$`amount`
-        )},
-        if (!is.null(self$`nav`)) {
-        sprintf(
-        '"nav":
-          "%s"
-                ',
-        self$`nav`
-        )},
-        if (!is.null(self$`fee`)) {
-        sprintf(
-        '"fee":
-          "%s"
-                ',
-        self$`fee`
-        )},
-        if (!is.null(self$`netProceed`)) {
-        sprintf(
-        '"netProceed":
-          "%s"
-                ',
-        self$`netProceed`
-        )},
-        if (!is.null(self$`timestamp`)) {
-        sprintf(
-        '"timestamp":
-          %d
-                ',
-        self$`timestamp`
+        tolower(self$`data`)
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -188,13 +104,9 @@ InlineResponse200101 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse200101Json) {
       InlineResponse200101Object <- jsonlite::fromJSON(InlineResponse200101Json)
-      self$`id` <- InlineResponse200101Object$`id`
-      self$`tokenName` <- InlineResponse200101Object$`tokenName`
-      self$`amount` <- InlineResponse200101Object$`amount`
-      self$`nav` <- InlineResponse200101Object$`nav`
-      self$`fee` <- InlineResponse200101Object$`fee`
-      self$`netProceed` <- InlineResponse200101Object$`netProceed`
-      self$`timestamp` <- InlineResponse200101Object$`timestamp`
+      self$`code` <- InlineResponse200101Object$`code`
+      self$`msg` <- InlineResponse200101Object$`msg`
+      self$`data` <- InlineResponse200101Object$`data`
       self
     }
   )

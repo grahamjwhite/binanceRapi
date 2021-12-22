@@ -13,11 +13,11 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field totalCount  integer 
+#' @field success  character 
 #'
-#' @field masterAccountTotalAsset  character 
+#' @field futuresType  integer 
 #'
-#' @field spotSubUserAssetBtcVoList  list( \link{InlineResponse20052SpotSubUserAssetBtcVoList} ) 
+#' @field transfers  list( \link{InlineResponse20052Transfers} ) 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -25,79 +25,79 @@
 InlineResponse20052 <- R6::R6Class(
   'InlineResponse20052',
   public = list(
-    `totalCount` = NULL,
-    `masterAccountTotalAsset` = NULL,
-    `spotSubUserAssetBtcVoList` = NULL,
+    `success` = NULL,
+    `futuresType` = NULL,
+    `transfers` = NULL,
     initialize = function(
-        `totalCount`, `masterAccountTotalAsset`, `spotSubUserAssetBtcVoList`, ...
+        `success`, `futuresType`, `transfers`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`totalCount`)) {
-        stopifnot(is.numeric(`totalCount`), length(`totalCount`) == 1)
-        self$`totalCount` <- `totalCount`
+      if (!missing(`success`)) {
+        stopifnot(is.logical(`success`), length(`success`) == 1)
+        self$`success` <- `success`
       }
-      if (!missing(`masterAccountTotalAsset`)) {
-        stopifnot(is.character(`masterAccountTotalAsset`), length(`masterAccountTotalAsset`) == 1)
-        self$`masterAccountTotalAsset` <- `masterAccountTotalAsset`
+      if (!missing(`futuresType`)) {
+        stopifnot(is.numeric(`futuresType`), length(`futuresType`) == 1)
+        self$`futuresType` <- `futuresType`
       }
-      if (!missing(`spotSubUserAssetBtcVoList`)) {
-        stopifnot(is.vector(`spotSubUserAssetBtcVoList`), length(`spotSubUserAssetBtcVoList`) != 0)
-        sapply(`spotSubUserAssetBtcVoList`, function(x) stopifnot(R6::is.R6(x)))
-        self$`spotSubUserAssetBtcVoList` <- `spotSubUserAssetBtcVoList`
+      if (!missing(`transfers`)) {
+        stopifnot(is.vector(`transfers`), length(`transfers`) != 0)
+        sapply(`transfers`, function(x) stopifnot(R6::is.R6(x)))
+        self$`transfers` <- `transfers`
       }
     },
     toJSON = function() {
       InlineResponse20052Object <- list()
-      if (!is.null(self$`totalCount`)) {
-        InlineResponse20052Object[['totalCount']] <-
-          self$`totalCount`
+      if (!is.null(self$`success`)) {
+        InlineResponse20052Object[['success']] <-
+          self$`success`
       }
-      if (!is.null(self$`masterAccountTotalAsset`)) {
-        InlineResponse20052Object[['masterAccountTotalAsset']] <-
-          self$`masterAccountTotalAsset`
+      if (!is.null(self$`futuresType`)) {
+        InlineResponse20052Object[['futuresType']] <-
+          self$`futuresType`
       }
-      if (!is.null(self$`spotSubUserAssetBtcVoList`)) {
-        InlineResponse20052Object[['spotSubUserAssetBtcVoList']] <-
-          lapply(self$`spotSubUserAssetBtcVoList`, function(x) x$toJSON())
+      if (!is.null(self$`transfers`)) {
+        InlineResponse20052Object[['transfers']] <-
+          lapply(self$`transfers`, function(x) x$toJSON())
       }
 
       InlineResponse20052Object
     },
     fromJSON = function(InlineResponse20052Json) {
       InlineResponse20052Object <- jsonlite::fromJSON(InlineResponse20052Json)
-      if (!is.null(InlineResponse20052Object$`totalCount`)) {
-        self$`totalCount` <- InlineResponse20052Object$`totalCount`
+      if (!is.null(InlineResponse20052Object$`success`)) {
+        self$`success` <- InlineResponse20052Object$`success`
       }
-      if (!is.null(InlineResponse20052Object$`masterAccountTotalAsset`)) {
-        self$`masterAccountTotalAsset` <- InlineResponse20052Object$`masterAccountTotalAsset`
+      if (!is.null(InlineResponse20052Object$`futuresType`)) {
+        self$`futuresType` <- InlineResponse20052Object$`futuresType`
       }
-      if (!is.null(InlineResponse20052Object$`spotSubUserAssetBtcVoList`)) {
-        self$`spotSubUserAssetBtcVoList` <- ApiClient$new()$deserializeObj(InlineResponse20052Object$`spotSubUserAssetBtcVoList`, "array[InlineResponse20052SpotSubUserAssetBtcVoList]", loadNamespace("binanceRapi"))
+      if (!is.null(InlineResponse20052Object$`transfers`)) {
+        self$`transfers` <- ApiClient$new()$deserializeObj(InlineResponse20052Object$`transfers`, "array[InlineResponse20052Transfers]", loadNamespace("binanceRapi"))
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`totalCount`)) {
+        if (!is.null(self$`success`)) {
         sprintf(
-        '"totalCount":
+        '"success":
+          %s
+                ',
+        tolower(self$`success`)
+        )},
+        if (!is.null(self$`futuresType`)) {
+        sprintf(
+        '"futuresType":
           %d
                 ',
-        self$`totalCount`
+        self$`futuresType`
         )},
-        if (!is.null(self$`masterAccountTotalAsset`)) {
+        if (!is.null(self$`transfers`)) {
         sprintf(
-        '"masterAccountTotalAsset":
-          "%s"
-                ',
-        self$`masterAccountTotalAsset`
-        )},
-        if (!is.null(self$`spotSubUserAssetBtcVoList`)) {
-        sprintf(
-        '"spotSubUserAssetBtcVoList":
+        '"transfers":
         [%s]
 ',
-        paste(sapply(self$`spotSubUserAssetBtcVoList`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
+        paste(sapply(self$`transfers`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -105,9 +105,9 @@ InlineResponse20052 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20052Json) {
       InlineResponse20052Object <- jsonlite::fromJSON(InlineResponse20052Json)
-      self$`totalCount` <- InlineResponse20052Object$`totalCount`
-      self$`masterAccountTotalAsset` <- InlineResponse20052Object$`masterAccountTotalAsset`
-      self$`spotSubUserAssetBtcVoList` <- ApiClient$new()$deserializeObj(InlineResponse20052Object$`spotSubUserAssetBtcVoList`, "array[InlineResponse20052SpotSubUserAssetBtcVoList]", loadNamespace("binanceRapi"))
+      self$`success` <- InlineResponse20052Object$`success`
+      self$`futuresType` <- InlineResponse20052Object$`futuresType`
+      self$`transfers` <- ApiClient$new()$deserializeObj(InlineResponse20052Object$`transfers`, "array[InlineResponse20052Transfers]", loadNamespace("binanceRapi"))
       self
     }
   )

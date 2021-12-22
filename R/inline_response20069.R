@@ -13,17 +13,7 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field coin  character 
-#'
-#' @field name  character 
-#'
-#' @field totalBalance  character 
-#'
-#' @field availableBalance  character 
-#'
-#' @field inOrder  character 
-#'
-#' @field btcValue  character 
+#' @field tranId  integer 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -31,135 +21,40 @@
 InlineResponse20069 <- R6::R6Class(
   'InlineResponse20069',
   public = list(
-    `coin` = NULL,
-    `name` = NULL,
-    `totalBalance` = NULL,
-    `availableBalance` = NULL,
-    `inOrder` = NULL,
-    `btcValue` = NULL,
+    `tranId` = NULL,
     initialize = function(
-        `coin`, `name`, `totalBalance`, `availableBalance`, `inOrder`, `btcValue`, ...
+        `tranId`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`coin`)) {
-        stopifnot(is.character(`coin`), length(`coin`) == 1)
-        self$`coin` <- `coin`
-      }
-      if (!missing(`name`)) {
-        stopifnot(is.character(`name`), length(`name`) == 1)
-        self$`name` <- `name`
-      }
-      if (!missing(`totalBalance`)) {
-        stopifnot(is.character(`totalBalance`), length(`totalBalance`) == 1)
-        self$`totalBalance` <- `totalBalance`
-      }
-      if (!missing(`availableBalance`)) {
-        stopifnot(is.character(`availableBalance`), length(`availableBalance`) == 1)
-        self$`availableBalance` <- `availableBalance`
-      }
-      if (!missing(`inOrder`)) {
-        stopifnot(is.character(`inOrder`), length(`inOrder`) == 1)
-        self$`inOrder` <- `inOrder`
-      }
-      if (!missing(`btcValue`)) {
-        stopifnot(is.character(`btcValue`), length(`btcValue`) == 1)
-        self$`btcValue` <- `btcValue`
+      if (!missing(`tranId`)) {
+        stopifnot(is.numeric(`tranId`), length(`tranId`) == 1)
+        self$`tranId` <- `tranId`
       }
     },
     toJSON = function() {
       InlineResponse20069Object <- list()
-      if (!is.null(self$`coin`)) {
-        InlineResponse20069Object[['coin']] <-
-          self$`coin`
-      }
-      if (!is.null(self$`name`)) {
-        InlineResponse20069Object[['name']] <-
-          self$`name`
-      }
-      if (!is.null(self$`totalBalance`)) {
-        InlineResponse20069Object[['totalBalance']] <-
-          self$`totalBalance`
-      }
-      if (!is.null(self$`availableBalance`)) {
-        InlineResponse20069Object[['availableBalance']] <-
-          self$`availableBalance`
-      }
-      if (!is.null(self$`inOrder`)) {
-        InlineResponse20069Object[['inOrder']] <-
-          self$`inOrder`
-      }
-      if (!is.null(self$`btcValue`)) {
-        InlineResponse20069Object[['btcValue']] <-
-          self$`btcValue`
+      if (!is.null(self$`tranId`)) {
+        InlineResponse20069Object[['tranId']] <-
+          self$`tranId`
       }
 
       InlineResponse20069Object
     },
     fromJSON = function(InlineResponse20069Json) {
       InlineResponse20069Object <- jsonlite::fromJSON(InlineResponse20069Json)
-      if (!is.null(InlineResponse20069Object$`coin`)) {
-        self$`coin` <- InlineResponse20069Object$`coin`
-      }
-      if (!is.null(InlineResponse20069Object$`name`)) {
-        self$`name` <- InlineResponse20069Object$`name`
-      }
-      if (!is.null(InlineResponse20069Object$`totalBalance`)) {
-        self$`totalBalance` <- InlineResponse20069Object$`totalBalance`
-      }
-      if (!is.null(InlineResponse20069Object$`availableBalance`)) {
-        self$`availableBalance` <- InlineResponse20069Object$`availableBalance`
-      }
-      if (!is.null(InlineResponse20069Object$`inOrder`)) {
-        self$`inOrder` <- InlineResponse20069Object$`inOrder`
-      }
-      if (!is.null(InlineResponse20069Object$`btcValue`)) {
-        self$`btcValue` <- InlineResponse20069Object$`btcValue`
+      if (!is.null(InlineResponse20069Object$`tranId`)) {
+        self$`tranId` <- InlineResponse20069Object$`tranId`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`coin`)) {
+        if (!is.null(self$`tranId`)) {
         sprintf(
-        '"coin":
-          "%s"
+        '"tranId":
+          %d
                 ',
-        self$`coin`
-        )},
-        if (!is.null(self$`name`)) {
-        sprintf(
-        '"name":
-          "%s"
-                ',
-        self$`name`
-        )},
-        if (!is.null(self$`totalBalance`)) {
-        sprintf(
-        '"totalBalance":
-          "%s"
-                ',
-        self$`totalBalance`
-        )},
-        if (!is.null(self$`availableBalance`)) {
-        sprintf(
-        '"availableBalance":
-          "%s"
-                ',
-        self$`availableBalance`
-        )},
-        if (!is.null(self$`inOrder`)) {
-        sprintf(
-        '"inOrder":
-          "%s"
-                ',
-        self$`inOrder`
-        )},
-        if (!is.null(self$`btcValue`)) {
-        sprintf(
-        '"btcValue":
-          "%s"
-                ',
-        self$`btcValue`
+        self$`tranId`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -167,12 +62,7 @@ InlineResponse20069 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20069Json) {
       InlineResponse20069Object <- jsonlite::fromJSON(InlineResponse20069Json)
-      self$`coin` <- InlineResponse20069Object$`coin`
-      self$`name` <- InlineResponse20069Object$`name`
-      self$`totalBalance` <- InlineResponse20069Object$`totalBalance`
-      self$`availableBalance` <- InlineResponse20069Object$`availableBalance`
-      self$`inOrder` <- InlineResponse20069Object$`inOrder`
-      self$`btcValue` <- InlineResponse20069Object$`btcValue`
+      self$`tranId` <- InlineResponse20069Object$`tranId`
       self
     }
   )

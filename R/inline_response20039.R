@@ -13,9 +13,7 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field rows  list( \link{InlineResponse20039Rows} ) 
-#'
-#' @field total  integer 
+#' @field data  \link{InlineResponse20039Data} 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -23,60 +21,42 @@
 InlineResponse20039 <- R6::R6Class(
   'InlineResponse20039',
   public = list(
-    `rows` = NULL,
-    `total` = NULL,
+    `data` = NULL,
     initialize = function(
-        `rows`, `total`, ...
+        `data`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`rows`)) {
-        stopifnot(is.vector(`rows`), length(`rows`) != 0)
-        sapply(`rows`, function(x) stopifnot(R6::is.R6(x)))
-        self$`rows` <- `rows`
-      }
-      if (!missing(`total`)) {
-        stopifnot(is.numeric(`total`), length(`total`) == 1)
-        self$`total` <- `total`
+      if (!missing(`data`)) {
+        stopifnot(R6::is.R6(`data`))
+        self$`data` <- `data`
       }
     },
     toJSON = function() {
       InlineResponse20039Object <- list()
-      if (!is.null(self$`rows`)) {
-        InlineResponse20039Object[['rows']] <-
-          lapply(self$`rows`, function(x) x$toJSON())
-      }
-      if (!is.null(self$`total`)) {
-        InlineResponse20039Object[['total']] <-
-          self$`total`
+      if (!is.null(self$`data`)) {
+        InlineResponse20039Object[['data']] <-
+          self$`data`$toJSON()
       }
 
       InlineResponse20039Object
     },
     fromJSON = function(InlineResponse20039Json) {
       InlineResponse20039Object <- jsonlite::fromJSON(InlineResponse20039Json)
-      if (!is.null(InlineResponse20039Object$`rows`)) {
-        self$`rows` <- ApiClient$new()$deserializeObj(InlineResponse20039Object$`rows`, "array[InlineResponse20039Rows]", loadNamespace("binanceRapi"))
-      }
-      if (!is.null(InlineResponse20039Object$`total`)) {
-        self$`total` <- InlineResponse20039Object$`total`
+      if (!is.null(InlineResponse20039Object$`data`)) {
+        dataObject <- InlineResponse20039Data$new()
+        dataObject$fromJSON(jsonlite::toJSON(InlineResponse20039Object$data, auto_unbox = TRUE, digits = NA))
+        self$`data` <- dataObject
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`rows`)) {
+        if (!is.null(self$`data`)) {
         sprintf(
-        '"rows":
-        [%s]
-',
-        paste(sapply(self$`rows`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
-        )},
-        if (!is.null(self$`total`)) {
-        sprintf(
-        '"total":
-          %d
-                ',
-        self$`total`
+        '"data":
+        %s
+        ',
+        jsonlite::toJSON(self$`data`$toJSON(), auto_unbox=TRUE, digits = NA)
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -84,8 +64,7 @@ InlineResponse20039 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20039Json) {
       InlineResponse20039Object <- jsonlite::fromJSON(InlineResponse20039Json)
-      self$`rows` <- ApiClient$new()$deserializeObj(InlineResponse20039Object$`rows`, "array[InlineResponse20039Rows]", loadNamespace("binanceRapi"))
-      self$`total` <- InlineResponse20039Object$`total`
+      self$`data` <- InlineResponse20039Data$new()$fromJSON(jsonlite::toJSON(InlineResponse20039Object$data, auto_unbox = TRUE, digits = NA))
       self
     }
   )

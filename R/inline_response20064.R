@@ -13,25 +13,23 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field counterParty  character 
+#' @field totalInitialMargin  character 
 #'
-#' @field email  character 
+#' @field totalMaintenanceMargin  character 
 #'
-#' @field type  integer 
+#' @field totalMarginBalance  character 
+#'
+#' @field totalOpenOrderInitialMargin  character 
+#'
+#' @field totalPositionInitialMargin  character 
+#'
+#' @field totalUnrealizedProfit  character 
+#'
+#' @field totalWalletBalance  character 
 #'
 #' @field asset  character 
 #'
-#' @field qty  character 
-#'
-#' @field fromAccountType  character 
-#'
-#' @field toAccountType  character 
-#'
-#' @field status  character 
-#'
-#' @field tranId  integer 
-#'
-#' @field time  integer 
+#' @field subAccountList  list( \link{InlineResponse20064SubAccountList} ) 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -39,162 +37,179 @@
 InlineResponse20064 <- R6::R6Class(
   'InlineResponse20064',
   public = list(
-    `counterParty` = NULL,
-    `email` = NULL,
-    `type` = NULL,
+    `totalInitialMargin` = NULL,
+    `totalMaintenanceMargin` = NULL,
+    `totalMarginBalance` = NULL,
+    `totalOpenOrderInitialMargin` = NULL,
+    `totalPositionInitialMargin` = NULL,
+    `totalUnrealizedProfit` = NULL,
+    `totalWalletBalance` = NULL,
     `asset` = NULL,
-    `qty` = NULL,
-    `fromAccountType` = NULL,
-    `toAccountType` = NULL,
-    `status` = NULL,
-    `tranId` = NULL,
-    `time` = NULL,
+    `subAccountList` = NULL,
     initialize = function(
-        `counterParty`, `email`, `type`, `asset`, `qty`, `fromAccountType`, `toAccountType`, `status`, `tranId`, `time`, ...
+        `totalInitialMargin`, `totalMaintenanceMargin`, `totalMarginBalance`, `totalOpenOrderInitialMargin`, `totalPositionInitialMargin`, `totalUnrealizedProfit`, `totalWalletBalance`, `asset`, `subAccountList`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`counterParty`)) {
-        stopifnot(is.character(`counterParty`), length(`counterParty`) == 1)
-        self$`counterParty` <- `counterParty`
+      if (!missing(`totalInitialMargin`)) {
+        stopifnot(is.character(`totalInitialMargin`), length(`totalInitialMargin`) == 1)
+        self$`totalInitialMargin` <- `totalInitialMargin`
       }
-      if (!missing(`email`)) {
-        stopifnot(is.character(`email`), length(`email`) == 1)
-        self$`email` <- `email`
+      if (!missing(`totalMaintenanceMargin`)) {
+        stopifnot(is.character(`totalMaintenanceMargin`), length(`totalMaintenanceMargin`) == 1)
+        self$`totalMaintenanceMargin` <- `totalMaintenanceMargin`
       }
-      if (!missing(`type`)) {
-        stopifnot(is.numeric(`type`), length(`type`) == 1)
-        self$`type` <- `type`
+      if (!missing(`totalMarginBalance`)) {
+        stopifnot(is.character(`totalMarginBalance`), length(`totalMarginBalance`) == 1)
+        self$`totalMarginBalance` <- `totalMarginBalance`
+      }
+      if (!missing(`totalOpenOrderInitialMargin`)) {
+        stopifnot(is.character(`totalOpenOrderInitialMargin`), length(`totalOpenOrderInitialMargin`) == 1)
+        self$`totalOpenOrderInitialMargin` <- `totalOpenOrderInitialMargin`
+      }
+      if (!missing(`totalPositionInitialMargin`)) {
+        stopifnot(is.character(`totalPositionInitialMargin`), length(`totalPositionInitialMargin`) == 1)
+        self$`totalPositionInitialMargin` <- `totalPositionInitialMargin`
+      }
+      if (!missing(`totalUnrealizedProfit`)) {
+        stopifnot(is.character(`totalUnrealizedProfit`), length(`totalUnrealizedProfit`) == 1)
+        self$`totalUnrealizedProfit` <- `totalUnrealizedProfit`
+      }
+      if (!missing(`totalWalletBalance`)) {
+        stopifnot(is.character(`totalWalletBalance`), length(`totalWalletBalance`) == 1)
+        self$`totalWalletBalance` <- `totalWalletBalance`
       }
       if (!missing(`asset`)) {
         stopifnot(is.character(`asset`), length(`asset`) == 1)
         self$`asset` <- `asset`
       }
-      if (!missing(`qty`)) {
-        stopifnot(is.character(`qty`), length(`qty`) == 1)
-        self$`qty` <- `qty`
-      }
-      if (!missing(`fromAccountType`)) {
-        stopifnot(is.character(`fromAccountType`), length(`fromAccountType`) == 1)
-        self$`fromAccountType` <- `fromAccountType`
-      }
-      if (!missing(`toAccountType`)) {
-        stopifnot(is.character(`toAccountType`), length(`toAccountType`) == 1)
-        self$`toAccountType` <- `toAccountType`
-      }
-      if (!missing(`status`)) {
-        stopifnot(is.character(`status`), length(`status`) == 1)
-        self$`status` <- `status`
-      }
-      if (!missing(`tranId`)) {
-        stopifnot(is.numeric(`tranId`), length(`tranId`) == 1)
-        self$`tranId` <- `tranId`
-      }
-      if (!missing(`time`)) {
-        stopifnot(is.numeric(`time`), length(`time`) == 1)
-        self$`time` <- `time`
+      if (!missing(`subAccountList`)) {
+        stopifnot(is.vector(`subAccountList`), length(`subAccountList`) != 0)
+        sapply(`subAccountList`, function(x) stopifnot(R6::is.R6(x)))
+        self$`subAccountList` <- `subAccountList`
       }
     },
     toJSON = function() {
       InlineResponse20064Object <- list()
-      if (!is.null(self$`counterParty`)) {
-        InlineResponse20064Object[['counterParty']] <-
-          self$`counterParty`
+      if (!is.null(self$`totalInitialMargin`)) {
+        InlineResponse20064Object[['totalInitialMargin']] <-
+          self$`totalInitialMargin`
       }
-      if (!is.null(self$`email`)) {
-        InlineResponse20064Object[['email']] <-
-          self$`email`
+      if (!is.null(self$`totalMaintenanceMargin`)) {
+        InlineResponse20064Object[['totalMaintenanceMargin']] <-
+          self$`totalMaintenanceMargin`
       }
-      if (!is.null(self$`type`)) {
-        InlineResponse20064Object[['type']] <-
-          self$`type`
+      if (!is.null(self$`totalMarginBalance`)) {
+        InlineResponse20064Object[['totalMarginBalance']] <-
+          self$`totalMarginBalance`
+      }
+      if (!is.null(self$`totalOpenOrderInitialMargin`)) {
+        InlineResponse20064Object[['totalOpenOrderInitialMargin']] <-
+          self$`totalOpenOrderInitialMargin`
+      }
+      if (!is.null(self$`totalPositionInitialMargin`)) {
+        InlineResponse20064Object[['totalPositionInitialMargin']] <-
+          self$`totalPositionInitialMargin`
+      }
+      if (!is.null(self$`totalUnrealizedProfit`)) {
+        InlineResponse20064Object[['totalUnrealizedProfit']] <-
+          self$`totalUnrealizedProfit`
+      }
+      if (!is.null(self$`totalWalletBalance`)) {
+        InlineResponse20064Object[['totalWalletBalance']] <-
+          self$`totalWalletBalance`
       }
       if (!is.null(self$`asset`)) {
         InlineResponse20064Object[['asset']] <-
           self$`asset`
       }
-      if (!is.null(self$`qty`)) {
-        InlineResponse20064Object[['qty']] <-
-          self$`qty`
-      }
-      if (!is.null(self$`fromAccountType`)) {
-        InlineResponse20064Object[['fromAccountType']] <-
-          self$`fromAccountType`
-      }
-      if (!is.null(self$`toAccountType`)) {
-        InlineResponse20064Object[['toAccountType']] <-
-          self$`toAccountType`
-      }
-      if (!is.null(self$`status`)) {
-        InlineResponse20064Object[['status']] <-
-          self$`status`
-      }
-      if (!is.null(self$`tranId`)) {
-        InlineResponse20064Object[['tranId']] <-
-          self$`tranId`
-      }
-      if (!is.null(self$`time`)) {
-        InlineResponse20064Object[['time']] <-
-          self$`time`
+      if (!is.null(self$`subAccountList`)) {
+        InlineResponse20064Object[['subAccountList']] <-
+          lapply(self$`subAccountList`, function(x) x$toJSON())
       }
 
       InlineResponse20064Object
     },
     fromJSON = function(InlineResponse20064Json) {
       InlineResponse20064Object <- jsonlite::fromJSON(InlineResponse20064Json)
-      if (!is.null(InlineResponse20064Object$`counterParty`)) {
-        self$`counterParty` <- InlineResponse20064Object$`counterParty`
+      if (!is.null(InlineResponse20064Object$`totalInitialMargin`)) {
+        self$`totalInitialMargin` <- InlineResponse20064Object$`totalInitialMargin`
       }
-      if (!is.null(InlineResponse20064Object$`email`)) {
-        self$`email` <- InlineResponse20064Object$`email`
+      if (!is.null(InlineResponse20064Object$`totalMaintenanceMargin`)) {
+        self$`totalMaintenanceMargin` <- InlineResponse20064Object$`totalMaintenanceMargin`
       }
-      if (!is.null(InlineResponse20064Object$`type`)) {
-        self$`type` <- InlineResponse20064Object$`type`
+      if (!is.null(InlineResponse20064Object$`totalMarginBalance`)) {
+        self$`totalMarginBalance` <- InlineResponse20064Object$`totalMarginBalance`
+      }
+      if (!is.null(InlineResponse20064Object$`totalOpenOrderInitialMargin`)) {
+        self$`totalOpenOrderInitialMargin` <- InlineResponse20064Object$`totalOpenOrderInitialMargin`
+      }
+      if (!is.null(InlineResponse20064Object$`totalPositionInitialMargin`)) {
+        self$`totalPositionInitialMargin` <- InlineResponse20064Object$`totalPositionInitialMargin`
+      }
+      if (!is.null(InlineResponse20064Object$`totalUnrealizedProfit`)) {
+        self$`totalUnrealizedProfit` <- InlineResponse20064Object$`totalUnrealizedProfit`
+      }
+      if (!is.null(InlineResponse20064Object$`totalWalletBalance`)) {
+        self$`totalWalletBalance` <- InlineResponse20064Object$`totalWalletBalance`
       }
       if (!is.null(InlineResponse20064Object$`asset`)) {
         self$`asset` <- InlineResponse20064Object$`asset`
       }
-      if (!is.null(InlineResponse20064Object$`qty`)) {
-        self$`qty` <- InlineResponse20064Object$`qty`
-      }
-      if (!is.null(InlineResponse20064Object$`fromAccountType`)) {
-        self$`fromAccountType` <- InlineResponse20064Object$`fromAccountType`
-      }
-      if (!is.null(InlineResponse20064Object$`toAccountType`)) {
-        self$`toAccountType` <- InlineResponse20064Object$`toAccountType`
-      }
-      if (!is.null(InlineResponse20064Object$`status`)) {
-        self$`status` <- InlineResponse20064Object$`status`
-      }
-      if (!is.null(InlineResponse20064Object$`tranId`)) {
-        self$`tranId` <- InlineResponse20064Object$`tranId`
-      }
-      if (!is.null(InlineResponse20064Object$`time`)) {
-        self$`time` <- InlineResponse20064Object$`time`
+      if (!is.null(InlineResponse20064Object$`subAccountList`)) {
+        self$`subAccountList` <- ApiClient$new()$deserializeObj(InlineResponse20064Object$`subAccountList`, "array[InlineResponse20064SubAccountList]", loadNamespace("binanceRapi"))
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`counterParty`)) {
+        if (!is.null(self$`totalInitialMargin`)) {
         sprintf(
-        '"counterParty":
+        '"totalInitialMargin":
           "%s"
                 ',
-        self$`counterParty`
+        self$`totalInitialMargin`
         )},
-        if (!is.null(self$`email`)) {
+        if (!is.null(self$`totalMaintenanceMargin`)) {
         sprintf(
-        '"email":
+        '"totalMaintenanceMargin":
           "%s"
                 ',
-        self$`email`
+        self$`totalMaintenanceMargin`
         )},
-        if (!is.null(self$`type`)) {
+        if (!is.null(self$`totalMarginBalance`)) {
         sprintf(
-        '"type":
-          %d
+        '"totalMarginBalance":
+          "%s"
                 ',
-        self$`type`
+        self$`totalMarginBalance`
+        )},
+        if (!is.null(self$`totalOpenOrderInitialMargin`)) {
+        sprintf(
+        '"totalOpenOrderInitialMargin":
+          "%s"
+                ',
+        self$`totalOpenOrderInitialMargin`
+        )},
+        if (!is.null(self$`totalPositionInitialMargin`)) {
+        sprintf(
+        '"totalPositionInitialMargin":
+          "%s"
+                ',
+        self$`totalPositionInitialMargin`
+        )},
+        if (!is.null(self$`totalUnrealizedProfit`)) {
+        sprintf(
+        '"totalUnrealizedProfit":
+          "%s"
+                ',
+        self$`totalUnrealizedProfit`
+        )},
+        if (!is.null(self$`totalWalletBalance`)) {
+        sprintf(
+        '"totalWalletBalance":
+          "%s"
+                ',
+        self$`totalWalletBalance`
         )},
         if (!is.null(self$`asset`)) {
         sprintf(
@@ -203,47 +218,12 @@ InlineResponse20064 <- R6::R6Class(
                 ',
         self$`asset`
         )},
-        if (!is.null(self$`qty`)) {
+        if (!is.null(self$`subAccountList`)) {
         sprintf(
-        '"qty":
-          "%s"
-                ',
-        self$`qty`
-        )},
-        if (!is.null(self$`fromAccountType`)) {
-        sprintf(
-        '"fromAccountType":
-          "%s"
-                ',
-        self$`fromAccountType`
-        )},
-        if (!is.null(self$`toAccountType`)) {
-        sprintf(
-        '"toAccountType":
-          "%s"
-                ',
-        self$`toAccountType`
-        )},
-        if (!is.null(self$`status`)) {
-        sprintf(
-        '"status":
-          "%s"
-                ',
-        self$`status`
-        )},
-        if (!is.null(self$`tranId`)) {
-        sprintf(
-        '"tranId":
-          %d
-                ',
-        self$`tranId`
-        )},
-        if (!is.null(self$`time`)) {
-        sprintf(
-        '"time":
-          %d
-                ',
-        self$`time`
+        '"subAccountList":
+        [%s]
+',
+        paste(sapply(self$`subAccountList`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -251,16 +231,15 @@ InlineResponse20064 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20064Json) {
       InlineResponse20064Object <- jsonlite::fromJSON(InlineResponse20064Json)
-      self$`counterParty` <- InlineResponse20064Object$`counterParty`
-      self$`email` <- InlineResponse20064Object$`email`
-      self$`type` <- InlineResponse20064Object$`type`
+      self$`totalInitialMargin` <- InlineResponse20064Object$`totalInitialMargin`
+      self$`totalMaintenanceMargin` <- InlineResponse20064Object$`totalMaintenanceMargin`
+      self$`totalMarginBalance` <- InlineResponse20064Object$`totalMarginBalance`
+      self$`totalOpenOrderInitialMargin` <- InlineResponse20064Object$`totalOpenOrderInitialMargin`
+      self$`totalPositionInitialMargin` <- InlineResponse20064Object$`totalPositionInitialMargin`
+      self$`totalUnrealizedProfit` <- InlineResponse20064Object$`totalUnrealizedProfit`
+      self$`totalWalletBalance` <- InlineResponse20064Object$`totalWalletBalance`
       self$`asset` <- InlineResponse20064Object$`asset`
-      self$`qty` <- InlineResponse20064Object$`qty`
-      self$`fromAccountType` <- InlineResponse20064Object$`fromAccountType`
-      self$`toAccountType` <- InlineResponse20064Object$`toAccountType`
-      self$`status` <- InlineResponse20064Object$`status`
-      self$`tranId` <- InlineResponse20064Object$`tranId`
-      self$`time` <- InlineResponse20064Object$`time`
+      self$`subAccountList` <- ApiClient$new()$deserializeObj(InlineResponse20064Object$`subAccountList`, "array[InlineResponse20064SubAccountList]", loadNamespace("binanceRapi"))
       self
     }
   )

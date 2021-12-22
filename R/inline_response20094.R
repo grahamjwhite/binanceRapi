@@ -17,7 +17,7 @@
 #'
 #' @field msg  character 
 #'
-#' @field data  character 
+#' @field data  list( \link{InlineResponse20094Data} ) 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -41,7 +41,8 @@ InlineResponse20094 <- R6::R6Class(
         self$`msg` <- `msg`
       }
       if (!missing(`data`)) {
-        stopifnot(is.logical(`data`), length(`data`) == 1)
+        stopifnot(is.vector(`data`), length(`data`) != 0)
+        sapply(`data`, function(x) stopifnot(R6::is.R6(x)))
         self$`data` <- `data`
       }
     },
@@ -57,7 +58,7 @@ InlineResponse20094 <- R6::R6Class(
       }
       if (!is.null(self$`data`)) {
         InlineResponse20094Object[['data']] <-
-          self$`data`
+          lapply(self$`data`, function(x) x$toJSON())
       }
 
       InlineResponse20094Object
@@ -71,7 +72,7 @@ InlineResponse20094 <- R6::R6Class(
         self$`msg` <- InlineResponse20094Object$`msg`
       }
       if (!is.null(InlineResponse20094Object$`data`)) {
-        self$`data` <- InlineResponse20094Object$`data`
+        self$`data` <- ApiClient$new()$deserializeObj(InlineResponse20094Object$`data`, "array[InlineResponse20094Data]", loadNamespace("binanceRapi"))
       }
       self
     },
@@ -94,9 +95,9 @@ InlineResponse20094 <- R6::R6Class(
         if (!is.null(self$`data`)) {
         sprintf(
         '"data":
-          %s
-                ',
-        tolower(self$`data`)
+        [%s]
+',
+        paste(sapply(self$`data`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -106,7 +107,7 @@ InlineResponse20094 <- R6::R6Class(
       InlineResponse20094Object <- jsonlite::fromJSON(InlineResponse20094Json)
       self$`code` <- InlineResponse20094Object$`code`
       self$`msg` <- InlineResponse20094Object$`msg`
-      self$`data` <- InlineResponse20094Object$`data`
+      self$`data` <- ApiClient$new()$deserializeObj(InlineResponse20094Object$`data`, "array[InlineResponse20094Data]", loadNamespace("binanceRapi"))
       self
     }
   )

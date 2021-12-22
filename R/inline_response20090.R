@@ -13,11 +13,15 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field code  integer 
+#' @field asset  character 
 #'
-#' @field msg  character 
+#' @field interest  character 
 #'
-#' @field data  \link{InlineResponse20090Data} 
+#' @field lendingType  character 
+#'
+#' @field productName  character 
+#'
+#' @field time  integer 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -25,80 +29,116 @@
 InlineResponse20090 <- R6::R6Class(
   'InlineResponse20090',
   public = list(
-    `code` = NULL,
-    `msg` = NULL,
-    `data` = NULL,
+    `asset` = NULL,
+    `interest` = NULL,
+    `lendingType` = NULL,
+    `productName` = NULL,
+    `time` = NULL,
     initialize = function(
-        `code`, `msg`, `data`, ...
+        `asset`, `interest`, `lendingType`, `productName`, `time`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`code`)) {
-        stopifnot(is.numeric(`code`), length(`code`) == 1)
-        self$`code` <- `code`
+      if (!missing(`asset`)) {
+        stopifnot(is.character(`asset`), length(`asset`) == 1)
+        self$`asset` <- `asset`
       }
-      if (!missing(`msg`)) {
-        stopifnot(is.character(`msg`), length(`msg`) == 1)
-        self$`msg` <- `msg`
+      if (!missing(`interest`)) {
+        stopifnot(is.character(`interest`), length(`interest`) == 1)
+        self$`interest` <- `interest`
       }
-      if (!missing(`data`)) {
-        stopifnot(R6::is.R6(`data`))
-        self$`data` <- `data`
+      if (!missing(`lendingType`)) {
+        stopifnot(is.character(`lendingType`), length(`lendingType`) == 1)
+        self$`lendingType` <- `lendingType`
+      }
+      if (!missing(`productName`)) {
+        stopifnot(is.character(`productName`), length(`productName`) == 1)
+        self$`productName` <- `productName`
+      }
+      if (!missing(`time`)) {
+        stopifnot(is.numeric(`time`), length(`time`) == 1)
+        self$`time` <- `time`
       }
     },
     toJSON = function() {
       InlineResponse20090Object <- list()
-      if (!is.null(self$`code`)) {
-        InlineResponse20090Object[['code']] <-
-          self$`code`
+      if (!is.null(self$`asset`)) {
+        InlineResponse20090Object[['asset']] <-
+          self$`asset`
       }
-      if (!is.null(self$`msg`)) {
-        InlineResponse20090Object[['msg']] <-
-          self$`msg`
+      if (!is.null(self$`interest`)) {
+        InlineResponse20090Object[['interest']] <-
+          self$`interest`
       }
-      if (!is.null(self$`data`)) {
-        InlineResponse20090Object[['data']] <-
-          self$`data`$toJSON()
+      if (!is.null(self$`lendingType`)) {
+        InlineResponse20090Object[['lendingType']] <-
+          self$`lendingType`
+      }
+      if (!is.null(self$`productName`)) {
+        InlineResponse20090Object[['productName']] <-
+          self$`productName`
+      }
+      if (!is.null(self$`time`)) {
+        InlineResponse20090Object[['time']] <-
+          self$`time`
       }
 
       InlineResponse20090Object
     },
     fromJSON = function(InlineResponse20090Json) {
       InlineResponse20090Object <- jsonlite::fromJSON(InlineResponse20090Json)
-      if (!is.null(InlineResponse20090Object$`code`)) {
-        self$`code` <- InlineResponse20090Object$`code`
+      if (!is.null(InlineResponse20090Object$`asset`)) {
+        self$`asset` <- InlineResponse20090Object$`asset`
       }
-      if (!is.null(InlineResponse20090Object$`msg`)) {
-        self$`msg` <- InlineResponse20090Object$`msg`
+      if (!is.null(InlineResponse20090Object$`interest`)) {
+        self$`interest` <- InlineResponse20090Object$`interest`
       }
-      if (!is.null(InlineResponse20090Object$`data`)) {
-        dataObject <- InlineResponse20090Data$new()
-        dataObject$fromJSON(jsonlite::toJSON(InlineResponse20090Object$data, auto_unbox = TRUE, digits = NA))
-        self$`data` <- dataObject
+      if (!is.null(InlineResponse20090Object$`lendingType`)) {
+        self$`lendingType` <- InlineResponse20090Object$`lendingType`
+      }
+      if (!is.null(InlineResponse20090Object$`productName`)) {
+        self$`productName` <- InlineResponse20090Object$`productName`
+      }
+      if (!is.null(InlineResponse20090Object$`time`)) {
+        self$`time` <- InlineResponse20090Object$`time`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`code`)) {
+        if (!is.null(self$`asset`)) {
         sprintf(
-        '"code":
-          %d
-                ',
-        self$`code`
-        )},
-        if (!is.null(self$`msg`)) {
-        sprintf(
-        '"msg":
+        '"asset":
           "%s"
                 ',
-        self$`msg`
+        self$`asset`
         )},
-        if (!is.null(self$`data`)) {
+        if (!is.null(self$`interest`)) {
         sprintf(
-        '"data":
-        %s
-        ',
-        jsonlite::toJSON(self$`data`$toJSON(), auto_unbox=TRUE, digits = NA)
+        '"interest":
+          "%s"
+                ',
+        self$`interest`
+        )},
+        if (!is.null(self$`lendingType`)) {
+        sprintf(
+        '"lendingType":
+          "%s"
+                ',
+        self$`lendingType`
+        )},
+        if (!is.null(self$`productName`)) {
+        sprintf(
+        '"productName":
+          "%s"
+                ',
+        self$`productName`
+        )},
+        if (!is.null(self$`time`)) {
+        sprintf(
+        '"time":
+          %d
+                ',
+        self$`time`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -106,9 +146,11 @@ InlineResponse20090 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20090Json) {
       InlineResponse20090Object <- jsonlite::fromJSON(InlineResponse20090Json)
-      self$`code` <- InlineResponse20090Object$`code`
-      self$`msg` <- InlineResponse20090Object$`msg`
-      self$`data` <- InlineResponse20090Data$new()$fromJSON(jsonlite::toJSON(InlineResponse20090Object$data, auto_unbox = TRUE, digits = NA))
+      self$`asset` <- InlineResponse20090Object$`asset`
+      self$`interest` <- InlineResponse20090Object$`interest`
+      self$`lendingType` <- InlineResponse20090Object$`lendingType`
+      self$`productName` <- InlineResponse20090Object$`productName`
+      self$`time` <- InlineResponse20090Object$`time`
       self
     }
   )

@@ -13,15 +13,15 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field code  character 
+#' @field poolId  integer 
 #'
-#' @field message  character 
+#' @field poolNmae  character 
 #'
-#' @field data  list( \link{InlineResponse200111Data} ) 
+#' @field updateTime  integer 
 #'
-#' @field total  integer 
+#' @field liquidity  \link{SapiV1BswapLiquidityLiquidity} 
 #'
-#' @field success  character 
+#' @field share  \link{SapiV1BswapLiquidityShare} 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -29,117 +29,120 @@
 InlineResponse200111 <- R6::R6Class(
   'InlineResponse200111',
   public = list(
-    `code` = NULL,
-    `message` = NULL,
-    `data` = NULL,
-    `total` = NULL,
-    `success` = NULL,
+    `poolId` = NULL,
+    `poolNmae` = NULL,
+    `updateTime` = NULL,
+    `liquidity` = NULL,
+    `share` = NULL,
     initialize = function(
-        `code`, `message`, `data`, `total`, `success`, ...
+        `poolId`, `poolNmae`, `updateTime`, `liquidity`, `share`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`code`)) {
-        stopifnot(is.character(`code`), length(`code`) == 1)
-        self$`code` <- `code`
+      if (!missing(`poolId`)) {
+        stopifnot(is.numeric(`poolId`), length(`poolId`) == 1)
+        self$`poolId` <- `poolId`
       }
-      if (!missing(`message`)) {
-        stopifnot(is.character(`message`), length(`message`) == 1)
-        self$`message` <- `message`
+      if (!missing(`poolNmae`)) {
+        stopifnot(is.character(`poolNmae`), length(`poolNmae`) == 1)
+        self$`poolNmae` <- `poolNmae`
       }
-      if (!missing(`data`)) {
-        stopifnot(is.vector(`data`), length(`data`) != 0)
-        sapply(`data`, function(x) stopifnot(R6::is.R6(x)))
-        self$`data` <- `data`
+      if (!missing(`updateTime`)) {
+        stopifnot(is.numeric(`updateTime`), length(`updateTime`) == 1)
+        self$`updateTime` <- `updateTime`
       }
-      if (!missing(`total`)) {
-        stopifnot(is.numeric(`total`), length(`total`) == 1)
-        self$`total` <- `total`
+      if (!missing(`liquidity`)) {
+        stopifnot(R6::is.R6(`liquidity`))
+        self$`liquidity` <- `liquidity`
       }
-      if (!missing(`success`)) {
-        stopifnot(is.logical(`success`), length(`success`) == 1)
-        self$`success` <- `success`
+      if (!missing(`share`)) {
+        stopifnot(R6::is.R6(`share`))
+        self$`share` <- `share`
       }
     },
     toJSON = function() {
       InlineResponse200111Object <- list()
-      if (!is.null(self$`code`)) {
-        InlineResponse200111Object[['code']] <-
-          self$`code`
+      if (!is.null(self$`poolId`)) {
+        InlineResponse200111Object[['poolId']] <-
+          self$`poolId`
       }
-      if (!is.null(self$`message`)) {
-        InlineResponse200111Object[['message']] <-
-          self$`message`
+      if (!is.null(self$`poolNmae`)) {
+        InlineResponse200111Object[['poolNmae']] <-
+          self$`poolNmae`
       }
-      if (!is.null(self$`data`)) {
-        InlineResponse200111Object[['data']] <-
-          lapply(self$`data`, function(x) x$toJSON())
+      if (!is.null(self$`updateTime`)) {
+        InlineResponse200111Object[['updateTime']] <-
+          self$`updateTime`
       }
-      if (!is.null(self$`total`)) {
-        InlineResponse200111Object[['total']] <-
-          self$`total`
+      if (!is.null(self$`liquidity`)) {
+        InlineResponse200111Object[['liquidity']] <-
+          self$`liquidity`$toJSON()
       }
-      if (!is.null(self$`success`)) {
-        InlineResponse200111Object[['success']] <-
-          self$`success`
+      if (!is.null(self$`share`)) {
+        InlineResponse200111Object[['share']] <-
+          self$`share`$toJSON()
       }
 
       InlineResponse200111Object
     },
     fromJSON = function(InlineResponse200111Json) {
       InlineResponse200111Object <- jsonlite::fromJSON(InlineResponse200111Json)
-      if (!is.null(InlineResponse200111Object$`code`)) {
-        self$`code` <- InlineResponse200111Object$`code`
+      if (!is.null(InlineResponse200111Object$`poolId`)) {
+        self$`poolId` <- InlineResponse200111Object$`poolId`
       }
-      if (!is.null(InlineResponse200111Object$`message`)) {
-        self$`message` <- InlineResponse200111Object$`message`
+      if (!is.null(InlineResponse200111Object$`poolNmae`)) {
+        self$`poolNmae` <- InlineResponse200111Object$`poolNmae`
       }
-      if (!is.null(InlineResponse200111Object$`data`)) {
-        self$`data` <- ApiClient$new()$deserializeObj(InlineResponse200111Object$`data`, "array[InlineResponse200111Data]", loadNamespace("binanceRapi"))
+      if (!is.null(InlineResponse200111Object$`updateTime`)) {
+        self$`updateTime` <- InlineResponse200111Object$`updateTime`
       }
-      if (!is.null(InlineResponse200111Object$`total`)) {
-        self$`total` <- InlineResponse200111Object$`total`
+      if (!is.null(InlineResponse200111Object$`liquidity`)) {
+        liquidityObject <- SapiV1BswapLiquidityLiquidity$new()
+        liquidityObject$fromJSON(jsonlite::toJSON(InlineResponse200111Object$liquidity, auto_unbox = TRUE, digits = NA))
+        self$`liquidity` <- liquidityObject
       }
-      if (!is.null(InlineResponse200111Object$`success`)) {
-        self$`success` <- InlineResponse200111Object$`success`
+      if (!is.null(InlineResponse200111Object$`share`)) {
+        shareObject <- SapiV1BswapLiquidityShare$new()
+        shareObject$fromJSON(jsonlite::toJSON(InlineResponse200111Object$share, auto_unbox = TRUE, digits = NA))
+        self$`share` <- shareObject
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`code`)) {
+        if (!is.null(self$`poolId`)) {
         sprintf(
-        '"code":
-          "%s"
-                ',
-        self$`code`
-        )},
-        if (!is.null(self$`message`)) {
-        sprintf(
-        '"message":
-          "%s"
-                ',
-        self$`message`
-        )},
-        if (!is.null(self$`data`)) {
-        sprintf(
-        '"data":
-        [%s]
-',
-        paste(sapply(self$`data`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
-        )},
-        if (!is.null(self$`total`)) {
-        sprintf(
-        '"total":
+        '"poolId":
           %d
                 ',
-        self$`total`
+        self$`poolId`
         )},
-        if (!is.null(self$`success`)) {
+        if (!is.null(self$`poolNmae`)) {
         sprintf(
-        '"success":
-          %s
+        '"poolNmae":
+          "%s"
                 ',
-        tolower(self$`success`)
+        self$`poolNmae`
+        )},
+        if (!is.null(self$`updateTime`)) {
+        sprintf(
+        '"updateTime":
+          %d
+                ',
+        self$`updateTime`
+        )},
+        if (!is.null(self$`liquidity`)) {
+        sprintf(
+        '"liquidity":
+        %s
+        ',
+        jsonlite::toJSON(self$`liquidity`$toJSON(), auto_unbox=TRUE, digits = NA)
+        )},
+        if (!is.null(self$`share`)) {
+        sprintf(
+        '"share":
+        %s
+        ',
+        jsonlite::toJSON(self$`share`$toJSON(), auto_unbox=TRUE, digits = NA)
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -147,11 +150,11 @@ InlineResponse200111 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse200111Json) {
       InlineResponse200111Object <- jsonlite::fromJSON(InlineResponse200111Json)
-      self$`code` <- InlineResponse200111Object$`code`
-      self$`message` <- InlineResponse200111Object$`message`
-      self$`data` <- ApiClient$new()$deserializeObj(InlineResponse200111Object$`data`, "array[InlineResponse200111Data]", loadNamespace("binanceRapi"))
-      self$`total` <- InlineResponse200111Object$`total`
-      self$`success` <- InlineResponse200111Object$`success`
+      self$`poolId` <- InlineResponse200111Object$`poolId`
+      self$`poolNmae` <- InlineResponse200111Object$`poolNmae`
+      self$`updateTime` <- InlineResponse200111Object$`updateTime`
+      self$`liquidity` <- SapiV1BswapLiquidityLiquidity$new()$fromJSON(jsonlite::toJSON(InlineResponse200111Object$liquidity, auto_unbox = TRUE, digits = NA))
+      self$`share` <- SapiV1BswapLiquidityShare$new()$fromJSON(jsonlite::toJSON(InlineResponse200111Object$share, auto_unbox = TRUE, digits = NA))
       self
     }
   )

@@ -13,7 +13,7 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field listenKey  character 
+#' @field tranId  integer 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -21,40 +21,40 @@
 InlineResponse20071 <- R6::R6Class(
   'InlineResponse20071',
   public = list(
-    `listenKey` = NULL,
+    `tranId` = NULL,
     initialize = function(
-        `listenKey`, ...
+        `tranId`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`listenKey`)) {
-        stopifnot(is.character(`listenKey`), length(`listenKey`) == 1)
-        self$`listenKey` <- `listenKey`
+      if (!missing(`tranId`)) {
+        stopifnot(is.numeric(`tranId`), length(`tranId`) == 1)
+        self$`tranId` <- `tranId`
       }
     },
     toJSON = function() {
       InlineResponse20071Object <- list()
-      if (!is.null(self$`listenKey`)) {
-        InlineResponse20071Object[['listenKey']] <-
-          self$`listenKey`
+      if (!is.null(self$`tranId`)) {
+        InlineResponse20071Object[['tranId']] <-
+          self$`tranId`
       }
 
       InlineResponse20071Object
     },
     fromJSON = function(InlineResponse20071Json) {
       InlineResponse20071Object <- jsonlite::fromJSON(InlineResponse20071Json)
-      if (!is.null(InlineResponse20071Object$`listenKey`)) {
-        self$`listenKey` <- InlineResponse20071Object$`listenKey`
+      if (!is.null(InlineResponse20071Object$`tranId`)) {
+        self$`tranId` <- InlineResponse20071Object$`tranId`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`listenKey`)) {
+        if (!is.null(self$`tranId`)) {
         sprintf(
-        '"listenKey":
-          "%s"
+        '"tranId":
+          %d
                 ',
-        self$`listenKey`
+        self$`tranId`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -62,7 +62,7 @@ InlineResponse20071 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20071Json) {
       InlineResponse20071Object <- jsonlite::fromJSON(InlineResponse20071Json)
-      self$`listenKey` <- InlineResponse20071Object$`listenKey`
+      self$`tranId` <- InlineResponse20071Object$`tranId`
       self
     }
   )

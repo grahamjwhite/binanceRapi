@@ -15,6 +15,22 @@
 #'
 #' @field tranId  integer 
 #'
+#' @field fromEmail  character 
+#'
+#' @field toEmail  character 
+#'
+#' @field asset  character 
+#'
+#' @field amount  character 
+#'
+#' @field fromAccountType  character 
+#'
+#' @field toAccountType  character 
+#'
+#' @field status  character 
+#'
+#' @field createTimeStamp  integer 
+#'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
 #' @export
@@ -22,13 +38,53 @@ InlineResponse20068 <- R6::R6Class(
   'InlineResponse20068',
   public = list(
     `tranId` = NULL,
+    `fromEmail` = NULL,
+    `toEmail` = NULL,
+    `asset` = NULL,
+    `amount` = NULL,
+    `fromAccountType` = NULL,
+    `toAccountType` = NULL,
+    `status` = NULL,
+    `createTimeStamp` = NULL,
     initialize = function(
-        `tranId`, ...
+        `tranId`, `fromEmail`, `toEmail`, `asset`, `amount`, `fromAccountType`, `toAccountType`, `status`, `createTimeStamp`, ...
     ) {
       local.optional.var <- list(...)
       if (!missing(`tranId`)) {
         stopifnot(is.numeric(`tranId`), length(`tranId`) == 1)
         self$`tranId` <- `tranId`
+      }
+      if (!missing(`fromEmail`)) {
+        stopifnot(is.character(`fromEmail`), length(`fromEmail`) == 1)
+        self$`fromEmail` <- `fromEmail`
+      }
+      if (!missing(`toEmail`)) {
+        stopifnot(is.character(`toEmail`), length(`toEmail`) == 1)
+        self$`toEmail` <- `toEmail`
+      }
+      if (!missing(`asset`)) {
+        stopifnot(is.character(`asset`), length(`asset`) == 1)
+        self$`asset` <- `asset`
+      }
+      if (!missing(`amount`)) {
+        stopifnot(is.character(`amount`), length(`amount`) == 1)
+        self$`amount` <- `amount`
+      }
+      if (!missing(`fromAccountType`)) {
+        stopifnot(is.character(`fromAccountType`), length(`fromAccountType`) == 1)
+        self$`fromAccountType` <- `fromAccountType`
+      }
+      if (!missing(`toAccountType`)) {
+        stopifnot(is.character(`toAccountType`), length(`toAccountType`) == 1)
+        self$`toAccountType` <- `toAccountType`
+      }
+      if (!missing(`status`)) {
+        stopifnot(is.character(`status`), length(`status`) == 1)
+        self$`status` <- `status`
+      }
+      if (!missing(`createTimeStamp`)) {
+        stopifnot(is.numeric(`createTimeStamp`), length(`createTimeStamp`) == 1)
+        self$`createTimeStamp` <- `createTimeStamp`
       }
     },
     toJSON = function() {
@@ -37,6 +93,38 @@ InlineResponse20068 <- R6::R6Class(
         InlineResponse20068Object[['tranId']] <-
           self$`tranId`
       }
+      if (!is.null(self$`fromEmail`)) {
+        InlineResponse20068Object[['fromEmail']] <-
+          self$`fromEmail`
+      }
+      if (!is.null(self$`toEmail`)) {
+        InlineResponse20068Object[['toEmail']] <-
+          self$`toEmail`
+      }
+      if (!is.null(self$`asset`)) {
+        InlineResponse20068Object[['asset']] <-
+          self$`asset`
+      }
+      if (!is.null(self$`amount`)) {
+        InlineResponse20068Object[['amount']] <-
+          self$`amount`
+      }
+      if (!is.null(self$`fromAccountType`)) {
+        InlineResponse20068Object[['fromAccountType']] <-
+          self$`fromAccountType`
+      }
+      if (!is.null(self$`toAccountType`)) {
+        InlineResponse20068Object[['toAccountType']] <-
+          self$`toAccountType`
+      }
+      if (!is.null(self$`status`)) {
+        InlineResponse20068Object[['status']] <-
+          self$`status`
+      }
+      if (!is.null(self$`createTimeStamp`)) {
+        InlineResponse20068Object[['createTimeStamp']] <-
+          self$`createTimeStamp`
+      }
 
       InlineResponse20068Object
     },
@@ -44,6 +132,30 @@ InlineResponse20068 <- R6::R6Class(
       InlineResponse20068Object <- jsonlite::fromJSON(InlineResponse20068Json)
       if (!is.null(InlineResponse20068Object$`tranId`)) {
         self$`tranId` <- InlineResponse20068Object$`tranId`
+      }
+      if (!is.null(InlineResponse20068Object$`fromEmail`)) {
+        self$`fromEmail` <- InlineResponse20068Object$`fromEmail`
+      }
+      if (!is.null(InlineResponse20068Object$`toEmail`)) {
+        self$`toEmail` <- InlineResponse20068Object$`toEmail`
+      }
+      if (!is.null(InlineResponse20068Object$`asset`)) {
+        self$`asset` <- InlineResponse20068Object$`asset`
+      }
+      if (!is.null(InlineResponse20068Object$`amount`)) {
+        self$`amount` <- InlineResponse20068Object$`amount`
+      }
+      if (!is.null(InlineResponse20068Object$`fromAccountType`)) {
+        self$`fromAccountType` <- InlineResponse20068Object$`fromAccountType`
+      }
+      if (!is.null(InlineResponse20068Object$`toAccountType`)) {
+        self$`toAccountType` <- InlineResponse20068Object$`toAccountType`
+      }
+      if (!is.null(InlineResponse20068Object$`status`)) {
+        self$`status` <- InlineResponse20068Object$`status`
+      }
+      if (!is.null(InlineResponse20068Object$`createTimeStamp`)) {
+        self$`createTimeStamp` <- InlineResponse20068Object$`createTimeStamp`
       }
       self
     },
@@ -55,6 +167,62 @@ InlineResponse20068 <- R6::R6Class(
           %d
                 ',
         self$`tranId`
+        )},
+        if (!is.null(self$`fromEmail`)) {
+        sprintf(
+        '"fromEmail":
+          "%s"
+                ',
+        self$`fromEmail`
+        )},
+        if (!is.null(self$`toEmail`)) {
+        sprintf(
+        '"toEmail":
+          "%s"
+                ',
+        self$`toEmail`
+        )},
+        if (!is.null(self$`asset`)) {
+        sprintf(
+        '"asset":
+          "%s"
+                ',
+        self$`asset`
+        )},
+        if (!is.null(self$`amount`)) {
+        sprintf(
+        '"amount":
+          "%s"
+                ',
+        self$`amount`
+        )},
+        if (!is.null(self$`fromAccountType`)) {
+        sprintf(
+        '"fromAccountType":
+          "%s"
+                ',
+        self$`fromAccountType`
+        )},
+        if (!is.null(self$`toAccountType`)) {
+        sprintf(
+        '"toAccountType":
+          "%s"
+                ',
+        self$`toAccountType`
+        )},
+        if (!is.null(self$`status`)) {
+        sprintf(
+        '"status":
+          "%s"
+                ',
+        self$`status`
+        )},
+        if (!is.null(self$`createTimeStamp`)) {
+        sprintf(
+        '"createTimeStamp":
+          %d
+                ',
+        self$`createTimeStamp`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -63,6 +231,14 @@ InlineResponse20068 <- R6::R6Class(
     fromJSONString = function(InlineResponse20068Json) {
       InlineResponse20068Object <- jsonlite::fromJSON(InlineResponse20068Json)
       self$`tranId` <- InlineResponse20068Object$`tranId`
+      self$`fromEmail` <- InlineResponse20068Object$`fromEmail`
+      self$`toEmail` <- InlineResponse20068Object$`toEmail`
+      self$`asset` <- InlineResponse20068Object$`asset`
+      self$`amount` <- InlineResponse20068Object$`amount`
+      self$`fromAccountType` <- InlineResponse20068Object$`fromAccountType`
+      self$`toAccountType` <- InlineResponse20068Object$`toAccountType`
+      self$`status` <- InlineResponse20068Object$`status`
+      self$`createTimeStamp` <- InlineResponse20068Object$`createTimeStamp`
       self
     }
   )

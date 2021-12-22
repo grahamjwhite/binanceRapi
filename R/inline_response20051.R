@@ -13,7 +13,19 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field balances  list( \link{InlineResponse20051Balances} ) 
+#' @field from  character 
+#'
+#' @field to  character 
+#'
+#' @field asset  character 
+#'
+#' @field qty  character 
+#'
+#' @field status  character 
+#'
+#' @field tranId  integer 
+#'
+#' @field time  integer 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -21,41 +33,154 @@
 InlineResponse20051 <- R6::R6Class(
   'InlineResponse20051',
   public = list(
-    `balances` = NULL,
+    `from` = NULL,
+    `to` = NULL,
+    `asset` = NULL,
+    `qty` = NULL,
+    `status` = NULL,
+    `tranId` = NULL,
+    `time` = NULL,
     initialize = function(
-        `balances`, ...
+        `from`, `to`, `asset`, `qty`, `status`, `tranId`, `time`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`balances`)) {
-        stopifnot(is.vector(`balances`), length(`balances`) != 0)
-        sapply(`balances`, function(x) stopifnot(R6::is.R6(x)))
-        self$`balances` <- `balances`
+      if (!missing(`from`)) {
+        stopifnot(is.character(`from`), length(`from`) == 1)
+        self$`from` <- `from`
+      }
+      if (!missing(`to`)) {
+        stopifnot(is.character(`to`), length(`to`) == 1)
+        self$`to` <- `to`
+      }
+      if (!missing(`asset`)) {
+        stopifnot(is.character(`asset`), length(`asset`) == 1)
+        self$`asset` <- `asset`
+      }
+      if (!missing(`qty`)) {
+        stopifnot(is.character(`qty`), length(`qty`) == 1)
+        self$`qty` <- `qty`
+      }
+      if (!missing(`status`)) {
+        stopifnot(is.character(`status`), length(`status`) == 1)
+        self$`status` <- `status`
+      }
+      if (!missing(`tranId`)) {
+        stopifnot(is.numeric(`tranId`), length(`tranId`) == 1)
+        self$`tranId` <- `tranId`
+      }
+      if (!missing(`time`)) {
+        stopifnot(is.numeric(`time`), length(`time`) == 1)
+        self$`time` <- `time`
       }
     },
     toJSON = function() {
       InlineResponse20051Object <- list()
-      if (!is.null(self$`balances`)) {
-        InlineResponse20051Object[['balances']] <-
-          lapply(self$`balances`, function(x) x$toJSON())
+      if (!is.null(self$`from`)) {
+        InlineResponse20051Object[['from']] <-
+          self$`from`
+      }
+      if (!is.null(self$`to`)) {
+        InlineResponse20051Object[['to']] <-
+          self$`to`
+      }
+      if (!is.null(self$`asset`)) {
+        InlineResponse20051Object[['asset']] <-
+          self$`asset`
+      }
+      if (!is.null(self$`qty`)) {
+        InlineResponse20051Object[['qty']] <-
+          self$`qty`
+      }
+      if (!is.null(self$`status`)) {
+        InlineResponse20051Object[['status']] <-
+          self$`status`
+      }
+      if (!is.null(self$`tranId`)) {
+        InlineResponse20051Object[['tranId']] <-
+          self$`tranId`
+      }
+      if (!is.null(self$`time`)) {
+        InlineResponse20051Object[['time']] <-
+          self$`time`
       }
 
       InlineResponse20051Object
     },
     fromJSON = function(InlineResponse20051Json) {
       InlineResponse20051Object <- jsonlite::fromJSON(InlineResponse20051Json)
-      if (!is.null(InlineResponse20051Object$`balances`)) {
-        self$`balances` <- ApiClient$new()$deserializeObj(InlineResponse20051Object$`balances`, "array[InlineResponse20051Balances]", loadNamespace("binanceRapi"))
+      if (!is.null(InlineResponse20051Object$`from`)) {
+        self$`from` <- InlineResponse20051Object$`from`
+      }
+      if (!is.null(InlineResponse20051Object$`to`)) {
+        self$`to` <- InlineResponse20051Object$`to`
+      }
+      if (!is.null(InlineResponse20051Object$`asset`)) {
+        self$`asset` <- InlineResponse20051Object$`asset`
+      }
+      if (!is.null(InlineResponse20051Object$`qty`)) {
+        self$`qty` <- InlineResponse20051Object$`qty`
+      }
+      if (!is.null(InlineResponse20051Object$`status`)) {
+        self$`status` <- InlineResponse20051Object$`status`
+      }
+      if (!is.null(InlineResponse20051Object$`tranId`)) {
+        self$`tranId` <- InlineResponse20051Object$`tranId`
+      }
+      if (!is.null(InlineResponse20051Object$`time`)) {
+        self$`time` <- InlineResponse20051Object$`time`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`balances`)) {
+        if (!is.null(self$`from`)) {
         sprintf(
-        '"balances":
-        [%s]
-',
-        paste(sapply(self$`balances`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
+        '"from":
+          "%s"
+                ',
+        self$`from`
+        )},
+        if (!is.null(self$`to`)) {
+        sprintf(
+        '"to":
+          "%s"
+                ',
+        self$`to`
+        )},
+        if (!is.null(self$`asset`)) {
+        sprintf(
+        '"asset":
+          "%s"
+                ',
+        self$`asset`
+        )},
+        if (!is.null(self$`qty`)) {
+        sprintf(
+        '"qty":
+          "%s"
+                ',
+        self$`qty`
+        )},
+        if (!is.null(self$`status`)) {
+        sprintf(
+        '"status":
+          "%s"
+                ',
+        self$`status`
+        )},
+        if (!is.null(self$`tranId`)) {
+        sprintf(
+        '"tranId":
+          %d
+                ',
+        self$`tranId`
+        )},
+        if (!is.null(self$`time`)) {
+        sprintf(
+        '"time":
+          %d
+                ',
+        self$`time`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -63,7 +188,13 @@ InlineResponse20051 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20051Json) {
       InlineResponse20051Object <- jsonlite::fromJSON(InlineResponse20051Json)
-      self$`balances` <- ApiClient$new()$deserializeObj(InlineResponse20051Object$`balances`, "array[InlineResponse20051Balances]", loadNamespace("binanceRapi"))
+      self$`from` <- InlineResponse20051Object$`from`
+      self$`to` <- InlineResponse20051Object$`to`
+      self$`asset` <- InlineResponse20051Object$`asset`
+      self$`qty` <- InlineResponse20051Object$`qty`
+      self$`status` <- InlineResponse20051Object$`status`
+      self$`tranId` <- InlineResponse20051Object$`tranId`
+      self$`time` <- InlineResponse20051Object$`time`
       self
     }
   )

@@ -13,19 +13,25 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field email  character 
+#' @field amount  character 
 #'
-#' @field marginLevel  character 
+#' @field coin  character 
 #'
-#' @field totalAssetOfBtc  character 
+#' @field network  character 
 #'
-#' @field totalLiabilityOfBtc  character 
+#' @field status  integer 
 #'
-#' @field totalNetAssetOfBtc  character 
+#' @field address  character 
 #'
-#' @field marginTradeCoeffVo  \link{InlineResponse20057MarginTradeCoeffVo} 
+#' @field addressTag  character 
 #'
-#' @field marginUserAssetVoList  list( \link{InlineResponse20019UserAssets} ) 
+#' @field txId  character 
+#'
+#' @field insertTime  integer 
+#'
+#' @field transferType  integer 
+#'
+#' @field confirmTimes  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -33,157 +39,211 @@
 InlineResponse20057 <- R6::R6Class(
   'InlineResponse20057',
   public = list(
-    `email` = NULL,
-    `marginLevel` = NULL,
-    `totalAssetOfBtc` = NULL,
-    `totalLiabilityOfBtc` = NULL,
-    `totalNetAssetOfBtc` = NULL,
-    `marginTradeCoeffVo` = NULL,
-    `marginUserAssetVoList` = NULL,
+    `amount` = NULL,
+    `coin` = NULL,
+    `network` = NULL,
+    `status` = NULL,
+    `address` = NULL,
+    `addressTag` = NULL,
+    `txId` = NULL,
+    `insertTime` = NULL,
+    `transferType` = NULL,
+    `confirmTimes` = NULL,
     initialize = function(
-        `email`, `marginLevel`, `totalAssetOfBtc`, `totalLiabilityOfBtc`, `totalNetAssetOfBtc`, `marginTradeCoeffVo`, `marginUserAssetVoList`, ...
+        `amount`, `coin`, `network`, `status`, `address`, `addressTag`, `txId`, `insertTime`, `transferType`, `confirmTimes`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`email`)) {
-        stopifnot(is.character(`email`), length(`email`) == 1)
-        self$`email` <- `email`
+      if (!missing(`amount`)) {
+        stopifnot(is.character(`amount`), length(`amount`) == 1)
+        self$`amount` <- `amount`
       }
-      if (!missing(`marginLevel`)) {
-        stopifnot(is.character(`marginLevel`), length(`marginLevel`) == 1)
-        self$`marginLevel` <- `marginLevel`
+      if (!missing(`coin`)) {
+        stopifnot(is.character(`coin`), length(`coin`) == 1)
+        self$`coin` <- `coin`
       }
-      if (!missing(`totalAssetOfBtc`)) {
-        stopifnot(is.character(`totalAssetOfBtc`), length(`totalAssetOfBtc`) == 1)
-        self$`totalAssetOfBtc` <- `totalAssetOfBtc`
+      if (!missing(`network`)) {
+        stopifnot(is.character(`network`), length(`network`) == 1)
+        self$`network` <- `network`
       }
-      if (!missing(`totalLiabilityOfBtc`)) {
-        stopifnot(is.character(`totalLiabilityOfBtc`), length(`totalLiabilityOfBtc`) == 1)
-        self$`totalLiabilityOfBtc` <- `totalLiabilityOfBtc`
+      if (!missing(`status`)) {
+        stopifnot(is.numeric(`status`), length(`status`) == 1)
+        self$`status` <- `status`
       }
-      if (!missing(`totalNetAssetOfBtc`)) {
-        stopifnot(is.character(`totalNetAssetOfBtc`), length(`totalNetAssetOfBtc`) == 1)
-        self$`totalNetAssetOfBtc` <- `totalNetAssetOfBtc`
+      if (!missing(`address`)) {
+        stopifnot(is.character(`address`), length(`address`) == 1)
+        self$`address` <- `address`
       }
-      if (!missing(`marginTradeCoeffVo`)) {
-        stopifnot(R6::is.R6(`marginTradeCoeffVo`))
-        self$`marginTradeCoeffVo` <- `marginTradeCoeffVo`
+      if (!missing(`addressTag`)) {
+        stopifnot(is.character(`addressTag`), length(`addressTag`) == 1)
+        self$`addressTag` <- `addressTag`
       }
-      if (!missing(`marginUserAssetVoList`)) {
-        stopifnot(is.vector(`marginUserAssetVoList`), length(`marginUserAssetVoList`) != 0)
-        sapply(`marginUserAssetVoList`, function(x) stopifnot(R6::is.R6(x)))
-        self$`marginUserAssetVoList` <- `marginUserAssetVoList`
+      if (!missing(`txId`)) {
+        stopifnot(is.character(`txId`), length(`txId`) == 1)
+        self$`txId` <- `txId`
+      }
+      if (!missing(`insertTime`)) {
+        stopifnot(is.numeric(`insertTime`), length(`insertTime`) == 1)
+        self$`insertTime` <- `insertTime`
+      }
+      if (!missing(`transferType`)) {
+        stopifnot(is.numeric(`transferType`), length(`transferType`) == 1)
+        self$`transferType` <- `transferType`
+      }
+      if (!missing(`confirmTimes`)) {
+        stopifnot(is.character(`confirmTimes`), length(`confirmTimes`) == 1)
+        self$`confirmTimes` <- `confirmTimes`
       }
     },
     toJSON = function() {
       InlineResponse20057Object <- list()
-      if (!is.null(self$`email`)) {
-        InlineResponse20057Object[['email']] <-
-          self$`email`
+      if (!is.null(self$`amount`)) {
+        InlineResponse20057Object[['amount']] <-
+          self$`amount`
       }
-      if (!is.null(self$`marginLevel`)) {
-        InlineResponse20057Object[['marginLevel']] <-
-          self$`marginLevel`
+      if (!is.null(self$`coin`)) {
+        InlineResponse20057Object[['coin']] <-
+          self$`coin`
       }
-      if (!is.null(self$`totalAssetOfBtc`)) {
-        InlineResponse20057Object[['totalAssetOfBtc']] <-
-          self$`totalAssetOfBtc`
+      if (!is.null(self$`network`)) {
+        InlineResponse20057Object[['network']] <-
+          self$`network`
       }
-      if (!is.null(self$`totalLiabilityOfBtc`)) {
-        InlineResponse20057Object[['totalLiabilityOfBtc']] <-
-          self$`totalLiabilityOfBtc`
+      if (!is.null(self$`status`)) {
+        InlineResponse20057Object[['status']] <-
+          self$`status`
       }
-      if (!is.null(self$`totalNetAssetOfBtc`)) {
-        InlineResponse20057Object[['totalNetAssetOfBtc']] <-
-          self$`totalNetAssetOfBtc`
+      if (!is.null(self$`address`)) {
+        InlineResponse20057Object[['address']] <-
+          self$`address`
       }
-      if (!is.null(self$`marginTradeCoeffVo`)) {
-        InlineResponse20057Object[['marginTradeCoeffVo']] <-
-          self$`marginTradeCoeffVo`$toJSON()
+      if (!is.null(self$`addressTag`)) {
+        InlineResponse20057Object[['addressTag']] <-
+          self$`addressTag`
       }
-      if (!is.null(self$`marginUserAssetVoList`)) {
-        InlineResponse20057Object[['marginUserAssetVoList']] <-
-          lapply(self$`marginUserAssetVoList`, function(x) x$toJSON())
+      if (!is.null(self$`txId`)) {
+        InlineResponse20057Object[['txId']] <-
+          self$`txId`
+      }
+      if (!is.null(self$`insertTime`)) {
+        InlineResponse20057Object[['insertTime']] <-
+          self$`insertTime`
+      }
+      if (!is.null(self$`transferType`)) {
+        InlineResponse20057Object[['transferType']] <-
+          self$`transferType`
+      }
+      if (!is.null(self$`confirmTimes`)) {
+        InlineResponse20057Object[['confirmTimes']] <-
+          self$`confirmTimes`
       }
 
       InlineResponse20057Object
     },
     fromJSON = function(InlineResponse20057Json) {
       InlineResponse20057Object <- jsonlite::fromJSON(InlineResponse20057Json)
-      if (!is.null(InlineResponse20057Object$`email`)) {
-        self$`email` <- InlineResponse20057Object$`email`
+      if (!is.null(InlineResponse20057Object$`amount`)) {
+        self$`amount` <- InlineResponse20057Object$`amount`
       }
-      if (!is.null(InlineResponse20057Object$`marginLevel`)) {
-        self$`marginLevel` <- InlineResponse20057Object$`marginLevel`
+      if (!is.null(InlineResponse20057Object$`coin`)) {
+        self$`coin` <- InlineResponse20057Object$`coin`
       }
-      if (!is.null(InlineResponse20057Object$`totalAssetOfBtc`)) {
-        self$`totalAssetOfBtc` <- InlineResponse20057Object$`totalAssetOfBtc`
+      if (!is.null(InlineResponse20057Object$`network`)) {
+        self$`network` <- InlineResponse20057Object$`network`
       }
-      if (!is.null(InlineResponse20057Object$`totalLiabilityOfBtc`)) {
-        self$`totalLiabilityOfBtc` <- InlineResponse20057Object$`totalLiabilityOfBtc`
+      if (!is.null(InlineResponse20057Object$`status`)) {
+        self$`status` <- InlineResponse20057Object$`status`
       }
-      if (!is.null(InlineResponse20057Object$`totalNetAssetOfBtc`)) {
-        self$`totalNetAssetOfBtc` <- InlineResponse20057Object$`totalNetAssetOfBtc`
+      if (!is.null(InlineResponse20057Object$`address`)) {
+        self$`address` <- InlineResponse20057Object$`address`
       }
-      if (!is.null(InlineResponse20057Object$`marginTradeCoeffVo`)) {
-        marginTradeCoeffVoObject <- InlineResponse20057MarginTradeCoeffVo$new()
-        marginTradeCoeffVoObject$fromJSON(jsonlite::toJSON(InlineResponse20057Object$marginTradeCoeffVo, auto_unbox = TRUE, digits = NA))
-        self$`marginTradeCoeffVo` <- marginTradeCoeffVoObject
+      if (!is.null(InlineResponse20057Object$`addressTag`)) {
+        self$`addressTag` <- InlineResponse20057Object$`addressTag`
       }
-      if (!is.null(InlineResponse20057Object$`marginUserAssetVoList`)) {
-        self$`marginUserAssetVoList` <- ApiClient$new()$deserializeObj(InlineResponse20057Object$`marginUserAssetVoList`, "array[InlineResponse20019UserAssets]", loadNamespace("binanceRapi"))
+      if (!is.null(InlineResponse20057Object$`txId`)) {
+        self$`txId` <- InlineResponse20057Object$`txId`
+      }
+      if (!is.null(InlineResponse20057Object$`insertTime`)) {
+        self$`insertTime` <- InlineResponse20057Object$`insertTime`
+      }
+      if (!is.null(InlineResponse20057Object$`transferType`)) {
+        self$`transferType` <- InlineResponse20057Object$`transferType`
+      }
+      if (!is.null(InlineResponse20057Object$`confirmTimes`)) {
+        self$`confirmTimes` <- InlineResponse20057Object$`confirmTimes`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`email`)) {
+        if (!is.null(self$`amount`)) {
         sprintf(
-        '"email":
+        '"amount":
           "%s"
                 ',
-        self$`email`
+        self$`amount`
         )},
-        if (!is.null(self$`marginLevel`)) {
+        if (!is.null(self$`coin`)) {
         sprintf(
-        '"marginLevel":
+        '"coin":
           "%s"
                 ',
-        self$`marginLevel`
+        self$`coin`
         )},
-        if (!is.null(self$`totalAssetOfBtc`)) {
+        if (!is.null(self$`network`)) {
         sprintf(
-        '"totalAssetOfBtc":
+        '"network":
           "%s"
                 ',
-        self$`totalAssetOfBtc`
+        self$`network`
         )},
-        if (!is.null(self$`totalLiabilityOfBtc`)) {
+        if (!is.null(self$`status`)) {
         sprintf(
-        '"totalLiabilityOfBtc":
+        '"status":
+          %d
+                ',
+        self$`status`
+        )},
+        if (!is.null(self$`address`)) {
+        sprintf(
+        '"address":
           "%s"
                 ',
-        self$`totalLiabilityOfBtc`
+        self$`address`
         )},
-        if (!is.null(self$`totalNetAssetOfBtc`)) {
+        if (!is.null(self$`addressTag`)) {
         sprintf(
-        '"totalNetAssetOfBtc":
+        '"addressTag":
           "%s"
                 ',
-        self$`totalNetAssetOfBtc`
+        self$`addressTag`
         )},
-        if (!is.null(self$`marginTradeCoeffVo`)) {
+        if (!is.null(self$`txId`)) {
         sprintf(
-        '"marginTradeCoeffVo":
-        %s
-        ',
-        jsonlite::toJSON(self$`marginTradeCoeffVo`$toJSON(), auto_unbox=TRUE, digits = NA)
+        '"txId":
+          "%s"
+                ',
+        self$`txId`
         )},
-        if (!is.null(self$`marginUserAssetVoList`)) {
+        if (!is.null(self$`insertTime`)) {
         sprintf(
-        '"marginUserAssetVoList":
-        [%s]
-',
-        paste(sapply(self$`marginUserAssetVoList`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
+        '"insertTime":
+          %d
+                ',
+        self$`insertTime`
+        )},
+        if (!is.null(self$`transferType`)) {
+        sprintf(
+        '"transferType":
+          %d
+                ',
+        self$`transferType`
+        )},
+        if (!is.null(self$`confirmTimes`)) {
+        sprintf(
+        '"confirmTimes":
+          "%s"
+                ',
+        self$`confirmTimes`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -191,13 +251,16 @@ InlineResponse20057 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20057Json) {
       InlineResponse20057Object <- jsonlite::fromJSON(InlineResponse20057Json)
-      self$`email` <- InlineResponse20057Object$`email`
-      self$`marginLevel` <- InlineResponse20057Object$`marginLevel`
-      self$`totalAssetOfBtc` <- InlineResponse20057Object$`totalAssetOfBtc`
-      self$`totalLiabilityOfBtc` <- InlineResponse20057Object$`totalLiabilityOfBtc`
-      self$`totalNetAssetOfBtc` <- InlineResponse20057Object$`totalNetAssetOfBtc`
-      self$`marginTradeCoeffVo` <- InlineResponse20057MarginTradeCoeffVo$new()$fromJSON(jsonlite::toJSON(InlineResponse20057Object$marginTradeCoeffVo, auto_unbox = TRUE, digits = NA))
-      self$`marginUserAssetVoList` <- ApiClient$new()$deserializeObj(InlineResponse20057Object$`marginUserAssetVoList`, "array[InlineResponse20019UserAssets]", loadNamespace("binanceRapi"))
+      self$`amount` <- InlineResponse20057Object$`amount`
+      self$`coin` <- InlineResponse20057Object$`coin`
+      self$`network` <- InlineResponse20057Object$`network`
+      self$`status` <- InlineResponse20057Object$`status`
+      self$`address` <- InlineResponse20057Object$`address`
+      self$`addressTag` <- InlineResponse20057Object$`addressTag`
+      self$`txId` <- InlineResponse20057Object$`txId`
+      self$`insertTime` <- InlineResponse20057Object$`insertTime`
+      self$`transferType` <- InlineResponse20057Object$`transferType`
+      self$`confirmTimes` <- InlineResponse20057Object$`confirmTimes`
       self
     }
   )

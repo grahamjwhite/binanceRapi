@@ -13,7 +13,9 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field CTR  \link{InlineResponse20040CTR} 
+#' @field total  integer 
+#'
+#' @field userAssetDribblets  list( \link{InlineResponse20040UserAssetDribblets} ) 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -21,42 +23,60 @@
 InlineResponse20040 <- R6::R6Class(
   'InlineResponse20040',
   public = list(
-    `CTR` = NULL,
+    `total` = NULL,
+    `userAssetDribblets` = NULL,
     initialize = function(
-        `CTR`, ...
+        `total`, `userAssetDribblets`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`CTR`)) {
-        stopifnot(R6::is.R6(`CTR`))
-        self$`CTR` <- `CTR`
+      if (!missing(`total`)) {
+        stopifnot(is.numeric(`total`), length(`total`) == 1)
+        self$`total` <- `total`
+      }
+      if (!missing(`userAssetDribblets`)) {
+        stopifnot(is.vector(`userAssetDribblets`), length(`userAssetDribblets`) != 0)
+        sapply(`userAssetDribblets`, function(x) stopifnot(R6::is.R6(x)))
+        self$`userAssetDribblets` <- `userAssetDribblets`
       }
     },
     toJSON = function() {
       InlineResponse20040Object <- list()
-      if (!is.null(self$`CTR`)) {
-        InlineResponse20040Object[['CTR']] <-
-          self$`CTR`$toJSON()
+      if (!is.null(self$`total`)) {
+        InlineResponse20040Object[['total']] <-
+          self$`total`
+      }
+      if (!is.null(self$`userAssetDribblets`)) {
+        InlineResponse20040Object[['userAssetDribblets']] <-
+          lapply(self$`userAssetDribblets`, function(x) x$toJSON())
       }
 
       InlineResponse20040Object
     },
     fromJSON = function(InlineResponse20040Json) {
       InlineResponse20040Object <- jsonlite::fromJSON(InlineResponse20040Json)
-      if (!is.null(InlineResponse20040Object$`CTR`)) {
-        CTRObject <- InlineResponse20040CTR$new()
-        CTRObject$fromJSON(jsonlite::toJSON(InlineResponse20040Object$CTR, auto_unbox = TRUE, digits = NA))
-        self$`CTR` <- CTRObject
+      if (!is.null(InlineResponse20040Object$`total`)) {
+        self$`total` <- InlineResponse20040Object$`total`
+      }
+      if (!is.null(InlineResponse20040Object$`userAssetDribblets`)) {
+        self$`userAssetDribblets` <- ApiClient$new()$deserializeObj(InlineResponse20040Object$`userAssetDribblets`, "array[InlineResponse20040UserAssetDribblets]", loadNamespace("binanceRapi"))
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`CTR`)) {
+        if (!is.null(self$`total`)) {
         sprintf(
-        '"CTR":
-        %s
-        ',
-        jsonlite::toJSON(self$`CTR`$toJSON(), auto_unbox=TRUE, digits = NA)
+        '"total":
+          %d
+                ',
+        self$`total`
+        )},
+        if (!is.null(self$`userAssetDribblets`)) {
+        sprintf(
+        '"userAssetDribblets":
+        [%s]
+',
+        paste(sapply(self$`userAssetDribblets`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -64,7 +84,8 @@ InlineResponse20040 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20040Json) {
       InlineResponse20040Object <- jsonlite::fromJSON(InlineResponse20040Json)
-      self$`CTR` <- InlineResponse20040CTR$new()$fromJSON(jsonlite::toJSON(InlineResponse20040Object$CTR, auto_unbox = TRUE, digits = NA))
+      self$`total` <- InlineResponse20040Object$`total`
+      self$`userAssetDribblets` <- ApiClient$new()$deserializeObj(InlineResponse20040Object$`userAssetDribblets`, "array[InlineResponse20040UserAssetDribblets]", loadNamespace("binanceRapi"))
       self
     }
   )

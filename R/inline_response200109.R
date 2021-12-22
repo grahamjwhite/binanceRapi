@@ -13,7 +13,11 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field swapId  integer 
+#' @field tokenName  character 
+#'
+#' @field userDailyTotalPurchaseLimit  character 
+#'
+#' @field userDailyTotalRedeemLimit  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -21,40 +25,78 @@
 InlineResponse200109 <- R6::R6Class(
   'InlineResponse200109',
   public = list(
-    `swapId` = NULL,
+    `tokenName` = NULL,
+    `userDailyTotalPurchaseLimit` = NULL,
+    `userDailyTotalRedeemLimit` = NULL,
     initialize = function(
-        `swapId`, ...
+        `tokenName`, `userDailyTotalPurchaseLimit`, `userDailyTotalRedeemLimit`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`swapId`)) {
-        stopifnot(is.numeric(`swapId`), length(`swapId`) == 1)
-        self$`swapId` <- `swapId`
+      if (!missing(`tokenName`)) {
+        stopifnot(is.character(`tokenName`), length(`tokenName`) == 1)
+        self$`tokenName` <- `tokenName`
+      }
+      if (!missing(`userDailyTotalPurchaseLimit`)) {
+        stopifnot(is.character(`userDailyTotalPurchaseLimit`), length(`userDailyTotalPurchaseLimit`) == 1)
+        self$`userDailyTotalPurchaseLimit` <- `userDailyTotalPurchaseLimit`
+      }
+      if (!missing(`userDailyTotalRedeemLimit`)) {
+        stopifnot(is.character(`userDailyTotalRedeemLimit`), length(`userDailyTotalRedeemLimit`) == 1)
+        self$`userDailyTotalRedeemLimit` <- `userDailyTotalRedeemLimit`
       }
     },
     toJSON = function() {
       InlineResponse200109Object <- list()
-      if (!is.null(self$`swapId`)) {
-        InlineResponse200109Object[['swapId']] <-
-          self$`swapId`
+      if (!is.null(self$`tokenName`)) {
+        InlineResponse200109Object[['tokenName']] <-
+          self$`tokenName`
+      }
+      if (!is.null(self$`userDailyTotalPurchaseLimit`)) {
+        InlineResponse200109Object[['userDailyTotalPurchaseLimit']] <-
+          self$`userDailyTotalPurchaseLimit`
+      }
+      if (!is.null(self$`userDailyTotalRedeemLimit`)) {
+        InlineResponse200109Object[['userDailyTotalRedeemLimit']] <-
+          self$`userDailyTotalRedeemLimit`
       }
 
       InlineResponse200109Object
     },
     fromJSON = function(InlineResponse200109Json) {
       InlineResponse200109Object <- jsonlite::fromJSON(InlineResponse200109Json)
-      if (!is.null(InlineResponse200109Object$`swapId`)) {
-        self$`swapId` <- InlineResponse200109Object$`swapId`
+      if (!is.null(InlineResponse200109Object$`tokenName`)) {
+        self$`tokenName` <- InlineResponse200109Object$`tokenName`
+      }
+      if (!is.null(InlineResponse200109Object$`userDailyTotalPurchaseLimit`)) {
+        self$`userDailyTotalPurchaseLimit` <- InlineResponse200109Object$`userDailyTotalPurchaseLimit`
+      }
+      if (!is.null(InlineResponse200109Object$`userDailyTotalRedeemLimit`)) {
+        self$`userDailyTotalRedeemLimit` <- InlineResponse200109Object$`userDailyTotalRedeemLimit`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`swapId`)) {
+        if (!is.null(self$`tokenName`)) {
         sprintf(
-        '"swapId":
-          %d
+        '"tokenName":
+          "%s"
                 ',
-        self$`swapId`
+        self$`tokenName`
+        )},
+        if (!is.null(self$`userDailyTotalPurchaseLimit`)) {
+        sprintf(
+        '"userDailyTotalPurchaseLimit":
+          "%s"
+                ',
+        self$`userDailyTotalPurchaseLimit`
+        )},
+        if (!is.null(self$`userDailyTotalRedeemLimit`)) {
+        sprintf(
+        '"userDailyTotalRedeemLimit":
+          "%s"
+                ',
+        self$`userDailyTotalRedeemLimit`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -62,7 +104,9 @@ InlineResponse200109 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse200109Json) {
       InlineResponse200109Object <- jsonlite::fromJSON(InlineResponse200109Json)
-      self$`swapId` <- InlineResponse200109Object$`swapId`
+      self$`tokenName` <- InlineResponse200109Object$`tokenName`
+      self$`userDailyTotalPurchaseLimit` <- InlineResponse200109Object$`userDailyTotalPurchaseLimit`
+      self$`userDailyTotalRedeemLimit` <- InlineResponse200109Object$`userDailyTotalRedeemLimit`
       self
     }
   )

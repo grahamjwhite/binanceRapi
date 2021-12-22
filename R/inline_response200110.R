@@ -15,13 +15,9 @@
 #'
 #' @field poolId  integer 
 #'
-#' @field poolNmae  character 
+#' @field poolName  character 
 #'
-#' @field updateTime  integer 
-#'
-#' @field liquidity  \link{SapiV1BswapPoolConfigureLiquidity} 
-#'
-#' @field assetConfigure  \link{SapiV1BswapPoolConfigureAssetConfigure} 
+#' @field assets  list( character ) 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -30,33 +26,24 @@ InlineResponse200110 <- R6::R6Class(
   'InlineResponse200110',
   public = list(
     `poolId` = NULL,
-    `poolNmae` = NULL,
-    `updateTime` = NULL,
-    `liquidity` = NULL,
-    `assetConfigure` = NULL,
+    `poolName` = NULL,
+    `assets` = NULL,
     initialize = function(
-        `poolId`, `poolNmae`, `updateTime`, `liquidity`, `assetConfigure`, ...
+        `poolId`, `poolName`, `assets`, ...
     ) {
       local.optional.var <- list(...)
       if (!missing(`poolId`)) {
         stopifnot(is.numeric(`poolId`), length(`poolId`) == 1)
         self$`poolId` <- `poolId`
       }
-      if (!missing(`poolNmae`)) {
-        stopifnot(is.character(`poolNmae`), length(`poolNmae`) == 1)
-        self$`poolNmae` <- `poolNmae`
+      if (!missing(`poolName`)) {
+        stopifnot(is.character(`poolName`), length(`poolName`) == 1)
+        self$`poolName` <- `poolName`
       }
-      if (!missing(`updateTime`)) {
-        stopifnot(is.numeric(`updateTime`), length(`updateTime`) == 1)
-        self$`updateTime` <- `updateTime`
-      }
-      if (!missing(`liquidity`)) {
-        stopifnot(R6::is.R6(`liquidity`))
-        self$`liquidity` <- `liquidity`
-      }
-      if (!missing(`assetConfigure`)) {
-        stopifnot(R6::is.R6(`assetConfigure`))
-        self$`assetConfigure` <- `assetConfigure`
+      if (!missing(`assets`)) {
+        stopifnot(is.vector(`assets`), length(`assets`) != 0)
+        sapply(`assets`, function(x) stopifnot(is.character(x)))
+        self$`assets` <- `assets`
       }
     },
     toJSON = function() {
@@ -65,21 +52,13 @@ InlineResponse200110 <- R6::R6Class(
         InlineResponse200110Object[['poolId']] <-
           self$`poolId`
       }
-      if (!is.null(self$`poolNmae`)) {
-        InlineResponse200110Object[['poolNmae']] <-
-          self$`poolNmae`
+      if (!is.null(self$`poolName`)) {
+        InlineResponse200110Object[['poolName']] <-
+          self$`poolName`
       }
-      if (!is.null(self$`updateTime`)) {
-        InlineResponse200110Object[['updateTime']] <-
-          self$`updateTime`
-      }
-      if (!is.null(self$`liquidity`)) {
-        InlineResponse200110Object[['liquidity']] <-
-          self$`liquidity`$toJSON()
-      }
-      if (!is.null(self$`assetConfigure`)) {
-        InlineResponse200110Object[['assetConfigure']] <-
-          self$`assetConfigure`$toJSON()
+      if (!is.null(self$`assets`)) {
+        InlineResponse200110Object[['assets']] <-
+          self$`assets`
       }
 
       InlineResponse200110Object
@@ -89,21 +68,11 @@ InlineResponse200110 <- R6::R6Class(
       if (!is.null(InlineResponse200110Object$`poolId`)) {
         self$`poolId` <- InlineResponse200110Object$`poolId`
       }
-      if (!is.null(InlineResponse200110Object$`poolNmae`)) {
-        self$`poolNmae` <- InlineResponse200110Object$`poolNmae`
+      if (!is.null(InlineResponse200110Object$`poolName`)) {
+        self$`poolName` <- InlineResponse200110Object$`poolName`
       }
-      if (!is.null(InlineResponse200110Object$`updateTime`)) {
-        self$`updateTime` <- InlineResponse200110Object$`updateTime`
-      }
-      if (!is.null(InlineResponse200110Object$`liquidity`)) {
-        liquidityObject <- SapiV1BswapPoolConfigureLiquidity$new()
-        liquidityObject$fromJSON(jsonlite::toJSON(InlineResponse200110Object$liquidity, auto_unbox = TRUE, digits = NA))
-        self$`liquidity` <- liquidityObject
-      }
-      if (!is.null(InlineResponse200110Object$`assetConfigure`)) {
-        assetConfigureObject <- SapiV1BswapPoolConfigureAssetConfigure$new()
-        assetConfigureObject$fromJSON(jsonlite::toJSON(InlineResponse200110Object$assetConfigure, auto_unbox = TRUE, digits = NA))
-        self$`assetConfigure` <- assetConfigureObject
+      if (!is.null(InlineResponse200110Object$`assets`)) {
+        self$`assets` <- ApiClient$new()$deserializeObj(InlineResponse200110Object$`assets`, "array[character]", loadNamespace("binanceRapi"))
       }
       self
     },
@@ -116,33 +85,19 @@ InlineResponse200110 <- R6::R6Class(
                 ',
         self$`poolId`
         )},
-        if (!is.null(self$`poolNmae`)) {
+        if (!is.null(self$`poolName`)) {
         sprintf(
-        '"poolNmae":
+        '"poolName":
           "%s"
                 ',
-        self$`poolNmae`
+        self$`poolName`
         )},
-        if (!is.null(self$`updateTime`)) {
+        if (!is.null(self$`assets`)) {
         sprintf(
-        '"updateTime":
-          %d
-                ',
-        self$`updateTime`
-        )},
-        if (!is.null(self$`liquidity`)) {
-        sprintf(
-        '"liquidity":
-        %s
+        '"assets":
+           [%s]
         ',
-        jsonlite::toJSON(self$`liquidity`$toJSON(), auto_unbox=TRUE, digits = NA)
-        )},
-        if (!is.null(self$`assetConfigure`)) {
-        sprintf(
-        '"assetConfigure":
-        %s
-        ',
-        jsonlite::toJSON(self$`assetConfigure`$toJSON(), auto_unbox=TRUE, digits = NA)
+        paste(unlist(lapply(self$`assets`, function(x) paste0('"', x, '"'))), collapse=",")
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -151,10 +106,8 @@ InlineResponse200110 <- R6::R6Class(
     fromJSONString = function(InlineResponse200110Json) {
       InlineResponse200110Object <- jsonlite::fromJSON(InlineResponse200110Json)
       self$`poolId` <- InlineResponse200110Object$`poolId`
-      self$`poolNmae` <- InlineResponse200110Object$`poolNmae`
-      self$`updateTime` <- InlineResponse200110Object$`updateTime`
-      self$`liquidity` <- SapiV1BswapPoolConfigureLiquidity$new()$fromJSON(jsonlite::toJSON(InlineResponse200110Object$liquidity, auto_unbox = TRUE, digits = NA))
-      self$`assetConfigure` <- SapiV1BswapPoolConfigureAssetConfigure$new()$fromJSON(jsonlite::toJSON(InlineResponse200110Object$assetConfigure, auto_unbox = TRUE, digits = NA))
+      self$`poolName` <- InlineResponse200110Object$`poolName`
+      self$`assets` <- ApiClient$new()$deserializeObj(InlineResponse200110Object$`assets`, "array[character]", loadNamespace("binanceRapi"))
       self
     }
   )

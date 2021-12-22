@@ -13,9 +13,13 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field email  character 
+#' @field address  character 
 #'
-#' @field isMarginEnabled  character 
+#' @field coin  character 
+#'
+#' @field tag  character 
+#'
+#' @field url  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -23,59 +27,97 @@
 InlineResponse20056 <- R6::R6Class(
   'InlineResponse20056',
   public = list(
-    `email` = NULL,
-    `isMarginEnabled` = NULL,
+    `address` = NULL,
+    `coin` = NULL,
+    `tag` = NULL,
+    `url` = NULL,
     initialize = function(
-        `email`, `isMarginEnabled`, ...
+        `address`, `coin`, `tag`, `url`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`email`)) {
-        stopifnot(is.character(`email`), length(`email`) == 1)
-        self$`email` <- `email`
+      if (!missing(`address`)) {
+        stopifnot(is.character(`address`), length(`address`) == 1)
+        self$`address` <- `address`
       }
-      if (!missing(`isMarginEnabled`)) {
-        stopifnot(is.logical(`isMarginEnabled`), length(`isMarginEnabled`) == 1)
-        self$`isMarginEnabled` <- `isMarginEnabled`
+      if (!missing(`coin`)) {
+        stopifnot(is.character(`coin`), length(`coin`) == 1)
+        self$`coin` <- `coin`
+      }
+      if (!missing(`tag`)) {
+        stopifnot(is.character(`tag`), length(`tag`) == 1)
+        self$`tag` <- `tag`
+      }
+      if (!missing(`url`)) {
+        stopifnot(is.character(`url`), length(`url`) == 1)
+        self$`url` <- `url`
       }
     },
     toJSON = function() {
       InlineResponse20056Object <- list()
-      if (!is.null(self$`email`)) {
-        InlineResponse20056Object[['email']] <-
-          self$`email`
+      if (!is.null(self$`address`)) {
+        InlineResponse20056Object[['address']] <-
+          self$`address`
       }
-      if (!is.null(self$`isMarginEnabled`)) {
-        InlineResponse20056Object[['isMarginEnabled']] <-
-          self$`isMarginEnabled`
+      if (!is.null(self$`coin`)) {
+        InlineResponse20056Object[['coin']] <-
+          self$`coin`
+      }
+      if (!is.null(self$`tag`)) {
+        InlineResponse20056Object[['tag']] <-
+          self$`tag`
+      }
+      if (!is.null(self$`url`)) {
+        InlineResponse20056Object[['url']] <-
+          self$`url`
       }
 
       InlineResponse20056Object
     },
     fromJSON = function(InlineResponse20056Json) {
       InlineResponse20056Object <- jsonlite::fromJSON(InlineResponse20056Json)
-      if (!is.null(InlineResponse20056Object$`email`)) {
-        self$`email` <- InlineResponse20056Object$`email`
+      if (!is.null(InlineResponse20056Object$`address`)) {
+        self$`address` <- InlineResponse20056Object$`address`
       }
-      if (!is.null(InlineResponse20056Object$`isMarginEnabled`)) {
-        self$`isMarginEnabled` <- InlineResponse20056Object$`isMarginEnabled`
+      if (!is.null(InlineResponse20056Object$`coin`)) {
+        self$`coin` <- InlineResponse20056Object$`coin`
+      }
+      if (!is.null(InlineResponse20056Object$`tag`)) {
+        self$`tag` <- InlineResponse20056Object$`tag`
+      }
+      if (!is.null(InlineResponse20056Object$`url`)) {
+        self$`url` <- InlineResponse20056Object$`url`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`email`)) {
+        if (!is.null(self$`address`)) {
         sprintf(
-        '"email":
+        '"address":
           "%s"
                 ',
-        self$`email`
+        self$`address`
         )},
-        if (!is.null(self$`isMarginEnabled`)) {
+        if (!is.null(self$`coin`)) {
         sprintf(
-        '"isMarginEnabled":
-          %s
+        '"coin":
+          "%s"
                 ',
-        tolower(self$`isMarginEnabled`)
+        self$`coin`
+        )},
+        if (!is.null(self$`tag`)) {
+        sprintf(
+        '"tag":
+          "%s"
+                ',
+        self$`tag`
+        )},
+        if (!is.null(self$`url`)) {
+        sprintf(
+        '"url":
+          "%s"
+                ',
+        self$`url`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -83,8 +125,10 @@ InlineResponse20056 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20056Json) {
       InlineResponse20056Object <- jsonlite::fromJSON(InlineResponse20056Json)
-      self$`email` <- InlineResponse20056Object$`email`
-      self$`isMarginEnabled` <- InlineResponse20056Object$`isMarginEnabled`
+      self$`address` <- InlineResponse20056Object$`address`
+      self$`coin` <- InlineResponse20056Object$`coin`
+      self$`tag` <- InlineResponse20056Object$`tag`
+      self$`url` <- InlineResponse20056Object$`url`
       self
     }
   )

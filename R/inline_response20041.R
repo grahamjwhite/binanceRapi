@@ -13,11 +13,11 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field symbol  character 
+#' @field totalServiceCharge  character 
 #'
-#' @field makerCommission  character 
+#' @field totalTransfered  character 
 #'
-#' @field takerCommission  character 
+#' @field transferResult  list( \link{InlineResponse20041TransferResult} ) 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -25,78 +25,79 @@
 InlineResponse20041 <- R6::R6Class(
   'InlineResponse20041',
   public = list(
-    `symbol` = NULL,
-    `makerCommission` = NULL,
-    `takerCommission` = NULL,
+    `totalServiceCharge` = NULL,
+    `totalTransfered` = NULL,
+    `transferResult` = NULL,
     initialize = function(
-        `symbol`, `makerCommission`, `takerCommission`, ...
+        `totalServiceCharge`, `totalTransfered`, `transferResult`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`symbol`)) {
-        stopifnot(is.character(`symbol`), length(`symbol`) == 1)
-        self$`symbol` <- `symbol`
+      if (!missing(`totalServiceCharge`)) {
+        stopifnot(is.character(`totalServiceCharge`), length(`totalServiceCharge`) == 1)
+        self$`totalServiceCharge` <- `totalServiceCharge`
       }
-      if (!missing(`makerCommission`)) {
-        stopifnot(is.character(`makerCommission`), length(`makerCommission`) == 1)
-        self$`makerCommission` <- `makerCommission`
+      if (!missing(`totalTransfered`)) {
+        stopifnot(is.character(`totalTransfered`), length(`totalTransfered`) == 1)
+        self$`totalTransfered` <- `totalTransfered`
       }
-      if (!missing(`takerCommission`)) {
-        stopifnot(is.character(`takerCommission`), length(`takerCommission`) == 1)
-        self$`takerCommission` <- `takerCommission`
+      if (!missing(`transferResult`)) {
+        stopifnot(is.vector(`transferResult`), length(`transferResult`) != 0)
+        sapply(`transferResult`, function(x) stopifnot(R6::is.R6(x)))
+        self$`transferResult` <- `transferResult`
       }
     },
     toJSON = function() {
       InlineResponse20041Object <- list()
-      if (!is.null(self$`symbol`)) {
-        InlineResponse20041Object[['symbol']] <-
-          self$`symbol`
+      if (!is.null(self$`totalServiceCharge`)) {
+        InlineResponse20041Object[['totalServiceCharge']] <-
+          self$`totalServiceCharge`
       }
-      if (!is.null(self$`makerCommission`)) {
-        InlineResponse20041Object[['makerCommission']] <-
-          self$`makerCommission`
+      if (!is.null(self$`totalTransfered`)) {
+        InlineResponse20041Object[['totalTransfered']] <-
+          self$`totalTransfered`
       }
-      if (!is.null(self$`takerCommission`)) {
-        InlineResponse20041Object[['takerCommission']] <-
-          self$`takerCommission`
+      if (!is.null(self$`transferResult`)) {
+        InlineResponse20041Object[['transferResult']] <-
+          lapply(self$`transferResult`, function(x) x$toJSON())
       }
 
       InlineResponse20041Object
     },
     fromJSON = function(InlineResponse20041Json) {
       InlineResponse20041Object <- jsonlite::fromJSON(InlineResponse20041Json)
-      if (!is.null(InlineResponse20041Object$`symbol`)) {
-        self$`symbol` <- InlineResponse20041Object$`symbol`
+      if (!is.null(InlineResponse20041Object$`totalServiceCharge`)) {
+        self$`totalServiceCharge` <- InlineResponse20041Object$`totalServiceCharge`
       }
-      if (!is.null(InlineResponse20041Object$`makerCommission`)) {
-        self$`makerCommission` <- InlineResponse20041Object$`makerCommission`
+      if (!is.null(InlineResponse20041Object$`totalTransfered`)) {
+        self$`totalTransfered` <- InlineResponse20041Object$`totalTransfered`
       }
-      if (!is.null(InlineResponse20041Object$`takerCommission`)) {
-        self$`takerCommission` <- InlineResponse20041Object$`takerCommission`
+      if (!is.null(InlineResponse20041Object$`transferResult`)) {
+        self$`transferResult` <- ApiClient$new()$deserializeObj(InlineResponse20041Object$`transferResult`, "array[InlineResponse20041TransferResult]", loadNamespace("binanceRapi"))
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`symbol`)) {
+        if (!is.null(self$`totalServiceCharge`)) {
         sprintf(
-        '"symbol":
+        '"totalServiceCharge":
           "%s"
                 ',
-        self$`symbol`
+        self$`totalServiceCharge`
         )},
-        if (!is.null(self$`makerCommission`)) {
+        if (!is.null(self$`totalTransfered`)) {
         sprintf(
-        '"makerCommission":
+        '"totalTransfered":
           "%s"
                 ',
-        self$`makerCommission`
+        self$`totalTransfered`
         )},
-        if (!is.null(self$`takerCommission`)) {
+        if (!is.null(self$`transferResult`)) {
         sprintf(
-        '"takerCommission":
-          "%s"
-                ',
-        self$`takerCommission`
+        '"transferResult":
+        [%s]
+',
+        paste(sapply(self$`transferResult`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -104,9 +105,9 @@ InlineResponse20041 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20041Json) {
       InlineResponse20041Object <- jsonlite::fromJSON(InlineResponse20041Json)
-      self$`symbol` <- InlineResponse20041Object$`symbol`
-      self$`makerCommission` <- InlineResponse20041Object$`makerCommission`
-      self$`takerCommission` <- InlineResponse20041Object$`takerCommission`
+      self$`totalServiceCharge` <- InlineResponse20041Object$`totalServiceCharge`
+      self$`totalTransfered` <- InlineResponse20041Object$`totalTransfered`
+      self$`transferResult` <- ApiClient$new()$deserializeObj(InlineResponse20041Object$`transferResult`, "array[InlineResponse20041TransferResult]", loadNamespace("binanceRapi"))
       self
     }
   )

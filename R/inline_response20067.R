@@ -13,9 +13,25 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
+#' @field counterParty  character 
+#'
 #' @field email  character 
 #'
-#' @field enableBlvt  character 
+#' @field type  integer 
+#'
+#' @field asset  character 
+#'
+#' @field qty  character 
+#'
+#' @field fromAccountType  character 
+#'
+#' @field toAccountType  character 
+#'
+#' @field status  character 
+#'
+#' @field tranId  integer 
+#'
+#' @field time  integer 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -23,46 +39,149 @@
 InlineResponse20067 <- R6::R6Class(
   'InlineResponse20067',
   public = list(
+    `counterParty` = NULL,
     `email` = NULL,
-    `enableBlvt` = NULL,
+    `type` = NULL,
+    `asset` = NULL,
+    `qty` = NULL,
+    `fromAccountType` = NULL,
+    `toAccountType` = NULL,
+    `status` = NULL,
+    `tranId` = NULL,
+    `time` = NULL,
     initialize = function(
-        `email`, `enableBlvt`, ...
+        `counterParty`, `email`, `type`, `asset`, `qty`, `fromAccountType`, `toAccountType`, `status`, `tranId`, `time`, ...
     ) {
       local.optional.var <- list(...)
+      if (!missing(`counterParty`)) {
+        stopifnot(is.character(`counterParty`), length(`counterParty`) == 1)
+        self$`counterParty` <- `counterParty`
+      }
       if (!missing(`email`)) {
         stopifnot(is.character(`email`), length(`email`) == 1)
         self$`email` <- `email`
       }
-      if (!missing(`enableBlvt`)) {
-        stopifnot(is.logical(`enableBlvt`), length(`enableBlvt`) == 1)
-        self$`enableBlvt` <- `enableBlvt`
+      if (!missing(`type`)) {
+        stopifnot(is.numeric(`type`), length(`type`) == 1)
+        self$`type` <- `type`
+      }
+      if (!missing(`asset`)) {
+        stopifnot(is.character(`asset`), length(`asset`) == 1)
+        self$`asset` <- `asset`
+      }
+      if (!missing(`qty`)) {
+        stopifnot(is.character(`qty`), length(`qty`) == 1)
+        self$`qty` <- `qty`
+      }
+      if (!missing(`fromAccountType`)) {
+        stopifnot(is.character(`fromAccountType`), length(`fromAccountType`) == 1)
+        self$`fromAccountType` <- `fromAccountType`
+      }
+      if (!missing(`toAccountType`)) {
+        stopifnot(is.character(`toAccountType`), length(`toAccountType`) == 1)
+        self$`toAccountType` <- `toAccountType`
+      }
+      if (!missing(`status`)) {
+        stopifnot(is.character(`status`), length(`status`) == 1)
+        self$`status` <- `status`
+      }
+      if (!missing(`tranId`)) {
+        stopifnot(is.numeric(`tranId`), length(`tranId`) == 1)
+        self$`tranId` <- `tranId`
+      }
+      if (!missing(`time`)) {
+        stopifnot(is.numeric(`time`), length(`time`) == 1)
+        self$`time` <- `time`
       }
     },
     toJSON = function() {
       InlineResponse20067Object <- list()
+      if (!is.null(self$`counterParty`)) {
+        InlineResponse20067Object[['counterParty']] <-
+          self$`counterParty`
+      }
       if (!is.null(self$`email`)) {
         InlineResponse20067Object[['email']] <-
           self$`email`
       }
-      if (!is.null(self$`enableBlvt`)) {
-        InlineResponse20067Object[['enableBlvt']] <-
-          self$`enableBlvt`
+      if (!is.null(self$`type`)) {
+        InlineResponse20067Object[['type']] <-
+          self$`type`
+      }
+      if (!is.null(self$`asset`)) {
+        InlineResponse20067Object[['asset']] <-
+          self$`asset`
+      }
+      if (!is.null(self$`qty`)) {
+        InlineResponse20067Object[['qty']] <-
+          self$`qty`
+      }
+      if (!is.null(self$`fromAccountType`)) {
+        InlineResponse20067Object[['fromAccountType']] <-
+          self$`fromAccountType`
+      }
+      if (!is.null(self$`toAccountType`)) {
+        InlineResponse20067Object[['toAccountType']] <-
+          self$`toAccountType`
+      }
+      if (!is.null(self$`status`)) {
+        InlineResponse20067Object[['status']] <-
+          self$`status`
+      }
+      if (!is.null(self$`tranId`)) {
+        InlineResponse20067Object[['tranId']] <-
+          self$`tranId`
+      }
+      if (!is.null(self$`time`)) {
+        InlineResponse20067Object[['time']] <-
+          self$`time`
       }
 
       InlineResponse20067Object
     },
     fromJSON = function(InlineResponse20067Json) {
       InlineResponse20067Object <- jsonlite::fromJSON(InlineResponse20067Json)
+      if (!is.null(InlineResponse20067Object$`counterParty`)) {
+        self$`counterParty` <- InlineResponse20067Object$`counterParty`
+      }
       if (!is.null(InlineResponse20067Object$`email`)) {
         self$`email` <- InlineResponse20067Object$`email`
       }
-      if (!is.null(InlineResponse20067Object$`enableBlvt`)) {
-        self$`enableBlvt` <- InlineResponse20067Object$`enableBlvt`
+      if (!is.null(InlineResponse20067Object$`type`)) {
+        self$`type` <- InlineResponse20067Object$`type`
+      }
+      if (!is.null(InlineResponse20067Object$`asset`)) {
+        self$`asset` <- InlineResponse20067Object$`asset`
+      }
+      if (!is.null(InlineResponse20067Object$`qty`)) {
+        self$`qty` <- InlineResponse20067Object$`qty`
+      }
+      if (!is.null(InlineResponse20067Object$`fromAccountType`)) {
+        self$`fromAccountType` <- InlineResponse20067Object$`fromAccountType`
+      }
+      if (!is.null(InlineResponse20067Object$`toAccountType`)) {
+        self$`toAccountType` <- InlineResponse20067Object$`toAccountType`
+      }
+      if (!is.null(InlineResponse20067Object$`status`)) {
+        self$`status` <- InlineResponse20067Object$`status`
+      }
+      if (!is.null(InlineResponse20067Object$`tranId`)) {
+        self$`tranId` <- InlineResponse20067Object$`tranId`
+      }
+      if (!is.null(InlineResponse20067Object$`time`)) {
+        self$`time` <- InlineResponse20067Object$`time`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
+        if (!is.null(self$`counterParty`)) {
+        sprintf(
+        '"counterParty":
+          "%s"
+                ',
+        self$`counterParty`
+        )},
         if (!is.null(self$`email`)) {
         sprintf(
         '"email":
@@ -70,12 +189,61 @@ InlineResponse20067 <- R6::R6Class(
                 ',
         self$`email`
         )},
-        if (!is.null(self$`enableBlvt`)) {
+        if (!is.null(self$`type`)) {
         sprintf(
-        '"enableBlvt":
-          %s
+        '"type":
+          %d
                 ',
-        tolower(self$`enableBlvt`)
+        self$`type`
+        )},
+        if (!is.null(self$`asset`)) {
+        sprintf(
+        '"asset":
+          "%s"
+                ',
+        self$`asset`
+        )},
+        if (!is.null(self$`qty`)) {
+        sprintf(
+        '"qty":
+          "%s"
+                ',
+        self$`qty`
+        )},
+        if (!is.null(self$`fromAccountType`)) {
+        sprintf(
+        '"fromAccountType":
+          "%s"
+                ',
+        self$`fromAccountType`
+        )},
+        if (!is.null(self$`toAccountType`)) {
+        sprintf(
+        '"toAccountType":
+          "%s"
+                ',
+        self$`toAccountType`
+        )},
+        if (!is.null(self$`status`)) {
+        sprintf(
+        '"status":
+          "%s"
+                ',
+        self$`status`
+        )},
+        if (!is.null(self$`tranId`)) {
+        sprintf(
+        '"tranId":
+          %d
+                ',
+        self$`tranId`
+        )},
+        if (!is.null(self$`time`)) {
+        sprintf(
+        '"time":
+          %d
+                ',
+        self$`time`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -83,8 +251,16 @@ InlineResponse20067 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20067Json) {
       InlineResponse20067Object <- jsonlite::fromJSON(InlineResponse20067Json)
+      self$`counterParty` <- InlineResponse20067Object$`counterParty`
       self$`email` <- InlineResponse20067Object$`email`
-      self$`enableBlvt` <- InlineResponse20067Object$`enableBlvt`
+      self$`type` <- InlineResponse20067Object$`type`
+      self$`asset` <- InlineResponse20067Object$`asset`
+      self$`qty` <- InlineResponse20067Object$`qty`
+      self$`fromAccountType` <- InlineResponse20067Object$`fromAccountType`
+      self$`toAccountType` <- InlineResponse20067Object$`toAccountType`
+      self$`status` <- InlineResponse20067Object$`status`
+      self$`tranId` <- InlineResponse20067Object$`tranId`
+      self$`time` <- InlineResponse20067Object$`time`
       self
     }
   )

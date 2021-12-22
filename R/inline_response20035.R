@@ -13,7 +13,27 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field data  character 
+#' @field amount  character 
+#'
+#' @field coin  character 
+#'
+#' @field network  character 
+#'
+#' @field status  integer 
+#'
+#' @field address  character 
+#'
+#' @field addressTag  character 
+#'
+#' @field txId  character 
+#'
+#' @field insertTime  integer 
+#'
+#' @field transferType  integer 
+#'
+#' @field unlockConfirm  character 
+#'
+#' @field confirmTimes  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -21,40 +41,230 @@
 InlineResponse20035 <- R6::R6Class(
   'InlineResponse20035',
   public = list(
-    `data` = NULL,
+    `amount` = NULL,
+    `coin` = NULL,
+    `network` = NULL,
+    `status` = NULL,
+    `address` = NULL,
+    `addressTag` = NULL,
+    `txId` = NULL,
+    `insertTime` = NULL,
+    `transferType` = NULL,
+    `unlockConfirm` = NULL,
+    `confirmTimes` = NULL,
     initialize = function(
-        `data`, ...
+        `amount`, `coin`, `network`, `status`, `address`, `addressTag`, `txId`, `insertTime`, `transferType`, `unlockConfirm`, `confirmTimes`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`data`)) {
-        stopifnot(is.character(`data`), length(`data`) == 1)
-        self$`data` <- `data`
+      if (!missing(`amount`)) {
+        stopifnot(is.character(`amount`), length(`amount`) == 1)
+        self$`amount` <- `amount`
+      }
+      if (!missing(`coin`)) {
+        stopifnot(is.character(`coin`), length(`coin`) == 1)
+        self$`coin` <- `coin`
+      }
+      if (!missing(`network`)) {
+        stopifnot(is.character(`network`), length(`network`) == 1)
+        self$`network` <- `network`
+      }
+      if (!missing(`status`)) {
+        stopifnot(is.numeric(`status`), length(`status`) == 1)
+        self$`status` <- `status`
+      }
+      if (!missing(`address`)) {
+        stopifnot(is.character(`address`), length(`address`) == 1)
+        self$`address` <- `address`
+      }
+      if (!missing(`addressTag`)) {
+        stopifnot(is.character(`addressTag`), length(`addressTag`) == 1)
+        self$`addressTag` <- `addressTag`
+      }
+      if (!missing(`txId`)) {
+        stopifnot(is.character(`txId`), length(`txId`) == 1)
+        self$`txId` <- `txId`
+      }
+      if (!missing(`insertTime`)) {
+        stopifnot(is.numeric(`insertTime`), length(`insertTime`) == 1)
+        self$`insertTime` <- `insertTime`
+      }
+      if (!missing(`transferType`)) {
+        stopifnot(is.numeric(`transferType`), length(`transferType`) == 1)
+        self$`transferType` <- `transferType`
+      }
+      if (!missing(`unlockConfirm`)) {
+        stopifnot(is.character(`unlockConfirm`), length(`unlockConfirm`) == 1)
+        self$`unlockConfirm` <- `unlockConfirm`
+      }
+      if (!missing(`confirmTimes`)) {
+        stopifnot(is.character(`confirmTimes`), length(`confirmTimes`) == 1)
+        self$`confirmTimes` <- `confirmTimes`
       }
     },
     toJSON = function() {
       InlineResponse20035Object <- list()
-      if (!is.null(self$`data`)) {
-        InlineResponse20035Object[['data']] <-
-          self$`data`
+      if (!is.null(self$`amount`)) {
+        InlineResponse20035Object[['amount']] <-
+          self$`amount`
+      }
+      if (!is.null(self$`coin`)) {
+        InlineResponse20035Object[['coin']] <-
+          self$`coin`
+      }
+      if (!is.null(self$`network`)) {
+        InlineResponse20035Object[['network']] <-
+          self$`network`
+      }
+      if (!is.null(self$`status`)) {
+        InlineResponse20035Object[['status']] <-
+          self$`status`
+      }
+      if (!is.null(self$`address`)) {
+        InlineResponse20035Object[['address']] <-
+          self$`address`
+      }
+      if (!is.null(self$`addressTag`)) {
+        InlineResponse20035Object[['addressTag']] <-
+          self$`addressTag`
+      }
+      if (!is.null(self$`txId`)) {
+        InlineResponse20035Object[['txId']] <-
+          self$`txId`
+      }
+      if (!is.null(self$`insertTime`)) {
+        InlineResponse20035Object[['insertTime']] <-
+          self$`insertTime`
+      }
+      if (!is.null(self$`transferType`)) {
+        InlineResponse20035Object[['transferType']] <-
+          self$`transferType`
+      }
+      if (!is.null(self$`unlockConfirm`)) {
+        InlineResponse20035Object[['unlockConfirm']] <-
+          self$`unlockConfirm`
+      }
+      if (!is.null(self$`confirmTimes`)) {
+        InlineResponse20035Object[['confirmTimes']] <-
+          self$`confirmTimes`
       }
 
       InlineResponse20035Object
     },
     fromJSON = function(InlineResponse20035Json) {
       InlineResponse20035Object <- jsonlite::fromJSON(InlineResponse20035Json)
-      if (!is.null(InlineResponse20035Object$`data`)) {
-        self$`data` <- InlineResponse20035Object$`data`
+      if (!is.null(InlineResponse20035Object$`amount`)) {
+        self$`amount` <- InlineResponse20035Object$`amount`
+      }
+      if (!is.null(InlineResponse20035Object$`coin`)) {
+        self$`coin` <- InlineResponse20035Object$`coin`
+      }
+      if (!is.null(InlineResponse20035Object$`network`)) {
+        self$`network` <- InlineResponse20035Object$`network`
+      }
+      if (!is.null(InlineResponse20035Object$`status`)) {
+        self$`status` <- InlineResponse20035Object$`status`
+      }
+      if (!is.null(InlineResponse20035Object$`address`)) {
+        self$`address` <- InlineResponse20035Object$`address`
+      }
+      if (!is.null(InlineResponse20035Object$`addressTag`)) {
+        self$`addressTag` <- InlineResponse20035Object$`addressTag`
+      }
+      if (!is.null(InlineResponse20035Object$`txId`)) {
+        self$`txId` <- InlineResponse20035Object$`txId`
+      }
+      if (!is.null(InlineResponse20035Object$`insertTime`)) {
+        self$`insertTime` <- InlineResponse20035Object$`insertTime`
+      }
+      if (!is.null(InlineResponse20035Object$`transferType`)) {
+        self$`transferType` <- InlineResponse20035Object$`transferType`
+      }
+      if (!is.null(InlineResponse20035Object$`unlockConfirm`)) {
+        self$`unlockConfirm` <- InlineResponse20035Object$`unlockConfirm`
+      }
+      if (!is.null(InlineResponse20035Object$`confirmTimes`)) {
+        self$`confirmTimes` <- InlineResponse20035Object$`confirmTimes`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`data`)) {
+        if (!is.null(self$`amount`)) {
         sprintf(
-        '"data":
+        '"amount":
           "%s"
                 ',
-        self$`data`
+        self$`amount`
+        )},
+        if (!is.null(self$`coin`)) {
+        sprintf(
+        '"coin":
+          "%s"
+                ',
+        self$`coin`
+        )},
+        if (!is.null(self$`network`)) {
+        sprintf(
+        '"network":
+          "%s"
+                ',
+        self$`network`
+        )},
+        if (!is.null(self$`status`)) {
+        sprintf(
+        '"status":
+          %d
+                ',
+        self$`status`
+        )},
+        if (!is.null(self$`address`)) {
+        sprintf(
+        '"address":
+          "%s"
+                ',
+        self$`address`
+        )},
+        if (!is.null(self$`addressTag`)) {
+        sprintf(
+        '"addressTag":
+          "%s"
+                ',
+        self$`addressTag`
+        )},
+        if (!is.null(self$`txId`)) {
+        sprintf(
+        '"txId":
+          "%s"
+                ',
+        self$`txId`
+        )},
+        if (!is.null(self$`insertTime`)) {
+        sprintf(
+        '"insertTime":
+          %d
+                ',
+        self$`insertTime`
+        )},
+        if (!is.null(self$`transferType`)) {
+        sprintf(
+        '"transferType":
+          %d
+                ',
+        self$`transferType`
+        )},
+        if (!is.null(self$`unlockConfirm`)) {
+        sprintf(
+        '"unlockConfirm":
+          "%s"
+                ',
+        self$`unlockConfirm`
+        )},
+        if (!is.null(self$`confirmTimes`)) {
+        sprintf(
+        '"confirmTimes":
+          "%s"
+                ',
+        self$`confirmTimes`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -62,7 +272,17 @@ InlineResponse20035 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20035Json) {
       InlineResponse20035Object <- jsonlite::fromJSON(InlineResponse20035Json)
-      self$`data` <- InlineResponse20035Object$`data`
+      self$`amount` <- InlineResponse20035Object$`amount`
+      self$`coin` <- InlineResponse20035Object$`coin`
+      self$`network` <- InlineResponse20035Object$`network`
+      self$`status` <- InlineResponse20035Object$`status`
+      self$`address` <- InlineResponse20035Object$`address`
+      self$`addressTag` <- InlineResponse20035Object$`addressTag`
+      self$`txId` <- InlineResponse20035Object$`txId`
+      self$`insertTime` <- InlineResponse20035Object$`insertTime`
+      self$`transferType` <- InlineResponse20035Object$`transferType`
+      self$`unlockConfirm` <- InlineResponse20035Object$`unlockConfirm`
+      self$`confirmTimes` <- InlineResponse20035Object$`confirmTimes`
       self
     }
   )

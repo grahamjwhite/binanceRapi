@@ -13,25 +13,7 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field amount  character 
-#'
-#' @field coin  character 
-#'
-#' @field network  character 
-#'
-#' @field status  integer 
-#'
-#' @field address  character 
-#'
-#' @field addressTag  character 
-#'
-#' @field txId  character 
-#'
-#' @field insertTime  integer 
-#'
-#' @field transferType  integer 
-#'
-#' @field confirmTimes  character 
+#' @field balances  list( \link{InlineResponse20054Balances} ) 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -39,211 +21,41 @@
 InlineResponse20054 <- R6::R6Class(
   'InlineResponse20054',
   public = list(
-    `amount` = NULL,
-    `coin` = NULL,
-    `network` = NULL,
-    `status` = NULL,
-    `address` = NULL,
-    `addressTag` = NULL,
-    `txId` = NULL,
-    `insertTime` = NULL,
-    `transferType` = NULL,
-    `confirmTimes` = NULL,
+    `balances` = NULL,
     initialize = function(
-        `amount`, `coin`, `network`, `status`, `address`, `addressTag`, `txId`, `insertTime`, `transferType`, `confirmTimes`, ...
+        `balances`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`amount`)) {
-        stopifnot(is.character(`amount`), length(`amount`) == 1)
-        self$`amount` <- `amount`
-      }
-      if (!missing(`coin`)) {
-        stopifnot(is.character(`coin`), length(`coin`) == 1)
-        self$`coin` <- `coin`
-      }
-      if (!missing(`network`)) {
-        stopifnot(is.character(`network`), length(`network`) == 1)
-        self$`network` <- `network`
-      }
-      if (!missing(`status`)) {
-        stopifnot(is.numeric(`status`), length(`status`) == 1)
-        self$`status` <- `status`
-      }
-      if (!missing(`address`)) {
-        stopifnot(is.character(`address`), length(`address`) == 1)
-        self$`address` <- `address`
-      }
-      if (!missing(`addressTag`)) {
-        stopifnot(is.character(`addressTag`), length(`addressTag`) == 1)
-        self$`addressTag` <- `addressTag`
-      }
-      if (!missing(`txId`)) {
-        stopifnot(is.character(`txId`), length(`txId`) == 1)
-        self$`txId` <- `txId`
-      }
-      if (!missing(`insertTime`)) {
-        stopifnot(is.numeric(`insertTime`), length(`insertTime`) == 1)
-        self$`insertTime` <- `insertTime`
-      }
-      if (!missing(`transferType`)) {
-        stopifnot(is.numeric(`transferType`), length(`transferType`) == 1)
-        self$`transferType` <- `transferType`
-      }
-      if (!missing(`confirmTimes`)) {
-        stopifnot(is.character(`confirmTimes`), length(`confirmTimes`) == 1)
-        self$`confirmTimes` <- `confirmTimes`
+      if (!missing(`balances`)) {
+        stopifnot(is.vector(`balances`), length(`balances`) != 0)
+        sapply(`balances`, function(x) stopifnot(R6::is.R6(x)))
+        self$`balances` <- `balances`
       }
     },
     toJSON = function() {
       InlineResponse20054Object <- list()
-      if (!is.null(self$`amount`)) {
-        InlineResponse20054Object[['amount']] <-
-          self$`amount`
-      }
-      if (!is.null(self$`coin`)) {
-        InlineResponse20054Object[['coin']] <-
-          self$`coin`
-      }
-      if (!is.null(self$`network`)) {
-        InlineResponse20054Object[['network']] <-
-          self$`network`
-      }
-      if (!is.null(self$`status`)) {
-        InlineResponse20054Object[['status']] <-
-          self$`status`
-      }
-      if (!is.null(self$`address`)) {
-        InlineResponse20054Object[['address']] <-
-          self$`address`
-      }
-      if (!is.null(self$`addressTag`)) {
-        InlineResponse20054Object[['addressTag']] <-
-          self$`addressTag`
-      }
-      if (!is.null(self$`txId`)) {
-        InlineResponse20054Object[['txId']] <-
-          self$`txId`
-      }
-      if (!is.null(self$`insertTime`)) {
-        InlineResponse20054Object[['insertTime']] <-
-          self$`insertTime`
-      }
-      if (!is.null(self$`transferType`)) {
-        InlineResponse20054Object[['transferType']] <-
-          self$`transferType`
-      }
-      if (!is.null(self$`confirmTimes`)) {
-        InlineResponse20054Object[['confirmTimes']] <-
-          self$`confirmTimes`
+      if (!is.null(self$`balances`)) {
+        InlineResponse20054Object[['balances']] <-
+          lapply(self$`balances`, function(x) x$toJSON())
       }
 
       InlineResponse20054Object
     },
     fromJSON = function(InlineResponse20054Json) {
       InlineResponse20054Object <- jsonlite::fromJSON(InlineResponse20054Json)
-      if (!is.null(InlineResponse20054Object$`amount`)) {
-        self$`amount` <- InlineResponse20054Object$`amount`
-      }
-      if (!is.null(InlineResponse20054Object$`coin`)) {
-        self$`coin` <- InlineResponse20054Object$`coin`
-      }
-      if (!is.null(InlineResponse20054Object$`network`)) {
-        self$`network` <- InlineResponse20054Object$`network`
-      }
-      if (!is.null(InlineResponse20054Object$`status`)) {
-        self$`status` <- InlineResponse20054Object$`status`
-      }
-      if (!is.null(InlineResponse20054Object$`address`)) {
-        self$`address` <- InlineResponse20054Object$`address`
-      }
-      if (!is.null(InlineResponse20054Object$`addressTag`)) {
-        self$`addressTag` <- InlineResponse20054Object$`addressTag`
-      }
-      if (!is.null(InlineResponse20054Object$`txId`)) {
-        self$`txId` <- InlineResponse20054Object$`txId`
-      }
-      if (!is.null(InlineResponse20054Object$`insertTime`)) {
-        self$`insertTime` <- InlineResponse20054Object$`insertTime`
-      }
-      if (!is.null(InlineResponse20054Object$`transferType`)) {
-        self$`transferType` <- InlineResponse20054Object$`transferType`
-      }
-      if (!is.null(InlineResponse20054Object$`confirmTimes`)) {
-        self$`confirmTimes` <- InlineResponse20054Object$`confirmTimes`
+      if (!is.null(InlineResponse20054Object$`balances`)) {
+        self$`balances` <- ApiClient$new()$deserializeObj(InlineResponse20054Object$`balances`, "array[InlineResponse20054Balances]", loadNamespace("binanceRapi"))
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`amount`)) {
+        if (!is.null(self$`balances`)) {
         sprintf(
-        '"amount":
-          "%s"
-                ',
-        self$`amount`
-        )},
-        if (!is.null(self$`coin`)) {
-        sprintf(
-        '"coin":
-          "%s"
-                ',
-        self$`coin`
-        )},
-        if (!is.null(self$`network`)) {
-        sprintf(
-        '"network":
-          "%s"
-                ',
-        self$`network`
-        )},
-        if (!is.null(self$`status`)) {
-        sprintf(
-        '"status":
-          %d
-                ',
-        self$`status`
-        )},
-        if (!is.null(self$`address`)) {
-        sprintf(
-        '"address":
-          "%s"
-                ',
-        self$`address`
-        )},
-        if (!is.null(self$`addressTag`)) {
-        sprintf(
-        '"addressTag":
-          "%s"
-                ',
-        self$`addressTag`
-        )},
-        if (!is.null(self$`txId`)) {
-        sprintf(
-        '"txId":
-          "%s"
-                ',
-        self$`txId`
-        )},
-        if (!is.null(self$`insertTime`)) {
-        sprintf(
-        '"insertTime":
-          %d
-                ',
-        self$`insertTime`
-        )},
-        if (!is.null(self$`transferType`)) {
-        sprintf(
-        '"transferType":
-          %d
-                ',
-        self$`transferType`
-        )},
-        if (!is.null(self$`confirmTimes`)) {
-        sprintf(
-        '"confirmTimes":
-          "%s"
-                ',
-        self$`confirmTimes`
+        '"balances":
+        [%s]
+',
+        paste(sapply(self$`balances`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -251,16 +63,7 @@ InlineResponse20054 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20054Json) {
       InlineResponse20054Object <- jsonlite::fromJSON(InlineResponse20054Json)
-      self$`amount` <- InlineResponse20054Object$`amount`
-      self$`coin` <- InlineResponse20054Object$`coin`
-      self$`network` <- InlineResponse20054Object$`network`
-      self$`status` <- InlineResponse20054Object$`status`
-      self$`address` <- InlineResponse20054Object$`address`
-      self$`addressTag` <- InlineResponse20054Object$`addressTag`
-      self$`txId` <- InlineResponse20054Object$`txId`
-      self$`insertTime` <- InlineResponse20054Object$`insertTime`
-      self$`transferType` <- InlineResponse20054Object$`transferType`
-      self$`confirmTimes` <- InlineResponse20054Object$`confirmTimes`
+      self$`balances` <- ApiClient$new()$deserializeObj(InlineResponse20054Object$`balances`, "array[InlineResponse20054Balances]", loadNamespace("binanceRapi"))
       self
     }
   )

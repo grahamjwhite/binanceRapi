@@ -13,9 +13,7 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field success  character 
-#'
-#' @field txnId  character 
+#' @field subAccounts  list( \link{InlineResponse20050SubAccounts} ) 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -23,59 +21,41 @@
 InlineResponse20050 <- R6::R6Class(
   'InlineResponse20050',
   public = list(
-    `success` = NULL,
-    `txnId` = NULL,
+    `subAccounts` = NULL,
     initialize = function(
-        `success`, `txnId`, ...
+        `subAccounts`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`success`)) {
-        stopifnot(is.logical(`success`), length(`success`) == 1)
-        self$`success` <- `success`
-      }
-      if (!missing(`txnId`)) {
-        stopifnot(is.character(`txnId`), length(`txnId`) == 1)
-        self$`txnId` <- `txnId`
+      if (!missing(`subAccounts`)) {
+        stopifnot(is.vector(`subAccounts`), length(`subAccounts`) != 0)
+        sapply(`subAccounts`, function(x) stopifnot(R6::is.R6(x)))
+        self$`subAccounts` <- `subAccounts`
       }
     },
     toJSON = function() {
       InlineResponse20050Object <- list()
-      if (!is.null(self$`success`)) {
-        InlineResponse20050Object[['success']] <-
-          self$`success`
-      }
-      if (!is.null(self$`txnId`)) {
-        InlineResponse20050Object[['txnId']] <-
-          self$`txnId`
+      if (!is.null(self$`subAccounts`)) {
+        InlineResponse20050Object[['subAccounts']] <-
+          lapply(self$`subAccounts`, function(x) x$toJSON())
       }
 
       InlineResponse20050Object
     },
     fromJSON = function(InlineResponse20050Json) {
       InlineResponse20050Object <- jsonlite::fromJSON(InlineResponse20050Json)
-      if (!is.null(InlineResponse20050Object$`success`)) {
-        self$`success` <- InlineResponse20050Object$`success`
-      }
-      if (!is.null(InlineResponse20050Object$`txnId`)) {
-        self$`txnId` <- InlineResponse20050Object$`txnId`
+      if (!is.null(InlineResponse20050Object$`subAccounts`)) {
+        self$`subAccounts` <- ApiClient$new()$deserializeObj(InlineResponse20050Object$`subAccounts`, "array[InlineResponse20050SubAccounts]", loadNamespace("binanceRapi"))
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`success`)) {
+        if (!is.null(self$`subAccounts`)) {
         sprintf(
-        '"success":
-          %s
-                ',
-        tolower(self$`success`)
-        )},
-        if (!is.null(self$`txnId`)) {
-        sprintf(
-        '"txnId":
-          "%s"
-                ',
-        self$`txnId`
+        '"subAccounts":
+        [%s]
+',
+        paste(sapply(self$`subAccounts`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -83,8 +63,7 @@ InlineResponse20050 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20050Json) {
       InlineResponse20050Object <- jsonlite::fromJSON(InlineResponse20050Json)
-      self$`success` <- InlineResponse20050Object$`success`
-      self$`txnId` <- InlineResponse20050Object$`txnId`
+      self$`subAccounts` <- ApiClient$new()$deserializeObj(InlineResponse20050Object$`subAccounts`, "array[InlineResponse20050SubAccounts]", loadNamespace("binanceRapi"))
       self
     }
   )

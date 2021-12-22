@@ -13,7 +13,7 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field tranId  integer 
+#' @field txnId  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -21,40 +21,40 @@
 InlineResponse20066 <- R6::R6Class(
   'InlineResponse20066',
   public = list(
-    `tranId` = NULL,
+    `txnId` = NULL,
     initialize = function(
-        `tranId`, ...
+        `txnId`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`tranId`)) {
-        stopifnot(is.numeric(`tranId`), length(`tranId`) == 1)
-        self$`tranId` <- `tranId`
+      if (!missing(`txnId`)) {
+        stopifnot(is.character(`txnId`), length(`txnId`) == 1)
+        self$`txnId` <- `txnId`
       }
     },
     toJSON = function() {
       InlineResponse20066Object <- list()
-      if (!is.null(self$`tranId`)) {
-        InlineResponse20066Object[['tranId']] <-
-          self$`tranId`
+      if (!is.null(self$`txnId`)) {
+        InlineResponse20066Object[['txnId']] <-
+          self$`txnId`
       }
 
       InlineResponse20066Object
     },
     fromJSON = function(InlineResponse20066Json) {
       InlineResponse20066Object <- jsonlite::fromJSON(InlineResponse20066Json)
-      if (!is.null(InlineResponse20066Object$`tranId`)) {
-        self$`tranId` <- InlineResponse20066Object$`tranId`
+      if (!is.null(InlineResponse20066Object$`txnId`)) {
+        self$`txnId` <- InlineResponse20066Object$`txnId`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`tranId`)) {
+        if (!is.null(self$`txnId`)) {
         sprintf(
-        '"tranId":
-          %d
+        '"txnId":
+          "%s"
                 ',
-        self$`tranId`
+        self$`txnId`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -62,7 +62,7 @@ InlineResponse20066 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20066Json) {
       InlineResponse20066Object <- jsonlite::fromJSON(InlineResponse20066Json)
-      self$`tranId` <- InlineResponse20066Object$`tranId`
+      self$`txnId` <- InlineResponse20066Object$`txnId`
       self
     }
   )

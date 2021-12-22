@@ -13,11 +13,11 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field poolId  integer 
+#' @field code  integer 
 #'
-#' @field poolName  character 
+#' @field msg  character 
 #'
-#' @field assets  list( character ) 
+#' @field data  list( \link{InlineResponse200103Data} ) 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -25,79 +25,79 @@
 InlineResponse200103 <- R6::R6Class(
   'InlineResponse200103',
   public = list(
-    `poolId` = NULL,
-    `poolName` = NULL,
-    `assets` = NULL,
+    `code` = NULL,
+    `msg` = NULL,
+    `data` = NULL,
     initialize = function(
-        `poolId`, `poolName`, `assets`, ...
+        `code`, `msg`, `data`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`poolId`)) {
-        stopifnot(is.numeric(`poolId`), length(`poolId`) == 1)
-        self$`poolId` <- `poolId`
+      if (!missing(`code`)) {
+        stopifnot(is.numeric(`code`), length(`code`) == 1)
+        self$`code` <- `code`
       }
-      if (!missing(`poolName`)) {
-        stopifnot(is.character(`poolName`), length(`poolName`) == 1)
-        self$`poolName` <- `poolName`
+      if (!missing(`msg`)) {
+        stopifnot(is.character(`msg`), length(`msg`) == 1)
+        self$`msg` <- `msg`
       }
-      if (!missing(`assets`)) {
-        stopifnot(is.vector(`assets`), length(`assets`) != 0)
-        sapply(`assets`, function(x) stopifnot(is.character(x)))
-        self$`assets` <- `assets`
+      if (!missing(`data`)) {
+        stopifnot(is.vector(`data`), length(`data`) != 0)
+        sapply(`data`, function(x) stopifnot(R6::is.R6(x)))
+        self$`data` <- `data`
       }
     },
     toJSON = function() {
       InlineResponse200103Object <- list()
-      if (!is.null(self$`poolId`)) {
-        InlineResponse200103Object[['poolId']] <-
-          self$`poolId`
+      if (!is.null(self$`code`)) {
+        InlineResponse200103Object[['code']] <-
+          self$`code`
       }
-      if (!is.null(self$`poolName`)) {
-        InlineResponse200103Object[['poolName']] <-
-          self$`poolName`
+      if (!is.null(self$`msg`)) {
+        InlineResponse200103Object[['msg']] <-
+          self$`msg`
       }
-      if (!is.null(self$`assets`)) {
-        InlineResponse200103Object[['assets']] <-
-          self$`assets`
+      if (!is.null(self$`data`)) {
+        InlineResponse200103Object[['data']] <-
+          lapply(self$`data`, function(x) x$toJSON())
       }
 
       InlineResponse200103Object
     },
     fromJSON = function(InlineResponse200103Json) {
       InlineResponse200103Object <- jsonlite::fromJSON(InlineResponse200103Json)
-      if (!is.null(InlineResponse200103Object$`poolId`)) {
-        self$`poolId` <- InlineResponse200103Object$`poolId`
+      if (!is.null(InlineResponse200103Object$`code`)) {
+        self$`code` <- InlineResponse200103Object$`code`
       }
-      if (!is.null(InlineResponse200103Object$`poolName`)) {
-        self$`poolName` <- InlineResponse200103Object$`poolName`
+      if (!is.null(InlineResponse200103Object$`msg`)) {
+        self$`msg` <- InlineResponse200103Object$`msg`
       }
-      if (!is.null(InlineResponse200103Object$`assets`)) {
-        self$`assets` <- ApiClient$new()$deserializeObj(InlineResponse200103Object$`assets`, "array[character]", loadNamespace("binanceRapi"))
+      if (!is.null(InlineResponse200103Object$`data`)) {
+        self$`data` <- ApiClient$new()$deserializeObj(InlineResponse200103Object$`data`, "array[InlineResponse200103Data]", loadNamespace("binanceRapi"))
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`poolId`)) {
+        if (!is.null(self$`code`)) {
         sprintf(
-        '"poolId":
+        '"code":
           %d
                 ',
-        self$`poolId`
+        self$`code`
         )},
-        if (!is.null(self$`poolName`)) {
+        if (!is.null(self$`msg`)) {
         sprintf(
-        '"poolName":
+        '"msg":
           "%s"
                 ',
-        self$`poolName`
+        self$`msg`
         )},
-        if (!is.null(self$`assets`)) {
+        if (!is.null(self$`data`)) {
         sprintf(
-        '"assets":
-           [%s]
-        ',
-        paste(unlist(lapply(self$`assets`, function(x) paste0('"', x, '"'))), collapse=",")
+        '"data":
+        [%s]
+',
+        paste(sapply(self$`data`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -105,9 +105,9 @@ InlineResponse200103 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse200103Json) {
       InlineResponse200103Object <- jsonlite::fromJSON(InlineResponse200103Json)
-      self$`poolId` <- InlineResponse200103Object$`poolId`
-      self$`poolName` <- InlineResponse200103Object$`poolName`
-      self$`assets` <- ApiClient$new()$deserializeObj(InlineResponse200103Object$`assets`, "array[character]", loadNamespace("binanceRapi"))
+      self$`code` <- InlineResponse200103Object$`code`
+      self$`msg` <- InlineResponse200103Object$`msg`
+      self$`data` <- ApiClient$new()$deserializeObj(InlineResponse200103Object$`data`, "array[InlineResponse200103Data]", loadNamespace("binanceRapi"))
       self
     }
   )

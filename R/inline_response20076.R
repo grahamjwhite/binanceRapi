@@ -13,7 +13,13 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field purchaseId  integer 
+#' @field ipRestrict  character 
+#'
+#' @field ipList  list( character ) 
+#'
+#' @field updateTime  integer 
+#'
+#' @field apiKey  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -21,40 +27,98 @@
 InlineResponse20076 <- R6::R6Class(
   'InlineResponse20076',
   public = list(
-    `purchaseId` = NULL,
+    `ipRestrict` = NULL,
+    `ipList` = NULL,
+    `updateTime` = NULL,
+    `apiKey` = NULL,
     initialize = function(
-        `purchaseId`, ...
+        `ipRestrict`, `ipList`, `updateTime`, `apiKey`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`purchaseId`)) {
-        stopifnot(is.numeric(`purchaseId`), length(`purchaseId`) == 1)
-        self$`purchaseId` <- `purchaseId`
+      if (!missing(`ipRestrict`)) {
+        stopifnot(is.character(`ipRestrict`), length(`ipRestrict`) == 1)
+        self$`ipRestrict` <- `ipRestrict`
+      }
+      if (!missing(`ipList`)) {
+        stopifnot(is.vector(`ipList`), length(`ipList`) != 0)
+        sapply(`ipList`, function(x) stopifnot(is.character(x)))
+        self$`ipList` <- `ipList`
+      }
+      if (!missing(`updateTime`)) {
+        stopifnot(is.numeric(`updateTime`), length(`updateTime`) == 1)
+        self$`updateTime` <- `updateTime`
+      }
+      if (!missing(`apiKey`)) {
+        stopifnot(is.character(`apiKey`), length(`apiKey`) == 1)
+        self$`apiKey` <- `apiKey`
       }
     },
     toJSON = function() {
       InlineResponse20076Object <- list()
-      if (!is.null(self$`purchaseId`)) {
-        InlineResponse20076Object[['purchaseId']] <-
-          self$`purchaseId`
+      if (!is.null(self$`ipRestrict`)) {
+        InlineResponse20076Object[['ipRestrict']] <-
+          self$`ipRestrict`
+      }
+      if (!is.null(self$`ipList`)) {
+        InlineResponse20076Object[['ipList']] <-
+          self$`ipList`
+      }
+      if (!is.null(self$`updateTime`)) {
+        InlineResponse20076Object[['updateTime']] <-
+          self$`updateTime`
+      }
+      if (!is.null(self$`apiKey`)) {
+        InlineResponse20076Object[['apiKey']] <-
+          self$`apiKey`
       }
 
       InlineResponse20076Object
     },
     fromJSON = function(InlineResponse20076Json) {
       InlineResponse20076Object <- jsonlite::fromJSON(InlineResponse20076Json)
-      if (!is.null(InlineResponse20076Object$`purchaseId`)) {
-        self$`purchaseId` <- InlineResponse20076Object$`purchaseId`
+      if (!is.null(InlineResponse20076Object$`ipRestrict`)) {
+        self$`ipRestrict` <- InlineResponse20076Object$`ipRestrict`
+      }
+      if (!is.null(InlineResponse20076Object$`ipList`)) {
+        self$`ipList` <- ApiClient$new()$deserializeObj(InlineResponse20076Object$`ipList`, "array[character]", loadNamespace("binanceRapi"))
+      }
+      if (!is.null(InlineResponse20076Object$`updateTime`)) {
+        self$`updateTime` <- InlineResponse20076Object$`updateTime`
+      }
+      if (!is.null(InlineResponse20076Object$`apiKey`)) {
+        self$`apiKey` <- InlineResponse20076Object$`apiKey`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`purchaseId`)) {
+        if (!is.null(self$`ipRestrict`)) {
         sprintf(
-        '"purchaseId":
+        '"ipRestrict":
+          "%s"
+                ',
+        self$`ipRestrict`
+        )},
+        if (!is.null(self$`ipList`)) {
+        sprintf(
+        '"ipList":
+           [%s]
+        ',
+        paste(unlist(lapply(self$`ipList`, function(x) paste0('"', x, '"'))), collapse=",")
+        )},
+        if (!is.null(self$`updateTime`)) {
+        sprintf(
+        '"updateTime":
           %d
                 ',
-        self$`purchaseId`
+        self$`updateTime`
+        )},
+        if (!is.null(self$`apiKey`)) {
+        sprintf(
+        '"apiKey":
+          "%s"
+                ',
+        self$`apiKey`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -62,7 +126,10 @@ InlineResponse20076 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20076Json) {
       InlineResponse20076Object <- jsonlite::fromJSON(InlineResponse20076Json)
-      self$`purchaseId` <- InlineResponse20076Object$`purchaseId`
+      self$`ipRestrict` <- InlineResponse20076Object$`ipRestrict`
+      self$`ipList` <- ApiClient$new()$deserializeObj(InlineResponse20076Object$`ipList`, "array[character]", loadNamespace("binanceRapi"))
+      self$`updateTime` <- InlineResponse20076Object$`updateTime`
+      self$`apiKey` <- InlineResponse20076Object$`apiKey`
       self
     }
   )

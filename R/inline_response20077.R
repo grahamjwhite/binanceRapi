@@ -13,13 +13,7 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field asset  character 
-#'
-#' @field dailyQuota  character 
-#'
-#' @field leftQuota  character 
-#'
-#' @field minRedemptionAmount  character 
+#' @field listenKey  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -27,97 +21,40 @@
 InlineResponse20077 <- R6::R6Class(
   'InlineResponse20077',
   public = list(
-    `asset` = NULL,
-    `dailyQuota` = NULL,
-    `leftQuota` = NULL,
-    `minRedemptionAmount` = NULL,
+    `listenKey` = NULL,
     initialize = function(
-        `asset`, `dailyQuota`, `leftQuota`, `minRedemptionAmount`, ...
+        `listenKey`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`asset`)) {
-        stopifnot(is.character(`asset`), length(`asset`) == 1)
-        self$`asset` <- `asset`
-      }
-      if (!missing(`dailyQuota`)) {
-        stopifnot(is.character(`dailyQuota`), length(`dailyQuota`) == 1)
-        self$`dailyQuota` <- `dailyQuota`
-      }
-      if (!missing(`leftQuota`)) {
-        stopifnot(is.character(`leftQuota`), length(`leftQuota`) == 1)
-        self$`leftQuota` <- `leftQuota`
-      }
-      if (!missing(`minRedemptionAmount`)) {
-        stopifnot(is.character(`minRedemptionAmount`), length(`minRedemptionAmount`) == 1)
-        self$`minRedemptionAmount` <- `minRedemptionAmount`
+      if (!missing(`listenKey`)) {
+        stopifnot(is.character(`listenKey`), length(`listenKey`) == 1)
+        self$`listenKey` <- `listenKey`
       }
     },
     toJSON = function() {
       InlineResponse20077Object <- list()
-      if (!is.null(self$`asset`)) {
-        InlineResponse20077Object[['asset']] <-
-          self$`asset`
-      }
-      if (!is.null(self$`dailyQuota`)) {
-        InlineResponse20077Object[['dailyQuota']] <-
-          self$`dailyQuota`
-      }
-      if (!is.null(self$`leftQuota`)) {
-        InlineResponse20077Object[['leftQuota']] <-
-          self$`leftQuota`
-      }
-      if (!is.null(self$`minRedemptionAmount`)) {
-        InlineResponse20077Object[['minRedemptionAmount']] <-
-          self$`minRedemptionAmount`
+      if (!is.null(self$`listenKey`)) {
+        InlineResponse20077Object[['listenKey']] <-
+          self$`listenKey`
       }
 
       InlineResponse20077Object
     },
     fromJSON = function(InlineResponse20077Json) {
       InlineResponse20077Object <- jsonlite::fromJSON(InlineResponse20077Json)
-      if (!is.null(InlineResponse20077Object$`asset`)) {
-        self$`asset` <- InlineResponse20077Object$`asset`
-      }
-      if (!is.null(InlineResponse20077Object$`dailyQuota`)) {
-        self$`dailyQuota` <- InlineResponse20077Object$`dailyQuota`
-      }
-      if (!is.null(InlineResponse20077Object$`leftQuota`)) {
-        self$`leftQuota` <- InlineResponse20077Object$`leftQuota`
-      }
-      if (!is.null(InlineResponse20077Object$`minRedemptionAmount`)) {
-        self$`minRedemptionAmount` <- InlineResponse20077Object$`minRedemptionAmount`
+      if (!is.null(InlineResponse20077Object$`listenKey`)) {
+        self$`listenKey` <- InlineResponse20077Object$`listenKey`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`asset`)) {
+        if (!is.null(self$`listenKey`)) {
         sprintf(
-        '"asset":
+        '"listenKey":
           "%s"
                 ',
-        self$`asset`
-        )},
-        if (!is.null(self$`dailyQuota`)) {
-        sprintf(
-        '"dailyQuota":
-          "%s"
-                ',
-        self$`dailyQuota`
-        )},
-        if (!is.null(self$`leftQuota`)) {
-        sprintf(
-        '"leftQuota":
-          "%s"
-                ',
-        self$`leftQuota`
-        )},
-        if (!is.null(self$`minRedemptionAmount`)) {
-        sprintf(
-        '"minRedemptionAmount":
-          "%s"
-                ',
-        self$`minRedemptionAmount`
+        self$`listenKey`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -125,10 +62,7 @@ InlineResponse20077 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20077Json) {
       InlineResponse20077Object <- jsonlite::fromJSON(InlineResponse20077Json)
-      self$`asset` <- InlineResponse20077Object$`asset`
-      self$`dailyQuota` <- InlineResponse20077Object$`dailyQuota`
-      self$`leftQuota` <- InlineResponse20077Object$`leftQuota`
-      self$`minRedemptionAmount` <- InlineResponse20077Object$`minRedemptionAmount`
+      self$`listenKey` <- InlineResponse20077Object$`listenKey`
       self
     }
   )

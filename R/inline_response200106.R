@@ -13,19 +13,19 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field operationId  integer 
+#' @field id  numeric 
 #'
-#' @field poolId  integer 
+#' @field tokenName  character 
 #'
-#' @field poolName  character 
+#' @field amount  character 
 #'
-#' @field operation  character 
+#' @field nav  character 
 #'
-#' @field status  integer 
+#' @field fee  character 
 #'
-#' @field updateTime  integer 
+#' @field totalCharge  character 
 #'
-#' @field shareAmount  character 
+#' @field timestamp  integer 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -33,154 +33,154 @@
 InlineResponse200106 <- R6::R6Class(
   'InlineResponse200106',
   public = list(
-    `operationId` = NULL,
-    `poolId` = NULL,
-    `poolName` = NULL,
-    `operation` = NULL,
-    `status` = NULL,
-    `updateTime` = NULL,
-    `shareAmount` = NULL,
+    `id` = NULL,
+    `tokenName` = NULL,
+    `amount` = NULL,
+    `nav` = NULL,
+    `fee` = NULL,
+    `totalCharge` = NULL,
+    `timestamp` = NULL,
     initialize = function(
-        `operationId`, `poolId`, `poolName`, `operation`, `status`, `updateTime`, `shareAmount`, ...
+        `id`, `tokenName`, `amount`, `nav`, `fee`, `totalCharge`, `timestamp`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`operationId`)) {
-        stopifnot(is.numeric(`operationId`), length(`operationId`) == 1)
-        self$`operationId` <- `operationId`
+      if (!missing(`id`)) {
+        stopifnot(is.numeric(`id`), length(`id`) == 1)
+        self$`id` <- `id`
       }
-      if (!missing(`poolId`)) {
-        stopifnot(is.numeric(`poolId`), length(`poolId`) == 1)
-        self$`poolId` <- `poolId`
+      if (!missing(`tokenName`)) {
+        stopifnot(is.character(`tokenName`), length(`tokenName`) == 1)
+        self$`tokenName` <- `tokenName`
       }
-      if (!missing(`poolName`)) {
-        stopifnot(is.character(`poolName`), length(`poolName`) == 1)
-        self$`poolName` <- `poolName`
+      if (!missing(`amount`)) {
+        stopifnot(is.character(`amount`), length(`amount`) == 1)
+        self$`amount` <- `amount`
       }
-      if (!missing(`operation`)) {
-        stopifnot(is.character(`operation`), length(`operation`) == 1)
-        self$`operation` <- `operation`
+      if (!missing(`nav`)) {
+        stopifnot(is.character(`nav`), length(`nav`) == 1)
+        self$`nav` <- `nav`
       }
-      if (!missing(`status`)) {
-        stopifnot(is.numeric(`status`), length(`status`) == 1)
-        self$`status` <- `status`
+      if (!missing(`fee`)) {
+        stopifnot(is.character(`fee`), length(`fee`) == 1)
+        self$`fee` <- `fee`
       }
-      if (!missing(`updateTime`)) {
-        stopifnot(is.numeric(`updateTime`), length(`updateTime`) == 1)
-        self$`updateTime` <- `updateTime`
+      if (!missing(`totalCharge`)) {
+        stopifnot(is.character(`totalCharge`), length(`totalCharge`) == 1)
+        self$`totalCharge` <- `totalCharge`
       }
-      if (!missing(`shareAmount`)) {
-        stopifnot(is.character(`shareAmount`), length(`shareAmount`) == 1)
-        self$`shareAmount` <- `shareAmount`
+      if (!missing(`timestamp`)) {
+        stopifnot(is.numeric(`timestamp`), length(`timestamp`) == 1)
+        self$`timestamp` <- `timestamp`
       }
     },
     toJSON = function() {
       InlineResponse200106Object <- list()
-      if (!is.null(self$`operationId`)) {
-        InlineResponse200106Object[['operationId']] <-
-          self$`operationId`
+      if (!is.null(self$`id`)) {
+        InlineResponse200106Object[['id']] <-
+          self$`id`
       }
-      if (!is.null(self$`poolId`)) {
-        InlineResponse200106Object[['poolId']] <-
-          self$`poolId`
+      if (!is.null(self$`tokenName`)) {
+        InlineResponse200106Object[['tokenName']] <-
+          self$`tokenName`
       }
-      if (!is.null(self$`poolName`)) {
-        InlineResponse200106Object[['poolName']] <-
-          self$`poolName`
+      if (!is.null(self$`amount`)) {
+        InlineResponse200106Object[['amount']] <-
+          self$`amount`
       }
-      if (!is.null(self$`operation`)) {
-        InlineResponse200106Object[['operation']] <-
-          self$`operation`
+      if (!is.null(self$`nav`)) {
+        InlineResponse200106Object[['nav']] <-
+          self$`nav`
       }
-      if (!is.null(self$`status`)) {
-        InlineResponse200106Object[['status']] <-
-          self$`status`
+      if (!is.null(self$`fee`)) {
+        InlineResponse200106Object[['fee']] <-
+          self$`fee`
       }
-      if (!is.null(self$`updateTime`)) {
-        InlineResponse200106Object[['updateTime']] <-
-          self$`updateTime`
+      if (!is.null(self$`totalCharge`)) {
+        InlineResponse200106Object[['totalCharge']] <-
+          self$`totalCharge`
       }
-      if (!is.null(self$`shareAmount`)) {
-        InlineResponse200106Object[['shareAmount']] <-
-          self$`shareAmount`
+      if (!is.null(self$`timestamp`)) {
+        InlineResponse200106Object[['timestamp']] <-
+          self$`timestamp`
       }
 
       InlineResponse200106Object
     },
     fromJSON = function(InlineResponse200106Json) {
       InlineResponse200106Object <- jsonlite::fromJSON(InlineResponse200106Json)
-      if (!is.null(InlineResponse200106Object$`operationId`)) {
-        self$`operationId` <- InlineResponse200106Object$`operationId`
+      if (!is.null(InlineResponse200106Object$`id`)) {
+        self$`id` <- InlineResponse200106Object$`id`
       }
-      if (!is.null(InlineResponse200106Object$`poolId`)) {
-        self$`poolId` <- InlineResponse200106Object$`poolId`
+      if (!is.null(InlineResponse200106Object$`tokenName`)) {
+        self$`tokenName` <- InlineResponse200106Object$`tokenName`
       }
-      if (!is.null(InlineResponse200106Object$`poolName`)) {
-        self$`poolName` <- InlineResponse200106Object$`poolName`
+      if (!is.null(InlineResponse200106Object$`amount`)) {
+        self$`amount` <- InlineResponse200106Object$`amount`
       }
-      if (!is.null(InlineResponse200106Object$`operation`)) {
-        self$`operation` <- InlineResponse200106Object$`operation`
+      if (!is.null(InlineResponse200106Object$`nav`)) {
+        self$`nav` <- InlineResponse200106Object$`nav`
       }
-      if (!is.null(InlineResponse200106Object$`status`)) {
-        self$`status` <- InlineResponse200106Object$`status`
+      if (!is.null(InlineResponse200106Object$`fee`)) {
+        self$`fee` <- InlineResponse200106Object$`fee`
       }
-      if (!is.null(InlineResponse200106Object$`updateTime`)) {
-        self$`updateTime` <- InlineResponse200106Object$`updateTime`
+      if (!is.null(InlineResponse200106Object$`totalCharge`)) {
+        self$`totalCharge` <- InlineResponse200106Object$`totalCharge`
       }
-      if (!is.null(InlineResponse200106Object$`shareAmount`)) {
-        self$`shareAmount` <- InlineResponse200106Object$`shareAmount`
+      if (!is.null(InlineResponse200106Object$`timestamp`)) {
+        self$`timestamp` <- InlineResponse200106Object$`timestamp`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`operationId`)) {
+        if (!is.null(self$`id`)) {
         sprintf(
-        '"operationId":
+        '"id":
           %d
                 ',
-        self$`operationId`
+        self$`id`
         )},
-        if (!is.null(self$`poolId`)) {
+        if (!is.null(self$`tokenName`)) {
         sprintf(
-        '"poolId":
-          %d
-                ',
-        self$`poolId`
-        )},
-        if (!is.null(self$`poolName`)) {
-        sprintf(
-        '"poolName":
+        '"tokenName":
           "%s"
                 ',
-        self$`poolName`
+        self$`tokenName`
         )},
-        if (!is.null(self$`operation`)) {
+        if (!is.null(self$`amount`)) {
         sprintf(
-        '"operation":
+        '"amount":
           "%s"
                 ',
-        self$`operation`
+        self$`amount`
         )},
-        if (!is.null(self$`status`)) {
+        if (!is.null(self$`nav`)) {
         sprintf(
-        '"status":
-          %d
-                ',
-        self$`status`
-        )},
-        if (!is.null(self$`updateTime`)) {
-        sprintf(
-        '"updateTime":
-          %d
-                ',
-        self$`updateTime`
-        )},
-        if (!is.null(self$`shareAmount`)) {
-        sprintf(
-        '"shareAmount":
+        '"nav":
           "%s"
                 ',
-        self$`shareAmount`
+        self$`nav`
+        )},
+        if (!is.null(self$`fee`)) {
+        sprintf(
+        '"fee":
+          "%s"
+                ',
+        self$`fee`
+        )},
+        if (!is.null(self$`totalCharge`)) {
+        sprintf(
+        '"totalCharge":
+          "%s"
+                ',
+        self$`totalCharge`
+        )},
+        if (!is.null(self$`timestamp`)) {
+        sprintf(
+        '"timestamp":
+          %d
+                ',
+        self$`timestamp`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -188,13 +188,13 @@ InlineResponse200106 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse200106Json) {
       InlineResponse200106Object <- jsonlite::fromJSON(InlineResponse200106Json)
-      self$`operationId` <- InlineResponse200106Object$`operationId`
-      self$`poolId` <- InlineResponse200106Object$`poolId`
-      self$`poolName` <- InlineResponse200106Object$`poolName`
-      self$`operation` <- InlineResponse200106Object$`operation`
-      self$`status` <- InlineResponse200106Object$`status`
-      self$`updateTime` <- InlineResponse200106Object$`updateTime`
-      self$`shareAmount` <- InlineResponse200106Object$`shareAmount`
+      self$`id` <- InlineResponse200106Object$`id`
+      self$`tokenName` <- InlineResponse200106Object$`tokenName`
+      self$`amount` <- InlineResponse200106Object$`amount`
+      self$`nav` <- InlineResponse200106Object$`nav`
+      self$`fee` <- InlineResponse200106Object$`fee`
+      self$`totalCharge` <- InlineResponse200106Object$`totalCharge`
+      self$`timestamp` <- InlineResponse200106Object$`timestamp`
       self
     }
   )

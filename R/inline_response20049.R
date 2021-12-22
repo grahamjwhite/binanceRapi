@@ -13,11 +13,7 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field success  character 
-#'
-#' @field futuresType  integer 
-#'
-#' @field transfers  list( \link{InlineResponse20049Transfers} ) 
+#' @field email  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -25,79 +21,40 @@
 InlineResponse20049 <- R6::R6Class(
   'InlineResponse20049',
   public = list(
-    `success` = NULL,
-    `futuresType` = NULL,
-    `transfers` = NULL,
+    `email` = NULL,
     initialize = function(
-        `success`, `futuresType`, `transfers`, ...
+        `email`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`success`)) {
-        stopifnot(is.logical(`success`), length(`success`) == 1)
-        self$`success` <- `success`
-      }
-      if (!missing(`futuresType`)) {
-        stopifnot(is.numeric(`futuresType`), length(`futuresType`) == 1)
-        self$`futuresType` <- `futuresType`
-      }
-      if (!missing(`transfers`)) {
-        stopifnot(is.vector(`transfers`), length(`transfers`) != 0)
-        sapply(`transfers`, function(x) stopifnot(R6::is.R6(x)))
-        self$`transfers` <- `transfers`
+      if (!missing(`email`)) {
+        stopifnot(is.character(`email`), length(`email`) == 1)
+        self$`email` <- `email`
       }
     },
     toJSON = function() {
       InlineResponse20049Object <- list()
-      if (!is.null(self$`success`)) {
-        InlineResponse20049Object[['success']] <-
-          self$`success`
-      }
-      if (!is.null(self$`futuresType`)) {
-        InlineResponse20049Object[['futuresType']] <-
-          self$`futuresType`
-      }
-      if (!is.null(self$`transfers`)) {
-        InlineResponse20049Object[['transfers']] <-
-          lapply(self$`transfers`, function(x) x$toJSON())
+      if (!is.null(self$`email`)) {
+        InlineResponse20049Object[['email']] <-
+          self$`email`
       }
 
       InlineResponse20049Object
     },
     fromJSON = function(InlineResponse20049Json) {
       InlineResponse20049Object <- jsonlite::fromJSON(InlineResponse20049Json)
-      if (!is.null(InlineResponse20049Object$`success`)) {
-        self$`success` <- InlineResponse20049Object$`success`
-      }
-      if (!is.null(InlineResponse20049Object$`futuresType`)) {
-        self$`futuresType` <- InlineResponse20049Object$`futuresType`
-      }
-      if (!is.null(InlineResponse20049Object$`transfers`)) {
-        self$`transfers` <- ApiClient$new()$deserializeObj(InlineResponse20049Object$`transfers`, "array[InlineResponse20049Transfers]", loadNamespace("binanceRapi"))
+      if (!is.null(InlineResponse20049Object$`email`)) {
+        self$`email` <- InlineResponse20049Object$`email`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`success`)) {
+        if (!is.null(self$`email`)) {
         sprintf(
-        '"success":
-          %s
+        '"email":
+          "%s"
                 ',
-        tolower(self$`success`)
-        )},
-        if (!is.null(self$`futuresType`)) {
-        sprintf(
-        '"futuresType":
-          %d
-                ',
-        self$`futuresType`
-        )},
-        if (!is.null(self$`transfers`)) {
-        sprintf(
-        '"transfers":
-        [%s]
-',
-        paste(sapply(self$`transfers`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
+        self$`email`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -105,9 +62,7 @@ InlineResponse20049 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20049Json) {
       InlineResponse20049Object <- jsonlite::fromJSON(InlineResponse20049Json)
-      self$`success` <- InlineResponse20049Object$`success`
-      self$`futuresType` <- InlineResponse20049Object$`futuresType`
-      self$`transfers` <- ApiClient$new()$deserializeObj(InlineResponse20049Object$`transfers`, "array[InlineResponse20049Transfers]", loadNamespace("binanceRapi"))
+      self$`email` <- InlineResponse20049Object$`email`
       self
     }
   )

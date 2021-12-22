@@ -13,7 +13,9 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field listenKey  character 
+#' @field email  character 
+#'
+#' @field enableBlvt  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -21,40 +23,59 @@
 InlineResponse20070 <- R6::R6Class(
   'InlineResponse20070',
   public = list(
-    `listenKey` = NULL,
+    `email` = NULL,
+    `enableBlvt` = NULL,
     initialize = function(
-        `listenKey`, ...
+        `email`, `enableBlvt`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`listenKey`)) {
-        stopifnot(is.character(`listenKey`), length(`listenKey`) == 1)
-        self$`listenKey` <- `listenKey`
+      if (!missing(`email`)) {
+        stopifnot(is.character(`email`), length(`email`) == 1)
+        self$`email` <- `email`
+      }
+      if (!missing(`enableBlvt`)) {
+        stopifnot(is.logical(`enableBlvt`), length(`enableBlvt`) == 1)
+        self$`enableBlvt` <- `enableBlvt`
       }
     },
     toJSON = function() {
       InlineResponse20070Object <- list()
-      if (!is.null(self$`listenKey`)) {
-        InlineResponse20070Object[['listenKey']] <-
-          self$`listenKey`
+      if (!is.null(self$`email`)) {
+        InlineResponse20070Object[['email']] <-
+          self$`email`
+      }
+      if (!is.null(self$`enableBlvt`)) {
+        InlineResponse20070Object[['enableBlvt']] <-
+          self$`enableBlvt`
       }
 
       InlineResponse20070Object
     },
     fromJSON = function(InlineResponse20070Json) {
       InlineResponse20070Object <- jsonlite::fromJSON(InlineResponse20070Json)
-      if (!is.null(InlineResponse20070Object$`listenKey`)) {
-        self$`listenKey` <- InlineResponse20070Object$`listenKey`
+      if (!is.null(InlineResponse20070Object$`email`)) {
+        self$`email` <- InlineResponse20070Object$`email`
+      }
+      if (!is.null(InlineResponse20070Object$`enableBlvt`)) {
+        self$`enableBlvt` <- InlineResponse20070Object$`enableBlvt`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`listenKey`)) {
+        if (!is.null(self$`email`)) {
         sprintf(
-        '"listenKey":
+        '"email":
           "%s"
                 ',
-        self$`listenKey`
+        self$`email`
+        )},
+        if (!is.null(self$`enableBlvt`)) {
+        sprintf(
+        '"enableBlvt":
+          %s
+                ',
+        tolower(self$`enableBlvt`)
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -62,7 +83,8 @@ InlineResponse20070 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20070Json) {
       InlineResponse20070Object <- jsonlite::fromJSON(InlineResponse20070Json)
-      self$`listenKey` <- InlineResponse20070Object$`listenKey`
+      self$`email` <- InlineResponse20070Object$`email`
+      self$`enableBlvt` <- InlineResponse20070Object$`enableBlvt`
       self
     }
   )

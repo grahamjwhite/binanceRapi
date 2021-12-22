@@ -13,19 +13,27 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field from  character 
+#' @field ipRestrict  character 
 #'
-#' @field to  character 
+#' @field createTime  integer 
 #'
-#' @field asset  character 
+#' @field enableWithdrawals  character 
 #'
-#' @field qty  character 
+#' @field enableInternalTransfer  character 
 #'
-#' @field status  character 
+#' @field permitsUniversalTransfer  character 
 #'
-#' @field tranId  integer 
+#' @field enableVanillaOptions  character 
 #'
-#' @field time  integer 
+#' @field enableReading  character 
+#'
+#' @field enableFutures  character 
+#'
+#' @field enableMargin  character 
+#'
+#' @field enableSpotAndMarginTrading  character 
+#'
+#' @field tradingAuthorityExpirationTime  integer 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -33,154 +41,230 @@
 InlineResponse20048 <- R6::R6Class(
   'InlineResponse20048',
   public = list(
-    `from` = NULL,
-    `to` = NULL,
-    `asset` = NULL,
-    `qty` = NULL,
-    `status` = NULL,
-    `tranId` = NULL,
-    `time` = NULL,
+    `ipRestrict` = NULL,
+    `createTime` = NULL,
+    `enableWithdrawals` = NULL,
+    `enableInternalTransfer` = NULL,
+    `permitsUniversalTransfer` = NULL,
+    `enableVanillaOptions` = NULL,
+    `enableReading` = NULL,
+    `enableFutures` = NULL,
+    `enableMargin` = NULL,
+    `enableSpotAndMarginTrading` = NULL,
+    `tradingAuthorityExpirationTime` = NULL,
     initialize = function(
-        `from`, `to`, `asset`, `qty`, `status`, `tranId`, `time`, ...
+        `ipRestrict`, `createTime`, `enableWithdrawals`, `enableInternalTransfer`, `permitsUniversalTransfer`, `enableVanillaOptions`, `enableReading`, `enableFutures`, `enableMargin`, `enableSpotAndMarginTrading`, `tradingAuthorityExpirationTime`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`from`)) {
-        stopifnot(is.character(`from`), length(`from`) == 1)
-        self$`from` <- `from`
+      if (!missing(`ipRestrict`)) {
+        stopifnot(is.logical(`ipRestrict`), length(`ipRestrict`) == 1)
+        self$`ipRestrict` <- `ipRestrict`
       }
-      if (!missing(`to`)) {
-        stopifnot(is.character(`to`), length(`to`) == 1)
-        self$`to` <- `to`
+      if (!missing(`createTime`)) {
+        stopifnot(is.numeric(`createTime`), length(`createTime`) == 1)
+        self$`createTime` <- `createTime`
       }
-      if (!missing(`asset`)) {
-        stopifnot(is.character(`asset`), length(`asset`) == 1)
-        self$`asset` <- `asset`
+      if (!missing(`enableWithdrawals`)) {
+        stopifnot(is.logical(`enableWithdrawals`), length(`enableWithdrawals`) == 1)
+        self$`enableWithdrawals` <- `enableWithdrawals`
       }
-      if (!missing(`qty`)) {
-        stopifnot(is.character(`qty`), length(`qty`) == 1)
-        self$`qty` <- `qty`
+      if (!missing(`enableInternalTransfer`)) {
+        stopifnot(is.logical(`enableInternalTransfer`), length(`enableInternalTransfer`) == 1)
+        self$`enableInternalTransfer` <- `enableInternalTransfer`
       }
-      if (!missing(`status`)) {
-        stopifnot(is.character(`status`), length(`status`) == 1)
-        self$`status` <- `status`
+      if (!missing(`permitsUniversalTransfer`)) {
+        stopifnot(is.logical(`permitsUniversalTransfer`), length(`permitsUniversalTransfer`) == 1)
+        self$`permitsUniversalTransfer` <- `permitsUniversalTransfer`
       }
-      if (!missing(`tranId`)) {
-        stopifnot(is.numeric(`tranId`), length(`tranId`) == 1)
-        self$`tranId` <- `tranId`
+      if (!missing(`enableVanillaOptions`)) {
+        stopifnot(is.logical(`enableVanillaOptions`), length(`enableVanillaOptions`) == 1)
+        self$`enableVanillaOptions` <- `enableVanillaOptions`
       }
-      if (!missing(`time`)) {
-        stopifnot(is.numeric(`time`), length(`time`) == 1)
-        self$`time` <- `time`
+      if (!missing(`enableReading`)) {
+        stopifnot(is.logical(`enableReading`), length(`enableReading`) == 1)
+        self$`enableReading` <- `enableReading`
+      }
+      if (!missing(`enableFutures`)) {
+        stopifnot(is.logical(`enableFutures`), length(`enableFutures`) == 1)
+        self$`enableFutures` <- `enableFutures`
+      }
+      if (!missing(`enableMargin`)) {
+        stopifnot(is.logical(`enableMargin`), length(`enableMargin`) == 1)
+        self$`enableMargin` <- `enableMargin`
+      }
+      if (!missing(`enableSpotAndMarginTrading`)) {
+        stopifnot(is.logical(`enableSpotAndMarginTrading`), length(`enableSpotAndMarginTrading`) == 1)
+        self$`enableSpotAndMarginTrading` <- `enableSpotAndMarginTrading`
+      }
+      if (!missing(`tradingAuthorityExpirationTime`)) {
+        stopifnot(is.numeric(`tradingAuthorityExpirationTime`), length(`tradingAuthorityExpirationTime`) == 1)
+        self$`tradingAuthorityExpirationTime` <- `tradingAuthorityExpirationTime`
       }
     },
     toJSON = function() {
       InlineResponse20048Object <- list()
-      if (!is.null(self$`from`)) {
-        InlineResponse20048Object[['from']] <-
-          self$`from`
+      if (!is.null(self$`ipRestrict`)) {
+        InlineResponse20048Object[['ipRestrict']] <-
+          self$`ipRestrict`
       }
-      if (!is.null(self$`to`)) {
-        InlineResponse20048Object[['to']] <-
-          self$`to`
+      if (!is.null(self$`createTime`)) {
+        InlineResponse20048Object[['createTime']] <-
+          self$`createTime`
       }
-      if (!is.null(self$`asset`)) {
-        InlineResponse20048Object[['asset']] <-
-          self$`asset`
+      if (!is.null(self$`enableWithdrawals`)) {
+        InlineResponse20048Object[['enableWithdrawals']] <-
+          self$`enableWithdrawals`
       }
-      if (!is.null(self$`qty`)) {
-        InlineResponse20048Object[['qty']] <-
-          self$`qty`
+      if (!is.null(self$`enableInternalTransfer`)) {
+        InlineResponse20048Object[['enableInternalTransfer']] <-
+          self$`enableInternalTransfer`
       }
-      if (!is.null(self$`status`)) {
-        InlineResponse20048Object[['status']] <-
-          self$`status`
+      if (!is.null(self$`permitsUniversalTransfer`)) {
+        InlineResponse20048Object[['permitsUniversalTransfer']] <-
+          self$`permitsUniversalTransfer`
       }
-      if (!is.null(self$`tranId`)) {
-        InlineResponse20048Object[['tranId']] <-
-          self$`tranId`
+      if (!is.null(self$`enableVanillaOptions`)) {
+        InlineResponse20048Object[['enableVanillaOptions']] <-
+          self$`enableVanillaOptions`
       }
-      if (!is.null(self$`time`)) {
-        InlineResponse20048Object[['time']] <-
-          self$`time`
+      if (!is.null(self$`enableReading`)) {
+        InlineResponse20048Object[['enableReading']] <-
+          self$`enableReading`
+      }
+      if (!is.null(self$`enableFutures`)) {
+        InlineResponse20048Object[['enableFutures']] <-
+          self$`enableFutures`
+      }
+      if (!is.null(self$`enableMargin`)) {
+        InlineResponse20048Object[['enableMargin']] <-
+          self$`enableMargin`
+      }
+      if (!is.null(self$`enableSpotAndMarginTrading`)) {
+        InlineResponse20048Object[['enableSpotAndMarginTrading']] <-
+          self$`enableSpotAndMarginTrading`
+      }
+      if (!is.null(self$`tradingAuthorityExpirationTime`)) {
+        InlineResponse20048Object[['tradingAuthorityExpirationTime']] <-
+          self$`tradingAuthorityExpirationTime`
       }
 
       InlineResponse20048Object
     },
     fromJSON = function(InlineResponse20048Json) {
       InlineResponse20048Object <- jsonlite::fromJSON(InlineResponse20048Json)
-      if (!is.null(InlineResponse20048Object$`from`)) {
-        self$`from` <- InlineResponse20048Object$`from`
+      if (!is.null(InlineResponse20048Object$`ipRestrict`)) {
+        self$`ipRestrict` <- InlineResponse20048Object$`ipRestrict`
       }
-      if (!is.null(InlineResponse20048Object$`to`)) {
-        self$`to` <- InlineResponse20048Object$`to`
+      if (!is.null(InlineResponse20048Object$`createTime`)) {
+        self$`createTime` <- InlineResponse20048Object$`createTime`
       }
-      if (!is.null(InlineResponse20048Object$`asset`)) {
-        self$`asset` <- InlineResponse20048Object$`asset`
+      if (!is.null(InlineResponse20048Object$`enableWithdrawals`)) {
+        self$`enableWithdrawals` <- InlineResponse20048Object$`enableWithdrawals`
       }
-      if (!is.null(InlineResponse20048Object$`qty`)) {
-        self$`qty` <- InlineResponse20048Object$`qty`
+      if (!is.null(InlineResponse20048Object$`enableInternalTransfer`)) {
+        self$`enableInternalTransfer` <- InlineResponse20048Object$`enableInternalTransfer`
       }
-      if (!is.null(InlineResponse20048Object$`status`)) {
-        self$`status` <- InlineResponse20048Object$`status`
+      if (!is.null(InlineResponse20048Object$`permitsUniversalTransfer`)) {
+        self$`permitsUniversalTransfer` <- InlineResponse20048Object$`permitsUniversalTransfer`
       }
-      if (!is.null(InlineResponse20048Object$`tranId`)) {
-        self$`tranId` <- InlineResponse20048Object$`tranId`
+      if (!is.null(InlineResponse20048Object$`enableVanillaOptions`)) {
+        self$`enableVanillaOptions` <- InlineResponse20048Object$`enableVanillaOptions`
       }
-      if (!is.null(InlineResponse20048Object$`time`)) {
-        self$`time` <- InlineResponse20048Object$`time`
+      if (!is.null(InlineResponse20048Object$`enableReading`)) {
+        self$`enableReading` <- InlineResponse20048Object$`enableReading`
+      }
+      if (!is.null(InlineResponse20048Object$`enableFutures`)) {
+        self$`enableFutures` <- InlineResponse20048Object$`enableFutures`
+      }
+      if (!is.null(InlineResponse20048Object$`enableMargin`)) {
+        self$`enableMargin` <- InlineResponse20048Object$`enableMargin`
+      }
+      if (!is.null(InlineResponse20048Object$`enableSpotAndMarginTrading`)) {
+        self$`enableSpotAndMarginTrading` <- InlineResponse20048Object$`enableSpotAndMarginTrading`
+      }
+      if (!is.null(InlineResponse20048Object$`tradingAuthorityExpirationTime`)) {
+        self$`tradingAuthorityExpirationTime` <- InlineResponse20048Object$`tradingAuthorityExpirationTime`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`from`)) {
+        if (!is.null(self$`ipRestrict`)) {
         sprintf(
-        '"from":
-          "%s"
+        '"ipRestrict":
+          %s
                 ',
-        self$`from`
+        tolower(self$`ipRestrict`)
         )},
-        if (!is.null(self$`to`)) {
+        if (!is.null(self$`createTime`)) {
         sprintf(
-        '"to":
-          "%s"
-                ',
-        self$`to`
-        )},
-        if (!is.null(self$`asset`)) {
-        sprintf(
-        '"asset":
-          "%s"
-                ',
-        self$`asset`
-        )},
-        if (!is.null(self$`qty`)) {
-        sprintf(
-        '"qty":
-          "%s"
-                ',
-        self$`qty`
-        )},
-        if (!is.null(self$`status`)) {
-        sprintf(
-        '"status":
-          "%s"
-                ',
-        self$`status`
-        )},
-        if (!is.null(self$`tranId`)) {
-        sprintf(
-        '"tranId":
+        '"createTime":
           %d
                 ',
-        self$`tranId`
+        self$`createTime`
         )},
-        if (!is.null(self$`time`)) {
+        if (!is.null(self$`enableWithdrawals`)) {
         sprintf(
-        '"time":
+        '"enableWithdrawals":
+          %s
+                ',
+        tolower(self$`enableWithdrawals`)
+        )},
+        if (!is.null(self$`enableInternalTransfer`)) {
+        sprintf(
+        '"enableInternalTransfer":
+          %s
+                ',
+        tolower(self$`enableInternalTransfer`)
+        )},
+        if (!is.null(self$`permitsUniversalTransfer`)) {
+        sprintf(
+        '"permitsUniversalTransfer":
+          %s
+                ',
+        tolower(self$`permitsUniversalTransfer`)
+        )},
+        if (!is.null(self$`enableVanillaOptions`)) {
+        sprintf(
+        '"enableVanillaOptions":
+          %s
+                ',
+        tolower(self$`enableVanillaOptions`)
+        )},
+        if (!is.null(self$`enableReading`)) {
+        sprintf(
+        '"enableReading":
+          %s
+                ',
+        tolower(self$`enableReading`)
+        )},
+        if (!is.null(self$`enableFutures`)) {
+        sprintf(
+        '"enableFutures":
+          %s
+                ',
+        tolower(self$`enableFutures`)
+        )},
+        if (!is.null(self$`enableMargin`)) {
+        sprintf(
+        '"enableMargin":
+          %s
+                ',
+        tolower(self$`enableMargin`)
+        )},
+        if (!is.null(self$`enableSpotAndMarginTrading`)) {
+        sprintf(
+        '"enableSpotAndMarginTrading":
+          %s
+                ',
+        tolower(self$`enableSpotAndMarginTrading`)
+        )},
+        if (!is.null(self$`tradingAuthorityExpirationTime`)) {
+        sprintf(
+        '"tradingAuthorityExpirationTime":
           %d
                 ',
-        self$`time`
+        self$`tradingAuthorityExpirationTime`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -188,13 +272,17 @@ InlineResponse20048 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20048Json) {
       InlineResponse20048Object <- jsonlite::fromJSON(InlineResponse20048Json)
-      self$`from` <- InlineResponse20048Object$`from`
-      self$`to` <- InlineResponse20048Object$`to`
-      self$`asset` <- InlineResponse20048Object$`asset`
-      self$`qty` <- InlineResponse20048Object$`qty`
-      self$`status` <- InlineResponse20048Object$`status`
-      self$`tranId` <- InlineResponse20048Object$`tranId`
-      self$`time` <- InlineResponse20048Object$`time`
+      self$`ipRestrict` <- InlineResponse20048Object$`ipRestrict`
+      self$`createTime` <- InlineResponse20048Object$`createTime`
+      self$`enableWithdrawals` <- InlineResponse20048Object$`enableWithdrawals`
+      self$`enableInternalTransfer` <- InlineResponse20048Object$`enableInternalTransfer`
+      self$`permitsUniversalTransfer` <- InlineResponse20048Object$`permitsUniversalTransfer`
+      self$`enableVanillaOptions` <- InlineResponse20048Object$`enableVanillaOptions`
+      self$`enableReading` <- InlineResponse20048Object$`enableReading`
+      self$`enableFutures` <- InlineResponse20048Object$`enableFutures`
+      self$`enableMargin` <- InlineResponse20048Object$`enableMargin`
+      self$`enableSpotAndMarginTrading` <- InlineResponse20048Object$`enableSpotAndMarginTrading`
+      self$`tradingAuthorityExpirationTime` <- InlineResponse20048Object$`tradingAuthorityExpirationTime`
       self
     }
   )

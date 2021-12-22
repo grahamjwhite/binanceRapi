@@ -13,15 +13,13 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field code  character 
+#' @field ipRestrict  character 
 #'
-#' @field message  character 
+#' @field ipList  list( character ) 
 #'
-#' @field data  list( \link{InlineResponse20073Data} ) 
+#' @field updateTime  integer 
 #'
-#' @field total  integer 
-#'
-#' @field success  character 
+#' @field apiKey  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -29,117 +27,98 @@
 InlineResponse20073 <- R6::R6Class(
   'InlineResponse20073',
   public = list(
-    `code` = NULL,
-    `message` = NULL,
-    `data` = NULL,
-    `total` = NULL,
-    `success` = NULL,
+    `ipRestrict` = NULL,
+    `ipList` = NULL,
+    `updateTime` = NULL,
+    `apiKey` = NULL,
     initialize = function(
-        `code`, `message`, `data`, `total`, `success`, ...
+        `ipRestrict`, `ipList`, `updateTime`, `apiKey`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`code`)) {
-        stopifnot(is.character(`code`), length(`code`) == 1)
-        self$`code` <- `code`
+      if (!missing(`ipRestrict`)) {
+        stopifnot(is.character(`ipRestrict`), length(`ipRestrict`) == 1)
+        self$`ipRestrict` <- `ipRestrict`
       }
-      if (!missing(`message`)) {
-        stopifnot(is.character(`message`), length(`message`) == 1)
-        self$`message` <- `message`
+      if (!missing(`ipList`)) {
+        stopifnot(is.vector(`ipList`), length(`ipList`) != 0)
+        sapply(`ipList`, function(x) stopifnot(is.character(x)))
+        self$`ipList` <- `ipList`
       }
-      if (!missing(`data`)) {
-        stopifnot(is.vector(`data`), length(`data`) != 0)
-        sapply(`data`, function(x) stopifnot(R6::is.R6(x)))
-        self$`data` <- `data`
+      if (!missing(`updateTime`)) {
+        stopifnot(is.numeric(`updateTime`), length(`updateTime`) == 1)
+        self$`updateTime` <- `updateTime`
       }
-      if (!missing(`total`)) {
-        stopifnot(is.numeric(`total`), length(`total`) == 1)
-        self$`total` <- `total`
-      }
-      if (!missing(`success`)) {
-        stopifnot(is.logical(`success`), length(`success`) == 1)
-        self$`success` <- `success`
+      if (!missing(`apiKey`)) {
+        stopifnot(is.character(`apiKey`), length(`apiKey`) == 1)
+        self$`apiKey` <- `apiKey`
       }
     },
     toJSON = function() {
       InlineResponse20073Object <- list()
-      if (!is.null(self$`code`)) {
-        InlineResponse20073Object[['code']] <-
-          self$`code`
+      if (!is.null(self$`ipRestrict`)) {
+        InlineResponse20073Object[['ipRestrict']] <-
+          self$`ipRestrict`
       }
-      if (!is.null(self$`message`)) {
-        InlineResponse20073Object[['message']] <-
-          self$`message`
+      if (!is.null(self$`ipList`)) {
+        InlineResponse20073Object[['ipList']] <-
+          self$`ipList`
       }
-      if (!is.null(self$`data`)) {
-        InlineResponse20073Object[['data']] <-
-          lapply(self$`data`, function(x) x$toJSON())
+      if (!is.null(self$`updateTime`)) {
+        InlineResponse20073Object[['updateTime']] <-
+          self$`updateTime`
       }
-      if (!is.null(self$`total`)) {
-        InlineResponse20073Object[['total']] <-
-          self$`total`
-      }
-      if (!is.null(self$`success`)) {
-        InlineResponse20073Object[['success']] <-
-          self$`success`
+      if (!is.null(self$`apiKey`)) {
+        InlineResponse20073Object[['apiKey']] <-
+          self$`apiKey`
       }
 
       InlineResponse20073Object
     },
     fromJSON = function(InlineResponse20073Json) {
       InlineResponse20073Object <- jsonlite::fromJSON(InlineResponse20073Json)
-      if (!is.null(InlineResponse20073Object$`code`)) {
-        self$`code` <- InlineResponse20073Object$`code`
+      if (!is.null(InlineResponse20073Object$`ipRestrict`)) {
+        self$`ipRestrict` <- InlineResponse20073Object$`ipRestrict`
       }
-      if (!is.null(InlineResponse20073Object$`message`)) {
-        self$`message` <- InlineResponse20073Object$`message`
+      if (!is.null(InlineResponse20073Object$`ipList`)) {
+        self$`ipList` <- ApiClient$new()$deserializeObj(InlineResponse20073Object$`ipList`, "array[character]", loadNamespace("binanceRapi"))
       }
-      if (!is.null(InlineResponse20073Object$`data`)) {
-        self$`data` <- ApiClient$new()$deserializeObj(InlineResponse20073Object$`data`, "array[InlineResponse20073Data]", loadNamespace("binanceRapi"))
+      if (!is.null(InlineResponse20073Object$`updateTime`)) {
+        self$`updateTime` <- InlineResponse20073Object$`updateTime`
       }
-      if (!is.null(InlineResponse20073Object$`total`)) {
-        self$`total` <- InlineResponse20073Object$`total`
-      }
-      if (!is.null(InlineResponse20073Object$`success`)) {
-        self$`success` <- InlineResponse20073Object$`success`
+      if (!is.null(InlineResponse20073Object$`apiKey`)) {
+        self$`apiKey` <- InlineResponse20073Object$`apiKey`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`code`)) {
+        if (!is.null(self$`ipRestrict`)) {
         sprintf(
-        '"code":
+        '"ipRestrict":
           "%s"
                 ',
-        self$`code`
+        self$`ipRestrict`
         )},
-        if (!is.null(self$`message`)) {
+        if (!is.null(self$`ipList`)) {
         sprintf(
-        '"message":
-          "%s"
-                ',
-        self$`message`
+        '"ipList":
+           [%s]
+        ',
+        paste(unlist(lapply(self$`ipList`, function(x) paste0('"', x, '"'))), collapse=",")
         )},
-        if (!is.null(self$`data`)) {
+        if (!is.null(self$`updateTime`)) {
         sprintf(
-        '"data":
-        [%s]
-',
-        paste(sapply(self$`data`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
-        )},
-        if (!is.null(self$`total`)) {
-        sprintf(
-        '"total":
+        '"updateTime":
           %d
                 ',
-        self$`total`
+        self$`updateTime`
         )},
-        if (!is.null(self$`success`)) {
+        if (!is.null(self$`apiKey`)) {
         sprintf(
-        '"success":
-          %s
+        '"apiKey":
+          "%s"
                 ',
-        tolower(self$`success`)
+        self$`apiKey`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -147,11 +126,10 @@ InlineResponse20073 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20073Json) {
       InlineResponse20073Object <- jsonlite::fromJSON(InlineResponse20073Json)
-      self$`code` <- InlineResponse20073Object$`code`
-      self$`message` <- InlineResponse20073Object$`message`
-      self$`data` <- ApiClient$new()$deserializeObj(InlineResponse20073Object$`data`, "array[InlineResponse20073Data]", loadNamespace("binanceRapi"))
-      self$`total` <- InlineResponse20073Object$`total`
-      self$`success` <- InlineResponse20073Object$`success`
+      self$`ipRestrict` <- InlineResponse20073Object$`ipRestrict`
+      self$`ipList` <- ApiClient$new()$deserializeObj(InlineResponse20073Object$`ipList`, "array[character]", loadNamespace("binanceRapi"))
+      self$`updateTime` <- InlineResponse20073Object$`updateTime`
+      self$`apiKey` <- InlineResponse20073Object$`apiKey`
       self
     }
   )

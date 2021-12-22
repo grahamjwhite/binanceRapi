@@ -13,13 +13,19 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field totalAssetOfBtc  character 
+#' @field email  character 
 #'
-#' @field totalLiabilityOfBtc  character 
+#' @field isSubUserEnabled  character 
 #'
-#' @field totalNetAssetOfBtc  character 
+#' @field isUserActive  character 
 #'
-#' @field subAccountList  list( \link{InlineResponse20058SubAccountList} ) 
+#' @field insertTime  integer 
+#'
+#' @field isMarginEnabled  character 
+#'
+#' @field isFutureEnabled  character 
+#'
+#' @field mobile  integer 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -27,98 +33,154 @@
 InlineResponse20058 <- R6::R6Class(
   'InlineResponse20058',
   public = list(
-    `totalAssetOfBtc` = NULL,
-    `totalLiabilityOfBtc` = NULL,
-    `totalNetAssetOfBtc` = NULL,
-    `subAccountList` = NULL,
+    `email` = NULL,
+    `isSubUserEnabled` = NULL,
+    `isUserActive` = NULL,
+    `insertTime` = NULL,
+    `isMarginEnabled` = NULL,
+    `isFutureEnabled` = NULL,
+    `mobile` = NULL,
     initialize = function(
-        `totalAssetOfBtc`, `totalLiabilityOfBtc`, `totalNetAssetOfBtc`, `subAccountList`, ...
+        `email`, `isSubUserEnabled`, `isUserActive`, `insertTime`, `isMarginEnabled`, `isFutureEnabled`, `mobile`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`totalAssetOfBtc`)) {
-        stopifnot(is.character(`totalAssetOfBtc`), length(`totalAssetOfBtc`) == 1)
-        self$`totalAssetOfBtc` <- `totalAssetOfBtc`
+      if (!missing(`email`)) {
+        stopifnot(is.character(`email`), length(`email`) == 1)
+        self$`email` <- `email`
       }
-      if (!missing(`totalLiabilityOfBtc`)) {
-        stopifnot(is.character(`totalLiabilityOfBtc`), length(`totalLiabilityOfBtc`) == 1)
-        self$`totalLiabilityOfBtc` <- `totalLiabilityOfBtc`
+      if (!missing(`isSubUserEnabled`)) {
+        stopifnot(is.logical(`isSubUserEnabled`), length(`isSubUserEnabled`) == 1)
+        self$`isSubUserEnabled` <- `isSubUserEnabled`
       }
-      if (!missing(`totalNetAssetOfBtc`)) {
-        stopifnot(is.character(`totalNetAssetOfBtc`), length(`totalNetAssetOfBtc`) == 1)
-        self$`totalNetAssetOfBtc` <- `totalNetAssetOfBtc`
+      if (!missing(`isUserActive`)) {
+        stopifnot(is.logical(`isUserActive`), length(`isUserActive`) == 1)
+        self$`isUserActive` <- `isUserActive`
       }
-      if (!missing(`subAccountList`)) {
-        stopifnot(is.vector(`subAccountList`), length(`subAccountList`) != 0)
-        sapply(`subAccountList`, function(x) stopifnot(R6::is.R6(x)))
-        self$`subAccountList` <- `subAccountList`
+      if (!missing(`insertTime`)) {
+        stopifnot(is.numeric(`insertTime`), length(`insertTime`) == 1)
+        self$`insertTime` <- `insertTime`
+      }
+      if (!missing(`isMarginEnabled`)) {
+        stopifnot(is.logical(`isMarginEnabled`), length(`isMarginEnabled`) == 1)
+        self$`isMarginEnabled` <- `isMarginEnabled`
+      }
+      if (!missing(`isFutureEnabled`)) {
+        stopifnot(is.logical(`isFutureEnabled`), length(`isFutureEnabled`) == 1)
+        self$`isFutureEnabled` <- `isFutureEnabled`
+      }
+      if (!missing(`mobile`)) {
+        stopifnot(is.numeric(`mobile`), length(`mobile`) == 1)
+        self$`mobile` <- `mobile`
       }
     },
     toJSON = function() {
       InlineResponse20058Object <- list()
-      if (!is.null(self$`totalAssetOfBtc`)) {
-        InlineResponse20058Object[['totalAssetOfBtc']] <-
-          self$`totalAssetOfBtc`
+      if (!is.null(self$`email`)) {
+        InlineResponse20058Object[['email']] <-
+          self$`email`
       }
-      if (!is.null(self$`totalLiabilityOfBtc`)) {
-        InlineResponse20058Object[['totalLiabilityOfBtc']] <-
-          self$`totalLiabilityOfBtc`
+      if (!is.null(self$`isSubUserEnabled`)) {
+        InlineResponse20058Object[['isSubUserEnabled']] <-
+          self$`isSubUserEnabled`
       }
-      if (!is.null(self$`totalNetAssetOfBtc`)) {
-        InlineResponse20058Object[['totalNetAssetOfBtc']] <-
-          self$`totalNetAssetOfBtc`
+      if (!is.null(self$`isUserActive`)) {
+        InlineResponse20058Object[['isUserActive']] <-
+          self$`isUserActive`
       }
-      if (!is.null(self$`subAccountList`)) {
-        InlineResponse20058Object[['subAccountList']] <-
-          lapply(self$`subAccountList`, function(x) x$toJSON())
+      if (!is.null(self$`insertTime`)) {
+        InlineResponse20058Object[['insertTime']] <-
+          self$`insertTime`
+      }
+      if (!is.null(self$`isMarginEnabled`)) {
+        InlineResponse20058Object[['isMarginEnabled']] <-
+          self$`isMarginEnabled`
+      }
+      if (!is.null(self$`isFutureEnabled`)) {
+        InlineResponse20058Object[['isFutureEnabled']] <-
+          self$`isFutureEnabled`
+      }
+      if (!is.null(self$`mobile`)) {
+        InlineResponse20058Object[['mobile']] <-
+          self$`mobile`
       }
 
       InlineResponse20058Object
     },
     fromJSON = function(InlineResponse20058Json) {
       InlineResponse20058Object <- jsonlite::fromJSON(InlineResponse20058Json)
-      if (!is.null(InlineResponse20058Object$`totalAssetOfBtc`)) {
-        self$`totalAssetOfBtc` <- InlineResponse20058Object$`totalAssetOfBtc`
+      if (!is.null(InlineResponse20058Object$`email`)) {
+        self$`email` <- InlineResponse20058Object$`email`
       }
-      if (!is.null(InlineResponse20058Object$`totalLiabilityOfBtc`)) {
-        self$`totalLiabilityOfBtc` <- InlineResponse20058Object$`totalLiabilityOfBtc`
+      if (!is.null(InlineResponse20058Object$`isSubUserEnabled`)) {
+        self$`isSubUserEnabled` <- InlineResponse20058Object$`isSubUserEnabled`
       }
-      if (!is.null(InlineResponse20058Object$`totalNetAssetOfBtc`)) {
-        self$`totalNetAssetOfBtc` <- InlineResponse20058Object$`totalNetAssetOfBtc`
+      if (!is.null(InlineResponse20058Object$`isUserActive`)) {
+        self$`isUserActive` <- InlineResponse20058Object$`isUserActive`
       }
-      if (!is.null(InlineResponse20058Object$`subAccountList`)) {
-        self$`subAccountList` <- ApiClient$new()$deserializeObj(InlineResponse20058Object$`subAccountList`, "array[InlineResponse20058SubAccountList]", loadNamespace("binanceRapi"))
+      if (!is.null(InlineResponse20058Object$`insertTime`)) {
+        self$`insertTime` <- InlineResponse20058Object$`insertTime`
+      }
+      if (!is.null(InlineResponse20058Object$`isMarginEnabled`)) {
+        self$`isMarginEnabled` <- InlineResponse20058Object$`isMarginEnabled`
+      }
+      if (!is.null(InlineResponse20058Object$`isFutureEnabled`)) {
+        self$`isFutureEnabled` <- InlineResponse20058Object$`isFutureEnabled`
+      }
+      if (!is.null(InlineResponse20058Object$`mobile`)) {
+        self$`mobile` <- InlineResponse20058Object$`mobile`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`totalAssetOfBtc`)) {
+        if (!is.null(self$`email`)) {
         sprintf(
-        '"totalAssetOfBtc":
+        '"email":
           "%s"
                 ',
-        self$`totalAssetOfBtc`
+        self$`email`
         )},
-        if (!is.null(self$`totalLiabilityOfBtc`)) {
+        if (!is.null(self$`isSubUserEnabled`)) {
         sprintf(
-        '"totalLiabilityOfBtc":
-          "%s"
+        '"isSubUserEnabled":
+          %s
                 ',
-        self$`totalLiabilityOfBtc`
+        tolower(self$`isSubUserEnabled`)
         )},
-        if (!is.null(self$`totalNetAssetOfBtc`)) {
+        if (!is.null(self$`isUserActive`)) {
         sprintf(
-        '"totalNetAssetOfBtc":
-          "%s"
+        '"isUserActive":
+          %s
                 ',
-        self$`totalNetAssetOfBtc`
+        tolower(self$`isUserActive`)
         )},
-        if (!is.null(self$`subAccountList`)) {
+        if (!is.null(self$`insertTime`)) {
         sprintf(
-        '"subAccountList":
-        [%s]
-',
-        paste(sapply(self$`subAccountList`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
+        '"insertTime":
+          %d
+                ',
+        self$`insertTime`
+        )},
+        if (!is.null(self$`isMarginEnabled`)) {
+        sprintf(
+        '"isMarginEnabled":
+          %s
+                ',
+        tolower(self$`isMarginEnabled`)
+        )},
+        if (!is.null(self$`isFutureEnabled`)) {
+        sprintf(
+        '"isFutureEnabled":
+          %s
+                ',
+        tolower(self$`isFutureEnabled`)
+        )},
+        if (!is.null(self$`mobile`)) {
+        sprintf(
+        '"mobile":
+          %d
+                ',
+        self$`mobile`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -126,10 +188,13 @@ InlineResponse20058 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20058Json) {
       InlineResponse20058Object <- jsonlite::fromJSON(InlineResponse20058Json)
-      self$`totalAssetOfBtc` <- InlineResponse20058Object$`totalAssetOfBtc`
-      self$`totalLiabilityOfBtc` <- InlineResponse20058Object$`totalLiabilityOfBtc`
-      self$`totalNetAssetOfBtc` <- InlineResponse20058Object$`totalNetAssetOfBtc`
-      self$`subAccountList` <- ApiClient$new()$deserializeObj(InlineResponse20058Object$`subAccountList`, "array[InlineResponse20058SubAccountList]", loadNamespace("binanceRapi"))
+      self$`email` <- InlineResponse20058Object$`email`
+      self$`isSubUserEnabled` <- InlineResponse20058Object$`isSubUserEnabled`
+      self$`isUserActive` <- InlineResponse20058Object$`isUserActive`
+      self$`insertTime` <- InlineResponse20058Object$`insertTime`
+      self$`isMarginEnabled` <- InlineResponse20058Object$`isMarginEnabled`
+      self$`isFutureEnabled` <- InlineResponse20058Object$`isFutureEnabled`
+      self$`mobile` <- InlineResponse20058Object$`mobile`
       self
     }
   )

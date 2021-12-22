@@ -17,7 +17,7 @@
 #'
 #' @field msg  character 
 #'
-#' @field data  \link{InlineResponse20092Data} 
+#' @field data  list( \link{InlineResponse20092Data} ) 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -41,7 +41,8 @@ InlineResponse20092 <- R6::R6Class(
         self$`msg` <- `msg`
       }
       if (!missing(`data`)) {
-        stopifnot(R6::is.R6(`data`))
+        stopifnot(is.vector(`data`), length(`data`) != 0)
+        sapply(`data`, function(x) stopifnot(R6::is.R6(x)))
         self$`data` <- `data`
       }
     },
@@ -57,7 +58,7 @@ InlineResponse20092 <- R6::R6Class(
       }
       if (!is.null(self$`data`)) {
         InlineResponse20092Object[['data']] <-
-          self$`data`$toJSON()
+          lapply(self$`data`, function(x) x$toJSON())
       }
 
       InlineResponse20092Object
@@ -71,9 +72,7 @@ InlineResponse20092 <- R6::R6Class(
         self$`msg` <- InlineResponse20092Object$`msg`
       }
       if (!is.null(InlineResponse20092Object$`data`)) {
-        dataObject <- InlineResponse20092Data$new()
-        dataObject$fromJSON(jsonlite::toJSON(InlineResponse20092Object$data, auto_unbox = TRUE, digits = NA))
-        self$`data` <- dataObject
+        self$`data` <- ApiClient$new()$deserializeObj(InlineResponse20092Object$`data`, "array[InlineResponse20092Data]", loadNamespace("binanceRapi"))
       }
       self
     },
@@ -96,9 +95,9 @@ InlineResponse20092 <- R6::R6Class(
         if (!is.null(self$`data`)) {
         sprintf(
         '"data":
-        %s
-        ',
-        jsonlite::toJSON(self$`data`$toJSON(), auto_unbox=TRUE, digits = NA)
+        [%s]
+',
+        paste(sapply(self$`data`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -108,7 +107,7 @@ InlineResponse20092 <- R6::R6Class(
       InlineResponse20092Object <- jsonlite::fromJSON(InlineResponse20092Json)
       self$`code` <- InlineResponse20092Object$`code`
       self$`msg` <- InlineResponse20092Object$`msg`
-      self$`data` <- InlineResponse20092Data$new()$fromJSON(jsonlite::toJSON(InlineResponse20092Object$data, auto_unbox = TRUE, digits = NA))
+      self$`data` <- ApiClient$new()$deserializeObj(InlineResponse20092Object$`data`, "array[InlineResponse20092Data]", loadNamespace("binanceRapi"))
       self
     }
   )

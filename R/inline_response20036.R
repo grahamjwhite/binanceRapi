@@ -13,7 +13,31 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field data  \link{InlineResponse20036Data} 
+#' @field address  character 
+#'
+#' @field amount  character 
+#'
+#' @field applyTime  character 
+#'
+#' @field coin  character 
+#'
+#' @field id  character 
+#'
+#' @field withdrawOrderId  character 
+#'
+#' @field network  character 
+#'
+#' @field transferType  integer 
+#'
+#' @field status  integer 
+#'
+#' @field transactionFee  character 
+#'
+#' @field confirmNo  integer 
+#'
+#' @field info  character 
+#'
+#' @field txId  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -21,42 +45,268 @@
 InlineResponse20036 <- R6::R6Class(
   'InlineResponse20036',
   public = list(
-    `data` = NULL,
+    `address` = NULL,
+    `amount` = NULL,
+    `applyTime` = NULL,
+    `coin` = NULL,
+    `id` = NULL,
+    `withdrawOrderId` = NULL,
+    `network` = NULL,
+    `transferType` = NULL,
+    `status` = NULL,
+    `transactionFee` = NULL,
+    `confirmNo` = NULL,
+    `info` = NULL,
+    `txId` = NULL,
     initialize = function(
-        `data`, ...
+        `address`, `amount`, `applyTime`, `coin`, `id`, `withdrawOrderId`, `network`, `transferType`, `status`, `transactionFee`, `confirmNo`, `info`, `txId`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`data`)) {
-        stopifnot(R6::is.R6(`data`))
-        self$`data` <- `data`
+      if (!missing(`address`)) {
+        stopifnot(is.character(`address`), length(`address`) == 1)
+        self$`address` <- `address`
+      }
+      if (!missing(`amount`)) {
+        stopifnot(is.character(`amount`), length(`amount`) == 1)
+        self$`amount` <- `amount`
+      }
+      if (!missing(`applyTime`)) {
+        stopifnot(is.character(`applyTime`), length(`applyTime`) == 1)
+        self$`applyTime` <- `applyTime`
+      }
+      if (!missing(`coin`)) {
+        stopifnot(is.character(`coin`), length(`coin`) == 1)
+        self$`coin` <- `coin`
+      }
+      if (!missing(`id`)) {
+        stopifnot(is.character(`id`), length(`id`) == 1)
+        self$`id` <- `id`
+      }
+      if (!missing(`withdrawOrderId`)) {
+        stopifnot(is.character(`withdrawOrderId`), length(`withdrawOrderId`) == 1)
+        self$`withdrawOrderId` <- `withdrawOrderId`
+      }
+      if (!missing(`network`)) {
+        stopifnot(is.character(`network`), length(`network`) == 1)
+        self$`network` <- `network`
+      }
+      if (!missing(`transferType`)) {
+        stopifnot(is.numeric(`transferType`), length(`transferType`) == 1)
+        self$`transferType` <- `transferType`
+      }
+      if (!missing(`status`)) {
+        stopifnot(is.numeric(`status`), length(`status`) == 1)
+        self$`status` <- `status`
+      }
+      if (!missing(`transactionFee`)) {
+        stopifnot(is.character(`transactionFee`), length(`transactionFee`) == 1)
+        self$`transactionFee` <- `transactionFee`
+      }
+      if (!missing(`confirmNo`)) {
+        stopifnot(is.numeric(`confirmNo`), length(`confirmNo`) == 1)
+        self$`confirmNo` <- `confirmNo`
+      }
+      if (!missing(`info`)) {
+        stopifnot(is.character(`info`), length(`info`) == 1)
+        self$`info` <- `info`
+      }
+      if (!missing(`txId`)) {
+        stopifnot(is.character(`txId`), length(`txId`) == 1)
+        self$`txId` <- `txId`
       }
     },
     toJSON = function() {
       InlineResponse20036Object <- list()
-      if (!is.null(self$`data`)) {
-        InlineResponse20036Object[['data']] <-
-          self$`data`$toJSON()
+      if (!is.null(self$`address`)) {
+        InlineResponse20036Object[['address']] <-
+          self$`address`
+      }
+      if (!is.null(self$`amount`)) {
+        InlineResponse20036Object[['amount']] <-
+          self$`amount`
+      }
+      if (!is.null(self$`applyTime`)) {
+        InlineResponse20036Object[['applyTime']] <-
+          self$`applyTime`
+      }
+      if (!is.null(self$`coin`)) {
+        InlineResponse20036Object[['coin']] <-
+          self$`coin`
+      }
+      if (!is.null(self$`id`)) {
+        InlineResponse20036Object[['id']] <-
+          self$`id`
+      }
+      if (!is.null(self$`withdrawOrderId`)) {
+        InlineResponse20036Object[['withdrawOrderId']] <-
+          self$`withdrawOrderId`
+      }
+      if (!is.null(self$`network`)) {
+        InlineResponse20036Object[['network']] <-
+          self$`network`
+      }
+      if (!is.null(self$`transferType`)) {
+        InlineResponse20036Object[['transferType']] <-
+          self$`transferType`
+      }
+      if (!is.null(self$`status`)) {
+        InlineResponse20036Object[['status']] <-
+          self$`status`
+      }
+      if (!is.null(self$`transactionFee`)) {
+        InlineResponse20036Object[['transactionFee']] <-
+          self$`transactionFee`
+      }
+      if (!is.null(self$`confirmNo`)) {
+        InlineResponse20036Object[['confirmNo']] <-
+          self$`confirmNo`
+      }
+      if (!is.null(self$`info`)) {
+        InlineResponse20036Object[['info']] <-
+          self$`info`
+      }
+      if (!is.null(self$`txId`)) {
+        InlineResponse20036Object[['txId']] <-
+          self$`txId`
       }
 
       InlineResponse20036Object
     },
     fromJSON = function(InlineResponse20036Json) {
       InlineResponse20036Object <- jsonlite::fromJSON(InlineResponse20036Json)
-      if (!is.null(InlineResponse20036Object$`data`)) {
-        dataObject <- InlineResponse20036Data$new()
-        dataObject$fromJSON(jsonlite::toJSON(InlineResponse20036Object$data, auto_unbox = TRUE, digits = NA))
-        self$`data` <- dataObject
+      if (!is.null(InlineResponse20036Object$`address`)) {
+        self$`address` <- InlineResponse20036Object$`address`
+      }
+      if (!is.null(InlineResponse20036Object$`amount`)) {
+        self$`amount` <- InlineResponse20036Object$`amount`
+      }
+      if (!is.null(InlineResponse20036Object$`applyTime`)) {
+        self$`applyTime` <- InlineResponse20036Object$`applyTime`
+      }
+      if (!is.null(InlineResponse20036Object$`coin`)) {
+        self$`coin` <- InlineResponse20036Object$`coin`
+      }
+      if (!is.null(InlineResponse20036Object$`id`)) {
+        self$`id` <- InlineResponse20036Object$`id`
+      }
+      if (!is.null(InlineResponse20036Object$`withdrawOrderId`)) {
+        self$`withdrawOrderId` <- InlineResponse20036Object$`withdrawOrderId`
+      }
+      if (!is.null(InlineResponse20036Object$`network`)) {
+        self$`network` <- InlineResponse20036Object$`network`
+      }
+      if (!is.null(InlineResponse20036Object$`transferType`)) {
+        self$`transferType` <- InlineResponse20036Object$`transferType`
+      }
+      if (!is.null(InlineResponse20036Object$`status`)) {
+        self$`status` <- InlineResponse20036Object$`status`
+      }
+      if (!is.null(InlineResponse20036Object$`transactionFee`)) {
+        self$`transactionFee` <- InlineResponse20036Object$`transactionFee`
+      }
+      if (!is.null(InlineResponse20036Object$`confirmNo`)) {
+        self$`confirmNo` <- InlineResponse20036Object$`confirmNo`
+      }
+      if (!is.null(InlineResponse20036Object$`info`)) {
+        self$`info` <- InlineResponse20036Object$`info`
+      }
+      if (!is.null(InlineResponse20036Object$`txId`)) {
+        self$`txId` <- InlineResponse20036Object$`txId`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`data`)) {
+        if (!is.null(self$`address`)) {
         sprintf(
-        '"data":
-        %s
-        ',
-        jsonlite::toJSON(self$`data`$toJSON(), auto_unbox=TRUE, digits = NA)
+        '"address":
+          "%s"
+                ',
+        self$`address`
+        )},
+        if (!is.null(self$`amount`)) {
+        sprintf(
+        '"amount":
+          "%s"
+                ',
+        self$`amount`
+        )},
+        if (!is.null(self$`applyTime`)) {
+        sprintf(
+        '"applyTime":
+          "%s"
+                ',
+        self$`applyTime`
+        )},
+        if (!is.null(self$`coin`)) {
+        sprintf(
+        '"coin":
+          "%s"
+                ',
+        self$`coin`
+        )},
+        if (!is.null(self$`id`)) {
+        sprintf(
+        '"id":
+          "%s"
+                ',
+        self$`id`
+        )},
+        if (!is.null(self$`withdrawOrderId`)) {
+        sprintf(
+        '"withdrawOrderId":
+          "%s"
+                ',
+        self$`withdrawOrderId`
+        )},
+        if (!is.null(self$`network`)) {
+        sprintf(
+        '"network":
+          "%s"
+                ',
+        self$`network`
+        )},
+        if (!is.null(self$`transferType`)) {
+        sprintf(
+        '"transferType":
+          %d
+                ',
+        self$`transferType`
+        )},
+        if (!is.null(self$`status`)) {
+        sprintf(
+        '"status":
+          %d
+                ',
+        self$`status`
+        )},
+        if (!is.null(self$`transactionFee`)) {
+        sprintf(
+        '"transactionFee":
+          "%s"
+                ',
+        self$`transactionFee`
+        )},
+        if (!is.null(self$`confirmNo`)) {
+        sprintf(
+        '"confirmNo":
+          %d
+                ',
+        self$`confirmNo`
+        )},
+        if (!is.null(self$`info`)) {
+        sprintf(
+        '"info":
+          "%s"
+                ',
+        self$`info`
+        )},
+        if (!is.null(self$`txId`)) {
+        sprintf(
+        '"txId":
+          "%s"
+                ',
+        self$`txId`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -64,7 +314,19 @@ InlineResponse20036 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20036Json) {
       InlineResponse20036Object <- jsonlite::fromJSON(InlineResponse20036Json)
-      self$`data` <- InlineResponse20036Data$new()$fromJSON(jsonlite::toJSON(InlineResponse20036Object$data, auto_unbox = TRUE, digits = NA))
+      self$`address` <- InlineResponse20036Object$`address`
+      self$`amount` <- InlineResponse20036Object$`amount`
+      self$`applyTime` <- InlineResponse20036Object$`applyTime`
+      self$`coin` <- InlineResponse20036Object$`coin`
+      self$`id` <- InlineResponse20036Object$`id`
+      self$`withdrawOrderId` <- InlineResponse20036Object$`withdrawOrderId`
+      self$`network` <- InlineResponse20036Object$`network`
+      self$`transferType` <- InlineResponse20036Object$`transferType`
+      self$`status` <- InlineResponse20036Object$`status`
+      self$`transactionFee` <- InlineResponse20036Object$`transactionFee`
+      self$`confirmNo` <- InlineResponse20036Object$`confirmNo`
+      self$`info` <- InlineResponse20036Object$`info`
+      self$`txId` <- InlineResponse20036Object$`txId`
       self
     }
   )

@@ -13,7 +13,17 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field subAccounts  list( \link{InlineResponse20047SubAccounts} ) 
+#' @field asset  character 
+#'
+#' @field free  character 
+#'
+#' @field locked  character 
+#'
+#' @field freeze  character 
+#'
+#' @field withdrawing  character 
+#'
+#' @field btcValuation  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -21,41 +31,135 @@
 InlineResponse20047 <- R6::R6Class(
   'InlineResponse20047',
   public = list(
-    `subAccounts` = NULL,
+    `asset` = NULL,
+    `free` = NULL,
+    `locked` = NULL,
+    `freeze` = NULL,
+    `withdrawing` = NULL,
+    `btcValuation` = NULL,
     initialize = function(
-        `subAccounts`, ...
+        `asset`, `free`, `locked`, `freeze`, `withdrawing`, `btcValuation`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`subAccounts`)) {
-        stopifnot(is.vector(`subAccounts`), length(`subAccounts`) != 0)
-        sapply(`subAccounts`, function(x) stopifnot(R6::is.R6(x)))
-        self$`subAccounts` <- `subAccounts`
+      if (!missing(`asset`)) {
+        stopifnot(is.character(`asset`), length(`asset`) == 1)
+        self$`asset` <- `asset`
+      }
+      if (!missing(`free`)) {
+        stopifnot(is.character(`free`), length(`free`) == 1)
+        self$`free` <- `free`
+      }
+      if (!missing(`locked`)) {
+        stopifnot(is.character(`locked`), length(`locked`) == 1)
+        self$`locked` <- `locked`
+      }
+      if (!missing(`freeze`)) {
+        stopifnot(is.character(`freeze`), length(`freeze`) == 1)
+        self$`freeze` <- `freeze`
+      }
+      if (!missing(`withdrawing`)) {
+        stopifnot(is.character(`withdrawing`), length(`withdrawing`) == 1)
+        self$`withdrawing` <- `withdrawing`
+      }
+      if (!missing(`btcValuation`)) {
+        stopifnot(is.character(`btcValuation`), length(`btcValuation`) == 1)
+        self$`btcValuation` <- `btcValuation`
       }
     },
     toJSON = function() {
       InlineResponse20047Object <- list()
-      if (!is.null(self$`subAccounts`)) {
-        InlineResponse20047Object[['subAccounts']] <-
-          lapply(self$`subAccounts`, function(x) x$toJSON())
+      if (!is.null(self$`asset`)) {
+        InlineResponse20047Object[['asset']] <-
+          self$`asset`
+      }
+      if (!is.null(self$`free`)) {
+        InlineResponse20047Object[['free']] <-
+          self$`free`
+      }
+      if (!is.null(self$`locked`)) {
+        InlineResponse20047Object[['locked']] <-
+          self$`locked`
+      }
+      if (!is.null(self$`freeze`)) {
+        InlineResponse20047Object[['freeze']] <-
+          self$`freeze`
+      }
+      if (!is.null(self$`withdrawing`)) {
+        InlineResponse20047Object[['withdrawing']] <-
+          self$`withdrawing`
+      }
+      if (!is.null(self$`btcValuation`)) {
+        InlineResponse20047Object[['btcValuation']] <-
+          self$`btcValuation`
       }
 
       InlineResponse20047Object
     },
     fromJSON = function(InlineResponse20047Json) {
       InlineResponse20047Object <- jsonlite::fromJSON(InlineResponse20047Json)
-      if (!is.null(InlineResponse20047Object$`subAccounts`)) {
-        self$`subAccounts` <- ApiClient$new()$deserializeObj(InlineResponse20047Object$`subAccounts`, "array[InlineResponse20047SubAccounts]", loadNamespace("binanceRapi"))
+      if (!is.null(InlineResponse20047Object$`asset`)) {
+        self$`asset` <- InlineResponse20047Object$`asset`
+      }
+      if (!is.null(InlineResponse20047Object$`free`)) {
+        self$`free` <- InlineResponse20047Object$`free`
+      }
+      if (!is.null(InlineResponse20047Object$`locked`)) {
+        self$`locked` <- InlineResponse20047Object$`locked`
+      }
+      if (!is.null(InlineResponse20047Object$`freeze`)) {
+        self$`freeze` <- InlineResponse20047Object$`freeze`
+      }
+      if (!is.null(InlineResponse20047Object$`withdrawing`)) {
+        self$`withdrawing` <- InlineResponse20047Object$`withdrawing`
+      }
+      if (!is.null(InlineResponse20047Object$`btcValuation`)) {
+        self$`btcValuation` <- InlineResponse20047Object$`btcValuation`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`subAccounts`)) {
+        if (!is.null(self$`asset`)) {
         sprintf(
-        '"subAccounts":
-        [%s]
-',
-        paste(sapply(self$`subAccounts`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
+        '"asset":
+          "%s"
+                ',
+        self$`asset`
+        )},
+        if (!is.null(self$`free`)) {
+        sprintf(
+        '"free":
+          "%s"
+                ',
+        self$`free`
+        )},
+        if (!is.null(self$`locked`)) {
+        sprintf(
+        '"locked":
+          "%s"
+                ',
+        self$`locked`
+        )},
+        if (!is.null(self$`freeze`)) {
+        sprintf(
+        '"freeze":
+          "%s"
+                ',
+        self$`freeze`
+        )},
+        if (!is.null(self$`withdrawing`)) {
+        sprintf(
+        '"withdrawing":
+          "%s"
+                ',
+        self$`withdrawing`
+        )},
+        if (!is.null(self$`btcValuation`)) {
+        sprintf(
+        '"btcValuation":
+          "%s"
+                ',
+        self$`btcValuation`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -63,7 +167,12 @@ InlineResponse20047 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20047Json) {
       InlineResponse20047Object <- jsonlite::fromJSON(InlineResponse20047Json)
-      self$`subAccounts` <- ApiClient$new()$deserializeObj(InlineResponse20047Object$`subAccounts`, "array[InlineResponse20047SubAccounts]", loadNamespace("binanceRapi"))
+      self$`asset` <- InlineResponse20047Object$`asset`
+      self$`free` <- InlineResponse20047Object$`free`
+      self$`locked` <- InlineResponse20047Object$`locked`
+      self$`freeze` <- InlineResponse20047Object$`freeze`
+      self$`withdrawing` <- InlineResponse20047Object$`withdrawing`
+      self$`btcValuation` <- InlineResponse20047Object$`btcValuation`
       self
     }
   )

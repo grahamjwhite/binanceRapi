@@ -13,7 +13,7 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field tranId  integer 
+#' @field CTR  \link{InlineResponse20043CTR} 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -21,40 +21,42 @@
 InlineResponse20043 <- R6::R6Class(
   'InlineResponse20043',
   public = list(
-    `tranId` = NULL,
+    `CTR` = NULL,
     initialize = function(
-        `tranId`, ...
+        `CTR`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`tranId`)) {
-        stopifnot(is.numeric(`tranId`), length(`tranId`) == 1)
-        self$`tranId` <- `tranId`
+      if (!missing(`CTR`)) {
+        stopifnot(R6::is.R6(`CTR`))
+        self$`CTR` <- `CTR`
       }
     },
     toJSON = function() {
       InlineResponse20043Object <- list()
-      if (!is.null(self$`tranId`)) {
-        InlineResponse20043Object[['tranId']] <-
-          self$`tranId`
+      if (!is.null(self$`CTR`)) {
+        InlineResponse20043Object[['CTR']] <-
+          self$`CTR`$toJSON()
       }
 
       InlineResponse20043Object
     },
     fromJSON = function(InlineResponse20043Json) {
       InlineResponse20043Object <- jsonlite::fromJSON(InlineResponse20043Json)
-      if (!is.null(InlineResponse20043Object$`tranId`)) {
-        self$`tranId` <- InlineResponse20043Object$`tranId`
+      if (!is.null(InlineResponse20043Object$`CTR`)) {
+        CTRObject <- InlineResponse20043CTR$new()
+        CTRObject$fromJSON(jsonlite::toJSON(InlineResponse20043Object$CTR, auto_unbox = TRUE, digits = NA))
+        self$`CTR` <- CTRObject
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`tranId`)) {
+        if (!is.null(self$`CTR`)) {
         sprintf(
-        '"tranId":
-          %d
-                ',
-        self$`tranId`
+        '"CTR":
+        %s
+        ',
+        jsonlite::toJSON(self$`CTR`$toJSON(), auto_unbox=TRUE, digits = NA)
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -62,7 +64,7 @@ InlineResponse20043 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20043Json) {
       InlineResponse20043Object <- jsonlite::fromJSON(InlineResponse20043Json)
-      self$`tranId` <- InlineResponse20043Object$`tranId`
+      self$`CTR` <- InlineResponse20043CTR$new()$fromJSON(jsonlite::toJSON(InlineResponse20043Object$CTR, auto_unbox = TRUE, digits = NA))
       self
     }
   )

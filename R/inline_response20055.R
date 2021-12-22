@@ -13,19 +13,11 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field email  character 
+#' @field totalCount  integer 
 #'
-#' @field isSubUserEnabled  character 
+#' @field masterAccountTotalAsset  character 
 #'
-#' @field isUserActive  character 
-#'
-#' @field insertTime  integer 
-#'
-#' @field isMarginEnabled  character 
-#'
-#' @field isFutureEnabled  character 
-#'
-#' @field mobile  integer 
+#' @field spotSubUserAssetBtcVoList  list( \link{InlineResponse20055SpotSubUserAssetBtcVoList} ) 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -33,154 +25,79 @@
 InlineResponse20055 <- R6::R6Class(
   'InlineResponse20055',
   public = list(
-    `email` = NULL,
-    `isSubUserEnabled` = NULL,
-    `isUserActive` = NULL,
-    `insertTime` = NULL,
-    `isMarginEnabled` = NULL,
-    `isFutureEnabled` = NULL,
-    `mobile` = NULL,
+    `totalCount` = NULL,
+    `masterAccountTotalAsset` = NULL,
+    `spotSubUserAssetBtcVoList` = NULL,
     initialize = function(
-        `email`, `isSubUserEnabled`, `isUserActive`, `insertTime`, `isMarginEnabled`, `isFutureEnabled`, `mobile`, ...
+        `totalCount`, `masterAccountTotalAsset`, `spotSubUserAssetBtcVoList`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`email`)) {
-        stopifnot(is.character(`email`), length(`email`) == 1)
-        self$`email` <- `email`
+      if (!missing(`totalCount`)) {
+        stopifnot(is.numeric(`totalCount`), length(`totalCount`) == 1)
+        self$`totalCount` <- `totalCount`
       }
-      if (!missing(`isSubUserEnabled`)) {
-        stopifnot(is.logical(`isSubUserEnabled`), length(`isSubUserEnabled`) == 1)
-        self$`isSubUserEnabled` <- `isSubUserEnabled`
+      if (!missing(`masterAccountTotalAsset`)) {
+        stopifnot(is.character(`masterAccountTotalAsset`), length(`masterAccountTotalAsset`) == 1)
+        self$`masterAccountTotalAsset` <- `masterAccountTotalAsset`
       }
-      if (!missing(`isUserActive`)) {
-        stopifnot(is.logical(`isUserActive`), length(`isUserActive`) == 1)
-        self$`isUserActive` <- `isUserActive`
-      }
-      if (!missing(`insertTime`)) {
-        stopifnot(is.numeric(`insertTime`), length(`insertTime`) == 1)
-        self$`insertTime` <- `insertTime`
-      }
-      if (!missing(`isMarginEnabled`)) {
-        stopifnot(is.logical(`isMarginEnabled`), length(`isMarginEnabled`) == 1)
-        self$`isMarginEnabled` <- `isMarginEnabled`
-      }
-      if (!missing(`isFutureEnabled`)) {
-        stopifnot(is.logical(`isFutureEnabled`), length(`isFutureEnabled`) == 1)
-        self$`isFutureEnabled` <- `isFutureEnabled`
-      }
-      if (!missing(`mobile`)) {
-        stopifnot(is.numeric(`mobile`), length(`mobile`) == 1)
-        self$`mobile` <- `mobile`
+      if (!missing(`spotSubUserAssetBtcVoList`)) {
+        stopifnot(is.vector(`spotSubUserAssetBtcVoList`), length(`spotSubUserAssetBtcVoList`) != 0)
+        sapply(`spotSubUserAssetBtcVoList`, function(x) stopifnot(R6::is.R6(x)))
+        self$`spotSubUserAssetBtcVoList` <- `spotSubUserAssetBtcVoList`
       }
     },
     toJSON = function() {
       InlineResponse20055Object <- list()
-      if (!is.null(self$`email`)) {
-        InlineResponse20055Object[['email']] <-
-          self$`email`
+      if (!is.null(self$`totalCount`)) {
+        InlineResponse20055Object[['totalCount']] <-
+          self$`totalCount`
       }
-      if (!is.null(self$`isSubUserEnabled`)) {
-        InlineResponse20055Object[['isSubUserEnabled']] <-
-          self$`isSubUserEnabled`
+      if (!is.null(self$`masterAccountTotalAsset`)) {
+        InlineResponse20055Object[['masterAccountTotalAsset']] <-
+          self$`masterAccountTotalAsset`
       }
-      if (!is.null(self$`isUserActive`)) {
-        InlineResponse20055Object[['isUserActive']] <-
-          self$`isUserActive`
-      }
-      if (!is.null(self$`insertTime`)) {
-        InlineResponse20055Object[['insertTime']] <-
-          self$`insertTime`
-      }
-      if (!is.null(self$`isMarginEnabled`)) {
-        InlineResponse20055Object[['isMarginEnabled']] <-
-          self$`isMarginEnabled`
-      }
-      if (!is.null(self$`isFutureEnabled`)) {
-        InlineResponse20055Object[['isFutureEnabled']] <-
-          self$`isFutureEnabled`
-      }
-      if (!is.null(self$`mobile`)) {
-        InlineResponse20055Object[['mobile']] <-
-          self$`mobile`
+      if (!is.null(self$`spotSubUserAssetBtcVoList`)) {
+        InlineResponse20055Object[['spotSubUserAssetBtcVoList']] <-
+          lapply(self$`spotSubUserAssetBtcVoList`, function(x) x$toJSON())
       }
 
       InlineResponse20055Object
     },
     fromJSON = function(InlineResponse20055Json) {
       InlineResponse20055Object <- jsonlite::fromJSON(InlineResponse20055Json)
-      if (!is.null(InlineResponse20055Object$`email`)) {
-        self$`email` <- InlineResponse20055Object$`email`
+      if (!is.null(InlineResponse20055Object$`totalCount`)) {
+        self$`totalCount` <- InlineResponse20055Object$`totalCount`
       }
-      if (!is.null(InlineResponse20055Object$`isSubUserEnabled`)) {
-        self$`isSubUserEnabled` <- InlineResponse20055Object$`isSubUserEnabled`
+      if (!is.null(InlineResponse20055Object$`masterAccountTotalAsset`)) {
+        self$`masterAccountTotalAsset` <- InlineResponse20055Object$`masterAccountTotalAsset`
       }
-      if (!is.null(InlineResponse20055Object$`isUserActive`)) {
-        self$`isUserActive` <- InlineResponse20055Object$`isUserActive`
-      }
-      if (!is.null(InlineResponse20055Object$`insertTime`)) {
-        self$`insertTime` <- InlineResponse20055Object$`insertTime`
-      }
-      if (!is.null(InlineResponse20055Object$`isMarginEnabled`)) {
-        self$`isMarginEnabled` <- InlineResponse20055Object$`isMarginEnabled`
-      }
-      if (!is.null(InlineResponse20055Object$`isFutureEnabled`)) {
-        self$`isFutureEnabled` <- InlineResponse20055Object$`isFutureEnabled`
-      }
-      if (!is.null(InlineResponse20055Object$`mobile`)) {
-        self$`mobile` <- InlineResponse20055Object$`mobile`
+      if (!is.null(InlineResponse20055Object$`spotSubUserAssetBtcVoList`)) {
+        self$`spotSubUserAssetBtcVoList` <- ApiClient$new()$deserializeObj(InlineResponse20055Object$`spotSubUserAssetBtcVoList`, "array[InlineResponse20055SpotSubUserAssetBtcVoList]", loadNamespace("binanceRapi"))
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`email`)) {
+        if (!is.null(self$`totalCount`)) {
         sprintf(
-        '"email":
+        '"totalCount":
+          %d
+                ',
+        self$`totalCount`
+        )},
+        if (!is.null(self$`masterAccountTotalAsset`)) {
+        sprintf(
+        '"masterAccountTotalAsset":
           "%s"
                 ',
-        self$`email`
+        self$`masterAccountTotalAsset`
         )},
-        if (!is.null(self$`isSubUserEnabled`)) {
+        if (!is.null(self$`spotSubUserAssetBtcVoList`)) {
         sprintf(
-        '"isSubUserEnabled":
-          %s
-                ',
-        tolower(self$`isSubUserEnabled`)
-        )},
-        if (!is.null(self$`isUserActive`)) {
-        sprintf(
-        '"isUserActive":
-          %s
-                ',
-        tolower(self$`isUserActive`)
-        )},
-        if (!is.null(self$`insertTime`)) {
-        sprintf(
-        '"insertTime":
-          %d
-                ',
-        self$`insertTime`
-        )},
-        if (!is.null(self$`isMarginEnabled`)) {
-        sprintf(
-        '"isMarginEnabled":
-          %s
-                ',
-        tolower(self$`isMarginEnabled`)
-        )},
-        if (!is.null(self$`isFutureEnabled`)) {
-        sprintf(
-        '"isFutureEnabled":
-          %s
-                ',
-        tolower(self$`isFutureEnabled`)
-        )},
-        if (!is.null(self$`mobile`)) {
-        sprintf(
-        '"mobile":
-          %d
-                ',
-        self$`mobile`
+        '"spotSubUserAssetBtcVoList":
+        [%s]
+',
+        paste(sapply(self$`spotSubUserAssetBtcVoList`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -188,13 +105,9 @@ InlineResponse20055 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20055Json) {
       InlineResponse20055Object <- jsonlite::fromJSON(InlineResponse20055Json)
-      self$`email` <- InlineResponse20055Object$`email`
-      self$`isSubUserEnabled` <- InlineResponse20055Object$`isSubUserEnabled`
-      self$`isUserActive` <- InlineResponse20055Object$`isUserActive`
-      self$`insertTime` <- InlineResponse20055Object$`insertTime`
-      self$`isMarginEnabled` <- InlineResponse20055Object$`isMarginEnabled`
-      self$`isFutureEnabled` <- InlineResponse20055Object$`isFutureEnabled`
-      self$`mobile` <- InlineResponse20055Object$`mobile`
+      self$`totalCount` <- InlineResponse20055Object$`totalCount`
+      self$`masterAccountTotalAsset` <- InlineResponse20055Object$`masterAccountTotalAsset`
+      self$`spotSubUserAssetBtcVoList` <- ApiClient$new()$deserializeObj(InlineResponse20055Object$`spotSubUserAssetBtcVoList`, "array[InlineResponse20055SpotSubUserAssetBtcVoList]", loadNamespace("binanceRapi"))
       self
     }
   )

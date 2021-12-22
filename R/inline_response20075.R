@@ -13,9 +13,11 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field asset  character 
+#' @field ip  character 
 #'
-#' @field leftQuota  character 
+#' @field updateTime  integer 
+#'
+#' @field apiKey  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -23,59 +25,78 @@
 InlineResponse20075 <- R6::R6Class(
   'InlineResponse20075',
   public = list(
-    `asset` = NULL,
-    `leftQuota` = NULL,
+    `ip` = NULL,
+    `updateTime` = NULL,
+    `apiKey` = NULL,
     initialize = function(
-        `asset`, `leftQuota`, ...
+        `ip`, `updateTime`, `apiKey`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`asset`)) {
-        stopifnot(is.character(`asset`), length(`asset`) == 1)
-        self$`asset` <- `asset`
+      if (!missing(`ip`)) {
+        stopifnot(is.character(`ip`), length(`ip`) == 1)
+        self$`ip` <- `ip`
       }
-      if (!missing(`leftQuota`)) {
-        stopifnot(is.character(`leftQuota`), length(`leftQuota`) == 1)
-        self$`leftQuota` <- `leftQuota`
+      if (!missing(`updateTime`)) {
+        stopifnot(is.numeric(`updateTime`), length(`updateTime`) == 1)
+        self$`updateTime` <- `updateTime`
+      }
+      if (!missing(`apiKey`)) {
+        stopifnot(is.character(`apiKey`), length(`apiKey`) == 1)
+        self$`apiKey` <- `apiKey`
       }
     },
     toJSON = function() {
       InlineResponse20075Object <- list()
-      if (!is.null(self$`asset`)) {
-        InlineResponse20075Object[['asset']] <-
-          self$`asset`
+      if (!is.null(self$`ip`)) {
+        InlineResponse20075Object[['ip']] <-
+          self$`ip`
       }
-      if (!is.null(self$`leftQuota`)) {
-        InlineResponse20075Object[['leftQuota']] <-
-          self$`leftQuota`
+      if (!is.null(self$`updateTime`)) {
+        InlineResponse20075Object[['updateTime']] <-
+          self$`updateTime`
+      }
+      if (!is.null(self$`apiKey`)) {
+        InlineResponse20075Object[['apiKey']] <-
+          self$`apiKey`
       }
 
       InlineResponse20075Object
     },
     fromJSON = function(InlineResponse20075Json) {
       InlineResponse20075Object <- jsonlite::fromJSON(InlineResponse20075Json)
-      if (!is.null(InlineResponse20075Object$`asset`)) {
-        self$`asset` <- InlineResponse20075Object$`asset`
+      if (!is.null(InlineResponse20075Object$`ip`)) {
+        self$`ip` <- InlineResponse20075Object$`ip`
       }
-      if (!is.null(InlineResponse20075Object$`leftQuota`)) {
-        self$`leftQuota` <- InlineResponse20075Object$`leftQuota`
+      if (!is.null(InlineResponse20075Object$`updateTime`)) {
+        self$`updateTime` <- InlineResponse20075Object$`updateTime`
+      }
+      if (!is.null(InlineResponse20075Object$`apiKey`)) {
+        self$`apiKey` <- InlineResponse20075Object$`apiKey`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`asset`)) {
+        if (!is.null(self$`ip`)) {
         sprintf(
-        '"asset":
+        '"ip":
           "%s"
                 ',
-        self$`asset`
+        self$`ip`
         )},
-        if (!is.null(self$`leftQuota`)) {
+        if (!is.null(self$`updateTime`)) {
         sprintf(
-        '"leftQuota":
+        '"updateTime":
+          %d
+                ',
+        self$`updateTime`
+        )},
+        if (!is.null(self$`apiKey`)) {
+        sprintf(
+        '"apiKey":
           "%s"
                 ',
-        self$`leftQuota`
+        self$`apiKey`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -83,8 +104,9 @@ InlineResponse20075 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20075Json) {
       InlineResponse20075Object <- jsonlite::fromJSON(InlineResponse20075Json)
-      self$`asset` <- InlineResponse20075Object$`asset`
-      self$`leftQuota` <- InlineResponse20075Object$`leftQuota`
+      self$`ip` <- InlineResponse20075Object$`ip`
+      self$`updateTime` <- InlineResponse20075Object$`updateTime`
+      self$`apiKey` <- InlineResponse20075Object$`apiKey`
       self
     }
   )

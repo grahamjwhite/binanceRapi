@@ -13,23 +13,21 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field tranId  integer 
+#' @field entryPrice  character 
 #'
-#' @field fromEmail  character 
+#' @field leverage  character 
 #'
-#' @field toEmail  character 
+#' @field maxNotional  character 
 #'
-#' @field asset  character 
+#' @field liquidationPrice  character 
 #'
-#' @field amount  character 
+#' @field markPrice  character 
 #'
-#' @field fromAccountType  character 
+#' @field positionAmount  character 
 #'
-#' @field toAccountType  character 
+#' @field symbol  character 
 #'
-#' @field status  character 
-#'
-#' @field createTimeStamp  integer 
+#' @field unrealizedProfit  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -37,192 +35,173 @@
 InlineResponse20065 <- R6::R6Class(
   'InlineResponse20065',
   public = list(
-    `tranId` = NULL,
-    `fromEmail` = NULL,
-    `toEmail` = NULL,
-    `asset` = NULL,
-    `amount` = NULL,
-    `fromAccountType` = NULL,
-    `toAccountType` = NULL,
-    `status` = NULL,
-    `createTimeStamp` = NULL,
+    `entryPrice` = NULL,
+    `leverage` = NULL,
+    `maxNotional` = NULL,
+    `liquidationPrice` = NULL,
+    `markPrice` = NULL,
+    `positionAmount` = NULL,
+    `symbol` = NULL,
+    `unrealizedProfit` = NULL,
     initialize = function(
-        `tranId`, `fromEmail`, `toEmail`, `asset`, `amount`, `fromAccountType`, `toAccountType`, `status`, `createTimeStamp`, ...
+        `entryPrice`, `leverage`, `maxNotional`, `liquidationPrice`, `markPrice`, `positionAmount`, `symbol`, `unrealizedProfit`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`tranId`)) {
-        stopifnot(is.numeric(`tranId`), length(`tranId`) == 1)
-        self$`tranId` <- `tranId`
+      if (!missing(`entryPrice`)) {
+        stopifnot(is.character(`entryPrice`), length(`entryPrice`) == 1)
+        self$`entryPrice` <- `entryPrice`
       }
-      if (!missing(`fromEmail`)) {
-        stopifnot(is.character(`fromEmail`), length(`fromEmail`) == 1)
-        self$`fromEmail` <- `fromEmail`
+      if (!missing(`leverage`)) {
+        stopifnot(is.character(`leverage`), length(`leverage`) == 1)
+        self$`leverage` <- `leverage`
       }
-      if (!missing(`toEmail`)) {
-        stopifnot(is.character(`toEmail`), length(`toEmail`) == 1)
-        self$`toEmail` <- `toEmail`
+      if (!missing(`maxNotional`)) {
+        stopifnot(is.character(`maxNotional`), length(`maxNotional`) == 1)
+        self$`maxNotional` <- `maxNotional`
       }
-      if (!missing(`asset`)) {
-        stopifnot(is.character(`asset`), length(`asset`) == 1)
-        self$`asset` <- `asset`
+      if (!missing(`liquidationPrice`)) {
+        stopifnot(is.character(`liquidationPrice`), length(`liquidationPrice`) == 1)
+        self$`liquidationPrice` <- `liquidationPrice`
       }
-      if (!missing(`amount`)) {
-        stopifnot(is.character(`amount`), length(`amount`) == 1)
-        self$`amount` <- `amount`
+      if (!missing(`markPrice`)) {
+        stopifnot(is.character(`markPrice`), length(`markPrice`) == 1)
+        self$`markPrice` <- `markPrice`
       }
-      if (!missing(`fromAccountType`)) {
-        stopifnot(is.character(`fromAccountType`), length(`fromAccountType`) == 1)
-        self$`fromAccountType` <- `fromAccountType`
+      if (!missing(`positionAmount`)) {
+        stopifnot(is.character(`positionAmount`), length(`positionAmount`) == 1)
+        self$`positionAmount` <- `positionAmount`
       }
-      if (!missing(`toAccountType`)) {
-        stopifnot(is.character(`toAccountType`), length(`toAccountType`) == 1)
-        self$`toAccountType` <- `toAccountType`
+      if (!missing(`symbol`)) {
+        stopifnot(is.character(`symbol`), length(`symbol`) == 1)
+        self$`symbol` <- `symbol`
       }
-      if (!missing(`status`)) {
-        stopifnot(is.character(`status`), length(`status`) == 1)
-        self$`status` <- `status`
-      }
-      if (!missing(`createTimeStamp`)) {
-        stopifnot(is.numeric(`createTimeStamp`), length(`createTimeStamp`) == 1)
-        self$`createTimeStamp` <- `createTimeStamp`
+      if (!missing(`unrealizedProfit`)) {
+        stopifnot(is.character(`unrealizedProfit`), length(`unrealizedProfit`) == 1)
+        self$`unrealizedProfit` <- `unrealizedProfit`
       }
     },
     toJSON = function() {
       InlineResponse20065Object <- list()
-      if (!is.null(self$`tranId`)) {
-        InlineResponse20065Object[['tranId']] <-
-          self$`tranId`
+      if (!is.null(self$`entryPrice`)) {
+        InlineResponse20065Object[['entryPrice']] <-
+          self$`entryPrice`
       }
-      if (!is.null(self$`fromEmail`)) {
-        InlineResponse20065Object[['fromEmail']] <-
-          self$`fromEmail`
+      if (!is.null(self$`leverage`)) {
+        InlineResponse20065Object[['leverage']] <-
+          self$`leverage`
       }
-      if (!is.null(self$`toEmail`)) {
-        InlineResponse20065Object[['toEmail']] <-
-          self$`toEmail`
+      if (!is.null(self$`maxNotional`)) {
+        InlineResponse20065Object[['maxNotional']] <-
+          self$`maxNotional`
       }
-      if (!is.null(self$`asset`)) {
-        InlineResponse20065Object[['asset']] <-
-          self$`asset`
+      if (!is.null(self$`liquidationPrice`)) {
+        InlineResponse20065Object[['liquidationPrice']] <-
+          self$`liquidationPrice`
       }
-      if (!is.null(self$`amount`)) {
-        InlineResponse20065Object[['amount']] <-
-          self$`amount`
+      if (!is.null(self$`markPrice`)) {
+        InlineResponse20065Object[['markPrice']] <-
+          self$`markPrice`
       }
-      if (!is.null(self$`fromAccountType`)) {
-        InlineResponse20065Object[['fromAccountType']] <-
-          self$`fromAccountType`
+      if (!is.null(self$`positionAmount`)) {
+        InlineResponse20065Object[['positionAmount']] <-
+          self$`positionAmount`
       }
-      if (!is.null(self$`toAccountType`)) {
-        InlineResponse20065Object[['toAccountType']] <-
-          self$`toAccountType`
+      if (!is.null(self$`symbol`)) {
+        InlineResponse20065Object[['symbol']] <-
+          self$`symbol`
       }
-      if (!is.null(self$`status`)) {
-        InlineResponse20065Object[['status']] <-
-          self$`status`
-      }
-      if (!is.null(self$`createTimeStamp`)) {
-        InlineResponse20065Object[['createTimeStamp']] <-
-          self$`createTimeStamp`
+      if (!is.null(self$`unrealizedProfit`)) {
+        InlineResponse20065Object[['unrealizedProfit']] <-
+          self$`unrealizedProfit`
       }
 
       InlineResponse20065Object
     },
     fromJSON = function(InlineResponse20065Json) {
       InlineResponse20065Object <- jsonlite::fromJSON(InlineResponse20065Json)
-      if (!is.null(InlineResponse20065Object$`tranId`)) {
-        self$`tranId` <- InlineResponse20065Object$`tranId`
+      if (!is.null(InlineResponse20065Object$`entryPrice`)) {
+        self$`entryPrice` <- InlineResponse20065Object$`entryPrice`
       }
-      if (!is.null(InlineResponse20065Object$`fromEmail`)) {
-        self$`fromEmail` <- InlineResponse20065Object$`fromEmail`
+      if (!is.null(InlineResponse20065Object$`leverage`)) {
+        self$`leverage` <- InlineResponse20065Object$`leverage`
       }
-      if (!is.null(InlineResponse20065Object$`toEmail`)) {
-        self$`toEmail` <- InlineResponse20065Object$`toEmail`
+      if (!is.null(InlineResponse20065Object$`maxNotional`)) {
+        self$`maxNotional` <- InlineResponse20065Object$`maxNotional`
       }
-      if (!is.null(InlineResponse20065Object$`asset`)) {
-        self$`asset` <- InlineResponse20065Object$`asset`
+      if (!is.null(InlineResponse20065Object$`liquidationPrice`)) {
+        self$`liquidationPrice` <- InlineResponse20065Object$`liquidationPrice`
       }
-      if (!is.null(InlineResponse20065Object$`amount`)) {
-        self$`amount` <- InlineResponse20065Object$`amount`
+      if (!is.null(InlineResponse20065Object$`markPrice`)) {
+        self$`markPrice` <- InlineResponse20065Object$`markPrice`
       }
-      if (!is.null(InlineResponse20065Object$`fromAccountType`)) {
-        self$`fromAccountType` <- InlineResponse20065Object$`fromAccountType`
+      if (!is.null(InlineResponse20065Object$`positionAmount`)) {
+        self$`positionAmount` <- InlineResponse20065Object$`positionAmount`
       }
-      if (!is.null(InlineResponse20065Object$`toAccountType`)) {
-        self$`toAccountType` <- InlineResponse20065Object$`toAccountType`
+      if (!is.null(InlineResponse20065Object$`symbol`)) {
+        self$`symbol` <- InlineResponse20065Object$`symbol`
       }
-      if (!is.null(InlineResponse20065Object$`status`)) {
-        self$`status` <- InlineResponse20065Object$`status`
-      }
-      if (!is.null(InlineResponse20065Object$`createTimeStamp`)) {
-        self$`createTimeStamp` <- InlineResponse20065Object$`createTimeStamp`
+      if (!is.null(InlineResponse20065Object$`unrealizedProfit`)) {
+        self$`unrealizedProfit` <- InlineResponse20065Object$`unrealizedProfit`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`tranId`)) {
+        if (!is.null(self$`entryPrice`)) {
         sprintf(
-        '"tranId":
-          %d
-                ',
-        self$`tranId`
-        )},
-        if (!is.null(self$`fromEmail`)) {
-        sprintf(
-        '"fromEmail":
+        '"entryPrice":
           "%s"
                 ',
-        self$`fromEmail`
+        self$`entryPrice`
         )},
-        if (!is.null(self$`toEmail`)) {
+        if (!is.null(self$`leverage`)) {
         sprintf(
-        '"toEmail":
+        '"leverage":
           "%s"
                 ',
-        self$`toEmail`
+        self$`leverage`
         )},
-        if (!is.null(self$`asset`)) {
+        if (!is.null(self$`maxNotional`)) {
         sprintf(
-        '"asset":
+        '"maxNotional":
           "%s"
                 ',
-        self$`asset`
+        self$`maxNotional`
         )},
-        if (!is.null(self$`amount`)) {
+        if (!is.null(self$`liquidationPrice`)) {
         sprintf(
-        '"amount":
+        '"liquidationPrice":
           "%s"
                 ',
-        self$`amount`
+        self$`liquidationPrice`
         )},
-        if (!is.null(self$`fromAccountType`)) {
+        if (!is.null(self$`markPrice`)) {
         sprintf(
-        '"fromAccountType":
+        '"markPrice":
           "%s"
                 ',
-        self$`fromAccountType`
+        self$`markPrice`
         )},
-        if (!is.null(self$`toAccountType`)) {
+        if (!is.null(self$`positionAmount`)) {
         sprintf(
-        '"toAccountType":
+        '"positionAmount":
           "%s"
                 ',
-        self$`toAccountType`
+        self$`positionAmount`
         )},
-        if (!is.null(self$`status`)) {
+        if (!is.null(self$`symbol`)) {
         sprintf(
-        '"status":
+        '"symbol":
           "%s"
                 ',
-        self$`status`
+        self$`symbol`
         )},
-        if (!is.null(self$`createTimeStamp`)) {
+        if (!is.null(self$`unrealizedProfit`)) {
         sprintf(
-        '"createTimeStamp":
-          %d
+        '"unrealizedProfit":
+          "%s"
                 ',
-        self$`createTimeStamp`
+        self$`unrealizedProfit`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -230,15 +209,14 @@ InlineResponse20065 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20065Json) {
       InlineResponse20065Object <- jsonlite::fromJSON(InlineResponse20065Json)
-      self$`tranId` <- InlineResponse20065Object$`tranId`
-      self$`fromEmail` <- InlineResponse20065Object$`fromEmail`
-      self$`toEmail` <- InlineResponse20065Object$`toEmail`
-      self$`asset` <- InlineResponse20065Object$`asset`
-      self$`amount` <- InlineResponse20065Object$`amount`
-      self$`fromAccountType` <- InlineResponse20065Object$`fromAccountType`
-      self$`toAccountType` <- InlineResponse20065Object$`toAccountType`
-      self$`status` <- InlineResponse20065Object$`status`
-      self$`createTimeStamp` <- InlineResponse20065Object$`createTimeStamp`
+      self$`entryPrice` <- InlineResponse20065Object$`entryPrice`
+      self$`leverage` <- InlineResponse20065Object$`leverage`
+      self$`maxNotional` <- InlineResponse20065Object$`maxNotional`
+      self$`liquidationPrice` <- InlineResponse20065Object$`liquidationPrice`
+      self$`markPrice` <- InlineResponse20065Object$`markPrice`
+      self$`positionAmount` <- InlineResponse20065Object$`positionAmount`
+      self$`symbol` <- InlineResponse20065Object$`symbol`
+      self$`unrealizedProfit` <- InlineResponse20065Object$`unrealizedProfit`
       self
     }
   )

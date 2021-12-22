@@ -13,17 +13,11 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field id  numeric 
+#' @field code  integer 
 #'
-#' @field status  character 
+#' @field msg  character 
 #'
-#' @field tokenName  character 
-#'
-#' @field redeemAmount  character 
-#'
-#' @field amount  character 
-#'
-#' @field timestamp  integer 
+#' @field data  integer 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -31,135 +25,78 @@
 InlineResponse200100 <- R6::R6Class(
   'InlineResponse200100',
   public = list(
-    `id` = NULL,
-    `status` = NULL,
-    `tokenName` = NULL,
-    `redeemAmount` = NULL,
-    `amount` = NULL,
-    `timestamp` = NULL,
+    `code` = NULL,
+    `msg` = NULL,
+    `data` = NULL,
     initialize = function(
-        `id`, `status`, `tokenName`, `redeemAmount`, `amount`, `timestamp`, ...
+        `code`, `msg`, `data`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`id`)) {
-        stopifnot(is.numeric(`id`), length(`id`) == 1)
-        self$`id` <- `id`
+      if (!missing(`code`)) {
+        stopifnot(is.numeric(`code`), length(`code`) == 1)
+        self$`code` <- `code`
       }
-      if (!missing(`status`)) {
-        stopifnot(is.character(`status`), length(`status`) == 1)
-        self$`status` <- `status`
+      if (!missing(`msg`)) {
+        stopifnot(is.character(`msg`), length(`msg`) == 1)
+        self$`msg` <- `msg`
       }
-      if (!missing(`tokenName`)) {
-        stopifnot(is.character(`tokenName`), length(`tokenName`) == 1)
-        self$`tokenName` <- `tokenName`
-      }
-      if (!missing(`redeemAmount`)) {
-        stopifnot(is.character(`redeemAmount`), length(`redeemAmount`) == 1)
-        self$`redeemAmount` <- `redeemAmount`
-      }
-      if (!missing(`amount`)) {
-        stopifnot(is.character(`amount`), length(`amount`) == 1)
-        self$`amount` <- `amount`
-      }
-      if (!missing(`timestamp`)) {
-        stopifnot(is.numeric(`timestamp`), length(`timestamp`) == 1)
-        self$`timestamp` <- `timestamp`
+      if (!missing(`data`)) {
+        stopifnot(is.numeric(`data`), length(`data`) == 1)
+        self$`data` <- `data`
       }
     },
     toJSON = function() {
       InlineResponse200100Object <- list()
-      if (!is.null(self$`id`)) {
-        InlineResponse200100Object[['id']] <-
-          self$`id`
+      if (!is.null(self$`code`)) {
+        InlineResponse200100Object[['code']] <-
+          self$`code`
       }
-      if (!is.null(self$`status`)) {
-        InlineResponse200100Object[['status']] <-
-          self$`status`
+      if (!is.null(self$`msg`)) {
+        InlineResponse200100Object[['msg']] <-
+          self$`msg`
       }
-      if (!is.null(self$`tokenName`)) {
-        InlineResponse200100Object[['tokenName']] <-
-          self$`tokenName`
-      }
-      if (!is.null(self$`redeemAmount`)) {
-        InlineResponse200100Object[['redeemAmount']] <-
-          self$`redeemAmount`
-      }
-      if (!is.null(self$`amount`)) {
-        InlineResponse200100Object[['amount']] <-
-          self$`amount`
-      }
-      if (!is.null(self$`timestamp`)) {
-        InlineResponse200100Object[['timestamp']] <-
-          self$`timestamp`
+      if (!is.null(self$`data`)) {
+        InlineResponse200100Object[['data']] <-
+          self$`data`
       }
 
       InlineResponse200100Object
     },
     fromJSON = function(InlineResponse200100Json) {
       InlineResponse200100Object <- jsonlite::fromJSON(InlineResponse200100Json)
-      if (!is.null(InlineResponse200100Object$`id`)) {
-        self$`id` <- InlineResponse200100Object$`id`
+      if (!is.null(InlineResponse200100Object$`code`)) {
+        self$`code` <- InlineResponse200100Object$`code`
       }
-      if (!is.null(InlineResponse200100Object$`status`)) {
-        self$`status` <- InlineResponse200100Object$`status`
+      if (!is.null(InlineResponse200100Object$`msg`)) {
+        self$`msg` <- InlineResponse200100Object$`msg`
       }
-      if (!is.null(InlineResponse200100Object$`tokenName`)) {
-        self$`tokenName` <- InlineResponse200100Object$`tokenName`
-      }
-      if (!is.null(InlineResponse200100Object$`redeemAmount`)) {
-        self$`redeemAmount` <- InlineResponse200100Object$`redeemAmount`
-      }
-      if (!is.null(InlineResponse200100Object$`amount`)) {
-        self$`amount` <- InlineResponse200100Object$`amount`
-      }
-      if (!is.null(InlineResponse200100Object$`timestamp`)) {
-        self$`timestamp` <- InlineResponse200100Object$`timestamp`
+      if (!is.null(InlineResponse200100Object$`data`)) {
+        self$`data` <- InlineResponse200100Object$`data`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`id`)) {
+        if (!is.null(self$`code`)) {
         sprintf(
-        '"id":
+        '"code":
           %d
                 ',
-        self$`id`
+        self$`code`
         )},
-        if (!is.null(self$`status`)) {
+        if (!is.null(self$`msg`)) {
         sprintf(
-        '"status":
+        '"msg":
           "%s"
                 ',
-        self$`status`
+        self$`msg`
         )},
-        if (!is.null(self$`tokenName`)) {
+        if (!is.null(self$`data`)) {
         sprintf(
-        '"tokenName":
-          "%s"
-                ',
-        self$`tokenName`
-        )},
-        if (!is.null(self$`redeemAmount`)) {
-        sprintf(
-        '"redeemAmount":
-          "%s"
-                ',
-        self$`redeemAmount`
-        )},
-        if (!is.null(self$`amount`)) {
-        sprintf(
-        '"amount":
-          "%s"
-                ',
-        self$`amount`
-        )},
-        if (!is.null(self$`timestamp`)) {
-        sprintf(
-        '"timestamp":
+        '"data":
           %d
                 ',
-        self$`timestamp`
+        self$`data`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -167,12 +104,9 @@ InlineResponse200100 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse200100Json) {
       InlineResponse200100Object <- jsonlite::fromJSON(InlineResponse200100Json)
-      self$`id` <- InlineResponse200100Object$`id`
-      self$`status` <- InlineResponse200100Object$`status`
-      self$`tokenName` <- InlineResponse200100Object$`tokenName`
-      self$`redeemAmount` <- InlineResponse200100Object$`redeemAmount`
-      self$`amount` <- InlineResponse200100Object$`amount`
-      self$`timestamp` <- InlineResponse200100Object$`timestamp`
+      self$`code` <- InlineResponse200100Object$`code`
+      self$`msg` <- InlineResponse200100Object$`msg`
+      self$`data` <- InlineResponse200100Object$`data`
       self
     }
   )

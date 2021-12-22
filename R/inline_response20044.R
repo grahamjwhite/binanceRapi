@@ -13,17 +13,11 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field asset  character 
+#' @field symbol  character 
 #'
-#' @field free  character 
+#' @field makerCommission  character 
 #'
-#' @field locked  character 
-#'
-#' @field freeze  character 
-#'
-#' @field withdrawing  character 
-#'
-#' @field btcValuation  character 
+#' @field takerCommission  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -31,135 +25,78 @@
 InlineResponse20044 <- R6::R6Class(
   'InlineResponse20044',
   public = list(
-    `asset` = NULL,
-    `free` = NULL,
-    `locked` = NULL,
-    `freeze` = NULL,
-    `withdrawing` = NULL,
-    `btcValuation` = NULL,
+    `symbol` = NULL,
+    `makerCommission` = NULL,
+    `takerCommission` = NULL,
     initialize = function(
-        `asset`, `free`, `locked`, `freeze`, `withdrawing`, `btcValuation`, ...
+        `symbol`, `makerCommission`, `takerCommission`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`asset`)) {
-        stopifnot(is.character(`asset`), length(`asset`) == 1)
-        self$`asset` <- `asset`
+      if (!missing(`symbol`)) {
+        stopifnot(is.character(`symbol`), length(`symbol`) == 1)
+        self$`symbol` <- `symbol`
       }
-      if (!missing(`free`)) {
-        stopifnot(is.character(`free`), length(`free`) == 1)
-        self$`free` <- `free`
+      if (!missing(`makerCommission`)) {
+        stopifnot(is.character(`makerCommission`), length(`makerCommission`) == 1)
+        self$`makerCommission` <- `makerCommission`
       }
-      if (!missing(`locked`)) {
-        stopifnot(is.character(`locked`), length(`locked`) == 1)
-        self$`locked` <- `locked`
-      }
-      if (!missing(`freeze`)) {
-        stopifnot(is.character(`freeze`), length(`freeze`) == 1)
-        self$`freeze` <- `freeze`
-      }
-      if (!missing(`withdrawing`)) {
-        stopifnot(is.character(`withdrawing`), length(`withdrawing`) == 1)
-        self$`withdrawing` <- `withdrawing`
-      }
-      if (!missing(`btcValuation`)) {
-        stopifnot(is.character(`btcValuation`), length(`btcValuation`) == 1)
-        self$`btcValuation` <- `btcValuation`
+      if (!missing(`takerCommission`)) {
+        stopifnot(is.character(`takerCommission`), length(`takerCommission`) == 1)
+        self$`takerCommission` <- `takerCommission`
       }
     },
     toJSON = function() {
       InlineResponse20044Object <- list()
-      if (!is.null(self$`asset`)) {
-        InlineResponse20044Object[['asset']] <-
-          self$`asset`
+      if (!is.null(self$`symbol`)) {
+        InlineResponse20044Object[['symbol']] <-
+          self$`symbol`
       }
-      if (!is.null(self$`free`)) {
-        InlineResponse20044Object[['free']] <-
-          self$`free`
+      if (!is.null(self$`makerCommission`)) {
+        InlineResponse20044Object[['makerCommission']] <-
+          self$`makerCommission`
       }
-      if (!is.null(self$`locked`)) {
-        InlineResponse20044Object[['locked']] <-
-          self$`locked`
-      }
-      if (!is.null(self$`freeze`)) {
-        InlineResponse20044Object[['freeze']] <-
-          self$`freeze`
-      }
-      if (!is.null(self$`withdrawing`)) {
-        InlineResponse20044Object[['withdrawing']] <-
-          self$`withdrawing`
-      }
-      if (!is.null(self$`btcValuation`)) {
-        InlineResponse20044Object[['btcValuation']] <-
-          self$`btcValuation`
+      if (!is.null(self$`takerCommission`)) {
+        InlineResponse20044Object[['takerCommission']] <-
+          self$`takerCommission`
       }
 
       InlineResponse20044Object
     },
     fromJSON = function(InlineResponse20044Json) {
       InlineResponse20044Object <- jsonlite::fromJSON(InlineResponse20044Json)
-      if (!is.null(InlineResponse20044Object$`asset`)) {
-        self$`asset` <- InlineResponse20044Object$`asset`
+      if (!is.null(InlineResponse20044Object$`symbol`)) {
+        self$`symbol` <- InlineResponse20044Object$`symbol`
       }
-      if (!is.null(InlineResponse20044Object$`free`)) {
-        self$`free` <- InlineResponse20044Object$`free`
+      if (!is.null(InlineResponse20044Object$`makerCommission`)) {
+        self$`makerCommission` <- InlineResponse20044Object$`makerCommission`
       }
-      if (!is.null(InlineResponse20044Object$`locked`)) {
-        self$`locked` <- InlineResponse20044Object$`locked`
-      }
-      if (!is.null(InlineResponse20044Object$`freeze`)) {
-        self$`freeze` <- InlineResponse20044Object$`freeze`
-      }
-      if (!is.null(InlineResponse20044Object$`withdrawing`)) {
-        self$`withdrawing` <- InlineResponse20044Object$`withdrawing`
-      }
-      if (!is.null(InlineResponse20044Object$`btcValuation`)) {
-        self$`btcValuation` <- InlineResponse20044Object$`btcValuation`
+      if (!is.null(InlineResponse20044Object$`takerCommission`)) {
+        self$`takerCommission` <- InlineResponse20044Object$`takerCommission`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`asset`)) {
+        if (!is.null(self$`symbol`)) {
         sprintf(
-        '"asset":
+        '"symbol":
           "%s"
                 ',
-        self$`asset`
+        self$`symbol`
         )},
-        if (!is.null(self$`free`)) {
+        if (!is.null(self$`makerCommission`)) {
         sprintf(
-        '"free":
+        '"makerCommission":
           "%s"
                 ',
-        self$`free`
+        self$`makerCommission`
         )},
-        if (!is.null(self$`locked`)) {
+        if (!is.null(self$`takerCommission`)) {
         sprintf(
-        '"locked":
+        '"takerCommission":
           "%s"
                 ',
-        self$`locked`
-        )},
-        if (!is.null(self$`freeze`)) {
-        sprintf(
-        '"freeze":
-          "%s"
-                ',
-        self$`freeze`
-        )},
-        if (!is.null(self$`withdrawing`)) {
-        sprintf(
-        '"withdrawing":
-          "%s"
-                ',
-        self$`withdrawing`
-        )},
-        if (!is.null(self$`btcValuation`)) {
-        sprintf(
-        '"btcValuation":
-          "%s"
-                ',
-        self$`btcValuation`
+        self$`takerCommission`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -167,12 +104,9 @@ InlineResponse20044 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20044Json) {
       InlineResponse20044Object <- jsonlite::fromJSON(InlineResponse20044Json)
-      self$`asset` <- InlineResponse20044Object$`asset`
-      self$`free` <- InlineResponse20044Object$`free`
-      self$`locked` <- InlineResponse20044Object$`locked`
-      self$`freeze` <- InlineResponse20044Object$`freeze`
-      self$`withdrawing` <- InlineResponse20044Object$`withdrawing`
-      self$`btcValuation` <- InlineResponse20044Object$`btcValuation`
+      self$`symbol` <- InlineResponse20044Object$`symbol`
+      self$`makerCommission` <- InlineResponse20044Object$`makerCommission`
+      self$`takerCommission` <- InlineResponse20044Object$`takerCommission`
       self
     }
   )

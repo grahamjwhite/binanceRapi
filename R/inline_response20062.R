@@ -13,21 +13,9 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field entryPrice  character 
+#' @field email  character 
 #'
-#' @field leverage  character 
-#'
-#' @field maxNotional  character 
-#'
-#' @field liquidationPrice  character 
-#'
-#' @field markPrice  character 
-#'
-#' @field positionAmount  character 
-#'
-#' @field symbol  character 
-#'
-#' @field unrealizedProfit  character 
+#' @field isFuturesEnabled  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -35,173 +23,59 @@
 InlineResponse20062 <- R6::R6Class(
   'InlineResponse20062',
   public = list(
-    `entryPrice` = NULL,
-    `leverage` = NULL,
-    `maxNotional` = NULL,
-    `liquidationPrice` = NULL,
-    `markPrice` = NULL,
-    `positionAmount` = NULL,
-    `symbol` = NULL,
-    `unrealizedProfit` = NULL,
+    `email` = NULL,
+    `isFuturesEnabled` = NULL,
     initialize = function(
-        `entryPrice`, `leverage`, `maxNotional`, `liquidationPrice`, `markPrice`, `positionAmount`, `symbol`, `unrealizedProfit`, ...
+        `email`, `isFuturesEnabled`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`entryPrice`)) {
-        stopifnot(is.character(`entryPrice`), length(`entryPrice`) == 1)
-        self$`entryPrice` <- `entryPrice`
+      if (!missing(`email`)) {
+        stopifnot(is.character(`email`), length(`email`) == 1)
+        self$`email` <- `email`
       }
-      if (!missing(`leverage`)) {
-        stopifnot(is.character(`leverage`), length(`leverage`) == 1)
-        self$`leverage` <- `leverage`
-      }
-      if (!missing(`maxNotional`)) {
-        stopifnot(is.character(`maxNotional`), length(`maxNotional`) == 1)
-        self$`maxNotional` <- `maxNotional`
-      }
-      if (!missing(`liquidationPrice`)) {
-        stopifnot(is.character(`liquidationPrice`), length(`liquidationPrice`) == 1)
-        self$`liquidationPrice` <- `liquidationPrice`
-      }
-      if (!missing(`markPrice`)) {
-        stopifnot(is.character(`markPrice`), length(`markPrice`) == 1)
-        self$`markPrice` <- `markPrice`
-      }
-      if (!missing(`positionAmount`)) {
-        stopifnot(is.character(`positionAmount`), length(`positionAmount`) == 1)
-        self$`positionAmount` <- `positionAmount`
-      }
-      if (!missing(`symbol`)) {
-        stopifnot(is.character(`symbol`), length(`symbol`) == 1)
-        self$`symbol` <- `symbol`
-      }
-      if (!missing(`unrealizedProfit`)) {
-        stopifnot(is.character(`unrealizedProfit`), length(`unrealizedProfit`) == 1)
-        self$`unrealizedProfit` <- `unrealizedProfit`
+      if (!missing(`isFuturesEnabled`)) {
+        stopifnot(is.logical(`isFuturesEnabled`), length(`isFuturesEnabled`) == 1)
+        self$`isFuturesEnabled` <- `isFuturesEnabled`
       }
     },
     toJSON = function() {
       InlineResponse20062Object <- list()
-      if (!is.null(self$`entryPrice`)) {
-        InlineResponse20062Object[['entryPrice']] <-
-          self$`entryPrice`
+      if (!is.null(self$`email`)) {
+        InlineResponse20062Object[['email']] <-
+          self$`email`
       }
-      if (!is.null(self$`leverage`)) {
-        InlineResponse20062Object[['leverage']] <-
-          self$`leverage`
-      }
-      if (!is.null(self$`maxNotional`)) {
-        InlineResponse20062Object[['maxNotional']] <-
-          self$`maxNotional`
-      }
-      if (!is.null(self$`liquidationPrice`)) {
-        InlineResponse20062Object[['liquidationPrice']] <-
-          self$`liquidationPrice`
-      }
-      if (!is.null(self$`markPrice`)) {
-        InlineResponse20062Object[['markPrice']] <-
-          self$`markPrice`
-      }
-      if (!is.null(self$`positionAmount`)) {
-        InlineResponse20062Object[['positionAmount']] <-
-          self$`positionAmount`
-      }
-      if (!is.null(self$`symbol`)) {
-        InlineResponse20062Object[['symbol']] <-
-          self$`symbol`
-      }
-      if (!is.null(self$`unrealizedProfit`)) {
-        InlineResponse20062Object[['unrealizedProfit']] <-
-          self$`unrealizedProfit`
+      if (!is.null(self$`isFuturesEnabled`)) {
+        InlineResponse20062Object[['isFuturesEnabled']] <-
+          self$`isFuturesEnabled`
       }
 
       InlineResponse20062Object
     },
     fromJSON = function(InlineResponse20062Json) {
       InlineResponse20062Object <- jsonlite::fromJSON(InlineResponse20062Json)
-      if (!is.null(InlineResponse20062Object$`entryPrice`)) {
-        self$`entryPrice` <- InlineResponse20062Object$`entryPrice`
+      if (!is.null(InlineResponse20062Object$`email`)) {
+        self$`email` <- InlineResponse20062Object$`email`
       }
-      if (!is.null(InlineResponse20062Object$`leverage`)) {
-        self$`leverage` <- InlineResponse20062Object$`leverage`
-      }
-      if (!is.null(InlineResponse20062Object$`maxNotional`)) {
-        self$`maxNotional` <- InlineResponse20062Object$`maxNotional`
-      }
-      if (!is.null(InlineResponse20062Object$`liquidationPrice`)) {
-        self$`liquidationPrice` <- InlineResponse20062Object$`liquidationPrice`
-      }
-      if (!is.null(InlineResponse20062Object$`markPrice`)) {
-        self$`markPrice` <- InlineResponse20062Object$`markPrice`
-      }
-      if (!is.null(InlineResponse20062Object$`positionAmount`)) {
-        self$`positionAmount` <- InlineResponse20062Object$`positionAmount`
-      }
-      if (!is.null(InlineResponse20062Object$`symbol`)) {
-        self$`symbol` <- InlineResponse20062Object$`symbol`
-      }
-      if (!is.null(InlineResponse20062Object$`unrealizedProfit`)) {
-        self$`unrealizedProfit` <- InlineResponse20062Object$`unrealizedProfit`
+      if (!is.null(InlineResponse20062Object$`isFuturesEnabled`)) {
+        self$`isFuturesEnabled` <- InlineResponse20062Object$`isFuturesEnabled`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`entryPrice`)) {
+        if (!is.null(self$`email`)) {
         sprintf(
-        '"entryPrice":
+        '"email":
           "%s"
                 ',
-        self$`entryPrice`
+        self$`email`
         )},
-        if (!is.null(self$`leverage`)) {
+        if (!is.null(self$`isFuturesEnabled`)) {
         sprintf(
-        '"leverage":
-          "%s"
+        '"isFuturesEnabled":
+          %s
                 ',
-        self$`leverage`
-        )},
-        if (!is.null(self$`maxNotional`)) {
-        sprintf(
-        '"maxNotional":
-          "%s"
-                ',
-        self$`maxNotional`
-        )},
-        if (!is.null(self$`liquidationPrice`)) {
-        sprintf(
-        '"liquidationPrice":
-          "%s"
-                ',
-        self$`liquidationPrice`
-        )},
-        if (!is.null(self$`markPrice`)) {
-        sprintf(
-        '"markPrice":
-          "%s"
-                ',
-        self$`markPrice`
-        )},
-        if (!is.null(self$`positionAmount`)) {
-        sprintf(
-        '"positionAmount":
-          "%s"
-                ',
-        self$`positionAmount`
-        )},
-        if (!is.null(self$`symbol`)) {
-        sprintf(
-        '"symbol":
-          "%s"
-                ',
-        self$`symbol`
-        )},
-        if (!is.null(self$`unrealizedProfit`)) {
-        sprintf(
-        '"unrealizedProfit":
-          "%s"
-                ',
-        self$`unrealizedProfit`
+        tolower(self$`isFuturesEnabled`)
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -209,14 +83,8 @@ InlineResponse20062 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20062Json) {
       InlineResponse20062Object <- jsonlite::fromJSON(InlineResponse20062Json)
-      self$`entryPrice` <- InlineResponse20062Object$`entryPrice`
-      self$`leverage` <- InlineResponse20062Object$`leverage`
-      self$`maxNotional` <- InlineResponse20062Object$`maxNotional`
-      self$`liquidationPrice` <- InlineResponse20062Object$`liquidationPrice`
-      self$`markPrice` <- InlineResponse20062Object$`markPrice`
-      self$`positionAmount` <- InlineResponse20062Object$`positionAmount`
-      self$`symbol` <- InlineResponse20062Object$`symbol`
-      self$`unrealizedProfit` <- InlineResponse20062Object$`unrealizedProfit`
+      self$`email` <- InlineResponse20062Object$`email`
+      self$`isFuturesEnabled` <- InlineResponse20062Object$`isFuturesEnabled`
       self
     }
   )

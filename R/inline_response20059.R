@@ -15,7 +15,7 @@
 #'
 #' @field email  character 
 #'
-#' @field isFuturesEnabled  character 
+#' @field isMarginEnabled  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -24,18 +24,18 @@ InlineResponse20059 <- R6::R6Class(
   'InlineResponse20059',
   public = list(
     `email` = NULL,
-    `isFuturesEnabled` = NULL,
+    `isMarginEnabled` = NULL,
     initialize = function(
-        `email`, `isFuturesEnabled`, ...
+        `email`, `isMarginEnabled`, ...
     ) {
       local.optional.var <- list(...)
       if (!missing(`email`)) {
         stopifnot(is.character(`email`), length(`email`) == 1)
         self$`email` <- `email`
       }
-      if (!missing(`isFuturesEnabled`)) {
-        stopifnot(is.logical(`isFuturesEnabled`), length(`isFuturesEnabled`) == 1)
-        self$`isFuturesEnabled` <- `isFuturesEnabled`
+      if (!missing(`isMarginEnabled`)) {
+        stopifnot(is.logical(`isMarginEnabled`), length(`isMarginEnabled`) == 1)
+        self$`isMarginEnabled` <- `isMarginEnabled`
       }
     },
     toJSON = function() {
@@ -44,9 +44,9 @@ InlineResponse20059 <- R6::R6Class(
         InlineResponse20059Object[['email']] <-
           self$`email`
       }
-      if (!is.null(self$`isFuturesEnabled`)) {
-        InlineResponse20059Object[['isFuturesEnabled']] <-
-          self$`isFuturesEnabled`
+      if (!is.null(self$`isMarginEnabled`)) {
+        InlineResponse20059Object[['isMarginEnabled']] <-
+          self$`isMarginEnabled`
       }
 
       InlineResponse20059Object
@@ -56,8 +56,8 @@ InlineResponse20059 <- R6::R6Class(
       if (!is.null(InlineResponse20059Object$`email`)) {
         self$`email` <- InlineResponse20059Object$`email`
       }
-      if (!is.null(InlineResponse20059Object$`isFuturesEnabled`)) {
-        self$`isFuturesEnabled` <- InlineResponse20059Object$`isFuturesEnabled`
+      if (!is.null(InlineResponse20059Object$`isMarginEnabled`)) {
+        self$`isMarginEnabled` <- InlineResponse20059Object$`isMarginEnabled`
       }
       self
     },
@@ -70,12 +70,12 @@ InlineResponse20059 <- R6::R6Class(
                 ',
         self$`email`
         )},
-        if (!is.null(self$`isFuturesEnabled`)) {
+        if (!is.null(self$`isMarginEnabled`)) {
         sprintf(
-        '"isFuturesEnabled":
+        '"isMarginEnabled":
           %s
                 ',
-        tolower(self$`isFuturesEnabled`)
+        tolower(self$`isMarginEnabled`)
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -84,7 +84,7 @@ InlineResponse20059 <- R6::R6Class(
     fromJSONString = function(InlineResponse20059Json) {
       InlineResponse20059Object <- jsonlite::fromJSON(InlineResponse20059Json)
       self$`email` <- InlineResponse20059Object$`email`
-      self$`isFuturesEnabled` <- InlineResponse20059Object$`isFuturesEnabled`
+      self$`isMarginEnabled` <- InlineResponse20059Object$`isMarginEnabled`
       self
     }
   )

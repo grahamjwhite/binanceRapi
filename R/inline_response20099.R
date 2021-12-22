@@ -13,19 +13,11 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field id  numeric 
+#' @field code  integer 
 #'
-#' @field tokenName  character 
+#' @field msg  character 
 #'
-#' @field amount  character 
-#'
-#' @field nav  character 
-#'
-#' @field fee  character 
-#'
-#' @field totalCharge  character 
-#'
-#' @field timestamp  integer 
+#' @field data  \link{InlineResponse20099Data} 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -33,154 +25,80 @@
 InlineResponse20099 <- R6::R6Class(
   'InlineResponse20099',
   public = list(
-    `id` = NULL,
-    `tokenName` = NULL,
-    `amount` = NULL,
-    `nav` = NULL,
-    `fee` = NULL,
-    `totalCharge` = NULL,
-    `timestamp` = NULL,
+    `code` = NULL,
+    `msg` = NULL,
+    `data` = NULL,
     initialize = function(
-        `id`, `tokenName`, `amount`, `nav`, `fee`, `totalCharge`, `timestamp`, ...
+        `code`, `msg`, `data`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`id`)) {
-        stopifnot(is.numeric(`id`), length(`id`) == 1)
-        self$`id` <- `id`
+      if (!missing(`code`)) {
+        stopifnot(is.numeric(`code`), length(`code`) == 1)
+        self$`code` <- `code`
       }
-      if (!missing(`tokenName`)) {
-        stopifnot(is.character(`tokenName`), length(`tokenName`) == 1)
-        self$`tokenName` <- `tokenName`
+      if (!missing(`msg`)) {
+        stopifnot(is.character(`msg`), length(`msg`) == 1)
+        self$`msg` <- `msg`
       }
-      if (!missing(`amount`)) {
-        stopifnot(is.character(`amount`), length(`amount`) == 1)
-        self$`amount` <- `amount`
-      }
-      if (!missing(`nav`)) {
-        stopifnot(is.character(`nav`), length(`nav`) == 1)
-        self$`nav` <- `nav`
-      }
-      if (!missing(`fee`)) {
-        stopifnot(is.character(`fee`), length(`fee`) == 1)
-        self$`fee` <- `fee`
-      }
-      if (!missing(`totalCharge`)) {
-        stopifnot(is.character(`totalCharge`), length(`totalCharge`) == 1)
-        self$`totalCharge` <- `totalCharge`
-      }
-      if (!missing(`timestamp`)) {
-        stopifnot(is.numeric(`timestamp`), length(`timestamp`) == 1)
-        self$`timestamp` <- `timestamp`
+      if (!missing(`data`)) {
+        stopifnot(R6::is.R6(`data`))
+        self$`data` <- `data`
       }
     },
     toJSON = function() {
       InlineResponse20099Object <- list()
-      if (!is.null(self$`id`)) {
-        InlineResponse20099Object[['id']] <-
-          self$`id`
+      if (!is.null(self$`code`)) {
+        InlineResponse20099Object[['code']] <-
+          self$`code`
       }
-      if (!is.null(self$`tokenName`)) {
-        InlineResponse20099Object[['tokenName']] <-
-          self$`tokenName`
+      if (!is.null(self$`msg`)) {
+        InlineResponse20099Object[['msg']] <-
+          self$`msg`
       }
-      if (!is.null(self$`amount`)) {
-        InlineResponse20099Object[['amount']] <-
-          self$`amount`
-      }
-      if (!is.null(self$`nav`)) {
-        InlineResponse20099Object[['nav']] <-
-          self$`nav`
-      }
-      if (!is.null(self$`fee`)) {
-        InlineResponse20099Object[['fee']] <-
-          self$`fee`
-      }
-      if (!is.null(self$`totalCharge`)) {
-        InlineResponse20099Object[['totalCharge']] <-
-          self$`totalCharge`
-      }
-      if (!is.null(self$`timestamp`)) {
-        InlineResponse20099Object[['timestamp']] <-
-          self$`timestamp`
+      if (!is.null(self$`data`)) {
+        InlineResponse20099Object[['data']] <-
+          self$`data`$toJSON()
       }
 
       InlineResponse20099Object
     },
     fromJSON = function(InlineResponse20099Json) {
       InlineResponse20099Object <- jsonlite::fromJSON(InlineResponse20099Json)
-      if (!is.null(InlineResponse20099Object$`id`)) {
-        self$`id` <- InlineResponse20099Object$`id`
+      if (!is.null(InlineResponse20099Object$`code`)) {
+        self$`code` <- InlineResponse20099Object$`code`
       }
-      if (!is.null(InlineResponse20099Object$`tokenName`)) {
-        self$`tokenName` <- InlineResponse20099Object$`tokenName`
+      if (!is.null(InlineResponse20099Object$`msg`)) {
+        self$`msg` <- InlineResponse20099Object$`msg`
       }
-      if (!is.null(InlineResponse20099Object$`amount`)) {
-        self$`amount` <- InlineResponse20099Object$`amount`
-      }
-      if (!is.null(InlineResponse20099Object$`nav`)) {
-        self$`nav` <- InlineResponse20099Object$`nav`
-      }
-      if (!is.null(InlineResponse20099Object$`fee`)) {
-        self$`fee` <- InlineResponse20099Object$`fee`
-      }
-      if (!is.null(InlineResponse20099Object$`totalCharge`)) {
-        self$`totalCharge` <- InlineResponse20099Object$`totalCharge`
-      }
-      if (!is.null(InlineResponse20099Object$`timestamp`)) {
-        self$`timestamp` <- InlineResponse20099Object$`timestamp`
+      if (!is.null(InlineResponse20099Object$`data`)) {
+        dataObject <- InlineResponse20099Data$new()
+        dataObject$fromJSON(jsonlite::toJSON(InlineResponse20099Object$data, auto_unbox = TRUE, digits = NA))
+        self$`data` <- dataObject
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`id`)) {
+        if (!is.null(self$`code`)) {
         sprintf(
-        '"id":
+        '"code":
           %d
                 ',
-        self$`id`
+        self$`code`
         )},
-        if (!is.null(self$`tokenName`)) {
+        if (!is.null(self$`msg`)) {
         sprintf(
-        '"tokenName":
+        '"msg":
           "%s"
                 ',
-        self$`tokenName`
+        self$`msg`
         )},
-        if (!is.null(self$`amount`)) {
+        if (!is.null(self$`data`)) {
         sprintf(
-        '"amount":
-          "%s"
-                ',
-        self$`amount`
-        )},
-        if (!is.null(self$`nav`)) {
-        sprintf(
-        '"nav":
-          "%s"
-                ',
-        self$`nav`
-        )},
-        if (!is.null(self$`fee`)) {
-        sprintf(
-        '"fee":
-          "%s"
-                ',
-        self$`fee`
-        )},
-        if (!is.null(self$`totalCharge`)) {
-        sprintf(
-        '"totalCharge":
-          "%s"
-                ',
-        self$`totalCharge`
-        )},
-        if (!is.null(self$`timestamp`)) {
-        sprintf(
-        '"timestamp":
-          %d
-                ',
-        self$`timestamp`
+        '"data":
+        %s
+        ',
+        jsonlite::toJSON(self$`data`$toJSON(), auto_unbox=TRUE, digits = NA)
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -188,13 +106,9 @@ InlineResponse20099 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20099Json) {
       InlineResponse20099Object <- jsonlite::fromJSON(InlineResponse20099Json)
-      self$`id` <- InlineResponse20099Object$`id`
-      self$`tokenName` <- InlineResponse20099Object$`tokenName`
-      self$`amount` <- InlineResponse20099Object$`amount`
-      self$`nav` <- InlineResponse20099Object$`nav`
-      self$`fee` <- InlineResponse20099Object$`fee`
-      self$`totalCharge` <- InlineResponse20099Object$`totalCharge`
-      self$`timestamp` <- InlineResponse20099Object$`timestamp`
+      self$`code` <- InlineResponse20099Object$`code`
+      self$`msg` <- InlineResponse20099Object$`msg`
+      self$`data` <- InlineResponse20099Data$new()$fromJSON(jsonlite::toJSON(InlineResponse20099Object$data, auto_unbox = TRUE, digits = NA))
       self
     }
   )

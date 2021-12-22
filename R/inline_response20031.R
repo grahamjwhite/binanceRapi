@@ -13,7 +13,19 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field id  character 
+#' @field symbol  character [optional]
+#'
+#' @field tier  integer [optional]
+#'
+#' @field effectiveMultiple  character [optional]
+#'
+#' @field initialRiskRatio  character [optional]
+#'
+#' @field liquidationRiskRatio  character [optional]
+#'
+#' @field baseAssetMaxBorrowable  character [optional]
+#'
+#' @field quoteAssetMaxBorrowable  character [optional]
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -21,40 +33,154 @@
 InlineResponse20031 <- R6::R6Class(
   'InlineResponse20031',
   public = list(
-    `id` = NULL,
+    `symbol` = NULL,
+    `tier` = NULL,
+    `effectiveMultiple` = NULL,
+    `initialRiskRatio` = NULL,
+    `liquidationRiskRatio` = NULL,
+    `baseAssetMaxBorrowable` = NULL,
+    `quoteAssetMaxBorrowable` = NULL,
     initialize = function(
-        `id`, ...
+        `symbol`=NULL, `tier`=NULL, `effectiveMultiple`=NULL, `initialRiskRatio`=NULL, `liquidationRiskRatio`=NULL, `baseAssetMaxBorrowable`=NULL, `quoteAssetMaxBorrowable`=NULL, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`id`)) {
-        stopifnot(is.character(`id`), length(`id`) == 1)
-        self$`id` <- `id`
+      if (!is.null(`symbol`)) {
+        stopifnot(is.character(`symbol`), length(`symbol`) == 1)
+        self$`symbol` <- `symbol`
+      }
+      if (!is.null(`tier`)) {
+        stopifnot(is.numeric(`tier`), length(`tier`) == 1)
+        self$`tier` <- `tier`
+      }
+      if (!is.null(`effectiveMultiple`)) {
+        stopifnot(is.character(`effectiveMultiple`), length(`effectiveMultiple`) == 1)
+        self$`effectiveMultiple` <- `effectiveMultiple`
+      }
+      if (!is.null(`initialRiskRatio`)) {
+        stopifnot(is.character(`initialRiskRatio`), length(`initialRiskRatio`) == 1)
+        self$`initialRiskRatio` <- `initialRiskRatio`
+      }
+      if (!is.null(`liquidationRiskRatio`)) {
+        stopifnot(is.character(`liquidationRiskRatio`), length(`liquidationRiskRatio`) == 1)
+        self$`liquidationRiskRatio` <- `liquidationRiskRatio`
+      }
+      if (!is.null(`baseAssetMaxBorrowable`)) {
+        stopifnot(is.character(`baseAssetMaxBorrowable`), length(`baseAssetMaxBorrowable`) == 1)
+        self$`baseAssetMaxBorrowable` <- `baseAssetMaxBorrowable`
+      }
+      if (!is.null(`quoteAssetMaxBorrowable`)) {
+        stopifnot(is.character(`quoteAssetMaxBorrowable`), length(`quoteAssetMaxBorrowable`) == 1)
+        self$`quoteAssetMaxBorrowable` <- `quoteAssetMaxBorrowable`
       }
     },
     toJSON = function() {
       InlineResponse20031Object <- list()
-      if (!is.null(self$`id`)) {
-        InlineResponse20031Object[['id']] <-
-          self$`id`
+      if (!is.null(self$`symbol`)) {
+        InlineResponse20031Object[['symbol']] <-
+          self$`symbol`
+      }
+      if (!is.null(self$`tier`)) {
+        InlineResponse20031Object[['tier']] <-
+          self$`tier`
+      }
+      if (!is.null(self$`effectiveMultiple`)) {
+        InlineResponse20031Object[['effectiveMultiple']] <-
+          self$`effectiveMultiple`
+      }
+      if (!is.null(self$`initialRiskRatio`)) {
+        InlineResponse20031Object[['initialRiskRatio']] <-
+          self$`initialRiskRatio`
+      }
+      if (!is.null(self$`liquidationRiskRatio`)) {
+        InlineResponse20031Object[['liquidationRiskRatio']] <-
+          self$`liquidationRiskRatio`
+      }
+      if (!is.null(self$`baseAssetMaxBorrowable`)) {
+        InlineResponse20031Object[['baseAssetMaxBorrowable']] <-
+          self$`baseAssetMaxBorrowable`
+      }
+      if (!is.null(self$`quoteAssetMaxBorrowable`)) {
+        InlineResponse20031Object[['quoteAssetMaxBorrowable']] <-
+          self$`quoteAssetMaxBorrowable`
       }
 
       InlineResponse20031Object
     },
     fromJSON = function(InlineResponse20031Json) {
       InlineResponse20031Object <- jsonlite::fromJSON(InlineResponse20031Json)
-      if (!is.null(InlineResponse20031Object$`id`)) {
-        self$`id` <- InlineResponse20031Object$`id`
+      if (!is.null(InlineResponse20031Object$`symbol`)) {
+        self$`symbol` <- InlineResponse20031Object$`symbol`
+      }
+      if (!is.null(InlineResponse20031Object$`tier`)) {
+        self$`tier` <- InlineResponse20031Object$`tier`
+      }
+      if (!is.null(InlineResponse20031Object$`effectiveMultiple`)) {
+        self$`effectiveMultiple` <- InlineResponse20031Object$`effectiveMultiple`
+      }
+      if (!is.null(InlineResponse20031Object$`initialRiskRatio`)) {
+        self$`initialRiskRatio` <- InlineResponse20031Object$`initialRiskRatio`
+      }
+      if (!is.null(InlineResponse20031Object$`liquidationRiskRatio`)) {
+        self$`liquidationRiskRatio` <- InlineResponse20031Object$`liquidationRiskRatio`
+      }
+      if (!is.null(InlineResponse20031Object$`baseAssetMaxBorrowable`)) {
+        self$`baseAssetMaxBorrowable` <- InlineResponse20031Object$`baseAssetMaxBorrowable`
+      }
+      if (!is.null(InlineResponse20031Object$`quoteAssetMaxBorrowable`)) {
+        self$`quoteAssetMaxBorrowable` <- InlineResponse20031Object$`quoteAssetMaxBorrowable`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`id`)) {
+        if (!is.null(self$`symbol`)) {
         sprintf(
-        '"id":
+        '"symbol":
           "%s"
                 ',
-        self$`id`
+        self$`symbol`
+        )},
+        if (!is.null(self$`tier`)) {
+        sprintf(
+        '"tier":
+          %d
+                ',
+        self$`tier`
+        )},
+        if (!is.null(self$`effectiveMultiple`)) {
+        sprintf(
+        '"effectiveMultiple":
+          "%s"
+                ',
+        self$`effectiveMultiple`
+        )},
+        if (!is.null(self$`initialRiskRatio`)) {
+        sprintf(
+        '"initialRiskRatio":
+          "%s"
+                ',
+        self$`initialRiskRatio`
+        )},
+        if (!is.null(self$`liquidationRiskRatio`)) {
+        sprintf(
+        '"liquidationRiskRatio":
+          "%s"
+                ',
+        self$`liquidationRiskRatio`
+        )},
+        if (!is.null(self$`baseAssetMaxBorrowable`)) {
+        sprintf(
+        '"baseAssetMaxBorrowable":
+          "%s"
+                ',
+        self$`baseAssetMaxBorrowable`
+        )},
+        if (!is.null(self$`quoteAssetMaxBorrowable`)) {
+        sprintf(
+        '"quoteAssetMaxBorrowable":
+          "%s"
+                ',
+        self$`quoteAssetMaxBorrowable`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -62,7 +188,13 @@ InlineResponse20031 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20031Json) {
       InlineResponse20031Object <- jsonlite::fromJSON(InlineResponse20031Json)
-      self$`id` <- InlineResponse20031Object$`id`
+      self$`symbol` <- InlineResponse20031Object$`symbol`
+      self$`tier` <- InlineResponse20031Object$`tier`
+      self$`effectiveMultiple` <- InlineResponse20031Object$`effectiveMultiple`
+      self$`initialRiskRatio` <- InlineResponse20031Object$`initialRiskRatio`
+      self$`liquidationRiskRatio` <- InlineResponse20031Object$`liquidationRiskRatio`
+      self$`baseAssetMaxBorrowable` <- InlineResponse20031Object$`baseAssetMaxBorrowable`
+      self$`quoteAssetMaxBorrowable` <- InlineResponse20031Object$`quoteAssetMaxBorrowable`
       self
     }
   )

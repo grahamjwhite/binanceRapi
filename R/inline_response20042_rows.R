@@ -13,17 +13,17 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field asset  character 
+#' @field id  integer 
 #'
 #' @field amount  character 
 #'
-#' @field type  character 
+#' @field asset  character 
 #'
-#' @field status  character 
+#' @field divTime  integer 
+#'
+#' @field enInfo  character 
 #'
 #' @field tranId  integer 
-#'
-#' @field timestamp  integer 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -31,100 +31,100 @@
 InlineResponse20042Rows <- R6::R6Class(
   'InlineResponse20042Rows',
   public = list(
-    `asset` = NULL,
+    `id` = NULL,
     `amount` = NULL,
-    `type` = NULL,
-    `status` = NULL,
+    `asset` = NULL,
+    `divTime` = NULL,
+    `enInfo` = NULL,
     `tranId` = NULL,
-    `timestamp` = NULL,
     initialize = function(
-        `asset`, `amount`, `type`, `status`, `tranId`, `timestamp`, ...
+        `id`, `amount`, `asset`, `divTime`, `enInfo`, `tranId`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`asset`)) {
-        stopifnot(is.character(`asset`), length(`asset`) == 1)
-        self$`asset` <- `asset`
+      if (!missing(`id`)) {
+        stopifnot(is.numeric(`id`), length(`id`) == 1)
+        self$`id` <- `id`
       }
       if (!missing(`amount`)) {
         stopifnot(is.character(`amount`), length(`amount`) == 1)
         self$`amount` <- `amount`
       }
-      if (!missing(`type`)) {
-        stopifnot(is.character(`type`), length(`type`) == 1)
-        self$`type` <- `type`
+      if (!missing(`asset`)) {
+        stopifnot(is.character(`asset`), length(`asset`) == 1)
+        self$`asset` <- `asset`
       }
-      if (!missing(`status`)) {
-        stopifnot(is.character(`status`), length(`status`) == 1)
-        self$`status` <- `status`
+      if (!missing(`divTime`)) {
+        stopifnot(is.numeric(`divTime`), length(`divTime`) == 1)
+        self$`divTime` <- `divTime`
+      }
+      if (!missing(`enInfo`)) {
+        stopifnot(is.character(`enInfo`), length(`enInfo`) == 1)
+        self$`enInfo` <- `enInfo`
       }
       if (!missing(`tranId`)) {
         stopifnot(is.numeric(`tranId`), length(`tranId`) == 1)
         self$`tranId` <- `tranId`
       }
-      if (!missing(`timestamp`)) {
-        stopifnot(is.numeric(`timestamp`), length(`timestamp`) == 1)
-        self$`timestamp` <- `timestamp`
-      }
     },
     toJSON = function() {
       InlineResponse20042RowsObject <- list()
-      if (!is.null(self$`asset`)) {
-        InlineResponse20042RowsObject[['asset']] <-
-          self$`asset`
+      if (!is.null(self$`id`)) {
+        InlineResponse20042RowsObject[['id']] <-
+          self$`id`
       }
       if (!is.null(self$`amount`)) {
         InlineResponse20042RowsObject[['amount']] <-
           self$`amount`
       }
-      if (!is.null(self$`type`)) {
-        InlineResponse20042RowsObject[['type']] <-
-          self$`type`
+      if (!is.null(self$`asset`)) {
+        InlineResponse20042RowsObject[['asset']] <-
+          self$`asset`
       }
-      if (!is.null(self$`status`)) {
-        InlineResponse20042RowsObject[['status']] <-
-          self$`status`
+      if (!is.null(self$`divTime`)) {
+        InlineResponse20042RowsObject[['divTime']] <-
+          self$`divTime`
+      }
+      if (!is.null(self$`enInfo`)) {
+        InlineResponse20042RowsObject[['enInfo']] <-
+          self$`enInfo`
       }
       if (!is.null(self$`tranId`)) {
         InlineResponse20042RowsObject[['tranId']] <-
           self$`tranId`
-      }
-      if (!is.null(self$`timestamp`)) {
-        InlineResponse20042RowsObject[['timestamp']] <-
-          self$`timestamp`
       }
 
       InlineResponse20042RowsObject
     },
     fromJSON = function(InlineResponse20042RowsJson) {
       InlineResponse20042RowsObject <- jsonlite::fromJSON(InlineResponse20042RowsJson)
-      if (!is.null(InlineResponse20042RowsObject$`asset`)) {
-        self$`asset` <- InlineResponse20042RowsObject$`asset`
+      if (!is.null(InlineResponse20042RowsObject$`id`)) {
+        self$`id` <- InlineResponse20042RowsObject$`id`
       }
       if (!is.null(InlineResponse20042RowsObject$`amount`)) {
         self$`amount` <- InlineResponse20042RowsObject$`amount`
       }
-      if (!is.null(InlineResponse20042RowsObject$`type`)) {
-        self$`type` <- InlineResponse20042RowsObject$`type`
+      if (!is.null(InlineResponse20042RowsObject$`asset`)) {
+        self$`asset` <- InlineResponse20042RowsObject$`asset`
       }
-      if (!is.null(InlineResponse20042RowsObject$`status`)) {
-        self$`status` <- InlineResponse20042RowsObject$`status`
+      if (!is.null(InlineResponse20042RowsObject$`divTime`)) {
+        self$`divTime` <- InlineResponse20042RowsObject$`divTime`
+      }
+      if (!is.null(InlineResponse20042RowsObject$`enInfo`)) {
+        self$`enInfo` <- InlineResponse20042RowsObject$`enInfo`
       }
       if (!is.null(InlineResponse20042RowsObject$`tranId`)) {
         self$`tranId` <- InlineResponse20042RowsObject$`tranId`
-      }
-      if (!is.null(InlineResponse20042RowsObject$`timestamp`)) {
-        self$`timestamp` <- InlineResponse20042RowsObject$`timestamp`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`asset`)) {
+        if (!is.null(self$`id`)) {
         sprintf(
-        '"asset":
-          "%s"
+        '"id":
+          %d
                 ',
-        self$`asset`
+        self$`id`
         )},
         if (!is.null(self$`amount`)) {
         sprintf(
@@ -133,19 +133,26 @@ InlineResponse20042Rows <- R6::R6Class(
                 ',
         self$`amount`
         )},
-        if (!is.null(self$`type`)) {
+        if (!is.null(self$`asset`)) {
         sprintf(
-        '"type":
+        '"asset":
           "%s"
                 ',
-        self$`type`
+        self$`asset`
         )},
-        if (!is.null(self$`status`)) {
+        if (!is.null(self$`divTime`)) {
         sprintf(
-        '"status":
+        '"divTime":
+          %d
+                ',
+        self$`divTime`
+        )},
+        if (!is.null(self$`enInfo`)) {
+        sprintf(
+        '"enInfo":
           "%s"
                 ',
-        self$`status`
+        self$`enInfo`
         )},
         if (!is.null(self$`tranId`)) {
         sprintf(
@@ -153,13 +160,6 @@ InlineResponse20042Rows <- R6::R6Class(
           %d
                 ',
         self$`tranId`
-        )},
-        if (!is.null(self$`timestamp`)) {
-        sprintf(
-        '"timestamp":
-          %d
-                ',
-        self$`timestamp`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -167,12 +167,12 @@ InlineResponse20042Rows <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20042RowsJson) {
       InlineResponse20042RowsObject <- jsonlite::fromJSON(InlineResponse20042RowsJson)
-      self$`asset` <- InlineResponse20042RowsObject$`asset`
+      self$`id` <- InlineResponse20042RowsObject$`id`
       self$`amount` <- InlineResponse20042RowsObject$`amount`
-      self$`type` <- InlineResponse20042RowsObject$`type`
-      self$`status` <- InlineResponse20042RowsObject$`status`
+      self$`asset` <- InlineResponse20042RowsObject$`asset`
+      self$`divTime` <- InlineResponse20042RowsObject$`divTime`
+      self$`enInfo` <- InlineResponse20042RowsObject$`enInfo`
       self$`tranId` <- InlineResponse20042RowsObject$`tranId`
-      self$`timestamp` <- InlineResponse20042RowsObject$`timestamp`
       self
     }
   )

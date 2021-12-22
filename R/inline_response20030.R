@@ -13,33 +13,13 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field coin  character 
+#' @field vipLevel  integer [optional]
 #'
-#' @field depositAllEnable  character 
+#' @field symbol  character [optional]
 #'
-#' @field free  character 
+#' @field leverage  character [optional]
 #'
-#' @field freeze  character 
-#'
-#' @field ipoable  character 
-#'
-#' @field ipoing  character 
-#'
-#' @field isLegalMoney  character 
-#'
-#' @field locked  character 
-#'
-#' @field name  character 
-#'
-#' @field networkList  list( \link{SapiV1CapitalConfigGetallNetworkList} ) 
-#'
-#' @field storage  character 
-#'
-#' @field trading  character 
-#'
-#' @field withdrawAllEnable  character 
-#'
-#' @field withdrawing  character 
+#' @field data  list( \link{SapiV1MarginIsolatedMarginDataData} ) [optional]
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -47,288 +27,98 @@
 InlineResponse20030 <- R6::R6Class(
   'InlineResponse20030',
   public = list(
-    `coin` = NULL,
-    `depositAllEnable` = NULL,
-    `free` = NULL,
-    `freeze` = NULL,
-    `ipoable` = NULL,
-    `ipoing` = NULL,
-    `isLegalMoney` = NULL,
-    `locked` = NULL,
-    `name` = NULL,
-    `networkList` = NULL,
-    `storage` = NULL,
-    `trading` = NULL,
-    `withdrawAllEnable` = NULL,
-    `withdrawing` = NULL,
+    `vipLevel` = NULL,
+    `symbol` = NULL,
+    `leverage` = NULL,
+    `data` = NULL,
     initialize = function(
-        `coin`, `depositAllEnable`, `free`, `freeze`, `ipoable`, `ipoing`, `isLegalMoney`, `locked`, `name`, `networkList`, `storage`, `trading`, `withdrawAllEnable`, `withdrawing`, ...
+        `vipLevel`=NULL, `symbol`=NULL, `leverage`=NULL, `data`=NULL, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`coin`)) {
-        stopifnot(is.character(`coin`), length(`coin`) == 1)
-        self$`coin` <- `coin`
+      if (!is.null(`vipLevel`)) {
+        stopifnot(is.numeric(`vipLevel`), length(`vipLevel`) == 1)
+        self$`vipLevel` <- `vipLevel`
       }
-      if (!missing(`depositAllEnable`)) {
-        stopifnot(is.logical(`depositAllEnable`), length(`depositAllEnable`) == 1)
-        self$`depositAllEnable` <- `depositAllEnable`
+      if (!is.null(`symbol`)) {
+        stopifnot(is.character(`symbol`), length(`symbol`) == 1)
+        self$`symbol` <- `symbol`
       }
-      if (!missing(`free`)) {
-        stopifnot(is.character(`free`), length(`free`) == 1)
-        self$`free` <- `free`
+      if (!is.null(`leverage`)) {
+        stopifnot(is.character(`leverage`), length(`leverage`) == 1)
+        self$`leverage` <- `leverage`
       }
-      if (!missing(`freeze`)) {
-        stopifnot(is.character(`freeze`), length(`freeze`) == 1)
-        self$`freeze` <- `freeze`
-      }
-      if (!missing(`ipoable`)) {
-        stopifnot(is.character(`ipoable`), length(`ipoable`) == 1)
-        self$`ipoable` <- `ipoable`
-      }
-      if (!missing(`ipoing`)) {
-        stopifnot(is.character(`ipoing`), length(`ipoing`) == 1)
-        self$`ipoing` <- `ipoing`
-      }
-      if (!missing(`isLegalMoney`)) {
-        stopifnot(is.logical(`isLegalMoney`), length(`isLegalMoney`) == 1)
-        self$`isLegalMoney` <- `isLegalMoney`
-      }
-      if (!missing(`locked`)) {
-        stopifnot(is.character(`locked`), length(`locked`) == 1)
-        self$`locked` <- `locked`
-      }
-      if (!missing(`name`)) {
-        stopifnot(is.character(`name`), length(`name`) == 1)
-        self$`name` <- `name`
-      }
-      if (!missing(`networkList`)) {
-        stopifnot(is.vector(`networkList`), length(`networkList`) != 0)
-        sapply(`networkList`, function(x) stopifnot(R6::is.R6(x)))
-        self$`networkList` <- `networkList`
-      }
-      if (!missing(`storage`)) {
-        stopifnot(is.character(`storage`), length(`storage`) == 1)
-        self$`storage` <- `storage`
-      }
-      if (!missing(`trading`)) {
-        stopifnot(is.logical(`trading`), length(`trading`) == 1)
-        self$`trading` <- `trading`
-      }
-      if (!missing(`withdrawAllEnable`)) {
-        stopifnot(is.logical(`withdrawAllEnable`), length(`withdrawAllEnable`) == 1)
-        self$`withdrawAllEnable` <- `withdrawAllEnable`
-      }
-      if (!missing(`withdrawing`)) {
-        stopifnot(is.character(`withdrawing`), length(`withdrawing`) == 1)
-        self$`withdrawing` <- `withdrawing`
+      if (!is.null(`data`)) {
+        stopifnot(is.vector(`data`), length(`data`) != 0)
+        sapply(`data`, function(x) stopifnot(R6::is.R6(x)))
+        self$`data` <- `data`
       }
     },
     toJSON = function() {
       InlineResponse20030Object <- list()
-      if (!is.null(self$`coin`)) {
-        InlineResponse20030Object[['coin']] <-
-          self$`coin`
+      if (!is.null(self$`vipLevel`)) {
+        InlineResponse20030Object[['vipLevel']] <-
+          self$`vipLevel`
       }
-      if (!is.null(self$`depositAllEnable`)) {
-        InlineResponse20030Object[['depositAllEnable']] <-
-          self$`depositAllEnable`
+      if (!is.null(self$`symbol`)) {
+        InlineResponse20030Object[['symbol']] <-
+          self$`symbol`
       }
-      if (!is.null(self$`free`)) {
-        InlineResponse20030Object[['free']] <-
-          self$`free`
+      if (!is.null(self$`leverage`)) {
+        InlineResponse20030Object[['leverage']] <-
+          self$`leverage`
       }
-      if (!is.null(self$`freeze`)) {
-        InlineResponse20030Object[['freeze']] <-
-          self$`freeze`
-      }
-      if (!is.null(self$`ipoable`)) {
-        InlineResponse20030Object[['ipoable']] <-
-          self$`ipoable`
-      }
-      if (!is.null(self$`ipoing`)) {
-        InlineResponse20030Object[['ipoing']] <-
-          self$`ipoing`
-      }
-      if (!is.null(self$`isLegalMoney`)) {
-        InlineResponse20030Object[['isLegalMoney']] <-
-          self$`isLegalMoney`
-      }
-      if (!is.null(self$`locked`)) {
-        InlineResponse20030Object[['locked']] <-
-          self$`locked`
-      }
-      if (!is.null(self$`name`)) {
-        InlineResponse20030Object[['name']] <-
-          self$`name`
-      }
-      if (!is.null(self$`networkList`)) {
-        InlineResponse20030Object[['networkList']] <-
-          lapply(self$`networkList`, function(x) x$toJSON())
-      }
-      if (!is.null(self$`storage`)) {
-        InlineResponse20030Object[['storage']] <-
-          self$`storage`
-      }
-      if (!is.null(self$`trading`)) {
-        InlineResponse20030Object[['trading']] <-
-          self$`trading`
-      }
-      if (!is.null(self$`withdrawAllEnable`)) {
-        InlineResponse20030Object[['withdrawAllEnable']] <-
-          self$`withdrawAllEnable`
-      }
-      if (!is.null(self$`withdrawing`)) {
-        InlineResponse20030Object[['withdrawing']] <-
-          self$`withdrawing`
+      if (!is.null(self$`data`)) {
+        InlineResponse20030Object[['data']] <-
+          lapply(self$`data`, function(x) x$toJSON())
       }
 
       InlineResponse20030Object
     },
     fromJSON = function(InlineResponse20030Json) {
       InlineResponse20030Object <- jsonlite::fromJSON(InlineResponse20030Json)
-      if (!is.null(InlineResponse20030Object$`coin`)) {
-        self$`coin` <- InlineResponse20030Object$`coin`
+      if (!is.null(InlineResponse20030Object$`vipLevel`)) {
+        self$`vipLevel` <- InlineResponse20030Object$`vipLevel`
       }
-      if (!is.null(InlineResponse20030Object$`depositAllEnable`)) {
-        self$`depositAllEnable` <- InlineResponse20030Object$`depositAllEnable`
+      if (!is.null(InlineResponse20030Object$`symbol`)) {
+        self$`symbol` <- InlineResponse20030Object$`symbol`
       }
-      if (!is.null(InlineResponse20030Object$`free`)) {
-        self$`free` <- InlineResponse20030Object$`free`
+      if (!is.null(InlineResponse20030Object$`leverage`)) {
+        self$`leverage` <- InlineResponse20030Object$`leverage`
       }
-      if (!is.null(InlineResponse20030Object$`freeze`)) {
-        self$`freeze` <- InlineResponse20030Object$`freeze`
-      }
-      if (!is.null(InlineResponse20030Object$`ipoable`)) {
-        self$`ipoable` <- InlineResponse20030Object$`ipoable`
-      }
-      if (!is.null(InlineResponse20030Object$`ipoing`)) {
-        self$`ipoing` <- InlineResponse20030Object$`ipoing`
-      }
-      if (!is.null(InlineResponse20030Object$`isLegalMoney`)) {
-        self$`isLegalMoney` <- InlineResponse20030Object$`isLegalMoney`
-      }
-      if (!is.null(InlineResponse20030Object$`locked`)) {
-        self$`locked` <- InlineResponse20030Object$`locked`
-      }
-      if (!is.null(InlineResponse20030Object$`name`)) {
-        self$`name` <- InlineResponse20030Object$`name`
-      }
-      if (!is.null(InlineResponse20030Object$`networkList`)) {
-        self$`networkList` <- ApiClient$new()$deserializeObj(InlineResponse20030Object$`networkList`, "array[SapiV1CapitalConfigGetallNetworkList]", loadNamespace("binanceRapi"))
-      }
-      if (!is.null(InlineResponse20030Object$`storage`)) {
-        self$`storage` <- InlineResponse20030Object$`storage`
-      }
-      if (!is.null(InlineResponse20030Object$`trading`)) {
-        self$`trading` <- InlineResponse20030Object$`trading`
-      }
-      if (!is.null(InlineResponse20030Object$`withdrawAllEnable`)) {
-        self$`withdrawAllEnable` <- InlineResponse20030Object$`withdrawAllEnable`
-      }
-      if (!is.null(InlineResponse20030Object$`withdrawing`)) {
-        self$`withdrawing` <- InlineResponse20030Object$`withdrawing`
+      if (!is.null(InlineResponse20030Object$`data`)) {
+        self$`data` <- ApiClient$new()$deserializeObj(InlineResponse20030Object$`data`, "array[SapiV1MarginIsolatedMarginDataData]", loadNamespace("binanceRapi"))
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`coin`)) {
+        if (!is.null(self$`vipLevel`)) {
         sprintf(
-        '"coin":
+        '"vipLevel":
+          %d
+                ',
+        self$`vipLevel`
+        )},
+        if (!is.null(self$`symbol`)) {
+        sprintf(
+        '"symbol":
           "%s"
                 ',
-        self$`coin`
+        self$`symbol`
         )},
-        if (!is.null(self$`depositAllEnable`)) {
+        if (!is.null(self$`leverage`)) {
         sprintf(
-        '"depositAllEnable":
-          %s
-                ',
-        tolower(self$`depositAllEnable`)
-        )},
-        if (!is.null(self$`free`)) {
-        sprintf(
-        '"free":
+        '"leverage":
           "%s"
                 ',
-        self$`free`
+        self$`leverage`
         )},
-        if (!is.null(self$`freeze`)) {
+        if (!is.null(self$`data`)) {
         sprintf(
-        '"freeze":
-          "%s"
-                ',
-        self$`freeze`
-        )},
-        if (!is.null(self$`ipoable`)) {
-        sprintf(
-        '"ipoable":
-          "%s"
-                ',
-        self$`ipoable`
-        )},
-        if (!is.null(self$`ipoing`)) {
-        sprintf(
-        '"ipoing":
-          "%s"
-                ',
-        self$`ipoing`
-        )},
-        if (!is.null(self$`isLegalMoney`)) {
-        sprintf(
-        '"isLegalMoney":
-          %s
-                ',
-        tolower(self$`isLegalMoney`)
-        )},
-        if (!is.null(self$`locked`)) {
-        sprintf(
-        '"locked":
-          "%s"
-                ',
-        self$`locked`
-        )},
-        if (!is.null(self$`name`)) {
-        sprintf(
-        '"name":
-          "%s"
-                ',
-        self$`name`
-        )},
-        if (!is.null(self$`networkList`)) {
-        sprintf(
-        '"networkList":
+        '"data":
         [%s]
 ',
-        paste(sapply(self$`networkList`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
-        )},
-        if (!is.null(self$`storage`)) {
-        sprintf(
-        '"storage":
-          "%s"
-                ',
-        self$`storage`
-        )},
-        if (!is.null(self$`trading`)) {
-        sprintf(
-        '"trading":
-          %s
-                ',
-        tolower(self$`trading`)
-        )},
-        if (!is.null(self$`withdrawAllEnable`)) {
-        sprintf(
-        '"withdrawAllEnable":
-          %s
-                ',
-        tolower(self$`withdrawAllEnable`)
-        )},
-        if (!is.null(self$`withdrawing`)) {
-        sprintf(
-        '"withdrawing":
-          "%s"
-                ',
-        self$`withdrawing`
+        paste(sapply(self$`data`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -336,20 +126,10 @@ InlineResponse20030 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20030Json) {
       InlineResponse20030Object <- jsonlite::fromJSON(InlineResponse20030Json)
-      self$`coin` <- InlineResponse20030Object$`coin`
-      self$`depositAllEnable` <- InlineResponse20030Object$`depositAllEnable`
-      self$`free` <- InlineResponse20030Object$`free`
-      self$`freeze` <- InlineResponse20030Object$`freeze`
-      self$`ipoable` <- InlineResponse20030Object$`ipoable`
-      self$`ipoing` <- InlineResponse20030Object$`ipoing`
-      self$`isLegalMoney` <- InlineResponse20030Object$`isLegalMoney`
-      self$`locked` <- InlineResponse20030Object$`locked`
-      self$`name` <- InlineResponse20030Object$`name`
-      self$`networkList` <- ApiClient$new()$deserializeObj(InlineResponse20030Object$`networkList`, "array[SapiV1CapitalConfigGetallNetworkList]", loadNamespace("binanceRapi"))
-      self$`storage` <- InlineResponse20030Object$`storage`
-      self$`trading` <- InlineResponse20030Object$`trading`
-      self$`withdrawAllEnable` <- InlineResponse20030Object$`withdrawAllEnable`
-      self$`withdrawing` <- InlineResponse20030Object$`withdrawing`
+      self$`vipLevel` <- InlineResponse20030Object$`vipLevel`
+      self$`symbol` <- InlineResponse20030Object$`symbol`
+      self$`leverage` <- InlineResponse20030Object$`leverage`
+      self$`data` <- ApiClient$new()$deserializeObj(InlineResponse20030Object$`data`, "array[SapiV1MarginIsolatedMarginDataData]", loadNamespace("binanceRapi"))
       self
     }
   )

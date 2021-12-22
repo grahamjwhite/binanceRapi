@@ -13,11 +13,7 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field totalServiceCharge  character 
-#'
-#' @field totalTransfered  character 
-#'
-#' @field transferResult  list( \link{InlineResponse20038TransferResult} ) 
+#' @field data  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -25,79 +21,40 @@
 InlineResponse20038 <- R6::R6Class(
   'InlineResponse20038',
   public = list(
-    `totalServiceCharge` = NULL,
-    `totalTransfered` = NULL,
-    `transferResult` = NULL,
+    `data` = NULL,
     initialize = function(
-        `totalServiceCharge`, `totalTransfered`, `transferResult`, ...
+        `data`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`totalServiceCharge`)) {
-        stopifnot(is.character(`totalServiceCharge`), length(`totalServiceCharge`) == 1)
-        self$`totalServiceCharge` <- `totalServiceCharge`
-      }
-      if (!missing(`totalTransfered`)) {
-        stopifnot(is.character(`totalTransfered`), length(`totalTransfered`) == 1)
-        self$`totalTransfered` <- `totalTransfered`
-      }
-      if (!missing(`transferResult`)) {
-        stopifnot(is.vector(`transferResult`), length(`transferResult`) != 0)
-        sapply(`transferResult`, function(x) stopifnot(R6::is.R6(x)))
-        self$`transferResult` <- `transferResult`
+      if (!missing(`data`)) {
+        stopifnot(is.character(`data`), length(`data`) == 1)
+        self$`data` <- `data`
       }
     },
     toJSON = function() {
       InlineResponse20038Object <- list()
-      if (!is.null(self$`totalServiceCharge`)) {
-        InlineResponse20038Object[['totalServiceCharge']] <-
-          self$`totalServiceCharge`
-      }
-      if (!is.null(self$`totalTransfered`)) {
-        InlineResponse20038Object[['totalTransfered']] <-
-          self$`totalTransfered`
-      }
-      if (!is.null(self$`transferResult`)) {
-        InlineResponse20038Object[['transferResult']] <-
-          lapply(self$`transferResult`, function(x) x$toJSON())
+      if (!is.null(self$`data`)) {
+        InlineResponse20038Object[['data']] <-
+          self$`data`
       }
 
       InlineResponse20038Object
     },
     fromJSON = function(InlineResponse20038Json) {
       InlineResponse20038Object <- jsonlite::fromJSON(InlineResponse20038Json)
-      if (!is.null(InlineResponse20038Object$`totalServiceCharge`)) {
-        self$`totalServiceCharge` <- InlineResponse20038Object$`totalServiceCharge`
-      }
-      if (!is.null(InlineResponse20038Object$`totalTransfered`)) {
-        self$`totalTransfered` <- InlineResponse20038Object$`totalTransfered`
-      }
-      if (!is.null(InlineResponse20038Object$`transferResult`)) {
-        self$`transferResult` <- ApiClient$new()$deserializeObj(InlineResponse20038Object$`transferResult`, "array[InlineResponse20038TransferResult]", loadNamespace("binanceRapi"))
+      if (!is.null(InlineResponse20038Object$`data`)) {
+        self$`data` <- InlineResponse20038Object$`data`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`totalServiceCharge`)) {
+        if (!is.null(self$`data`)) {
         sprintf(
-        '"totalServiceCharge":
+        '"data":
           "%s"
                 ',
-        self$`totalServiceCharge`
-        )},
-        if (!is.null(self$`totalTransfered`)) {
-        sprintf(
-        '"totalTransfered":
-          "%s"
-                ',
-        self$`totalTransfered`
-        )},
-        if (!is.null(self$`transferResult`)) {
-        sprintf(
-        '"transferResult":
-        [%s]
-',
-        paste(sapply(self$`transferResult`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
+        self$`data`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -105,9 +62,7 @@ InlineResponse20038 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20038Json) {
       InlineResponse20038Object <- jsonlite::fromJSON(InlineResponse20038Json)
-      self$`totalServiceCharge` <- InlineResponse20038Object$`totalServiceCharge`
-      self$`totalTransfered` <- InlineResponse20038Object$`totalTransfered`
-      self$`transferResult` <- ApiClient$new()$deserializeObj(InlineResponse20038Object$`transferResult`, "array[InlineResponse20038TransferResult]", loadNamespace("binanceRapi"))
+      self$`data` <- InlineResponse20038Object$`data`
       self
     }
   )

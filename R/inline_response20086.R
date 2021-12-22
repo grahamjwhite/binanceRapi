@@ -13,11 +13,37 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field code  integer 
+#' @field asset  character 
 #'
-#' @field msg  character 
+#' @field displayPriority  integer 
 #'
-#' @field data  list( \link{InlineResponse20086Data} ) 
+#' @field duration  integer 
+#'
+#' @field interestPerLot  character 
+#'
+#' @field interestRate  character 
+#'
+#' @field lotSize  character 
+#'
+#' @field lotsLowLimit  integer 
+#'
+#' @field lotsPurchased  integer 
+#'
+#' @field lotsUpLimit  integer 
+#'
+#' @field maxLotsPerUser  integer 
+#'
+#' @field needKyc  character 
+#'
+#' @field projectId  character 
+#'
+#' @field projectName  character 
+#'
+#' @field status  character 
+#'
+#' @field type  character 
+#'
+#' @field withAreaLimitation  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -25,79 +51,325 @@
 InlineResponse20086 <- R6::R6Class(
   'InlineResponse20086',
   public = list(
-    `code` = NULL,
-    `msg` = NULL,
-    `data` = NULL,
+    `asset` = NULL,
+    `displayPriority` = NULL,
+    `duration` = NULL,
+    `interestPerLot` = NULL,
+    `interestRate` = NULL,
+    `lotSize` = NULL,
+    `lotsLowLimit` = NULL,
+    `lotsPurchased` = NULL,
+    `lotsUpLimit` = NULL,
+    `maxLotsPerUser` = NULL,
+    `needKyc` = NULL,
+    `projectId` = NULL,
+    `projectName` = NULL,
+    `status` = NULL,
+    `type` = NULL,
+    `withAreaLimitation` = NULL,
     initialize = function(
-        `code`, `msg`, `data`, ...
+        `asset`, `displayPriority`, `duration`, `interestPerLot`, `interestRate`, `lotSize`, `lotsLowLimit`, `lotsPurchased`, `lotsUpLimit`, `maxLotsPerUser`, `needKyc`, `projectId`, `projectName`, `status`, `type`, `withAreaLimitation`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`code`)) {
-        stopifnot(is.numeric(`code`), length(`code`) == 1)
-        self$`code` <- `code`
+      if (!missing(`asset`)) {
+        stopifnot(is.character(`asset`), length(`asset`) == 1)
+        self$`asset` <- `asset`
       }
-      if (!missing(`msg`)) {
-        stopifnot(is.character(`msg`), length(`msg`) == 1)
-        self$`msg` <- `msg`
+      if (!missing(`displayPriority`)) {
+        stopifnot(is.numeric(`displayPriority`), length(`displayPriority`) == 1)
+        self$`displayPriority` <- `displayPriority`
       }
-      if (!missing(`data`)) {
-        stopifnot(is.vector(`data`), length(`data`) != 0)
-        sapply(`data`, function(x) stopifnot(R6::is.R6(x)))
-        self$`data` <- `data`
+      if (!missing(`duration`)) {
+        stopifnot(is.numeric(`duration`), length(`duration`) == 1)
+        self$`duration` <- `duration`
+      }
+      if (!missing(`interestPerLot`)) {
+        stopifnot(is.character(`interestPerLot`), length(`interestPerLot`) == 1)
+        self$`interestPerLot` <- `interestPerLot`
+      }
+      if (!missing(`interestRate`)) {
+        stopifnot(is.character(`interestRate`), length(`interestRate`) == 1)
+        self$`interestRate` <- `interestRate`
+      }
+      if (!missing(`lotSize`)) {
+        stopifnot(is.character(`lotSize`), length(`lotSize`) == 1)
+        self$`lotSize` <- `lotSize`
+      }
+      if (!missing(`lotsLowLimit`)) {
+        stopifnot(is.numeric(`lotsLowLimit`), length(`lotsLowLimit`) == 1)
+        self$`lotsLowLimit` <- `lotsLowLimit`
+      }
+      if (!missing(`lotsPurchased`)) {
+        stopifnot(is.numeric(`lotsPurchased`), length(`lotsPurchased`) == 1)
+        self$`lotsPurchased` <- `lotsPurchased`
+      }
+      if (!missing(`lotsUpLimit`)) {
+        stopifnot(is.numeric(`lotsUpLimit`), length(`lotsUpLimit`) == 1)
+        self$`lotsUpLimit` <- `lotsUpLimit`
+      }
+      if (!missing(`maxLotsPerUser`)) {
+        stopifnot(is.numeric(`maxLotsPerUser`), length(`maxLotsPerUser`) == 1)
+        self$`maxLotsPerUser` <- `maxLotsPerUser`
+      }
+      if (!missing(`needKyc`)) {
+        stopifnot(is.logical(`needKyc`), length(`needKyc`) == 1)
+        self$`needKyc` <- `needKyc`
+      }
+      if (!missing(`projectId`)) {
+        stopifnot(is.character(`projectId`), length(`projectId`) == 1)
+        self$`projectId` <- `projectId`
+      }
+      if (!missing(`projectName`)) {
+        stopifnot(is.character(`projectName`), length(`projectName`) == 1)
+        self$`projectName` <- `projectName`
+      }
+      if (!missing(`status`)) {
+        stopifnot(is.character(`status`), length(`status`) == 1)
+        self$`status` <- `status`
+      }
+      if (!missing(`type`)) {
+        stopifnot(is.character(`type`), length(`type`) == 1)
+        self$`type` <- `type`
+      }
+      if (!missing(`withAreaLimitation`)) {
+        stopifnot(is.logical(`withAreaLimitation`), length(`withAreaLimitation`) == 1)
+        self$`withAreaLimitation` <- `withAreaLimitation`
       }
     },
     toJSON = function() {
       InlineResponse20086Object <- list()
-      if (!is.null(self$`code`)) {
-        InlineResponse20086Object[['code']] <-
-          self$`code`
+      if (!is.null(self$`asset`)) {
+        InlineResponse20086Object[['asset']] <-
+          self$`asset`
       }
-      if (!is.null(self$`msg`)) {
-        InlineResponse20086Object[['msg']] <-
-          self$`msg`
+      if (!is.null(self$`displayPriority`)) {
+        InlineResponse20086Object[['displayPriority']] <-
+          self$`displayPriority`
       }
-      if (!is.null(self$`data`)) {
-        InlineResponse20086Object[['data']] <-
-          lapply(self$`data`, function(x) x$toJSON())
+      if (!is.null(self$`duration`)) {
+        InlineResponse20086Object[['duration']] <-
+          self$`duration`
+      }
+      if (!is.null(self$`interestPerLot`)) {
+        InlineResponse20086Object[['interestPerLot']] <-
+          self$`interestPerLot`
+      }
+      if (!is.null(self$`interestRate`)) {
+        InlineResponse20086Object[['interestRate']] <-
+          self$`interestRate`
+      }
+      if (!is.null(self$`lotSize`)) {
+        InlineResponse20086Object[['lotSize']] <-
+          self$`lotSize`
+      }
+      if (!is.null(self$`lotsLowLimit`)) {
+        InlineResponse20086Object[['lotsLowLimit']] <-
+          self$`lotsLowLimit`
+      }
+      if (!is.null(self$`lotsPurchased`)) {
+        InlineResponse20086Object[['lotsPurchased']] <-
+          self$`lotsPurchased`
+      }
+      if (!is.null(self$`lotsUpLimit`)) {
+        InlineResponse20086Object[['lotsUpLimit']] <-
+          self$`lotsUpLimit`
+      }
+      if (!is.null(self$`maxLotsPerUser`)) {
+        InlineResponse20086Object[['maxLotsPerUser']] <-
+          self$`maxLotsPerUser`
+      }
+      if (!is.null(self$`needKyc`)) {
+        InlineResponse20086Object[['needKyc']] <-
+          self$`needKyc`
+      }
+      if (!is.null(self$`projectId`)) {
+        InlineResponse20086Object[['projectId']] <-
+          self$`projectId`
+      }
+      if (!is.null(self$`projectName`)) {
+        InlineResponse20086Object[['projectName']] <-
+          self$`projectName`
+      }
+      if (!is.null(self$`status`)) {
+        InlineResponse20086Object[['status']] <-
+          self$`status`
+      }
+      if (!is.null(self$`type`)) {
+        InlineResponse20086Object[['type']] <-
+          self$`type`
+      }
+      if (!is.null(self$`withAreaLimitation`)) {
+        InlineResponse20086Object[['withAreaLimitation']] <-
+          self$`withAreaLimitation`
       }
 
       InlineResponse20086Object
     },
     fromJSON = function(InlineResponse20086Json) {
       InlineResponse20086Object <- jsonlite::fromJSON(InlineResponse20086Json)
-      if (!is.null(InlineResponse20086Object$`code`)) {
-        self$`code` <- InlineResponse20086Object$`code`
+      if (!is.null(InlineResponse20086Object$`asset`)) {
+        self$`asset` <- InlineResponse20086Object$`asset`
       }
-      if (!is.null(InlineResponse20086Object$`msg`)) {
-        self$`msg` <- InlineResponse20086Object$`msg`
+      if (!is.null(InlineResponse20086Object$`displayPriority`)) {
+        self$`displayPriority` <- InlineResponse20086Object$`displayPriority`
       }
-      if (!is.null(InlineResponse20086Object$`data`)) {
-        self$`data` <- ApiClient$new()$deserializeObj(InlineResponse20086Object$`data`, "array[InlineResponse20086Data]", loadNamespace("binanceRapi"))
+      if (!is.null(InlineResponse20086Object$`duration`)) {
+        self$`duration` <- InlineResponse20086Object$`duration`
+      }
+      if (!is.null(InlineResponse20086Object$`interestPerLot`)) {
+        self$`interestPerLot` <- InlineResponse20086Object$`interestPerLot`
+      }
+      if (!is.null(InlineResponse20086Object$`interestRate`)) {
+        self$`interestRate` <- InlineResponse20086Object$`interestRate`
+      }
+      if (!is.null(InlineResponse20086Object$`lotSize`)) {
+        self$`lotSize` <- InlineResponse20086Object$`lotSize`
+      }
+      if (!is.null(InlineResponse20086Object$`lotsLowLimit`)) {
+        self$`lotsLowLimit` <- InlineResponse20086Object$`lotsLowLimit`
+      }
+      if (!is.null(InlineResponse20086Object$`lotsPurchased`)) {
+        self$`lotsPurchased` <- InlineResponse20086Object$`lotsPurchased`
+      }
+      if (!is.null(InlineResponse20086Object$`lotsUpLimit`)) {
+        self$`lotsUpLimit` <- InlineResponse20086Object$`lotsUpLimit`
+      }
+      if (!is.null(InlineResponse20086Object$`maxLotsPerUser`)) {
+        self$`maxLotsPerUser` <- InlineResponse20086Object$`maxLotsPerUser`
+      }
+      if (!is.null(InlineResponse20086Object$`needKyc`)) {
+        self$`needKyc` <- InlineResponse20086Object$`needKyc`
+      }
+      if (!is.null(InlineResponse20086Object$`projectId`)) {
+        self$`projectId` <- InlineResponse20086Object$`projectId`
+      }
+      if (!is.null(InlineResponse20086Object$`projectName`)) {
+        self$`projectName` <- InlineResponse20086Object$`projectName`
+      }
+      if (!is.null(InlineResponse20086Object$`status`)) {
+        self$`status` <- InlineResponse20086Object$`status`
+      }
+      if (!is.null(InlineResponse20086Object$`type`)) {
+        self$`type` <- InlineResponse20086Object$`type`
+      }
+      if (!is.null(InlineResponse20086Object$`withAreaLimitation`)) {
+        self$`withAreaLimitation` <- InlineResponse20086Object$`withAreaLimitation`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`code`)) {
+        if (!is.null(self$`asset`)) {
         sprintf(
-        '"code":
-          %d
-                ',
-        self$`code`
-        )},
-        if (!is.null(self$`msg`)) {
-        sprintf(
-        '"msg":
+        '"asset":
           "%s"
                 ',
-        self$`msg`
+        self$`asset`
         )},
-        if (!is.null(self$`data`)) {
+        if (!is.null(self$`displayPriority`)) {
         sprintf(
-        '"data":
-        [%s]
-',
-        paste(sapply(self$`data`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
+        '"displayPriority":
+          %d
+                ',
+        self$`displayPriority`
+        )},
+        if (!is.null(self$`duration`)) {
+        sprintf(
+        '"duration":
+          %d
+                ',
+        self$`duration`
+        )},
+        if (!is.null(self$`interestPerLot`)) {
+        sprintf(
+        '"interestPerLot":
+          "%s"
+                ',
+        self$`interestPerLot`
+        )},
+        if (!is.null(self$`interestRate`)) {
+        sprintf(
+        '"interestRate":
+          "%s"
+                ',
+        self$`interestRate`
+        )},
+        if (!is.null(self$`lotSize`)) {
+        sprintf(
+        '"lotSize":
+          "%s"
+                ',
+        self$`lotSize`
+        )},
+        if (!is.null(self$`lotsLowLimit`)) {
+        sprintf(
+        '"lotsLowLimit":
+          %d
+                ',
+        self$`lotsLowLimit`
+        )},
+        if (!is.null(self$`lotsPurchased`)) {
+        sprintf(
+        '"lotsPurchased":
+          %d
+                ',
+        self$`lotsPurchased`
+        )},
+        if (!is.null(self$`lotsUpLimit`)) {
+        sprintf(
+        '"lotsUpLimit":
+          %d
+                ',
+        self$`lotsUpLimit`
+        )},
+        if (!is.null(self$`maxLotsPerUser`)) {
+        sprintf(
+        '"maxLotsPerUser":
+          %d
+                ',
+        self$`maxLotsPerUser`
+        )},
+        if (!is.null(self$`needKyc`)) {
+        sprintf(
+        '"needKyc":
+          %s
+                ',
+        tolower(self$`needKyc`)
+        )},
+        if (!is.null(self$`projectId`)) {
+        sprintf(
+        '"projectId":
+          "%s"
+                ',
+        self$`projectId`
+        )},
+        if (!is.null(self$`projectName`)) {
+        sprintf(
+        '"projectName":
+          "%s"
+                ',
+        self$`projectName`
+        )},
+        if (!is.null(self$`status`)) {
+        sprintf(
+        '"status":
+          "%s"
+                ',
+        self$`status`
+        )},
+        if (!is.null(self$`type`)) {
+        sprintf(
+        '"type":
+          "%s"
+                ',
+        self$`type`
+        )},
+        if (!is.null(self$`withAreaLimitation`)) {
+        sprintf(
+        '"withAreaLimitation":
+          %s
+                ',
+        tolower(self$`withAreaLimitation`)
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -105,9 +377,22 @@ InlineResponse20086 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20086Json) {
       InlineResponse20086Object <- jsonlite::fromJSON(InlineResponse20086Json)
-      self$`code` <- InlineResponse20086Object$`code`
-      self$`msg` <- InlineResponse20086Object$`msg`
-      self$`data` <- ApiClient$new()$deserializeObj(InlineResponse20086Object$`data`, "array[InlineResponse20086Data]", loadNamespace("binanceRapi"))
+      self$`asset` <- InlineResponse20086Object$`asset`
+      self$`displayPriority` <- InlineResponse20086Object$`displayPriority`
+      self$`duration` <- InlineResponse20086Object$`duration`
+      self$`interestPerLot` <- InlineResponse20086Object$`interestPerLot`
+      self$`interestRate` <- InlineResponse20086Object$`interestRate`
+      self$`lotSize` <- InlineResponse20086Object$`lotSize`
+      self$`lotsLowLimit` <- InlineResponse20086Object$`lotsLowLimit`
+      self$`lotsPurchased` <- InlineResponse20086Object$`lotsPurchased`
+      self$`lotsUpLimit` <- InlineResponse20086Object$`lotsUpLimit`
+      self$`maxLotsPerUser` <- InlineResponse20086Object$`maxLotsPerUser`
+      self$`needKyc` <- InlineResponse20086Object$`needKyc`
+      self$`projectId` <- InlineResponse20086Object$`projectId`
+      self$`projectName` <- InlineResponse20086Object$`projectName`
+      self$`status` <- InlineResponse20086Object$`status`
+      self$`type` <- InlineResponse20086Object$`type`
+      self$`withAreaLimitation` <- InlineResponse20086Object$`withAreaLimitation`
       self
     }
   )

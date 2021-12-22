@@ -13,15 +13,7 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field asset  character 
-#'
-#' @field interest  character 
-#'
-#' @field lendingType  character 
-#'
-#' @field productName  character 
-#'
-#' @field time  integer 
+#' @field purchaseId  integer 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -29,116 +21,40 @@
 InlineResponse20083 <- R6::R6Class(
   'InlineResponse20083',
   public = list(
-    `asset` = NULL,
-    `interest` = NULL,
-    `lendingType` = NULL,
-    `productName` = NULL,
-    `time` = NULL,
+    `purchaseId` = NULL,
     initialize = function(
-        `asset`, `interest`, `lendingType`, `productName`, `time`, ...
+        `purchaseId`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`asset`)) {
-        stopifnot(is.character(`asset`), length(`asset`) == 1)
-        self$`asset` <- `asset`
-      }
-      if (!missing(`interest`)) {
-        stopifnot(is.character(`interest`), length(`interest`) == 1)
-        self$`interest` <- `interest`
-      }
-      if (!missing(`lendingType`)) {
-        stopifnot(is.character(`lendingType`), length(`lendingType`) == 1)
-        self$`lendingType` <- `lendingType`
-      }
-      if (!missing(`productName`)) {
-        stopifnot(is.character(`productName`), length(`productName`) == 1)
-        self$`productName` <- `productName`
-      }
-      if (!missing(`time`)) {
-        stopifnot(is.numeric(`time`), length(`time`) == 1)
-        self$`time` <- `time`
+      if (!missing(`purchaseId`)) {
+        stopifnot(is.numeric(`purchaseId`), length(`purchaseId`) == 1)
+        self$`purchaseId` <- `purchaseId`
       }
     },
     toJSON = function() {
       InlineResponse20083Object <- list()
-      if (!is.null(self$`asset`)) {
-        InlineResponse20083Object[['asset']] <-
-          self$`asset`
-      }
-      if (!is.null(self$`interest`)) {
-        InlineResponse20083Object[['interest']] <-
-          self$`interest`
-      }
-      if (!is.null(self$`lendingType`)) {
-        InlineResponse20083Object[['lendingType']] <-
-          self$`lendingType`
-      }
-      if (!is.null(self$`productName`)) {
-        InlineResponse20083Object[['productName']] <-
-          self$`productName`
-      }
-      if (!is.null(self$`time`)) {
-        InlineResponse20083Object[['time']] <-
-          self$`time`
+      if (!is.null(self$`purchaseId`)) {
+        InlineResponse20083Object[['purchaseId']] <-
+          self$`purchaseId`
       }
 
       InlineResponse20083Object
     },
     fromJSON = function(InlineResponse20083Json) {
       InlineResponse20083Object <- jsonlite::fromJSON(InlineResponse20083Json)
-      if (!is.null(InlineResponse20083Object$`asset`)) {
-        self$`asset` <- InlineResponse20083Object$`asset`
-      }
-      if (!is.null(InlineResponse20083Object$`interest`)) {
-        self$`interest` <- InlineResponse20083Object$`interest`
-      }
-      if (!is.null(InlineResponse20083Object$`lendingType`)) {
-        self$`lendingType` <- InlineResponse20083Object$`lendingType`
-      }
-      if (!is.null(InlineResponse20083Object$`productName`)) {
-        self$`productName` <- InlineResponse20083Object$`productName`
-      }
-      if (!is.null(InlineResponse20083Object$`time`)) {
-        self$`time` <- InlineResponse20083Object$`time`
+      if (!is.null(InlineResponse20083Object$`purchaseId`)) {
+        self$`purchaseId` <- InlineResponse20083Object$`purchaseId`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`asset`)) {
+        if (!is.null(self$`purchaseId`)) {
         sprintf(
-        '"asset":
-          "%s"
-                ',
-        self$`asset`
-        )},
-        if (!is.null(self$`interest`)) {
-        sprintf(
-        '"interest":
-          "%s"
-                ',
-        self$`interest`
-        )},
-        if (!is.null(self$`lendingType`)) {
-        sprintf(
-        '"lendingType":
-          "%s"
-                ',
-        self$`lendingType`
-        )},
-        if (!is.null(self$`productName`)) {
-        sprintf(
-        '"productName":
-          "%s"
-                ',
-        self$`productName`
-        )},
-        if (!is.null(self$`time`)) {
-        sprintf(
-        '"time":
+        '"purchaseId":
           %d
                 ',
-        self$`time`
+        self$`purchaseId`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -146,11 +62,7 @@ InlineResponse20083 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20083Json) {
       InlineResponse20083Object <- jsonlite::fromJSON(InlineResponse20083Json)
-      self$`asset` <- InlineResponse20083Object$`asset`
-      self$`interest` <- InlineResponse20083Object$`interest`
-      self$`lendingType` <- InlineResponse20083Object$`lendingType`
-      self$`productName` <- InlineResponse20083Object$`productName`
-      self$`time` <- InlineResponse20083Object$`time`
+      self$`purchaseId` <- InlineResponse20083Object$`purchaseId`
       self
     }
   )

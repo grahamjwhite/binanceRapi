@@ -13,9 +13,21 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field status  integer 
+#' @field vipLevel  integer 
 #'
-#' @field msg  character 
+#' @field coin  character 
+#'
+#' @field transferIn  character 
+#'
+#' @field borrowable  character 
+#'
+#' @field dailyInterest  character 
+#'
+#' @field yearlyInterest  character 
+#'
+#' @field borrowLimit  character 
+#'
+#' @field marginablePairs  list( character ) 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -23,59 +35,174 @@
 InlineResponse20029 <- R6::R6Class(
   'InlineResponse20029',
   public = list(
-    `status` = NULL,
-    `msg` = NULL,
+    `vipLevel` = NULL,
+    `coin` = NULL,
+    `transferIn` = NULL,
+    `borrowable` = NULL,
+    `dailyInterest` = NULL,
+    `yearlyInterest` = NULL,
+    `borrowLimit` = NULL,
+    `marginablePairs` = NULL,
     initialize = function(
-        `status`, `msg`, ...
+        `vipLevel`, `coin`, `transferIn`, `borrowable`, `dailyInterest`, `yearlyInterest`, `borrowLimit`, `marginablePairs`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`status`)) {
-        stopifnot(is.numeric(`status`), length(`status`) == 1)
-        self$`status` <- `status`
+      if (!missing(`vipLevel`)) {
+        stopifnot(is.numeric(`vipLevel`), length(`vipLevel`) == 1)
+        self$`vipLevel` <- `vipLevel`
       }
-      if (!missing(`msg`)) {
-        stopifnot(is.character(`msg`), length(`msg`) == 1)
-        self$`msg` <- `msg`
+      if (!missing(`coin`)) {
+        stopifnot(is.character(`coin`), length(`coin`) == 1)
+        self$`coin` <- `coin`
+      }
+      if (!missing(`transferIn`)) {
+        stopifnot(is.logical(`transferIn`), length(`transferIn`) == 1)
+        self$`transferIn` <- `transferIn`
+      }
+      if (!missing(`borrowable`)) {
+        stopifnot(is.logical(`borrowable`), length(`borrowable`) == 1)
+        self$`borrowable` <- `borrowable`
+      }
+      if (!missing(`dailyInterest`)) {
+        stopifnot(is.character(`dailyInterest`), length(`dailyInterest`) == 1)
+        self$`dailyInterest` <- `dailyInterest`
+      }
+      if (!missing(`yearlyInterest`)) {
+        stopifnot(is.character(`yearlyInterest`), length(`yearlyInterest`) == 1)
+        self$`yearlyInterest` <- `yearlyInterest`
+      }
+      if (!missing(`borrowLimit`)) {
+        stopifnot(is.character(`borrowLimit`), length(`borrowLimit`) == 1)
+        self$`borrowLimit` <- `borrowLimit`
+      }
+      if (!missing(`marginablePairs`)) {
+        stopifnot(is.vector(`marginablePairs`), length(`marginablePairs`) != 0)
+        sapply(`marginablePairs`, function(x) stopifnot(is.character(x)))
+        self$`marginablePairs` <- `marginablePairs`
       }
     },
     toJSON = function() {
       InlineResponse20029Object <- list()
-      if (!is.null(self$`status`)) {
-        InlineResponse20029Object[['status']] <-
-          self$`status`
+      if (!is.null(self$`vipLevel`)) {
+        InlineResponse20029Object[['vipLevel']] <-
+          self$`vipLevel`
       }
-      if (!is.null(self$`msg`)) {
-        InlineResponse20029Object[['msg']] <-
-          self$`msg`
+      if (!is.null(self$`coin`)) {
+        InlineResponse20029Object[['coin']] <-
+          self$`coin`
+      }
+      if (!is.null(self$`transferIn`)) {
+        InlineResponse20029Object[['transferIn']] <-
+          self$`transferIn`
+      }
+      if (!is.null(self$`borrowable`)) {
+        InlineResponse20029Object[['borrowable']] <-
+          self$`borrowable`
+      }
+      if (!is.null(self$`dailyInterest`)) {
+        InlineResponse20029Object[['dailyInterest']] <-
+          self$`dailyInterest`
+      }
+      if (!is.null(self$`yearlyInterest`)) {
+        InlineResponse20029Object[['yearlyInterest']] <-
+          self$`yearlyInterest`
+      }
+      if (!is.null(self$`borrowLimit`)) {
+        InlineResponse20029Object[['borrowLimit']] <-
+          self$`borrowLimit`
+      }
+      if (!is.null(self$`marginablePairs`)) {
+        InlineResponse20029Object[['marginablePairs']] <-
+          self$`marginablePairs`
       }
 
       InlineResponse20029Object
     },
     fromJSON = function(InlineResponse20029Json) {
       InlineResponse20029Object <- jsonlite::fromJSON(InlineResponse20029Json)
-      if (!is.null(InlineResponse20029Object$`status`)) {
-        self$`status` <- InlineResponse20029Object$`status`
+      if (!is.null(InlineResponse20029Object$`vipLevel`)) {
+        self$`vipLevel` <- InlineResponse20029Object$`vipLevel`
       }
-      if (!is.null(InlineResponse20029Object$`msg`)) {
-        self$`msg` <- InlineResponse20029Object$`msg`
+      if (!is.null(InlineResponse20029Object$`coin`)) {
+        self$`coin` <- InlineResponse20029Object$`coin`
+      }
+      if (!is.null(InlineResponse20029Object$`transferIn`)) {
+        self$`transferIn` <- InlineResponse20029Object$`transferIn`
+      }
+      if (!is.null(InlineResponse20029Object$`borrowable`)) {
+        self$`borrowable` <- InlineResponse20029Object$`borrowable`
+      }
+      if (!is.null(InlineResponse20029Object$`dailyInterest`)) {
+        self$`dailyInterest` <- InlineResponse20029Object$`dailyInterest`
+      }
+      if (!is.null(InlineResponse20029Object$`yearlyInterest`)) {
+        self$`yearlyInterest` <- InlineResponse20029Object$`yearlyInterest`
+      }
+      if (!is.null(InlineResponse20029Object$`borrowLimit`)) {
+        self$`borrowLimit` <- InlineResponse20029Object$`borrowLimit`
+      }
+      if (!is.null(InlineResponse20029Object$`marginablePairs`)) {
+        self$`marginablePairs` <- ApiClient$new()$deserializeObj(InlineResponse20029Object$`marginablePairs`, "array[character]", loadNamespace("binanceRapi"))
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`status`)) {
+        if (!is.null(self$`vipLevel`)) {
         sprintf(
-        '"status":
+        '"vipLevel":
           %d
                 ',
-        self$`status`
+        self$`vipLevel`
         )},
-        if (!is.null(self$`msg`)) {
+        if (!is.null(self$`coin`)) {
         sprintf(
-        '"msg":
+        '"coin":
           "%s"
                 ',
-        self$`msg`
+        self$`coin`
+        )},
+        if (!is.null(self$`transferIn`)) {
+        sprintf(
+        '"transferIn":
+          %s
+                ',
+        tolower(self$`transferIn`)
+        )},
+        if (!is.null(self$`borrowable`)) {
+        sprintf(
+        '"borrowable":
+          %s
+                ',
+        tolower(self$`borrowable`)
+        )},
+        if (!is.null(self$`dailyInterest`)) {
+        sprintf(
+        '"dailyInterest":
+          "%s"
+                ',
+        self$`dailyInterest`
+        )},
+        if (!is.null(self$`yearlyInterest`)) {
+        sprintf(
+        '"yearlyInterest":
+          "%s"
+                ',
+        self$`yearlyInterest`
+        )},
+        if (!is.null(self$`borrowLimit`)) {
+        sprintf(
+        '"borrowLimit":
+          "%s"
+                ',
+        self$`borrowLimit`
+        )},
+        if (!is.null(self$`marginablePairs`)) {
+        sprintf(
+        '"marginablePairs":
+           [%s]
+        ',
+        paste(unlist(lapply(self$`marginablePairs`, function(x) paste0('"', x, '"'))), collapse=",")
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -83,8 +210,14 @@ InlineResponse20029 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20029Json) {
       InlineResponse20029Object <- jsonlite::fromJSON(InlineResponse20029Json)
-      self$`status` <- InlineResponse20029Object$`status`
-      self$`msg` <- InlineResponse20029Object$`msg`
+      self$`vipLevel` <- InlineResponse20029Object$`vipLevel`
+      self$`coin` <- InlineResponse20029Object$`coin`
+      self$`transferIn` <- InlineResponse20029Object$`transferIn`
+      self$`borrowable` <- InlineResponse20029Object$`borrowable`
+      self$`dailyInterest` <- InlineResponse20029Object$`dailyInterest`
+      self$`yearlyInterest` <- InlineResponse20029Object$`yearlyInterest`
+      self$`borrowLimit` <- InlineResponse20029Object$`borrowLimit`
+      self$`marginablePairs` <- ApiClient$new()$deserializeObj(InlineResponse20029Object$`marginablePairs`, "array[character]", loadNamespace("binanceRapi"))
       self
     }
   )

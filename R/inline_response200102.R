@@ -13,11 +13,11 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field tokenName  character 
+#' @field code  integer 
 #'
-#' @field userDailyTotalPurchaseLimit  character 
+#' @field msg  character 
 #'
-#' @field userDailyTotalRedeemLimit  character 
+#' @field data  \link{InlineResponse200102Data} 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -25,78 +25,80 @@
 InlineResponse200102 <- R6::R6Class(
   'InlineResponse200102',
   public = list(
-    `tokenName` = NULL,
-    `userDailyTotalPurchaseLimit` = NULL,
-    `userDailyTotalRedeemLimit` = NULL,
+    `code` = NULL,
+    `msg` = NULL,
+    `data` = NULL,
     initialize = function(
-        `tokenName`, `userDailyTotalPurchaseLimit`, `userDailyTotalRedeemLimit`, ...
+        `code`, `msg`, `data`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`tokenName`)) {
-        stopifnot(is.character(`tokenName`), length(`tokenName`) == 1)
-        self$`tokenName` <- `tokenName`
+      if (!missing(`code`)) {
+        stopifnot(is.numeric(`code`), length(`code`) == 1)
+        self$`code` <- `code`
       }
-      if (!missing(`userDailyTotalPurchaseLimit`)) {
-        stopifnot(is.character(`userDailyTotalPurchaseLimit`), length(`userDailyTotalPurchaseLimit`) == 1)
-        self$`userDailyTotalPurchaseLimit` <- `userDailyTotalPurchaseLimit`
+      if (!missing(`msg`)) {
+        stopifnot(is.character(`msg`), length(`msg`) == 1)
+        self$`msg` <- `msg`
       }
-      if (!missing(`userDailyTotalRedeemLimit`)) {
-        stopifnot(is.character(`userDailyTotalRedeemLimit`), length(`userDailyTotalRedeemLimit`) == 1)
-        self$`userDailyTotalRedeemLimit` <- `userDailyTotalRedeemLimit`
+      if (!missing(`data`)) {
+        stopifnot(R6::is.R6(`data`))
+        self$`data` <- `data`
       }
     },
     toJSON = function() {
       InlineResponse200102Object <- list()
-      if (!is.null(self$`tokenName`)) {
-        InlineResponse200102Object[['tokenName']] <-
-          self$`tokenName`
+      if (!is.null(self$`code`)) {
+        InlineResponse200102Object[['code']] <-
+          self$`code`
       }
-      if (!is.null(self$`userDailyTotalPurchaseLimit`)) {
-        InlineResponse200102Object[['userDailyTotalPurchaseLimit']] <-
-          self$`userDailyTotalPurchaseLimit`
+      if (!is.null(self$`msg`)) {
+        InlineResponse200102Object[['msg']] <-
+          self$`msg`
       }
-      if (!is.null(self$`userDailyTotalRedeemLimit`)) {
-        InlineResponse200102Object[['userDailyTotalRedeemLimit']] <-
-          self$`userDailyTotalRedeemLimit`
+      if (!is.null(self$`data`)) {
+        InlineResponse200102Object[['data']] <-
+          self$`data`$toJSON()
       }
 
       InlineResponse200102Object
     },
     fromJSON = function(InlineResponse200102Json) {
       InlineResponse200102Object <- jsonlite::fromJSON(InlineResponse200102Json)
-      if (!is.null(InlineResponse200102Object$`tokenName`)) {
-        self$`tokenName` <- InlineResponse200102Object$`tokenName`
+      if (!is.null(InlineResponse200102Object$`code`)) {
+        self$`code` <- InlineResponse200102Object$`code`
       }
-      if (!is.null(InlineResponse200102Object$`userDailyTotalPurchaseLimit`)) {
-        self$`userDailyTotalPurchaseLimit` <- InlineResponse200102Object$`userDailyTotalPurchaseLimit`
+      if (!is.null(InlineResponse200102Object$`msg`)) {
+        self$`msg` <- InlineResponse200102Object$`msg`
       }
-      if (!is.null(InlineResponse200102Object$`userDailyTotalRedeemLimit`)) {
-        self$`userDailyTotalRedeemLimit` <- InlineResponse200102Object$`userDailyTotalRedeemLimit`
+      if (!is.null(InlineResponse200102Object$`data`)) {
+        dataObject <- InlineResponse200102Data$new()
+        dataObject$fromJSON(jsonlite::toJSON(InlineResponse200102Object$data, auto_unbox = TRUE, digits = NA))
+        self$`data` <- dataObject
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`tokenName`)) {
+        if (!is.null(self$`code`)) {
         sprintf(
-        '"tokenName":
-          "%s"
+        '"code":
+          %d
                 ',
-        self$`tokenName`
+        self$`code`
         )},
-        if (!is.null(self$`userDailyTotalPurchaseLimit`)) {
+        if (!is.null(self$`msg`)) {
         sprintf(
-        '"userDailyTotalPurchaseLimit":
+        '"msg":
           "%s"
                 ',
-        self$`userDailyTotalPurchaseLimit`
+        self$`msg`
         )},
-        if (!is.null(self$`userDailyTotalRedeemLimit`)) {
+        if (!is.null(self$`data`)) {
         sprintf(
-        '"userDailyTotalRedeemLimit":
-          "%s"
-                ',
-        self$`userDailyTotalRedeemLimit`
+        '"data":
+        %s
+        ',
+        jsonlite::toJSON(self$`data`$toJSON(), auto_unbox=TRUE, digits = NA)
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -104,9 +106,9 @@ InlineResponse200102 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse200102Json) {
       InlineResponse200102Object <- jsonlite::fromJSON(InlineResponse200102Json)
-      self$`tokenName` <- InlineResponse200102Object$`tokenName`
-      self$`userDailyTotalPurchaseLimit` <- InlineResponse200102Object$`userDailyTotalPurchaseLimit`
-      self$`userDailyTotalRedeemLimit` <- InlineResponse200102Object$`userDailyTotalRedeemLimit`
+      self$`code` <- InlineResponse200102Object$`code`
+      self$`msg` <- InlineResponse200102Object$`msg`
+      self$`data` <- InlineResponse200102Data$new()$fromJSON(jsonlite::toJSON(InlineResponse200102Object$data, auto_unbox = TRUE, digits = NA))
       self
     }
   )

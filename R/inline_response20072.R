@@ -13,15 +13,17 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field code  character 
+#' @field coin  character 
 #'
-#' @field message  character 
+#' @field name  character 
 #'
-#' @field data  list( \link{InlineResponse20072Data} ) 
+#' @field totalBalance  character 
 #'
-#' @field total  integer 
+#' @field availableBalance  character 
 #'
-#' @field success  character 
+#' @field inOrder  character 
+#'
+#' @field btcValue  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -29,117 +31,135 @@
 InlineResponse20072 <- R6::R6Class(
   'InlineResponse20072',
   public = list(
-    `code` = NULL,
-    `message` = NULL,
-    `data` = NULL,
-    `total` = NULL,
-    `success` = NULL,
+    `coin` = NULL,
+    `name` = NULL,
+    `totalBalance` = NULL,
+    `availableBalance` = NULL,
+    `inOrder` = NULL,
+    `btcValue` = NULL,
     initialize = function(
-        `code`, `message`, `data`, `total`, `success`, ...
+        `coin`, `name`, `totalBalance`, `availableBalance`, `inOrder`, `btcValue`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`code`)) {
-        stopifnot(is.character(`code`), length(`code`) == 1)
-        self$`code` <- `code`
+      if (!missing(`coin`)) {
+        stopifnot(is.character(`coin`), length(`coin`) == 1)
+        self$`coin` <- `coin`
       }
-      if (!missing(`message`)) {
-        stopifnot(is.character(`message`), length(`message`) == 1)
-        self$`message` <- `message`
+      if (!missing(`name`)) {
+        stopifnot(is.character(`name`), length(`name`) == 1)
+        self$`name` <- `name`
       }
-      if (!missing(`data`)) {
-        stopifnot(is.vector(`data`), length(`data`) != 0)
-        sapply(`data`, function(x) stopifnot(R6::is.R6(x)))
-        self$`data` <- `data`
+      if (!missing(`totalBalance`)) {
+        stopifnot(is.character(`totalBalance`), length(`totalBalance`) == 1)
+        self$`totalBalance` <- `totalBalance`
       }
-      if (!missing(`total`)) {
-        stopifnot(is.numeric(`total`), length(`total`) == 1)
-        self$`total` <- `total`
+      if (!missing(`availableBalance`)) {
+        stopifnot(is.character(`availableBalance`), length(`availableBalance`) == 1)
+        self$`availableBalance` <- `availableBalance`
       }
-      if (!missing(`success`)) {
-        stopifnot(is.logical(`success`), length(`success`) == 1)
-        self$`success` <- `success`
+      if (!missing(`inOrder`)) {
+        stopifnot(is.character(`inOrder`), length(`inOrder`) == 1)
+        self$`inOrder` <- `inOrder`
+      }
+      if (!missing(`btcValue`)) {
+        stopifnot(is.character(`btcValue`), length(`btcValue`) == 1)
+        self$`btcValue` <- `btcValue`
       }
     },
     toJSON = function() {
       InlineResponse20072Object <- list()
-      if (!is.null(self$`code`)) {
-        InlineResponse20072Object[['code']] <-
-          self$`code`
+      if (!is.null(self$`coin`)) {
+        InlineResponse20072Object[['coin']] <-
+          self$`coin`
       }
-      if (!is.null(self$`message`)) {
-        InlineResponse20072Object[['message']] <-
-          self$`message`
+      if (!is.null(self$`name`)) {
+        InlineResponse20072Object[['name']] <-
+          self$`name`
       }
-      if (!is.null(self$`data`)) {
-        InlineResponse20072Object[['data']] <-
-          lapply(self$`data`, function(x) x$toJSON())
+      if (!is.null(self$`totalBalance`)) {
+        InlineResponse20072Object[['totalBalance']] <-
+          self$`totalBalance`
       }
-      if (!is.null(self$`total`)) {
-        InlineResponse20072Object[['total']] <-
-          self$`total`
+      if (!is.null(self$`availableBalance`)) {
+        InlineResponse20072Object[['availableBalance']] <-
+          self$`availableBalance`
       }
-      if (!is.null(self$`success`)) {
-        InlineResponse20072Object[['success']] <-
-          self$`success`
+      if (!is.null(self$`inOrder`)) {
+        InlineResponse20072Object[['inOrder']] <-
+          self$`inOrder`
+      }
+      if (!is.null(self$`btcValue`)) {
+        InlineResponse20072Object[['btcValue']] <-
+          self$`btcValue`
       }
 
       InlineResponse20072Object
     },
     fromJSON = function(InlineResponse20072Json) {
       InlineResponse20072Object <- jsonlite::fromJSON(InlineResponse20072Json)
-      if (!is.null(InlineResponse20072Object$`code`)) {
-        self$`code` <- InlineResponse20072Object$`code`
+      if (!is.null(InlineResponse20072Object$`coin`)) {
+        self$`coin` <- InlineResponse20072Object$`coin`
       }
-      if (!is.null(InlineResponse20072Object$`message`)) {
-        self$`message` <- InlineResponse20072Object$`message`
+      if (!is.null(InlineResponse20072Object$`name`)) {
+        self$`name` <- InlineResponse20072Object$`name`
       }
-      if (!is.null(InlineResponse20072Object$`data`)) {
-        self$`data` <- ApiClient$new()$deserializeObj(InlineResponse20072Object$`data`, "array[InlineResponse20072Data]", loadNamespace("binanceRapi"))
+      if (!is.null(InlineResponse20072Object$`totalBalance`)) {
+        self$`totalBalance` <- InlineResponse20072Object$`totalBalance`
       }
-      if (!is.null(InlineResponse20072Object$`total`)) {
-        self$`total` <- InlineResponse20072Object$`total`
+      if (!is.null(InlineResponse20072Object$`availableBalance`)) {
+        self$`availableBalance` <- InlineResponse20072Object$`availableBalance`
       }
-      if (!is.null(InlineResponse20072Object$`success`)) {
-        self$`success` <- InlineResponse20072Object$`success`
+      if (!is.null(InlineResponse20072Object$`inOrder`)) {
+        self$`inOrder` <- InlineResponse20072Object$`inOrder`
+      }
+      if (!is.null(InlineResponse20072Object$`btcValue`)) {
+        self$`btcValue` <- InlineResponse20072Object$`btcValue`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`code`)) {
+        if (!is.null(self$`coin`)) {
         sprintf(
-        '"code":
+        '"coin":
           "%s"
                 ',
-        self$`code`
+        self$`coin`
         )},
-        if (!is.null(self$`message`)) {
+        if (!is.null(self$`name`)) {
         sprintf(
-        '"message":
+        '"name":
           "%s"
                 ',
-        self$`message`
+        self$`name`
         )},
-        if (!is.null(self$`data`)) {
+        if (!is.null(self$`totalBalance`)) {
         sprintf(
-        '"data":
-        [%s]
-',
-        paste(sapply(self$`data`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
-        )},
-        if (!is.null(self$`total`)) {
-        sprintf(
-        '"total":
-          %d
+        '"totalBalance":
+          "%s"
                 ',
-        self$`total`
+        self$`totalBalance`
         )},
-        if (!is.null(self$`success`)) {
+        if (!is.null(self$`availableBalance`)) {
         sprintf(
-        '"success":
-          %s
+        '"availableBalance":
+          "%s"
                 ',
-        tolower(self$`success`)
+        self$`availableBalance`
+        )},
+        if (!is.null(self$`inOrder`)) {
+        sprintf(
+        '"inOrder":
+          "%s"
+                ',
+        self$`inOrder`
+        )},
+        if (!is.null(self$`btcValue`)) {
+        sprintf(
+        '"btcValue":
+          "%s"
+                ',
+        self$`btcValue`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -147,11 +167,12 @@ InlineResponse20072 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20072Json) {
       InlineResponse20072Object <- jsonlite::fromJSON(InlineResponse20072Json)
-      self$`code` <- InlineResponse20072Object$`code`
-      self$`message` <- InlineResponse20072Object$`message`
-      self$`data` <- ApiClient$new()$deserializeObj(InlineResponse20072Object$`data`, "array[InlineResponse20072Data]", loadNamespace("binanceRapi"))
-      self$`total` <- InlineResponse20072Object$`total`
-      self$`success` <- InlineResponse20072Object$`success`
+      self$`coin` <- InlineResponse20072Object$`coin`
+      self$`name` <- InlineResponse20072Object$`name`
+      self$`totalBalance` <- InlineResponse20072Object$`totalBalance`
+      self$`availableBalance` <- InlineResponse20072Object$`availableBalance`
+      self$`inOrder` <- InlineResponse20072Object$`inOrder`
+      self$`btcValue` <- InlineResponse20072Object$`btcValue`
       self
     }
   )

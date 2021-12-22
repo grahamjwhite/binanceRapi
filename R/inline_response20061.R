@@ -13,21 +13,11 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field totalInitialMargin  character 
+#' @field totalAssetOfBtc  character 
 #'
-#' @field totalMaintenanceMargin  character 
+#' @field totalLiabilityOfBtc  character 
 #'
-#' @field totalMarginBalance  character 
-#'
-#' @field totalOpenOrderInitialMargin  character 
-#'
-#' @field totalPositionInitialMargin  character 
-#'
-#' @field totalUnrealizedProfit  character 
-#'
-#' @field totalWalletBalance  character 
-#'
-#' @field asset  character 
+#' @field totalNetAssetOfBtc  character 
 #'
 #' @field subAccountList  list( \link{InlineResponse20061SubAccountList} ) 
 #'
@@ -37,50 +27,25 @@
 InlineResponse20061 <- R6::R6Class(
   'InlineResponse20061',
   public = list(
-    `totalInitialMargin` = NULL,
-    `totalMaintenanceMargin` = NULL,
-    `totalMarginBalance` = NULL,
-    `totalOpenOrderInitialMargin` = NULL,
-    `totalPositionInitialMargin` = NULL,
-    `totalUnrealizedProfit` = NULL,
-    `totalWalletBalance` = NULL,
-    `asset` = NULL,
+    `totalAssetOfBtc` = NULL,
+    `totalLiabilityOfBtc` = NULL,
+    `totalNetAssetOfBtc` = NULL,
     `subAccountList` = NULL,
     initialize = function(
-        `totalInitialMargin`, `totalMaintenanceMargin`, `totalMarginBalance`, `totalOpenOrderInitialMargin`, `totalPositionInitialMargin`, `totalUnrealizedProfit`, `totalWalletBalance`, `asset`, `subAccountList`, ...
+        `totalAssetOfBtc`, `totalLiabilityOfBtc`, `totalNetAssetOfBtc`, `subAccountList`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`totalInitialMargin`)) {
-        stopifnot(is.character(`totalInitialMargin`), length(`totalInitialMargin`) == 1)
-        self$`totalInitialMargin` <- `totalInitialMargin`
+      if (!missing(`totalAssetOfBtc`)) {
+        stopifnot(is.character(`totalAssetOfBtc`), length(`totalAssetOfBtc`) == 1)
+        self$`totalAssetOfBtc` <- `totalAssetOfBtc`
       }
-      if (!missing(`totalMaintenanceMargin`)) {
-        stopifnot(is.character(`totalMaintenanceMargin`), length(`totalMaintenanceMargin`) == 1)
-        self$`totalMaintenanceMargin` <- `totalMaintenanceMargin`
+      if (!missing(`totalLiabilityOfBtc`)) {
+        stopifnot(is.character(`totalLiabilityOfBtc`), length(`totalLiabilityOfBtc`) == 1)
+        self$`totalLiabilityOfBtc` <- `totalLiabilityOfBtc`
       }
-      if (!missing(`totalMarginBalance`)) {
-        stopifnot(is.character(`totalMarginBalance`), length(`totalMarginBalance`) == 1)
-        self$`totalMarginBalance` <- `totalMarginBalance`
-      }
-      if (!missing(`totalOpenOrderInitialMargin`)) {
-        stopifnot(is.character(`totalOpenOrderInitialMargin`), length(`totalOpenOrderInitialMargin`) == 1)
-        self$`totalOpenOrderInitialMargin` <- `totalOpenOrderInitialMargin`
-      }
-      if (!missing(`totalPositionInitialMargin`)) {
-        stopifnot(is.character(`totalPositionInitialMargin`), length(`totalPositionInitialMargin`) == 1)
-        self$`totalPositionInitialMargin` <- `totalPositionInitialMargin`
-      }
-      if (!missing(`totalUnrealizedProfit`)) {
-        stopifnot(is.character(`totalUnrealizedProfit`), length(`totalUnrealizedProfit`) == 1)
-        self$`totalUnrealizedProfit` <- `totalUnrealizedProfit`
-      }
-      if (!missing(`totalWalletBalance`)) {
-        stopifnot(is.character(`totalWalletBalance`), length(`totalWalletBalance`) == 1)
-        self$`totalWalletBalance` <- `totalWalletBalance`
-      }
-      if (!missing(`asset`)) {
-        stopifnot(is.character(`asset`), length(`asset`) == 1)
-        self$`asset` <- `asset`
+      if (!missing(`totalNetAssetOfBtc`)) {
+        stopifnot(is.character(`totalNetAssetOfBtc`), length(`totalNetAssetOfBtc`) == 1)
+        self$`totalNetAssetOfBtc` <- `totalNetAssetOfBtc`
       }
       if (!missing(`subAccountList`)) {
         stopifnot(is.vector(`subAccountList`), length(`subAccountList`) != 0)
@@ -90,37 +55,17 @@ InlineResponse20061 <- R6::R6Class(
     },
     toJSON = function() {
       InlineResponse20061Object <- list()
-      if (!is.null(self$`totalInitialMargin`)) {
-        InlineResponse20061Object[['totalInitialMargin']] <-
-          self$`totalInitialMargin`
+      if (!is.null(self$`totalAssetOfBtc`)) {
+        InlineResponse20061Object[['totalAssetOfBtc']] <-
+          self$`totalAssetOfBtc`
       }
-      if (!is.null(self$`totalMaintenanceMargin`)) {
-        InlineResponse20061Object[['totalMaintenanceMargin']] <-
-          self$`totalMaintenanceMargin`
+      if (!is.null(self$`totalLiabilityOfBtc`)) {
+        InlineResponse20061Object[['totalLiabilityOfBtc']] <-
+          self$`totalLiabilityOfBtc`
       }
-      if (!is.null(self$`totalMarginBalance`)) {
-        InlineResponse20061Object[['totalMarginBalance']] <-
-          self$`totalMarginBalance`
-      }
-      if (!is.null(self$`totalOpenOrderInitialMargin`)) {
-        InlineResponse20061Object[['totalOpenOrderInitialMargin']] <-
-          self$`totalOpenOrderInitialMargin`
-      }
-      if (!is.null(self$`totalPositionInitialMargin`)) {
-        InlineResponse20061Object[['totalPositionInitialMargin']] <-
-          self$`totalPositionInitialMargin`
-      }
-      if (!is.null(self$`totalUnrealizedProfit`)) {
-        InlineResponse20061Object[['totalUnrealizedProfit']] <-
-          self$`totalUnrealizedProfit`
-      }
-      if (!is.null(self$`totalWalletBalance`)) {
-        InlineResponse20061Object[['totalWalletBalance']] <-
-          self$`totalWalletBalance`
-      }
-      if (!is.null(self$`asset`)) {
-        InlineResponse20061Object[['asset']] <-
-          self$`asset`
+      if (!is.null(self$`totalNetAssetOfBtc`)) {
+        InlineResponse20061Object[['totalNetAssetOfBtc']] <-
+          self$`totalNetAssetOfBtc`
       }
       if (!is.null(self$`subAccountList`)) {
         InlineResponse20061Object[['subAccountList']] <-
@@ -131,29 +76,14 @@ InlineResponse20061 <- R6::R6Class(
     },
     fromJSON = function(InlineResponse20061Json) {
       InlineResponse20061Object <- jsonlite::fromJSON(InlineResponse20061Json)
-      if (!is.null(InlineResponse20061Object$`totalInitialMargin`)) {
-        self$`totalInitialMargin` <- InlineResponse20061Object$`totalInitialMargin`
+      if (!is.null(InlineResponse20061Object$`totalAssetOfBtc`)) {
+        self$`totalAssetOfBtc` <- InlineResponse20061Object$`totalAssetOfBtc`
       }
-      if (!is.null(InlineResponse20061Object$`totalMaintenanceMargin`)) {
-        self$`totalMaintenanceMargin` <- InlineResponse20061Object$`totalMaintenanceMargin`
+      if (!is.null(InlineResponse20061Object$`totalLiabilityOfBtc`)) {
+        self$`totalLiabilityOfBtc` <- InlineResponse20061Object$`totalLiabilityOfBtc`
       }
-      if (!is.null(InlineResponse20061Object$`totalMarginBalance`)) {
-        self$`totalMarginBalance` <- InlineResponse20061Object$`totalMarginBalance`
-      }
-      if (!is.null(InlineResponse20061Object$`totalOpenOrderInitialMargin`)) {
-        self$`totalOpenOrderInitialMargin` <- InlineResponse20061Object$`totalOpenOrderInitialMargin`
-      }
-      if (!is.null(InlineResponse20061Object$`totalPositionInitialMargin`)) {
-        self$`totalPositionInitialMargin` <- InlineResponse20061Object$`totalPositionInitialMargin`
-      }
-      if (!is.null(InlineResponse20061Object$`totalUnrealizedProfit`)) {
-        self$`totalUnrealizedProfit` <- InlineResponse20061Object$`totalUnrealizedProfit`
-      }
-      if (!is.null(InlineResponse20061Object$`totalWalletBalance`)) {
-        self$`totalWalletBalance` <- InlineResponse20061Object$`totalWalletBalance`
-      }
-      if (!is.null(InlineResponse20061Object$`asset`)) {
-        self$`asset` <- InlineResponse20061Object$`asset`
+      if (!is.null(InlineResponse20061Object$`totalNetAssetOfBtc`)) {
+        self$`totalNetAssetOfBtc` <- InlineResponse20061Object$`totalNetAssetOfBtc`
       }
       if (!is.null(InlineResponse20061Object$`subAccountList`)) {
         self$`subAccountList` <- ApiClient$new()$deserializeObj(InlineResponse20061Object$`subAccountList`, "array[InlineResponse20061SubAccountList]", loadNamespace("binanceRapi"))
@@ -162,61 +92,26 @@ InlineResponse20061 <- R6::R6Class(
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`totalInitialMargin`)) {
+        if (!is.null(self$`totalAssetOfBtc`)) {
         sprintf(
-        '"totalInitialMargin":
+        '"totalAssetOfBtc":
           "%s"
                 ',
-        self$`totalInitialMargin`
+        self$`totalAssetOfBtc`
         )},
-        if (!is.null(self$`totalMaintenanceMargin`)) {
+        if (!is.null(self$`totalLiabilityOfBtc`)) {
         sprintf(
-        '"totalMaintenanceMargin":
+        '"totalLiabilityOfBtc":
           "%s"
                 ',
-        self$`totalMaintenanceMargin`
+        self$`totalLiabilityOfBtc`
         )},
-        if (!is.null(self$`totalMarginBalance`)) {
+        if (!is.null(self$`totalNetAssetOfBtc`)) {
         sprintf(
-        '"totalMarginBalance":
+        '"totalNetAssetOfBtc":
           "%s"
                 ',
-        self$`totalMarginBalance`
-        )},
-        if (!is.null(self$`totalOpenOrderInitialMargin`)) {
-        sprintf(
-        '"totalOpenOrderInitialMargin":
-          "%s"
-                ',
-        self$`totalOpenOrderInitialMargin`
-        )},
-        if (!is.null(self$`totalPositionInitialMargin`)) {
-        sprintf(
-        '"totalPositionInitialMargin":
-          "%s"
-                ',
-        self$`totalPositionInitialMargin`
-        )},
-        if (!is.null(self$`totalUnrealizedProfit`)) {
-        sprintf(
-        '"totalUnrealizedProfit":
-          "%s"
-                ',
-        self$`totalUnrealizedProfit`
-        )},
-        if (!is.null(self$`totalWalletBalance`)) {
-        sprintf(
-        '"totalWalletBalance":
-          "%s"
-                ',
-        self$`totalWalletBalance`
-        )},
-        if (!is.null(self$`asset`)) {
-        sprintf(
-        '"asset":
-          "%s"
-                ',
-        self$`asset`
+        self$`totalNetAssetOfBtc`
         )},
         if (!is.null(self$`subAccountList`)) {
         sprintf(
@@ -231,14 +126,9 @@ InlineResponse20061 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20061Json) {
       InlineResponse20061Object <- jsonlite::fromJSON(InlineResponse20061Json)
-      self$`totalInitialMargin` <- InlineResponse20061Object$`totalInitialMargin`
-      self$`totalMaintenanceMargin` <- InlineResponse20061Object$`totalMaintenanceMargin`
-      self$`totalMarginBalance` <- InlineResponse20061Object$`totalMarginBalance`
-      self$`totalOpenOrderInitialMargin` <- InlineResponse20061Object$`totalOpenOrderInitialMargin`
-      self$`totalPositionInitialMargin` <- InlineResponse20061Object$`totalPositionInitialMargin`
-      self$`totalUnrealizedProfit` <- InlineResponse20061Object$`totalUnrealizedProfit`
-      self$`totalWalletBalance` <- InlineResponse20061Object$`totalWalletBalance`
-      self$`asset` <- InlineResponse20061Object$`asset`
+      self$`totalAssetOfBtc` <- InlineResponse20061Object$`totalAssetOfBtc`
+      self$`totalLiabilityOfBtc` <- InlineResponse20061Object$`totalLiabilityOfBtc`
+      self$`totalNetAssetOfBtc` <- InlineResponse20061Object$`totalNetAssetOfBtc`
       self$`subAccountList` <- ApiClient$new()$deserializeObj(InlineResponse20061Object$`subAccountList`, "array[InlineResponse20061SubAccountList]", loadNamespace("binanceRapi"))
       self
     }

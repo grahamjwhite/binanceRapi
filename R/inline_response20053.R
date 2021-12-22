@@ -13,13 +13,9 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field address  character 
+#' @field success  character 
 #'
-#' @field coin  character 
-#'
-#' @field tag  character 
-#'
-#' @field url  character 
+#' @field txnId  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -27,97 +23,59 @@
 InlineResponse20053 <- R6::R6Class(
   'InlineResponse20053',
   public = list(
-    `address` = NULL,
-    `coin` = NULL,
-    `tag` = NULL,
-    `url` = NULL,
+    `success` = NULL,
+    `txnId` = NULL,
     initialize = function(
-        `address`, `coin`, `tag`, `url`, ...
+        `success`, `txnId`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`address`)) {
-        stopifnot(is.character(`address`), length(`address`) == 1)
-        self$`address` <- `address`
+      if (!missing(`success`)) {
+        stopifnot(is.logical(`success`), length(`success`) == 1)
+        self$`success` <- `success`
       }
-      if (!missing(`coin`)) {
-        stopifnot(is.character(`coin`), length(`coin`) == 1)
-        self$`coin` <- `coin`
-      }
-      if (!missing(`tag`)) {
-        stopifnot(is.character(`tag`), length(`tag`) == 1)
-        self$`tag` <- `tag`
-      }
-      if (!missing(`url`)) {
-        stopifnot(is.character(`url`), length(`url`) == 1)
-        self$`url` <- `url`
+      if (!missing(`txnId`)) {
+        stopifnot(is.character(`txnId`), length(`txnId`) == 1)
+        self$`txnId` <- `txnId`
       }
     },
     toJSON = function() {
       InlineResponse20053Object <- list()
-      if (!is.null(self$`address`)) {
-        InlineResponse20053Object[['address']] <-
-          self$`address`
+      if (!is.null(self$`success`)) {
+        InlineResponse20053Object[['success']] <-
+          self$`success`
       }
-      if (!is.null(self$`coin`)) {
-        InlineResponse20053Object[['coin']] <-
-          self$`coin`
-      }
-      if (!is.null(self$`tag`)) {
-        InlineResponse20053Object[['tag']] <-
-          self$`tag`
-      }
-      if (!is.null(self$`url`)) {
-        InlineResponse20053Object[['url']] <-
-          self$`url`
+      if (!is.null(self$`txnId`)) {
+        InlineResponse20053Object[['txnId']] <-
+          self$`txnId`
       }
 
       InlineResponse20053Object
     },
     fromJSON = function(InlineResponse20053Json) {
       InlineResponse20053Object <- jsonlite::fromJSON(InlineResponse20053Json)
-      if (!is.null(InlineResponse20053Object$`address`)) {
-        self$`address` <- InlineResponse20053Object$`address`
+      if (!is.null(InlineResponse20053Object$`success`)) {
+        self$`success` <- InlineResponse20053Object$`success`
       }
-      if (!is.null(InlineResponse20053Object$`coin`)) {
-        self$`coin` <- InlineResponse20053Object$`coin`
-      }
-      if (!is.null(InlineResponse20053Object$`tag`)) {
-        self$`tag` <- InlineResponse20053Object$`tag`
-      }
-      if (!is.null(InlineResponse20053Object$`url`)) {
-        self$`url` <- InlineResponse20053Object$`url`
+      if (!is.null(InlineResponse20053Object$`txnId`)) {
+        self$`txnId` <- InlineResponse20053Object$`txnId`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`address`)) {
+        if (!is.null(self$`success`)) {
         sprintf(
-        '"address":
-          "%s"
+        '"success":
+          %s
                 ',
-        self$`address`
+        tolower(self$`success`)
         )},
-        if (!is.null(self$`coin`)) {
+        if (!is.null(self$`txnId`)) {
         sprintf(
-        '"coin":
+        '"txnId":
           "%s"
                 ',
-        self$`coin`
-        )},
-        if (!is.null(self$`tag`)) {
-        sprintf(
-        '"tag":
-          "%s"
-                ',
-        self$`tag`
-        )},
-        if (!is.null(self$`url`)) {
-        sprintf(
-        '"url":
-          "%s"
-                ',
-        self$`url`
+        self$`txnId`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -125,10 +83,8 @@ InlineResponse20053 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20053Json) {
       InlineResponse20053Object <- jsonlite::fromJSON(InlineResponse20053Json)
-      self$`address` <- InlineResponse20053Object$`address`
-      self$`coin` <- InlineResponse20053Object$`coin`
-      self$`tag` <- InlineResponse20053Object$`tag`
-      self$`url` <- InlineResponse20053Object$`url`
+      self$`success` <- InlineResponse20053Object$`success`
+      self$`txnId` <- InlineResponse20053Object$`txnId`
       self
     }
   )

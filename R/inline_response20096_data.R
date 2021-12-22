@@ -13,11 +13,11 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field type  character 
+#' @field accountProfits  list( \link{InlineResponse20096DataAccountProfits} ) 
 #'
-#' @field userName  character 
+#' @field totalNum  integer 
 #'
-#' @field list  list( \link{InlineResponse20096List} ) 
+#' @field pageSize  integer 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -25,79 +25,79 @@
 InlineResponse20096Data <- R6::R6Class(
   'InlineResponse20096Data',
   public = list(
-    `type` = NULL,
-    `userName` = NULL,
-    `list` = NULL,
+    `accountProfits` = NULL,
+    `totalNum` = NULL,
+    `pageSize` = NULL,
     initialize = function(
-        `type`, `userName`, `list`, ...
+        `accountProfits`, `totalNum`, `pageSize`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`type`)) {
-        stopifnot(is.character(`type`), length(`type`) == 1)
-        self$`type` <- `type`
+      if (!missing(`accountProfits`)) {
+        stopifnot(is.vector(`accountProfits`), length(`accountProfits`) != 0)
+        sapply(`accountProfits`, function(x) stopifnot(R6::is.R6(x)))
+        self$`accountProfits` <- `accountProfits`
       }
-      if (!missing(`userName`)) {
-        stopifnot(is.character(`userName`), length(`userName`) == 1)
-        self$`userName` <- `userName`
+      if (!missing(`totalNum`)) {
+        stopifnot(is.numeric(`totalNum`), length(`totalNum`) == 1)
+        self$`totalNum` <- `totalNum`
       }
-      if (!missing(`list`)) {
-        stopifnot(is.vector(`list`), length(`list`) != 0)
-        sapply(`list`, function(x) stopifnot(R6::is.R6(x)))
-        self$`list` <- `list`
+      if (!missing(`pageSize`)) {
+        stopifnot(is.numeric(`pageSize`), length(`pageSize`) == 1)
+        self$`pageSize` <- `pageSize`
       }
     },
     toJSON = function() {
       InlineResponse20096DataObject <- list()
-      if (!is.null(self$`type`)) {
-        InlineResponse20096DataObject[['type']] <-
-          self$`type`
+      if (!is.null(self$`accountProfits`)) {
+        InlineResponse20096DataObject[['accountProfits']] <-
+          lapply(self$`accountProfits`, function(x) x$toJSON())
       }
-      if (!is.null(self$`userName`)) {
-        InlineResponse20096DataObject[['userName']] <-
-          self$`userName`
+      if (!is.null(self$`totalNum`)) {
+        InlineResponse20096DataObject[['totalNum']] <-
+          self$`totalNum`
       }
-      if (!is.null(self$`list`)) {
-        InlineResponse20096DataObject[['list']] <-
-          lapply(self$`list`, function(x) x$toJSON())
+      if (!is.null(self$`pageSize`)) {
+        InlineResponse20096DataObject[['pageSize']] <-
+          self$`pageSize`
       }
 
       InlineResponse20096DataObject
     },
     fromJSON = function(InlineResponse20096DataJson) {
       InlineResponse20096DataObject <- jsonlite::fromJSON(InlineResponse20096DataJson)
-      if (!is.null(InlineResponse20096DataObject$`type`)) {
-        self$`type` <- InlineResponse20096DataObject$`type`
+      if (!is.null(InlineResponse20096DataObject$`accountProfits`)) {
+        self$`accountProfits` <- ApiClient$new()$deserializeObj(InlineResponse20096DataObject$`accountProfits`, "array[InlineResponse20096DataAccountProfits]", loadNamespace("binanceRapi"))
       }
-      if (!is.null(InlineResponse20096DataObject$`userName`)) {
-        self$`userName` <- InlineResponse20096DataObject$`userName`
+      if (!is.null(InlineResponse20096DataObject$`totalNum`)) {
+        self$`totalNum` <- InlineResponse20096DataObject$`totalNum`
       }
-      if (!is.null(InlineResponse20096DataObject$`list`)) {
-        self$`list` <- ApiClient$new()$deserializeObj(InlineResponse20096DataObject$`list`, "array[InlineResponse20096List]", loadNamespace("binanceRapi"))
+      if (!is.null(InlineResponse20096DataObject$`pageSize`)) {
+        self$`pageSize` <- InlineResponse20096DataObject$`pageSize`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`type`)) {
+        if (!is.null(self$`accountProfits`)) {
         sprintf(
-        '"type":
-          "%s"
-                ',
-        self$`type`
-        )},
-        if (!is.null(self$`userName`)) {
-        sprintf(
-        '"userName":
-          "%s"
-                ',
-        self$`userName`
-        )},
-        if (!is.null(self$`list`)) {
-        sprintf(
-        '"list":
+        '"accountProfits":
         [%s]
 ',
-        paste(sapply(self$`list`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
+        paste(sapply(self$`accountProfits`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
+        )},
+        if (!is.null(self$`totalNum`)) {
+        sprintf(
+        '"totalNum":
+          %d
+                ',
+        self$`totalNum`
+        )},
+        if (!is.null(self$`pageSize`)) {
+        sprintf(
+        '"pageSize":
+          %d
+                ',
+        self$`pageSize`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -105,9 +105,9 @@ InlineResponse20096Data <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20096DataJson) {
       InlineResponse20096DataObject <- jsonlite::fromJSON(InlineResponse20096DataJson)
-      self$`type` <- InlineResponse20096DataObject$`type`
-      self$`userName` <- InlineResponse20096DataObject$`userName`
-      self$`list` <- ApiClient$new()$deserializeObj(InlineResponse20096DataObject$`list`, "array[InlineResponse20096List]", loadNamespace("binanceRapi"))
+      self$`accountProfits` <- ApiClient$new()$deserializeObj(InlineResponse20096DataObject$`accountProfits`, "array[InlineResponse20096DataAccountProfits]", loadNamespace("binanceRapi"))
+      self$`totalNum` <- InlineResponse20096DataObject$`totalNum`
+      self$`pageSize` <- InlineResponse20096DataObject$`pageSize`
       self
     }
   )

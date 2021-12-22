@@ -13,11 +13,19 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field code  integer 
+#' @field positionAmountVos  list( \link{InlineResponse20089PositionAmountVos} ) 
 #'
-#' @field msg  character 
+#' @field totalAmountInBTC  character 
 #'
-#' @field data  \link{InlineResponse20089Data} 
+#' @field totalAmountInUSDT  character 
+#'
+#' @field totalFixedAmountInBTC  character 
+#'
+#' @field totalFixedAmountInUSDT  character 
+#'
+#' @field totalFlexibleInBTC  character 
+#'
+#' @field totalFlexibleInUSDT  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -25,80 +33,155 @@
 InlineResponse20089 <- R6::R6Class(
   'InlineResponse20089',
   public = list(
-    `code` = NULL,
-    `msg` = NULL,
-    `data` = NULL,
+    `positionAmountVos` = NULL,
+    `totalAmountInBTC` = NULL,
+    `totalAmountInUSDT` = NULL,
+    `totalFixedAmountInBTC` = NULL,
+    `totalFixedAmountInUSDT` = NULL,
+    `totalFlexibleInBTC` = NULL,
+    `totalFlexibleInUSDT` = NULL,
     initialize = function(
-        `code`, `msg`, `data`, ...
+        `positionAmountVos`, `totalAmountInBTC`, `totalAmountInUSDT`, `totalFixedAmountInBTC`, `totalFixedAmountInUSDT`, `totalFlexibleInBTC`, `totalFlexibleInUSDT`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`code`)) {
-        stopifnot(is.numeric(`code`), length(`code`) == 1)
-        self$`code` <- `code`
+      if (!missing(`positionAmountVos`)) {
+        stopifnot(is.vector(`positionAmountVos`), length(`positionAmountVos`) != 0)
+        sapply(`positionAmountVos`, function(x) stopifnot(R6::is.R6(x)))
+        self$`positionAmountVos` <- `positionAmountVos`
       }
-      if (!missing(`msg`)) {
-        stopifnot(is.character(`msg`), length(`msg`) == 1)
-        self$`msg` <- `msg`
+      if (!missing(`totalAmountInBTC`)) {
+        stopifnot(is.character(`totalAmountInBTC`), length(`totalAmountInBTC`) == 1)
+        self$`totalAmountInBTC` <- `totalAmountInBTC`
       }
-      if (!missing(`data`)) {
-        stopifnot(R6::is.R6(`data`))
-        self$`data` <- `data`
+      if (!missing(`totalAmountInUSDT`)) {
+        stopifnot(is.character(`totalAmountInUSDT`), length(`totalAmountInUSDT`) == 1)
+        self$`totalAmountInUSDT` <- `totalAmountInUSDT`
+      }
+      if (!missing(`totalFixedAmountInBTC`)) {
+        stopifnot(is.character(`totalFixedAmountInBTC`), length(`totalFixedAmountInBTC`) == 1)
+        self$`totalFixedAmountInBTC` <- `totalFixedAmountInBTC`
+      }
+      if (!missing(`totalFixedAmountInUSDT`)) {
+        stopifnot(is.character(`totalFixedAmountInUSDT`), length(`totalFixedAmountInUSDT`) == 1)
+        self$`totalFixedAmountInUSDT` <- `totalFixedAmountInUSDT`
+      }
+      if (!missing(`totalFlexibleInBTC`)) {
+        stopifnot(is.character(`totalFlexibleInBTC`), length(`totalFlexibleInBTC`) == 1)
+        self$`totalFlexibleInBTC` <- `totalFlexibleInBTC`
+      }
+      if (!missing(`totalFlexibleInUSDT`)) {
+        stopifnot(is.character(`totalFlexibleInUSDT`), length(`totalFlexibleInUSDT`) == 1)
+        self$`totalFlexibleInUSDT` <- `totalFlexibleInUSDT`
       }
     },
     toJSON = function() {
       InlineResponse20089Object <- list()
-      if (!is.null(self$`code`)) {
-        InlineResponse20089Object[['code']] <-
-          self$`code`
+      if (!is.null(self$`positionAmountVos`)) {
+        InlineResponse20089Object[['positionAmountVos']] <-
+          lapply(self$`positionAmountVos`, function(x) x$toJSON())
       }
-      if (!is.null(self$`msg`)) {
-        InlineResponse20089Object[['msg']] <-
-          self$`msg`
+      if (!is.null(self$`totalAmountInBTC`)) {
+        InlineResponse20089Object[['totalAmountInBTC']] <-
+          self$`totalAmountInBTC`
       }
-      if (!is.null(self$`data`)) {
-        InlineResponse20089Object[['data']] <-
-          self$`data`$toJSON()
+      if (!is.null(self$`totalAmountInUSDT`)) {
+        InlineResponse20089Object[['totalAmountInUSDT']] <-
+          self$`totalAmountInUSDT`
+      }
+      if (!is.null(self$`totalFixedAmountInBTC`)) {
+        InlineResponse20089Object[['totalFixedAmountInBTC']] <-
+          self$`totalFixedAmountInBTC`
+      }
+      if (!is.null(self$`totalFixedAmountInUSDT`)) {
+        InlineResponse20089Object[['totalFixedAmountInUSDT']] <-
+          self$`totalFixedAmountInUSDT`
+      }
+      if (!is.null(self$`totalFlexibleInBTC`)) {
+        InlineResponse20089Object[['totalFlexibleInBTC']] <-
+          self$`totalFlexibleInBTC`
+      }
+      if (!is.null(self$`totalFlexibleInUSDT`)) {
+        InlineResponse20089Object[['totalFlexibleInUSDT']] <-
+          self$`totalFlexibleInUSDT`
       }
 
       InlineResponse20089Object
     },
     fromJSON = function(InlineResponse20089Json) {
       InlineResponse20089Object <- jsonlite::fromJSON(InlineResponse20089Json)
-      if (!is.null(InlineResponse20089Object$`code`)) {
-        self$`code` <- InlineResponse20089Object$`code`
+      if (!is.null(InlineResponse20089Object$`positionAmountVos`)) {
+        self$`positionAmountVos` <- ApiClient$new()$deserializeObj(InlineResponse20089Object$`positionAmountVos`, "array[InlineResponse20089PositionAmountVos]", loadNamespace("binanceRapi"))
       }
-      if (!is.null(InlineResponse20089Object$`msg`)) {
-        self$`msg` <- InlineResponse20089Object$`msg`
+      if (!is.null(InlineResponse20089Object$`totalAmountInBTC`)) {
+        self$`totalAmountInBTC` <- InlineResponse20089Object$`totalAmountInBTC`
       }
-      if (!is.null(InlineResponse20089Object$`data`)) {
-        dataObject <- InlineResponse20089Data$new()
-        dataObject$fromJSON(jsonlite::toJSON(InlineResponse20089Object$data, auto_unbox = TRUE, digits = NA))
-        self$`data` <- dataObject
+      if (!is.null(InlineResponse20089Object$`totalAmountInUSDT`)) {
+        self$`totalAmountInUSDT` <- InlineResponse20089Object$`totalAmountInUSDT`
+      }
+      if (!is.null(InlineResponse20089Object$`totalFixedAmountInBTC`)) {
+        self$`totalFixedAmountInBTC` <- InlineResponse20089Object$`totalFixedAmountInBTC`
+      }
+      if (!is.null(InlineResponse20089Object$`totalFixedAmountInUSDT`)) {
+        self$`totalFixedAmountInUSDT` <- InlineResponse20089Object$`totalFixedAmountInUSDT`
+      }
+      if (!is.null(InlineResponse20089Object$`totalFlexibleInBTC`)) {
+        self$`totalFlexibleInBTC` <- InlineResponse20089Object$`totalFlexibleInBTC`
+      }
+      if (!is.null(InlineResponse20089Object$`totalFlexibleInUSDT`)) {
+        self$`totalFlexibleInUSDT` <- InlineResponse20089Object$`totalFlexibleInUSDT`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`code`)) {
+        if (!is.null(self$`positionAmountVos`)) {
         sprintf(
-        '"code":
-          %d
-                ',
-        self$`code`
+        '"positionAmountVos":
+        [%s]
+',
+        paste(sapply(self$`positionAmountVos`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
         )},
-        if (!is.null(self$`msg`)) {
+        if (!is.null(self$`totalAmountInBTC`)) {
         sprintf(
-        '"msg":
+        '"totalAmountInBTC":
           "%s"
                 ',
-        self$`msg`
+        self$`totalAmountInBTC`
         )},
-        if (!is.null(self$`data`)) {
+        if (!is.null(self$`totalAmountInUSDT`)) {
         sprintf(
-        '"data":
-        %s
-        ',
-        jsonlite::toJSON(self$`data`$toJSON(), auto_unbox=TRUE, digits = NA)
+        '"totalAmountInUSDT":
+          "%s"
+                ',
+        self$`totalAmountInUSDT`
+        )},
+        if (!is.null(self$`totalFixedAmountInBTC`)) {
+        sprintf(
+        '"totalFixedAmountInBTC":
+          "%s"
+                ',
+        self$`totalFixedAmountInBTC`
+        )},
+        if (!is.null(self$`totalFixedAmountInUSDT`)) {
+        sprintf(
+        '"totalFixedAmountInUSDT":
+          "%s"
+                ',
+        self$`totalFixedAmountInUSDT`
+        )},
+        if (!is.null(self$`totalFlexibleInBTC`)) {
+        sprintf(
+        '"totalFlexibleInBTC":
+          "%s"
+                ',
+        self$`totalFlexibleInBTC`
+        )},
+        if (!is.null(self$`totalFlexibleInUSDT`)) {
+        sprintf(
+        '"totalFlexibleInUSDT":
+          "%s"
+                ',
+        self$`totalFlexibleInUSDT`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -106,9 +189,13 @@ InlineResponse20089 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20089Json) {
       InlineResponse20089Object <- jsonlite::fromJSON(InlineResponse20089Json)
-      self$`code` <- InlineResponse20089Object$`code`
-      self$`msg` <- InlineResponse20089Object$`msg`
-      self$`data` <- InlineResponse20089Data$new()$fromJSON(jsonlite::toJSON(InlineResponse20089Object$data, auto_unbox = TRUE, digits = NA))
+      self$`positionAmountVos` <- ApiClient$new()$deserializeObj(InlineResponse20089Object$`positionAmountVos`, "array[InlineResponse20089PositionAmountVos]", loadNamespace("binanceRapi"))
+      self$`totalAmountInBTC` <- InlineResponse20089Object$`totalAmountInBTC`
+      self$`totalAmountInUSDT` <- InlineResponse20089Object$`totalAmountInUSDT`
+      self$`totalFixedAmountInBTC` <- InlineResponse20089Object$`totalFixedAmountInBTC`
+      self$`totalFixedAmountInUSDT` <- InlineResponse20089Object$`totalFixedAmountInUSDT`
+      self$`totalFlexibleInBTC` <- InlineResponse20089Object$`totalFlexibleInBTC`
+      self$`totalFlexibleInUSDT` <- InlineResponse20089Object$`totalFlexibleInUSDT`
       self
     }
   )

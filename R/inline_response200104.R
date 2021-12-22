@@ -13,15 +13,35 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field poolId  integer 
+#' @field tokenName  character 
 #'
-#' @field poolNmae  character 
+#' @field description  character 
 #'
-#' @field updateTime  integer 
+#' @field underlying  character 
 #'
-#' @field liquidity  \link{SapiV1BswapLiquidityLiquidity} 
+#' @field tokenIssued  character 
 #'
-#' @field share  \link{SapiV1BswapLiquidityShare} 
+#' @field basket  character 
+#'
+#' @field currentBaskets  list( \link{SapiV1BlvtTokenInfoCurrentBaskets} ) 
+#'
+#' @field nav  character 
+#'
+#' @field realLeverage  character 
+#'
+#' @field fundingRate  character 
+#'
+#' @field dailyManagementFee  character 
+#'
+#' @field purchaseFeePct  character 
+#'
+#' @field dailyPurchaseLimit  character 
+#'
+#' @field redeemFeePct  character 
+#'
+#' @field dailyRedeemLimit  character 
+#'
+#' @field timestamp  integer 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -29,120 +49,307 @@
 InlineResponse200104 <- R6::R6Class(
   'InlineResponse200104',
   public = list(
-    `poolId` = NULL,
-    `poolNmae` = NULL,
-    `updateTime` = NULL,
-    `liquidity` = NULL,
-    `share` = NULL,
+    `tokenName` = NULL,
+    `description` = NULL,
+    `underlying` = NULL,
+    `tokenIssued` = NULL,
+    `basket` = NULL,
+    `currentBaskets` = NULL,
+    `nav` = NULL,
+    `realLeverage` = NULL,
+    `fundingRate` = NULL,
+    `dailyManagementFee` = NULL,
+    `purchaseFeePct` = NULL,
+    `dailyPurchaseLimit` = NULL,
+    `redeemFeePct` = NULL,
+    `dailyRedeemLimit` = NULL,
+    `timestamp` = NULL,
     initialize = function(
-        `poolId`, `poolNmae`, `updateTime`, `liquidity`, `share`, ...
+        `tokenName`, `description`, `underlying`, `tokenIssued`, `basket`, `currentBaskets`, `nav`, `realLeverage`, `fundingRate`, `dailyManagementFee`, `purchaseFeePct`, `dailyPurchaseLimit`, `redeemFeePct`, `dailyRedeemLimit`, `timestamp`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`poolId`)) {
-        stopifnot(is.numeric(`poolId`), length(`poolId`) == 1)
-        self$`poolId` <- `poolId`
+      if (!missing(`tokenName`)) {
+        stopifnot(is.character(`tokenName`), length(`tokenName`) == 1)
+        self$`tokenName` <- `tokenName`
       }
-      if (!missing(`poolNmae`)) {
-        stopifnot(is.character(`poolNmae`), length(`poolNmae`) == 1)
-        self$`poolNmae` <- `poolNmae`
+      if (!missing(`description`)) {
+        stopifnot(is.character(`description`), length(`description`) == 1)
+        self$`description` <- `description`
       }
-      if (!missing(`updateTime`)) {
-        stopifnot(is.numeric(`updateTime`), length(`updateTime`) == 1)
-        self$`updateTime` <- `updateTime`
+      if (!missing(`underlying`)) {
+        stopifnot(is.character(`underlying`), length(`underlying`) == 1)
+        self$`underlying` <- `underlying`
       }
-      if (!missing(`liquidity`)) {
-        stopifnot(R6::is.R6(`liquidity`))
-        self$`liquidity` <- `liquidity`
+      if (!missing(`tokenIssued`)) {
+        stopifnot(is.character(`tokenIssued`), length(`tokenIssued`) == 1)
+        self$`tokenIssued` <- `tokenIssued`
       }
-      if (!missing(`share`)) {
-        stopifnot(R6::is.R6(`share`))
-        self$`share` <- `share`
+      if (!missing(`basket`)) {
+        stopifnot(is.character(`basket`), length(`basket`) == 1)
+        self$`basket` <- `basket`
+      }
+      if (!missing(`currentBaskets`)) {
+        stopifnot(is.vector(`currentBaskets`), length(`currentBaskets`) != 0)
+        sapply(`currentBaskets`, function(x) stopifnot(R6::is.R6(x)))
+        self$`currentBaskets` <- `currentBaskets`
+      }
+      if (!missing(`nav`)) {
+        stopifnot(is.character(`nav`), length(`nav`) == 1)
+        self$`nav` <- `nav`
+      }
+      if (!missing(`realLeverage`)) {
+        stopifnot(is.character(`realLeverage`), length(`realLeverage`) == 1)
+        self$`realLeverage` <- `realLeverage`
+      }
+      if (!missing(`fundingRate`)) {
+        stopifnot(is.character(`fundingRate`), length(`fundingRate`) == 1)
+        self$`fundingRate` <- `fundingRate`
+      }
+      if (!missing(`dailyManagementFee`)) {
+        stopifnot(is.character(`dailyManagementFee`), length(`dailyManagementFee`) == 1)
+        self$`dailyManagementFee` <- `dailyManagementFee`
+      }
+      if (!missing(`purchaseFeePct`)) {
+        stopifnot(is.character(`purchaseFeePct`), length(`purchaseFeePct`) == 1)
+        self$`purchaseFeePct` <- `purchaseFeePct`
+      }
+      if (!missing(`dailyPurchaseLimit`)) {
+        stopifnot(is.character(`dailyPurchaseLimit`), length(`dailyPurchaseLimit`) == 1)
+        self$`dailyPurchaseLimit` <- `dailyPurchaseLimit`
+      }
+      if (!missing(`redeemFeePct`)) {
+        stopifnot(is.character(`redeemFeePct`), length(`redeemFeePct`) == 1)
+        self$`redeemFeePct` <- `redeemFeePct`
+      }
+      if (!missing(`dailyRedeemLimit`)) {
+        stopifnot(is.character(`dailyRedeemLimit`), length(`dailyRedeemLimit`) == 1)
+        self$`dailyRedeemLimit` <- `dailyRedeemLimit`
+      }
+      if (!missing(`timestamp`)) {
+        stopifnot(is.numeric(`timestamp`), length(`timestamp`) == 1)
+        self$`timestamp` <- `timestamp`
       }
     },
     toJSON = function() {
       InlineResponse200104Object <- list()
-      if (!is.null(self$`poolId`)) {
-        InlineResponse200104Object[['poolId']] <-
-          self$`poolId`
+      if (!is.null(self$`tokenName`)) {
+        InlineResponse200104Object[['tokenName']] <-
+          self$`tokenName`
       }
-      if (!is.null(self$`poolNmae`)) {
-        InlineResponse200104Object[['poolNmae']] <-
-          self$`poolNmae`
+      if (!is.null(self$`description`)) {
+        InlineResponse200104Object[['description']] <-
+          self$`description`
       }
-      if (!is.null(self$`updateTime`)) {
-        InlineResponse200104Object[['updateTime']] <-
-          self$`updateTime`
+      if (!is.null(self$`underlying`)) {
+        InlineResponse200104Object[['underlying']] <-
+          self$`underlying`
       }
-      if (!is.null(self$`liquidity`)) {
-        InlineResponse200104Object[['liquidity']] <-
-          self$`liquidity`$toJSON()
+      if (!is.null(self$`tokenIssued`)) {
+        InlineResponse200104Object[['tokenIssued']] <-
+          self$`tokenIssued`
       }
-      if (!is.null(self$`share`)) {
-        InlineResponse200104Object[['share']] <-
-          self$`share`$toJSON()
+      if (!is.null(self$`basket`)) {
+        InlineResponse200104Object[['basket']] <-
+          self$`basket`
+      }
+      if (!is.null(self$`currentBaskets`)) {
+        InlineResponse200104Object[['currentBaskets']] <-
+          lapply(self$`currentBaskets`, function(x) x$toJSON())
+      }
+      if (!is.null(self$`nav`)) {
+        InlineResponse200104Object[['nav']] <-
+          self$`nav`
+      }
+      if (!is.null(self$`realLeverage`)) {
+        InlineResponse200104Object[['realLeverage']] <-
+          self$`realLeverage`
+      }
+      if (!is.null(self$`fundingRate`)) {
+        InlineResponse200104Object[['fundingRate']] <-
+          self$`fundingRate`
+      }
+      if (!is.null(self$`dailyManagementFee`)) {
+        InlineResponse200104Object[['dailyManagementFee']] <-
+          self$`dailyManagementFee`
+      }
+      if (!is.null(self$`purchaseFeePct`)) {
+        InlineResponse200104Object[['purchaseFeePct']] <-
+          self$`purchaseFeePct`
+      }
+      if (!is.null(self$`dailyPurchaseLimit`)) {
+        InlineResponse200104Object[['dailyPurchaseLimit']] <-
+          self$`dailyPurchaseLimit`
+      }
+      if (!is.null(self$`redeemFeePct`)) {
+        InlineResponse200104Object[['redeemFeePct']] <-
+          self$`redeemFeePct`
+      }
+      if (!is.null(self$`dailyRedeemLimit`)) {
+        InlineResponse200104Object[['dailyRedeemLimit']] <-
+          self$`dailyRedeemLimit`
+      }
+      if (!is.null(self$`timestamp`)) {
+        InlineResponse200104Object[['timestamp']] <-
+          self$`timestamp`
       }
 
       InlineResponse200104Object
     },
     fromJSON = function(InlineResponse200104Json) {
       InlineResponse200104Object <- jsonlite::fromJSON(InlineResponse200104Json)
-      if (!is.null(InlineResponse200104Object$`poolId`)) {
-        self$`poolId` <- InlineResponse200104Object$`poolId`
+      if (!is.null(InlineResponse200104Object$`tokenName`)) {
+        self$`tokenName` <- InlineResponse200104Object$`tokenName`
       }
-      if (!is.null(InlineResponse200104Object$`poolNmae`)) {
-        self$`poolNmae` <- InlineResponse200104Object$`poolNmae`
+      if (!is.null(InlineResponse200104Object$`description`)) {
+        self$`description` <- InlineResponse200104Object$`description`
       }
-      if (!is.null(InlineResponse200104Object$`updateTime`)) {
-        self$`updateTime` <- InlineResponse200104Object$`updateTime`
+      if (!is.null(InlineResponse200104Object$`underlying`)) {
+        self$`underlying` <- InlineResponse200104Object$`underlying`
       }
-      if (!is.null(InlineResponse200104Object$`liquidity`)) {
-        liquidityObject <- SapiV1BswapLiquidityLiquidity$new()
-        liquidityObject$fromJSON(jsonlite::toJSON(InlineResponse200104Object$liquidity, auto_unbox = TRUE, digits = NA))
-        self$`liquidity` <- liquidityObject
+      if (!is.null(InlineResponse200104Object$`tokenIssued`)) {
+        self$`tokenIssued` <- InlineResponse200104Object$`tokenIssued`
       }
-      if (!is.null(InlineResponse200104Object$`share`)) {
-        shareObject <- SapiV1BswapLiquidityShare$new()
-        shareObject$fromJSON(jsonlite::toJSON(InlineResponse200104Object$share, auto_unbox = TRUE, digits = NA))
-        self$`share` <- shareObject
+      if (!is.null(InlineResponse200104Object$`basket`)) {
+        self$`basket` <- InlineResponse200104Object$`basket`
+      }
+      if (!is.null(InlineResponse200104Object$`currentBaskets`)) {
+        self$`currentBaskets` <- ApiClient$new()$deserializeObj(InlineResponse200104Object$`currentBaskets`, "array[SapiV1BlvtTokenInfoCurrentBaskets]", loadNamespace("binanceRapi"))
+      }
+      if (!is.null(InlineResponse200104Object$`nav`)) {
+        self$`nav` <- InlineResponse200104Object$`nav`
+      }
+      if (!is.null(InlineResponse200104Object$`realLeverage`)) {
+        self$`realLeverage` <- InlineResponse200104Object$`realLeverage`
+      }
+      if (!is.null(InlineResponse200104Object$`fundingRate`)) {
+        self$`fundingRate` <- InlineResponse200104Object$`fundingRate`
+      }
+      if (!is.null(InlineResponse200104Object$`dailyManagementFee`)) {
+        self$`dailyManagementFee` <- InlineResponse200104Object$`dailyManagementFee`
+      }
+      if (!is.null(InlineResponse200104Object$`purchaseFeePct`)) {
+        self$`purchaseFeePct` <- InlineResponse200104Object$`purchaseFeePct`
+      }
+      if (!is.null(InlineResponse200104Object$`dailyPurchaseLimit`)) {
+        self$`dailyPurchaseLimit` <- InlineResponse200104Object$`dailyPurchaseLimit`
+      }
+      if (!is.null(InlineResponse200104Object$`redeemFeePct`)) {
+        self$`redeemFeePct` <- InlineResponse200104Object$`redeemFeePct`
+      }
+      if (!is.null(InlineResponse200104Object$`dailyRedeemLimit`)) {
+        self$`dailyRedeemLimit` <- InlineResponse200104Object$`dailyRedeemLimit`
+      }
+      if (!is.null(InlineResponse200104Object$`timestamp`)) {
+        self$`timestamp` <- InlineResponse200104Object$`timestamp`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`poolId`)) {
+        if (!is.null(self$`tokenName`)) {
         sprintf(
-        '"poolId":
-          %d
-                ',
-        self$`poolId`
-        )},
-        if (!is.null(self$`poolNmae`)) {
-        sprintf(
-        '"poolNmae":
+        '"tokenName":
           "%s"
                 ',
-        self$`poolNmae`
+        self$`tokenName`
         )},
-        if (!is.null(self$`updateTime`)) {
+        if (!is.null(self$`description`)) {
         sprintf(
-        '"updateTime":
+        '"description":
+          "%s"
+                ',
+        self$`description`
+        )},
+        if (!is.null(self$`underlying`)) {
+        sprintf(
+        '"underlying":
+          "%s"
+                ',
+        self$`underlying`
+        )},
+        if (!is.null(self$`tokenIssued`)) {
+        sprintf(
+        '"tokenIssued":
+          "%s"
+                ',
+        self$`tokenIssued`
+        )},
+        if (!is.null(self$`basket`)) {
+        sprintf(
+        '"basket":
+          "%s"
+                ',
+        self$`basket`
+        )},
+        if (!is.null(self$`currentBaskets`)) {
+        sprintf(
+        '"currentBaskets":
+        [%s]
+',
+        paste(sapply(self$`currentBaskets`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
+        )},
+        if (!is.null(self$`nav`)) {
+        sprintf(
+        '"nav":
+          "%s"
+                ',
+        self$`nav`
+        )},
+        if (!is.null(self$`realLeverage`)) {
+        sprintf(
+        '"realLeverage":
+          "%s"
+                ',
+        self$`realLeverage`
+        )},
+        if (!is.null(self$`fundingRate`)) {
+        sprintf(
+        '"fundingRate":
+          "%s"
+                ',
+        self$`fundingRate`
+        )},
+        if (!is.null(self$`dailyManagementFee`)) {
+        sprintf(
+        '"dailyManagementFee":
+          "%s"
+                ',
+        self$`dailyManagementFee`
+        )},
+        if (!is.null(self$`purchaseFeePct`)) {
+        sprintf(
+        '"purchaseFeePct":
+          "%s"
+                ',
+        self$`purchaseFeePct`
+        )},
+        if (!is.null(self$`dailyPurchaseLimit`)) {
+        sprintf(
+        '"dailyPurchaseLimit":
+          "%s"
+                ',
+        self$`dailyPurchaseLimit`
+        )},
+        if (!is.null(self$`redeemFeePct`)) {
+        sprintf(
+        '"redeemFeePct":
+          "%s"
+                ',
+        self$`redeemFeePct`
+        )},
+        if (!is.null(self$`dailyRedeemLimit`)) {
+        sprintf(
+        '"dailyRedeemLimit":
+          "%s"
+                ',
+        self$`dailyRedeemLimit`
+        )},
+        if (!is.null(self$`timestamp`)) {
+        sprintf(
+        '"timestamp":
           %d
                 ',
-        self$`updateTime`
-        )},
-        if (!is.null(self$`liquidity`)) {
-        sprintf(
-        '"liquidity":
-        %s
-        ',
-        jsonlite::toJSON(self$`liquidity`$toJSON(), auto_unbox=TRUE, digits = NA)
-        )},
-        if (!is.null(self$`share`)) {
-        sprintf(
-        '"share":
-        %s
-        ',
-        jsonlite::toJSON(self$`share`$toJSON(), auto_unbox=TRUE, digits = NA)
+        self$`timestamp`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -150,11 +357,21 @@ InlineResponse200104 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse200104Json) {
       InlineResponse200104Object <- jsonlite::fromJSON(InlineResponse200104Json)
-      self$`poolId` <- InlineResponse200104Object$`poolId`
-      self$`poolNmae` <- InlineResponse200104Object$`poolNmae`
-      self$`updateTime` <- InlineResponse200104Object$`updateTime`
-      self$`liquidity` <- SapiV1BswapLiquidityLiquidity$new()$fromJSON(jsonlite::toJSON(InlineResponse200104Object$liquidity, auto_unbox = TRUE, digits = NA))
-      self$`share` <- SapiV1BswapLiquidityShare$new()$fromJSON(jsonlite::toJSON(InlineResponse200104Object$share, auto_unbox = TRUE, digits = NA))
+      self$`tokenName` <- InlineResponse200104Object$`tokenName`
+      self$`description` <- InlineResponse200104Object$`description`
+      self$`underlying` <- InlineResponse200104Object$`underlying`
+      self$`tokenIssued` <- InlineResponse200104Object$`tokenIssued`
+      self$`basket` <- InlineResponse200104Object$`basket`
+      self$`currentBaskets` <- ApiClient$new()$deserializeObj(InlineResponse200104Object$`currentBaskets`, "array[SapiV1BlvtTokenInfoCurrentBaskets]", loadNamespace("binanceRapi"))
+      self$`nav` <- InlineResponse200104Object$`nav`
+      self$`realLeverage` <- InlineResponse200104Object$`realLeverage`
+      self$`fundingRate` <- InlineResponse200104Object$`fundingRate`
+      self$`dailyManagementFee` <- InlineResponse200104Object$`dailyManagementFee`
+      self$`purchaseFeePct` <- InlineResponse200104Object$`purchaseFeePct`
+      self$`dailyPurchaseLimit` <- InlineResponse200104Object$`dailyPurchaseLimit`
+      self$`redeemFeePct` <- InlineResponse200104Object$`redeemFeePct`
+      self$`dailyRedeemLimit` <- InlineResponse200104Object$`dailyRedeemLimit`
+      self$`timestamp` <- InlineResponse200104Object$`timestamp`
       self
     }
   )

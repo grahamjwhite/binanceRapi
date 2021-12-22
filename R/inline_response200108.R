@@ -13,23 +13,19 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field swapId  integer 
+#' @field id  numeric 
 #'
-#' @field swapTime  integer 
+#' @field tokenName  character 
 #'
-#' @field status  integer 
+#' @field amount  character 
 #'
-#' @field quoteAsset  character 
+#' @field nav  character 
 #'
-#' @field baseAsset  character 
+#' @field fee  character 
 #'
-#' @field quoteQty  numeric 
+#' @field netProceed  character 
 #'
-#' @field baseQty  numeric 
-#'
-#' @field price  numeric 
-#'
-#' @field fee  numeric 
+#' @field timestamp  integer 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -37,192 +33,154 @@
 InlineResponse200108 <- R6::R6Class(
   'InlineResponse200108',
   public = list(
-    `swapId` = NULL,
-    `swapTime` = NULL,
-    `status` = NULL,
-    `quoteAsset` = NULL,
-    `baseAsset` = NULL,
-    `quoteQty` = NULL,
-    `baseQty` = NULL,
-    `price` = NULL,
+    `id` = NULL,
+    `tokenName` = NULL,
+    `amount` = NULL,
+    `nav` = NULL,
     `fee` = NULL,
+    `netProceed` = NULL,
+    `timestamp` = NULL,
     initialize = function(
-        `swapId`, `swapTime`, `status`, `quoteAsset`, `baseAsset`, `quoteQty`, `baseQty`, `price`, `fee`, ...
+        `id`, `tokenName`, `amount`, `nav`, `fee`, `netProceed`, `timestamp`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`swapId`)) {
-        stopifnot(is.numeric(`swapId`), length(`swapId`) == 1)
-        self$`swapId` <- `swapId`
+      if (!missing(`id`)) {
+        stopifnot(is.numeric(`id`), length(`id`) == 1)
+        self$`id` <- `id`
       }
-      if (!missing(`swapTime`)) {
-        stopifnot(is.numeric(`swapTime`), length(`swapTime`) == 1)
-        self$`swapTime` <- `swapTime`
+      if (!missing(`tokenName`)) {
+        stopifnot(is.character(`tokenName`), length(`tokenName`) == 1)
+        self$`tokenName` <- `tokenName`
       }
-      if (!missing(`status`)) {
-        stopifnot(is.numeric(`status`), length(`status`) == 1)
-        self$`status` <- `status`
+      if (!missing(`amount`)) {
+        stopifnot(is.character(`amount`), length(`amount`) == 1)
+        self$`amount` <- `amount`
       }
-      if (!missing(`quoteAsset`)) {
-        stopifnot(is.character(`quoteAsset`), length(`quoteAsset`) == 1)
-        self$`quoteAsset` <- `quoteAsset`
-      }
-      if (!missing(`baseAsset`)) {
-        stopifnot(is.character(`baseAsset`), length(`baseAsset`) == 1)
-        self$`baseAsset` <- `baseAsset`
-      }
-      if (!missing(`quoteQty`)) {
-        stopifnot(is.numeric(`quoteQty`), length(`quoteQty`) == 1)
-        self$`quoteQty` <- `quoteQty`
-      }
-      if (!missing(`baseQty`)) {
-        stopifnot(is.numeric(`baseQty`), length(`baseQty`) == 1)
-        self$`baseQty` <- `baseQty`
-      }
-      if (!missing(`price`)) {
-        stopifnot(is.numeric(`price`), length(`price`) == 1)
-        self$`price` <- `price`
+      if (!missing(`nav`)) {
+        stopifnot(is.character(`nav`), length(`nav`) == 1)
+        self$`nav` <- `nav`
       }
       if (!missing(`fee`)) {
-        stopifnot(is.numeric(`fee`), length(`fee`) == 1)
+        stopifnot(is.character(`fee`), length(`fee`) == 1)
         self$`fee` <- `fee`
+      }
+      if (!missing(`netProceed`)) {
+        stopifnot(is.character(`netProceed`), length(`netProceed`) == 1)
+        self$`netProceed` <- `netProceed`
+      }
+      if (!missing(`timestamp`)) {
+        stopifnot(is.numeric(`timestamp`), length(`timestamp`) == 1)
+        self$`timestamp` <- `timestamp`
       }
     },
     toJSON = function() {
       InlineResponse200108Object <- list()
-      if (!is.null(self$`swapId`)) {
-        InlineResponse200108Object[['swapId']] <-
-          self$`swapId`
+      if (!is.null(self$`id`)) {
+        InlineResponse200108Object[['id']] <-
+          self$`id`
       }
-      if (!is.null(self$`swapTime`)) {
-        InlineResponse200108Object[['swapTime']] <-
-          self$`swapTime`
+      if (!is.null(self$`tokenName`)) {
+        InlineResponse200108Object[['tokenName']] <-
+          self$`tokenName`
       }
-      if (!is.null(self$`status`)) {
-        InlineResponse200108Object[['status']] <-
-          self$`status`
+      if (!is.null(self$`amount`)) {
+        InlineResponse200108Object[['amount']] <-
+          self$`amount`
       }
-      if (!is.null(self$`quoteAsset`)) {
-        InlineResponse200108Object[['quoteAsset']] <-
-          self$`quoteAsset`
-      }
-      if (!is.null(self$`baseAsset`)) {
-        InlineResponse200108Object[['baseAsset']] <-
-          self$`baseAsset`
-      }
-      if (!is.null(self$`quoteQty`)) {
-        InlineResponse200108Object[['quoteQty']] <-
-          self$`quoteQty`
-      }
-      if (!is.null(self$`baseQty`)) {
-        InlineResponse200108Object[['baseQty']] <-
-          self$`baseQty`
-      }
-      if (!is.null(self$`price`)) {
-        InlineResponse200108Object[['price']] <-
-          self$`price`
+      if (!is.null(self$`nav`)) {
+        InlineResponse200108Object[['nav']] <-
+          self$`nav`
       }
       if (!is.null(self$`fee`)) {
         InlineResponse200108Object[['fee']] <-
           self$`fee`
+      }
+      if (!is.null(self$`netProceed`)) {
+        InlineResponse200108Object[['netProceed']] <-
+          self$`netProceed`
+      }
+      if (!is.null(self$`timestamp`)) {
+        InlineResponse200108Object[['timestamp']] <-
+          self$`timestamp`
       }
 
       InlineResponse200108Object
     },
     fromJSON = function(InlineResponse200108Json) {
       InlineResponse200108Object <- jsonlite::fromJSON(InlineResponse200108Json)
-      if (!is.null(InlineResponse200108Object$`swapId`)) {
-        self$`swapId` <- InlineResponse200108Object$`swapId`
+      if (!is.null(InlineResponse200108Object$`id`)) {
+        self$`id` <- InlineResponse200108Object$`id`
       }
-      if (!is.null(InlineResponse200108Object$`swapTime`)) {
-        self$`swapTime` <- InlineResponse200108Object$`swapTime`
+      if (!is.null(InlineResponse200108Object$`tokenName`)) {
+        self$`tokenName` <- InlineResponse200108Object$`tokenName`
       }
-      if (!is.null(InlineResponse200108Object$`status`)) {
-        self$`status` <- InlineResponse200108Object$`status`
+      if (!is.null(InlineResponse200108Object$`amount`)) {
+        self$`amount` <- InlineResponse200108Object$`amount`
       }
-      if (!is.null(InlineResponse200108Object$`quoteAsset`)) {
-        self$`quoteAsset` <- InlineResponse200108Object$`quoteAsset`
-      }
-      if (!is.null(InlineResponse200108Object$`baseAsset`)) {
-        self$`baseAsset` <- InlineResponse200108Object$`baseAsset`
-      }
-      if (!is.null(InlineResponse200108Object$`quoteQty`)) {
-        self$`quoteQty` <- InlineResponse200108Object$`quoteQty`
-      }
-      if (!is.null(InlineResponse200108Object$`baseQty`)) {
-        self$`baseQty` <- InlineResponse200108Object$`baseQty`
-      }
-      if (!is.null(InlineResponse200108Object$`price`)) {
-        self$`price` <- InlineResponse200108Object$`price`
+      if (!is.null(InlineResponse200108Object$`nav`)) {
+        self$`nav` <- InlineResponse200108Object$`nav`
       }
       if (!is.null(InlineResponse200108Object$`fee`)) {
         self$`fee` <- InlineResponse200108Object$`fee`
+      }
+      if (!is.null(InlineResponse200108Object$`netProceed`)) {
+        self$`netProceed` <- InlineResponse200108Object$`netProceed`
+      }
+      if (!is.null(InlineResponse200108Object$`timestamp`)) {
+        self$`timestamp` <- InlineResponse200108Object$`timestamp`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`swapId`)) {
+        if (!is.null(self$`id`)) {
         sprintf(
-        '"swapId":
+        '"id":
           %d
                 ',
-        self$`swapId`
+        self$`id`
         )},
-        if (!is.null(self$`swapTime`)) {
+        if (!is.null(self$`tokenName`)) {
         sprintf(
-        '"swapTime":
-          %d
-                ',
-        self$`swapTime`
-        )},
-        if (!is.null(self$`status`)) {
-        sprintf(
-        '"status":
-          %d
-                ',
-        self$`status`
-        )},
-        if (!is.null(self$`quoteAsset`)) {
-        sprintf(
-        '"quoteAsset":
+        '"tokenName":
           "%s"
                 ',
-        self$`quoteAsset`
+        self$`tokenName`
         )},
-        if (!is.null(self$`baseAsset`)) {
+        if (!is.null(self$`amount`)) {
         sprintf(
-        '"baseAsset":
+        '"amount":
           "%s"
                 ',
-        self$`baseAsset`
+        self$`amount`
         )},
-        if (!is.null(self$`quoteQty`)) {
+        if (!is.null(self$`nav`)) {
         sprintf(
-        '"quoteQty":
-          %d
+        '"nav":
+          "%s"
                 ',
-        self$`quoteQty`
-        )},
-        if (!is.null(self$`baseQty`)) {
-        sprintf(
-        '"baseQty":
-          %d
-                ',
-        self$`baseQty`
-        )},
-        if (!is.null(self$`price`)) {
-        sprintf(
-        '"price":
-          %d
-                ',
-        self$`price`
+        self$`nav`
         )},
         if (!is.null(self$`fee`)) {
         sprintf(
         '"fee":
-          %d
+          "%s"
                 ',
         self$`fee`
+        )},
+        if (!is.null(self$`netProceed`)) {
+        sprintf(
+        '"netProceed":
+          "%s"
+                ',
+        self$`netProceed`
+        )},
+        if (!is.null(self$`timestamp`)) {
+        sprintf(
+        '"timestamp":
+          %d
+                ',
+        self$`timestamp`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -230,15 +188,13 @@ InlineResponse200108 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse200108Json) {
       InlineResponse200108Object <- jsonlite::fromJSON(InlineResponse200108Json)
-      self$`swapId` <- InlineResponse200108Object$`swapId`
-      self$`swapTime` <- InlineResponse200108Object$`swapTime`
-      self$`status` <- InlineResponse200108Object$`status`
-      self$`quoteAsset` <- InlineResponse200108Object$`quoteAsset`
-      self$`baseAsset` <- InlineResponse200108Object$`baseAsset`
-      self$`quoteQty` <- InlineResponse200108Object$`quoteQty`
-      self$`baseQty` <- InlineResponse200108Object$`baseQty`
-      self$`price` <- InlineResponse200108Object$`price`
+      self$`id` <- InlineResponse200108Object$`id`
+      self$`tokenName` <- InlineResponse200108Object$`tokenName`
+      self$`amount` <- InlineResponse200108Object$`amount`
+      self$`nav` <- InlineResponse200108Object$`nav`
       self$`fee` <- InlineResponse200108Object$`fee`
+      self$`netProceed` <- InlineResponse200108Object$`netProceed`
+      self$`timestamp` <- InlineResponse200108Object$`timestamp`
       self
     }
   )

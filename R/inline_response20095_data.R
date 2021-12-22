@@ -13,23 +13,11 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field fifteenMinHashRate  character 
+#' @field workerDatas  list( \link{InlineResponse20095DataWorkerDatas} ) 
 #'
-#' @field dayHashRate  character 
+#' @field totalNum  integer 
 #'
-#' @field validNum  integer 
-#'
-#' @field invalidNum  integer 
-#'
-#' @field profitToday  \link{InlineResponse20095DataProfitToday} 
-#'
-#' @field profitYesterday  \link{InlineResponse20095DataProfitToday} 
-#'
-#' @field userName  character 
-#'
-#' @field unit  character 
-#'
-#' @field algo  character 
+#' @field pageSize  integer 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -37,196 +25,79 @@
 InlineResponse20095Data <- R6::R6Class(
   'InlineResponse20095Data',
   public = list(
-    `fifteenMinHashRate` = NULL,
-    `dayHashRate` = NULL,
-    `validNum` = NULL,
-    `invalidNum` = NULL,
-    `profitToday` = NULL,
-    `profitYesterday` = NULL,
-    `userName` = NULL,
-    `unit` = NULL,
-    `algo` = NULL,
+    `workerDatas` = NULL,
+    `totalNum` = NULL,
+    `pageSize` = NULL,
     initialize = function(
-        `fifteenMinHashRate`, `dayHashRate`, `validNum`, `invalidNum`, `profitToday`, `profitYesterday`, `userName`, `unit`, `algo`, ...
+        `workerDatas`, `totalNum`, `pageSize`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`fifteenMinHashRate`)) {
-        stopifnot(is.character(`fifteenMinHashRate`), length(`fifteenMinHashRate`) == 1)
-        self$`fifteenMinHashRate` <- `fifteenMinHashRate`
+      if (!missing(`workerDatas`)) {
+        stopifnot(is.vector(`workerDatas`), length(`workerDatas`) != 0)
+        sapply(`workerDatas`, function(x) stopifnot(R6::is.R6(x)))
+        self$`workerDatas` <- `workerDatas`
       }
-      if (!missing(`dayHashRate`)) {
-        stopifnot(is.character(`dayHashRate`), length(`dayHashRate`) == 1)
-        self$`dayHashRate` <- `dayHashRate`
+      if (!missing(`totalNum`)) {
+        stopifnot(is.numeric(`totalNum`), length(`totalNum`) == 1)
+        self$`totalNum` <- `totalNum`
       }
-      if (!missing(`validNum`)) {
-        stopifnot(is.numeric(`validNum`), length(`validNum`) == 1)
-        self$`validNum` <- `validNum`
-      }
-      if (!missing(`invalidNum`)) {
-        stopifnot(is.numeric(`invalidNum`), length(`invalidNum`) == 1)
-        self$`invalidNum` <- `invalidNum`
-      }
-      if (!missing(`profitToday`)) {
-        stopifnot(R6::is.R6(`profitToday`))
-        self$`profitToday` <- `profitToday`
-      }
-      if (!missing(`profitYesterday`)) {
-        stopifnot(R6::is.R6(`profitYesterday`))
-        self$`profitYesterday` <- `profitYesterday`
-      }
-      if (!missing(`userName`)) {
-        stopifnot(is.character(`userName`), length(`userName`) == 1)
-        self$`userName` <- `userName`
-      }
-      if (!missing(`unit`)) {
-        stopifnot(is.character(`unit`), length(`unit`) == 1)
-        self$`unit` <- `unit`
-      }
-      if (!missing(`algo`)) {
-        stopifnot(is.character(`algo`), length(`algo`) == 1)
-        self$`algo` <- `algo`
+      if (!missing(`pageSize`)) {
+        stopifnot(is.numeric(`pageSize`), length(`pageSize`) == 1)
+        self$`pageSize` <- `pageSize`
       }
     },
     toJSON = function() {
       InlineResponse20095DataObject <- list()
-      if (!is.null(self$`fifteenMinHashRate`)) {
-        InlineResponse20095DataObject[['fifteenMinHashRate']] <-
-          self$`fifteenMinHashRate`
+      if (!is.null(self$`workerDatas`)) {
+        InlineResponse20095DataObject[['workerDatas']] <-
+          lapply(self$`workerDatas`, function(x) x$toJSON())
       }
-      if (!is.null(self$`dayHashRate`)) {
-        InlineResponse20095DataObject[['dayHashRate']] <-
-          self$`dayHashRate`
+      if (!is.null(self$`totalNum`)) {
+        InlineResponse20095DataObject[['totalNum']] <-
+          self$`totalNum`
       }
-      if (!is.null(self$`validNum`)) {
-        InlineResponse20095DataObject[['validNum']] <-
-          self$`validNum`
-      }
-      if (!is.null(self$`invalidNum`)) {
-        InlineResponse20095DataObject[['invalidNum']] <-
-          self$`invalidNum`
-      }
-      if (!is.null(self$`profitToday`)) {
-        InlineResponse20095DataObject[['profitToday']] <-
-          self$`profitToday`$toJSON()
-      }
-      if (!is.null(self$`profitYesterday`)) {
-        InlineResponse20095DataObject[['profitYesterday']] <-
-          self$`profitYesterday`$toJSON()
-      }
-      if (!is.null(self$`userName`)) {
-        InlineResponse20095DataObject[['userName']] <-
-          self$`userName`
-      }
-      if (!is.null(self$`unit`)) {
-        InlineResponse20095DataObject[['unit']] <-
-          self$`unit`
-      }
-      if (!is.null(self$`algo`)) {
-        InlineResponse20095DataObject[['algo']] <-
-          self$`algo`
+      if (!is.null(self$`pageSize`)) {
+        InlineResponse20095DataObject[['pageSize']] <-
+          self$`pageSize`
       }
 
       InlineResponse20095DataObject
     },
     fromJSON = function(InlineResponse20095DataJson) {
       InlineResponse20095DataObject <- jsonlite::fromJSON(InlineResponse20095DataJson)
-      if (!is.null(InlineResponse20095DataObject$`fifteenMinHashRate`)) {
-        self$`fifteenMinHashRate` <- InlineResponse20095DataObject$`fifteenMinHashRate`
+      if (!is.null(InlineResponse20095DataObject$`workerDatas`)) {
+        self$`workerDatas` <- ApiClient$new()$deserializeObj(InlineResponse20095DataObject$`workerDatas`, "array[InlineResponse20095DataWorkerDatas]", loadNamespace("binanceRapi"))
       }
-      if (!is.null(InlineResponse20095DataObject$`dayHashRate`)) {
-        self$`dayHashRate` <- InlineResponse20095DataObject$`dayHashRate`
+      if (!is.null(InlineResponse20095DataObject$`totalNum`)) {
+        self$`totalNum` <- InlineResponse20095DataObject$`totalNum`
       }
-      if (!is.null(InlineResponse20095DataObject$`validNum`)) {
-        self$`validNum` <- InlineResponse20095DataObject$`validNum`
-      }
-      if (!is.null(InlineResponse20095DataObject$`invalidNum`)) {
-        self$`invalidNum` <- InlineResponse20095DataObject$`invalidNum`
-      }
-      if (!is.null(InlineResponse20095DataObject$`profitToday`)) {
-        profitTodayObject <- InlineResponse20095DataProfitToday$new()
-        profitTodayObject$fromJSON(jsonlite::toJSON(InlineResponse20095DataObject$profitToday, auto_unbox = TRUE, digits = NA))
-        self$`profitToday` <- profitTodayObject
-      }
-      if (!is.null(InlineResponse20095DataObject$`profitYesterday`)) {
-        profitYesterdayObject <- InlineResponse20095DataProfitToday$new()
-        profitYesterdayObject$fromJSON(jsonlite::toJSON(InlineResponse20095DataObject$profitYesterday, auto_unbox = TRUE, digits = NA))
-        self$`profitYesterday` <- profitYesterdayObject
-      }
-      if (!is.null(InlineResponse20095DataObject$`userName`)) {
-        self$`userName` <- InlineResponse20095DataObject$`userName`
-      }
-      if (!is.null(InlineResponse20095DataObject$`unit`)) {
-        self$`unit` <- InlineResponse20095DataObject$`unit`
-      }
-      if (!is.null(InlineResponse20095DataObject$`algo`)) {
-        self$`algo` <- InlineResponse20095DataObject$`algo`
+      if (!is.null(InlineResponse20095DataObject$`pageSize`)) {
+        self$`pageSize` <- InlineResponse20095DataObject$`pageSize`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`fifteenMinHashRate`)) {
+        if (!is.null(self$`workerDatas`)) {
         sprintf(
-        '"fifteenMinHashRate":
-          "%s"
-                ',
-        self$`fifteenMinHashRate`
+        '"workerDatas":
+        [%s]
+',
+        paste(sapply(self$`workerDatas`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
         )},
-        if (!is.null(self$`dayHashRate`)) {
+        if (!is.null(self$`totalNum`)) {
         sprintf(
-        '"dayHashRate":
-          "%s"
-                ',
-        self$`dayHashRate`
-        )},
-        if (!is.null(self$`validNum`)) {
-        sprintf(
-        '"validNum":
+        '"totalNum":
           %d
                 ',
-        self$`validNum`
+        self$`totalNum`
         )},
-        if (!is.null(self$`invalidNum`)) {
+        if (!is.null(self$`pageSize`)) {
         sprintf(
-        '"invalidNum":
+        '"pageSize":
           %d
                 ',
-        self$`invalidNum`
-        )},
-        if (!is.null(self$`profitToday`)) {
-        sprintf(
-        '"profitToday":
-        %s
-        ',
-        jsonlite::toJSON(self$`profitToday`$toJSON(), auto_unbox=TRUE, digits = NA)
-        )},
-        if (!is.null(self$`profitYesterday`)) {
-        sprintf(
-        '"profitYesterday":
-        %s
-        ',
-        jsonlite::toJSON(self$`profitYesterday`$toJSON(), auto_unbox=TRUE, digits = NA)
-        )},
-        if (!is.null(self$`userName`)) {
-        sprintf(
-        '"userName":
-          "%s"
-                ',
-        self$`userName`
-        )},
-        if (!is.null(self$`unit`)) {
-        sprintf(
-        '"unit":
-          "%s"
-                ',
-        self$`unit`
-        )},
-        if (!is.null(self$`algo`)) {
-        sprintf(
-        '"algo":
-          "%s"
-                ',
-        self$`algo`
+        self$`pageSize`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -234,15 +105,9 @@ InlineResponse20095Data <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20095DataJson) {
       InlineResponse20095DataObject <- jsonlite::fromJSON(InlineResponse20095DataJson)
-      self$`fifteenMinHashRate` <- InlineResponse20095DataObject$`fifteenMinHashRate`
-      self$`dayHashRate` <- InlineResponse20095DataObject$`dayHashRate`
-      self$`validNum` <- InlineResponse20095DataObject$`validNum`
-      self$`invalidNum` <- InlineResponse20095DataObject$`invalidNum`
-      self$`profitToday` <- InlineResponse20095DataProfitToday$new()$fromJSON(jsonlite::toJSON(InlineResponse20095DataObject$profitToday, auto_unbox = TRUE, digits = NA))
-      self$`profitYesterday` <- InlineResponse20095DataProfitToday$new()$fromJSON(jsonlite::toJSON(InlineResponse20095DataObject$profitYesterday, auto_unbox = TRUE, digits = NA))
-      self$`userName` <- InlineResponse20095DataObject$`userName`
-      self$`unit` <- InlineResponse20095DataObject$`unit`
-      self$`algo` <- InlineResponse20095DataObject$`algo`
+      self$`workerDatas` <- ApiClient$new()$deserializeObj(InlineResponse20095DataObject$`workerDatas`, "array[InlineResponse20095DataWorkerDatas]", loadNamespace("binanceRapi"))
+      self$`totalNum` <- InlineResponse20095DataObject$`totalNum`
+      self$`pageSize` <- InlineResponse20095DataObject$`pageSize`
       self
     }
   )

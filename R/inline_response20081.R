@@ -15,37 +15,27 @@
 #'
 #' @field asset  character 
 #'
-#' @field canTransfer  character 
+#' @field avgAnnualInterestRate  character 
 #'
-#' @field createTimestamp  integer 
+#' @field canPurchase  character 
 #'
-#' @field duration  integer 
+#' @field canRedeem  character 
 #'
-#' @field endTime  integer 
+#' @field dailyInterestPerThousand  character 
 #'
-#' @field interest  character 
+#' @field featured  character 
 #'
-#' @field interestRate  character 
+#' @field minPurchaseAmount  character 
 #'
-#' @field lot  integer 
+#' @field productId  character 
 #'
-#' @field positionId  integer 
-#'
-#' @field principal  character 
-#'
-#' @field projectId  character 
-#'
-#' @field projectName  character 
-#'
-#' @field purchaseTime  integer 
-#'
-#' @field redeemDate  character 
-#'
-#' @field startTime  integer 
+#' @field purchasedAmount  character 
 #'
 #' @field status  character 
 #'
-#' @field type  character 
+#' @field upLimit  character 
+#'
+#' @field upLimitPerUser  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -54,93 +44,68 @@ InlineResponse20081 <- R6::R6Class(
   'InlineResponse20081',
   public = list(
     `asset` = NULL,
-    `canTransfer` = NULL,
-    `createTimestamp` = NULL,
-    `duration` = NULL,
-    `endTime` = NULL,
-    `interest` = NULL,
-    `interestRate` = NULL,
-    `lot` = NULL,
-    `positionId` = NULL,
-    `principal` = NULL,
-    `projectId` = NULL,
-    `projectName` = NULL,
-    `purchaseTime` = NULL,
-    `redeemDate` = NULL,
-    `startTime` = NULL,
+    `avgAnnualInterestRate` = NULL,
+    `canPurchase` = NULL,
+    `canRedeem` = NULL,
+    `dailyInterestPerThousand` = NULL,
+    `featured` = NULL,
+    `minPurchaseAmount` = NULL,
+    `productId` = NULL,
+    `purchasedAmount` = NULL,
     `status` = NULL,
-    `type` = NULL,
+    `upLimit` = NULL,
+    `upLimitPerUser` = NULL,
     initialize = function(
-        `asset`, `canTransfer`, `createTimestamp`, `duration`, `endTime`, `interest`, `interestRate`, `lot`, `positionId`, `principal`, `projectId`, `projectName`, `purchaseTime`, `redeemDate`, `startTime`, `status`, `type`, ...
+        `asset`, `avgAnnualInterestRate`, `canPurchase`, `canRedeem`, `dailyInterestPerThousand`, `featured`, `minPurchaseAmount`, `productId`, `purchasedAmount`, `status`, `upLimit`, `upLimitPerUser`, ...
     ) {
       local.optional.var <- list(...)
       if (!missing(`asset`)) {
         stopifnot(is.character(`asset`), length(`asset`) == 1)
         self$`asset` <- `asset`
       }
-      if (!missing(`canTransfer`)) {
-        stopifnot(is.logical(`canTransfer`), length(`canTransfer`) == 1)
-        self$`canTransfer` <- `canTransfer`
+      if (!missing(`avgAnnualInterestRate`)) {
+        stopifnot(is.character(`avgAnnualInterestRate`), length(`avgAnnualInterestRate`) == 1)
+        self$`avgAnnualInterestRate` <- `avgAnnualInterestRate`
       }
-      if (!missing(`createTimestamp`)) {
-        stopifnot(is.numeric(`createTimestamp`), length(`createTimestamp`) == 1)
-        self$`createTimestamp` <- `createTimestamp`
+      if (!missing(`canPurchase`)) {
+        stopifnot(is.logical(`canPurchase`), length(`canPurchase`) == 1)
+        self$`canPurchase` <- `canPurchase`
       }
-      if (!missing(`duration`)) {
-        stopifnot(is.numeric(`duration`), length(`duration`) == 1)
-        self$`duration` <- `duration`
+      if (!missing(`canRedeem`)) {
+        stopifnot(is.logical(`canRedeem`), length(`canRedeem`) == 1)
+        self$`canRedeem` <- `canRedeem`
       }
-      if (!missing(`endTime`)) {
-        stopifnot(is.numeric(`endTime`), length(`endTime`) == 1)
-        self$`endTime` <- `endTime`
+      if (!missing(`dailyInterestPerThousand`)) {
+        stopifnot(is.character(`dailyInterestPerThousand`), length(`dailyInterestPerThousand`) == 1)
+        self$`dailyInterestPerThousand` <- `dailyInterestPerThousand`
       }
-      if (!missing(`interest`)) {
-        stopifnot(is.character(`interest`), length(`interest`) == 1)
-        self$`interest` <- `interest`
+      if (!missing(`featured`)) {
+        stopifnot(is.logical(`featured`), length(`featured`) == 1)
+        self$`featured` <- `featured`
       }
-      if (!missing(`interestRate`)) {
-        stopifnot(is.character(`interestRate`), length(`interestRate`) == 1)
-        self$`interestRate` <- `interestRate`
+      if (!missing(`minPurchaseAmount`)) {
+        stopifnot(is.character(`minPurchaseAmount`), length(`minPurchaseAmount`) == 1)
+        self$`minPurchaseAmount` <- `minPurchaseAmount`
       }
-      if (!missing(`lot`)) {
-        stopifnot(is.numeric(`lot`), length(`lot`) == 1)
-        self$`lot` <- `lot`
+      if (!missing(`productId`)) {
+        stopifnot(is.character(`productId`), length(`productId`) == 1)
+        self$`productId` <- `productId`
       }
-      if (!missing(`positionId`)) {
-        stopifnot(is.numeric(`positionId`), length(`positionId`) == 1)
-        self$`positionId` <- `positionId`
-      }
-      if (!missing(`principal`)) {
-        stopifnot(is.character(`principal`), length(`principal`) == 1)
-        self$`principal` <- `principal`
-      }
-      if (!missing(`projectId`)) {
-        stopifnot(is.character(`projectId`), length(`projectId`) == 1)
-        self$`projectId` <- `projectId`
-      }
-      if (!missing(`projectName`)) {
-        stopifnot(is.character(`projectName`), length(`projectName`) == 1)
-        self$`projectName` <- `projectName`
-      }
-      if (!missing(`purchaseTime`)) {
-        stopifnot(is.numeric(`purchaseTime`), length(`purchaseTime`) == 1)
-        self$`purchaseTime` <- `purchaseTime`
-      }
-      if (!missing(`redeemDate`)) {
-        stopifnot(is.character(`redeemDate`), length(`redeemDate`) == 1)
-        self$`redeemDate` <- `redeemDate`
-      }
-      if (!missing(`startTime`)) {
-        stopifnot(is.numeric(`startTime`), length(`startTime`) == 1)
-        self$`startTime` <- `startTime`
+      if (!missing(`purchasedAmount`)) {
+        stopifnot(is.character(`purchasedAmount`), length(`purchasedAmount`) == 1)
+        self$`purchasedAmount` <- `purchasedAmount`
       }
       if (!missing(`status`)) {
         stopifnot(is.character(`status`), length(`status`) == 1)
         self$`status` <- `status`
       }
-      if (!missing(`type`)) {
-        stopifnot(is.character(`type`), length(`type`) == 1)
-        self$`type` <- `type`
+      if (!missing(`upLimit`)) {
+        stopifnot(is.character(`upLimit`), length(`upLimit`) == 1)
+        self$`upLimit` <- `upLimit`
+      }
+      if (!missing(`upLimitPerUser`)) {
+        stopifnot(is.character(`upLimitPerUser`), length(`upLimitPerUser`) == 1)
+        self$`upLimitPerUser` <- `upLimitPerUser`
       }
     },
     toJSON = function() {
@@ -149,69 +114,49 @@ InlineResponse20081 <- R6::R6Class(
         InlineResponse20081Object[['asset']] <-
           self$`asset`
       }
-      if (!is.null(self$`canTransfer`)) {
-        InlineResponse20081Object[['canTransfer']] <-
-          self$`canTransfer`
+      if (!is.null(self$`avgAnnualInterestRate`)) {
+        InlineResponse20081Object[['avgAnnualInterestRate']] <-
+          self$`avgAnnualInterestRate`
       }
-      if (!is.null(self$`createTimestamp`)) {
-        InlineResponse20081Object[['createTimestamp']] <-
-          self$`createTimestamp`
+      if (!is.null(self$`canPurchase`)) {
+        InlineResponse20081Object[['canPurchase']] <-
+          self$`canPurchase`
       }
-      if (!is.null(self$`duration`)) {
-        InlineResponse20081Object[['duration']] <-
-          self$`duration`
+      if (!is.null(self$`canRedeem`)) {
+        InlineResponse20081Object[['canRedeem']] <-
+          self$`canRedeem`
       }
-      if (!is.null(self$`endTime`)) {
-        InlineResponse20081Object[['endTime']] <-
-          self$`endTime`
+      if (!is.null(self$`dailyInterestPerThousand`)) {
+        InlineResponse20081Object[['dailyInterestPerThousand']] <-
+          self$`dailyInterestPerThousand`
       }
-      if (!is.null(self$`interest`)) {
-        InlineResponse20081Object[['interest']] <-
-          self$`interest`
+      if (!is.null(self$`featured`)) {
+        InlineResponse20081Object[['featured']] <-
+          self$`featured`
       }
-      if (!is.null(self$`interestRate`)) {
-        InlineResponse20081Object[['interestRate']] <-
-          self$`interestRate`
+      if (!is.null(self$`minPurchaseAmount`)) {
+        InlineResponse20081Object[['minPurchaseAmount']] <-
+          self$`minPurchaseAmount`
       }
-      if (!is.null(self$`lot`)) {
-        InlineResponse20081Object[['lot']] <-
-          self$`lot`
+      if (!is.null(self$`productId`)) {
+        InlineResponse20081Object[['productId']] <-
+          self$`productId`
       }
-      if (!is.null(self$`positionId`)) {
-        InlineResponse20081Object[['positionId']] <-
-          self$`positionId`
-      }
-      if (!is.null(self$`principal`)) {
-        InlineResponse20081Object[['principal']] <-
-          self$`principal`
-      }
-      if (!is.null(self$`projectId`)) {
-        InlineResponse20081Object[['projectId']] <-
-          self$`projectId`
-      }
-      if (!is.null(self$`projectName`)) {
-        InlineResponse20081Object[['projectName']] <-
-          self$`projectName`
-      }
-      if (!is.null(self$`purchaseTime`)) {
-        InlineResponse20081Object[['purchaseTime']] <-
-          self$`purchaseTime`
-      }
-      if (!is.null(self$`redeemDate`)) {
-        InlineResponse20081Object[['redeemDate']] <-
-          self$`redeemDate`
-      }
-      if (!is.null(self$`startTime`)) {
-        InlineResponse20081Object[['startTime']] <-
-          self$`startTime`
+      if (!is.null(self$`purchasedAmount`)) {
+        InlineResponse20081Object[['purchasedAmount']] <-
+          self$`purchasedAmount`
       }
       if (!is.null(self$`status`)) {
         InlineResponse20081Object[['status']] <-
           self$`status`
       }
-      if (!is.null(self$`type`)) {
-        InlineResponse20081Object[['type']] <-
-          self$`type`
+      if (!is.null(self$`upLimit`)) {
+        InlineResponse20081Object[['upLimit']] <-
+          self$`upLimit`
+      }
+      if (!is.null(self$`upLimitPerUser`)) {
+        InlineResponse20081Object[['upLimitPerUser']] <-
+          self$`upLimitPerUser`
       }
 
       InlineResponse20081Object
@@ -221,53 +166,38 @@ InlineResponse20081 <- R6::R6Class(
       if (!is.null(InlineResponse20081Object$`asset`)) {
         self$`asset` <- InlineResponse20081Object$`asset`
       }
-      if (!is.null(InlineResponse20081Object$`canTransfer`)) {
-        self$`canTransfer` <- InlineResponse20081Object$`canTransfer`
+      if (!is.null(InlineResponse20081Object$`avgAnnualInterestRate`)) {
+        self$`avgAnnualInterestRate` <- InlineResponse20081Object$`avgAnnualInterestRate`
       }
-      if (!is.null(InlineResponse20081Object$`createTimestamp`)) {
-        self$`createTimestamp` <- InlineResponse20081Object$`createTimestamp`
+      if (!is.null(InlineResponse20081Object$`canPurchase`)) {
+        self$`canPurchase` <- InlineResponse20081Object$`canPurchase`
       }
-      if (!is.null(InlineResponse20081Object$`duration`)) {
-        self$`duration` <- InlineResponse20081Object$`duration`
+      if (!is.null(InlineResponse20081Object$`canRedeem`)) {
+        self$`canRedeem` <- InlineResponse20081Object$`canRedeem`
       }
-      if (!is.null(InlineResponse20081Object$`endTime`)) {
-        self$`endTime` <- InlineResponse20081Object$`endTime`
+      if (!is.null(InlineResponse20081Object$`dailyInterestPerThousand`)) {
+        self$`dailyInterestPerThousand` <- InlineResponse20081Object$`dailyInterestPerThousand`
       }
-      if (!is.null(InlineResponse20081Object$`interest`)) {
-        self$`interest` <- InlineResponse20081Object$`interest`
+      if (!is.null(InlineResponse20081Object$`featured`)) {
+        self$`featured` <- InlineResponse20081Object$`featured`
       }
-      if (!is.null(InlineResponse20081Object$`interestRate`)) {
-        self$`interestRate` <- InlineResponse20081Object$`interestRate`
+      if (!is.null(InlineResponse20081Object$`minPurchaseAmount`)) {
+        self$`minPurchaseAmount` <- InlineResponse20081Object$`minPurchaseAmount`
       }
-      if (!is.null(InlineResponse20081Object$`lot`)) {
-        self$`lot` <- InlineResponse20081Object$`lot`
+      if (!is.null(InlineResponse20081Object$`productId`)) {
+        self$`productId` <- InlineResponse20081Object$`productId`
       }
-      if (!is.null(InlineResponse20081Object$`positionId`)) {
-        self$`positionId` <- InlineResponse20081Object$`positionId`
-      }
-      if (!is.null(InlineResponse20081Object$`principal`)) {
-        self$`principal` <- InlineResponse20081Object$`principal`
-      }
-      if (!is.null(InlineResponse20081Object$`projectId`)) {
-        self$`projectId` <- InlineResponse20081Object$`projectId`
-      }
-      if (!is.null(InlineResponse20081Object$`projectName`)) {
-        self$`projectName` <- InlineResponse20081Object$`projectName`
-      }
-      if (!is.null(InlineResponse20081Object$`purchaseTime`)) {
-        self$`purchaseTime` <- InlineResponse20081Object$`purchaseTime`
-      }
-      if (!is.null(InlineResponse20081Object$`redeemDate`)) {
-        self$`redeemDate` <- InlineResponse20081Object$`redeemDate`
-      }
-      if (!is.null(InlineResponse20081Object$`startTime`)) {
-        self$`startTime` <- InlineResponse20081Object$`startTime`
+      if (!is.null(InlineResponse20081Object$`purchasedAmount`)) {
+        self$`purchasedAmount` <- InlineResponse20081Object$`purchasedAmount`
       }
       if (!is.null(InlineResponse20081Object$`status`)) {
         self$`status` <- InlineResponse20081Object$`status`
       }
-      if (!is.null(InlineResponse20081Object$`type`)) {
-        self$`type` <- InlineResponse20081Object$`type`
+      if (!is.null(InlineResponse20081Object$`upLimit`)) {
+        self$`upLimit` <- InlineResponse20081Object$`upLimit`
+      }
+      if (!is.null(InlineResponse20081Object$`upLimitPerUser`)) {
+        self$`upLimitPerUser` <- InlineResponse20081Object$`upLimitPerUser`
       }
       self
     },
@@ -280,103 +210,61 @@ InlineResponse20081 <- R6::R6Class(
                 ',
         self$`asset`
         )},
-        if (!is.null(self$`canTransfer`)) {
+        if (!is.null(self$`avgAnnualInterestRate`)) {
         sprintf(
-        '"canTransfer":
+        '"avgAnnualInterestRate":
+          "%s"
+                ',
+        self$`avgAnnualInterestRate`
+        )},
+        if (!is.null(self$`canPurchase`)) {
+        sprintf(
+        '"canPurchase":
           %s
                 ',
-        tolower(self$`canTransfer`)
+        tolower(self$`canPurchase`)
         )},
-        if (!is.null(self$`createTimestamp`)) {
+        if (!is.null(self$`canRedeem`)) {
         sprintf(
-        '"createTimestamp":
-          %d
+        '"canRedeem":
+          %s
                 ',
-        self$`createTimestamp`
+        tolower(self$`canRedeem`)
         )},
-        if (!is.null(self$`duration`)) {
+        if (!is.null(self$`dailyInterestPerThousand`)) {
         sprintf(
-        '"duration":
-          %d
-                ',
-        self$`duration`
-        )},
-        if (!is.null(self$`endTime`)) {
-        sprintf(
-        '"endTime":
-          %d
-                ',
-        self$`endTime`
-        )},
-        if (!is.null(self$`interest`)) {
-        sprintf(
-        '"interest":
+        '"dailyInterestPerThousand":
           "%s"
                 ',
-        self$`interest`
+        self$`dailyInterestPerThousand`
         )},
-        if (!is.null(self$`interestRate`)) {
+        if (!is.null(self$`featured`)) {
         sprintf(
-        '"interestRate":
+        '"featured":
+          %s
+                ',
+        tolower(self$`featured`)
+        )},
+        if (!is.null(self$`minPurchaseAmount`)) {
+        sprintf(
+        '"minPurchaseAmount":
           "%s"
                 ',
-        self$`interestRate`
+        self$`minPurchaseAmount`
         )},
-        if (!is.null(self$`lot`)) {
+        if (!is.null(self$`productId`)) {
         sprintf(
-        '"lot":
-          %d
-                ',
-        self$`lot`
-        )},
-        if (!is.null(self$`positionId`)) {
-        sprintf(
-        '"positionId":
-          %d
-                ',
-        self$`positionId`
-        )},
-        if (!is.null(self$`principal`)) {
-        sprintf(
-        '"principal":
+        '"productId":
           "%s"
                 ',
-        self$`principal`
+        self$`productId`
         )},
-        if (!is.null(self$`projectId`)) {
+        if (!is.null(self$`purchasedAmount`)) {
         sprintf(
-        '"projectId":
+        '"purchasedAmount":
           "%s"
                 ',
-        self$`projectId`
-        )},
-        if (!is.null(self$`projectName`)) {
-        sprintf(
-        '"projectName":
-          "%s"
-                ',
-        self$`projectName`
-        )},
-        if (!is.null(self$`purchaseTime`)) {
-        sprintf(
-        '"purchaseTime":
-          %d
-                ',
-        self$`purchaseTime`
-        )},
-        if (!is.null(self$`redeemDate`)) {
-        sprintf(
-        '"redeemDate":
-          "%s"
-                ',
-        self$`redeemDate`
-        )},
-        if (!is.null(self$`startTime`)) {
-        sprintf(
-        '"startTime":
-          %d
-                ',
-        self$`startTime`
+        self$`purchasedAmount`
         )},
         if (!is.null(self$`status`)) {
         sprintf(
@@ -385,12 +273,19 @@ InlineResponse20081 <- R6::R6Class(
                 ',
         self$`status`
         )},
-        if (!is.null(self$`type`)) {
+        if (!is.null(self$`upLimit`)) {
         sprintf(
-        '"type":
+        '"upLimit":
           "%s"
                 ',
-        self$`type`
+        self$`upLimit`
+        )},
+        if (!is.null(self$`upLimitPerUser`)) {
+        sprintf(
+        '"upLimitPerUser":
+          "%s"
+                ',
+        self$`upLimitPerUser`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -399,22 +294,17 @@ InlineResponse20081 <- R6::R6Class(
     fromJSONString = function(InlineResponse20081Json) {
       InlineResponse20081Object <- jsonlite::fromJSON(InlineResponse20081Json)
       self$`asset` <- InlineResponse20081Object$`asset`
-      self$`canTransfer` <- InlineResponse20081Object$`canTransfer`
-      self$`createTimestamp` <- InlineResponse20081Object$`createTimestamp`
-      self$`duration` <- InlineResponse20081Object$`duration`
-      self$`endTime` <- InlineResponse20081Object$`endTime`
-      self$`interest` <- InlineResponse20081Object$`interest`
-      self$`interestRate` <- InlineResponse20081Object$`interestRate`
-      self$`lot` <- InlineResponse20081Object$`lot`
-      self$`positionId` <- InlineResponse20081Object$`positionId`
-      self$`principal` <- InlineResponse20081Object$`principal`
-      self$`projectId` <- InlineResponse20081Object$`projectId`
-      self$`projectName` <- InlineResponse20081Object$`projectName`
-      self$`purchaseTime` <- InlineResponse20081Object$`purchaseTime`
-      self$`redeemDate` <- InlineResponse20081Object$`redeemDate`
-      self$`startTime` <- InlineResponse20081Object$`startTime`
+      self$`avgAnnualInterestRate` <- InlineResponse20081Object$`avgAnnualInterestRate`
+      self$`canPurchase` <- InlineResponse20081Object$`canPurchase`
+      self$`canRedeem` <- InlineResponse20081Object$`canRedeem`
+      self$`dailyInterestPerThousand` <- InlineResponse20081Object$`dailyInterestPerThousand`
+      self$`featured` <- InlineResponse20081Object$`featured`
+      self$`minPurchaseAmount` <- InlineResponse20081Object$`minPurchaseAmount`
+      self$`productId` <- InlineResponse20081Object$`productId`
+      self$`purchasedAmount` <- InlineResponse20081Object$`purchasedAmount`
       self$`status` <- InlineResponse20081Object$`status`
-      self$`type` <- InlineResponse20081Object$`type`
+      self$`upLimit` <- InlineResponse20081Object$`upLimit`
+      self$`upLimitPerUser` <- InlineResponse20081Object$`upLimitPerUser`
       self
     }
   )

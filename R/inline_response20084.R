@@ -13,11 +13,13 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field dailyPurchaseId  integer 
+#' @field asset  character 
 #'
-#' @field success  character 
+#' @field dailyQuota  character 
 #'
-#' @field time  integer 
+#' @field leftQuota  character 
+#'
+#' @field minRedemptionAmount  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -25,78 +27,97 @@
 InlineResponse20084 <- R6::R6Class(
   'InlineResponse20084',
   public = list(
-    `dailyPurchaseId` = NULL,
-    `success` = NULL,
-    `time` = NULL,
+    `asset` = NULL,
+    `dailyQuota` = NULL,
+    `leftQuota` = NULL,
+    `minRedemptionAmount` = NULL,
     initialize = function(
-        `dailyPurchaseId`, `success`, `time`, ...
+        `asset`, `dailyQuota`, `leftQuota`, `minRedemptionAmount`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`dailyPurchaseId`)) {
-        stopifnot(is.numeric(`dailyPurchaseId`), length(`dailyPurchaseId`) == 1)
-        self$`dailyPurchaseId` <- `dailyPurchaseId`
+      if (!missing(`asset`)) {
+        stopifnot(is.character(`asset`), length(`asset`) == 1)
+        self$`asset` <- `asset`
       }
-      if (!missing(`success`)) {
-        stopifnot(is.logical(`success`), length(`success`) == 1)
-        self$`success` <- `success`
+      if (!missing(`dailyQuota`)) {
+        stopifnot(is.character(`dailyQuota`), length(`dailyQuota`) == 1)
+        self$`dailyQuota` <- `dailyQuota`
       }
-      if (!missing(`time`)) {
-        stopifnot(is.numeric(`time`), length(`time`) == 1)
-        self$`time` <- `time`
+      if (!missing(`leftQuota`)) {
+        stopifnot(is.character(`leftQuota`), length(`leftQuota`) == 1)
+        self$`leftQuota` <- `leftQuota`
+      }
+      if (!missing(`minRedemptionAmount`)) {
+        stopifnot(is.character(`minRedemptionAmount`), length(`minRedemptionAmount`) == 1)
+        self$`minRedemptionAmount` <- `minRedemptionAmount`
       }
     },
     toJSON = function() {
       InlineResponse20084Object <- list()
-      if (!is.null(self$`dailyPurchaseId`)) {
-        InlineResponse20084Object[['dailyPurchaseId']] <-
-          self$`dailyPurchaseId`
+      if (!is.null(self$`asset`)) {
+        InlineResponse20084Object[['asset']] <-
+          self$`asset`
       }
-      if (!is.null(self$`success`)) {
-        InlineResponse20084Object[['success']] <-
-          self$`success`
+      if (!is.null(self$`dailyQuota`)) {
+        InlineResponse20084Object[['dailyQuota']] <-
+          self$`dailyQuota`
       }
-      if (!is.null(self$`time`)) {
-        InlineResponse20084Object[['time']] <-
-          self$`time`
+      if (!is.null(self$`leftQuota`)) {
+        InlineResponse20084Object[['leftQuota']] <-
+          self$`leftQuota`
+      }
+      if (!is.null(self$`minRedemptionAmount`)) {
+        InlineResponse20084Object[['minRedemptionAmount']] <-
+          self$`minRedemptionAmount`
       }
 
       InlineResponse20084Object
     },
     fromJSON = function(InlineResponse20084Json) {
       InlineResponse20084Object <- jsonlite::fromJSON(InlineResponse20084Json)
-      if (!is.null(InlineResponse20084Object$`dailyPurchaseId`)) {
-        self$`dailyPurchaseId` <- InlineResponse20084Object$`dailyPurchaseId`
+      if (!is.null(InlineResponse20084Object$`asset`)) {
+        self$`asset` <- InlineResponse20084Object$`asset`
       }
-      if (!is.null(InlineResponse20084Object$`success`)) {
-        self$`success` <- InlineResponse20084Object$`success`
+      if (!is.null(InlineResponse20084Object$`dailyQuota`)) {
+        self$`dailyQuota` <- InlineResponse20084Object$`dailyQuota`
       }
-      if (!is.null(InlineResponse20084Object$`time`)) {
-        self$`time` <- InlineResponse20084Object$`time`
+      if (!is.null(InlineResponse20084Object$`leftQuota`)) {
+        self$`leftQuota` <- InlineResponse20084Object$`leftQuota`
+      }
+      if (!is.null(InlineResponse20084Object$`minRedemptionAmount`)) {
+        self$`minRedemptionAmount` <- InlineResponse20084Object$`minRedemptionAmount`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`dailyPurchaseId`)) {
+        if (!is.null(self$`asset`)) {
         sprintf(
-        '"dailyPurchaseId":
-          %d
+        '"asset":
+          "%s"
                 ',
-        self$`dailyPurchaseId`
+        self$`asset`
         )},
-        if (!is.null(self$`success`)) {
+        if (!is.null(self$`dailyQuota`)) {
         sprintf(
-        '"success":
-          %s
+        '"dailyQuota":
+          "%s"
                 ',
-        tolower(self$`success`)
+        self$`dailyQuota`
         )},
-        if (!is.null(self$`time`)) {
+        if (!is.null(self$`leftQuota`)) {
         sprintf(
-        '"time":
-          %d
+        '"leftQuota":
+          "%s"
                 ',
-        self$`time`
+        self$`leftQuota`
+        )},
+        if (!is.null(self$`minRedemptionAmount`)) {
+        sprintf(
+        '"minRedemptionAmount":
+          "%s"
+                ',
+        self$`minRedemptionAmount`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -104,9 +125,10 @@ InlineResponse20084 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20084Json) {
       InlineResponse20084Object <- jsonlite::fromJSON(InlineResponse20084Json)
-      self$`dailyPurchaseId` <- InlineResponse20084Object$`dailyPurchaseId`
-      self$`success` <- InlineResponse20084Object$`success`
-      self$`time` <- InlineResponse20084Object$`time`
+      self$`asset` <- InlineResponse20084Object$`asset`
+      self$`dailyQuota` <- InlineResponse20084Object$`dailyQuota`
+      self$`leftQuota` <- InlineResponse20084Object$`leftQuota`
+      self$`minRedemptionAmount` <- InlineResponse20084Object$`minRedemptionAmount`
       self
     }
   )

@@ -13,11 +13,39 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field code  integer 
+#' @field asset  character 
 #'
-#' @field msg  character 
+#' @field canTransfer  character 
 #'
-#' @field data  \link{InlineResponse20088Data} 
+#' @field createTimestamp  integer 
+#'
+#' @field duration  integer 
+#'
+#' @field endTime  integer 
+#'
+#' @field interest  character 
+#'
+#' @field interestRate  character 
+#'
+#' @field lot  integer 
+#'
+#' @field positionId  integer 
+#'
+#' @field principal  character 
+#'
+#' @field projectId  character 
+#'
+#' @field projectName  character 
+#'
+#' @field purchaseTime  integer 
+#'
+#' @field redeemDate  character 
+#'
+#' @field startTime  integer 
+#'
+#' @field status  character 
+#'
+#' @field type  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -25,80 +53,344 @@
 InlineResponse20088 <- R6::R6Class(
   'InlineResponse20088',
   public = list(
-    `code` = NULL,
-    `msg` = NULL,
-    `data` = NULL,
+    `asset` = NULL,
+    `canTransfer` = NULL,
+    `createTimestamp` = NULL,
+    `duration` = NULL,
+    `endTime` = NULL,
+    `interest` = NULL,
+    `interestRate` = NULL,
+    `lot` = NULL,
+    `positionId` = NULL,
+    `principal` = NULL,
+    `projectId` = NULL,
+    `projectName` = NULL,
+    `purchaseTime` = NULL,
+    `redeemDate` = NULL,
+    `startTime` = NULL,
+    `status` = NULL,
+    `type` = NULL,
     initialize = function(
-        `code`, `msg`, `data`, ...
+        `asset`, `canTransfer`, `createTimestamp`, `duration`, `endTime`, `interest`, `interestRate`, `lot`, `positionId`, `principal`, `projectId`, `projectName`, `purchaseTime`, `redeemDate`, `startTime`, `status`, `type`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`code`)) {
-        stopifnot(is.numeric(`code`), length(`code`) == 1)
-        self$`code` <- `code`
+      if (!missing(`asset`)) {
+        stopifnot(is.character(`asset`), length(`asset`) == 1)
+        self$`asset` <- `asset`
       }
-      if (!missing(`msg`)) {
-        stopifnot(is.character(`msg`), length(`msg`) == 1)
-        self$`msg` <- `msg`
+      if (!missing(`canTransfer`)) {
+        stopifnot(is.logical(`canTransfer`), length(`canTransfer`) == 1)
+        self$`canTransfer` <- `canTransfer`
       }
-      if (!missing(`data`)) {
-        stopifnot(R6::is.R6(`data`))
-        self$`data` <- `data`
+      if (!missing(`createTimestamp`)) {
+        stopifnot(is.numeric(`createTimestamp`), length(`createTimestamp`) == 1)
+        self$`createTimestamp` <- `createTimestamp`
+      }
+      if (!missing(`duration`)) {
+        stopifnot(is.numeric(`duration`), length(`duration`) == 1)
+        self$`duration` <- `duration`
+      }
+      if (!missing(`endTime`)) {
+        stopifnot(is.numeric(`endTime`), length(`endTime`) == 1)
+        self$`endTime` <- `endTime`
+      }
+      if (!missing(`interest`)) {
+        stopifnot(is.character(`interest`), length(`interest`) == 1)
+        self$`interest` <- `interest`
+      }
+      if (!missing(`interestRate`)) {
+        stopifnot(is.character(`interestRate`), length(`interestRate`) == 1)
+        self$`interestRate` <- `interestRate`
+      }
+      if (!missing(`lot`)) {
+        stopifnot(is.numeric(`lot`), length(`lot`) == 1)
+        self$`lot` <- `lot`
+      }
+      if (!missing(`positionId`)) {
+        stopifnot(is.numeric(`positionId`), length(`positionId`) == 1)
+        self$`positionId` <- `positionId`
+      }
+      if (!missing(`principal`)) {
+        stopifnot(is.character(`principal`), length(`principal`) == 1)
+        self$`principal` <- `principal`
+      }
+      if (!missing(`projectId`)) {
+        stopifnot(is.character(`projectId`), length(`projectId`) == 1)
+        self$`projectId` <- `projectId`
+      }
+      if (!missing(`projectName`)) {
+        stopifnot(is.character(`projectName`), length(`projectName`) == 1)
+        self$`projectName` <- `projectName`
+      }
+      if (!missing(`purchaseTime`)) {
+        stopifnot(is.numeric(`purchaseTime`), length(`purchaseTime`) == 1)
+        self$`purchaseTime` <- `purchaseTime`
+      }
+      if (!missing(`redeemDate`)) {
+        stopifnot(is.character(`redeemDate`), length(`redeemDate`) == 1)
+        self$`redeemDate` <- `redeemDate`
+      }
+      if (!missing(`startTime`)) {
+        stopifnot(is.numeric(`startTime`), length(`startTime`) == 1)
+        self$`startTime` <- `startTime`
+      }
+      if (!missing(`status`)) {
+        stopifnot(is.character(`status`), length(`status`) == 1)
+        self$`status` <- `status`
+      }
+      if (!missing(`type`)) {
+        stopifnot(is.character(`type`), length(`type`) == 1)
+        self$`type` <- `type`
       }
     },
     toJSON = function() {
       InlineResponse20088Object <- list()
-      if (!is.null(self$`code`)) {
-        InlineResponse20088Object[['code']] <-
-          self$`code`
+      if (!is.null(self$`asset`)) {
+        InlineResponse20088Object[['asset']] <-
+          self$`asset`
       }
-      if (!is.null(self$`msg`)) {
-        InlineResponse20088Object[['msg']] <-
-          self$`msg`
+      if (!is.null(self$`canTransfer`)) {
+        InlineResponse20088Object[['canTransfer']] <-
+          self$`canTransfer`
       }
-      if (!is.null(self$`data`)) {
-        InlineResponse20088Object[['data']] <-
-          self$`data`$toJSON()
+      if (!is.null(self$`createTimestamp`)) {
+        InlineResponse20088Object[['createTimestamp']] <-
+          self$`createTimestamp`
+      }
+      if (!is.null(self$`duration`)) {
+        InlineResponse20088Object[['duration']] <-
+          self$`duration`
+      }
+      if (!is.null(self$`endTime`)) {
+        InlineResponse20088Object[['endTime']] <-
+          self$`endTime`
+      }
+      if (!is.null(self$`interest`)) {
+        InlineResponse20088Object[['interest']] <-
+          self$`interest`
+      }
+      if (!is.null(self$`interestRate`)) {
+        InlineResponse20088Object[['interestRate']] <-
+          self$`interestRate`
+      }
+      if (!is.null(self$`lot`)) {
+        InlineResponse20088Object[['lot']] <-
+          self$`lot`
+      }
+      if (!is.null(self$`positionId`)) {
+        InlineResponse20088Object[['positionId']] <-
+          self$`positionId`
+      }
+      if (!is.null(self$`principal`)) {
+        InlineResponse20088Object[['principal']] <-
+          self$`principal`
+      }
+      if (!is.null(self$`projectId`)) {
+        InlineResponse20088Object[['projectId']] <-
+          self$`projectId`
+      }
+      if (!is.null(self$`projectName`)) {
+        InlineResponse20088Object[['projectName']] <-
+          self$`projectName`
+      }
+      if (!is.null(self$`purchaseTime`)) {
+        InlineResponse20088Object[['purchaseTime']] <-
+          self$`purchaseTime`
+      }
+      if (!is.null(self$`redeemDate`)) {
+        InlineResponse20088Object[['redeemDate']] <-
+          self$`redeemDate`
+      }
+      if (!is.null(self$`startTime`)) {
+        InlineResponse20088Object[['startTime']] <-
+          self$`startTime`
+      }
+      if (!is.null(self$`status`)) {
+        InlineResponse20088Object[['status']] <-
+          self$`status`
+      }
+      if (!is.null(self$`type`)) {
+        InlineResponse20088Object[['type']] <-
+          self$`type`
       }
 
       InlineResponse20088Object
     },
     fromJSON = function(InlineResponse20088Json) {
       InlineResponse20088Object <- jsonlite::fromJSON(InlineResponse20088Json)
-      if (!is.null(InlineResponse20088Object$`code`)) {
-        self$`code` <- InlineResponse20088Object$`code`
+      if (!is.null(InlineResponse20088Object$`asset`)) {
+        self$`asset` <- InlineResponse20088Object$`asset`
       }
-      if (!is.null(InlineResponse20088Object$`msg`)) {
-        self$`msg` <- InlineResponse20088Object$`msg`
+      if (!is.null(InlineResponse20088Object$`canTransfer`)) {
+        self$`canTransfer` <- InlineResponse20088Object$`canTransfer`
       }
-      if (!is.null(InlineResponse20088Object$`data`)) {
-        dataObject <- InlineResponse20088Data$new()
-        dataObject$fromJSON(jsonlite::toJSON(InlineResponse20088Object$data, auto_unbox = TRUE, digits = NA))
-        self$`data` <- dataObject
+      if (!is.null(InlineResponse20088Object$`createTimestamp`)) {
+        self$`createTimestamp` <- InlineResponse20088Object$`createTimestamp`
+      }
+      if (!is.null(InlineResponse20088Object$`duration`)) {
+        self$`duration` <- InlineResponse20088Object$`duration`
+      }
+      if (!is.null(InlineResponse20088Object$`endTime`)) {
+        self$`endTime` <- InlineResponse20088Object$`endTime`
+      }
+      if (!is.null(InlineResponse20088Object$`interest`)) {
+        self$`interest` <- InlineResponse20088Object$`interest`
+      }
+      if (!is.null(InlineResponse20088Object$`interestRate`)) {
+        self$`interestRate` <- InlineResponse20088Object$`interestRate`
+      }
+      if (!is.null(InlineResponse20088Object$`lot`)) {
+        self$`lot` <- InlineResponse20088Object$`lot`
+      }
+      if (!is.null(InlineResponse20088Object$`positionId`)) {
+        self$`positionId` <- InlineResponse20088Object$`positionId`
+      }
+      if (!is.null(InlineResponse20088Object$`principal`)) {
+        self$`principal` <- InlineResponse20088Object$`principal`
+      }
+      if (!is.null(InlineResponse20088Object$`projectId`)) {
+        self$`projectId` <- InlineResponse20088Object$`projectId`
+      }
+      if (!is.null(InlineResponse20088Object$`projectName`)) {
+        self$`projectName` <- InlineResponse20088Object$`projectName`
+      }
+      if (!is.null(InlineResponse20088Object$`purchaseTime`)) {
+        self$`purchaseTime` <- InlineResponse20088Object$`purchaseTime`
+      }
+      if (!is.null(InlineResponse20088Object$`redeemDate`)) {
+        self$`redeemDate` <- InlineResponse20088Object$`redeemDate`
+      }
+      if (!is.null(InlineResponse20088Object$`startTime`)) {
+        self$`startTime` <- InlineResponse20088Object$`startTime`
+      }
+      if (!is.null(InlineResponse20088Object$`status`)) {
+        self$`status` <- InlineResponse20088Object$`status`
+      }
+      if (!is.null(InlineResponse20088Object$`type`)) {
+        self$`type` <- InlineResponse20088Object$`type`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`code`)) {
+        if (!is.null(self$`asset`)) {
         sprintf(
-        '"code":
-          %d
-                ',
-        self$`code`
-        )},
-        if (!is.null(self$`msg`)) {
-        sprintf(
-        '"msg":
+        '"asset":
           "%s"
                 ',
-        self$`msg`
+        self$`asset`
         )},
-        if (!is.null(self$`data`)) {
+        if (!is.null(self$`canTransfer`)) {
         sprintf(
-        '"data":
-        %s
-        ',
-        jsonlite::toJSON(self$`data`$toJSON(), auto_unbox=TRUE, digits = NA)
+        '"canTransfer":
+          %s
+                ',
+        tolower(self$`canTransfer`)
+        )},
+        if (!is.null(self$`createTimestamp`)) {
+        sprintf(
+        '"createTimestamp":
+          %d
+                ',
+        self$`createTimestamp`
+        )},
+        if (!is.null(self$`duration`)) {
+        sprintf(
+        '"duration":
+          %d
+                ',
+        self$`duration`
+        )},
+        if (!is.null(self$`endTime`)) {
+        sprintf(
+        '"endTime":
+          %d
+                ',
+        self$`endTime`
+        )},
+        if (!is.null(self$`interest`)) {
+        sprintf(
+        '"interest":
+          "%s"
+                ',
+        self$`interest`
+        )},
+        if (!is.null(self$`interestRate`)) {
+        sprintf(
+        '"interestRate":
+          "%s"
+                ',
+        self$`interestRate`
+        )},
+        if (!is.null(self$`lot`)) {
+        sprintf(
+        '"lot":
+          %d
+                ',
+        self$`lot`
+        )},
+        if (!is.null(self$`positionId`)) {
+        sprintf(
+        '"positionId":
+          %d
+                ',
+        self$`positionId`
+        )},
+        if (!is.null(self$`principal`)) {
+        sprintf(
+        '"principal":
+          "%s"
+                ',
+        self$`principal`
+        )},
+        if (!is.null(self$`projectId`)) {
+        sprintf(
+        '"projectId":
+          "%s"
+                ',
+        self$`projectId`
+        )},
+        if (!is.null(self$`projectName`)) {
+        sprintf(
+        '"projectName":
+          "%s"
+                ',
+        self$`projectName`
+        )},
+        if (!is.null(self$`purchaseTime`)) {
+        sprintf(
+        '"purchaseTime":
+          %d
+                ',
+        self$`purchaseTime`
+        )},
+        if (!is.null(self$`redeemDate`)) {
+        sprintf(
+        '"redeemDate":
+          "%s"
+                ',
+        self$`redeemDate`
+        )},
+        if (!is.null(self$`startTime`)) {
+        sprintf(
+        '"startTime":
+          %d
+                ',
+        self$`startTime`
+        )},
+        if (!is.null(self$`status`)) {
+        sprintf(
+        '"status":
+          "%s"
+                ',
+        self$`status`
+        )},
+        if (!is.null(self$`type`)) {
+        sprintf(
+        '"type":
+          "%s"
+                ',
+        self$`type`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -106,9 +398,23 @@ InlineResponse20088 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20088Json) {
       InlineResponse20088Object <- jsonlite::fromJSON(InlineResponse20088Json)
-      self$`code` <- InlineResponse20088Object$`code`
-      self$`msg` <- InlineResponse20088Object$`msg`
-      self$`data` <- InlineResponse20088Data$new()$fromJSON(jsonlite::toJSON(InlineResponse20088Object$data, auto_unbox = TRUE, digits = NA))
+      self$`asset` <- InlineResponse20088Object$`asset`
+      self$`canTransfer` <- InlineResponse20088Object$`canTransfer`
+      self$`createTimestamp` <- InlineResponse20088Object$`createTimestamp`
+      self$`duration` <- InlineResponse20088Object$`duration`
+      self$`endTime` <- InlineResponse20088Object$`endTime`
+      self$`interest` <- InlineResponse20088Object$`interest`
+      self$`interestRate` <- InlineResponse20088Object$`interestRate`
+      self$`lot` <- InlineResponse20088Object$`lot`
+      self$`positionId` <- InlineResponse20088Object$`positionId`
+      self$`principal` <- InlineResponse20088Object$`principal`
+      self$`projectId` <- InlineResponse20088Object$`projectId`
+      self$`projectName` <- InlineResponse20088Object$`projectName`
+      self$`purchaseTime` <- InlineResponse20088Object$`purchaseTime`
+      self$`redeemDate` <- InlineResponse20088Object$`redeemDate`
+      self$`startTime` <- InlineResponse20088Object$`startTime`
+      self$`status` <- InlineResponse20088Object$`status`
+      self$`type` <- InlineResponse20088Object$`type`
       self
     }
   )

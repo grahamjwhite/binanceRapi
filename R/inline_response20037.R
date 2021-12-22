@@ -13,9 +13,13 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field total  integer 
+#' @field address  character 
 #'
-#' @field userAssetDribblets  list( \link{InlineResponse20037UserAssetDribblets} ) 
+#' @field coin  character 
+#'
+#' @field tag  character 
+#'
+#' @field url  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -23,60 +27,97 @@
 InlineResponse20037 <- R6::R6Class(
   'InlineResponse20037',
   public = list(
-    `total` = NULL,
-    `userAssetDribblets` = NULL,
+    `address` = NULL,
+    `coin` = NULL,
+    `tag` = NULL,
+    `url` = NULL,
     initialize = function(
-        `total`, `userAssetDribblets`, ...
+        `address`, `coin`, `tag`, `url`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`total`)) {
-        stopifnot(is.numeric(`total`), length(`total`) == 1)
-        self$`total` <- `total`
+      if (!missing(`address`)) {
+        stopifnot(is.character(`address`), length(`address`) == 1)
+        self$`address` <- `address`
       }
-      if (!missing(`userAssetDribblets`)) {
-        stopifnot(is.vector(`userAssetDribblets`), length(`userAssetDribblets`) != 0)
-        sapply(`userAssetDribblets`, function(x) stopifnot(R6::is.R6(x)))
-        self$`userAssetDribblets` <- `userAssetDribblets`
+      if (!missing(`coin`)) {
+        stopifnot(is.character(`coin`), length(`coin`) == 1)
+        self$`coin` <- `coin`
+      }
+      if (!missing(`tag`)) {
+        stopifnot(is.character(`tag`), length(`tag`) == 1)
+        self$`tag` <- `tag`
+      }
+      if (!missing(`url`)) {
+        stopifnot(is.character(`url`), length(`url`) == 1)
+        self$`url` <- `url`
       }
     },
     toJSON = function() {
       InlineResponse20037Object <- list()
-      if (!is.null(self$`total`)) {
-        InlineResponse20037Object[['total']] <-
-          self$`total`
+      if (!is.null(self$`address`)) {
+        InlineResponse20037Object[['address']] <-
+          self$`address`
       }
-      if (!is.null(self$`userAssetDribblets`)) {
-        InlineResponse20037Object[['userAssetDribblets']] <-
-          lapply(self$`userAssetDribblets`, function(x) x$toJSON())
+      if (!is.null(self$`coin`)) {
+        InlineResponse20037Object[['coin']] <-
+          self$`coin`
+      }
+      if (!is.null(self$`tag`)) {
+        InlineResponse20037Object[['tag']] <-
+          self$`tag`
+      }
+      if (!is.null(self$`url`)) {
+        InlineResponse20037Object[['url']] <-
+          self$`url`
       }
 
       InlineResponse20037Object
     },
     fromJSON = function(InlineResponse20037Json) {
       InlineResponse20037Object <- jsonlite::fromJSON(InlineResponse20037Json)
-      if (!is.null(InlineResponse20037Object$`total`)) {
-        self$`total` <- InlineResponse20037Object$`total`
+      if (!is.null(InlineResponse20037Object$`address`)) {
+        self$`address` <- InlineResponse20037Object$`address`
       }
-      if (!is.null(InlineResponse20037Object$`userAssetDribblets`)) {
-        self$`userAssetDribblets` <- ApiClient$new()$deserializeObj(InlineResponse20037Object$`userAssetDribblets`, "array[InlineResponse20037UserAssetDribblets]", loadNamespace("binanceRapi"))
+      if (!is.null(InlineResponse20037Object$`coin`)) {
+        self$`coin` <- InlineResponse20037Object$`coin`
+      }
+      if (!is.null(InlineResponse20037Object$`tag`)) {
+        self$`tag` <- InlineResponse20037Object$`tag`
+      }
+      if (!is.null(InlineResponse20037Object$`url`)) {
+        self$`url` <- InlineResponse20037Object$`url`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`total`)) {
+        if (!is.null(self$`address`)) {
         sprintf(
-        '"total":
-          %d
+        '"address":
+          "%s"
                 ',
-        self$`total`
+        self$`address`
         )},
-        if (!is.null(self$`userAssetDribblets`)) {
+        if (!is.null(self$`coin`)) {
         sprintf(
-        '"userAssetDribblets":
-        [%s]
-',
-        paste(sapply(self$`userAssetDribblets`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
+        '"coin":
+          "%s"
+                ',
+        self$`coin`
+        )},
+        if (!is.null(self$`tag`)) {
+        sprintf(
+        '"tag":
+          "%s"
+                ',
+        self$`tag`
+        )},
+        if (!is.null(self$`url`)) {
+        sprintf(
+        '"url":
+          "%s"
+                ',
+        self$`url`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -84,8 +125,10 @@ InlineResponse20037 <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20037Json) {
       InlineResponse20037Object <- jsonlite::fromJSON(InlineResponse20037Json)
-      self$`total` <- InlineResponse20037Object$`total`
-      self$`userAssetDribblets` <- ApiClient$new()$deserializeObj(InlineResponse20037Object$`userAssetDribblets`, "array[InlineResponse20037UserAssetDribblets]", loadNamespace("binanceRapi"))
+      self$`address` <- InlineResponse20037Object$`address`
+      self$`coin` <- InlineResponse20037Object$`coin`
+      self$`tag` <- InlineResponse20037Object$`tag`
+      self$`url` <- InlineResponse20037Object$`url`
       self
     }
   )

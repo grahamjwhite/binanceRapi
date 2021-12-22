@@ -13,11 +13,13 @@
 #'
 #' @format An \code{R6Class} generator object
 #'
-#' @field profitTransferDetails  list( \link{InlineResponse20092DataProfitTransferDetails} ) 
+#' @field algoName  character 
 #'
-#' @field totalNum  integer 
+#' @field algoId  integer 
 #'
-#' @field pageSize  integer 
+#' @field poolIndex  integer 
+#'
+#' @field unit  character 
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -25,79 +27,97 @@
 InlineResponse20092Data <- R6::R6Class(
   'InlineResponse20092Data',
   public = list(
-    `profitTransferDetails` = NULL,
-    `totalNum` = NULL,
-    `pageSize` = NULL,
+    `algoName` = NULL,
+    `algoId` = NULL,
+    `poolIndex` = NULL,
+    `unit` = NULL,
     initialize = function(
-        `profitTransferDetails`, `totalNum`, `pageSize`, ...
+        `algoName`, `algoId`, `poolIndex`, `unit`, ...
     ) {
       local.optional.var <- list(...)
-      if (!missing(`profitTransferDetails`)) {
-        stopifnot(is.vector(`profitTransferDetails`), length(`profitTransferDetails`) != 0)
-        sapply(`profitTransferDetails`, function(x) stopifnot(R6::is.R6(x)))
-        self$`profitTransferDetails` <- `profitTransferDetails`
+      if (!missing(`algoName`)) {
+        stopifnot(is.character(`algoName`), length(`algoName`) == 1)
+        self$`algoName` <- `algoName`
       }
-      if (!missing(`totalNum`)) {
-        stopifnot(is.numeric(`totalNum`), length(`totalNum`) == 1)
-        self$`totalNum` <- `totalNum`
+      if (!missing(`algoId`)) {
+        stopifnot(is.numeric(`algoId`), length(`algoId`) == 1)
+        self$`algoId` <- `algoId`
       }
-      if (!missing(`pageSize`)) {
-        stopifnot(is.numeric(`pageSize`), length(`pageSize`) == 1)
-        self$`pageSize` <- `pageSize`
+      if (!missing(`poolIndex`)) {
+        stopifnot(is.numeric(`poolIndex`), length(`poolIndex`) == 1)
+        self$`poolIndex` <- `poolIndex`
+      }
+      if (!missing(`unit`)) {
+        stopifnot(is.character(`unit`), length(`unit`) == 1)
+        self$`unit` <- `unit`
       }
     },
     toJSON = function() {
       InlineResponse20092DataObject <- list()
-      if (!is.null(self$`profitTransferDetails`)) {
-        InlineResponse20092DataObject[['profitTransferDetails']] <-
-          lapply(self$`profitTransferDetails`, function(x) x$toJSON())
+      if (!is.null(self$`algoName`)) {
+        InlineResponse20092DataObject[['algoName']] <-
+          self$`algoName`
       }
-      if (!is.null(self$`totalNum`)) {
-        InlineResponse20092DataObject[['totalNum']] <-
-          self$`totalNum`
+      if (!is.null(self$`algoId`)) {
+        InlineResponse20092DataObject[['algoId']] <-
+          self$`algoId`
       }
-      if (!is.null(self$`pageSize`)) {
-        InlineResponse20092DataObject[['pageSize']] <-
-          self$`pageSize`
+      if (!is.null(self$`poolIndex`)) {
+        InlineResponse20092DataObject[['poolIndex']] <-
+          self$`poolIndex`
+      }
+      if (!is.null(self$`unit`)) {
+        InlineResponse20092DataObject[['unit']] <-
+          self$`unit`
       }
 
       InlineResponse20092DataObject
     },
     fromJSON = function(InlineResponse20092DataJson) {
       InlineResponse20092DataObject <- jsonlite::fromJSON(InlineResponse20092DataJson)
-      if (!is.null(InlineResponse20092DataObject$`profitTransferDetails`)) {
-        self$`profitTransferDetails` <- ApiClient$new()$deserializeObj(InlineResponse20092DataObject$`profitTransferDetails`, "array[InlineResponse20092DataProfitTransferDetails]", loadNamespace("binanceRapi"))
+      if (!is.null(InlineResponse20092DataObject$`algoName`)) {
+        self$`algoName` <- InlineResponse20092DataObject$`algoName`
       }
-      if (!is.null(InlineResponse20092DataObject$`totalNum`)) {
-        self$`totalNum` <- InlineResponse20092DataObject$`totalNum`
+      if (!is.null(InlineResponse20092DataObject$`algoId`)) {
+        self$`algoId` <- InlineResponse20092DataObject$`algoId`
       }
-      if (!is.null(InlineResponse20092DataObject$`pageSize`)) {
-        self$`pageSize` <- InlineResponse20092DataObject$`pageSize`
+      if (!is.null(InlineResponse20092DataObject$`poolIndex`)) {
+        self$`poolIndex` <- InlineResponse20092DataObject$`poolIndex`
+      }
+      if (!is.null(InlineResponse20092DataObject$`unit`)) {
+        self$`unit` <- InlineResponse20092DataObject$`unit`
       }
       self
     },
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`profitTransferDetails`)) {
+        if (!is.null(self$`algoName`)) {
         sprintf(
-        '"profitTransferDetails":
-        [%s]
-',
-        paste(sapply(self$`profitTransferDetails`, function(x) jsonlite::toJSON(x$toJSON(), auto_unbox=TRUE, digits = NA)), collapse=",")
+        '"algoName":
+          "%s"
+                ',
+        self$`algoName`
         )},
-        if (!is.null(self$`totalNum`)) {
+        if (!is.null(self$`algoId`)) {
         sprintf(
-        '"totalNum":
+        '"algoId":
           %d
                 ',
-        self$`totalNum`
+        self$`algoId`
         )},
-        if (!is.null(self$`pageSize`)) {
+        if (!is.null(self$`poolIndex`)) {
         sprintf(
-        '"pageSize":
+        '"poolIndex":
           %d
                 ',
-        self$`pageSize`
+        self$`poolIndex`
+        )},
+        if (!is.null(self$`unit`)) {
+        sprintf(
+        '"unit":
+          "%s"
+                ',
+        self$`unit`
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -105,9 +125,10 @@ InlineResponse20092Data <- R6::R6Class(
     },
     fromJSONString = function(InlineResponse20092DataJson) {
       InlineResponse20092DataObject <- jsonlite::fromJSON(InlineResponse20092DataJson)
-      self$`profitTransferDetails` <- ApiClient$new()$deserializeObj(InlineResponse20092DataObject$`profitTransferDetails`, "array[InlineResponse20092DataProfitTransferDetails]", loadNamespace("binanceRapi"))
-      self$`totalNum` <- InlineResponse20092DataObject$`totalNum`
-      self$`pageSize` <- InlineResponse20092DataObject$`pageSize`
+      self$`algoName` <- InlineResponse20092DataObject$`algoName`
+      self$`algoId` <- InlineResponse20092DataObject$`algoId`
+      self$`poolIndex` <- InlineResponse20092DataObject$`poolIndex`
+      self$`unit` <- InlineResponse20092DataObject$`unit`
       self
     }
   )
