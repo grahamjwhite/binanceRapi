@@ -33,3 +33,7 @@ vignettes/*.pdf
 # Temporary files created by R markdown
 *.utf8.md
 *.knit.md
+
+# files used to update the package for new OpenAPI spec
+update-script.R
+changelog.txt
