@@ -1588,7 +1588,9 @@ TradeApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
-    ApiV3OrderPost = function(symbol, side, type, time.in.force=NULL, quantity=NULL, quote.order.qty=NULL, price=NULL, new.client.order.id=NULL, stop.price=NULL, iceberg.qty=NULL, new.order.resp.type=NULL, recv.window=NULL, ...){
+    ApiV3OrderPost = function(symbol, side, type, time.in.force=NULL, quantity=NULL, quote.order.qty=NULL, 
+                              price=NULL, new.client.order.id=NULL, stop.price=NULL, iceberg.qty=NULL, 
+                              new.order.resp.type=NULL, recv.window=NULL, ...){
       apiResponse <- self$ApiV3OrderPostWithHttpInfo(symbol, side, type, time.in.force, quantity, quote.order.qty, price, new.client.order.id, stop.price, iceberg.qty, new.order.resp.type, recv.window, ...)
       resp <- apiResponse$response
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
@@ -1677,6 +1679,7 @@ TradeApi <- R6::R6Class(
         ApiResponse$new("API server error", resp)
       }
     },
+    
     ApiV3OrderTestPost = function(symbol, side, type, time.in.force=NULL, quantity=NULL, quote.order.qty=NULL, price=NULL, new.client.order.id=NULL, stop.price=NULL, iceberg.qty=NULL, new.order.resp.type=NULL, recv.window=NULL, ...){
       apiResponse <- self$ApiV3OrderTestPostWithHttpInfo(symbol, side, type, time.in.force, quantity, quote.order.qty, price, new.client.order.id, stop.price, iceberg.qty, new.order.resp.type, recv.window, ...)
       resp <- apiResponse$response

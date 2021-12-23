@@ -18,16 +18,6 @@ WebSocketStream <- R6::R6Class(
           function(event){
             # process the data
             resp <- WebSocketResponse$new(self, event)
-            # then run user functions
-            # if(!is.null(binance_websocket.env$funs)){
-            #   mapply(function(x, y){
-            #     tryCatch(do.call(what = x, args = y),
-            #              error = function(e){message("An error occurred running user call back function: \n", e$message)})
-            #   }, 
-            #   binance_websocket.env$funs, 
-            #   binance_websocket.env$params,
-            #   SIMPLIFY = FALSE)
-            #}
           })
       }
     },
@@ -60,9 +50,10 @@ WebSocketStream <- R6::R6Class(
       # individual streams: ticker@stream
       # group streams: !stream@arr
       # group streams: !stream
-      indivStreams <- streams[!grepl("!", streams)]
+      indivStreams <- streams[!grepl("!", streams) & nchar(streams) < 20]
       groupAtStreams <- streams[streams %in% c("!ticker", "!miniTicker")]
       groupStreams <- streams[streams %in% c("!bookticker")]
+      userStreams <- streams[nchar(streams) > 20] # a long sequence is probably a user data stream
       
       if(length(indivStreams) > 0){
         indivStreams <- as.vector(outer(paste0(tolower(symbols), "@"), indivStreams, FUN = paste0))
@@ -71,7 +62,7 @@ WebSocketStream <- R6::R6Class(
         groupAtStreams <- paste0(groupAtStreams, "@arr")
       }
       
-      return(c(indivStreams, groupAtStreams, groupStreams))
+      return(c(indivStreams, groupAtStreams, groupStreams, userStreams))
     }
     
   )

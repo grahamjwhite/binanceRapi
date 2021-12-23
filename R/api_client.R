@@ -60,6 +60,8 @@ ApiClient  <- R6::R6Class(
     maxRetryAttempts = NULL,
     # Credentials for accessing the API
     credentials = NULL,
+    # Whether to use the testnet server
+    test = NULL,
     # constructor
     initialize = function(basePath=NULL, userAgent=NULL, defaultHeaders=NULL, username=NULL, 
                           password=NULL, apiKeys=NULL, accessToken=NULL, timeout=NULL,  
@@ -109,10 +111,18 @@ ApiClient  <- R6::R6Class(
       }
       
       if(!is.null(credentials)){
-        self$credentials <- credentials
+        if(credentials$test == test){
+          self$credentials <- credentials
+        } else {
+          stop("Supplied credentials object is for the", ifelse(credentials$test, "test", "real"), 
+               "binance server, but you specified test =", ifelse(test, "TRUE", "FALSE"))
+        }
+        
       } else {
-        self$credentials <- Credentials$new()
+        self$credentials <- Credentials$new(test = test)
       }
+      
+      self$test <- test
       
     },
 

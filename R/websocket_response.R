@@ -8,8 +8,8 @@ WebSocketResponse <- R6::R6Class(
     eventData = NULL,
     
     initialize = function(webSocketStream, eventData){
-      self$webSocketStream = webSocketStream
-      self$eventData = eventData
+      self$webSocketStream <- webSocketStream
+      self$eventData <- eventData
       private$processStreamEvent()
     }
   ),

@@ -5,16 +5,23 @@
 #' @export 
 Credentials <- R6::R6Class(
   "Credentials",
+  
   public = list(
     key = NULL,
+    test = NULL,
+    keyName = NULL,
+    secretName = NULL,
     
-    initialize = function(){
+    initialize = function(test = TRUE){
+      self$test <- test
+      self$keyName <- ifelse(test, "binanceRapi-test.key", "binanceRapi.key")
+      self$secretName <- ifelse(test, "binanceRapi-test.secret", "binanceRapi.secret")
       check <- self$checkCredentials()
       
-      if(check['key']){
+      if(check[self$keyName]){
         self$key <- private$getKey()
       }
-      if(check['secret']){
+      if(check[self$secretName]){
         private$secret <- private$getSecret()
       }
     },
@@ -30,14 +37,14 @@ Credentials <- R6::R6Class(
     },
     
     setSecret = function(secret){
-      keyring::key_set_with_value("binanceRapi.secret", 
+      keyring::key_set_with_value(self$secretName, 
                                   username = Sys.getenv("USERNAME"),
                                   password = secret)
-      self$secret <- secret
+      private$secret <- secret
     },
     
     setKey = function(key){
-      keyring::key_set_with_value("binanceRapi.key",
+      keyring::key_set_with_value(self$keyName,
                                   username = Sys.getenv("USERNAME"),
                                   password = key)
       self$key <- key
@@ -46,13 +53,15 @@ Credentials <- R6::R6Class(
     checkCredentials = function(){
       
       services <- keyring::key_list()$service
-      keyExists <- "binanceRapi.key" %in% services
-      secretExists <- "binanceRapi.secret" %in% services
-      retVal <- c(key = keyExists, secret = secretExists)
+      keyExists <- self$keyName %in% services
+      secretExists <- self$secretName %in% services
+      retVal <- c(keyExists, secretExists)
+      names(retVal) <- c(self$keyName, self$secretName)
       
       if(!all(retVal)){
         warning("The following credentials have not been set: ", 
-                paste(names(retVal)[!retVal]), ".", " Some api functionality will not work",
+                paste(names(retVal)[!retVal], collapse = ", "), ".", " Some api functionality will not work.",
+                "Set credentials using the setKey and setSecret functions of the Credentials object.",
                 call. = FALSE)
       }
       
@@ -62,11 +71,13 @@ Credentials <- R6::R6Class(
   
   private = list(
     secret = NULL,
+    
     getKey = function(){
-      keyring::key_get("binanceRapi.key", username = Sys.getenv("USERNAME"))
+      keyring::key_get(self$keyName, username = Sys.getenv("USERNAME"))
     },
+    
     getSecret = function(){
-      keyring::key_get("binanceRapi.secret", username = Sys.getenv("USERNAME"))
+      keyring::key_get(self$secretName, username = Sys.getenv("USERNAME"))
     }
   )
 )
